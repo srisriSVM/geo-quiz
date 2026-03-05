@@ -1,0 +1,14 @@
+[
+  {
+    "id": "europe_countries",
+    "name": "Europe: Countries",
+    "types": ["country"],
+    "defaultViewport": { "center": [10, 52], "zoom": 3.5 }
+  },
+  {
+    "id": "world_countries",
+    "name": "World: Countries",
+    "types": ["country"],
+    "defaultViewport": { "center": [0, 20], "zoom": 1.4 }
+  }
+]

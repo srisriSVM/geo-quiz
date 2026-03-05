@@ -1,0 +1,21 @@
+{
+  "name": "geo-bee-trainer",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit -p tsconfig.app.json && tsc --noEmit -p tsconfig.node.json && vite build",
+    "preview": "vite preview",
+    "build:data": "node scripts/build-data.mjs"
+  },
+  "dependencies": {
+    "maplibre-gl": "^5.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.10",
+    "@types/geojson": "^7946.0.16",
+    "typescript": "^5.8.2",
+    "vite": "^6.2.1"
+  }
+}
