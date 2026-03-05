@@ -1,0 +1,284 @@
+Goal: Build a GitHub Pages–deployable web app called geo-bee-trainer that helps kids prepare for Geo Bee by learning and quizzing countries, cities/capitals, rivers, seas/lakes, mountains, using an interactive map. Use MapLibre GL JS + open data (GeoJSON/TopoJSON).
+
+Tech Stack
+	•	Vite + TypeScript
+	•	No backend required (all data local in /public/data)
+	•	Map library: maplibre-gl
+	•	Optional helper libs:
+	•	@turf/turf for geometry utilities (bbox, centroid, length, nearest point)
+	•	polylabel for polygon label placement (label point inside polygon)
+	•	topojson-client if we load TopoJSON
+	•	Styling: simple CSS (or Tailwind optional, but keep it minimal)
+
+Hosting
+	•	Must deploy to GitHub Pages via GitHub Actions workflow
+	•	The app must work with base path /geo-bee-trainer/ (vite base config)
+
+Execution Plan (build in this order)
+	1.	Scaffold + deploy baseline
+	•	Create Vite + TypeScript app with required folder structure.
+	•	Add MapLibre map shell, HUD shell, and responsive panel shell.
+	•	Configure GitHub Pages deployment and verify base path /geo-bee-trainer/.
+	2.	Data pipeline + unified entities
+	•	Add sample source data in /public/data.
+	•	Implement scripts/build-data.ts to generate entities.json with labelPoint + bbox.
+	•	Guarantee deterministic output (`npm run build:data`).
+	3.	Learn mode
+	•	Load packs and render relevant layers.
+	•	Click feature to inspect details.
+	•	Add guided next-item flow.
+	4.	Quiz engine foundation
+	•	Implement question generation, answer validation, feedback states, Hint/Reveal/Next.
+	•	Add normalization helper for names + aliases.
+	5.	Quiz types (must ship at least 6)
+	•	Implement the six required quiz types in sequence, reusing core engine.
+	6.	Progress + spaced repetition
+	•	Persist per-entity progress to localStorage.
+	•	Add mastery buckets and lightweight progress display.
+	7.	Polish + performance
+	•	Lazy-load pack data, tune hit testing, improve touch targets and readability.
+
+MVP gate (must be true before polish)
+	•	Learn mode works for sample packs.
+	•	Quiz mode supports at least 6 required quiz types.
+	•	`npm run build:data` regenerates entities.json.
+	•	App deploys and runs correctly on GitHub Pages with /geo-bee-trainer/ base path.
+
+⸻
+
+App UX Requirements
+
+Global Layout
+	•	Full-screen map
+	•	Top HUD bar with:
+	•	Mode switch: Learn / Quiz
+	•	Pack selector: e.g. “Europe Countries”, “World Countries”, “Europe Capitals”, “Europe Rivers”, “World Seas”, “Mountains”
+	•	Quiz type selector (only shown in Quiz mode)
+	•	Score + streak + progress indicator
+	•	Buttons: Hint, Reveal, Next
+	•	Right/Bottom panel (responsive) for:
+	•	Prompt text (“Name this country”, “Find Italy”, “Which countries border Germany?”)
+	•	Answer input (text field) OR multiple-choice options
+	•	Feedback area (✅ / ❌ + correct answer)
+
+Learn Mode
+	•	Map shows relevant layer(s) for current pack.
+	•	Clicking/tapping a feature selects it and displays:
+	•	Name
+	•	Type
+	•	Optional fact line if available
+	•	A “guided learn” toggle: “Next item” cycles through entities and highlights them.
+
+Quiz Mode (Multiple Quiz Types)
+
+Implement these quiz types (at least 6):
+	1.	Identify Highlighted (Type-in)
+
+	•	App randomly picks an entity and highlights it on map (country polygon or river line, etc.)
+	•	Kid types the name (case-insensitive, trimmed, ignore punctuation like “.” and extra spaces)
+	•	Hint button reveals first 2 letters (then 3, etc.)
+
+	2.	Identify Highlighted (Multiple Choice)
+
+	•	Same as above but show 4 choices (1 correct + 3 plausible distractors from same pack)
+
+	3.	Find on Map
+
+	•	Prompt shows name (e.g., “Find Spain”)
+	•	Kid clicks/taps the map
+	•	Correct if clicked feature matches target (for polygons/lines) OR click is within a tolerance radius of the entity’s label_point (for points)
+	•	Provide visual feedback (green flash for correct, red for wrong)
+
+	4.	Capital Match
+
+	•	For country-capital pairs:
+	•	Either highlight a country and ask for its capital
+	•	Or show a capital city point and ask “Which country is this the capital of?”
+	•	Support both type-in and multiple-choice variants
+
+	5.	Neighbor Quiz (Borders)
+
+	•	Pick a country; ask: “Select all countries that border Germany”
+	•	UI shows a list of candidate neighboring countries with checkboxes OR clickable countries on map
+	•	Use adjacency data from a precomputed neighbors.json OR compute it offline and store results
+
+	6.	Rivers & Seas Identify
+
+	•	Rivers (LineString): highlight a river line and ask name (type-in or MCQ)
+	•	Seas/lakes (polygon OR point label): highlight sea area if polygon exists, else use label_point with halo highlight circle
+
+Optional (bonus) quiz types if time:
+	•	“Which sea is west of Italy?” (simple directional logic using label_points)
+	•	Timed sprint mode: “Answer 10 in 60 seconds”
+
+⸻
+
+Data Model and Files
+
+Entity schema (unified)
+
+Create a unified entity format for quiz engine:
+
+type EntityType = "country" | "state" | "city" | "capital" | "river" | "sea" | "lake" | "mountain" | "region";
+
+type Entity = {
+  id: string;
+  type: EntityType;
+  name: string;
+  aliases?: string[];              // e.g., ["UK", "United Kingdom of Great Britain and Northern Ireland"]
+  geometryType: "point" | "line" | "polygon";
+  // GeoJSON geometry (optional if using external feature source)
+  geometry?: GeoJSON.Geometry;
+  // Always present: used for labels, hints, zoom targets, click scoring
+  labelPoint: [number, number];    // [lon, lat]
+  bbox?: [number, number, number, number]; // [minLon, minLat, maxLon, maxLat]
+  props?: Record<string, any>;     // facts: capital name, river length, etc.
+  packIds: string[];               // membership in packs
+};
+
+Packs config
+
+/public/data/packs.json:
+
+[
+  { "id": "europe_countries", "name": "Europe: Countries", "types": ["country"], "defaultViewport": { "center":[10,52], "zoom": 3.5 } },
+  { "id": "world_countries", "name": "World: Countries", "types": ["country"], "defaultViewport": { "center":[0,20], "zoom": 1.4 } },
+  { "id": "europe_capitals", "name": "Europe: Capitals", "types": ["capital"], "defaultViewport": { "center":[10,52], "zoom": 3.5 } },
+  { "id": "europe_rivers", "name": "Europe: Rivers", "types": ["river"], "defaultViewport": { "center":[10,52], "zoom": 3.5 } }
+]
+
+Geometry sources
+
+Place data in /public/data/:
+	•	countries_world.geojson (or countries_world.topo.json)
+	•	countries_europe.geojson
+	•	rivers_europe.geojson
+	•	capitals_world.json (points)
+	•	seas_world.json (at minimum label points)
+	•	neighbors_world.json (country adjacency by id)
+
+Important: even if geometry is loaded as GeoJSON features, the quiz engine should operate on Entity objects with a labelPoint always defined.
+
+Label points / centroids strategy
+
+Implement a preprocessing step (node script) that generates entities.json:
+	•	For polygons (countries, seas, lakes): compute labelPoint using:
+	1.	polylabel (best inside point), fallback to turf centroid
+	•	For lines (rivers): compute labelPoint using:
+	•	point at 50% of line length along polyline (turf along)
+	•	For points (cities, mountains): labelPoint is the point itself
+
+Store results into /public/data/entities.json.
+
+Add scripts:
+	•	npm run build:data to generate entities.json (and optionally simplified europe subsets)
+	•	Keep it deterministic and fast
+
+⸻
+
+MapLibre Rendering Requirements
+
+Base map style
+
+Use a free style for dev (example MapLibre demo style is OK), but code should allow swapping style URL.
+
+Layers
+
+Render different map layers depending on active pack:
+	•	Countries: fill + border
+	•	Rivers: line layer
+	•	Points (capitals/mountains): circle layer + optional text label layer at high zoom
+
+Highlighting
+
+Highlight currently selected / quiz-target entity:
+	•	Countries (polygon): change fill color + thicker outline
+	•	Rivers (line): thicker line + glow outline line underneath
+	•	Points: larger circle + halo
+
+Implementation preference:
+	•	Use setFilter() on a highlight layer (fast and simple), keyed by feature id/name
+	•	Or feature-state if using vector sources; but with GeoJSON, filter layers are fine
+
+Hit testing
+
+For Find-on-map:
+	•	For polygons/lines: use map.queryRenderedFeatures(e.point, { layers: [...] })
+	•	For points: allow nearest labelPoint within radius (e.g., 30px, scale by zoom)
+
+⸻
+
+Spaced Repetition / Progress Tracking
+
+Persist user progress in localStorage:
+	•	seenCount, correctCount, streak, lastSeen, lastResult
+	•	Simple scheduling:
+	•	if wrong → show again soon
+	•	if correct several times → show less often
+	•	Provide a progress view:
+	•	“Mastered / Learning / Needs practice”
+	•	Map coloring by mastery for countries (optional but nice)
+
+⸻
+
+Code Structure (must follow)
+geo-bee-trainer/
+  src/
+    main.ts
+    app/App.ts
+    map/MapView.ts
+    map/layers.ts
+    data/dataLoader.ts
+    data/types.ts
+    quiz/quizEngine.ts
+    quiz/quizTypes.ts
+    quiz/spacedRepetition.ts
+    ui/Hud.ts
+    ui/QuizPanel.ts
+    ui/LearnPanel.ts
+    storage/progressStore.ts
+    utils/normalize.ts
+  public/
+    data/
+      packs.json
+      entities.json            // generated
+      countries_world.geojson  // or topo
+      rivers_europe.geojson
+      ...
+  scripts/
+    build-data.ts             // generates entities.json + labelPoints
+  .github/workflows/deploy.yml
+  README.md
+  vite.config.ts
+
+  Deliverables & Behavior
+	1.	Working app with Learn + Quiz modes
+	2.	At least 6 quiz types as described
+	3.	Packs system + ability to switch pack and quiz type
+	4.	Data build script that creates entities.json including labelPoint for polygons/lines/points
+	5.	GitHub Pages deployment via Actions + README instructions:
+	•	how to run locally
+	•	how to rebuild data
+	•	how to deploy
+
+Provide sample data
+
+If real Natural Earth files are not included, generate a tiny sample dataset in code for:
+	•	6 countries in Europe (polygons simplified rectangles acceptable)
+	•	6 capitals (points)
+	•	3 rivers (lines)
+So the app runs out-of-the-box. Make it easy to swap in real Natural Earth GeoJSON later.
+
+⸻
+
+Quality Bar
+	•	App should be fast: lazy-load data per pack
+	•	Clean UI, kid-friendly, readable fonts, large tap targets
+	•	No external API keys
+	•	Everything works as static files on GitHub Pages
+
+Definition of done
+	•	All required files in the requested structure exist and are wired.
+	•	README includes exact local run, data rebuild, and deploy steps.
+	•	Sample data allows out-of-the-box demo without external downloads.
+	•	No runtime errors in production build and no broken controls in mobile layout.
