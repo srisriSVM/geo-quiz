@@ -14,6 +14,9 @@
       "world_countries_by_continent",
       "world_flags"
     ],
+    "capitalIds": [
+      "capital_tirana"
+    ],
     "bbox": [
       20,
       41.2,
@@ -35,6 +38,9 @@
       "world_countries",
       "world_countries_by_continent",
       "world_flags"
+    ],
+    "capitalIds": [
+      "capital_andorra_la_vella"
     ],
     "bbox": [
       1.52,
@@ -58,6 +64,9 @@
       "world_countries_by_continent",
       "world_flags"
     ],
+    "capitalIds": [
+      "capital_yerevan"
+    ],
     "bbox": [
       44.5,
       40.2,
@@ -79,6 +88,9 @@
       "world_countries",
       "world_countries_by_continent",
       "world_flags"
+    ],
+    "capitalIds": [
+      "capital_vienna"
     ],
     "bbox": [
       14.1,
@@ -102,6 +114,9 @@
       "world_countries_by_continent",
       "world_flags"
     ],
+    "capitalIds": [
+      "capital_baku"
+    ],
     "bbox": [
       47.5,
       40.3,
@@ -123,6 +138,9 @@
       "world_countries",
       "world_countries_by_continent",
       "world_flags"
+    ],
+    "capitalIds": [
+      "capital_minsk"
     ],
     "bbox": [
       28,
@@ -146,6 +164,9 @@
       "world_countries_by_continent",
       "world_flags"
     ],
+    "capitalIds": [
+      "capital_brussels"
+    ],
     "bbox": [
       4.7,
       50.8,
@@ -167,6 +188,9 @@
       "world_countries",
       "world_countries_by_continent",
       "world_flags"
+    ],
+    "capitalIds": [
+      "capital_sarajevo"
     ],
     "bbox": [
       17.8,
@@ -190,6 +214,9 @@
       "world_countries_by_continent",
       "world_flags"
     ],
+    "capitalIds": [
+      "capital_sofia"
+    ],
     "bbox": [
       25.5,
       42.7,
@@ -211,6 +238,9 @@
       "world_countries",
       "world_countries_by_continent",
       "world_flags"
+    ],
+    "capitalIds": [
+      "capital_zagreb"
     ],
     "bbox": [
       16.4,
@@ -234,6 +264,9 @@
       "world_countries_by_continent",
       "world_flags"
     ],
+    "capitalIds": [
+      "capital_nicosia"
+    ],
     "bbox": [
       33.2,
       35.1,
@@ -255,6 +288,9 @@
       "world_countries",
       "world_countries_by_continent",
       "world_flags"
+    ],
+    "capitalIds": [
+      "capital_prague"
     ],
     "bbox": [
       15.3,
@@ -278,6 +314,9 @@
       "world_countries_by_continent",
       "world_flags"
     ],
+    "capitalIds": [
+      "capital_copenhagen"
+    ],
     "bbox": [
       9.3,
       56.2,
@@ -300,6 +339,9 @@
       "world_countries_by_continent",
       "world_flags"
     ],
+    "capitalIds": [
+      "capital_tallinn"
+    ],
     "bbox": [
       25,
       58.7,
@@ -321,6 +363,9 @@
       "world_countries",
       "world_countries_by_continent",
       "world_flags"
+    ],
+    "capitalIds": [
+      "capital_helsinki"
     ],
     "bbox": [
       26,
@@ -394,6 +439,9 @@
         }
       ]
     },
+    "capitalIds": [
+      "capital_paris"
+    ],
     "bbox": [
       2.3,
       46.2,
@@ -415,6 +463,9 @@
       "world_countries",
       "world_countries_by_continent",
       "world_flags"
+    ],
+    "capitalIds": [
+      "capital_tbilisi"
     ],
     "bbox": [
       43.5,
@@ -488,6 +539,9 @@
         }
       ]
     },
+    "capitalIds": [
+      "capital_berlin"
+    ],
     "bbox": [
       10.4,
       51.2,
@@ -509,6 +563,9 @@
       "world_countries",
       "world_countries_by_continent",
       "world_flags"
+    ],
+    "capitalIds": [
+      "capital_athens"
     ],
     "bbox": [
       22.9,
@@ -532,6 +589,9 @@
       "world_countries_by_continent",
       "world_flags"
     ],
+    "capitalIds": [
+      "capital_budapest"
+    ],
     "bbox": [
       19.3,
       47.1,
@@ -553,6 +613,9 @@
       "world_countries",
       "world_countries_by_continent",
       "world_flags"
+    ],
+    "capitalIds": [
+      "capital_reykjavik"
     ],
     "bbox": [
       -19,
@@ -576,6 +639,9 @@
       "world_countries_by_continent",
       "world_flags"
     ],
+    "capitalIds": [
+      "capital_dublin"
+    ],
     "bbox": [
       -8.2,
       53.4,
@@ -597,6 +663,9 @@
       "world_countries",
       "world_countries_by_continent",
       "world_flags"
+    ],
+    "capitalIds": [
+      "capital_rome"
     ],
     "bbox": [
       12.5,
@@ -620,6 +689,9 @@
       "world_countries_by_continent",
       "world_flags"
     ],
+    "capitalIds": [
+      "capital_pristina"
+    ],
     "bbox": [
       20.9,
       42.6,
@@ -641,6 +713,9 @@
       "world_countries",
       "world_countries_by_continent",
       "world_flags"
+    ],
+    "capitalIds": [
+      "capital_riga"
     ],
     "bbox": [
       24.9,
@@ -664,6 +739,9 @@
       "world_countries_by_continent",
       "world_flags"
     ],
+    "capitalIds": [
+      "capital_vaduz"
+    ],
     "bbox": [
       9.55,
       47.17,
@@ -685,6 +763,9 @@
       "world_countries",
       "world_countries_by_continent",
       "world_flags"
+    ],
+    "capitalIds": [
+      "capital_vilnius"
     ],
     "bbox": [
       23.9,
@@ -708,6 +789,9 @@
       "world_countries_by_continent",
       "world_flags"
     ],
+    "capitalIds": [
+      "capital_luxembourg"
+    ],
     "bbox": [
       6.1,
       49.8,
@@ -729,6 +813,9 @@
       "world_countries",
       "world_countries_by_continent",
       "world_flags"
+    ],
+    "capitalIds": [
+      "capital_valletta"
     ],
     "bbox": [
       14.4,
@@ -752,6 +839,9 @@
       "world_countries_by_continent",
       "world_flags"
     ],
+    "capitalIds": [
+      "capital_chisinau"
+    ],
     "bbox": [
       28.4,
       47.2,
@@ -773,6 +863,9 @@
       "world_countries",
       "world_countries_by_continent",
       "world_flags"
+    ],
+    "capitalIds": [
+      "capital_monaco"
     ],
     "bbox": [
       7.42,
@@ -796,6 +889,9 @@
       "world_countries_by_continent",
       "world_flags"
     ],
+    "capitalIds": [
+      "capital_podgorica"
+    ],
     "bbox": [
       19.3,
       42.8,
@@ -817,6 +913,9 @@
       "world_countries",
       "world_countries_by_continent",
       "world_flags"
+    ],
+    "capitalIds": [
+      "capital_amsterdam"
     ],
     "bbox": [
       5.3,
@@ -840,6 +939,9 @@
       "world_countries_by_continent",
       "world_flags"
     ],
+    "capitalIds": [
+      "capital_skopje"
+    ],
     "bbox": [
       21.7,
       41.6,
@@ -861,6 +963,9 @@
       "world_countries",
       "world_countries_by_continent",
       "world_flags"
+    ],
+    "capitalIds": [
+      "capital_oslo"
     ],
     "bbox": [
       8.5,
@@ -884,6 +989,9 @@
       "world_countries_by_continent",
       "world_flags"
     ],
+    "capitalIds": [
+      "capital_warsaw"
+    ],
     "bbox": [
       19.1,
       52.1,
@@ -905,6 +1013,9 @@
       "world_countries",
       "world_countries_by_continent",
       "world_flags"
+    ],
+    "capitalIds": [
+      "capital_lisbon"
     ],
     "bbox": [
       -8,
@@ -928,6 +1039,9 @@
       "world_countries_by_continent",
       "world_flags"
     ],
+    "capitalIds": [
+      "capital_bucharest"
+    ],
     "bbox": [
       24.9,
       45.9,
@@ -949,6 +1063,9 @@
       "world_countries",
       "world_countries_by_continent",
       "world_flags"
+    ],
+    "capitalIds": [
+      "capital_moscow"
     ],
     "bbox": [
       37.6,
@@ -972,6 +1089,10 @@
       "world_countries_by_continent",
       "world_flags"
     ],
+    "capitalIds": [
+      "capital_city_of_san_marino",
+      "capital_san_marino"
+    ],
     "bbox": [
       12.46,
       43.94,
@@ -993,6 +1114,9 @@
       "world_countries",
       "world_countries_by_continent",
       "world_flags"
+    ],
+    "capitalIds": [
+      "capital_belgrade"
     ],
     "bbox": [
       20.8,
@@ -1016,6 +1140,9 @@
       "world_countries_by_continent",
       "world_flags"
     ],
+    "capitalIds": [
+      "capital_bratislava"
+    ],
     "bbox": [
       19.7,
       48.7,
@@ -1037,6 +1164,9 @@
       "world_countries",
       "world_countries_by_continent",
       "world_flags"
+    ],
+    "capitalIds": [
+      "capital_ljubljana"
     ],
     "bbox": [
       14.9,
@@ -1060,6 +1190,9 @@
       "world_countries_by_continent",
       "world_flags"
     ],
+    "capitalIds": [
+      "capital_madrid"
+    ],
     "bbox": [
       -3.7,
       40.3,
@@ -1081,6 +1214,9 @@
       "world_countries",
       "world_countries_by_continent",
       "world_flags"
+    ],
+    "capitalIds": [
+      "capital_stockholm"
     ],
     "bbox": [
       15.2,
@@ -1104,6 +1240,9 @@
       "world_countries_by_continent",
       "world_flags"
     ],
+    "capitalIds": [
+      "capital_bern"
+    ],
     "bbox": [
       8.2,
       46.8,
@@ -1125,6 +1264,9 @@
       "world_countries",
       "world_countries_by_continent",
       "world_flags"
+    ],
+    "capitalIds": [
+      "capital_ankara"
     ],
     "bbox": [
       32.9,
@@ -1148,6 +1290,9 @@
       "world_countries_by_continent",
       "world_flags"
     ],
+    "capitalIds": [
+      "capital_kyiv"
+    ],
     "bbox": [
       31.2,
       49,
@@ -1170,6 +1315,9 @@
       "world_countries_by_continent",
       "world_flags"
     ],
+    "capitalIds": [
+      "capital_london"
+    ],
     "bbox": [
       -2.8,
       54.5,
@@ -1191,6 +1339,9 @@
       "world_countries",
       "world_countries_by_continent",
       "world_flags"
+    ],
+    "capitalIds": [
+      "capital_vatican_city"
     ],
     "bbox": [
       12.45,

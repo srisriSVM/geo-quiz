@@ -228,6 +228,20 @@
     }
   },
   {
+    "id": "world_famous_landmarks",
+    "name": "World: Famous Landmarks",
+    "types": [
+      "region"
+    ],
+    "defaultViewport": {
+      "center": [
+        10,
+        20
+      ],
+      "zoom": 1.55
+    }
+  },
+  {
     "id": "world_flags",
     "name": "World: Flags",
     "types": [
@@ -239,6 +253,20 @@
         20
       ],
       "zoom": 1.4
+    }
+  },
+  {
+    "id": "world_major_cities",
+    "name": "World: Major Cities",
+    "types": [
+      "city"
+    ],
+    "defaultViewport": {
+      "center": [
+        10,
+        20
+      ],
+      "zoom": 1.6
     }
   },
   {
@@ -295,6 +323,21 @@
         20
       ],
       "zoom": 1.6
+    }
+  },
+  {
+    "id": "world_oceans_deep_dive",
+    "name": "World: Oceans (Deep Dive)",
+    "types": [
+      "sea",
+      "region"
+    ],
+    "defaultViewport": {
+      "center": [
+        0,
+        10
+      ],
+      "zoom": 1.25
     }
   },
   {
@@ -365,6 +408,20 @@
         15
       ],
       "zoom": 1.5
+    }
+  },
+  {
+    "id": "world_seas_gulfs_bays",
+    "name": "World: Seas, Gulfs & Bays",
+    "types": [
+      "sea"
+    ],
+    "defaultViewport": {
+      "center": [
+        15,
+        18
+      ],
+      "zoom": 1.45
     }
   },
   {

@@ -202,13 +202,13 @@ export class App {
 
     if (this.mode === "learn") {
       this.matchRound = null;
-      this.currentEntity = this.pickRandom(items, excludeEntityId);
+      this.currentEntity = this.pickNextGeographicEntity(items, excludeEntityId);
       this.hintLength = 2;
       this.hintTokenIndex = 0;
       this.mapView.setHighlightedEntity(this.currentEntity.id);
       this.panel.setHeading("Learn Mode");
       this.panel.setHeadingVisible(false);
-      this.panel.setLearnTargetTitle(`${this.currentEntity.name} (${this.currentEntity.type})`);
+      this.panel.setLearnTargetTitle(this.learnTargetTitle(this.currentEntity));
       this.panel.setPromptVisible(false);
       this.panel.setFeedbackVisible(false);
       this.panel.setAnswerVisible(false);
@@ -234,7 +234,7 @@ export class App {
         this.hintTokenIndex = 0;
         this.mapView.setHighlightedEntity(this.currentEntity.id);
         this.mapView.focusEntity(this.currentEntity);
-        this.panel.setPrompt("Identify the highlighted location.");
+        this.panel.setPrompt(this.quizPromptFor(this.currentEntity));
         this.panel.setFeedback("Type the answer and submit.");
         this.panel.setAnswerVisible(true);
         this.panel.setChoicesVisible(false);
@@ -366,7 +366,7 @@ export class App {
     this.mapView.setHighlightedEntity(selected.id);
     this.panel.setHeading("Learn Mode");
     this.panel.setHeadingVisible(false);
-    this.panel.setLearnTargetTitle(`${selected.name} (${selected.type})`);
+    this.panel.setLearnTargetTitle(this.learnTargetTitle(selected));
     this.panel.setPromptVisible(false);
     this.panel.setFeedbackVisible(false);
     this.panel.setLearnEntityInfo(selected);
@@ -419,6 +419,34 @@ export class App {
     return pool[index];
   }
 
+  private pickNextGeographicEntity(items: Entity[], excludeEntityId?: string): Entity {
+    const remaining = items.filter((item) => this.getMastery(item.id) !== "mastered");
+    const pool = remaining.length > 0 ? remaining : items;
+    const ordered = pool
+      .slice()
+      .sort((a, b) => (b.labelPoint[1] - a.labelPoint[1]) || (a.labelPoint[0] - b.labelPoint[0]));
+
+    if (ordered.length === 0) {
+      return items[0];
+    }
+    if (ordered.length === 1) {
+      return ordered[0];
+    }
+
+    const anchorId = excludeEntityId ?? this.currentEntity?.id;
+    if (!anchorId) {
+      return ordered[0];
+    }
+
+    const anchorIndex = ordered.findIndex((item) => item.id === anchorId);
+    if (anchorIndex < 0) {
+      return ordered[0];
+    }
+
+    const nextIndex = (anchorIndex + 1) % ordered.length;
+    return ordered[nextIndex];
+  }
+
   private setupMatchRound(items: Entity[]): void {
     const nonMastered = items.filter((item) => this.getMastery(item.id) !== "mastered");
     const sourcePool = nonMastered.length > 0 ? nonMastered : items;
@@ -445,6 +473,20 @@ export class App {
         ? "Select the correct name card."
         : "All items are mastered. Great job. You can still play review rounds."
     );
+  }
+
+  private learnTargetTitle(entity: Entity): string {
+    if (entity.type === "capital" && entity.adminOf) {
+      return `${entity.name} (capital of ${entity.adminOf.name})`;
+    }
+    return `${entity.name} (${entity.type})`;
+  }
+
+  private quizPromptFor(entity: Entity): string {
+    if (entity.type === "capital" && entity.adminOf) {
+      return `Identify the highlighted capital of ${entity.adminOf.name}.`;
+    }
+    return "Identify the highlighted location.";
   }
 
   private buildChoicesFromRound(): Array<{ id: string; label: string; status: ChoiceStatus }> {

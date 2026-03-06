@@ -15,6 +15,9 @@
       "usa_states",
       "us_states_capitals"
     ],
+    "capitalIds": [
+      "us_capital_montgomery"
+    ],
     "geometry": {
       "type": "Polygon",
       "coordinates": [
@@ -176,6 +179,9 @@
     "packIds": [
       "usa_states",
       "us_states_capitals"
+    ],
+    "capitalIds": [
+      "us_capital_alaska"
     ],
     "geometry": {
       "type": "MultiPolygon",
@@ -4657,6 +4663,9 @@
       "usa_states",
       "us_states_capitals"
     ],
+    "capitalIds": [
+      "us_capital_phoenix"
+    ],
     "geometry": {
       "type": "Polygon",
       "coordinates": [
@@ -4814,6 +4823,9 @@
     "packIds": [
       "usa_states",
       "us_states_capitals"
+    ],
+    "capitalIds": [
+      "us_capital_arkansas"
     ],
     "geometry": {
       "type": "Polygon",
@@ -5033,6 +5045,9 @@
       "credit": "Wikimedia",
       "alt": "Flag of California"
     },
+    "capitalIds": [
+      "us_capital_sacramento"
+    ],
     "geometry": {
       "type": "Polygon",
       "coordinates": [
@@ -5435,6 +5450,9 @@
       "usa_states",
       "us_states_capitals"
     ],
+    "capitalIds": [
+      "us_capital_denver"
+    ],
     "geometry": {
       "type": "Polygon",
       "coordinates": [
@@ -5528,6 +5546,9 @@
     "packIds": [
       "usa_states",
       "us_states_capitals"
+    ],
+    "capitalIds": [
+      "us_capital_connecticut"
     ],
     "geometry": {
       "type": "Polygon",
@@ -5623,6 +5644,9 @@
       "usa_states",
       "us_states_capitals"
     ],
+    "capitalIds": [
+      "us_capital_delaware"
+    ],
     "geometry": {
       "type": "Polygon",
       "coordinates": [
@@ -5704,6 +5728,9 @@
     "packIds": [
       "usa_states",
       "us_states_capitals"
+    ],
+    "capitalIds": [
+      "us_capital_tallahassee"
     ],
     "geometry": {
       "type": "Polygon",
@@ -6047,6 +6074,9 @@
       "usa_states",
       "us_states_capitals"
     ],
+    "capitalIds": [
+      "us_capital_atlanta"
+    ],
     "geometry": {
       "type": "Polygon",
       "coordinates": [
@@ -6280,6 +6310,9 @@
     "packIds": [
       "usa_states",
       "us_states_capitals"
+    ],
+    "capitalIds": [
+      "us_capital_hawaii"
     ],
     "geometry": {
       "type": "MultiPolygon",
@@ -6524,6 +6557,9 @@
     "packIds": [
       "usa_states",
       "us_states_capitals"
+    ],
+    "capitalIds": [
+      "us_capital_idaho"
     ],
     "geometry": {
       "type": "Polygon",
@@ -6818,6 +6854,9 @@
     "packIds": [
       "usa_states",
       "us_states_capitals"
+    ],
+    "capitalIds": [
+      "us_capital_illinois"
     ],
     "geometry": {
       "type": "Polygon",
@@ -7117,6 +7156,9 @@
       "usa_states",
       "us_states_capitals"
     ],
+    "capitalIds": [
+      "us_capital_indiana"
+    ],
     "geometry": {
       "type": "Polygon",
       "coordinates": [
@@ -7330,6 +7372,9 @@
     "packIds": [
       "usa_states",
       "us_states_capitals"
+    ],
+    "capitalIds": [
+      "us_capital_iowa"
     ],
     "geometry": {
       "type": "Polygon",
@@ -7561,6 +7606,9 @@
       "usa_states",
       "us_states_capitals"
     ],
+    "capitalIds": [
+      "us_capital_kansas"
+    ],
     "geometry": {
       "type": "Polygon",
       "coordinates": [
@@ -7642,6 +7690,9 @@
     "packIds": [
       "usa_states",
       "us_states_capitals"
+    ],
+    "capitalIds": [
+      "us_capital_kentucky"
     ],
     "geometry": {
       "type": "Polygon",
@@ -7972,6 +8023,9 @@
     "packIds": [
       "usa_states",
       "us_states_capitals"
+    ],
+    "capitalIds": [
+      "us_capital_baton_rouge"
     ],
     "geometry": {
       "type": "Polygon",
@@ -8307,6 +8361,9 @@
       "usa_states",
       "us_states_capitals"
     ],
+    "capitalIds": [
+      "us_capital_maine"
+    ],
     "geometry": {
       "type": "Polygon",
       "coordinates": [
@@ -8601,6 +8658,9 @@
       "usa_states",
       "us_states_capitals"
     ],
+    "capitalIds": [
+      "us_capital_maryland"
+    ],
     "geometry": {
       "type": "MultiPolygon",
       "coordinates": [
@@ -8893,6 +8953,9 @@
       "usa_states",
       "us_states_capitals"
     ],
+    "capitalIds": [
+      "us_capital_boston"
+    ],
     "geometry": {
       "type": "Polygon",
       "coordinates": [
@@ -9062,6 +9125,9 @@
     "packIds": [
       "usa_states",
       "us_states_capitals"
+    ],
+    "capitalIds": [
+      "us_capital_lansing"
     ],
     "geometry": {
       "type": "MultiPolygon",
@@ -9715,6 +9781,9 @@
       "usa_states",
       "us_states_capitals"
     ],
+    "capitalIds": [
+      "us_capital_saint_paul"
+    ],
     "geometry": {
       "type": "Polygon",
       "coordinates": [
@@ -10077,6 +10146,9 @@
       "usa_states",
       "us_states_capitals"
     ],
+    "capitalIds": [
+      "us_capital_jackson_ms"
+    ],
     "geometry": {
       "type": "Polygon",
       "coordinates": [
@@ -10290,6 +10362,9 @@
     "packIds": [
       "usa_states",
       "us_states_capitals"
+    ],
+    "capitalIds": [
+      "us_capital_missouri"
     ],
     "geometry": {
       "type": "Polygon",
@@ -10533,6 +10608,9 @@
       "usa_states",
       "us_states_capitals"
     ],
+    "capitalIds": [
+      "us_capital_montana"
+    ],
     "geometry": {
       "type": "Polygon",
       "coordinates": [
@@ -10771,6 +10849,9 @@
       "usa_states",
       "us_states_capitals"
     ],
+    "capitalIds": [
+      "us_capital_nebraska"
+    ],
     "geometry": {
       "type": "Polygon",
       "coordinates": [
@@ -10917,6 +10998,9 @@
       "usa_states",
       "us_states_capitals"
     ],
+    "capitalIds": [
+      "us_capital_nevada"
+    ],
     "geometry": {
       "type": "Polygon",
       "coordinates": [
@@ -11030,6 +11114,9 @@
     "packIds": [
       "usa_states",
       "us_states_capitals"
+    ],
+    "capitalIds": [
+      "us_capital_new_hampshire"
     ],
     "geometry": {
       "type": "Polygon",
@@ -11172,6 +11259,9 @@
     "packIds": [
       "usa_states",
       "us_states_capitals"
+    ],
+    "capitalIds": [
+      "us_capital_new_jersey"
     ],
     "geometry": {
       "type": "Polygon",
@@ -11331,6 +11421,9 @@
       "usa_states",
       "us_states_capitals"
     ],
+    "capitalIds": [
+      "us_capital_new_mexico"
+    ],
     "geometry": {
       "type": "Polygon",
       "coordinates": [
@@ -11428,6 +11521,9 @@
     "packIds": [
       "usa_states",
       "us_states_capitals"
+    ],
+    "capitalIds": [
+      "us_capital_albany"
     ],
     "geometry": {
       "type": "Polygon",
@@ -11731,6 +11827,9 @@
       "usa_states",
       "us_states_capitals"
     ],
+    "capitalIds": [
+      "us_capital_raleigh"
+    ],
     "geometry": {
       "type": "Polygon",
       "coordinates": [
@@ -12005,6 +12104,9 @@
       "usa_states",
       "us_states_capitals"
     ],
+    "capitalIds": [
+      "us_capital_north_dakota"
+    ],
     "geometry": {
       "type": "Polygon",
       "coordinates": [
@@ -12098,6 +12200,9 @@
     "packIds": [
       "usa_states",
       "us_states_capitals"
+    ],
+    "capitalIds": [
+      "us_capital_columbus"
     ],
     "geometry": {
       "type": "Polygon",
@@ -12317,6 +12422,9 @@
       "usa_states",
       "us_states_capitals"
     ],
+    "capitalIds": [
+      "us_capital_oklahoma"
+    ],
     "geometry": {
       "type": "Polygon",
       "coordinates": [
@@ -12526,6 +12634,9 @@
     "packIds": [
       "usa_states",
       "us_states_capitals"
+    ],
+    "capitalIds": [
+      "us_capital_salem"
     ],
     "geometry": {
       "type": "Polygon",
@@ -12781,6 +12892,9 @@
       "usa_states",
       "us_states_capitals"
     ],
+    "capitalIds": [
+      "us_capital_harrisburg"
+    ],
     "geometry": {
       "type": "Polygon",
       "coordinates": [
@@ -12943,6 +13057,9 @@
       "usa_states",
       "us_states_capitals"
     ],
+    "capitalIds": [
+      "us_capital_rhode_island"
+    ],
     "geometry": {
       "type": "MultiPolygon",
       "coordinates": [
@@ -13038,6 +13155,9 @@
     "packIds": [
       "usa_states",
       "us_states_capitals"
+    ],
+    "capitalIds": [
+      "us_capital_south_carolina"
     ],
     "geometry": {
       "type": "Polygon",
@@ -13245,6 +13365,9 @@
       "usa_states",
       "us_states_capitals"
     ],
+    "capitalIds": [
+      "us_capital_south_dakota"
+    ],
     "geometry": {
       "type": "Polygon",
       "coordinates": [
@@ -13390,6 +13513,9 @@
     "packIds": [
       "usa_states",
       "us_states_capitals"
+    ],
+    "capitalIds": [
+      "us_capital_nashville"
     ],
     "geometry": {
       "type": "Polygon",
@@ -13626,6 +13752,9 @@
         "value": "Houston",
         "icon": "city"
       }
+    ],
+    "capitalIds": [
+      "us_capital_austin"
     ],
     "geometry": {
       "type": "Polygon",
@@ -14265,6 +14394,9 @@
       "usa_states",
       "us_states_capitals"
     ],
+    "capitalIds": [
+      "us_capital_utah"
+    ],
     "geometry": {
       "type": "Polygon",
       "coordinates": [
@@ -14342,6 +14474,9 @@
     "packIds": [
       "usa_states",
       "us_states_capitals"
+    ],
+    "capitalIds": [
+      "us_capital_vermont"
     ],
     "geometry": {
       "type": "Polygon",
@@ -14484,6 +14619,9 @@
     "packIds": [
       "usa_states",
       "us_states_capitals"
+    ],
+    "capitalIds": [
+      "us_capital_virginia"
     ],
     "geometry": {
       "type": "MultiPolygon",
@@ -14845,6 +14983,9 @@
       "usa_states",
       "us_states_capitals"
     ],
+    "capitalIds": [
+      "us_capital_olympia"
+    ],
     "geometry": {
       "type": "MultiPolygon",
       "coordinates": [
@@ -15173,6 +15314,9 @@
       "usa_states",
       "us_states_capitals"
     ],
+    "capitalIds": [
+      "us_capital_west_virginia"
+    ],
     "geometry": {
       "type": "Polygon",
       "coordinates": [
@@ -15462,6 +15606,9 @@
     "packIds": [
       "usa_states",
       "us_states_capitals"
+    ],
+    "capitalIds": [
+      "us_capital_madison"
     ],
     "geometry": {
       "type": "Polygon",
@@ -15793,6 +15940,9 @@
       "usa_states",
       "us_states_capitals"
     ],
+    "capitalIds": [
+      "us_capital_wyoming"
+    ],
     "geometry": {
       "type": "Polygon",
       "coordinates": [
@@ -15860,6 +16010,30 @@
     ]
   },
   {
+    "id": "us_capital_alaska",
+    "type": "capital",
+    "name": "Juneau",
+    "geometryType": "point",
+    "labelPoint": [
+      -134.4197,
+      58.3019
+    ],
+    "packIds": [
+      "us_states_capitals"
+    ],
+    "adminOf": {
+      "id": "state_alaska",
+      "name": "Alaska",
+      "type": "state"
+    },
+    "bbox": [
+      -134.4197,
+      58.3019,
+      -134.4197,
+      58.3019
+    ]
+  },
+  {
     "id": "us_capital_albany",
     "type": "capital",
     "name": "Albany",
@@ -15871,11 +16045,40 @@
     "packIds": [
       "us_states_capitals"
     ],
+    "adminOf": {
+      "id": "state_new_york",
+      "name": "New York",
+      "type": "state"
+    },
     "bbox": [
       -73.7562,
       42.6526,
       -73.7562,
       42.6526
+    ]
+  },
+  {
+    "id": "us_capital_arkansas",
+    "type": "capital",
+    "name": "Little Rock",
+    "geometryType": "point",
+    "labelPoint": [
+      -92.2896,
+      34.7465
+    ],
+    "packIds": [
+      "us_states_capitals"
+    ],
+    "adminOf": {
+      "id": "state_arkansas",
+      "name": "Arkansas",
+      "type": "state"
+    },
+    "bbox": [
+      -92.2896,
+      34.7465,
+      -92.2896,
+      34.7465
     ]
   },
   {
@@ -15890,6 +16093,11 @@
     "packIds": [
       "us_states_capitals"
     ],
+    "adminOf": {
+      "id": "state_georgia",
+      "name": "Georgia",
+      "type": "state"
+    },
     "bbox": [
       -84.388,
       33.749,
@@ -15909,6 +16117,11 @@
     "packIds": [
       "us_states_capitals"
     ],
+    "adminOf": {
+      "id": "state_texas",
+      "name": "Texas",
+      "type": "state"
+    },
     "bbox": [
       -97.7431,
       30.2672,
@@ -15928,6 +16141,11 @@
     "packIds": [
       "us_states_capitals"
     ],
+    "adminOf": {
+      "id": "state_louisiana",
+      "name": "Louisiana",
+      "type": "state"
+    },
     "bbox": [
       -91.1403,
       30.4515,
@@ -15947,6 +16165,11 @@
     "packIds": [
       "us_states_capitals"
     ],
+    "adminOf": {
+      "id": "state_massachusetts",
+      "name": "Massachusetts",
+      "type": "state"
+    },
     "bbox": [
       -71.0589,
       42.3601,
@@ -15966,11 +16189,64 @@
     "packIds": [
       "us_states_capitals"
     ],
+    "adminOf": {
+      "id": "state_ohio",
+      "name": "Ohio",
+      "type": "state"
+    },
     "bbox": [
       -82.9988,
       39.9612,
       -82.9988,
       39.9612
+    ]
+  },
+  {
+    "id": "us_capital_connecticut",
+    "type": "capital",
+    "name": "Hartford",
+    "geometryType": "point",
+    "labelPoint": [
+      -72.6851,
+      41.7637
+    ],
+    "packIds": [
+      "us_states_capitals"
+    ],
+    "adminOf": {
+      "id": "state_connecticut",
+      "name": "Connecticut",
+      "type": "state"
+    },
+    "bbox": [
+      -72.6851,
+      41.7637,
+      -72.6851,
+      41.7637
+    ]
+  },
+  {
+    "id": "us_capital_delaware",
+    "type": "capital",
+    "name": "Dover",
+    "geometryType": "point",
+    "labelPoint": [
+      -75.5244,
+      39.1582
+    ],
+    "packIds": [
+      "us_states_capitals"
+    ],
+    "adminOf": {
+      "id": "state_delaware",
+      "name": "Delaware",
+      "type": "state"
+    },
+    "bbox": [
+      -75.5244,
+      39.1582,
+      -75.5244,
+      39.1582
     ]
   },
   {
@@ -15985,6 +16261,11 @@
     "packIds": [
       "us_states_capitals"
     ],
+    "adminOf": {
+      "id": "state_colorado",
+      "name": "Colorado",
+      "type": "state"
+    },
     "bbox": [
       -104.9903,
       39.7392,
@@ -16004,11 +16285,136 @@
     "packIds": [
       "us_states_capitals"
     ],
+    "adminOf": {
+      "id": "state_pennsylvania",
+      "name": "Pennsylvania",
+      "type": "state"
+    },
     "bbox": [
       -76.8836,
       40.2732,
       -76.8836,
       40.2732
+    ]
+  },
+  {
+    "id": "us_capital_hawaii",
+    "type": "capital",
+    "name": "Honolulu",
+    "geometryType": "point",
+    "labelPoint": [
+      -157.8583,
+      21.3069
+    ],
+    "packIds": [
+      "us_states_capitals"
+    ],
+    "adminOf": {
+      "id": "state_hawaii",
+      "name": "Hawaii",
+      "type": "state"
+    },
+    "bbox": [
+      -157.8583,
+      21.3069,
+      -157.8583,
+      21.3069
+    ]
+  },
+  {
+    "id": "us_capital_idaho",
+    "type": "capital",
+    "name": "Boise",
+    "geometryType": "point",
+    "labelPoint": [
+      -116.2023,
+      43.615
+    ],
+    "packIds": [
+      "us_states_capitals"
+    ],
+    "adminOf": {
+      "id": "state_idaho",
+      "name": "Idaho",
+      "type": "state"
+    },
+    "bbox": [
+      -116.2023,
+      43.615,
+      -116.2023,
+      43.615
+    ]
+  },
+  {
+    "id": "us_capital_illinois",
+    "type": "capital",
+    "name": "Springfield",
+    "geometryType": "point",
+    "labelPoint": [
+      -89.6501,
+      39.7817
+    ],
+    "packIds": [
+      "us_states_capitals"
+    ],
+    "adminOf": {
+      "id": "state_illinois",
+      "name": "Illinois",
+      "type": "state"
+    },
+    "bbox": [
+      -89.6501,
+      39.7817,
+      -89.6501,
+      39.7817
+    ]
+  },
+  {
+    "id": "us_capital_indiana",
+    "type": "capital",
+    "name": "Indianapolis",
+    "geometryType": "point",
+    "labelPoint": [
+      -86.1581,
+      39.7684
+    ],
+    "packIds": [
+      "us_states_capitals"
+    ],
+    "adminOf": {
+      "id": "state_indiana",
+      "name": "Indiana",
+      "type": "state"
+    },
+    "bbox": [
+      -86.1581,
+      39.7684,
+      -86.1581,
+      39.7684
+    ]
+  },
+  {
+    "id": "us_capital_iowa",
+    "type": "capital",
+    "name": "Des Moines",
+    "geometryType": "point",
+    "labelPoint": [
+      -93.625,
+      41.5868
+    ],
+    "packIds": [
+      "us_states_capitals"
+    ],
+    "adminOf": {
+      "id": "state_iowa",
+      "name": "Iowa",
+      "type": "state"
+    },
+    "bbox": [
+      -93.625,
+      41.5868,
+      -93.625,
+      41.5868
     ]
   },
   {
@@ -16023,11 +16429,64 @@
     "packIds": [
       "us_states_capitals"
     ],
+    "adminOf": {
+      "id": "state_mississippi",
+      "name": "Mississippi",
+      "type": "state"
+    },
     "bbox": [
       -90.1848,
       32.2988,
       -90.1848,
       32.2988
+    ]
+  },
+  {
+    "id": "us_capital_kansas",
+    "type": "capital",
+    "name": "Topeka",
+    "geometryType": "point",
+    "labelPoint": [
+      -95.6752,
+      39.0473
+    ],
+    "packIds": [
+      "us_states_capitals"
+    ],
+    "adminOf": {
+      "id": "state_kansas",
+      "name": "Kansas",
+      "type": "state"
+    },
+    "bbox": [
+      -95.6752,
+      39.0473,
+      -95.6752,
+      39.0473
+    ]
+  },
+  {
+    "id": "us_capital_kentucky",
+    "type": "capital",
+    "name": "Frankfort",
+    "geometryType": "point",
+    "labelPoint": [
+      -84.8733,
+      38.2009
+    ],
+    "packIds": [
+      "us_states_capitals"
+    ],
+    "adminOf": {
+      "id": "state_kentucky",
+      "name": "Kentucky",
+      "type": "state"
+    },
+    "bbox": [
+      -84.8733,
+      38.2009,
+      -84.8733,
+      38.2009
     ]
   },
   {
@@ -16042,6 +16501,11 @@
     "packIds": [
       "us_states_capitals"
     ],
+    "adminOf": {
+      "id": "state_michigan",
+      "name": "Michigan",
+      "type": "state"
+    },
     "bbox": [
       -84.5555,
       42.7325,
@@ -16061,11 +16525,112 @@
     "packIds": [
       "us_states_capitals"
     ],
+    "adminOf": {
+      "id": "state_wisconsin",
+      "name": "Wisconsin",
+      "type": "state"
+    },
     "bbox": [
       -89.4012,
       43.0731,
       -89.4012,
       43.0731
+    ]
+  },
+  {
+    "id": "us_capital_maine",
+    "type": "capital",
+    "name": "Augusta",
+    "geometryType": "point",
+    "labelPoint": [
+      -69.7795,
+      44.3106
+    ],
+    "packIds": [
+      "us_states_capitals"
+    ],
+    "adminOf": {
+      "id": "state_maine",
+      "name": "Maine",
+      "type": "state"
+    },
+    "bbox": [
+      -69.7795,
+      44.3106,
+      -69.7795,
+      44.3106
+    ]
+  },
+  {
+    "id": "us_capital_maryland",
+    "type": "capital",
+    "name": "Annapolis",
+    "geometryType": "point",
+    "labelPoint": [
+      -76.4922,
+      38.9784
+    ],
+    "packIds": [
+      "us_states_capitals"
+    ],
+    "adminOf": {
+      "id": "state_maryland",
+      "name": "Maryland",
+      "type": "state"
+    },
+    "bbox": [
+      -76.4922,
+      38.9784,
+      -76.4922,
+      38.9784
+    ]
+  },
+  {
+    "id": "us_capital_missouri",
+    "type": "capital",
+    "name": "Jefferson City",
+    "geometryType": "point",
+    "labelPoint": [
+      -92.1735,
+      38.5767
+    ],
+    "packIds": [
+      "us_states_capitals"
+    ],
+    "adminOf": {
+      "id": "state_missouri",
+      "name": "Missouri",
+      "type": "state"
+    },
+    "bbox": [
+      -92.1735,
+      38.5767,
+      -92.1735,
+      38.5767
+    ]
+  },
+  {
+    "id": "us_capital_montana",
+    "type": "capital",
+    "name": "Helena",
+    "geometryType": "point",
+    "labelPoint": [
+      -112.0391,
+      46.5884
+    ],
+    "packIds": [
+      "us_states_capitals"
+    ],
+    "adminOf": {
+      "id": "state_montana",
+      "name": "Montana",
+      "type": "state"
+    },
+    "bbox": [
+      -112.0391,
+      46.5884,
+      -112.0391,
+      46.5884
     ]
   },
   {
@@ -16080,6 +16645,11 @@
     "packIds": [
       "us_states_capitals"
     ],
+    "adminOf": {
+      "id": "state_alabama",
+      "name": "Alabama",
+      "type": "state"
+    },
     "bbox": [
       -86.3,
       32.3668,
@@ -16099,11 +16669,184 @@
     "packIds": [
       "us_states_capitals"
     ],
+    "adminOf": {
+      "id": "state_tennessee",
+      "name": "Tennessee",
+      "type": "state"
+    },
     "bbox": [
       -86.7816,
       36.1627,
       -86.7816,
       36.1627
+    ]
+  },
+  {
+    "id": "us_capital_nebraska",
+    "type": "capital",
+    "name": "Lincoln",
+    "geometryType": "point",
+    "labelPoint": [
+      -96.6852,
+      40.8136
+    ],
+    "packIds": [
+      "us_states_capitals"
+    ],
+    "adminOf": {
+      "id": "state_nebraska",
+      "name": "Nebraska",
+      "type": "state"
+    },
+    "bbox": [
+      -96.6852,
+      40.8136,
+      -96.6852,
+      40.8136
+    ]
+  },
+  {
+    "id": "us_capital_nevada",
+    "type": "capital",
+    "name": "Carson City",
+    "geometryType": "point",
+    "labelPoint": [
+      -119.7674,
+      39.1638
+    ],
+    "packIds": [
+      "us_states_capitals"
+    ],
+    "adminOf": {
+      "id": "state_nevada",
+      "name": "Nevada",
+      "type": "state"
+    },
+    "bbox": [
+      -119.7674,
+      39.1638,
+      -119.7674,
+      39.1638
+    ]
+  },
+  {
+    "id": "us_capital_new_hampshire",
+    "type": "capital",
+    "name": "Concord",
+    "geometryType": "point",
+    "labelPoint": [
+      -71.5376,
+      43.2081
+    ],
+    "packIds": [
+      "us_states_capitals"
+    ],
+    "adminOf": {
+      "id": "state_new_hampshire",
+      "name": "New Hampshire",
+      "type": "state"
+    },
+    "bbox": [
+      -71.5376,
+      43.2081,
+      -71.5376,
+      43.2081
+    ]
+  },
+  {
+    "id": "us_capital_new_jersey",
+    "type": "capital",
+    "name": "Trenton",
+    "geometryType": "point",
+    "labelPoint": [
+      -74.7429,
+      40.2171
+    ],
+    "packIds": [
+      "us_states_capitals"
+    ],
+    "adminOf": {
+      "id": "state_new_jersey",
+      "name": "New Jersey",
+      "type": "state"
+    },
+    "bbox": [
+      -74.7429,
+      40.2171,
+      -74.7429,
+      40.2171
+    ]
+  },
+  {
+    "id": "us_capital_new_mexico",
+    "type": "capital",
+    "name": "Santa Fe",
+    "geometryType": "point",
+    "labelPoint": [
+      -105.9378,
+      35.687
+    ],
+    "packIds": [
+      "us_states_capitals"
+    ],
+    "adminOf": {
+      "id": "state_new_mexico",
+      "name": "New Mexico",
+      "type": "state"
+    },
+    "bbox": [
+      -105.9378,
+      35.687,
+      -105.9378,
+      35.687
+    ]
+  },
+  {
+    "id": "us_capital_north_dakota",
+    "type": "capital",
+    "name": "Bismarck",
+    "geometryType": "point",
+    "labelPoint": [
+      -100.7837,
+      46.8083
+    ],
+    "packIds": [
+      "us_states_capitals"
+    ],
+    "adminOf": {
+      "id": "state_north_dakota",
+      "name": "North Dakota",
+      "type": "state"
+    },
+    "bbox": [
+      -100.7837,
+      46.8083,
+      -100.7837,
+      46.8083
+    ]
+  },
+  {
+    "id": "us_capital_oklahoma",
+    "type": "capital",
+    "name": "Oklahoma City",
+    "geometryType": "point",
+    "labelPoint": [
+      -97.5164,
+      35.4676
+    ],
+    "packIds": [
+      "us_states_capitals"
+    ],
+    "adminOf": {
+      "id": "state_oklahoma",
+      "name": "Oklahoma",
+      "type": "state"
+    },
+    "bbox": [
+      -97.5164,
+      35.4676,
+      -97.5164,
+      35.4676
     ]
   },
   {
@@ -16118,6 +16861,11 @@
     "packIds": [
       "us_states_capitals"
     ],
+    "adminOf": {
+      "id": "state_washington",
+      "name": "Washington",
+      "type": "state"
+    },
     "bbox": [
       -122.9007,
       47.0379,
@@ -16137,6 +16885,11 @@
     "packIds": [
       "us_states_capitals"
     ],
+    "adminOf": {
+      "id": "state_arizona",
+      "name": "Arizona",
+      "type": "state"
+    },
     "bbox": [
       -112.074,
       33.4484,
@@ -16156,11 +16909,40 @@
     "packIds": [
       "us_states_capitals"
     ],
+    "adminOf": {
+      "id": "state_north_carolina",
+      "name": "North Carolina",
+      "type": "state"
+    },
     "bbox": [
       -78.6382,
       35.7796,
       -78.6382,
       35.7796
+    ]
+  },
+  {
+    "id": "us_capital_rhode_island",
+    "type": "capital",
+    "name": "Providence",
+    "geometryType": "point",
+    "labelPoint": [
+      -71.4128,
+      41.824
+    ],
+    "packIds": [
+      "us_states_capitals"
+    ],
+    "adminOf": {
+      "id": "state_rhode_island",
+      "name": "Rhode Island",
+      "type": "state"
+    },
+    "bbox": [
+      -71.4128,
+      41.824,
+      -71.4128,
+      41.824
     ]
   },
   {
@@ -16175,6 +16957,11 @@
     "packIds": [
       "us_states_capitals"
     ],
+    "adminOf": {
+      "id": "state_california",
+      "name": "California",
+      "type": "state"
+    },
     "bbox": [
       -121.4944,
       38.5816,
@@ -16194,6 +16981,11 @@
     "packIds": [
       "us_states_capitals"
     ],
+    "adminOf": {
+      "id": "state_minnesota",
+      "name": "Minnesota",
+      "type": "state"
+    },
     "bbox": [
       -93.09,
       44.9537,
@@ -16213,11 +17005,64 @@
     "packIds": [
       "us_states_capitals"
     ],
+    "adminOf": {
+      "id": "state_oregon",
+      "name": "Oregon",
+      "type": "state"
+    },
     "bbox": [
       -123.0351,
       44.9429,
       -123.0351,
       44.9429
+    ]
+  },
+  {
+    "id": "us_capital_south_carolina",
+    "type": "capital",
+    "name": "Columbia",
+    "geometryType": "point",
+    "labelPoint": [
+      -81.0348,
+      34.0007
+    ],
+    "packIds": [
+      "us_states_capitals"
+    ],
+    "adminOf": {
+      "id": "state_south_carolina",
+      "name": "South Carolina",
+      "type": "state"
+    },
+    "bbox": [
+      -81.0348,
+      34.0007,
+      -81.0348,
+      34.0007
+    ]
+  },
+  {
+    "id": "us_capital_south_dakota",
+    "type": "capital",
+    "name": "Pierre",
+    "geometryType": "point",
+    "labelPoint": [
+      -100.3509,
+      44.3683
+    ],
+    "packIds": [
+      "us_states_capitals"
+    ],
+    "adminOf": {
+      "id": "state_south_dakota",
+      "name": "South Dakota",
+      "type": "state"
+    },
+    "bbox": [
+      -100.3509,
+      44.3683,
+      -100.3509,
+      44.3683
     ]
   },
   {
@@ -16232,11 +17077,136 @@
     "packIds": [
       "us_states_capitals"
     ],
+    "adminOf": {
+      "id": "state_florida",
+      "name": "Florida",
+      "type": "state"
+    },
     "bbox": [
       -84.2813,
       30.4383,
       -84.2813,
       30.4383
+    ]
+  },
+  {
+    "id": "us_capital_utah",
+    "type": "capital",
+    "name": "Salt Lake City",
+    "geometryType": "point",
+    "labelPoint": [
+      -111.891,
+      40.7608
+    ],
+    "packIds": [
+      "us_states_capitals"
+    ],
+    "adminOf": {
+      "id": "state_utah",
+      "name": "Utah",
+      "type": "state"
+    },
+    "bbox": [
+      -111.891,
+      40.7608,
+      -111.891,
+      40.7608
+    ]
+  },
+  {
+    "id": "us_capital_vermont",
+    "type": "capital",
+    "name": "Montpelier",
+    "geometryType": "point",
+    "labelPoint": [
+      -72.5754,
+      44.2601
+    ],
+    "packIds": [
+      "us_states_capitals"
+    ],
+    "adminOf": {
+      "id": "state_vermont",
+      "name": "Vermont",
+      "type": "state"
+    },
+    "bbox": [
+      -72.5754,
+      44.2601,
+      -72.5754,
+      44.2601
+    ]
+  },
+  {
+    "id": "us_capital_virginia",
+    "type": "capital",
+    "name": "Richmond",
+    "geometryType": "point",
+    "labelPoint": [
+      -77.436,
+      37.5407
+    ],
+    "packIds": [
+      "us_states_capitals"
+    ],
+    "adminOf": {
+      "id": "state_virginia",
+      "name": "Virginia",
+      "type": "state"
+    },
+    "bbox": [
+      -77.436,
+      37.5407,
+      -77.436,
+      37.5407
+    ]
+  },
+  {
+    "id": "us_capital_west_virginia",
+    "type": "capital",
+    "name": "Charleston",
+    "geometryType": "point",
+    "labelPoint": [
+      -81.6326,
+      38.3498
+    ],
+    "packIds": [
+      "us_states_capitals"
+    ],
+    "adminOf": {
+      "id": "state_west_virginia",
+      "name": "West Virginia",
+      "type": "state"
+    },
+    "bbox": [
+      -81.6326,
+      38.3498,
+      -81.6326,
+      38.3498
+    ]
+  },
+  {
+    "id": "us_capital_wyoming",
+    "type": "capital",
+    "name": "Cheyenne",
+    "geometryType": "point",
+    "labelPoint": [
+      -104.8202,
+      41.14
+    ],
+    "packIds": [
+      "us_states_capitals"
+    ],
+    "adminOf": {
+      "id": "state_wyoming",
+      "name": "Wyoming",
+      "type": "state"
+    },
+    "bbox": [
+      -104.8202,
+      41.14,
+      -104.8202,
+      41.14
     ]
   }
 ]

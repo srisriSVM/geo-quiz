@@ -15,6 +15,9 @@
       "usa_states",
       "us_states_capitals"
     ],
+    "capitalIds": [
+      "us_capital_montgomery"
+    ],
     "geometry": {
       "type": "Polygon",
       "coordinates": [
@@ -176,6 +179,9 @@
     "packIds": [
       "usa_states",
       "us_states_capitals"
+    ],
+    "capitalIds": [
+      "us_capital_alaska"
     ],
     "geometry": {
       "type": "MultiPolygon",
@@ -4657,6 +4663,9 @@
       "usa_states",
       "us_states_capitals"
     ],
+    "capitalIds": [
+      "us_capital_phoenix"
+    ],
     "geometry": {
       "type": "Polygon",
       "coordinates": [
@@ -4814,6 +4823,9 @@
     "packIds": [
       "usa_states",
       "us_states_capitals"
+    ],
+    "capitalIds": [
+      "us_capital_arkansas"
     ],
     "geometry": {
       "type": "Polygon",
@@ -5033,6 +5045,9 @@
       "credit": "Wikimedia",
       "alt": "Flag of California"
     },
+    "capitalIds": [
+      "us_capital_sacramento"
+    ],
     "geometry": {
       "type": "Polygon",
       "coordinates": [
@@ -5435,6 +5450,9 @@
       "usa_states",
       "us_states_capitals"
     ],
+    "capitalIds": [
+      "us_capital_denver"
+    ],
     "geometry": {
       "type": "Polygon",
       "coordinates": [
@@ -5528,6 +5546,9 @@
     "packIds": [
       "usa_states",
       "us_states_capitals"
+    ],
+    "capitalIds": [
+      "us_capital_connecticut"
     ],
     "geometry": {
       "type": "Polygon",
@@ -5623,6 +5644,9 @@
       "usa_states",
       "us_states_capitals"
     ],
+    "capitalIds": [
+      "us_capital_delaware"
+    ],
     "geometry": {
       "type": "Polygon",
       "coordinates": [
@@ -5704,6 +5728,9 @@
     "packIds": [
       "usa_states",
       "us_states_capitals"
+    ],
+    "capitalIds": [
+      "us_capital_tallahassee"
     ],
     "geometry": {
       "type": "Polygon",
@@ -6047,6 +6074,9 @@
       "usa_states",
       "us_states_capitals"
     ],
+    "capitalIds": [
+      "us_capital_atlanta"
+    ],
     "geometry": {
       "type": "Polygon",
       "coordinates": [
@@ -6280,6 +6310,9 @@
     "packIds": [
       "usa_states",
       "us_states_capitals"
+    ],
+    "capitalIds": [
+      "us_capital_hawaii"
     ],
     "geometry": {
       "type": "MultiPolygon",
@@ -6524,6 +6557,9 @@
     "packIds": [
       "usa_states",
       "us_states_capitals"
+    ],
+    "capitalIds": [
+      "us_capital_idaho"
     ],
     "geometry": {
       "type": "Polygon",
@@ -6818,6 +6854,9 @@
     "packIds": [
       "usa_states",
       "us_states_capitals"
+    ],
+    "capitalIds": [
+      "us_capital_illinois"
     ],
     "geometry": {
       "type": "Polygon",
@@ -7117,6 +7156,9 @@
       "usa_states",
       "us_states_capitals"
     ],
+    "capitalIds": [
+      "us_capital_indiana"
+    ],
     "geometry": {
       "type": "Polygon",
       "coordinates": [
@@ -7330,6 +7372,9 @@
     "packIds": [
       "usa_states",
       "us_states_capitals"
+    ],
+    "capitalIds": [
+      "us_capital_iowa"
     ],
     "geometry": {
       "type": "Polygon",
@@ -7561,6 +7606,9 @@
       "usa_states",
       "us_states_capitals"
     ],
+    "capitalIds": [
+      "us_capital_kansas"
+    ],
     "geometry": {
       "type": "Polygon",
       "coordinates": [
@@ -7642,6 +7690,9 @@
     "packIds": [
       "usa_states",
       "us_states_capitals"
+    ],
+    "capitalIds": [
+      "us_capital_kentucky"
     ],
     "geometry": {
       "type": "Polygon",
@@ -7972,6 +8023,9 @@
     "packIds": [
       "usa_states",
       "us_states_capitals"
+    ],
+    "capitalIds": [
+      "us_capital_baton_rouge"
     ],
     "geometry": {
       "type": "Polygon",
@@ -8307,6 +8361,9 @@
       "usa_states",
       "us_states_capitals"
     ],
+    "capitalIds": [
+      "us_capital_maine"
+    ],
     "geometry": {
       "type": "Polygon",
       "coordinates": [
@@ -8601,6 +8658,9 @@
       "usa_states",
       "us_states_capitals"
     ],
+    "capitalIds": [
+      "us_capital_maryland"
+    ],
     "geometry": {
       "type": "MultiPolygon",
       "coordinates": [
@@ -8893,6 +8953,9 @@
       "usa_states",
       "us_states_capitals"
     ],
+    "capitalIds": [
+      "us_capital_boston"
+    ],
     "geometry": {
       "type": "Polygon",
       "coordinates": [
@@ -9062,6 +9125,9 @@
     "packIds": [
       "usa_states",
       "us_states_capitals"
+    ],
+    "capitalIds": [
+      "us_capital_lansing"
     ],
     "geometry": {
       "type": "MultiPolygon",
@@ -9715,6 +9781,9 @@
       "usa_states",
       "us_states_capitals"
     ],
+    "capitalIds": [
+      "us_capital_saint_paul"
+    ],
     "geometry": {
       "type": "Polygon",
       "coordinates": [
@@ -10077,6 +10146,9 @@
       "usa_states",
       "us_states_capitals"
     ],
+    "capitalIds": [
+      "us_capital_jackson_ms"
+    ],
     "geometry": {
       "type": "Polygon",
       "coordinates": [
@@ -10290,6 +10362,9 @@
     "packIds": [
       "usa_states",
       "us_states_capitals"
+    ],
+    "capitalIds": [
+      "us_capital_missouri"
     ],
     "geometry": {
       "type": "Polygon",
@@ -10533,6 +10608,9 @@
       "usa_states",
       "us_states_capitals"
     ],
+    "capitalIds": [
+      "us_capital_montana"
+    ],
     "geometry": {
       "type": "Polygon",
       "coordinates": [
@@ -10771,6 +10849,9 @@
       "usa_states",
       "us_states_capitals"
     ],
+    "capitalIds": [
+      "us_capital_nebraska"
+    ],
     "geometry": {
       "type": "Polygon",
       "coordinates": [
@@ -10917,6 +10998,9 @@
       "usa_states",
       "us_states_capitals"
     ],
+    "capitalIds": [
+      "us_capital_nevada"
+    ],
     "geometry": {
       "type": "Polygon",
       "coordinates": [
@@ -11030,6 +11114,9 @@
     "packIds": [
       "usa_states",
       "us_states_capitals"
+    ],
+    "capitalIds": [
+      "us_capital_new_hampshire"
     ],
     "geometry": {
       "type": "Polygon",
@@ -11172,6 +11259,9 @@
     "packIds": [
       "usa_states",
       "us_states_capitals"
+    ],
+    "capitalIds": [
+      "us_capital_new_jersey"
     ],
     "geometry": {
       "type": "Polygon",
@@ -11331,6 +11421,9 @@
       "usa_states",
       "us_states_capitals"
     ],
+    "capitalIds": [
+      "us_capital_new_mexico"
+    ],
     "geometry": {
       "type": "Polygon",
       "coordinates": [
@@ -11428,6 +11521,9 @@
     "packIds": [
       "usa_states",
       "us_states_capitals"
+    ],
+    "capitalIds": [
+      "us_capital_albany"
     ],
     "geometry": {
       "type": "Polygon",
@@ -11731,6 +11827,9 @@
       "usa_states",
       "us_states_capitals"
     ],
+    "capitalIds": [
+      "us_capital_raleigh"
+    ],
     "geometry": {
       "type": "Polygon",
       "coordinates": [
@@ -12005,6 +12104,9 @@
       "usa_states",
       "us_states_capitals"
     ],
+    "capitalIds": [
+      "us_capital_north_dakota"
+    ],
     "geometry": {
       "type": "Polygon",
       "coordinates": [
@@ -12098,6 +12200,9 @@
     "packIds": [
       "usa_states",
       "us_states_capitals"
+    ],
+    "capitalIds": [
+      "us_capital_columbus"
     ],
     "geometry": {
       "type": "Polygon",
@@ -12317,6 +12422,9 @@
       "usa_states",
       "us_states_capitals"
     ],
+    "capitalIds": [
+      "us_capital_oklahoma"
+    ],
     "geometry": {
       "type": "Polygon",
       "coordinates": [
@@ -12526,6 +12634,9 @@
     "packIds": [
       "usa_states",
       "us_states_capitals"
+    ],
+    "capitalIds": [
+      "us_capital_salem"
     ],
     "geometry": {
       "type": "Polygon",
@@ -12781,6 +12892,9 @@
       "usa_states",
       "us_states_capitals"
     ],
+    "capitalIds": [
+      "us_capital_harrisburg"
+    ],
     "geometry": {
       "type": "Polygon",
       "coordinates": [
@@ -12943,6 +13057,9 @@
       "usa_states",
       "us_states_capitals"
     ],
+    "capitalIds": [
+      "us_capital_rhode_island"
+    ],
     "geometry": {
       "type": "MultiPolygon",
       "coordinates": [
@@ -13038,6 +13155,9 @@
     "packIds": [
       "usa_states",
       "us_states_capitals"
+    ],
+    "capitalIds": [
+      "us_capital_south_carolina"
     ],
     "geometry": {
       "type": "Polygon",
@@ -13245,6 +13365,9 @@
       "usa_states",
       "us_states_capitals"
     ],
+    "capitalIds": [
+      "us_capital_south_dakota"
+    ],
     "geometry": {
       "type": "Polygon",
       "coordinates": [
@@ -13390,6 +13513,9 @@
     "packIds": [
       "usa_states",
       "us_states_capitals"
+    ],
+    "capitalIds": [
+      "us_capital_nashville"
     ],
     "geometry": {
       "type": "Polygon",
@@ -13626,6 +13752,9 @@
         "value": "Houston",
         "icon": "city"
       }
+    ],
+    "capitalIds": [
+      "us_capital_austin"
     ],
     "geometry": {
       "type": "Polygon",
@@ -14265,6 +14394,9 @@
       "usa_states",
       "us_states_capitals"
     ],
+    "capitalIds": [
+      "us_capital_utah"
+    ],
     "geometry": {
       "type": "Polygon",
       "coordinates": [
@@ -14342,6 +14474,9 @@
     "packIds": [
       "usa_states",
       "us_states_capitals"
+    ],
+    "capitalIds": [
+      "us_capital_vermont"
     ],
     "geometry": {
       "type": "Polygon",
@@ -14484,6 +14619,9 @@
     "packIds": [
       "usa_states",
       "us_states_capitals"
+    ],
+    "capitalIds": [
+      "us_capital_virginia"
     ],
     "geometry": {
       "type": "MultiPolygon",
@@ -14845,6 +14983,9 @@
       "usa_states",
       "us_states_capitals"
     ],
+    "capitalIds": [
+      "us_capital_olympia"
+    ],
     "geometry": {
       "type": "MultiPolygon",
       "coordinates": [
@@ -15173,6 +15314,9 @@
       "usa_states",
       "us_states_capitals"
     ],
+    "capitalIds": [
+      "us_capital_west_virginia"
+    ],
     "geometry": {
       "type": "Polygon",
       "coordinates": [
@@ -15462,6 +15606,9 @@
     "packIds": [
       "usa_states",
       "us_states_capitals"
+    ],
+    "capitalIds": [
+      "us_capital_madison"
     ],
     "geometry": {
       "type": "Polygon",
@@ -15792,6 +15939,9 @@
     "packIds": [
       "usa_states",
       "us_states_capitals"
+    ],
+    "capitalIds": [
+      "us_capital_wyoming"
     ],
     "geometry": {
       "type": "Polygon",

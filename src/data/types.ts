@@ -38,6 +38,12 @@ export type MediaItem = {
   credit?: string;
 };
 
+export type AdminRef = {
+  id: string;
+  name: string;
+  type: "country" | "state" | "province";
+};
+
 export type Entity = {
   id: string;
   type: EntityType;
@@ -55,6 +61,8 @@ export type Entity = {
   media?: MediaItem & {
     images?: MediaItem[];
   };
+  adminOf?: AdminRef;
+  capitalIds?: string[];
   learningObjective?: string;
   geometryType: GeometryType;
   geometry?: Geometry;

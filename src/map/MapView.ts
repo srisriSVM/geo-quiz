@@ -69,6 +69,7 @@ export class MapView {
   private usaStatesGeoJsonRequest: Promise<void> | null = null;
   private currentStyleSignature = "political";
   private entityClickHandler: ((entityId: string) => void) | null = null;
+  private styleReloadToken = 0;
 
   constructor(host: HTMLElement) {
     this.host = host;
@@ -146,6 +147,8 @@ export class MapView {
     }
 
     this.applyBaseDetailVisibility();
+    this.applyUsStateOverlayVisibility();
+    this.renderHighlightedMarkers();
   }
 
   setLowDataMode(enabled: boolean): void {
@@ -264,7 +267,7 @@ export class MapView {
     this.syncUsaStateOverlaySource();
     this.setEntities(this.pendingEntities);
     this.setMode(this.pendingMode);
-    this.setMapDetail(this.pendingMapDetail);
+    this.applyBaseDetailVisibility();
     this.applyHighlightFilter(this.pendingHighlightedEntityId);
     this.updateTargetLineData(this.pendingHighlightedEntityId);
     this.renderHighlightedMarkers();
@@ -338,9 +341,23 @@ export class MapView {
       bearing: this.map.getBearing(),
       pitch: this.map.getPitch()
     };
+    const reloadToken = ++this.styleReloadToken;
+    const recoverAfterStyleSwitch = (): void => {
+      if (!this.map || reloadToken !== this.styleReloadToken) {
+        return;
+      }
+      this.mapLoaded = true;
+      this.applyBaseDetailVisibility();
+      this.addEntityLayers(this.map);
+      this.bindInteractionHandlers(this.map);
+      this.applyPendingState();
+    };
     this.currentStyleSignature = desiredStyleSignature;
     this.mapLoaded = false;
     this.map.setStyle(this.getStyleForDetail(this.pendingMapDetail, this.pendingLowDataMode));
+    this.map.once("style.load", recoverAfterStyleSwitch);
+    this.map.once("idle", recoverAfterStyleSwitch);
+    window.setTimeout(recoverAfterStyleSwitch, 1200);
     return true;
   }
 

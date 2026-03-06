@@ -251,6 +251,9 @@ export class QuizPanel {
     }
 
     const lines: string[] = [];
+    if (entity.type === "capital" && entity.adminOf) {
+      lines.push(`<p><strong>Belongs to:</strong> ${entity.adminOf.name} (${entity.adminOf.type})</p>`);
+    }
     if (entity.learningObjective) {
       lines.push(`<p><strong>Focus:</strong> ${entity.learningObjective}</p>`);
     }

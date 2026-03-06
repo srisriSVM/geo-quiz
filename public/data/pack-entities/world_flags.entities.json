@@ -1,5 +1,53 @@
 [
   {
+    "id": "country_afg",
+    "type": "country",
+    "name": "Afghanistan",
+    "geometryType": "point",
+    "labelPoint": [
+      65,
+      33
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_kabul"
+    ],
+    "bbox": [
+      65,
+      33,
+      65,
+      33
+    ]
+  },
+  {
+    "id": "country_ago",
+    "type": "country",
+    "name": "Angola",
+    "geometryType": "point",
+    "labelPoint": [
+      18.5,
+      -12.5
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_luanda"
+    ],
+    "bbox": [
+      18.5,
+      -12.5,
+      18.5,
+      -12.5
+    ]
+  },
+  {
     "id": "country_albania",
     "type": "country",
     "name": "Albania",
@@ -13,6 +61,9 @@
       "world_countries",
       "world_countries_by_continent",
       "world_flags"
+    ],
+    "capitalIds": [
+      "capital_tirana"
     ],
     "bbox": [
       20,
@@ -36,11 +87,62 @@
       "world_countries_by_continent",
       "world_flags"
     ],
+    "capitalIds": [
+      "capital_andorra_la_vella"
+    ],
     "bbox": [
       1.52,
       42.51,
       1.52,
       42.51
+    ]
+  },
+  {
+    "id": "country_are",
+    "type": "country",
+    "name": "United Arab Emirates",
+    "geometryType": "point",
+    "labelPoint": [
+      54,
+      24
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_abu_dhabi"
+    ],
+    "bbox": [
+      54,
+      24,
+      54,
+      24
+    ]
+  },
+  {
+    "id": "country_arg",
+    "type": "country",
+    "name": "Argentina",
+    "geometryType": "point",
+    "labelPoint": [
+      -64,
+      -34
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_buenos_aires"
+    ],
+    "bbox": [
+      -64,
+      -34,
+      -64,
+      -34
     ]
   },
   {
@@ -58,11 +160,62 @@
       "world_countries_by_continent",
       "world_flags"
     ],
+    "capitalIds": [
+      "capital_yerevan"
+    ],
     "bbox": [
       44.5,
       40.2,
       44.5,
       40.2
+    ]
+  },
+  {
+    "id": "country_atg",
+    "type": "country",
+    "name": "Antigua and Barbuda",
+    "geometryType": "point",
+    "labelPoint": [
+      -61.8,
+      17.05
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_saint_john_s"
+    ],
+    "bbox": [
+      -61.8,
+      17.05,
+      -61.8,
+      17.05
+    ]
+  },
+  {
+    "id": "country_aus",
+    "type": "country",
+    "name": "Australia",
+    "geometryType": "point",
+    "labelPoint": [
+      133,
+      -27
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_canberra"
+    ],
+    "bbox": [
+      133,
+      -27,
+      133,
+      -27
     ]
   },
   {
@@ -79,6 +232,9 @@
       "world_countries",
       "world_countries_by_continent",
       "world_flags"
+    ],
+    "capitalIds": [
+      "capital_vienna"
     ],
     "bbox": [
       14.1,
@@ -102,11 +258,38 @@
       "world_countries_by_continent",
       "world_flags"
     ],
+    "capitalIds": [
+      "capital_baku"
+    ],
     "bbox": [
       47.5,
       40.3,
       47.5,
       40.3
+    ]
+  },
+  {
+    "id": "country_bdi",
+    "type": "country",
+    "name": "Burundi",
+    "geometryType": "point",
+    "labelPoint": [
+      30,
+      -3.5
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_gitega"
+    ],
+    "bbox": [
+      30,
+      -3.5,
+      30,
+      -3.5
     ]
   },
   {
@@ -123,6 +306,9 @@
       "world_countries",
       "world_countries_by_continent",
       "world_flags"
+    ],
+    "capitalIds": [
+      "capital_minsk"
     ],
     "bbox": [
       28,
@@ -146,11 +332,182 @@
       "world_countries_by_continent",
       "world_flags"
     ],
+    "capitalIds": [
+      "capital_brussels"
+    ],
     "bbox": [
       4.7,
       50.8,
       4.7,
       50.8
+    ]
+  },
+  {
+    "id": "country_ben",
+    "type": "country",
+    "name": "Benin",
+    "geometryType": "point",
+    "labelPoint": [
+      2.25,
+      9.5
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_porto_novo"
+    ],
+    "bbox": [
+      2.25,
+      9.5,
+      2.25,
+      9.5
+    ]
+  },
+  {
+    "id": "country_bfa",
+    "type": "country",
+    "name": "Burkina Faso",
+    "geometryType": "point",
+    "labelPoint": [
+      -2,
+      13
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_ouagadougou"
+    ],
+    "bbox": [
+      -2,
+      13,
+      -2,
+      13
+    ]
+  },
+  {
+    "id": "country_bgd",
+    "type": "country",
+    "name": "Bangladesh",
+    "geometryType": "point",
+    "labelPoint": [
+      90,
+      24
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_dhaka"
+    ],
+    "bbox": [
+      90,
+      24,
+      90,
+      24
+    ]
+  },
+  {
+    "id": "country_bhr",
+    "type": "country",
+    "name": "Bahrain",
+    "geometryType": "point",
+    "labelPoint": [
+      50.55,
+      26
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_manama"
+    ],
+    "bbox": [
+      50.55,
+      26,
+      50.55,
+      26
+    ]
+  },
+  {
+    "id": "country_bhs",
+    "type": "country",
+    "name": "Bahamas",
+    "geometryType": "point",
+    "labelPoint": [
+      -77.3963,
+      25.0343
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_nassau"
+    ],
+    "bbox": [
+      -77.3963,
+      25.0343,
+      -77.3963,
+      25.0343
+    ]
+  },
+  {
+    "id": "country_blz",
+    "type": "country",
+    "name": "Belize",
+    "geometryType": "point",
+    "labelPoint": [
+      -88.75,
+      17.25
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_belmopan"
+    ],
+    "bbox": [
+      -88.75,
+      17.25,
+      -88.75,
+      17.25
+    ]
+  },
+  {
+    "id": "country_bol",
+    "type": "country",
+    "name": "Bolivia",
+    "geometryType": "point",
+    "labelPoint": [
+      -65,
+      -17
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_sucre"
+    ],
+    "bbox": [
+      -65,
+      -17,
+      -65,
+      -17
     ]
   },
   {
@@ -168,11 +525,110 @@
       "world_countries_by_continent",
       "world_flags"
     ],
+    "capitalIds": [
+      "capital_sarajevo"
+    ],
     "bbox": [
       17.8,
       44.2,
       17.8,
       44.2
+    ]
+  },
+  {
+    "id": "country_bra",
+    "type": "country",
+    "name": "Brazil",
+    "geometryType": "point",
+    "labelPoint": [
+      -55,
+      -10
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_brasilia"
+    ],
+    "bbox": [
+      -55,
+      -10,
+      -55,
+      -10
+    ]
+  },
+  {
+    "id": "country_brb",
+    "type": "country",
+    "name": "Barbados",
+    "geometryType": "point",
+    "labelPoint": [
+      -59.53333333,
+      13.16666666
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_bridgetown"
+    ],
+    "bbox": [
+      -59.53333333,
+      13.16666666,
+      -59.53333333,
+      13.16666666
+    ]
+  },
+  {
+    "id": "country_brn",
+    "type": "country",
+    "name": "Brunei",
+    "geometryType": "point",
+    "labelPoint": [
+      114.66666666,
+      4.5
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_bandar_seri_begawan"
+    ],
+    "bbox": [
+      114.66666666,
+      4.5,
+      114.66666666,
+      4.5
+    ]
+  },
+  {
+    "id": "country_btn",
+    "type": "country",
+    "name": "Bhutan",
+    "geometryType": "point",
+    "labelPoint": [
+      90.5,
+      27.5
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_thimphu"
+    ],
+    "bbox": [
+      90.5,
+      27.5,
+      90.5,
+      27.5
     ]
   },
   {
@@ -190,11 +646,326 @@
       "world_countries_by_continent",
       "world_flags"
     ],
+    "capitalIds": [
+      "capital_sofia"
+    ],
     "bbox": [
       25.5,
       42.7,
       25.5,
       42.7
+    ]
+  },
+  {
+    "id": "country_bwa",
+    "type": "country",
+    "name": "Botswana",
+    "geometryType": "point",
+    "labelPoint": [
+      24,
+      -22
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_gaborone"
+    ],
+    "bbox": [
+      24,
+      -22,
+      24,
+      -22
+    ]
+  },
+  {
+    "id": "country_caf",
+    "type": "country",
+    "name": "Central African Republic",
+    "geometryType": "point",
+    "labelPoint": [
+      21,
+      7
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_bangui"
+    ],
+    "bbox": [
+      21,
+      7,
+      21,
+      7
+    ]
+  },
+  {
+    "id": "country_can",
+    "type": "country",
+    "name": "Canada",
+    "geometryType": "point",
+    "labelPoint": [
+      -95,
+      60
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_ottawa"
+    ],
+    "bbox": [
+      -95,
+      60,
+      -95,
+      60
+    ]
+  },
+  {
+    "id": "country_chl",
+    "type": "country",
+    "name": "Chile",
+    "geometryType": "point",
+    "labelPoint": [
+      -71,
+      -30
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_santiago"
+    ],
+    "bbox": [
+      -71,
+      -30,
+      -71,
+      -30
+    ]
+  },
+  {
+    "id": "country_chn",
+    "type": "country",
+    "name": "China",
+    "geometryType": "point",
+    "labelPoint": [
+      105,
+      35
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_beijing"
+    ],
+    "bbox": [
+      105,
+      35,
+      105,
+      35
+    ]
+  },
+  {
+    "id": "country_civ",
+    "type": "country",
+    "name": "Ivory Coast",
+    "geometryType": "point",
+    "labelPoint": [
+      -5,
+      8
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_yamoussoukro"
+    ],
+    "bbox": [
+      -5,
+      8,
+      -5,
+      8
+    ]
+  },
+  {
+    "id": "country_cmr",
+    "type": "country",
+    "name": "Cameroon",
+    "geometryType": "point",
+    "labelPoint": [
+      12,
+      6
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_yaounde"
+    ],
+    "bbox": [
+      12,
+      6,
+      12,
+      6
+    ]
+  },
+  {
+    "id": "country_cod",
+    "type": "country",
+    "name": "DR Congo",
+    "geometryType": "point",
+    "labelPoint": [
+      25,
+      0
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_kinshasa"
+    ],
+    "bbox": [
+      25,
+      0,
+      25,
+      0
+    ]
+  },
+  {
+    "id": "country_cog",
+    "type": "country",
+    "name": "Republic of the Congo",
+    "geometryType": "point",
+    "labelPoint": [
+      15,
+      -1
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_brazzaville"
+    ],
+    "bbox": [
+      15,
+      -1,
+      15,
+      -1
+    ]
+  },
+  {
+    "id": "country_col",
+    "type": "country",
+    "name": "Colombia",
+    "geometryType": "point",
+    "labelPoint": [
+      -72,
+      4
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_bogota"
+    ],
+    "bbox": [
+      -72,
+      4,
+      -72,
+      4
+    ]
+  },
+  {
+    "id": "country_com",
+    "type": "country",
+    "name": "Comoros",
+    "geometryType": "point",
+    "labelPoint": [
+      44.25,
+      -12.16666666
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_moroni"
+    ],
+    "bbox": [
+      44.25,
+      -12.16666666,
+      44.25,
+      -12.16666666
+    ]
+  },
+  {
+    "id": "country_cpv",
+    "type": "country",
+    "name": "Cape Verde",
+    "geometryType": "point",
+    "labelPoint": [
+      -23.0418,
+      16.5388
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_praia"
+    ],
+    "bbox": [
+      -23.0418,
+      16.5388,
+      -23.0418,
+      16.5388
+    ]
+  },
+  {
+    "id": "country_cri",
+    "type": "country",
+    "name": "Costa Rica",
+    "geometryType": "point",
+    "labelPoint": [
+      -84,
+      10
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_san_jose"
+    ],
+    "bbox": [
+      -84,
+      10,
+      -84,
+      10
     ]
   },
   {
@@ -212,11 +983,38 @@
       "world_countries_by_continent",
       "world_flags"
     ],
+    "capitalIds": [
+      "capital_zagreb"
+    ],
     "bbox": [
       16.4,
       45.2,
       16.4,
       45.2
+    ]
+  },
+  {
+    "id": "country_cub",
+    "type": "country",
+    "name": "Cuba",
+    "geometryType": "point",
+    "labelPoint": [
+      -80,
+      21.5
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_havana"
+    ],
+    "bbox": [
+      -80,
+      21.5,
+      -80,
+      21.5
     ]
   },
   {
@@ -233,6 +1031,9 @@
       "world_countries",
       "world_countries_by_continent",
       "world_flags"
+    ],
+    "capitalIds": [
+      "capital_nicosia"
     ],
     "bbox": [
       33.2,
@@ -256,6 +1057,9 @@
       "world_countries_by_continent",
       "world_flags"
     ],
+    "capitalIds": [
+      "capital_prague"
+    ],
     "bbox": [
       15.3,
       49.8,
@@ -278,11 +1082,182 @@
       "world_countries_by_continent",
       "world_flags"
     ],
+    "capitalIds": [
+      "capital_copenhagen"
+    ],
     "bbox": [
       9.3,
       56.2,
       9.3,
       56.2
+    ]
+  },
+  {
+    "id": "country_dji",
+    "type": "country",
+    "name": "Djibouti",
+    "geometryType": "point",
+    "labelPoint": [
+      43,
+      11.5
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_djibouti"
+    ],
+    "bbox": [
+      43,
+      11.5,
+      43,
+      11.5
+    ]
+  },
+  {
+    "id": "country_dma",
+    "type": "country",
+    "name": "Dominica",
+    "geometryType": "point",
+    "labelPoint": [
+      -61.33333333,
+      15.41666666
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_roseau"
+    ],
+    "bbox": [
+      -61.33333333,
+      15.41666666,
+      -61.33333333,
+      15.41666666
+    ]
+  },
+  {
+    "id": "country_dom",
+    "type": "country",
+    "name": "Dominican Republic",
+    "geometryType": "point",
+    "labelPoint": [
+      -70.66666666,
+      19
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_santo_domingo"
+    ],
+    "bbox": [
+      -70.66666666,
+      19,
+      -70.66666666,
+      19
+    ]
+  },
+  {
+    "id": "country_dza",
+    "type": "country",
+    "name": "Algeria",
+    "geometryType": "point",
+    "labelPoint": [
+      3,
+      28
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_algiers"
+    ],
+    "bbox": [
+      3,
+      28,
+      3,
+      28
+    ]
+  },
+  {
+    "id": "country_ecu",
+    "type": "country",
+    "name": "Ecuador",
+    "geometryType": "point",
+    "labelPoint": [
+      -77.5,
+      -2
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_quito"
+    ],
+    "bbox": [
+      -77.5,
+      -2,
+      -77.5,
+      -2
+    ]
+  },
+  {
+    "id": "country_egy",
+    "type": "country",
+    "name": "Egypt",
+    "geometryType": "point",
+    "labelPoint": [
+      30,
+      27
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_cairo"
+    ],
+    "bbox": [
+      30,
+      27,
+      30,
+      27
+    ]
+  },
+  {
+    "id": "country_eri",
+    "type": "country",
+    "name": "Eritrea",
+    "geometryType": "point",
+    "labelPoint": [
+      39,
+      15
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_asmara"
+    ],
+    "bbox": [
+      39,
+      15,
+      39,
+      15
     ]
   },
   {
@@ -300,11 +1275,38 @@
       "world_countries_by_continent",
       "world_flags"
     ],
+    "capitalIds": [
+      "capital_tallinn"
+    ],
     "bbox": [
       25,
       58.7,
       25,
       58.7
+    ]
+  },
+  {
+    "id": "country_eth",
+    "type": "country",
+    "name": "Ethiopia",
+    "geometryType": "point",
+    "labelPoint": [
+      38,
+      8
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_addis_ababa"
+    ],
+    "bbox": [
+      38,
+      8,
+      38,
+      8
     ]
   },
   {
@@ -322,11 +1324,38 @@
       "world_countries_by_continent",
       "world_flags"
     ],
+    "capitalIds": [
+      "capital_helsinki"
+    ],
     "bbox": [
       26,
       64.5,
       26,
       64.5
+    ]
+  },
+  {
+    "id": "country_fji",
+    "type": "country",
+    "name": "Fiji",
+    "geometryType": "point",
+    "labelPoint": [
+      178.065,
+      -17.7134
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_suva"
+    ],
+    "bbox": [
+      178.065,
+      -17.7134,
+      178.065,
+      -17.7134
     ]
   },
   {
@@ -394,11 +1423,62 @@
         }
       ]
     },
+    "capitalIds": [
+      "capital_paris"
+    ],
     "bbox": [
       2.3,
       46.2,
       2.3,
       46.2
+    ]
+  },
+  {
+    "id": "country_fsm",
+    "type": "country",
+    "name": "Micronesia",
+    "geometryType": "point",
+    "labelPoint": [
+      158.25,
+      6.91666666
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_palikir"
+    ],
+    "bbox": [
+      158.25,
+      6.91666666,
+      158.25,
+      6.91666666
+    ]
+  },
+  {
+    "id": "country_gab",
+    "type": "country",
+    "name": "Gabon",
+    "geometryType": "point",
+    "labelPoint": [
+      11.75,
+      -1
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_libreville"
+    ],
+    "bbox": [
+      11.75,
+      -1,
+      11.75,
+      -1
     ]
   },
   {
@@ -415,6 +1495,9 @@
       "world_countries",
       "world_countries_by_continent",
       "world_flags"
+    ],
+    "capitalIds": [
+      "capital_tbilisi"
     ],
     "bbox": [
       43.5,
@@ -488,11 +1571,134 @@
         }
       ]
     },
+    "capitalIds": [
+      "capital_berlin"
+    ],
     "bbox": [
       10.4,
       51.2,
       10.4,
       51.2
+    ]
+  },
+  {
+    "id": "country_gha",
+    "type": "country",
+    "name": "Ghana",
+    "geometryType": "point",
+    "labelPoint": [
+      -2,
+      8
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_accra"
+    ],
+    "bbox": [
+      -2,
+      8,
+      -2,
+      8
+    ]
+  },
+  {
+    "id": "country_gin",
+    "type": "country",
+    "name": "Guinea",
+    "geometryType": "point",
+    "labelPoint": [
+      -10,
+      11
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_conakry"
+    ],
+    "bbox": [
+      -10,
+      11,
+      -10,
+      11
+    ]
+  },
+  {
+    "id": "country_gmb",
+    "type": "country",
+    "name": "Gambia",
+    "geometryType": "point",
+    "labelPoint": [
+      -16.56666666,
+      13.46666666
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_banjul"
+    ],
+    "bbox": [
+      -16.56666666,
+      13.46666666,
+      -16.56666666,
+      13.46666666
+    ]
+  },
+  {
+    "id": "country_gnq",
+    "type": "country",
+    "name": "Equatorial Guinea",
+    "geometryType": "point",
+    "labelPoint": [
+      10,
+      2
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_ciudad_de_la_paz"
+    ],
+    "bbox": [
+      10,
+      2,
+      10,
+      2
+    ]
+  },
+  {
+    "id": "country_grd",
+    "type": "country",
+    "name": "Grenada",
+    "geometryType": "point",
+    "labelPoint": [
+      -61.66666666,
+      12.11666666
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_st_george_s"
+    ],
+    "bbox": [
+      -61.66666666,
+      12.11666666,
+      -61.66666666,
+      12.11666666
     ]
   },
   {
@@ -510,11 +1716,110 @@
       "world_countries_by_continent",
       "world_flags"
     ],
+    "capitalIds": [
+      "capital_athens"
+    ],
     "bbox": [
       22.9,
       39,
       22.9,
       39
+    ]
+  },
+  {
+    "id": "country_gtm",
+    "type": "country",
+    "name": "Guatemala",
+    "geometryType": "point",
+    "labelPoint": [
+      -90.25,
+      15.5
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_guatemala_city"
+    ],
+    "bbox": [
+      -90.25,
+      15.5,
+      -90.25,
+      15.5
+    ]
+  },
+  {
+    "id": "country_guy",
+    "type": "country",
+    "name": "Guyana",
+    "geometryType": "point",
+    "labelPoint": [
+      -59,
+      5
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_georgetown"
+    ],
+    "bbox": [
+      -59,
+      5,
+      -59,
+      5
+    ]
+  },
+  {
+    "id": "country_hnd",
+    "type": "country",
+    "name": "Honduras",
+    "geometryType": "point",
+    "labelPoint": [
+      -86.5,
+      15
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_tegucigalpa"
+    ],
+    "bbox": [
+      -86.5,
+      15,
+      -86.5,
+      15
+    ]
+  },
+  {
+    "id": "country_hti",
+    "type": "country",
+    "name": "Haiti",
+    "geometryType": "point",
+    "labelPoint": [
+      -72.41666666,
+      19
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_port_au_prince"
+    ],
+    "bbox": [
+      -72.41666666,
+      19,
+      -72.41666666,
+      19
     ]
   },
   {
@@ -531,6 +1836,9 @@
       "world_countries",
       "world_countries_by_continent",
       "world_flags"
+    ],
+    "capitalIds": [
+      "capital_budapest"
     ],
     "bbox": [
       19.3,
@@ -554,11 +1862,62 @@
       "world_countries_by_continent",
       "world_flags"
     ],
+    "capitalIds": [
+      "capital_reykjavik"
+    ],
     "bbox": [
       -19,
       64.9,
       -19,
       64.9
+    ]
+  },
+  {
+    "id": "country_idn",
+    "type": "country",
+    "name": "Indonesia",
+    "geometryType": "point",
+    "labelPoint": [
+      120,
+      -5
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_jakarta"
+    ],
+    "bbox": [
+      120,
+      -5,
+      120,
+      -5
+    ]
+  },
+  {
+    "id": "country_ind",
+    "type": "country",
+    "name": "India",
+    "geometryType": "point",
+    "labelPoint": [
+      77,
+      20
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_new_delhi"
+    ],
+    "bbox": [
+      77,
+      20,
+      77,
+      20
     ]
   },
   {
@@ -576,11 +1935,86 @@
       "world_countries_by_continent",
       "world_flags"
     ],
+    "capitalIds": [
+      "capital_dublin"
+    ],
     "bbox": [
       -8.2,
       53.4,
       -8.2,
       53.4
+    ]
+  },
+  {
+    "id": "country_irn",
+    "type": "country",
+    "name": "Iran",
+    "geometryType": "point",
+    "labelPoint": [
+      53,
+      32
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_tehran"
+    ],
+    "bbox": [
+      53,
+      32,
+      53,
+      32
+    ]
+  },
+  {
+    "id": "country_irq",
+    "type": "country",
+    "name": "Iraq",
+    "geometryType": "point",
+    "labelPoint": [
+      44,
+      33
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_baghdad"
+    ],
+    "bbox": [
+      44,
+      33,
+      44,
+      33
+    ]
+  },
+  {
+    "id": "country_isr",
+    "type": "country",
+    "name": "Israel",
+    "geometryType": "point",
+    "labelPoint": [
+      35.13,
+      31.47
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_jerusalem"
+    ],
+    "bbox": [
+      35.13,
+      31.47,
+      35.13,
+      31.47
     ]
   },
   {
@@ -598,11 +2032,254 @@
       "world_countries_by_continent",
       "world_flags"
     ],
+    "capitalIds": [
+      "capital_rome"
+    ],
     "bbox": [
       12.5,
       42.8,
       12.5,
       42.8
+    ]
+  },
+  {
+    "id": "country_jam",
+    "type": "country",
+    "name": "Jamaica",
+    "geometryType": "point",
+    "labelPoint": [
+      -77.5,
+      18.25
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_kingston"
+    ],
+    "bbox": [
+      -77.5,
+      18.25,
+      -77.5,
+      18.25
+    ]
+  },
+  {
+    "id": "country_jor",
+    "type": "country",
+    "name": "Jordan",
+    "geometryType": "point",
+    "labelPoint": [
+      36,
+      31
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_amman"
+    ],
+    "bbox": [
+      36,
+      31,
+      36,
+      31
+    ]
+  },
+  {
+    "id": "country_jpn",
+    "type": "country",
+    "name": "Japan",
+    "geometryType": "point",
+    "labelPoint": [
+      138,
+      36
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_tokyo"
+    ],
+    "bbox": [
+      138,
+      36,
+      138,
+      36
+    ]
+  },
+  {
+    "id": "country_kaz",
+    "type": "country",
+    "name": "Kazakhstan",
+    "geometryType": "point",
+    "labelPoint": [
+      66.9237,
+      48.0196
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_astana"
+    ],
+    "bbox": [
+      66.9237,
+      48.0196,
+      66.9237,
+      48.0196
+    ]
+  },
+  {
+    "id": "country_ken",
+    "type": "country",
+    "name": "Kenya",
+    "geometryType": "point",
+    "labelPoint": [
+      38,
+      1
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_nairobi"
+    ],
+    "bbox": [
+      38,
+      1,
+      38,
+      1
+    ]
+  },
+  {
+    "id": "country_kgz",
+    "type": "country",
+    "name": "Kyrgyzstan",
+    "geometryType": "point",
+    "labelPoint": [
+      75,
+      41
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_bishkek"
+    ],
+    "bbox": [
+      75,
+      41,
+      75,
+      41
+    ]
+  },
+  {
+    "id": "country_khm",
+    "type": "country",
+    "name": "Cambodia",
+    "geometryType": "point",
+    "labelPoint": [
+      105,
+      13
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_phnom_penh"
+    ],
+    "bbox": [
+      105,
+      13,
+      105,
+      13
+    ]
+  },
+  {
+    "id": "country_kir",
+    "type": "country",
+    "name": "Kiribati",
+    "geometryType": "point",
+    "labelPoint": [
+      173,
+      1.41666666
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_south_tarawa"
+    ],
+    "bbox": [
+      173,
+      1.41666666,
+      173,
+      1.41666666
+    ]
+  },
+  {
+    "id": "country_kna",
+    "type": "country",
+    "name": "Saint Kitts and Nevis",
+    "geometryType": "point",
+    "labelPoint": [
+      -62.75,
+      17.33333333
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_basseterre"
+    ],
+    "bbox": [
+      -62.75,
+      17.33333333,
+      -62.75,
+      17.33333333
+    ]
+  },
+  {
+    "id": "country_kor",
+    "type": "country",
+    "name": "South Korea",
+    "geometryType": "point",
+    "labelPoint": [
+      127.5,
+      37
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_seoul"
+    ],
+    "bbox": [
+      127.5,
+      37,
+      127.5,
+      37
     ]
   },
   {
@@ -620,11 +2297,62 @@
       "world_countries_by_continent",
       "world_flags"
     ],
+    "capitalIds": [
+      "capital_pristina"
+    ],
     "bbox": [
       20.9,
       42.6,
       20.9,
       42.6
+    ]
+  },
+  {
+    "id": "country_kwt",
+    "type": "country",
+    "name": "Kuwait",
+    "geometryType": "point",
+    "labelPoint": [
+      45.75,
+      29.5
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_kuwait_city"
+    ],
+    "bbox": [
+      45.75,
+      29.5,
+      45.75,
+      29.5
+    ]
+  },
+  {
+    "id": "country_lao",
+    "type": "country",
+    "name": "Laos",
+    "geometryType": "point",
+    "labelPoint": [
+      105,
+      18
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_vientiane"
+    ],
+    "bbox": [
+      105,
+      18,
+      105,
+      18
     ]
   },
   {
@@ -642,11 +2370,110 @@
       "world_countries_by_continent",
       "world_flags"
     ],
+    "capitalIds": [
+      "capital_riga"
+    ],
     "bbox": [
       24.9,
       56.9,
       24.9,
       56.9
+    ]
+  },
+  {
+    "id": "country_lbn",
+    "type": "country",
+    "name": "Lebanon",
+    "geometryType": "point",
+    "labelPoint": [
+      35.83333333,
+      33.83333333
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_beirut"
+    ],
+    "bbox": [
+      35.83333333,
+      33.83333333,
+      35.83333333,
+      33.83333333
+    ]
+  },
+  {
+    "id": "country_lbr",
+    "type": "country",
+    "name": "Liberia",
+    "geometryType": "point",
+    "labelPoint": [
+      -9.5,
+      6.5
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_monrovia"
+    ],
+    "bbox": [
+      -9.5,
+      6.5,
+      -9.5,
+      6.5
+    ]
+  },
+  {
+    "id": "country_lby",
+    "type": "country",
+    "name": "Libya",
+    "geometryType": "point",
+    "labelPoint": [
+      17,
+      25
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_tripoli"
+    ],
+    "bbox": [
+      17,
+      25,
+      17,
+      25
+    ]
+  },
+  {
+    "id": "country_lca",
+    "type": "country",
+    "name": "Saint Lucia",
+    "geometryType": "point",
+    "labelPoint": [
+      -60.96666666,
+      13.88333333
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_castries"
+    ],
+    "bbox": [
+      -60.96666666,
+      13.88333333,
+      -60.96666666,
+      13.88333333
     ]
   },
   {
@@ -663,6 +2490,9 @@
       "world_countries",
       "world_countries_by_continent",
       "world_flags"
+    ],
+    "capitalIds": [
+      "capital_vaduz"
     ],
     "bbox": [
       9.55,
@@ -686,11 +2516,62 @@
       "world_countries_by_continent",
       "world_flags"
     ],
+    "capitalIds": [
+      "capital_vilnius"
+    ],
     "bbox": [
       23.9,
       55.2,
       23.9,
       55.2
+    ]
+  },
+  {
+    "id": "country_lka",
+    "type": "country",
+    "name": "Sri Lanka",
+    "geometryType": "point",
+    "labelPoint": [
+      81,
+      7
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_sri_jayawardenepura_kotte"
+    ],
+    "bbox": [
+      81,
+      7,
+      81,
+      7
+    ]
+  },
+  {
+    "id": "country_lso",
+    "type": "country",
+    "name": "Lesotho",
+    "geometryType": "point",
+    "labelPoint": [
+      28.5,
+      -29.5
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_maseru"
+    ],
+    "bbox": [
+      28.5,
+      -29.5,
+      28.5,
+      -29.5
     ]
   },
   {
@@ -707,6 +2588,9 @@
       "world_countries",
       "world_countries_by_continent",
       "world_flags"
+    ],
+    "capitalIds": [
+      "capital_luxembourg"
     ],
     "bbox": [
       6.1,
@@ -730,11 +2614,206 @@
       "world_countries_by_continent",
       "world_flags"
     ],
+    "capitalIds": [
+      "capital_valletta"
+    ],
     "bbox": [
       14.4,
       35.9,
       14.4,
       35.9
+    ]
+  },
+  {
+    "id": "country_mar",
+    "type": "country",
+    "name": "Morocco",
+    "geometryType": "point",
+    "labelPoint": [
+      -5,
+      32
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_rabat"
+    ],
+    "bbox": [
+      -5,
+      32,
+      -5,
+      32
+    ]
+  },
+  {
+    "id": "country_mdg",
+    "type": "country",
+    "name": "Madagascar",
+    "geometryType": "point",
+    "labelPoint": [
+      47,
+      -20
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_antananarivo"
+    ],
+    "bbox": [
+      47,
+      -20,
+      47,
+      -20
+    ]
+  },
+  {
+    "id": "country_mdv",
+    "type": "country",
+    "name": "Maldives",
+    "geometryType": "point",
+    "labelPoint": [
+      73,
+      3.25
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_male"
+    ],
+    "bbox": [
+      73,
+      3.25,
+      73,
+      3.25
+    ]
+  },
+  {
+    "id": "country_mex",
+    "type": "country",
+    "name": "Mexico",
+    "geometryType": "point",
+    "labelPoint": [
+      -102,
+      23
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_mexico_city"
+    ],
+    "bbox": [
+      -102,
+      23,
+      -102,
+      23
+    ]
+  },
+  {
+    "id": "country_mhl",
+    "type": "country",
+    "name": "Marshall Islands",
+    "geometryType": "point",
+    "labelPoint": [
+      168,
+      9
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_majuro"
+    ],
+    "bbox": [
+      168,
+      9,
+      168,
+      9
+    ]
+  },
+  {
+    "id": "country_mli",
+    "type": "country",
+    "name": "Mali",
+    "geometryType": "point",
+    "labelPoint": [
+      -4,
+      17
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_bamako"
+    ],
+    "bbox": [
+      -4,
+      17,
+      -4,
+      17
+    ]
+  },
+  {
+    "id": "country_mmr",
+    "type": "country",
+    "name": "Myanmar",
+    "geometryType": "point",
+    "labelPoint": [
+      98,
+      22
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_naypyidaw"
+    ],
+    "bbox": [
+      98,
+      22,
+      98,
+      22
+    ]
+  },
+  {
+    "id": "country_mng",
+    "type": "country",
+    "name": "Mongolia",
+    "geometryType": "point",
+    "labelPoint": [
+      105,
+      46
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_ulan_bator"
+    ],
+    "bbox": [
+      105,
+      46,
+      105,
+      46
     ]
   },
   {
@@ -751,6 +2830,9 @@
       "world_countries",
       "world_countries_by_continent",
       "world_flags"
+    ],
+    "capitalIds": [
+      "capital_chisinau"
     ],
     "bbox": [
       28.4,
@@ -774,6 +2856,9 @@
       "world_countries_by_continent",
       "world_flags"
     ],
+    "capitalIds": [
+      "capital_monaco"
+    ],
     "bbox": [
       7.42,
       43.74,
@@ -796,11 +2881,182 @@
       "world_countries_by_continent",
       "world_flags"
     ],
+    "capitalIds": [
+      "capital_podgorica"
+    ],
     "bbox": [
       19.3,
       42.8,
       19.3,
       42.8
+    ]
+  },
+  {
+    "id": "country_moz",
+    "type": "country",
+    "name": "Mozambique",
+    "geometryType": "point",
+    "labelPoint": [
+      35,
+      -18.25
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_maputo"
+    ],
+    "bbox": [
+      35,
+      -18.25,
+      35,
+      -18.25
+    ]
+  },
+  {
+    "id": "country_mrt",
+    "type": "country",
+    "name": "Mauritania",
+    "geometryType": "point",
+    "labelPoint": [
+      -12,
+      20
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_nouakchott"
+    ],
+    "bbox": [
+      -12,
+      20,
+      -12,
+      20
+    ]
+  },
+  {
+    "id": "country_mus",
+    "type": "country",
+    "name": "Mauritius",
+    "geometryType": "point",
+    "labelPoint": [
+      57.55,
+      -20.28333333
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_port_louis"
+    ],
+    "bbox": [
+      57.55,
+      -20.28333333,
+      57.55,
+      -20.28333333
+    ]
+  },
+  {
+    "id": "country_mwi",
+    "type": "country",
+    "name": "Malawi",
+    "geometryType": "point",
+    "labelPoint": [
+      34,
+      -13.5
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_lilongwe"
+    ],
+    "bbox": [
+      34,
+      -13.5,
+      34,
+      -13.5
+    ]
+  },
+  {
+    "id": "country_mys",
+    "type": "country",
+    "name": "Malaysia",
+    "geometryType": "point",
+    "labelPoint": [
+      112.5,
+      2.5
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_kuala_lumpur"
+    ],
+    "bbox": [
+      112.5,
+      2.5,
+      112.5,
+      2.5
+    ]
+  },
+  {
+    "id": "country_nam",
+    "type": "country",
+    "name": "Namibia",
+    "geometryType": "point",
+    "labelPoint": [
+      17,
+      -22
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_windhoek"
+    ],
+    "bbox": [
+      17,
+      -22,
+      17,
+      -22
+    ]
+  },
+  {
+    "id": "country_ner",
+    "type": "country",
+    "name": "Niger",
+    "geometryType": "point",
+    "labelPoint": [
+      8,
+      16
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_niamey"
+    ],
+    "bbox": [
+      8,
+      16,
+      8,
+      16
     ]
   },
   {
@@ -818,11 +3074,62 @@
       "world_countries_by_continent",
       "world_flags"
     ],
+    "capitalIds": [
+      "capital_amsterdam"
+    ],
     "bbox": [
       5.3,
       52.2,
       5.3,
       52.2
+    ]
+  },
+  {
+    "id": "country_nga",
+    "type": "country",
+    "name": "Nigeria",
+    "geometryType": "point",
+    "labelPoint": [
+      8,
+      10
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_abuja"
+    ],
+    "bbox": [
+      8,
+      10,
+      8,
+      10
+    ]
+  },
+  {
+    "id": "country_nic",
+    "type": "country",
+    "name": "Nicaragua",
+    "geometryType": "point",
+    "labelPoint": [
+      -85,
+      13
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_managua"
+    ],
+    "bbox": [
+      -85,
+      13,
+      -85,
+      13
     ]
   },
   {
@@ -839,6 +3146,9 @@
       "world_countries",
       "world_countries_by_continent",
       "world_flags"
+    ],
+    "capitalIds": [
+      "capital_skopje"
     ],
     "bbox": [
       21.7,
@@ -862,11 +3172,254 @@
       "world_countries_by_continent",
       "world_flags"
     ],
+    "capitalIds": [
+      "capital_oslo"
+    ],
     "bbox": [
       8.5,
       61.2,
       8.5,
       61.2
+    ]
+  },
+  {
+    "id": "country_npl",
+    "type": "country",
+    "name": "Nepal",
+    "geometryType": "point",
+    "labelPoint": [
+      84,
+      28
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_kathmandu"
+    ],
+    "bbox": [
+      84,
+      28,
+      84,
+      28
+    ]
+  },
+  {
+    "id": "country_nru",
+    "type": "country",
+    "name": "Nauru",
+    "geometryType": "point",
+    "labelPoint": [
+      166.91666666,
+      -0.53333333
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_yaren"
+    ],
+    "bbox": [
+      166.91666666,
+      -0.53333333,
+      166.91666666,
+      -0.53333333
+    ]
+  },
+  {
+    "id": "country_nzl",
+    "type": "country",
+    "name": "New Zealand",
+    "geometryType": "point",
+    "labelPoint": [
+      174,
+      -41
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_wellington"
+    ],
+    "bbox": [
+      174,
+      -41,
+      174,
+      -41
+    ]
+  },
+  {
+    "id": "country_omn",
+    "type": "country",
+    "name": "Oman",
+    "geometryType": "point",
+    "labelPoint": [
+      57,
+      21
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_muscat"
+    ],
+    "bbox": [
+      57,
+      21,
+      57,
+      21
+    ]
+  },
+  {
+    "id": "country_pak",
+    "type": "country",
+    "name": "Pakistan",
+    "geometryType": "point",
+    "labelPoint": [
+      70,
+      30
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_islamabad"
+    ],
+    "bbox": [
+      70,
+      30,
+      70,
+      30
+    ]
+  },
+  {
+    "id": "country_pan",
+    "type": "country",
+    "name": "Panama",
+    "geometryType": "point",
+    "labelPoint": [
+      -80,
+      9
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_panama_city"
+    ],
+    "bbox": [
+      -80,
+      9,
+      -80,
+      9
+    ]
+  },
+  {
+    "id": "country_per",
+    "type": "country",
+    "name": "Peru",
+    "geometryType": "point",
+    "labelPoint": [
+      -76,
+      -10
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_lima"
+    ],
+    "bbox": [
+      -76,
+      -10,
+      -76,
+      -10
+    ]
+  },
+  {
+    "id": "country_phl",
+    "type": "country",
+    "name": "Philippines",
+    "geometryType": "point",
+    "labelPoint": [
+      122,
+      13
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_manila"
+    ],
+    "bbox": [
+      122,
+      13,
+      122,
+      13
+    ]
+  },
+  {
+    "id": "country_plw",
+    "type": "country",
+    "name": "Palau",
+    "geometryType": "point",
+    "labelPoint": [
+      134.5,
+      7.5
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_ngerulmud"
+    ],
+    "bbox": [
+      134.5,
+      7.5,
+      134.5,
+      7.5
+    ]
+  },
+  {
+    "id": "country_png",
+    "type": "country",
+    "name": "Papua New Guinea",
+    "geometryType": "point",
+    "labelPoint": [
+      147,
+      -6
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_port_moresby"
+    ],
+    "bbox": [
+      147,
+      -6,
+      147,
+      -6
     ]
   },
   {
@@ -883,6 +3436,9 @@
       "world_countries",
       "world_countries_by_continent",
       "world_flags"
+    ],
+    "capitalIds": [
+      "capital_warsaw"
     ],
     "bbox": [
       19.1,
@@ -906,11 +3462,110 @@
       "world_countries_by_continent",
       "world_flags"
     ],
+    "capitalIds": [
+      "capital_lisbon"
+    ],
     "bbox": [
       -8,
       39.6,
       -8,
       39.6
+    ]
+  },
+  {
+    "id": "country_prk",
+    "type": "country",
+    "name": "North Korea",
+    "geometryType": "point",
+    "labelPoint": [
+      127,
+      40
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_pyongyang"
+    ],
+    "bbox": [
+      127,
+      40,
+      127,
+      40
+    ]
+  },
+  {
+    "id": "country_pry",
+    "type": "country",
+    "name": "Paraguay",
+    "geometryType": "point",
+    "labelPoint": [
+      -58,
+      -23
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_asuncion"
+    ],
+    "bbox": [
+      -58,
+      -23,
+      -58,
+      -23
+    ]
+  },
+  {
+    "id": "country_pse",
+    "type": "country",
+    "name": "Palestine",
+    "geometryType": "point",
+    "labelPoint": [
+      35.2,
+      31.9
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_ramallah"
+    ],
+    "bbox": [
+      35.2,
+      31.9,
+      35.2,
+      31.9
+    ]
+  },
+  {
+    "id": "country_qat",
+    "type": "country",
+    "name": "Qatar",
+    "geometryType": "point",
+    "labelPoint": [
+      51.25,
+      25.5
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_doha"
+    ],
+    "bbox": [
+      51.25,
+      25.5,
+      51.25,
+      25.5
     ]
   },
   {
@@ -927,6 +3582,9 @@
       "world_countries",
       "world_countries_by_continent",
       "world_flags"
+    ],
+    "capitalIds": [
+      "capital_bucharest"
     ],
     "bbox": [
       24.9,
@@ -950,11 +3608,38 @@
       "world_countries_by_continent",
       "world_flags"
     ],
+    "capitalIds": [
+      "capital_moscow"
+    ],
     "bbox": [
       37.6,
       55.7,
       37.6,
       55.7
+    ]
+  },
+  {
+    "id": "country_rwa",
+    "type": "country",
+    "name": "Rwanda",
+    "geometryType": "point",
+    "labelPoint": [
+      30,
+      -2
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_kigali"
+    ],
+    "bbox": [
+      30,
+      -2,
+      30,
+      -2
     ]
   },
   {
@@ -972,11 +3657,87 @@
       "world_countries_by_continent",
       "world_flags"
     ],
+    "capitalIds": [
+      "capital_city_of_san_marino",
+      "capital_san_marino"
+    ],
     "bbox": [
       12.46,
       43.94,
       12.46,
       43.94
+    ]
+  },
+  {
+    "id": "country_sau",
+    "type": "country",
+    "name": "Saudi Arabia",
+    "geometryType": "point",
+    "labelPoint": [
+      45,
+      25
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_riyadh"
+    ],
+    "bbox": [
+      45,
+      25,
+      45,
+      25
+    ]
+  },
+  {
+    "id": "country_sdn",
+    "type": "country",
+    "name": "Sudan",
+    "geometryType": "point",
+    "labelPoint": [
+      30,
+      15
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_khartoum"
+    ],
+    "bbox": [
+      30,
+      15,
+      30,
+      15
+    ]
+  },
+  {
+    "id": "country_sen",
+    "type": "country",
+    "name": "Senegal",
+    "geometryType": "point",
+    "labelPoint": [
+      -14,
+      14
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_dakar"
+    ],
+    "bbox": [
+      -14,
+      14,
+      -14,
+      14
     ]
   },
   {
@@ -994,11 +3755,86 @@
       "world_countries_by_continent",
       "world_flags"
     ],
+    "capitalIds": [
+      "capital_belgrade"
+    ],
     "bbox": [
       20.8,
       44.2,
       20.8,
       44.2
+    ]
+  },
+  {
+    "id": "country_sgp",
+    "type": "country",
+    "name": "Singapore",
+    "geometryType": "point",
+    "labelPoint": [
+      103.8,
+      1.36666666
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_singapore"
+    ],
+    "bbox": [
+      103.8,
+      1.36666666,
+      103.8,
+      1.36666666
+    ]
+  },
+  {
+    "id": "country_slb",
+    "type": "country",
+    "name": "Solomon Islands",
+    "geometryType": "point",
+    "labelPoint": [
+      159,
+      -8
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_honiara"
+    ],
+    "bbox": [
+      159,
+      -8,
+      159,
+      -8
+    ]
+  },
+  {
+    "id": "country_sle",
+    "type": "country",
+    "name": "Sierra Leone",
+    "geometryType": "point",
+    "labelPoint": [
+      -11.5,
+      8.5
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_freetown"
+    ],
+    "bbox": [
+      -11.5,
+      8.5,
+      -11.5,
+      8.5
     ]
   },
   {
@@ -1015,6 +3851,9 @@
       "world_countries",
       "world_countries_by_continent",
       "world_flags"
+    ],
+    "capitalIds": [
+      "capital_bratislava"
     ],
     "bbox": [
       19.7,
@@ -1038,11 +3877,62 @@
       "world_countries_by_continent",
       "world_flags"
     ],
+    "capitalIds": [
+      "capital_ljubljana"
+    ],
     "bbox": [
       14.9,
       46.1,
       14.9,
       46.1
+    ]
+  },
+  {
+    "id": "country_slv",
+    "type": "country",
+    "name": "El Salvador",
+    "geometryType": "point",
+    "labelPoint": [
+      -88.91666666,
+      13.83333333
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_san_salvador"
+    ],
+    "bbox": [
+      -88.91666666,
+      13.83333333,
+      -88.91666666,
+      13.83333333
+    ]
+  },
+  {
+    "id": "country_som",
+    "type": "country",
+    "name": "Somalia",
+    "geometryType": "point",
+    "labelPoint": [
+      49,
+      10
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_mogadishu"
+    ],
+    "bbox": [
+      49,
+      10,
+      49,
+      10
     ]
   },
   {
@@ -1060,11 +3950,86 @@
       "world_countries_by_continent",
       "world_flags"
     ],
+    "capitalIds": [
+      "capital_madrid"
+    ],
     "bbox": [
       -3.7,
       40.3,
       -3.7,
       40.3
+    ]
+  },
+  {
+    "id": "country_ssd",
+    "type": "country",
+    "name": "South Sudan",
+    "geometryType": "point",
+    "labelPoint": [
+      30,
+      7
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_juba"
+    ],
+    "bbox": [
+      30,
+      7,
+      30,
+      7
+    ]
+  },
+  {
+    "id": "country_stp",
+    "type": "country",
+    "name": "São Tomé and Príncipe",
+    "geometryType": "point",
+    "labelPoint": [
+      7,
+      1
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_sao_tome"
+    ],
+    "bbox": [
+      7,
+      1,
+      7,
+      1
+    ]
+  },
+  {
+    "id": "country_sur",
+    "type": "country",
+    "name": "Suriname",
+    "geometryType": "point",
+    "labelPoint": [
+      -56,
+      4
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_paramaribo"
+    ],
+    "bbox": [
+      -56,
+      4,
+      -56,
+      4
     ]
   },
   {
@@ -1081,6 +4046,9 @@
       "world_countries",
       "world_countries_by_continent",
       "world_flags"
+    ],
+    "capitalIds": [
+      "capital_stockholm"
     ],
     "bbox": [
       15.2,
@@ -1104,11 +4072,299 @@
       "world_countries_by_continent",
       "world_flags"
     ],
+    "capitalIds": [
+      "capital_bern"
+    ],
     "bbox": [
       8.2,
       46.8,
       8.2,
       46.8
+    ]
+  },
+  {
+    "id": "country_swz",
+    "type": "country",
+    "name": "Eswatini",
+    "geometryType": "point",
+    "labelPoint": [
+      31.5,
+      -26.5
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_mbabane"
+    ],
+    "bbox": [
+      31.5,
+      -26.5,
+      31.5,
+      -26.5
+    ]
+  },
+  {
+    "id": "country_syc",
+    "type": "country",
+    "name": "Seychelles",
+    "geometryType": "point",
+    "labelPoint": [
+      55.66666666,
+      -4.58333333
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "bbox": [
+      55.66666666,
+      -4.58333333,
+      55.66666666,
+      -4.58333333
+    ]
+  },
+  {
+    "id": "country_syr",
+    "type": "country",
+    "name": "Syria",
+    "geometryType": "point",
+    "labelPoint": [
+      38,
+      35
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_damascus"
+    ],
+    "bbox": [
+      38,
+      35,
+      38,
+      35
+    ]
+  },
+  {
+    "id": "country_tcd",
+    "type": "country",
+    "name": "Chad",
+    "geometryType": "point",
+    "labelPoint": [
+      19,
+      15
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_n_djamena"
+    ],
+    "bbox": [
+      19,
+      15,
+      19,
+      15
+    ]
+  },
+  {
+    "id": "country_tgo",
+    "type": "country",
+    "name": "Togo",
+    "geometryType": "point",
+    "labelPoint": [
+      1.16666666,
+      8
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_lome"
+    ],
+    "bbox": [
+      1.16666666,
+      8,
+      1.16666666,
+      8
+    ]
+  },
+  {
+    "id": "country_tha",
+    "type": "country",
+    "name": "Thailand",
+    "geometryType": "point",
+    "labelPoint": [
+      100,
+      15
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_bangkok"
+    ],
+    "bbox": [
+      100,
+      15,
+      100,
+      15
+    ]
+  },
+  {
+    "id": "country_tjk",
+    "type": "country",
+    "name": "Tajikistan",
+    "geometryType": "point",
+    "labelPoint": [
+      71,
+      39
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_dushanbe"
+    ],
+    "bbox": [
+      71,
+      39,
+      71,
+      39
+    ]
+  },
+  {
+    "id": "country_tkm",
+    "type": "country",
+    "name": "Turkmenistan",
+    "geometryType": "point",
+    "labelPoint": [
+      60,
+      40
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_ashgabat"
+    ],
+    "bbox": [
+      60,
+      40,
+      60,
+      40
+    ]
+  },
+  {
+    "id": "country_tls",
+    "type": "country",
+    "name": "Timor-Leste",
+    "geometryType": "point",
+    "labelPoint": [
+      125.91666666,
+      -8.83333333
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_dili"
+    ],
+    "bbox": [
+      125.91666666,
+      -8.83333333,
+      125.91666666,
+      -8.83333333
+    ]
+  },
+  {
+    "id": "country_ton",
+    "type": "country",
+    "name": "Tonga",
+    "geometryType": "point",
+    "labelPoint": [
+      -175,
+      -20
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_nuku_alofa"
+    ],
+    "bbox": [
+      -175,
+      -20,
+      -175,
+      -20
+    ]
+  },
+  {
+    "id": "country_tto",
+    "type": "country",
+    "name": "Trinidad and Tobago",
+    "geometryType": "point",
+    "labelPoint": [
+      -61.2225,
+      10.6918
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_port_of_spain"
+    ],
+    "bbox": [
+      -61.2225,
+      10.6918,
+      -61.2225,
+      10.6918
+    ]
+  },
+  {
+    "id": "country_tun",
+    "type": "country",
+    "name": "Tunisia",
+    "geometryType": "point",
+    "labelPoint": [
+      9,
+      34
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_tunis"
+    ],
+    "bbox": [
+      9,
+      34,
+      9,
+      34
     ]
   },
   {
@@ -1126,11 +4382,86 @@
       "world_countries_by_continent",
       "world_flags"
     ],
+    "capitalIds": [
+      "capital_ankara"
+    ],
     "bbox": [
       32.9,
       39.9,
       32.9,
       39.9
+    ]
+  },
+  {
+    "id": "country_tuv",
+    "type": "country",
+    "name": "Tuvalu",
+    "geometryType": "point",
+    "labelPoint": [
+      178,
+      -8
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_funafuti"
+    ],
+    "bbox": [
+      178,
+      -8,
+      178,
+      -8
+    ]
+  },
+  {
+    "id": "country_tza",
+    "type": "country",
+    "name": "Tanzania",
+    "geometryType": "point",
+    "labelPoint": [
+      35,
+      -6
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_dodoma"
+    ],
+    "bbox": [
+      35,
+      -6,
+      35,
+      -6
+    ]
+  },
+  {
+    "id": "country_uga",
+    "type": "country",
+    "name": "Uganda",
+    "geometryType": "point",
+    "labelPoint": [
+      32,
+      1
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_kampala"
+    ],
+    "bbox": [
+      32,
+      1,
+      32,
+      1
     ]
   },
   {
@@ -1147,6 +4478,9 @@
       "world_countries",
       "world_countries_by_continent",
       "world_flags"
+    ],
+    "capitalIds": [
+      "capital_kyiv"
     ],
     "bbox": [
       31.2,
@@ -1170,11 +4504,86 @@
       "world_countries_by_continent",
       "world_flags"
     ],
+    "capitalIds": [
+      "capital_london"
+    ],
     "bbox": [
       -2.8,
       54.5,
       -2.8,
       54.5
+    ]
+  },
+  {
+    "id": "country_ury",
+    "type": "country",
+    "name": "Uruguay",
+    "geometryType": "point",
+    "labelPoint": [
+      -56,
+      -33
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_montevideo"
+    ],
+    "bbox": [
+      -56,
+      -33,
+      -56,
+      -33
+    ]
+  },
+  {
+    "id": "country_usa",
+    "type": "country",
+    "name": "United States",
+    "geometryType": "point",
+    "labelPoint": [
+      -97,
+      38
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_washington_dc"
+    ],
+    "bbox": [
+      -97,
+      38,
+      -97,
+      38
+    ]
+  },
+  {
+    "id": "country_uzb",
+    "type": "country",
+    "name": "Uzbekistan",
+    "geometryType": "point",
+    "labelPoint": [
+      64,
+      41
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_tashkent"
+    ],
+    "bbox": [
+      64,
+      41,
+      64,
+      41
     ]
   },
   {
@@ -1192,11 +4601,230 @@
       "world_countries_by_continent",
       "world_flags"
     ],
+    "capitalIds": [
+      "capital_vatican_city"
+    ],
     "bbox": [
       12.45,
       41.9,
       12.45,
       41.9
+    ]
+  },
+  {
+    "id": "country_vct",
+    "type": "country",
+    "name": "Saint Vincent and the Grenadines",
+    "geometryType": "point",
+    "labelPoint": [
+      -61.2,
+      13.25
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_kingstown"
+    ],
+    "bbox": [
+      -61.2,
+      13.25,
+      -61.2,
+      13.25
+    ]
+  },
+  {
+    "id": "country_ven",
+    "type": "country",
+    "name": "Venezuela",
+    "geometryType": "point",
+    "labelPoint": [
+      -66,
+      8
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_caracas"
+    ],
+    "bbox": [
+      -66,
+      8,
+      -66,
+      8
+    ]
+  },
+  {
+    "id": "country_vnm",
+    "type": "country",
+    "name": "Vietnam",
+    "geometryType": "point",
+    "labelPoint": [
+      107.83333333,
+      16.16666666
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_hanoi"
+    ],
+    "bbox": [
+      107.83333333,
+      16.16666666,
+      107.83333333,
+      16.16666666
+    ]
+  },
+  {
+    "id": "country_vut",
+    "type": "country",
+    "name": "Vanuatu",
+    "geometryType": "point",
+    "labelPoint": [
+      167,
+      -16
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_port_vila"
+    ],
+    "bbox": [
+      167,
+      -16,
+      167,
+      -16
+    ]
+  },
+  {
+    "id": "country_wsm",
+    "type": "country",
+    "name": "Samoa",
+    "geometryType": "point",
+    "labelPoint": [
+      -172.33333333,
+      -13.58333333
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_apia"
+    ],
+    "bbox": [
+      -172.33333333,
+      -13.58333333,
+      -172.33333333,
+      -13.58333333
+    ]
+  },
+  {
+    "id": "country_yem",
+    "type": "country",
+    "name": "Yemen",
+    "geometryType": "point",
+    "labelPoint": [
+      48,
+      15
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_sana_a"
+    ],
+    "bbox": [
+      48,
+      15,
+      48,
+      15
+    ]
+  },
+  {
+    "id": "country_zaf",
+    "type": "country",
+    "name": "South Africa",
+    "geometryType": "point",
+    "labelPoint": [
+      24,
+      -29
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_pretoria"
+    ],
+    "bbox": [
+      24,
+      -29,
+      24,
+      -29
+    ]
+  },
+  {
+    "id": "country_zmb",
+    "type": "country",
+    "name": "Zambia",
+    "geometryType": "point",
+    "labelPoint": [
+      30,
+      -15
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_lusaka"
+    ],
+    "bbox": [
+      30,
+      -15,
+      30,
+      -15
+    ]
+  },
+  {
+    "id": "country_zwe",
+    "type": "country",
+    "name": "Zimbabwe",
+    "geometryType": "point",
+    "labelPoint": [
+      30,
+      -20
+    ],
+    "packIds": [
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_harare"
+    ],
+    "bbox": [
+      30,
+      -20,
+      30,
+      -20
     ]
   }
 ]

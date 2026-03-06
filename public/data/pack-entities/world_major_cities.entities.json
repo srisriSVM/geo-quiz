@@ -1,0 +1,762 @@
+[
+  {
+    "id": "world_city_auckland",
+    "type": "city",
+    "name": "Auckland",
+    "geometryType": "point",
+    "labelPoint": [
+      174.7633,
+      -36.8485
+    ],
+    "packIds": [
+      "world_major_cities"
+    ],
+    "bbox": [
+      174.7633,
+      -36.8485,
+      174.7633,
+      -36.8485
+    ]
+  },
+  {
+    "id": "world_city_bangkok",
+    "type": "city",
+    "name": "Bangkok",
+    "geometryType": "point",
+    "labelPoint": [
+      100.5018,
+      13.7563
+    ],
+    "packIds": [
+      "world_major_cities"
+    ],
+    "bbox": [
+      100.5018,
+      13.7563,
+      100.5018,
+      13.7563
+    ]
+  },
+  {
+    "id": "world_city_beijing",
+    "type": "city",
+    "name": "Beijing",
+    "geometryType": "point",
+    "labelPoint": [
+      116.4074,
+      39.9042
+    ],
+    "packIds": [
+      "world_major_cities"
+    ],
+    "bbox": [
+      116.4074,
+      39.9042,
+      116.4074,
+      39.9042
+    ]
+  },
+  {
+    "id": "world_city_bengaluru",
+    "type": "city",
+    "name": "Bengaluru",
+    "geometryType": "point",
+    "labelPoint": [
+      77.5946,
+      12.9716
+    ],
+    "packIds": [
+      "world_major_cities"
+    ],
+    "bbox": [
+      77.5946,
+      12.9716,
+      77.5946,
+      12.9716
+    ]
+  },
+  {
+    "id": "world_city_berlin",
+    "type": "city",
+    "name": "Berlin",
+    "geometryType": "point",
+    "labelPoint": [
+      13.405,
+      52.52
+    ],
+    "packIds": [
+      "world_major_cities"
+    ],
+    "bbox": [
+      13.405,
+      52.52,
+      13.405,
+      52.52
+    ]
+  },
+  {
+    "id": "world_city_bogota",
+    "type": "city",
+    "name": "Bogota",
+    "geometryType": "point",
+    "labelPoint": [
+      -74.0721,
+      4.711
+    ],
+    "packIds": [
+      "world_major_cities"
+    ],
+    "bbox": [
+      -74.0721,
+      4.711,
+      -74.0721,
+      4.711
+    ]
+  },
+  {
+    "id": "world_city_buenos_aires",
+    "type": "city",
+    "name": "Buenos Aires",
+    "geometryType": "point",
+    "labelPoint": [
+      -58.3816,
+      -34.6037
+    ],
+    "packIds": [
+      "world_major_cities"
+    ],
+    "bbox": [
+      -58.3816,
+      -34.6037,
+      -58.3816,
+      -34.6037
+    ]
+  },
+  {
+    "id": "world_city_cairo",
+    "type": "city",
+    "name": "Cairo",
+    "geometryType": "point",
+    "labelPoint": [
+      31.2357,
+      30.0444
+    ],
+    "packIds": [
+      "world_major_cities"
+    ],
+    "bbox": [
+      31.2357,
+      30.0444,
+      31.2357,
+      30.0444
+    ]
+  },
+  {
+    "id": "world_city_chicago",
+    "type": "city",
+    "name": "Chicago",
+    "geometryType": "point",
+    "labelPoint": [
+      -87.6298,
+      41.8781
+    ],
+    "packIds": [
+      "world_major_cities"
+    ],
+    "bbox": [
+      -87.6298,
+      41.8781,
+      -87.6298,
+      41.8781
+    ]
+  },
+  {
+    "id": "world_city_delhi",
+    "type": "city",
+    "name": "Delhi",
+    "geometryType": "point",
+    "labelPoint": [
+      77.1025,
+      28.7041
+    ],
+    "packIds": [
+      "world_major_cities"
+    ],
+    "bbox": [
+      77.1025,
+      28.7041,
+      77.1025,
+      28.7041
+    ]
+  },
+  {
+    "id": "world_city_dubai",
+    "type": "city",
+    "name": "Dubai",
+    "geometryType": "point",
+    "labelPoint": [
+      55.2708,
+      25.2048
+    ],
+    "packIds": [
+      "world_major_cities"
+    ],
+    "bbox": [
+      55.2708,
+      25.2048,
+      55.2708,
+      25.2048
+    ]
+  },
+  {
+    "id": "world_city_hong_kong",
+    "type": "city",
+    "name": "Hong Kong",
+    "geometryType": "point",
+    "labelPoint": [
+      114.1694,
+      22.3193
+    ],
+    "packIds": [
+      "world_major_cities"
+    ],
+    "bbox": [
+      114.1694,
+      22.3193,
+      114.1694,
+      22.3193
+    ]
+  },
+  {
+    "id": "world_city_istanbul",
+    "type": "city",
+    "name": "Istanbul",
+    "geometryType": "point",
+    "labelPoint": [
+      28.9784,
+      41.0082
+    ],
+    "packIds": [
+      "world_major_cities"
+    ],
+    "bbox": [
+      28.9784,
+      41.0082,
+      28.9784,
+      41.0082
+    ]
+  },
+  {
+    "id": "world_city_jakarta",
+    "type": "city",
+    "name": "Jakarta",
+    "geometryType": "point",
+    "labelPoint": [
+      106.8456,
+      -6.2088
+    ],
+    "packIds": [
+      "world_major_cities"
+    ],
+    "bbox": [
+      106.8456,
+      -6.2088,
+      106.8456,
+      -6.2088
+    ]
+  },
+  {
+    "id": "world_city_johannesburg",
+    "type": "city",
+    "name": "Johannesburg",
+    "geometryType": "point",
+    "labelPoint": [
+      28.0473,
+      -26.2041
+    ],
+    "packIds": [
+      "world_major_cities"
+    ],
+    "bbox": [
+      28.0473,
+      -26.2041,
+      28.0473,
+      -26.2041
+    ]
+  },
+  {
+    "id": "world_city_karachi",
+    "type": "city",
+    "name": "Karachi",
+    "geometryType": "point",
+    "labelPoint": [
+      67.0099,
+      24.8615
+    ],
+    "packIds": [
+      "world_major_cities"
+    ],
+    "bbox": [
+      67.0099,
+      24.8615,
+      67.0099,
+      24.8615
+    ]
+  },
+  {
+    "id": "world_city_lagos",
+    "type": "city",
+    "name": "Lagos",
+    "geometryType": "point",
+    "labelPoint": [
+      3.3792,
+      6.5244
+    ],
+    "packIds": [
+      "world_major_cities"
+    ],
+    "bbox": [
+      3.3792,
+      6.5244,
+      3.3792,
+      6.5244
+    ]
+  },
+  {
+    "id": "world_city_lima",
+    "type": "city",
+    "name": "Lima",
+    "geometryType": "point",
+    "labelPoint": [
+      -77.0428,
+      -12.0464
+    ],
+    "packIds": [
+      "world_major_cities"
+    ],
+    "bbox": [
+      -77.0428,
+      -12.0464,
+      -77.0428,
+      -12.0464
+    ]
+  },
+  {
+    "id": "world_city_london",
+    "type": "city",
+    "name": "London",
+    "geometryType": "point",
+    "labelPoint": [
+      -0.1276,
+      51.5072
+    ],
+    "packIds": [
+      "world_major_cities"
+    ],
+    "bbox": [
+      -0.1276,
+      51.5072,
+      -0.1276,
+      51.5072
+    ]
+  },
+  {
+    "id": "world_city_los_angeles",
+    "type": "city",
+    "name": "Los Angeles",
+    "geometryType": "point",
+    "labelPoint": [
+      -118.2437,
+      34.0522
+    ],
+    "packIds": [
+      "world_major_cities"
+    ],
+    "bbox": [
+      -118.2437,
+      34.0522,
+      -118.2437,
+      34.0522
+    ]
+  },
+  {
+    "id": "world_city_madrid",
+    "type": "city",
+    "name": "Madrid",
+    "geometryType": "point",
+    "labelPoint": [
+      -3.7038,
+      40.4168
+    ],
+    "packIds": [
+      "world_major_cities"
+    ],
+    "bbox": [
+      -3.7038,
+      40.4168,
+      -3.7038,
+      40.4168
+    ]
+  },
+  {
+    "id": "world_city_manila",
+    "type": "city",
+    "name": "Manila",
+    "geometryType": "point",
+    "labelPoint": [
+      120.9842,
+      14.5995
+    ],
+    "packIds": [
+      "world_major_cities"
+    ],
+    "bbox": [
+      120.9842,
+      14.5995,
+      120.9842,
+      14.5995
+    ]
+  },
+  {
+    "id": "world_city_melbourne",
+    "type": "city",
+    "name": "Melbourne",
+    "geometryType": "point",
+    "labelPoint": [
+      144.9631,
+      -37.8136
+    ],
+    "packIds": [
+      "world_major_cities"
+    ],
+    "bbox": [
+      144.9631,
+      -37.8136,
+      144.9631,
+      -37.8136
+    ]
+  },
+  {
+    "id": "world_city_mexico_city",
+    "type": "city",
+    "name": "Mexico City",
+    "geometryType": "point",
+    "labelPoint": [
+      -99.1332,
+      19.4326
+    ],
+    "packIds": [
+      "world_major_cities"
+    ],
+    "bbox": [
+      -99.1332,
+      19.4326,
+      -99.1332,
+      19.4326
+    ]
+  },
+  {
+    "id": "world_city_moscow",
+    "type": "city",
+    "name": "Moscow",
+    "geometryType": "point",
+    "labelPoint": [
+      37.6173,
+      55.7558
+    ],
+    "packIds": [
+      "world_major_cities"
+    ],
+    "bbox": [
+      37.6173,
+      55.7558,
+      37.6173,
+      55.7558
+    ]
+  },
+  {
+    "id": "world_city_mumbai",
+    "type": "city",
+    "name": "Mumbai",
+    "geometryType": "point",
+    "labelPoint": [
+      72.8777,
+      19.076
+    ],
+    "packIds": [
+      "world_major_cities"
+    ],
+    "bbox": [
+      72.8777,
+      19.076,
+      72.8777,
+      19.076
+    ]
+  },
+  {
+    "id": "world_city_nairobi",
+    "type": "city",
+    "name": "Nairobi",
+    "geometryType": "point",
+    "labelPoint": [
+      36.8219,
+      -1.2921
+    ],
+    "packIds": [
+      "world_major_cities"
+    ],
+    "bbox": [
+      36.8219,
+      -1.2921,
+      36.8219,
+      -1.2921
+    ]
+  },
+  {
+    "id": "world_city_new_york",
+    "type": "city",
+    "name": "New York",
+    "geometryType": "point",
+    "labelPoint": [
+      -74.006,
+      40.7128
+    ],
+    "packIds": [
+      "world_major_cities"
+    ],
+    "bbox": [
+      -74.006,
+      40.7128,
+      -74.006,
+      40.7128
+    ]
+  },
+  {
+    "id": "world_city_osaka",
+    "type": "city",
+    "name": "Osaka",
+    "geometryType": "point",
+    "labelPoint": [
+      135.5023,
+      34.6937
+    ],
+    "packIds": [
+      "world_major_cities"
+    ],
+    "bbox": [
+      135.5023,
+      34.6937,
+      135.5023,
+      34.6937
+    ]
+  },
+  {
+    "id": "world_city_paris",
+    "type": "city",
+    "name": "Paris",
+    "geometryType": "point",
+    "labelPoint": [
+      2.3522,
+      48.8566
+    ],
+    "packIds": [
+      "world_major_cities"
+    ],
+    "bbox": [
+      2.3522,
+      48.8566,
+      2.3522,
+      48.8566
+    ]
+  },
+  {
+    "id": "world_city_rio_de_janeiro",
+    "type": "city",
+    "name": "Rio de Janeiro",
+    "geometryType": "point",
+    "labelPoint": [
+      -43.1729,
+      -22.9068
+    ],
+    "packIds": [
+      "world_major_cities"
+    ],
+    "bbox": [
+      -43.1729,
+      -22.9068,
+      -43.1729,
+      -22.9068
+    ]
+  },
+  {
+    "id": "world_city_riyadh",
+    "type": "city",
+    "name": "Riyadh",
+    "geometryType": "point",
+    "labelPoint": [
+      46.6753,
+      24.7136
+    ],
+    "packIds": [
+      "world_major_cities"
+    ],
+    "bbox": [
+      46.6753,
+      24.7136,
+      46.6753,
+      24.7136
+    ]
+  },
+  {
+    "id": "world_city_rome",
+    "type": "city",
+    "name": "Rome",
+    "geometryType": "point",
+    "labelPoint": [
+      12.4964,
+      41.9028
+    ],
+    "packIds": [
+      "world_major_cities"
+    ],
+    "bbox": [
+      12.4964,
+      41.9028,
+      12.4964,
+      41.9028
+    ]
+  },
+  {
+    "id": "world_city_sao_paulo",
+    "type": "city",
+    "name": "Sao Paulo",
+    "geometryType": "point",
+    "labelPoint": [
+      -46.6333,
+      -23.5505
+    ],
+    "packIds": [
+      "world_major_cities"
+    ],
+    "bbox": [
+      -46.6333,
+      -23.5505,
+      -46.6333,
+      -23.5505
+    ]
+  },
+  {
+    "id": "world_city_seoul",
+    "type": "city",
+    "name": "Seoul",
+    "geometryType": "point",
+    "labelPoint": [
+      126.978,
+      37.5665
+    ],
+    "packIds": [
+      "world_major_cities"
+    ],
+    "bbox": [
+      126.978,
+      37.5665,
+      126.978,
+      37.5665
+    ]
+  },
+  {
+    "id": "world_city_shanghai",
+    "type": "city",
+    "name": "Shanghai",
+    "geometryType": "point",
+    "labelPoint": [
+      121.4737,
+      31.2304
+    ],
+    "packIds": [
+      "world_major_cities"
+    ],
+    "bbox": [
+      121.4737,
+      31.2304,
+      121.4737,
+      31.2304
+    ]
+  },
+  {
+    "id": "world_city_shenzhen",
+    "type": "city",
+    "name": "Shenzhen",
+    "geometryType": "point",
+    "labelPoint": [
+      114.0579,
+      22.5431
+    ],
+    "packIds": [
+      "world_major_cities"
+    ],
+    "bbox": [
+      114.0579,
+      22.5431,
+      114.0579,
+      22.5431
+    ]
+  },
+  {
+    "id": "world_city_singapore",
+    "type": "city",
+    "name": "Singapore",
+    "geometryType": "point",
+    "labelPoint": [
+      103.8198,
+      1.3521
+    ],
+    "packIds": [
+      "world_major_cities"
+    ],
+    "bbox": [
+      103.8198,
+      1.3521,
+      103.8198,
+      1.3521
+    ]
+  },
+  {
+    "id": "world_city_sydney",
+    "type": "city",
+    "name": "Sydney",
+    "geometryType": "point",
+    "labelPoint": [
+      151.2093,
+      -33.8688
+    ],
+    "packIds": [
+      "world_major_cities"
+    ],
+    "bbox": [
+      151.2093,
+      -33.8688,
+      151.2093,
+      -33.8688
+    ]
+  },
+  {
+    "id": "world_city_tokyo",
+    "type": "city",
+    "name": "Tokyo",
+    "geometryType": "point",
+    "labelPoint": [
+      139.6917,
+      35.6895
+    ],
+    "packIds": [
+      "world_major_cities"
+    ],
+    "bbox": [
+      139.6917,
+      35.6895,
+      139.6917,
+      35.6895
+    ]
+  }
+]
