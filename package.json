@@ -2,12 +2,15 @@
   "name": "geo-bee-trainer",
   "private": true,
   "version": "0.1.0",
+  "homepage": "https://srisriSVM.github.io/geo-quiz/",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc --noEmit -p tsconfig.app.json && tsc --noEmit -p tsconfig.node.json && vite build",
     "preview": "vite preview",
-    "build:data": "node scripts/build-data.mjs"
+    "build:data": "node scripts/build-data.mjs",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "maplibre-gl": "^4.7.1"
@@ -15,6 +18,7 @@
   "devDependencies": {
     "@types/geojson": "^7946.0.16",
     "@types/node": "^22.13.10",
+    "gh-pages": "^6.3.0",
     "typescript": "^5.8.2",
     "vite": "^6.2.1"
   }
