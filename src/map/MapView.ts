@@ -228,17 +228,21 @@ export class MapView {
     }
 
     if (entity.bbox) {
+      const lonSpan = Math.abs(entity.bbox[2] - entity.bbox[0]);
+      const latSpan = Math.abs(entity.bbox[3] - entity.bbox[1]);
+      const span = Math.max(lonSpan, latSpan);
+      const contextMaxZoom = span < 1 ? 4.4 : span < 3 ? 4.0 : 3.6;
       this.map.fitBounds(
         [
           [entity.bbox[0], entity.bbox[1]],
           [entity.bbox[2], entity.bbox[3]]
         ],
-        { padding: 56, maxZoom: 5.5, duration: 500 }
+        { padding: 120, maxZoom: contextMaxZoom, duration: 500 }
       );
       return;
     }
 
-    this.map.flyTo({ center: entity.labelPoint, zoom: 5, duration: 500 });
+    this.map.flyTo({ center: entity.labelPoint, zoom: 3.8, duration: 500 });
   }
 
   flyToPack(pack: Pack): void {
@@ -920,12 +924,8 @@ export class MapView {
 
     if (target.geometryType === "point" || target.geometryType === "polygon") {
       const dot = document.createElement("div");
-      dot.style.width = "20px";
-      dot.style.height = "20px";
-      dot.style.borderRadius = "999px";
-      dot.style.background = "rgba(245,158,11,0.55)";
-      dot.style.border = "3px solid #7c2d12";
-      dot.style.boxShadow = "0 2px 8px rgba(0,0,0,0.35)";
+      dot.className = this.pendingMode === "quiz" ? "target-dot target-dot--quiz" : "target-dot target-dot--learn";
+      dot.innerHTML = '<span class="target-dot-ping"></span><span class="target-dot-core"></span>';
       this.highlightedDotMarker = new maplibregl.Marker({ element: dot }).setLngLat(target.labelPoint).addTo(this.map);
     }
     if (target.geometryType === "line" && target.geometry?.type === "LineString") {

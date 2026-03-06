@@ -90,6 +90,16 @@ body,
   font-size: 18px;
 }
 
+.quiz-panel-drag-handle {
+  cursor: grab;
+  user-select: none;
+  touch-action: none;
+}
+
+.quiz-panel-drag-handle.quiz-panel-dragging {
+  cursor: grabbing;
+}
+
 .choice-chip {
   padding: 8px 10px;
   border-radius: 10px;
@@ -133,6 +143,80 @@ body,
 
 .status-marker--pulse {
   animation: marker-pulse 900ms ease-out;
+}
+
+.target-dot {
+  width: 30px;
+  height: 30px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  position: relative;
+  pointer-events: none;
+}
+
+.target-dot-core {
+  width: 20px;
+  height: 20px;
+  border-radius: 999px;
+  border: 3px solid #7c2d12;
+  background: rgba(245, 158, 11, 0.8);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.42);
+  animation: target-core-flicker 1s ease-in-out infinite;
+}
+
+.target-dot-ping {
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  border: 3px solid rgba(245, 158, 11, 0.8);
+  box-shadow: 0 0 20px rgba(245, 158, 11, 0.65);
+  animation: target-ping 1s ease-out infinite;
+}
+
+.target-dot--quiz {
+  color: #f97316;
+}
+
+.target-dot--quiz .target-dot-core {
+  border-color: #7f1d1d;
+  background: rgba(249, 115, 22, 0.85);
+}
+
+.target-dot--quiz .target-dot-ping {
+  border-color: rgba(249, 115, 22, 0.85);
+  box-shadow: 0 0 22px rgba(249, 115, 22, 0.7);
+}
+
+@keyframes target-core-flicker {
+  0% {
+    opacity: 0.92;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.42);
+  }
+  50% {
+    opacity: 1;
+    box-shadow: 0 8px 22px rgba(124, 45, 18, 0.55);
+  }
+  100% {
+    opacity: 0.92;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.42);
+  }
+}
+
+@keyframes target-ping {
+  0% {
+    transform: scale(0.72);
+    opacity: 0.95;
+  }
+  70% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
 }
 
 @keyframes choice-enter {

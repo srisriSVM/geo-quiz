@@ -24,6 +24,9 @@ export class QuizPanel {
   private readonly knowItButton: HTMLButtonElement;
   private readonly needPracticeButton: HTMLButtonElement;
   private readonly choicesEl: HTMLElement;
+  private dragging = false;
+  private dragOffsetX = 0;
+  private dragOffsetY = 0;
 
   constructor(actions: QuizPanelActions) {
     this.root = document.createElement("section");
@@ -55,6 +58,7 @@ export class QuizPanel {
     this.knowItButton = this.query<HTMLButtonElement>("[data-role='know-it']");
     this.needPracticeButton = this.query<HTMLButtonElement>("[data-role='need-practice']");
     this.choicesEl = this.query<HTMLElement>("[data-role='choices']");
+    this.headingEl.classList.add("quiz-panel-drag-handle");
 
     const submit = (): void => {
       actions.onSubmit(this.answerInput.value);
@@ -79,6 +83,43 @@ export class QuizPanel {
       if (choiceId) {
         actions.onSelectChoice(choiceId);
       }
+    });
+
+    this.headingEl.addEventListener("pointerdown", (event) => {
+      const rect = this.root.getBoundingClientRect();
+      this.dragging = true;
+      this.dragOffsetX = event.clientX - rect.left;
+      this.dragOffsetY = event.clientY - rect.top;
+      this.headingEl.setPointerCapture(event.pointerId);
+      this.headingEl.classList.add("quiz-panel-dragging");
+      this.root.style.right = "auto";
+      this.root.style.bottom = "auto";
+      this.movePanel(event.clientX, event.clientY);
+    });
+
+    this.headingEl.addEventListener("pointermove", (event) => {
+      if (!this.dragging) {
+        return;
+      }
+      this.movePanel(event.clientX, event.clientY);
+    });
+
+    const stopDrag = (pointerId?: number): void => {
+      if (!this.dragging) {
+        return;
+      }
+      this.dragging = false;
+      this.headingEl.classList.remove("quiz-panel-dragging");
+      if (typeof pointerId === "number" && this.headingEl.hasPointerCapture(pointerId)) {
+        this.headingEl.releasePointerCapture(pointerId);
+      }
+    };
+
+    this.headingEl.addEventListener("pointerup", (event) => {
+      stopDrag(event.pointerId);
+    });
+    this.headingEl.addEventListener("pointercancel", (event) => {
+      stopDrag(event.pointerId);
     });
   }
 
@@ -158,5 +199,15 @@ export class QuizPanel {
     }
 
     return el;
+  }
+
+  private movePanel(clientX: number, clientY: number): void {
+    const panelRect = this.root.getBoundingClientRect();
+    const maxLeft = Math.max(8, window.innerWidth - panelRect.width - 8);
+    const maxTop = Math.max(8, window.innerHeight - panelRect.height - 8);
+    const left = Math.min(Math.max(8, clientX - this.dragOffsetX), maxLeft);
+    const top = Math.min(Math.max(8, clientY - this.dragOffsetY), maxTop);
+    this.root.style.left = `${left}px`;
+    this.root.style.top = `${top}px`;
   }
 }
