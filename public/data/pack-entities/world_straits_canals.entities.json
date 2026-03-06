@@ -1,0 +1,258 @@
+[
+  {
+    "id": "canal_panama",
+    "type": "river",
+    "name": "Panama Canal",
+    "geometryType": "line",
+    "geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          -79.95,
+          9.3
+        ],
+        [
+          -79.55,
+          9
+        ]
+      ]
+    },
+    "labelPoint": [
+      -79.75,
+      9.15
+    ],
+    "packIds": [
+      "world_straits_canals"
+    ],
+    "bbox": [
+      -79.95,
+      9,
+      -79.55,
+      9.3
+    ]
+  },
+  {
+    "id": "canal_suez",
+    "type": "river",
+    "name": "Suez Canal",
+    "geometryType": "line",
+    "geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          32.32,
+          31.25
+        ],
+        [
+          32.55,
+          29.95
+        ]
+      ]
+    },
+    "labelPoint": [
+      32.45,
+      30.6
+    ],
+    "packIds": [
+      "world_straits_canals"
+    ],
+    "bbox": [
+      32.32,
+      29.95,
+      32.55,
+      31.25
+    ]
+  },
+  {
+    "id": "strait_babelmandeb",
+    "type": "sea",
+    "name": "Bab-el-Mandeb",
+    "geometryType": "line",
+    "geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          43.2,
+          12.7
+        ],
+        [
+          43.5,
+          12.5
+        ]
+      ]
+    },
+    "labelPoint": [
+      43.35,
+      12.6
+    ],
+    "packIds": [
+      "world_straits_canals"
+    ],
+    "bbox": [
+      43.2,
+      12.5,
+      43.5,
+      12.7
+    ]
+  },
+  {
+    "id": "strait_bering",
+    "type": "sea",
+    "name": "Bering Strait",
+    "geometryType": "line",
+    "geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          -169,
+          66
+        ],
+        [
+          -168,
+          65.8
+        ]
+      ]
+    },
+    "labelPoint": [
+      -168.5,
+      65.9
+    ],
+    "packIds": [
+      "world_straits_canals"
+    ],
+    "bbox": [
+      -169,
+      65.8,
+      -168,
+      66
+    ]
+  },
+  {
+    "id": "strait_bosporus",
+    "type": "sea",
+    "name": "Bosporus",
+    "geometryType": "line",
+    "geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          28.96,
+          41.25
+        ],
+        [
+          29.12,
+          41
+        ]
+      ]
+    },
+    "labelPoint": [
+      29.04,
+      41.13
+    ],
+    "packIds": [
+      "world_straits_canals"
+    ],
+    "bbox": [
+      28.96,
+      41,
+      29.12,
+      41.25
+    ]
+  },
+  {
+    "id": "strait_gibraltar",
+    "type": "sea",
+    "name": "Strait of Gibraltar",
+    "geometryType": "line",
+    "geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          -5.9,
+          36
+        ],
+        [
+          -5.2,
+          35.9
+        ]
+      ]
+    },
+    "labelPoint": [
+      -5.5,
+      36
+    ],
+    "packIds": [
+      "world_straits_canals"
+    ],
+    "bbox": [
+      -5.9,
+      35.9,
+      -5.2,
+      36
+    ]
+  },
+  {
+    "id": "strait_hormuz",
+    "type": "sea",
+    "name": "Strait of Hormuz",
+    "geometryType": "line",
+    "geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          56,
+          26.6
+        ],
+        [
+          56.5,
+          25.9
+        ]
+      ]
+    },
+    "labelPoint": [
+      56.2,
+      26.2
+    ],
+    "packIds": [
+      "world_straits_canals"
+    ],
+    "bbox": [
+      56,
+      25.9,
+      56.5,
+      26.6
+    ]
+  },
+  {
+    "id": "strait_malacca",
+    "type": "sea",
+    "name": "Strait of Malacca",
+    "geometryType": "line",
+    "geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          99,
+          6
+        ],
+        [
+          101,
+          2
+        ]
+      ]
+    },
+    "labelPoint": [
+      100,
+      4
+    ],
+    "packIds": [
+      "world_straits_canals"
+    ],
+    "bbox": [
+      99,
+      2,
+      101,
+      6
+    ]
+  }
+]

@@ -1,0 +1,202 @@
+[
+  {
+    "id": "us_range_alaska",
+    "type": "mountain",
+    "name": "Alaska Range",
+    "geometryType": "line",
+    "geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          -153,
+          64
+        ],
+        [
+          -148,
+          63
+        ]
+      ]
+    },
+    "labelPoint": [
+      -150.5,
+      63.5
+    ],
+    "packIds": [
+      "us_mountain_ranges"
+    ],
+    "bbox": [
+      -153,
+      63,
+      -148,
+      64
+    ]
+  },
+  {
+    "id": "us_range_appalachian",
+    "type": "mountain",
+    "name": "Appalachian Mountains",
+    "geometryType": "line",
+    "geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          -81,
+          47
+        ],
+        [
+          -79,
+          43
+        ],
+        [
+          -80,
+          39
+        ],
+        [
+          -82,
+          35
+        ],
+        [
+          -83,
+          31
+        ]
+      ]
+    },
+    "labelPoint": [
+      -81,
+      39
+    ],
+    "packIds": [
+      "us_mountain_ranges"
+    ],
+    "bbox": [
+      -83,
+      31,
+      -79,
+      47
+    ]
+  },
+  {
+    "id": "us_range_cascade",
+    "type": "mountain",
+    "name": "Cascade Range",
+    "geometryType": "line",
+    "geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          -123,
+          49
+        ],
+        [
+          -122,
+          45
+        ],
+        [
+          -121,
+          42
+        ]
+      ]
+    },
+    "labelPoint": [
+      -122,
+      46
+    ],
+    "packIds": [
+      "us_mountain_ranges"
+    ],
+    "bbox": [
+      -123,
+      42,
+      -121,
+      49
+    ]
+  },
+  {
+    "id": "us_range_rockies",
+    "type": "mountain",
+    "name": "Rocky Mountains",
+    "geometryType": "line",
+    "geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          -150,
+          60
+        ],
+        [
+          -132,
+          54
+        ],
+        [
+          -124,
+          50
+        ],
+        [
+          -118,
+          46
+        ],
+        [
+          -113,
+          42
+        ],
+        [
+          -108,
+          38
+        ],
+        [
+          -104,
+          34
+        ]
+      ]
+    },
+    "labelPoint": [
+      -112,
+      44
+    ],
+    "packIds": [
+      "us_mountain_ranges"
+    ],
+    "bbox": [
+      -150,
+      34,
+      -104,
+      60
+    ]
+  },
+  {
+    "id": "us_range_sierra_nevada",
+    "type": "mountain",
+    "name": "Sierra Nevada",
+    "geometryType": "line",
+    "geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          -121,
+          40
+        ],
+        [
+          -119,
+          37
+        ],
+        [
+          -118,
+          35
+        ]
+      ]
+    },
+    "labelPoint": [
+      -119.5,
+      37.5
+    ],
+    "packIds": [
+      "us_mountain_ranges"
+    ],
+    "bbox": [
+      -121,
+      35,
+      -118,
+      40
+    ]
+  }
+]

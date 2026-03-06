@@ -1,5 +1,20 @@
 [
   {
+    "id": "canada_provinces_territories",
+    "name": "Canada: Provinces & Territories",
+    "types": [
+      "state",
+      "capital"
+    ],
+    "defaultViewport": {
+      "center": [
+        -96,
+        60
+      ],
+      "zoom": 2.5
+    }
+  },
+  {
     "id": "europe_countries",
     "name": "Europe: Countries",
     "types": [
@@ -14,59 +29,104 @@
     }
   },
   {
-    "id": "world_countries",
-    "name": "World: Countries",
+    "id": "india_states_capitals",
+    "name": "India: States & Capitals",
     "types": [
-      "country"
-    ],
-    "defaultViewport": {
-      "center": [
-        0,
-        20
-      ],
-      "zoom": 1.4
-    }
-  },
-  {
-    "id": "world_capitals",
-    "name": "World: Capitals",
-    "types": [
+      "state",
       "capital"
     ],
     "defaultViewport": {
       "center": [
-        10,
-        20
+        78.5,
+        22.8
       ],
-      "zoom": 1.6
+      "zoom": 4
     }
   },
   {
-    "id": "world_rivers",
-    "name": "World: Rivers",
+    "id": "us_major_cities",
+    "name": "US: Major Cities",
     "types": [
-      "river"
+      "city"
     ],
     "defaultViewport": {
       "center": [
-        10,
-        15
+        -98,
+        39
       ],
-      "zoom": 1.5
+      "zoom": 3.1
     }
   },
   {
-    "id": "world_mountains",
-    "name": "World: Mountains",
+    "id": "us_mountain_ranges",
+    "name": "US: Mountain Ranges",
     "types": [
       "mountain"
     ],
     "defaultViewport": {
       "center": [
-        10,
-        20
+        -110,
+        40
       ],
-      "zoom": 1.6
+      "zoom": 3
+    }
+  },
+  {
+    "id": "us_national_parks",
+    "name": "US: National Parks",
+    "types": [
+      "region"
+    ],
+    "defaultViewport": {
+      "center": [
+        -110,
+        40
+      ],
+      "zoom": 3.1
+    }
+  },
+  {
+    "id": "us_regions",
+    "name": "US: Regions",
+    "types": [
+      "region"
+    ],
+    "defaultViewport": {
+      "center": [
+        -98,
+        39
+      ],
+      "zoom": 3
+    }
+  },
+  {
+    "id": "us_rivers_lakes",
+    "name": "US: Rivers & Lakes",
+    "types": [
+      "river",
+      "lake"
+    ],
+    "defaultViewport": {
+      "center": [
+        -98,
+        39
+      ],
+      "zoom": 3
+    }
+  },
+  {
+    "id": "us_states_capitals",
+    "name": "US: States + Capitals",
+    "types": [
+      "state",
+      "capital"
+    ],
+    "defaultViewport": {
+      "center": [
+        -98,
+        39
+      ],
+      "zoom": 3.2
     }
   },
   {
@@ -84,6 +144,132 @@
     }
   },
   {
+    "id": "world_capitals",
+    "name": "World: Capitals",
+    "types": [
+      "capital"
+    ],
+    "defaultViewport": {
+      "center": [
+        10,
+        20
+      ],
+      "zoom": 1.6
+    }
+  },
+  {
+    "id": "world_capitals_by_continent",
+    "name": "World: Capitals by Continent",
+    "types": [
+      "capital"
+    ],
+    "defaultViewport": {
+      "center": [
+        10,
+        20
+      ],
+      "zoom": 1.6
+    }
+  },
+  {
+    "id": "world_climate_biomes",
+    "name": "World: Climate Zones / Biomes",
+    "types": [
+      "region"
+    ],
+    "defaultViewport": {
+      "center": [
+        0,
+        18
+      ],
+      "zoom": 1.3
+    }
+  },
+  {
+    "id": "world_countries",
+    "name": "World: Countries",
+    "types": [
+      "country"
+    ],
+    "defaultViewport": {
+      "center": [
+        0,
+        20
+      ],
+      "zoom": 1.4
+    }
+  },
+  {
+    "id": "world_countries_by_continent",
+    "name": "World: Countries by Continent",
+    "types": [
+      "country"
+    ],
+    "defaultViewport": {
+      "center": [
+        10,
+        20
+      ],
+      "zoom": 1.4
+    }
+  },
+  {
+    "id": "world_deserts",
+    "name": "World: Deserts",
+    "types": [
+      "region"
+    ],
+    "defaultViewport": {
+      "center": [
+        15,
+        18
+      ],
+      "zoom": 1.5
+    }
+  },
+  {
+    "id": "world_flags",
+    "name": "World: Flags",
+    "types": [
+      "country"
+    ],
+    "defaultViewport": {
+      "center": [
+        10,
+        20
+      ],
+      "zoom": 1.4
+    }
+  },
+  {
+    "id": "world_major_lakes",
+    "name": "World: Major Lakes",
+    "types": [
+      "lake"
+    ],
+    "defaultViewport": {
+      "center": [
+        15,
+        20
+      ],
+      "zoom": 1.5
+    }
+  },
+  {
+    "id": "world_mountain_passes",
+    "name": "World: Mountain Passes",
+    "types": [
+      "mountain"
+    ],
+    "defaultViewport": {
+      "center": [
+        30,
+        30
+      ],
+      "zoom": 2
+    }
+  },
+  {
     "id": "world_mountain_ranges",
     "name": "World: Mountain Ranges",
     "types": [
@@ -95,6 +281,134 @@
         20
       ],
       "zoom": 1.6
+    }
+  },
+  {
+    "id": "world_mountains",
+    "name": "World: Mountains",
+    "types": [
+      "mountain"
+    ],
+    "defaultViewport": {
+      "center": [
+        10,
+        20
+      ],
+      "zoom": 1.6
+    }
+  },
+  {
+    "id": "world_oceans_seas",
+    "name": "World: Oceans & Seas",
+    "types": [
+      "sea"
+    ],
+    "defaultViewport": {
+      "center": [
+        10,
+        10
+      ],
+      "zoom": 1.3
+    }
+  },
+  {
+    "id": "world_peninsulas_islands",
+    "name": "World: Peninsulas & Islands",
+    "types": [
+      "region"
+    ],
+    "defaultViewport": {
+      "center": [
+        10,
+        18
+      ],
+      "zoom": 1.4
+    }
+  },
+  {
+    "id": "world_plateaus_plains",
+    "name": "World: Plateaus & Plains",
+    "types": [
+      "region"
+    ],
+    "defaultViewport": {
+      "center": [
+        20,
+        20
+      ],
+      "zoom": 1.5
+    }
+  },
+  {
+    "id": "world_river_basins",
+    "name": "World: River Basins",
+    "types": [
+      "region"
+    ],
+    "defaultViewport": {
+      "center": [
+        10,
+        15
+      ],
+      "zoom": 1.5
+    }
+  },
+  {
+    "id": "world_rivers",
+    "name": "World: Rivers",
+    "types": [
+      "river"
+    ],
+    "defaultViewport": {
+      "center": [
+        10,
+        15
+      ],
+      "zoom": 1.5
+    }
+  },
+  {
+    "id": "world_straits_canals",
+    "name": "World: Straits & Canals",
+    "types": [
+      "sea",
+      "river"
+    ],
+    "defaultViewport": {
+      "center": [
+        20,
+        15
+      ],
+      "zoom": 1.5
+    }
+  },
+  {
+    "id": "world_tectonic_plates_volcano_belts",
+    "name": "World: Tectonic Plates & Volcano Belts",
+    "types": [
+      "region",
+      "mountain"
+    ],
+    "defaultViewport": {
+      "center": [
+        0,
+        10
+      ],
+      "zoom": 1.2
+    }
+  },
+  {
+    "id": "world_timezones_prime_meridian",
+    "name": "World: Time Zones & Prime Meridian",
+    "types": [
+      "region"
+    ],
+    "defaultViewport": {
+      "center": [
+        0,
+        20
+      ],
+      "zoom": 1.2
     }
   }
 ]

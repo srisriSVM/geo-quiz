@@ -158,6 +158,13 @@ body,
   display: flex;
   align-items: center;
   justify-content: space-between;
+  cursor: grab;
+  user-select: none;
+  touch-action: none;
+}
+
+.hud-settings-header--dragging {
+  cursor: grabbing;
 }
 
 .difficulty-filter-group {

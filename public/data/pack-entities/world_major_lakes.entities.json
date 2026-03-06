@@ -1,0 +1,230 @@
+[
+  {
+    "id": "lake_aral2",
+    "type": "lake",
+    "name": "Aral Sea",
+    "geometryType": "point",
+    "labelPoint": [
+      60,
+      45
+    ],
+    "packIds": [
+      "world_major_lakes"
+    ],
+    "bbox": [
+      60,
+      45,
+      60,
+      45
+    ]
+  },
+  {
+    "id": "lake_baikal2",
+    "type": "lake",
+    "name": "Lake Baikal",
+    "geometryType": "point",
+    "labelPoint": [
+      108.1,
+      53.5
+    ],
+    "packIds": [
+      "world_major_lakes"
+    ],
+    "bbox": [
+      108.1,
+      53.5,
+      108.1,
+      53.5
+    ]
+  },
+  {
+    "id": "lake_caspian2",
+    "type": "lake",
+    "name": "Caspian Sea",
+    "geometryType": "point",
+    "labelPoint": [
+      51.8,
+      41.9
+    ],
+    "packIds": [
+      "world_major_lakes"
+    ],
+    "bbox": [
+      51.8,
+      41.9,
+      51.8,
+      41.9
+    ]
+  },
+  {
+    "id": "lake_chad2",
+    "type": "lake",
+    "name": "Lake Chad",
+    "geometryType": "point",
+    "labelPoint": [
+      14.4,
+      13
+    ],
+    "packIds": [
+      "world_major_lakes"
+    ],
+    "bbox": [
+      14.4,
+      13,
+      14.4,
+      13
+    ]
+  },
+  {
+    "id": "lake_erie2",
+    "type": "lake",
+    "name": "Lake Erie",
+    "geometryType": "point",
+    "labelPoint": [
+      -81.2,
+      42.2
+    ],
+    "packIds": [
+      "world_major_lakes"
+    ],
+    "bbox": [
+      -81.2,
+      42.2,
+      -81.2,
+      42.2
+    ]
+  },
+  {
+    "id": "lake_great_bear",
+    "type": "lake",
+    "name": "Great Bear Lake",
+    "geometryType": "point",
+    "labelPoint": [
+      -121,
+      66
+    ],
+    "packIds": [
+      "world_major_lakes"
+    ],
+    "bbox": [
+      -121,
+      66,
+      -121,
+      66
+    ]
+  },
+  {
+    "id": "lake_huron2",
+    "type": "lake",
+    "name": "Lake Huron",
+    "geometryType": "point",
+    "labelPoint": [
+      -82.8,
+      45.2
+    ],
+    "packIds": [
+      "world_major_lakes"
+    ],
+    "bbox": [
+      -82.8,
+      45.2,
+      -82.8,
+      45.2
+    ]
+  },
+  {
+    "id": "lake_michigan2",
+    "type": "lake",
+    "name": "Lake Michigan",
+    "geometryType": "point",
+    "labelPoint": [
+      -87,
+      44.2
+    ],
+    "packIds": [
+      "world_major_lakes"
+    ],
+    "bbox": [
+      -87,
+      44.2,
+      -87,
+      44.2
+    ]
+  },
+  {
+    "id": "lake_superior2",
+    "type": "lake",
+    "name": "Lake Superior",
+    "geometryType": "point",
+    "labelPoint": [
+      -88,
+      47.7
+    ],
+    "packIds": [
+      "world_major_lakes"
+    ],
+    "bbox": [
+      -88,
+      47.7,
+      -88,
+      47.7
+    ]
+  },
+  {
+    "id": "lake_tanganyika2",
+    "type": "lake",
+    "name": "Lake Tanganyika",
+    "geometryType": "point",
+    "labelPoint": [
+      29.5,
+      -6
+    ],
+    "packIds": [
+      "world_major_lakes"
+    ],
+    "bbox": [
+      29.5,
+      -6,
+      29.5,
+      -6
+    ]
+  },
+  {
+    "id": "lake_titicaca2",
+    "type": "lake",
+    "name": "Lake Titicaca",
+    "geometryType": "point",
+    "labelPoint": [
+      -69.4,
+      -15.8
+    ],
+    "packIds": [
+      "world_major_lakes"
+    ],
+    "bbox": [
+      -69.4,
+      -15.8,
+      -69.4,
+      -15.8
+    ]
+  },
+  {
+    "id": "lake_victoria2",
+    "type": "lake",
+    "name": "Lake Victoria",
+    "geometryType": "point",
+    "labelPoint": [
+      33,
+      -1
+    ],
+    "packIds": [
+      "world_major_lakes"
+    ],
+    "bbox": [
+      33,
+      -1,
+      33,
+      -1
+    ]
+  }
+]

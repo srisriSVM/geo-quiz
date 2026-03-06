@@ -9,7 +9,18 @@ export type EntityType =
   | "sea"
   | "lake"
   | "mountain"
-  | "region";
+  | "region"
+  | "desert"
+  | "plateau"
+  | "plain"
+  | "canal"
+  | "strait"
+  | "island"
+  | "peninsula"
+  | "basin"
+  | "park"
+  | "biome"
+  | "timezone";
 
 export type GeometryType = "point" | "line" | "polygon";
 export type Difficulty = "easy" | "medium" | "hard";

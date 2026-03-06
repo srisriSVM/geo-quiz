@@ -1,0 +1,370 @@
+[
+  {
+    "id": "biome_desert_hot",
+    "type": "region",
+    "name": "Hot Desert",
+    "geometryType": "polygon",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            10,
+            15
+          ],
+          [
+            50,
+            15
+          ],
+          [
+            50,
+            32
+          ],
+          [
+            10,
+            32
+          ],
+          [
+            10,
+            15
+          ]
+        ]
+      ]
+    },
+    "labelPoint": [
+      30,
+      24
+    ],
+    "packIds": [
+      "world_climate_biomes"
+    ],
+    "bbox": [
+      10,
+      15,
+      50,
+      32
+    ]
+  },
+  {
+    "id": "biome_grassland",
+    "type": "region",
+    "name": "Temperate Grassland",
+    "geometryType": "polygon",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -110,
+            35
+          ],
+          [
+            -92,
+            35
+          ],
+          [
+            -92,
+            49
+          ],
+          [
+            -110,
+            49
+          ],
+          [
+            -110,
+            35
+          ]
+        ]
+      ]
+    },
+    "labelPoint": [
+      -101,
+      42
+    ],
+    "packIds": [
+      "world_climate_biomes"
+    ],
+    "bbox": [
+      -110,
+      35,
+      -92,
+      49
+    ]
+  },
+  {
+    "id": "biome_mediterranean",
+    "type": "region",
+    "name": "Mediterranean Climate",
+    "geometryType": "polygon",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -10,
+            30
+          ],
+          [
+            35,
+            30
+          ],
+          [
+            35,
+            45
+          ],
+          [
+            -10,
+            45
+          ],
+          [
+            -10,
+            30
+          ]
+        ]
+      ]
+    },
+    "labelPoint": [
+      12,
+      38
+    ],
+    "packIds": [
+      "world_climate_biomes"
+    ],
+    "bbox": [
+      -10,
+      30,
+      35,
+      45
+    ]
+  },
+  {
+    "id": "biome_savanna",
+    "type": "region",
+    "name": "Savanna",
+    "geometryType": "polygon",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            10,
+            -20
+          ],
+          [
+            40,
+            -20
+          ],
+          [
+            40,
+            5
+          ],
+          [
+            10,
+            5
+          ],
+          [
+            10,
+            -20
+          ]
+        ]
+      ]
+    },
+    "labelPoint": [
+      25,
+      -8
+    ],
+    "packIds": [
+      "world_climate_biomes"
+    ],
+    "bbox": [
+      10,
+      -20,
+      40,
+      5
+    ]
+  },
+  {
+    "id": "biome_taiga",
+    "type": "region",
+    "name": "Taiga",
+    "geometryType": "polygon",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            30,
+            52
+          ],
+          [
+            120,
+            52
+          ],
+          [
+            120,
+            68
+          ],
+          [
+            30,
+            68
+          ],
+          [
+            30,
+            52
+          ]
+        ]
+      ]
+    },
+    "labelPoint": [
+      75,
+      60
+    ],
+    "packIds": [
+      "world_climate_biomes"
+    ],
+    "bbox": [
+      30,
+      52,
+      120,
+      68
+    ]
+  },
+  {
+    "id": "biome_temperate_forest",
+    "type": "region",
+    "name": "Temperate Forest",
+    "geometryType": "polygon",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -90,
+            35
+          ],
+          [
+            -65,
+            35
+          ],
+          [
+            -65,
+            50
+          ],
+          [
+            -90,
+            50
+          ],
+          [
+            -90,
+            35
+          ]
+        ]
+      ]
+    },
+    "labelPoint": [
+      -77,
+      43
+    ],
+    "packIds": [
+      "world_climate_biomes"
+    ],
+    "bbox": [
+      -90,
+      35,
+      -65,
+      50
+    ]
+  },
+  {
+    "id": "biome_tropical_rainforest",
+    "type": "region",
+    "name": "Tropical Rainforest",
+    "geometryType": "polygon",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -75,
+            -8
+          ],
+          [
+            -50,
+            -8
+          ],
+          [
+            -50,
+            5
+          ],
+          [
+            -75,
+            5
+          ],
+          [
+            -75,
+            -8
+          ]
+        ]
+      ]
+    },
+    "labelPoint": [
+      -62,
+      -1
+    ],
+    "packIds": [
+      "world_climate_biomes"
+    ],
+    "bbox": [
+      -75,
+      -8,
+      -50,
+      5
+    ]
+  },
+  {
+    "id": "biome_tundra",
+    "type": "region",
+    "name": "Tundra",
+    "geometryType": "polygon",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -170,
+            68
+          ],
+          [
+            170,
+            68
+          ],
+          [
+            170,
+            78
+          ],
+          [
+            -170,
+            78
+          ],
+          [
+            -170,
+            68
+          ]
+        ]
+      ]
+    },
+    "labelPoint": [
+      40,
+      73
+    ],
+    "packIds": [
+      "world_climate_biomes"
+    ],
+    "bbox": [
+      -170,
+      68,
+      170,
+      78
+    ]
+  }
+]

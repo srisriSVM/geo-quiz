@@ -10,7 +10,9 @@
     ],
     "packIds": [
       "europe_countries",
-      "world_countries"
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
     ],
     "bbox": [
       20,
@@ -30,7 +32,9 @@
     ],
     "packIds": [
       "europe_countries",
-      "world_countries"
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
     ],
     "bbox": [
       1.52,
@@ -50,7 +54,9 @@
     ],
     "packIds": [
       "europe_countries",
-      "world_countries"
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
     ],
     "bbox": [
       44.5,
@@ -70,7 +76,9 @@
     ],
     "packIds": [
       "europe_countries",
-      "world_countries"
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
     ],
     "bbox": [
       14.1,
@@ -90,7 +98,9 @@
     ],
     "packIds": [
       "europe_countries",
-      "world_countries"
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
     ],
     "bbox": [
       47.5,
@@ -110,7 +120,9 @@
     ],
     "packIds": [
       "europe_countries",
-      "world_countries"
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
     ],
     "bbox": [
       28,
@@ -130,7 +142,9 @@
     ],
     "packIds": [
       "europe_countries",
-      "world_countries"
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
     ],
     "bbox": [
       4.7,
@@ -150,7 +164,9 @@
     ],
     "packIds": [
       "europe_countries",
-      "world_countries"
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
     ],
     "bbox": [
       17.8,
@@ -170,7 +186,9 @@
     ],
     "packIds": [
       "europe_countries",
-      "world_countries"
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
     ],
     "bbox": [
       25.5,
@@ -190,7 +208,9 @@
     ],
     "packIds": [
       "europe_countries",
-      "world_countries"
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
     ],
     "bbox": [
       16.4,
@@ -210,7 +230,9 @@
     ],
     "packIds": [
       "europe_countries",
-      "world_countries"
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
     ],
     "bbox": [
       33.2,
@@ -230,7 +252,9 @@
     ],
     "packIds": [
       "europe_countries",
-      "world_countries"
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
     ],
     "bbox": [
       15.3,
@@ -250,7 +274,9 @@
     ],
     "packIds": [
       "europe_countries",
-      "world_countries"
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
     ],
     "bbox": [
       9.3,
@@ -270,7 +296,9 @@
     ],
     "packIds": [
       "europe_countries",
-      "world_countries"
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
     ],
     "bbox": [
       25,
@@ -290,7 +318,9 @@
     ],
     "packIds": [
       "europe_countries",
-      "world_countries"
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
     ],
     "bbox": [
       26,
@@ -310,7 +340,9 @@
     ],
     "packIds": [
       "europe_countries",
-      "world_countries"
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
     ],
     "difficulty": "easy",
     "ageBand": "6-8",
@@ -380,7 +412,9 @@
     ],
     "packIds": [
       "europe_countries",
-      "world_countries"
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
     ],
     "bbox": [
       43.5,
@@ -400,7 +434,9 @@
     ],
     "packIds": [
       "europe_countries",
-      "world_countries"
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
     ],
     "difficulty": "medium",
     "ageBand": "9-12",
@@ -470,7 +506,9 @@
     ],
     "packIds": [
       "europe_countries",
-      "world_countries"
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
     ],
     "bbox": [
       22.9,
@@ -490,7 +528,9 @@
     ],
     "packIds": [
       "europe_countries",
-      "world_countries"
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
     ],
     "bbox": [
       19.3,
@@ -510,7 +550,9 @@
     ],
     "packIds": [
       "europe_countries",
-      "world_countries"
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
     ],
     "bbox": [
       -19,
@@ -530,7 +572,9 @@
     ],
     "packIds": [
       "europe_countries",
-      "world_countries"
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
     ],
     "bbox": [
       -8.2,
@@ -550,7 +594,9 @@
     ],
     "packIds": [
       "europe_countries",
-      "world_countries"
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
     ],
     "bbox": [
       12.5,
@@ -570,7 +616,9 @@
     ],
     "packIds": [
       "europe_countries",
-      "world_countries"
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
     ],
     "bbox": [
       20.9,
@@ -590,7 +638,9 @@
     ],
     "packIds": [
       "europe_countries",
-      "world_countries"
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
     ],
     "bbox": [
       24.9,
@@ -610,7 +660,9 @@
     ],
     "packIds": [
       "europe_countries",
-      "world_countries"
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
     ],
     "bbox": [
       9.55,
@@ -630,7 +682,9 @@
     ],
     "packIds": [
       "europe_countries",
-      "world_countries"
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
     ],
     "bbox": [
       23.9,
@@ -650,7 +704,9 @@
     ],
     "packIds": [
       "europe_countries",
-      "world_countries"
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
     ],
     "bbox": [
       6.1,
@@ -670,7 +726,9 @@
     ],
     "packIds": [
       "europe_countries",
-      "world_countries"
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
     ],
     "bbox": [
       14.4,
@@ -690,7 +748,9 @@
     ],
     "packIds": [
       "europe_countries",
-      "world_countries"
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
     ],
     "bbox": [
       28.4,
@@ -710,7 +770,9 @@
     ],
     "packIds": [
       "europe_countries",
-      "world_countries"
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
     ],
     "bbox": [
       7.42,
@@ -730,7 +792,9 @@
     ],
     "packIds": [
       "europe_countries",
-      "world_countries"
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
     ],
     "bbox": [
       19.3,
@@ -750,7 +814,9 @@
     ],
     "packIds": [
       "europe_countries",
-      "world_countries"
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
     ],
     "bbox": [
       5.3,
@@ -770,7 +836,9 @@
     ],
     "packIds": [
       "europe_countries",
-      "world_countries"
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
     ],
     "bbox": [
       21.7,
@@ -790,7 +858,9 @@
     ],
     "packIds": [
       "europe_countries",
-      "world_countries"
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
     ],
     "bbox": [
       8.5,
@@ -810,7 +880,9 @@
     ],
     "packIds": [
       "europe_countries",
-      "world_countries"
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
     ],
     "bbox": [
       19.1,
@@ -830,7 +902,9 @@
     ],
     "packIds": [
       "europe_countries",
-      "world_countries"
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
     ],
     "bbox": [
       -8,
@@ -850,7 +924,9 @@
     ],
     "packIds": [
       "europe_countries",
-      "world_countries"
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
     ],
     "bbox": [
       24.9,
@@ -870,7 +946,9 @@
     ],
     "packIds": [
       "europe_countries",
-      "world_countries"
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
     ],
     "bbox": [
       37.6,
@@ -890,7 +968,9 @@
     ],
     "packIds": [
       "europe_countries",
-      "world_countries"
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
     ],
     "bbox": [
       12.46,
@@ -910,7 +990,9 @@
     ],
     "packIds": [
       "europe_countries",
-      "world_countries"
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
     ],
     "bbox": [
       20.8,
@@ -930,7 +1012,9 @@
     ],
     "packIds": [
       "europe_countries",
-      "world_countries"
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
     ],
     "bbox": [
       19.7,
@@ -950,7 +1034,9 @@
     ],
     "packIds": [
       "europe_countries",
-      "world_countries"
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
     ],
     "bbox": [
       14.9,
@@ -970,7 +1056,9 @@
     ],
     "packIds": [
       "europe_countries",
-      "world_countries"
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
     ],
     "bbox": [
       -3.7,
@@ -990,7 +1078,9 @@
     ],
     "packIds": [
       "europe_countries",
-      "world_countries"
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
     ],
     "bbox": [
       15.2,
@@ -1010,7 +1100,9 @@
     ],
     "packIds": [
       "europe_countries",
-      "world_countries"
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
     ],
     "bbox": [
       8.2,
@@ -1030,7 +1122,9 @@
     ],
     "packIds": [
       "europe_countries",
-      "world_countries"
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
     ],
     "bbox": [
       32.9,
@@ -1050,7 +1144,9 @@
     ],
     "packIds": [
       "europe_countries",
-      "world_countries"
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
     ],
     "bbox": [
       31.2,
@@ -1070,7 +1166,9 @@
     ],
     "packIds": [
       "europe_countries",
-      "world_countries"
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
     ],
     "bbox": [
       -2.8,
@@ -1090,7 +1188,9 @@
     ],
     "packIds": [
       "europe_countries",
-      "world_countries"
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
     ],
     "bbox": [
       12.45,

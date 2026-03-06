@@ -2,6 +2,8 @@ import type { Entity, Pack } from "./types";
 
 const normalizeName = (value: string): string =>
   value
+    .normalize("NFKD")
+    .replace(/[\u0300-\u036f]/g, "")
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, " ")
     .trim();
@@ -69,6 +71,100 @@ const withUsStatePolygons = async (entities: Entity[]): Promise<Entity[]> => {
   });
 };
 
+const INDIA_NAME_ALIASES = new Map<string, string>([
+  ["odisha", "orissa"],
+  ["orissa", "odisha"],
+  ["uttarakhand", "uttaranchal"],
+  ["uttaranchal", "uttarakhand"]
+]);
+
+const withIndiaStatePolygons = async (entities: Entity[]): Promise<Entity[]> => {
+  const hasPolygon = entities.some((entity) => entity.geometryType === "polygon" && entity.geometry);
+  if (hasPolygon) {
+    return entities;
+  }
+
+  const response = await fetch("./data/source/india-states.geojson", { cache: "no-store" });
+  if (!response.ok) {
+    return entities;
+  }
+
+  const geo = (await response.json()) as {
+    features?: Array<{ properties?: Record<string, unknown>; geometry?: Entity["geometry"] }>;
+  };
+  const byName = new Map<string, Entity["geometry"]>();
+  for (const feature of geo.features ?? []) {
+    const properties = feature?.properties ?? {};
+    const name = String(
+      properties.shapeName ?? properties.NAME_1 ?? properties.name ?? properties.st_nm ?? ""
+    ).trim();
+    const geometry = feature?.geometry;
+    if (!name || !geometry) {
+      continue;
+    }
+    byName.set(normalizeName(name), geometry);
+  }
+
+  return entities.map((entity) => {
+    if (entity.type !== "state" || entity.geometryType !== "point") {
+      return entity;
+    }
+    const normalized = normalizeName(entity.name);
+    const geometry = byName.get(normalized) ?? byName.get(INDIA_NAME_ALIASES.get(normalized) ?? "");
+    if (!geometry) {
+      return entity;
+    }
+    return {
+      ...entity,
+      geometryType: "polygon",
+      geometry: normalizeGeometry(geometry)
+    };
+  });
+};
+
+const withCanadaProvincePolygons = async (entities: Entity[]): Promise<Entity[]> => {
+  const hasPolygon = entities.some((entity) => entity.geometryType === "polygon" && entity.geometry);
+  if (hasPolygon) {
+    return entities;
+  }
+
+  const response = await fetch("./data/source/canada-provinces.geojson", { cache: "no-store" });
+  if (!response.ok) {
+    return entities;
+  }
+
+  const geo = (await response.json()) as {
+    features?: Array<{ properties?: Record<string, unknown>; geometry?: Entity["geometry"] }>;
+  };
+  const byName = new Map<string, Entity["geometry"]>();
+  for (const feature of geo.features ?? []) {
+    const properties = feature?.properties ?? {};
+    const name = String(
+      properties.shapeName ?? properties.NAME_1 ?? properties.name ?? properties.st_nm ?? ""
+    ).trim();
+    const geometry = feature?.geometry;
+    if (!name || !geometry) {
+      continue;
+    }
+    byName.set(normalizeName(name), geometry);
+  }
+
+  return entities.map((entity) => {
+    if (entity.type !== "state" || entity.geometryType !== "point") {
+      return entity;
+    }
+    const geometry = byName.get(normalizeName(entity.name));
+    if (!geometry) {
+      return entity;
+    }
+    return {
+      ...entity,
+      geometryType: "polygon",
+      geometry: normalizeGeometry(geometry)
+    };
+  });
+};
+
 export const loadPackEntities = async (packId: string): Promise<Entity[]> => {
   const response = await fetch(`./data/pack-entities/${packId}.entities.json`, { cache: "no-store" });
   if (!response.ok) {
@@ -78,6 +174,12 @@ export const loadPackEntities = async (packId: string): Promise<Entity[]> => {
   const entities = (await response.json()) as Entity[];
   if (packId === "usa_states") {
     return withUsStatePolygons(entities);
+  }
+  if (packId === "india_states_capitals") {
+    return withIndiaStatePolygons(entities);
+  }
+  if (packId === "canada_provinces_territories") {
+    return withCanadaProvincePolygons(entities);
   }
   return entities;
 };

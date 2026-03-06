@@ -5,12 +5,18 @@ const inputPath = resolve(process.cwd(), "public/data/sample-entities.json");
 const indexOutputPath = resolve(process.cwd(), "public/data/entities-index.json");
 const packOutputDir = resolve(process.cwd(), "public/data/pack-entities");
 const usStatesPath = resolve(process.cwd(), "public/data/source/us-states.geojson");
+const indiaStatesPath = resolve(process.cwd(), "public/data/source/india-states.geojson");
+const canadaProvincesPath = resolve(process.cwd(), "public/data/source/canada-provinces.geojson");
 
 const source = JSON.parse(readFileSync(inputPath, "utf-8"));
 const usStatesGeo = JSON.parse(readFileSync(usStatesPath, "utf-8"));
+const indiaStatesGeo = JSON.parse(readFileSync(indiaStatesPath, "utf-8"));
+const canadaProvincesGeo = JSON.parse(readFileSync(canadaProvincesPath, "utf-8"));
 
 function normalizeName(value) {
   return String(value ?? "")
+    .normalize("NFKD")
+    .replace(/[\u0300-\u036f]/g, "")
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, " ")
     .trim();
@@ -45,6 +51,44 @@ const usStateGeometryByName = new Map(
   (usStatesGeo.features ?? [])
     .filter((feature) => feature?.properties?.name && feature?.geometry)
     .map((feature) => [normalizeName(feature.properties.name), normalizeGeometry(feature.geometry)])
+);
+
+const INDIA_NAME_ALIASES = new Map([
+  ["odisha", "orissa"],
+  ["orissa", "odisha"],
+  ["uttarakhand", "uttaranchal"],
+  ["uttaranchal", "uttarakhand"],
+  ["dadra and nagar haveli and daman and diu", "dadra and nagar haveli"],
+  ["dadra and nagar haveli and daman and diu", "daman and diu"]
+]);
+
+const indiaStateGeometryByName = new Map(
+  (indiaStatesGeo.features ?? [])
+    .filter((feature) => {
+      const properties = feature?.properties ?? {};
+      return (
+        (properties.shapeName || properties.NAME_1 || properties.name || properties.st_nm) &&
+        feature?.geometry
+      );
+    })
+    .map((feature) => {
+      const properties = feature.properties ?? {};
+      const stateName = properties.shapeName || properties.NAME_1 || properties.name || properties.st_nm;
+      return [normalizeName(stateName), normalizeGeometry(feature.geometry)];
+    })
+);
+
+const canadaProvinceGeometryByName = new Map(
+  (canadaProvincesGeo.features ?? [])
+    .filter((feature) => {
+      const properties = feature?.properties ?? {};
+      return (properties.shapeName || properties.NAME_1 || properties.name || properties.st_nm) && feature?.geometry;
+    })
+    .map((feature) => {
+      const properties = feature.properties ?? {};
+      const name = properties.shapeName || properties.NAME_1 || properties.name || properties.st_nm;
+      return [normalizeName(name), normalizeGeometry(feature.geometry)];
+    })
 );
 
 function collectCoords(node, out) {
@@ -93,6 +137,42 @@ const entities = source
   .map((entity) => {
     if (entity.type === "state" && (entity.packIds ?? []).includes("usa_states")) {
       const geometry = usStateGeometryByName.get(normalizeName(entity.name));
+      if (geometry) {
+        const withGeometry = {
+          ...entity,
+          geometryType: "polygon",
+          geometry
+        };
+        return {
+          ...withGeometry,
+          bbox: toBbox(withGeometry)
+        };
+      }
+    }
+
+    if (entity.type === "state" && (entity.packIds ?? []).includes("india_states_capitals")) {
+      const normalized = normalizeName(entity.name);
+      const candidates = [normalized];
+      const alias = INDIA_NAME_ALIASES.get(normalized);
+      if (alias) {
+        candidates.push(alias);
+      }
+      const geometry = candidates.map((name) => indiaStateGeometryByName.get(name)).find(Boolean);
+      if (geometry) {
+        const withGeometry = {
+          ...entity,
+          geometryType: "polygon",
+          geometry
+        };
+        return {
+          ...withGeometry,
+          bbox: toBbox(withGeometry)
+        };
+      }
+    }
+
+    if (entity.type === "state" && (entity.packIds ?? []).includes("canada_provinces_territories")) {
+      const geometry = canadaProvinceGeometryByName.get(normalizeName(entity.name));
       if (geometry) {
         const withGeometry = {
           ...entity,

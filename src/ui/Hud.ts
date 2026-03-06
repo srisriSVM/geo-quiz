@@ -44,9 +44,13 @@ export class Hud {
   private readonly settingsPanel: HTMLElement;
   private readonly settingsToggleButton: HTMLButtonElement;
   private readonly settingsCloseButton: HTMLButtonElement;
+  private readonly settingsDragHandleEl: HTMLElement;
   private dragging = false;
   private dragOffsetX = 0;
   private dragOffsetY = 0;
+  private settingsDragging = false;
+  private settingsDragOffsetX = 0;
+  private settingsDragOffsetY = 0;
 
   constructor(packs: Pack[], actions: HudActions) {
     this.root = document.createElement("header");
@@ -72,7 +76,7 @@ export class Hud {
         </div>
       </div>
       <aside data-role="settings-panel" class="hud-settings-panel" hidden>
-        <div class="hud-settings-header">
+        <div class="hud-settings-header" data-role="settings-drag-handle">
           <strong>Settings</strong>
           <button type="button" data-role="settings-close" aria-label="Close settings">Hide</button>
         </div>
@@ -128,6 +132,7 @@ export class Hud {
     this.settingsPanel = this.query<HTMLElement>("[data-role='settings-panel']");
     this.settingsToggleButton = this.query<HTMLButtonElement>("[data-role='settings-toggle']");
     this.settingsCloseButton = this.query<HTMLButtonElement>("[data-role='settings-close']");
+    this.settingsDragHandleEl = this.query<HTMLElement>("[data-role='settings-drag-handle']");
 
     for (const pack of packs) {
       const option = document.createElement("option");
@@ -219,6 +224,52 @@ export class Hud {
 
     this.hudPillEl.addEventListener("pointerup", (event) => stopDrag(event.pointerId));
     this.hudPillEl.addEventListener("pointercancel", (event) => stopDrag(event.pointerId));
+
+    this.settingsDragHandleEl.addEventListener("pointerdown", (event) => {
+      const target = event.target as HTMLElement | null;
+      if (target?.closest("button")) {
+        return;
+      }
+      const rootRect = this.root.getBoundingClientRect();
+      const panelRect = this.settingsPanel.getBoundingClientRect();
+      this.settingsPanel.style.right = "auto";
+      this.settingsPanel.style.bottom = "auto";
+      this.settingsPanel.style.left = `${panelRect.left - rootRect.left}px`;
+      this.settingsPanel.style.top = `${panelRect.top - rootRect.top}px`;
+
+      this.settingsDragging = true;
+      this.settingsDragOffsetX = event.clientX - panelRect.left;
+      this.settingsDragOffsetY = event.clientY - panelRect.top;
+      this.settingsDragHandleEl.setPointerCapture(event.pointerId);
+      this.settingsDragHandleEl.classList.add("hud-settings-header--dragging");
+    });
+
+    this.settingsDragHandleEl.addEventListener("pointermove", (event) => {
+      if (!this.settingsDragging) {
+        return;
+      }
+      const rootRect = this.root.getBoundingClientRect();
+      const panelRect = this.settingsPanel.getBoundingClientRect();
+      const maxLeft = Math.max(8, window.innerWidth - panelRect.width - 8);
+      const maxTop = Math.max(8, window.innerHeight - panelRect.height - 8);
+      const viewportLeft = Math.min(Math.max(8, event.clientX - this.settingsDragOffsetX), maxLeft);
+      const viewportTop = Math.min(Math.max(8, event.clientY - this.settingsDragOffsetY), maxTop);
+      this.settingsPanel.style.left = `${viewportLeft - rootRect.left}px`;
+      this.settingsPanel.style.top = `${viewportTop - rootRect.top}px`;
+    });
+
+    const stopSettingsDrag = (pointerId?: number): void => {
+      if (!this.settingsDragging) {
+        return;
+      }
+      this.settingsDragging = false;
+      this.settingsDragHandleEl.classList.remove("hud-settings-header--dragging");
+      if (typeof pointerId === "number" && this.settingsDragHandleEl.hasPointerCapture(pointerId)) {
+        this.settingsDragHandleEl.releasePointerCapture(pointerId);
+      }
+    };
+    this.settingsDragHandleEl.addEventListener("pointerup", (event) => stopSettingsDrag(event.pointerId));
+    this.settingsDragHandleEl.addEventListener("pointercancel", (event) => stopSettingsDrag(event.pointerId));
   }
 
   setMode(mode: "learn" | "quiz"): void {

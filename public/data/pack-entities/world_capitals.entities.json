@@ -9,7 +9,8 @@
       39.9042
     ],
     "packIds": [
-      "world_capitals"
+      "world_capitals",
+      "world_capitals_by_continent"
     ],
     "bbox": [
       116.4074,
@@ -28,7 +29,8 @@
       52.52
     ],
     "packIds": [
-      "world_capitals"
+      "world_capitals",
+      "world_capitals_by_continent"
     ],
     "bbox": [
       13.405,
@@ -47,7 +49,8 @@
       -15.7942
     ],
     "packIds": [
-      "world_capitals"
+      "world_capitals",
+      "world_capitals_by_continent"
     ],
     "bbox": [
       -47.8825,
@@ -66,7 +69,8 @@
       30.0444
     ],
     "packIds": [
-      "world_capitals"
+      "world_capitals",
+      "world_capitals_by_continent"
     ],
     "bbox": [
       31.2357,
@@ -85,7 +89,8 @@
       -35.2809
     ],
     "packIds": [
-      "world_capitals"
+      "world_capitals",
+      "world_capitals_by_continent"
     ],
     "bbox": [
       149.13,
@@ -104,7 +109,8 @@
       51.5072
     ],
     "packIds": [
-      "world_capitals"
+      "world_capitals",
+      "world_capitals_by_continent"
     ],
     "bbox": [
       -0.1276,
@@ -123,7 +129,8 @@
       40.4168
     ],
     "packIds": [
-      "world_capitals"
+      "world_capitals",
+      "world_capitals_by_continent"
     ],
     "bbox": [
       -3.7038,
@@ -142,7 +149,8 @@
       19.4326
     ],
     "packIds": [
-      "world_capitals"
+      "world_capitals",
+      "world_capitals_by_continent"
     ],
     "bbox": [
       -99.1332,
@@ -161,7 +169,8 @@
       55.7558
     ],
     "packIds": [
-      "world_capitals"
+      "world_capitals",
+      "world_capitals_by_continent"
     ],
     "bbox": [
       37.6173,
@@ -180,7 +189,8 @@
       -1.2921
     ],
     "packIds": [
-      "world_capitals"
+      "world_capitals",
+      "world_capitals_by_continent"
     ],
     "bbox": [
       36.8219,
@@ -199,7 +209,8 @@
       28.6139
     ],
     "packIds": [
-      "world_capitals"
+      "world_capitals",
+      "world_capitals_by_continent"
     ],
     "bbox": [
       77.209,
@@ -218,7 +229,8 @@
       45.4215
     ],
     "packIds": [
-      "world_capitals"
+      "world_capitals",
+      "world_capitals_by_continent"
     ],
     "bbox": [
       -75.6972,
@@ -237,7 +249,8 @@
       48.8566
     ],
     "packIds": [
-      "world_capitals"
+      "world_capitals",
+      "world_capitals_by_continent"
     ],
     "bbox": [
       2.3522,
@@ -256,7 +269,8 @@
       -25.7479
     ],
     "packIds": [
-      "world_capitals"
+      "world_capitals",
+      "world_capitals_by_continent"
     ],
     "bbox": [
       28.2293,
@@ -275,7 +289,8 @@
       24.7136
     ],
     "packIds": [
-      "world_capitals"
+      "world_capitals",
+      "world_capitals_by_continent"
     ],
     "bbox": [
       46.6753,
@@ -294,7 +309,8 @@
       41.9028
     ],
     "packIds": [
-      "world_capitals"
+      "world_capitals",
+      "world_capitals_by_continent"
     ],
     "bbox": [
       12.4964,
@@ -313,7 +329,8 @@
       37.5665
     ],
     "packIds": [
-      "world_capitals"
+      "world_capitals",
+      "world_capitals_by_continent"
     ],
     "bbox": [
       126.978,
@@ -332,7 +349,8 @@
       35.6895
     ],
     "packIds": [
-      "world_capitals"
+      "world_capitals",
+      "world_capitals_by_continent"
     ],
     "bbox": [
       139.6917,
@@ -351,7 +369,8 @@
       38.9072
     ],
     "packIds": [
-      "world_capitals"
+      "world_capitals",
+      "world_capitals_by_continent"
     ],
     "bbox": [
       -77.0369,
@@ -370,7 +389,8 @@
       -41.2865
     ],
     "packIds": [
-      "world_capitals"
+      "world_capitals",
+      "world_capitals_by_continent"
     ],
     "bbox": [
       174.7772,

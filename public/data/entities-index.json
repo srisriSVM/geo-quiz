@@ -1,5 +1,590 @@
 [
   {
+    "id": "basin_amazon",
+    "type": "region",
+    "name": "Amazon Basin",
+    "geometryType": "polygon",
+    "labelPoint": [
+      -62,
+      -4
+    ],
+    "packIds": [
+      "world_river_basins"
+    ]
+  },
+  {
+    "id": "basin_congo",
+    "type": "region",
+    "name": "Congo Basin",
+    "geometryType": "polygon",
+    "labelPoint": [
+      22,
+      -1
+    ],
+    "packIds": [
+      "world_river_basins"
+    ]
+  },
+  {
+    "id": "basin_ganges",
+    "type": "region",
+    "name": "Ganges Basin",
+    "geometryType": "polygon",
+    "labelPoint": [
+      82,
+      26
+    ],
+    "packIds": [
+      "world_river_basins"
+    ]
+  },
+  {
+    "id": "basin_mekong",
+    "type": "region",
+    "name": "Mekong Basin",
+    "geometryType": "polygon",
+    "labelPoint": [
+      103,
+      18
+    ],
+    "packIds": [
+      "world_river_basins"
+    ]
+  },
+  {
+    "id": "basin_mississippi",
+    "type": "region",
+    "name": "Mississippi Basin",
+    "geometryType": "polygon",
+    "labelPoint": [
+      -94,
+      39
+    ],
+    "packIds": [
+      "world_river_basins"
+    ]
+  },
+  {
+    "id": "basin_nile",
+    "type": "region",
+    "name": "Nile Basin",
+    "geometryType": "polygon",
+    "labelPoint": [
+      31,
+      16
+    ],
+    "packIds": [
+      "world_river_basins"
+    ]
+  },
+  {
+    "id": "basin_yangtze",
+    "type": "region",
+    "name": "Yangtze Basin",
+    "geometryType": "polygon",
+    "labelPoint": [
+      109,
+      30
+    ],
+    "packIds": [
+      "world_river_basins"
+    ]
+  },
+  {
+    "id": "belt_alpide",
+    "type": "mountain",
+    "name": "Alpide Belt",
+    "geometryType": "line",
+    "labelPoint": [
+      45,
+      36
+    ],
+    "packIds": [
+      "world_tectonic_plates_volcano_belts"
+    ]
+  },
+  {
+    "id": "belt_ring_of_fire",
+    "type": "mountain",
+    "name": "Ring of Fire",
+    "geometryType": "line",
+    "labelPoint": [
+      -140,
+      10
+    ],
+    "packIds": [
+      "world_tectonic_plates_volcano_belts"
+    ]
+  },
+  {
+    "id": "biome_desert_hot",
+    "type": "region",
+    "name": "Hot Desert",
+    "geometryType": "polygon",
+    "labelPoint": [
+      30,
+      24
+    ],
+    "packIds": [
+      "world_climate_biomes"
+    ]
+  },
+  {
+    "id": "biome_grassland",
+    "type": "region",
+    "name": "Temperate Grassland",
+    "geometryType": "polygon",
+    "labelPoint": [
+      -101,
+      42
+    ],
+    "packIds": [
+      "world_climate_biomes"
+    ]
+  },
+  {
+    "id": "biome_mediterranean",
+    "type": "region",
+    "name": "Mediterranean Climate",
+    "geometryType": "polygon",
+    "labelPoint": [
+      12,
+      38
+    ],
+    "packIds": [
+      "world_climate_biomes"
+    ]
+  },
+  {
+    "id": "biome_savanna",
+    "type": "region",
+    "name": "Savanna",
+    "geometryType": "polygon",
+    "labelPoint": [
+      25,
+      -8
+    ],
+    "packIds": [
+      "world_climate_biomes"
+    ]
+  },
+  {
+    "id": "biome_taiga",
+    "type": "region",
+    "name": "Taiga",
+    "geometryType": "polygon",
+    "labelPoint": [
+      75,
+      60
+    ],
+    "packIds": [
+      "world_climate_biomes"
+    ]
+  },
+  {
+    "id": "biome_temperate_forest",
+    "type": "region",
+    "name": "Temperate Forest",
+    "geometryType": "polygon",
+    "labelPoint": [
+      -77,
+      43
+    ],
+    "packIds": [
+      "world_climate_biomes"
+    ]
+  },
+  {
+    "id": "biome_tropical_rainforest",
+    "type": "region",
+    "name": "Tropical Rainforest",
+    "geometryType": "polygon",
+    "labelPoint": [
+      -62,
+      -1
+    ],
+    "packIds": [
+      "world_climate_biomes"
+    ]
+  },
+  {
+    "id": "biome_tundra",
+    "type": "region",
+    "name": "Tundra",
+    "geometryType": "polygon",
+    "labelPoint": [
+      40,
+      73
+    ],
+    "packIds": [
+      "world_climate_biomes"
+    ]
+  },
+  {
+    "id": "ca_capital_charlottetown",
+    "type": "capital",
+    "name": "Charlottetown",
+    "geometryType": "point",
+    "labelPoint": [
+      -63.1311,
+      46.2382
+    ],
+    "packIds": [
+      "canada_provinces_territories"
+    ]
+  },
+  {
+    "id": "ca_capital_edmonton",
+    "type": "capital",
+    "name": "Edmonton",
+    "geometryType": "point",
+    "labelPoint": [
+      -113.4909,
+      53.5461
+    ],
+    "packIds": [
+      "canada_provinces_territories"
+    ]
+  },
+  {
+    "id": "ca_capital_fredericton",
+    "type": "capital",
+    "name": "Fredericton",
+    "geometryType": "point",
+    "labelPoint": [
+      -66.6431,
+      45.9636
+    ],
+    "packIds": [
+      "canada_provinces_territories"
+    ]
+  },
+  {
+    "id": "ca_capital_halifax",
+    "type": "capital",
+    "name": "Halifax",
+    "geometryType": "point",
+    "labelPoint": [
+      -63.5752,
+      44.6488
+    ],
+    "packIds": [
+      "canada_provinces_territories"
+    ]
+  },
+  {
+    "id": "ca_capital_iqaluit",
+    "type": "capital",
+    "name": "Iqaluit",
+    "geometryType": "point",
+    "labelPoint": [
+      -68.517,
+      63.7467
+    ],
+    "packIds": [
+      "canada_provinces_territories"
+    ]
+  },
+  {
+    "id": "ca_capital_quebec_city",
+    "type": "capital",
+    "name": "Quebec City",
+    "geometryType": "point",
+    "labelPoint": [
+      -71.208,
+      46.8139
+    ],
+    "packIds": [
+      "canada_provinces_territories"
+    ]
+  },
+  {
+    "id": "ca_capital_regina",
+    "type": "capital",
+    "name": "Regina",
+    "geometryType": "point",
+    "labelPoint": [
+      -104.6189,
+      50.4452
+    ],
+    "packIds": [
+      "canada_provinces_territories"
+    ]
+  },
+  {
+    "id": "ca_capital_st_johns",
+    "type": "capital",
+    "name": "St. John's",
+    "geometryType": "point",
+    "labelPoint": [
+      -52.7126,
+      47.5615
+    ],
+    "packIds": [
+      "canada_provinces_territories"
+    ]
+  },
+  {
+    "id": "ca_capital_toronto",
+    "type": "capital",
+    "name": "Toronto",
+    "geometryType": "point",
+    "labelPoint": [
+      -79.3832,
+      43.6532
+    ],
+    "packIds": [
+      "canada_provinces_territories"
+    ]
+  },
+  {
+    "id": "ca_capital_victoria",
+    "type": "capital",
+    "name": "Victoria",
+    "geometryType": "point",
+    "labelPoint": [
+      -123.3656,
+      48.4284
+    ],
+    "packIds": [
+      "canada_provinces_territories"
+    ]
+  },
+  {
+    "id": "ca_capital_whitehorse",
+    "type": "capital",
+    "name": "Whitehorse",
+    "geometryType": "point",
+    "labelPoint": [
+      -135.0568,
+      60.7212
+    ],
+    "packIds": [
+      "canada_provinces_territories"
+    ]
+  },
+  {
+    "id": "ca_capital_winnipeg",
+    "type": "capital",
+    "name": "Winnipeg",
+    "geometryType": "point",
+    "labelPoint": [
+      -97.1384,
+      49.8951
+    ],
+    "packIds": [
+      "canada_provinces_territories"
+    ]
+  },
+  {
+    "id": "ca_capital_yellowknife",
+    "type": "capital",
+    "name": "Yellowknife",
+    "geometryType": "point",
+    "labelPoint": [
+      -114.3718,
+      62.454
+    ],
+    "packIds": [
+      "canada_provinces_territories"
+    ]
+  },
+  {
+    "id": "ca_province_alberta",
+    "type": "state",
+    "name": "Alberta",
+    "geometryType": "polygon",
+    "labelPoint": [
+      -114.4,
+      54.7
+    ],
+    "packIds": [
+      "canada_provinces_territories"
+    ]
+  },
+  {
+    "id": "ca_province_british_columbia",
+    "type": "state",
+    "name": "British Columbia",
+    "geometryType": "polygon",
+    "labelPoint": [
+      -124.8,
+      53.7
+    ],
+    "packIds": [
+      "canada_provinces_territories"
+    ]
+  },
+  {
+    "id": "ca_province_manitoba",
+    "type": "state",
+    "name": "Manitoba",
+    "geometryType": "polygon",
+    "labelPoint": [
+      -98.8,
+      54.8
+    ],
+    "packIds": [
+      "canada_provinces_territories"
+    ]
+  },
+  {
+    "id": "ca_province_new_brunswick",
+    "type": "state",
+    "name": "New Brunswick",
+    "geometryType": "polygon",
+    "labelPoint": [
+      -66.5,
+      46.5
+    ],
+    "packIds": [
+      "canada_provinces_territories"
+    ]
+  },
+  {
+    "id": "ca_province_newfoundland",
+    "type": "state",
+    "name": "Newfoundland and Labrador",
+    "geometryType": "polygon",
+    "labelPoint": [
+      -57.7,
+      53.1
+    ],
+    "packIds": [
+      "canada_provinces_territories"
+    ]
+  },
+  {
+    "id": "ca_province_nova_scotia",
+    "type": "state",
+    "name": "Nova Scotia",
+    "geometryType": "polygon",
+    "labelPoint": [
+      -63.6,
+      45.2
+    ],
+    "packIds": [
+      "canada_provinces_territories"
+    ]
+  },
+  {
+    "id": "ca_province_ontario",
+    "type": "state",
+    "name": "Ontario",
+    "geometryType": "polygon",
+    "labelPoint": [
+      -85.3,
+      50.1
+    ],
+    "packIds": [
+      "canada_provinces_territories"
+    ]
+  },
+  {
+    "id": "ca_province_pei",
+    "type": "state",
+    "name": "Prince Edward Island",
+    "geometryType": "polygon",
+    "labelPoint": [
+      -63.2,
+      46.4
+    ],
+    "packIds": [
+      "canada_provinces_territories"
+    ]
+  },
+  {
+    "id": "ca_province_quebec",
+    "type": "state",
+    "name": "Quebec",
+    "geometryType": "polygon",
+    "labelPoint": [
+      -71.2,
+      52.9
+    ],
+    "packIds": [
+      "canada_provinces_territories"
+    ]
+  },
+  {
+    "id": "ca_province_saskatchewan",
+    "type": "state",
+    "name": "Saskatchewan",
+    "geometryType": "polygon",
+    "labelPoint": [
+      -106.4,
+      54.4
+    ],
+    "packIds": [
+      "canada_provinces_territories"
+    ]
+  },
+  {
+    "id": "ca_territory_nunavut",
+    "type": "state",
+    "name": "Nunavut",
+    "geometryType": "polygon",
+    "labelPoint": [
+      -96.8,
+      68.6
+    ],
+    "packIds": [
+      "canada_provinces_territories"
+    ]
+  },
+  {
+    "id": "ca_territory_nwt",
+    "type": "state",
+    "name": "Northwest Territories",
+    "geometryType": "polygon",
+    "labelPoint": [
+      -121.7,
+      64.8
+    ],
+    "packIds": [
+      "canada_provinces_territories"
+    ]
+  },
+  {
+    "id": "ca_territory_yukon",
+    "type": "state",
+    "name": "Yukon",
+    "geometryType": "polygon",
+    "labelPoint": [
+      -135.5,
+      64.2
+    ],
+    "packIds": [
+      "canada_provinces_territories"
+    ]
+  },
+  {
+    "id": "canal_panama",
+    "type": "river",
+    "name": "Panama Canal",
+    "geometryType": "line",
+    "labelPoint": [
+      -79.75,
+      9.15
+    ],
+    "packIds": [
+      "world_straits_canals"
+    ]
+  },
+  {
+    "id": "canal_suez",
+    "type": "river",
+    "name": "Suez Canal",
+    "geometryType": "line",
+    "labelPoint": [
+      32.45,
+      30.6
+    ],
+    "packIds": [
+      "world_straits_canals"
+    ]
+  },
+  {
     "id": "capital_beijing",
     "type": "capital",
     "name": "Beijing",
@@ -9,7 +594,8 @@
       39.9042
     ],
     "packIds": [
-      "world_capitals"
+      "world_capitals",
+      "world_capitals_by_continent"
     ]
   },
   {
@@ -22,7 +608,8 @@
       52.52
     ],
     "packIds": [
-      "world_capitals"
+      "world_capitals",
+      "world_capitals_by_continent"
     ]
   },
   {
@@ -35,7 +622,8 @@
       -15.7942
     ],
     "packIds": [
-      "world_capitals"
+      "world_capitals",
+      "world_capitals_by_continent"
     ]
   },
   {
@@ -48,7 +636,8 @@
       30.0444
     ],
     "packIds": [
-      "world_capitals"
+      "world_capitals",
+      "world_capitals_by_continent"
     ]
   },
   {
@@ -61,7 +650,8 @@
       -35.2809
     ],
     "packIds": [
-      "world_capitals"
+      "world_capitals",
+      "world_capitals_by_continent"
     ]
   },
   {
@@ -74,7 +664,8 @@
       51.5072
     ],
     "packIds": [
-      "world_capitals"
+      "world_capitals",
+      "world_capitals_by_continent"
     ]
   },
   {
@@ -87,7 +678,8 @@
       40.4168
     ],
     "packIds": [
-      "world_capitals"
+      "world_capitals",
+      "world_capitals_by_continent"
     ]
   },
   {
@@ -100,7 +692,8 @@
       19.4326
     ],
     "packIds": [
-      "world_capitals"
+      "world_capitals",
+      "world_capitals_by_continent"
     ]
   },
   {
@@ -113,7 +706,8 @@
       55.7558
     ],
     "packIds": [
-      "world_capitals"
+      "world_capitals",
+      "world_capitals_by_continent"
     ]
   },
   {
@@ -126,7 +720,8 @@
       -1.2921
     ],
     "packIds": [
-      "world_capitals"
+      "world_capitals",
+      "world_capitals_by_continent"
     ]
   },
   {
@@ -139,7 +734,8 @@
       28.6139
     ],
     "packIds": [
-      "world_capitals"
+      "world_capitals",
+      "world_capitals_by_continent"
     ]
   },
   {
@@ -152,7 +748,8 @@
       45.4215
     ],
     "packIds": [
-      "world_capitals"
+      "world_capitals",
+      "world_capitals_by_continent"
     ]
   },
   {
@@ -165,7 +762,8 @@
       48.8566
     ],
     "packIds": [
-      "world_capitals"
+      "world_capitals",
+      "world_capitals_by_continent"
     ]
   },
   {
@@ -178,7 +776,8 @@
       -25.7479
     ],
     "packIds": [
-      "world_capitals"
+      "world_capitals",
+      "world_capitals_by_continent"
     ]
   },
   {
@@ -191,7 +790,8 @@
       24.7136
     ],
     "packIds": [
-      "world_capitals"
+      "world_capitals",
+      "world_capitals_by_continent"
     ]
   },
   {
@@ -204,7 +804,8 @@
       41.9028
     ],
     "packIds": [
-      "world_capitals"
+      "world_capitals",
+      "world_capitals_by_continent"
     ]
   },
   {
@@ -217,7 +818,8 @@
       37.5665
     ],
     "packIds": [
-      "world_capitals"
+      "world_capitals",
+      "world_capitals_by_continent"
     ]
   },
   {
@@ -230,7 +832,8 @@
       35.6895
     ],
     "packIds": [
-      "world_capitals"
+      "world_capitals",
+      "world_capitals_by_continent"
     ]
   },
   {
@@ -243,7 +846,8 @@
       38.9072
     ],
     "packIds": [
-      "world_capitals"
+      "world_capitals",
+      "world_capitals_by_continent"
     ]
   },
   {
@@ -256,7 +860,8 @@
       -41.2865
     ],
     "packIds": [
-      "world_capitals"
+      "world_capitals",
+      "world_capitals_by_continent"
     ]
   },
   {
@@ -270,7 +875,9 @@
     ],
     "packIds": [
       "europe_countries",
-      "world_countries"
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
     ]
   },
   {
@@ -284,7 +891,9 @@
     ],
     "packIds": [
       "europe_countries",
-      "world_countries"
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
     ]
   },
   {
@@ -298,7 +907,9 @@
     ],
     "packIds": [
       "europe_countries",
-      "world_countries"
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
     ]
   },
   {
@@ -312,7 +923,9 @@
     ],
     "packIds": [
       "europe_countries",
-      "world_countries"
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
     ]
   },
   {
@@ -326,7 +939,9 @@
     ],
     "packIds": [
       "europe_countries",
-      "world_countries"
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
     ]
   },
   {
@@ -340,7 +955,9 @@
     ],
     "packIds": [
       "europe_countries",
-      "world_countries"
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
     ]
   },
   {
@@ -354,7 +971,9 @@
     ],
     "packIds": [
       "europe_countries",
-      "world_countries"
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
     ]
   },
   {
@@ -368,7 +987,9 @@
     ],
     "packIds": [
       "europe_countries",
-      "world_countries"
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
     ]
   },
   {
@@ -382,7 +1003,9 @@
     ],
     "packIds": [
       "europe_countries",
-      "world_countries"
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
     ]
   },
   {
@@ -396,7 +1019,9 @@
     ],
     "packIds": [
       "europe_countries",
-      "world_countries"
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
     ]
   },
   {
@@ -410,7 +1035,9 @@
     ],
     "packIds": [
       "europe_countries",
-      "world_countries"
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
     ]
   },
   {
@@ -424,7 +1051,9 @@
     ],
     "packIds": [
       "europe_countries",
-      "world_countries"
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
     ]
   },
   {
@@ -438,7 +1067,9 @@
     ],
     "packIds": [
       "europe_countries",
-      "world_countries"
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
     ]
   },
   {
@@ -452,7 +1083,9 @@
     ],
     "packIds": [
       "europe_countries",
-      "world_countries"
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
     ]
   },
   {
@@ -466,7 +1099,9 @@
     ],
     "packIds": [
       "europe_countries",
-      "world_countries"
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
     ]
   },
   {
@@ -480,7 +1115,9 @@
     ],
     "packIds": [
       "europe_countries",
-      "world_countries"
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
     ]
   },
   {
@@ -494,7 +1131,9 @@
     ],
     "packIds": [
       "europe_countries",
-      "world_countries"
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
     ]
   },
   {
@@ -508,7 +1147,9 @@
     ],
     "packIds": [
       "europe_countries",
-      "world_countries"
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
     ]
   },
   {
@@ -522,7 +1163,9 @@
     ],
     "packIds": [
       "europe_countries",
-      "world_countries"
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
     ]
   },
   {
@@ -536,7 +1179,9 @@
     ],
     "packIds": [
       "europe_countries",
-      "world_countries"
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
     ]
   },
   {
@@ -550,7 +1195,9 @@
     ],
     "packIds": [
       "europe_countries",
-      "world_countries"
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
     ]
   },
   {
@@ -564,7 +1211,9 @@
     ],
     "packIds": [
       "europe_countries",
-      "world_countries"
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
     ]
   },
   {
@@ -578,7 +1227,9 @@
     ],
     "packIds": [
       "europe_countries",
-      "world_countries"
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
     ]
   },
   {
@@ -592,7 +1243,9 @@
     ],
     "packIds": [
       "europe_countries",
-      "world_countries"
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
     ]
   },
   {
@@ -606,7 +1259,9 @@
     ],
     "packIds": [
       "europe_countries",
-      "world_countries"
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
     ]
   },
   {
@@ -620,7 +1275,9 @@
     ],
     "packIds": [
       "europe_countries",
-      "world_countries"
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
     ]
   },
   {
@@ -634,7 +1291,9 @@
     ],
     "packIds": [
       "europe_countries",
-      "world_countries"
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
     ]
   },
   {
@@ -648,7 +1307,9 @@
     ],
     "packIds": [
       "europe_countries",
-      "world_countries"
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
     ]
   },
   {
@@ -662,7 +1323,9 @@
     ],
     "packIds": [
       "europe_countries",
-      "world_countries"
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
     ]
   },
   {
@@ -676,7 +1339,9 @@
     ],
     "packIds": [
       "europe_countries",
-      "world_countries"
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
     ]
   },
   {
@@ -690,7 +1355,9 @@
     ],
     "packIds": [
       "europe_countries",
-      "world_countries"
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
     ]
   },
   {
@@ -704,7 +1371,9 @@
     ],
     "packIds": [
       "europe_countries",
-      "world_countries"
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
     ]
   },
   {
@@ -718,7 +1387,9 @@
     ],
     "packIds": [
       "europe_countries",
-      "world_countries"
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
     ]
   },
   {
@@ -732,7 +1403,9 @@
     ],
     "packIds": [
       "europe_countries",
-      "world_countries"
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
     ]
   },
   {
@@ -746,7 +1419,9 @@
     ],
     "packIds": [
       "europe_countries",
-      "world_countries"
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
     ]
   },
   {
@@ -760,7 +1435,9 @@
     ],
     "packIds": [
       "europe_countries",
-      "world_countries"
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
     ]
   },
   {
@@ -774,7 +1451,9 @@
     ],
     "packIds": [
       "europe_countries",
-      "world_countries"
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
     ]
   },
   {
@@ -788,7 +1467,9 @@
     ],
     "packIds": [
       "europe_countries",
-      "world_countries"
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
     ]
   },
   {
@@ -802,7 +1483,9 @@
     ],
     "packIds": [
       "europe_countries",
-      "world_countries"
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
     ]
   },
   {
@@ -816,7 +1499,9 @@
     ],
     "packIds": [
       "europe_countries",
-      "world_countries"
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
     ]
   },
   {
@@ -830,7 +1515,9 @@
     ],
     "packIds": [
       "europe_countries",
-      "world_countries"
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
     ]
   },
   {
@@ -844,7 +1531,9 @@
     ],
     "packIds": [
       "europe_countries",
-      "world_countries"
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
     ]
   },
   {
@@ -858,7 +1547,9 @@
     ],
     "packIds": [
       "europe_countries",
-      "world_countries"
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
     ]
   },
   {
@@ -872,7 +1563,9 @@
     ],
     "packIds": [
       "europe_countries",
-      "world_countries"
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
     ]
   },
   {
@@ -886,7 +1579,9 @@
     ],
     "packIds": [
       "europe_countries",
-      "world_countries"
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
     ]
   },
   {
@@ -900,7 +1595,9 @@
     ],
     "packIds": [
       "europe_countries",
-      "world_countries"
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
     ]
   },
   {
@@ -914,7 +1611,9 @@
     ],
     "packIds": [
       "europe_countries",
-      "world_countries"
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
     ]
   },
   {
@@ -928,7 +1627,9 @@
     ],
     "packIds": [
       "europe_countries",
-      "world_countries"
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
     ]
   },
   {
@@ -942,7 +1643,9 @@
     ],
     "packIds": [
       "europe_countries",
-      "world_countries"
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
     ]
   },
   {
@@ -956,7 +1659,1166 @@
     ],
     "packIds": [
       "europe_countries",
-      "world_countries"
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ]
+  },
+  {
+    "id": "desert_arabian",
+    "type": "region",
+    "name": "Arabian Desert",
+    "geometryType": "point",
+    "labelPoint": [
+      46,
+      23
+    ],
+    "packIds": [
+      "world_deserts"
+    ]
+  },
+  {
+    "id": "desert_atacama",
+    "type": "region",
+    "name": "Atacama",
+    "geometryType": "point",
+    "labelPoint": [
+      -69,
+      -24
+    ],
+    "packIds": [
+      "world_deserts"
+    ]
+  },
+  {
+    "id": "desert_gobi",
+    "type": "region",
+    "name": "Gobi",
+    "geometryType": "point",
+    "labelPoint": [
+      103,
+      42
+    ],
+    "packIds": [
+      "world_deserts"
+    ]
+  },
+  {
+    "id": "desert_great_victoria",
+    "type": "region",
+    "name": "Great Victoria",
+    "geometryType": "point",
+    "labelPoint": [
+      129,
+      -29
+    ],
+    "packIds": [
+      "world_deserts"
+    ]
+  },
+  {
+    "id": "desert_kalahari",
+    "type": "region",
+    "name": "Kalahari",
+    "geometryType": "point",
+    "labelPoint": [
+      23,
+      -23
+    ],
+    "packIds": [
+      "world_deserts"
+    ]
+  },
+  {
+    "id": "desert_karakum",
+    "type": "region",
+    "name": "Karakum",
+    "geometryType": "point",
+    "labelPoint": [
+      59,
+      39
+    ],
+    "packIds": [
+      "world_deserts"
+    ]
+  },
+  {
+    "id": "desert_mojave",
+    "type": "region",
+    "name": "Mojave",
+    "geometryType": "point",
+    "labelPoint": [
+      -115,
+      35
+    ],
+    "packIds": [
+      "world_deserts"
+    ]
+  },
+  {
+    "id": "desert_namib",
+    "type": "region",
+    "name": "Namib",
+    "geometryType": "point",
+    "labelPoint": [
+      15,
+      -24
+    ],
+    "packIds": [
+      "world_deserts"
+    ]
+  },
+  {
+    "id": "desert_patagonian",
+    "type": "region",
+    "name": "Patagonian",
+    "geometryType": "point",
+    "labelPoint": [
+      -68,
+      -46
+    ],
+    "packIds": [
+      "world_deserts"
+    ]
+  },
+  {
+    "id": "desert_sahara",
+    "type": "region",
+    "name": "Sahara",
+    "geometryType": "point",
+    "labelPoint": [
+      13,
+      23
+    ],
+    "packIds": [
+      "world_deserts"
+    ]
+  },
+  {
+    "id": "desert_sonoran",
+    "type": "region",
+    "name": "Sonoran",
+    "geometryType": "point",
+    "labelPoint": [
+      -112,
+      31
+    ],
+    "packIds": [
+      "world_deserts"
+    ]
+  },
+  {
+    "id": "desert_thar",
+    "type": "region",
+    "name": "Thar",
+    "geometryType": "point",
+    "labelPoint": [
+      71,
+      27
+    ],
+    "packIds": [
+      "world_deserts"
+    ]
+  },
+  {
+    "id": "in_capital_andhra_pradesh",
+    "type": "capital",
+    "name": "Amaravati",
+    "geometryType": "point",
+    "labelPoint": [
+      80.5185,
+      16.5062
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ]
+  },
+  {
+    "id": "in_capital_arunachal_pradesh",
+    "type": "capital",
+    "name": "Itanagar",
+    "geometryType": "point",
+    "labelPoint": [
+      93.62,
+      27.1
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ]
+  },
+  {
+    "id": "in_capital_assam",
+    "type": "capital",
+    "name": "Dispur",
+    "geometryType": "point",
+    "labelPoint": [
+      91.7868,
+      26.1433
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ]
+  },
+  {
+    "id": "in_capital_bihar",
+    "type": "capital",
+    "name": "Patna",
+    "geometryType": "point",
+    "labelPoint": [
+      85.1376,
+      25.5941
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ]
+  },
+  {
+    "id": "in_capital_chhattisgarh",
+    "type": "capital",
+    "name": "Raipur",
+    "geometryType": "point",
+    "labelPoint": [
+      81.63,
+      21.25
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ]
+  },
+  {
+    "id": "in_capital_goa",
+    "type": "capital",
+    "name": "Panaji",
+    "geometryType": "point",
+    "labelPoint": [
+      73.83,
+      15.49
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ]
+  },
+  {
+    "id": "in_capital_gujarat",
+    "type": "capital",
+    "name": "Gandhinagar",
+    "geometryType": "point",
+    "labelPoint": [
+      72.6369,
+      23.2156
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ]
+  },
+  {
+    "id": "in_capital_haryana",
+    "type": "capital",
+    "name": "Chandigarh",
+    "geometryType": "point",
+    "labelPoint": [
+      76.78,
+      30.73
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ]
+  },
+  {
+    "id": "in_capital_himachal_pradesh",
+    "type": "capital",
+    "name": "Shimla",
+    "geometryType": "point",
+    "labelPoint": [
+      77.17,
+      31.1
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ]
+  },
+  {
+    "id": "in_capital_jammu_kashmir",
+    "type": "capital",
+    "name": "Srinagar",
+    "geometryType": "point",
+    "labelPoint": [
+      74.79,
+      34.08
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ]
+  },
+  {
+    "id": "in_capital_jharkhand",
+    "type": "capital",
+    "name": "Ranchi",
+    "geometryType": "point",
+    "labelPoint": [
+      85.32,
+      23.34
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ]
+  },
+  {
+    "id": "in_capital_karnataka",
+    "type": "capital",
+    "name": "Bengaluru",
+    "geometryType": "point",
+    "labelPoint": [
+      77.5946,
+      12.9716
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ]
+  },
+  {
+    "id": "in_capital_kerala",
+    "type": "capital",
+    "name": "Thiruvananthapuram",
+    "geometryType": "point",
+    "labelPoint": [
+      76.9366,
+      8.5241
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ]
+  },
+  {
+    "id": "in_capital_madhya_pradesh",
+    "type": "capital",
+    "name": "Bhopal",
+    "geometryType": "point",
+    "labelPoint": [
+      77.4126,
+      23.2599
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ]
+  },
+  {
+    "id": "in_capital_maharashtra",
+    "type": "capital",
+    "name": "Mumbai",
+    "geometryType": "point",
+    "labelPoint": [
+      72.8777,
+      19.076
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ]
+  },
+  {
+    "id": "in_capital_manipur",
+    "type": "capital",
+    "name": "Imphal",
+    "geometryType": "point",
+    "labelPoint": [
+      93.94,
+      24.82
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ]
+  },
+  {
+    "id": "in_capital_meghalaya",
+    "type": "capital",
+    "name": "Shillong",
+    "geometryType": "point",
+    "labelPoint": [
+      91.89,
+      25.58
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ]
+  },
+  {
+    "id": "in_capital_mizoram",
+    "type": "capital",
+    "name": "Aizawl",
+    "geometryType": "point",
+    "labelPoint": [
+      92.72,
+      23.73
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ]
+  },
+  {
+    "id": "in_capital_nagaland",
+    "type": "capital",
+    "name": "Kohima",
+    "geometryType": "point",
+    "labelPoint": [
+      94.11,
+      25.67
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ]
+  },
+  {
+    "id": "in_capital_odisha",
+    "type": "capital",
+    "name": "Bhubaneswar",
+    "geometryType": "point",
+    "labelPoint": [
+      85.8245,
+      20.2961
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ]
+  },
+  {
+    "id": "in_capital_punjab",
+    "type": "capital",
+    "name": "Chandigarh",
+    "geometryType": "point",
+    "labelPoint": [
+      76.7794,
+      30.7333
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ]
+  },
+  {
+    "id": "in_capital_rajasthan",
+    "type": "capital",
+    "name": "Jaipur",
+    "geometryType": "point",
+    "labelPoint": [
+      75.7873,
+      26.9124
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ]
+  },
+  {
+    "id": "in_capital_sikkim",
+    "type": "capital",
+    "name": "Gangtok",
+    "geometryType": "point",
+    "labelPoint": [
+      88.61,
+      27.33
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ]
+  },
+  {
+    "id": "in_capital_tamil_nadu",
+    "type": "capital",
+    "name": "Chennai",
+    "geometryType": "point",
+    "labelPoint": [
+      80.2707,
+      13.0827
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ]
+  },
+  {
+    "id": "in_capital_telangana",
+    "type": "capital",
+    "name": "Hyderabad",
+    "geometryType": "point",
+    "labelPoint": [
+      78.4867,
+      17.385
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ]
+  },
+  {
+    "id": "in_capital_tripura",
+    "type": "capital",
+    "name": "Agartala",
+    "geometryType": "point",
+    "labelPoint": [
+      91.29,
+      23.83
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ]
+  },
+  {
+    "id": "in_capital_uttar_pradesh",
+    "type": "capital",
+    "name": "Lucknow",
+    "geometryType": "point",
+    "labelPoint": [
+      80.95,
+      26.85
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ]
+  },
+  {
+    "id": "in_capital_uttarakhand",
+    "type": "capital",
+    "name": "Dehradun",
+    "geometryType": "point",
+    "labelPoint": [
+      78.03,
+      30.32
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ]
+  },
+  {
+    "id": "in_capital_west_bengal",
+    "type": "capital",
+    "name": "Kolkata",
+    "geometryType": "point",
+    "labelPoint": [
+      88.3639,
+      22.5726
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ]
+  },
+  {
+    "id": "in_state_andhra_pradesh",
+    "type": "state",
+    "name": "Andhra Pradesh",
+    "geometryType": "polygon",
+    "labelPoint": [
+      79.8,
+      15.9
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ]
+  },
+  {
+    "id": "in_state_arunachal_pradesh",
+    "type": "state",
+    "name": "Arunachal Pradesh",
+    "geometryType": "polygon",
+    "labelPoint": [
+      94.7,
+      28.2
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ]
+  },
+  {
+    "id": "in_state_assam",
+    "type": "state",
+    "name": "Assam",
+    "geometryType": "polygon",
+    "labelPoint": [
+      92.9,
+      26.1
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ]
+  },
+  {
+    "id": "in_state_bihar",
+    "type": "state",
+    "name": "Bihar",
+    "geometryType": "polygon",
+    "labelPoint": [
+      85.3,
+      25.9
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ]
+  },
+  {
+    "id": "in_state_chhattisgarh",
+    "type": "state",
+    "name": "Chhattisgarh",
+    "geometryType": "polygon",
+    "labelPoint": [
+      82,
+      21.3
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ]
+  },
+  {
+    "id": "in_state_goa",
+    "type": "state",
+    "name": "Goa",
+    "geometryType": "polygon",
+    "labelPoint": [
+      74.1,
+      15.4
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ]
+  },
+  {
+    "id": "in_state_gujarat",
+    "type": "state",
+    "name": "Gujarat",
+    "geometryType": "polygon",
+    "labelPoint": [
+      71.3,
+      22.3
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ]
+  },
+  {
+    "id": "in_state_haryana",
+    "type": "state",
+    "name": "Haryana",
+    "geometryType": "polygon",
+    "labelPoint": [
+      76.1,
+      29.1
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ]
+  },
+  {
+    "id": "in_state_himachal_pradesh",
+    "type": "state",
+    "name": "Himachal Pradesh",
+    "geometryType": "polygon",
+    "labelPoint": [
+      77.2,
+      31.7
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ]
+  },
+  {
+    "id": "in_state_jammu_kashmir",
+    "type": "state",
+    "name": "Jammu and Kashmir",
+    "geometryType": "polygon",
+    "labelPoint": [
+      75.3,
+      34.2
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ]
+  },
+  {
+    "id": "in_state_jharkhand",
+    "type": "state",
+    "name": "Jharkhand",
+    "geometryType": "polygon",
+    "labelPoint": [
+      85.5,
+      23.6
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ]
+  },
+  {
+    "id": "in_state_karnataka",
+    "type": "state",
+    "name": "Karnataka",
+    "geometryType": "polygon",
+    "labelPoint": [
+      76,
+      14.5
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ]
+  },
+  {
+    "id": "in_state_kerala",
+    "type": "state",
+    "name": "Kerala",
+    "geometryType": "polygon",
+    "labelPoint": [
+      76.3,
+      10.4
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ]
+  },
+  {
+    "id": "in_state_madhya_pradesh",
+    "type": "state",
+    "name": "Madhya Pradesh",
+    "geometryType": "polygon",
+    "labelPoint": [
+      78.4,
+      23.5
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ]
+  },
+  {
+    "id": "in_state_maharashtra",
+    "type": "state",
+    "name": "Maharashtra",
+    "geometryType": "polygon",
+    "labelPoint": [
+      75.7,
+      19.6
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ]
+  },
+  {
+    "id": "in_state_manipur",
+    "type": "state",
+    "name": "Manipur",
+    "geometryType": "polygon",
+    "labelPoint": [
+      93.9,
+      24.8
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ]
+  },
+  {
+    "id": "in_state_meghalaya",
+    "type": "state",
+    "name": "Meghalaya",
+    "geometryType": "polygon",
+    "labelPoint": [
+      91.3,
+      25.5
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ]
+  },
+  {
+    "id": "in_state_mizoram",
+    "type": "state",
+    "name": "Mizoram",
+    "geometryType": "polygon",
+    "labelPoint": [
+      92.8,
+      23.2
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ]
+  },
+  {
+    "id": "in_state_nagaland",
+    "type": "state",
+    "name": "Nagaland",
+    "geometryType": "polygon",
+    "labelPoint": [
+      94.3,
+      26.2
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ]
+  },
+  {
+    "id": "in_state_odisha",
+    "type": "state",
+    "name": "Odisha",
+    "geometryType": "polygon",
+    "labelPoint": [
+      85.1,
+      20.3
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ]
+  },
+  {
+    "id": "in_state_punjab",
+    "type": "state",
+    "name": "Punjab",
+    "geometryType": "polygon",
+    "labelPoint": [
+      75.4,
+      31.1
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ]
+  },
+  {
+    "id": "in_state_rajasthan",
+    "type": "state",
+    "name": "Rajasthan",
+    "geometryType": "polygon",
+    "labelPoint": [
+      73.8,
+      26.9
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ]
+  },
+  {
+    "id": "in_state_sikkim",
+    "type": "state",
+    "name": "Sikkim",
+    "geometryType": "polygon",
+    "labelPoint": [
+      88.5,
+      27.5
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ]
+  },
+  {
+    "id": "in_state_tamil_nadu",
+    "type": "state",
+    "name": "Tamil Nadu",
+    "geometryType": "polygon",
+    "labelPoint": [
+      78.7,
+      11.1
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ]
+  },
+  {
+    "id": "in_state_telangana",
+    "type": "state",
+    "name": "Telangana",
+    "geometryType": "polygon",
+    "labelPoint": [
+      79.2,
+      17.9
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ]
+  },
+  {
+    "id": "in_state_tripura",
+    "type": "state",
+    "name": "Tripura",
+    "geometryType": "polygon",
+    "labelPoint": [
+      91.7,
+      23.9
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ]
+  },
+  {
+    "id": "in_state_uttar_pradesh",
+    "type": "state",
+    "name": "Uttar Pradesh",
+    "geometryType": "polygon",
+    "labelPoint": [
+      80.9,
+      26.8
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ]
+  },
+  {
+    "id": "in_state_uttarakhand",
+    "type": "state",
+    "name": "Uttarakhand",
+    "geometryType": "polygon",
+    "labelPoint": [
+      79,
+      30.1
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ]
+  },
+  {
+    "id": "in_state_west_bengal",
+    "type": "state",
+    "name": "West Bengal",
+    "geometryType": "polygon",
+    "labelPoint": [
+      87.9,
+      23.2
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ]
+  },
+  {
+    "id": "island_borneo",
+    "type": "region",
+    "name": "Borneo",
+    "geometryType": "point",
+    "labelPoint": [
+      114,
+      1
+    ],
+    "packIds": [
+      "world_peninsulas_islands"
+    ]
+  },
+  {
+    "id": "island_great_britain",
+    "type": "region",
+    "name": "Great Britain",
+    "geometryType": "point",
+    "labelPoint": [
+      -2.5,
+      54
+    ],
+    "packIds": [
+      "world_peninsulas_islands"
+    ]
+  },
+  {
+    "id": "island_greenland",
+    "type": "region",
+    "name": "Greenland",
+    "geometryType": "point",
+    "labelPoint": [
+      -42,
+      73
+    ],
+    "packIds": [
+      "world_peninsulas_islands"
+    ]
+  },
+  {
+    "id": "island_honshu",
+    "type": "region",
+    "name": "Honshu",
+    "geometryType": "point",
+    "labelPoint": [
+      138,
+      37
+    ],
+    "packIds": [
+      "world_peninsulas_islands"
+    ]
+  },
+  {
+    "id": "island_iceland2",
+    "type": "region",
+    "name": "Iceland",
+    "geometryType": "point",
+    "labelPoint": [
+      -19,
+      65
+    ],
+    "packIds": [
+      "world_peninsulas_islands"
+    ]
+  },
+  {
+    "id": "island_madagascar",
+    "type": "region",
+    "name": "Madagascar",
+    "geometryType": "point",
+    "labelPoint": [
+      47,
+      -19
+    ],
+    "packIds": [
+      "world_peninsulas_islands"
+    ]
+  },
+  {
+    "id": "island_new_guinea",
+    "type": "region",
+    "name": "New Guinea",
+    "geometryType": "point",
+    "labelPoint": [
+      145,
+      -5
+    ],
+    "packIds": [
+      "world_peninsulas_islands"
+    ]
+  },
+  {
+    "id": "lake_aral2",
+    "type": "lake",
+    "name": "Aral Sea",
+    "geometryType": "point",
+    "labelPoint": [
+      60,
+      45
+    ],
+    "packIds": [
+      "world_major_lakes"
+    ]
+  },
+  {
+    "id": "lake_baikal2",
+    "type": "lake",
+    "name": "Lake Baikal",
+    "geometryType": "point",
+    "labelPoint": [
+      108.1,
+      53.5
+    ],
+    "packIds": [
+      "world_major_lakes"
+    ]
+  },
+  {
+    "id": "lake_caspian2",
+    "type": "lake",
+    "name": "Caspian Sea",
+    "geometryType": "point",
+    "labelPoint": [
+      51.8,
+      41.9
+    ],
+    "packIds": [
+      "world_major_lakes"
+    ]
+  },
+  {
+    "id": "lake_chad2",
+    "type": "lake",
+    "name": "Lake Chad",
+    "geometryType": "point",
+    "labelPoint": [
+      14.4,
+      13
+    ],
+    "packIds": [
+      "world_major_lakes"
+    ]
+  },
+  {
+    "id": "lake_erie2",
+    "type": "lake",
+    "name": "Lake Erie",
+    "geometryType": "point",
+    "labelPoint": [
+      -81.2,
+      42.2
+    ],
+    "packIds": [
+      "world_major_lakes"
+    ]
+  },
+  {
+    "id": "lake_great_bear",
+    "type": "lake",
+    "name": "Great Bear Lake",
+    "geometryType": "point",
+    "labelPoint": [
+      -121,
+      66
+    ],
+    "packIds": [
+      "world_major_lakes"
+    ]
+  },
+  {
+    "id": "lake_huron2",
+    "type": "lake",
+    "name": "Lake Huron",
+    "geometryType": "point",
+    "labelPoint": [
+      -82.8,
+      45.2
+    ],
+    "packIds": [
+      "world_major_lakes"
+    ]
+  },
+  {
+    "id": "lake_michigan2",
+    "type": "lake",
+    "name": "Lake Michigan",
+    "geometryType": "point",
+    "labelPoint": [
+      -87,
+      44.2
+    ],
+    "packIds": [
+      "world_major_lakes"
+    ]
+  },
+  {
+    "id": "lake_superior2",
+    "type": "lake",
+    "name": "Lake Superior",
+    "geometryType": "point",
+    "labelPoint": [
+      -88,
+      47.7
+    ],
+    "packIds": [
+      "world_major_lakes"
+    ]
+  },
+  {
+    "id": "lake_tanganyika2",
+    "type": "lake",
+    "name": "Lake Tanganyika",
+    "geometryType": "point",
+    "labelPoint": [
+      29.5,
+      -6
+    ],
+    "packIds": [
+      "world_major_lakes"
+    ]
+  },
+  {
+    "id": "lake_titicaca2",
+    "type": "lake",
+    "name": "Lake Titicaca",
+    "geometryType": "point",
+    "labelPoint": [
+      -69.4,
+      -15.8
+    ],
+    "packIds": [
+      "world_major_lakes"
+    ]
+  },
+  {
+    "id": "lake_victoria2",
+    "type": "lake",
+    "name": "Lake Victoria",
+    "geometryType": "point",
+    "labelPoint": [
+      33,
+      -1
+    ],
+    "packIds": [
+      "world_major_lakes"
     ]
   },
   {
@@ -1113,6 +2975,448 @@
     ],
     "packIds": [
       "world_mountains"
+    ]
+  },
+  {
+    "id": "pass_brenner",
+    "type": "mountain",
+    "name": "Brenner Pass",
+    "geometryType": "point",
+    "labelPoint": [
+      11.5,
+      47
+    ],
+    "packIds": [
+      "world_mountain_passes"
+    ]
+  },
+  {
+    "id": "pass_donner",
+    "type": "mountain",
+    "name": "Donner Pass",
+    "geometryType": "point",
+    "labelPoint": [
+      -120.3,
+      39.3
+    ],
+    "packIds": [
+      "world_mountain_passes"
+    ]
+  },
+  {
+    "id": "pass_karakoram",
+    "type": "mountain",
+    "name": "Karakoram Pass",
+    "geometryType": "point",
+    "labelPoint": [
+      78.2,
+      35.5
+    ],
+    "packIds": [
+      "world_mountain_passes"
+    ]
+  },
+  {
+    "id": "pass_khyber",
+    "type": "mountain",
+    "name": "Khyber Pass",
+    "geometryType": "point",
+    "labelPoint": [
+      71.1,
+      34.1
+    ],
+    "packIds": [
+      "world_mountain_passes"
+    ]
+  },
+  {
+    "id": "pass_kunjerab",
+    "type": "mountain",
+    "name": "Khunjerab Pass",
+    "geometryType": "point",
+    "labelPoint": [
+      75.4,
+      36.8
+    ],
+    "packIds": [
+      "world_mountain_passes"
+    ]
+  },
+  {
+    "id": "pass_nathu_la",
+    "type": "mountain",
+    "name": "Nathu La",
+    "geometryType": "point",
+    "labelPoint": [
+      88.8,
+      27.4
+    ],
+    "packIds": [
+      "world_mountain_passes"
+    ]
+  },
+  {
+    "id": "pass_rohtang",
+    "type": "mountain",
+    "name": "Rohtang Pass",
+    "geometryType": "point",
+    "labelPoint": [
+      77.25,
+      32.37
+    ],
+    "packIds": [
+      "world_mountain_passes"
+    ]
+  },
+  {
+    "id": "pass_st_bernard",
+    "type": "mountain",
+    "name": "Great St Bernard Pass",
+    "geometryType": "point",
+    "labelPoint": [
+      7.17,
+      45.87
+    ],
+    "packIds": [
+      "world_mountain_passes"
+    ]
+  },
+  {
+    "id": "pass_suifenhe",
+    "type": "mountain",
+    "name": "Suifenhe Pass",
+    "geometryType": "point",
+    "labelPoint": [
+      131.2,
+      44.4
+    ],
+    "packIds": [
+      "world_mountain_passes"
+    ]
+  },
+  {
+    "id": "pass_tejon",
+    "type": "mountain",
+    "name": "Tejon Pass",
+    "geometryType": "point",
+    "labelPoint": [
+      -118.8,
+      34.9
+    ],
+    "packIds": [
+      "world_mountain_passes"
+    ]
+  },
+  {
+    "id": "pen_arabian",
+    "type": "region",
+    "name": "Arabian Peninsula",
+    "geometryType": "point",
+    "labelPoint": [
+      45,
+      22
+    ],
+    "packIds": [
+      "world_peninsulas_islands"
+    ]
+  },
+  {
+    "id": "pen_balkan",
+    "type": "region",
+    "name": "Balkan Peninsula",
+    "geometryType": "point",
+    "labelPoint": [
+      22,
+      42
+    ],
+    "packIds": [
+      "world_peninsulas_islands"
+    ]
+  },
+  {
+    "id": "pen_iberian",
+    "type": "region",
+    "name": "Iberian Peninsula",
+    "geometryType": "point",
+    "labelPoint": [
+      -4,
+      40
+    ],
+    "packIds": [
+      "world_peninsulas_islands"
+    ]
+  },
+  {
+    "id": "pen_indian",
+    "type": "region",
+    "name": "Indian Peninsula",
+    "geometryType": "point",
+    "labelPoint": [
+      78,
+      17
+    ],
+    "packIds": [
+      "world_peninsulas_islands"
+    ]
+  },
+  {
+    "id": "pen_korean",
+    "type": "region",
+    "name": "Korean Peninsula",
+    "geometryType": "point",
+    "labelPoint": [
+      127.5,
+      39
+    ],
+    "packIds": [
+      "world_peninsulas_islands"
+    ]
+  },
+  {
+    "id": "pen_scandinavian",
+    "type": "region",
+    "name": "Scandinavian Peninsula",
+    "geometryType": "point",
+    "labelPoint": [
+      18,
+      64
+    ],
+    "packIds": [
+      "world_peninsulas_islands"
+    ]
+  },
+  {
+    "id": "plain_european",
+    "type": "region",
+    "name": "European Plain",
+    "geometryType": "point",
+    "labelPoint": [
+      20,
+      53
+    ],
+    "packIds": [
+      "world_plateaus_plains"
+    ]
+  },
+  {
+    "id": "plain_great_plains",
+    "type": "region",
+    "name": "Great Plains",
+    "geometryType": "point",
+    "labelPoint": [
+      -101,
+      43
+    ],
+    "packIds": [
+      "world_plateaus_plains"
+    ]
+  },
+  {
+    "id": "plain_indo_gangetic",
+    "type": "region",
+    "name": "Indo-Gangetic Plain",
+    "geometryType": "point",
+    "labelPoint": [
+      80,
+      27
+    ],
+    "packIds": [
+      "world_plateaus_plains"
+    ]
+  },
+  {
+    "id": "plain_north_china",
+    "type": "region",
+    "name": "North China Plain",
+    "geometryType": "point",
+    "labelPoint": [
+      116,
+      35
+    ],
+    "packIds": [
+      "world_plateaus_plains"
+    ]
+  },
+  {
+    "id": "plain_pampas",
+    "type": "region",
+    "name": "Pampas",
+    "geometryType": "point",
+    "labelPoint": [
+      -61,
+      -35
+    ],
+    "packIds": [
+      "world_plateaus_plains"
+    ]
+  },
+  {
+    "id": "plain_west_siberian",
+    "type": "region",
+    "name": "West Siberian Plain",
+    "geometryType": "point",
+    "labelPoint": [
+      75,
+      58
+    ],
+    "packIds": [
+      "world_plateaus_plains"
+    ]
+  },
+  {
+    "id": "plate_african",
+    "type": "region",
+    "name": "African Plate",
+    "geometryType": "polygon",
+    "labelPoint": [
+      20,
+      0
+    ],
+    "packIds": [
+      "world_tectonic_plates_volcano_belts"
+    ]
+  },
+  {
+    "id": "plate_eurasian",
+    "type": "region",
+    "name": "Eurasian Plate",
+    "geometryType": "polygon",
+    "labelPoint": [
+      80,
+      50
+    ],
+    "packIds": [
+      "world_tectonic_plates_volcano_belts"
+    ]
+  },
+  {
+    "id": "plate_north_american",
+    "type": "region",
+    "name": "North American Plate",
+    "geometryType": "polygon",
+    "labelPoint": [
+      -110,
+      50
+    ],
+    "packIds": [
+      "world_tectonic_plates_volcano_belts"
+    ]
+  },
+  {
+    "id": "plate_pacific",
+    "type": "region",
+    "name": "Pacific Plate",
+    "geometryType": "polygon",
+    "labelPoint": [
+      -135,
+      0
+    ],
+    "packIds": [
+      "world_tectonic_plates_volcano_belts"
+    ]
+  },
+  {
+    "id": "plate_south_american",
+    "type": "region",
+    "name": "South American Plate",
+    "geometryType": "polygon",
+    "labelPoint": [
+      -60,
+      -20
+    ],
+    "packIds": [
+      "world_tectonic_plates_volcano_belts"
+    ]
+  },
+  {
+    "id": "plateau_brazilian",
+    "type": "region",
+    "name": "Brazilian Highlands",
+    "geometryType": "point",
+    "labelPoint": [
+      -47,
+      -15
+    ],
+    "packIds": [
+      "world_plateaus_plains"
+    ]
+  },
+  {
+    "id": "plateau_colorado",
+    "type": "region",
+    "name": "Colorado Plateau",
+    "geometryType": "point",
+    "labelPoint": [
+      -111,
+      37
+    ],
+    "packIds": [
+      "world_plateaus_plains"
+    ]
+  },
+  {
+    "id": "plateau_deccan",
+    "type": "region",
+    "name": "Deccan Plateau",
+    "geometryType": "point",
+    "labelPoint": [
+      77,
+      16
+    ],
+    "packIds": [
+      "world_plateaus_plains"
+    ]
+  },
+  {
+    "id": "plateau_ethiopian",
+    "type": "region",
+    "name": "Ethiopian Highlands",
+    "geometryType": "point",
+    "labelPoint": [
+      39,
+      10
+    ],
+    "packIds": [
+      "world_plateaus_plains"
+    ]
+  },
+  {
+    "id": "plateau_mexican",
+    "type": "region",
+    "name": "Mexican Plateau",
+    "geometryType": "point",
+    "labelPoint": [
+      -102,
+      23
+    ],
+    "packIds": [
+      "world_plateaus_plains"
+    ]
+  },
+  {
+    "id": "plateau_tibetan",
+    "type": "region",
+    "name": "Tibetan Plateau",
+    "geometryType": "point",
+    "labelPoint": [
+      88,
+      32
+    ],
+    "packIds": [
+      "world_plateaus_plains"
+    ]
+  },
+  {
+    "id": "prime_meridian",
+    "type": "region",
+    "name": "Prime Meridian",
+    "geometryType": "line",
+    "labelPoint": [
+      0,
+      30
+    ],
+    "packIds": [
+      "world_timezones_prime_meridian"
     ]
   },
   {
@@ -1428,6 +3732,162 @@
     ]
   },
   {
+    "id": "sea_arabian",
+    "type": "sea",
+    "name": "Arabian Sea",
+    "geometryType": "point",
+    "labelPoint": [
+      64,
+      16
+    ],
+    "packIds": [
+      "world_oceans_seas"
+    ]
+  },
+  {
+    "id": "sea_arctic",
+    "type": "sea",
+    "name": "Arctic Ocean",
+    "geometryType": "point",
+    "labelPoint": [
+      0,
+      78
+    ],
+    "packIds": [
+      "world_oceans_seas"
+    ]
+  },
+  {
+    "id": "sea_atlantic",
+    "type": "sea",
+    "name": "Atlantic Ocean",
+    "geometryType": "point",
+    "labelPoint": [
+      -35,
+      10
+    ],
+    "packIds": [
+      "world_oceans_seas"
+    ]
+  },
+  {
+    "id": "sea_baltic",
+    "type": "sea",
+    "name": "Baltic Sea",
+    "geometryType": "point",
+    "labelPoint": [
+      20,
+      58
+    ],
+    "packIds": [
+      "world_oceans_seas"
+    ]
+  },
+  {
+    "id": "sea_black",
+    "type": "sea",
+    "name": "Black Sea",
+    "geometryType": "point",
+    "labelPoint": [
+      34,
+      44
+    ],
+    "packIds": [
+      "world_oceans_seas"
+    ]
+  },
+  {
+    "id": "sea_caribbean",
+    "type": "sea",
+    "name": "Caribbean Sea",
+    "geometryType": "point",
+    "labelPoint": [
+      -75,
+      16
+    ],
+    "packIds": [
+      "world_oceans_seas"
+    ]
+  },
+  {
+    "id": "sea_coral",
+    "type": "sea",
+    "name": "Coral Sea",
+    "geometryType": "point",
+    "labelPoint": [
+      155,
+      -20
+    ],
+    "packIds": [
+      "world_oceans_seas"
+    ]
+  },
+  {
+    "id": "sea_indian",
+    "type": "sea",
+    "name": "Indian Ocean",
+    "geometryType": "point",
+    "labelPoint": [
+      80,
+      -20
+    ],
+    "packIds": [
+      "world_oceans_seas"
+    ]
+  },
+  {
+    "id": "sea_mediterranean",
+    "type": "sea",
+    "name": "Mediterranean Sea",
+    "geometryType": "point",
+    "labelPoint": [
+      16,
+      36
+    ],
+    "packIds": [
+      "world_oceans_seas"
+    ]
+  },
+  {
+    "id": "sea_pacific",
+    "type": "sea",
+    "name": "Pacific Ocean",
+    "geometryType": "point",
+    "labelPoint": [
+      -150,
+      0
+    ],
+    "packIds": [
+      "world_oceans_seas"
+    ]
+  },
+  {
+    "id": "sea_south_china",
+    "type": "sea",
+    "name": "South China Sea",
+    "geometryType": "point",
+    "labelPoint": [
+      115,
+      13
+    ],
+    "packIds": [
+      "world_oceans_seas"
+    ]
+  },
+  {
+    "id": "sea_southern",
+    "type": "sea",
+    "name": "Southern Ocean",
+    "geometryType": "point",
+    "labelPoint": [
+      20,
+      -60
+    ],
+    "packIds": [
+      "world_oceans_seas"
+    ]
+  },
+  {
     "id": "state_alabama",
     "type": "state",
     "name": "Alabama",
@@ -1437,7 +3897,8 @@
       32.8
     ],
     "packIds": [
-      "usa_states"
+      "usa_states",
+      "us_states_capitals"
     ]
   },
   {
@@ -1450,7 +3911,8 @@
       64.2
     ],
     "packIds": [
-      "usa_states"
+      "usa_states",
+      "us_states_capitals"
     ]
   },
   {
@@ -1463,7 +3925,8 @@
       34.2
     ],
     "packIds": [
-      "usa_states"
+      "usa_states",
+      "us_states_capitals"
     ]
   },
   {
@@ -1476,7 +3939,8 @@
       34.9
     ],
     "packIds": [
-      "usa_states"
+      "usa_states",
+      "us_states_capitals"
     ]
   },
   {
@@ -1489,7 +3953,8 @@
       36.8
     ],
     "packIds": [
-      "usa_states"
+      "usa_states",
+      "us_states_capitals"
     ]
   },
   {
@@ -1502,7 +3967,8 @@
       39
     ],
     "packIds": [
-      "usa_states"
+      "usa_states",
+      "us_states_capitals"
     ]
   },
   {
@@ -1515,7 +3981,8 @@
       41.6
     ],
     "packIds": [
-      "usa_states"
+      "usa_states",
+      "us_states_capitals"
     ]
   },
   {
@@ -1528,7 +3995,8 @@
       39
     ],
     "packIds": [
-      "usa_states"
+      "usa_states",
+      "us_states_capitals"
     ]
   },
   {
@@ -1541,7 +4009,8 @@
       27.8
     ],
     "packIds": [
-      "usa_states"
+      "usa_states",
+      "us_states_capitals"
     ]
   },
   {
@@ -1554,7 +4023,8 @@
       32.6
     ],
     "packIds": [
-      "usa_states"
+      "usa_states",
+      "us_states_capitals"
     ]
   },
   {
@@ -1567,7 +4037,8 @@
       20.9
     ],
     "packIds": [
-      "usa_states"
+      "usa_states",
+      "us_states_capitals"
     ]
   },
   {
@@ -1580,7 +4051,8 @@
       44.2
     ],
     "packIds": [
-      "usa_states"
+      "usa_states",
+      "us_states_capitals"
     ]
   },
   {
@@ -1593,7 +4065,8 @@
       40
     ],
     "packIds": [
-      "usa_states"
+      "usa_states",
+      "us_states_capitals"
     ]
   },
   {
@@ -1606,7 +4079,8 @@
       40
     ],
     "packIds": [
-      "usa_states"
+      "usa_states",
+      "us_states_capitals"
     ]
   },
   {
@@ -1619,7 +4093,8 @@
       42.1
     ],
     "packIds": [
-      "usa_states"
+      "usa_states",
+      "us_states_capitals"
     ]
   },
   {
@@ -1632,7 +4107,8 @@
       38.5
     ],
     "packIds": [
-      "usa_states"
+      "usa_states",
+      "us_states_capitals"
     ]
   },
   {
@@ -1645,7 +4121,8 @@
       37.5
     ],
     "packIds": [
-      "usa_states"
+      "usa_states",
+      "us_states_capitals"
     ]
   },
   {
@@ -1658,7 +4135,8 @@
       31.2
     ],
     "packIds": [
-      "usa_states"
+      "usa_states",
+      "us_states_capitals"
     ]
   },
   {
@@ -1671,7 +4149,8 @@
       45.3
     ],
     "packIds": [
-      "usa_states"
+      "usa_states",
+      "us_states_capitals"
     ]
   },
   {
@@ -1684,7 +4163,8 @@
       39
     ],
     "packIds": [
-      "usa_states"
+      "usa_states",
+      "us_states_capitals"
     ]
   },
   {
@@ -1697,7 +4177,8 @@
       42.3
     ],
     "packIds": [
-      "usa_states"
+      "usa_states",
+      "us_states_capitals"
     ]
   },
   {
@@ -1710,7 +4191,8 @@
       44.3
     ],
     "packIds": [
-      "usa_states"
+      "usa_states",
+      "us_states_capitals"
     ]
   },
   {
@@ -1723,7 +4205,8 @@
       46.3
     ],
     "packIds": [
-      "usa_states"
+      "usa_states",
+      "us_states_capitals"
     ]
   },
   {
@@ -1736,7 +4219,8 @@
       32.7
     ],
     "packIds": [
-      "usa_states"
+      "usa_states",
+      "us_states_capitals"
     ]
   },
   {
@@ -1749,7 +4233,8 @@
       38.3
     ],
     "packIds": [
-      "usa_states"
+      "usa_states",
+      "us_states_capitals"
     ]
   },
   {
@@ -1762,7 +4247,8 @@
       46.9
     ],
     "packIds": [
-      "usa_states"
+      "usa_states",
+      "us_states_capitals"
     ]
   },
   {
@@ -1775,7 +4261,8 @@
       41.5
     ],
     "packIds": [
-      "usa_states"
+      "usa_states",
+      "us_states_capitals"
     ]
   },
   {
@@ -1788,7 +4275,8 @@
       38.8
     ],
     "packIds": [
-      "usa_states"
+      "usa_states",
+      "us_states_capitals"
     ]
   },
   {
@@ -1801,7 +4289,8 @@
       43.7
     ],
     "packIds": [
-      "usa_states"
+      "usa_states",
+      "us_states_capitals"
     ]
   },
   {
@@ -1814,7 +4303,8 @@
       40.1
     ],
     "packIds": [
-      "usa_states"
+      "usa_states",
+      "us_states_capitals"
     ]
   },
   {
@@ -1827,7 +4317,8 @@
       34.4
     ],
     "packIds": [
-      "usa_states"
+      "usa_states",
+      "us_states_capitals"
     ]
   },
   {
@@ -1840,7 +4331,8 @@
       43
     ],
     "packIds": [
-      "usa_states"
+      "usa_states",
+      "us_states_capitals"
     ]
   },
   {
@@ -1853,7 +4345,8 @@
       35.5
     ],
     "packIds": [
-      "usa_states"
+      "usa_states",
+      "us_states_capitals"
     ]
   },
   {
@@ -1866,7 +4359,8 @@
       47.5
     ],
     "packIds": [
-      "usa_states"
+      "usa_states",
+      "us_states_capitals"
     ]
   },
   {
@@ -1879,7 +4373,8 @@
       40.4
     ],
     "packIds": [
-      "usa_states"
+      "usa_states",
+      "us_states_capitals"
     ]
   },
   {
@@ -1892,7 +4387,8 @@
       35.6
     ],
     "packIds": [
-      "usa_states"
+      "usa_states",
+      "us_states_capitals"
     ]
   },
   {
@@ -1905,7 +4401,8 @@
       43.9
     ],
     "packIds": [
-      "usa_states"
+      "usa_states",
+      "us_states_capitals"
     ]
   },
   {
@@ -1918,7 +4415,8 @@
       41.2
     ],
     "packIds": [
-      "usa_states"
+      "usa_states",
+      "us_states_capitals"
     ]
   },
   {
@@ -1931,7 +4429,8 @@
       41.7
     ],
     "packIds": [
-      "usa_states"
+      "usa_states",
+      "us_states_capitals"
     ]
   },
   {
@@ -1944,7 +4443,8 @@
       33.8
     ],
     "packIds": [
-      "usa_states"
+      "usa_states",
+      "us_states_capitals"
     ]
   },
   {
@@ -1957,7 +4457,8 @@
       44.4
     ],
     "packIds": [
-      "usa_states"
+      "usa_states",
+      "us_states_capitals"
     ]
   },
   {
@@ -1970,7 +4471,8 @@
       35.8
     ],
     "packIds": [
-      "usa_states"
+      "usa_states",
+      "us_states_capitals"
     ]
   },
   {
@@ -1983,7 +4485,8 @@
       31.5
     ],
     "packIds": [
-      "usa_states"
+      "usa_states",
+      "us_states_capitals"
     ]
   },
   {
@@ -1996,7 +4499,8 @@
       39.3
     ],
     "packIds": [
-      "usa_states"
+      "usa_states",
+      "us_states_capitals"
     ]
   },
   {
@@ -2009,7 +4513,8 @@
       44
     ],
     "packIds": [
-      "usa_states"
+      "usa_states",
+      "us_states_capitals"
     ]
   },
   {
@@ -2022,7 +4527,8 @@
       37.5
     ],
     "packIds": [
-      "usa_states"
+      "usa_states",
+      "us_states_capitals"
     ]
   },
   {
@@ -2035,7 +4541,8 @@
       47.4
     ],
     "packIds": [
-      "usa_states"
+      "usa_states",
+      "us_states_capitals"
     ]
   },
   {
@@ -2048,7 +4555,8 @@
       38.6
     ],
     "packIds": [
-      "usa_states"
+      "usa_states",
+      "us_states_capitals"
     ]
   },
   {
@@ -2061,7 +4569,8 @@
       44.5
     ],
     "packIds": [
-      "usa_states"
+      "usa_states",
+      "us_states_capitals"
     ]
   },
   {
@@ -2074,7 +4583,1152 @@
       43.1
     ],
     "packIds": [
-      "usa_states"
+      "usa_states",
+      "us_states_capitals"
+    ]
+  },
+  {
+    "id": "strait_babelmandeb",
+    "type": "sea",
+    "name": "Bab-el-Mandeb",
+    "geometryType": "line",
+    "labelPoint": [
+      43.35,
+      12.6
+    ],
+    "packIds": [
+      "world_straits_canals"
+    ]
+  },
+  {
+    "id": "strait_bering",
+    "type": "sea",
+    "name": "Bering Strait",
+    "geometryType": "line",
+    "labelPoint": [
+      -168.5,
+      65.9
+    ],
+    "packIds": [
+      "world_straits_canals"
+    ]
+  },
+  {
+    "id": "strait_bosporus",
+    "type": "sea",
+    "name": "Bosporus",
+    "geometryType": "line",
+    "labelPoint": [
+      29.04,
+      41.13
+    ],
+    "packIds": [
+      "world_straits_canals"
+    ]
+  },
+  {
+    "id": "strait_gibraltar",
+    "type": "sea",
+    "name": "Strait of Gibraltar",
+    "geometryType": "line",
+    "labelPoint": [
+      -5.5,
+      36
+    ],
+    "packIds": [
+      "world_straits_canals"
+    ]
+  },
+  {
+    "id": "strait_hormuz",
+    "type": "sea",
+    "name": "Strait of Hormuz",
+    "geometryType": "line",
+    "labelPoint": [
+      56.2,
+      26.2
+    ],
+    "packIds": [
+      "world_straits_canals"
+    ]
+  },
+  {
+    "id": "strait_malacca",
+    "type": "sea",
+    "name": "Strait of Malacca",
+    "geometryType": "line",
+    "labelPoint": [
+      100,
+      4
+    ],
+    "packIds": [
+      "world_straits_canals"
+    ]
+  },
+  {
+    "id": "timezone_utc_0",
+    "type": "region",
+    "name": "UTC +0",
+    "geometryType": "line",
+    "labelPoint": [
+      0,
+      20
+    ],
+    "packIds": [
+      "world_timezones_prime_meridian"
+    ]
+  },
+  {
+    "id": "timezone_utc_1",
+    "type": "region",
+    "name": "UTC +1",
+    "geometryType": "line",
+    "labelPoint": [
+      15,
+      20
+    ],
+    "packIds": [
+      "world_timezones_prime_meridian"
+    ]
+  },
+  {
+    "id": "timezone_utc_10",
+    "type": "region",
+    "name": "UTC +10",
+    "geometryType": "line",
+    "labelPoint": [
+      150,
+      20
+    ],
+    "packIds": [
+      "world_timezones_prime_meridian"
+    ]
+  },
+  {
+    "id": "timezone_utc_12",
+    "type": "region",
+    "name": "UTC +12",
+    "geometryType": "line",
+    "labelPoint": [
+      180,
+      20
+    ],
+    "packIds": [
+      "world_timezones_prime_meridian"
+    ]
+  },
+  {
+    "id": "timezone_utc_3",
+    "type": "region",
+    "name": "UTC +3",
+    "geometryType": "line",
+    "labelPoint": [
+      45,
+      20
+    ],
+    "packIds": [
+      "world_timezones_prime_meridian"
+    ]
+  },
+  {
+    "id": "timezone_utc_5_5",
+    "type": "region",
+    "name": "UTC +5.5",
+    "geometryType": "line",
+    "labelPoint": [
+      82.5,
+      20
+    ],
+    "packIds": [
+      "world_timezones_prime_meridian"
+    ]
+  },
+  {
+    "id": "timezone_utc_8",
+    "type": "region",
+    "name": "UTC +8",
+    "geometryType": "line",
+    "labelPoint": [
+      120,
+      20
+    ],
+    "packIds": [
+      "world_timezones_prime_meridian"
+    ]
+  },
+  {
+    "id": "timezone_utc_m12",
+    "type": "region",
+    "name": "UTC -12",
+    "geometryType": "line",
+    "labelPoint": [
+      -180,
+      20
+    ],
+    "packIds": [
+      "world_timezones_prime_meridian"
+    ]
+  },
+  {
+    "id": "timezone_utc_m5",
+    "type": "region",
+    "name": "UTC -5",
+    "geometryType": "line",
+    "labelPoint": [
+      -75,
+      20
+    ],
+    "packIds": [
+      "world_timezones_prime_meridian"
+    ]
+  },
+  {
+    "id": "timezone_utc_m8",
+    "type": "region",
+    "name": "UTC -8",
+    "geometryType": "line",
+    "labelPoint": [
+      -120,
+      20
+    ],
+    "packIds": [
+      "world_timezones_prime_meridian"
+    ]
+  },
+  {
+    "id": "us_capital_albany",
+    "type": "capital",
+    "name": "Albany",
+    "geometryType": "point",
+    "labelPoint": [
+      -73.7562,
+      42.6526
+    ],
+    "packIds": [
+      "us_states_capitals"
+    ]
+  },
+  {
+    "id": "us_capital_atlanta",
+    "type": "capital",
+    "name": "Atlanta",
+    "geometryType": "point",
+    "labelPoint": [
+      -84.388,
+      33.749
+    ],
+    "packIds": [
+      "us_states_capitals"
+    ]
+  },
+  {
+    "id": "us_capital_austin",
+    "type": "capital",
+    "name": "Austin",
+    "geometryType": "point",
+    "labelPoint": [
+      -97.7431,
+      30.2672
+    ],
+    "packIds": [
+      "us_states_capitals"
+    ]
+  },
+  {
+    "id": "us_capital_baton_rouge",
+    "type": "capital",
+    "name": "Baton Rouge",
+    "geometryType": "point",
+    "labelPoint": [
+      -91.1403,
+      30.4515
+    ],
+    "packIds": [
+      "us_states_capitals"
+    ]
+  },
+  {
+    "id": "us_capital_boston",
+    "type": "capital",
+    "name": "Boston",
+    "geometryType": "point",
+    "labelPoint": [
+      -71.0589,
+      42.3601
+    ],
+    "packIds": [
+      "us_states_capitals"
+    ]
+  },
+  {
+    "id": "us_capital_columbus",
+    "type": "capital",
+    "name": "Columbus",
+    "geometryType": "point",
+    "labelPoint": [
+      -82.9988,
+      39.9612
+    ],
+    "packIds": [
+      "us_states_capitals"
+    ]
+  },
+  {
+    "id": "us_capital_denver",
+    "type": "capital",
+    "name": "Denver",
+    "geometryType": "point",
+    "labelPoint": [
+      -104.9903,
+      39.7392
+    ],
+    "packIds": [
+      "us_states_capitals"
+    ]
+  },
+  {
+    "id": "us_capital_harrisburg",
+    "type": "capital",
+    "name": "Harrisburg",
+    "geometryType": "point",
+    "labelPoint": [
+      -76.8836,
+      40.2732
+    ],
+    "packIds": [
+      "us_states_capitals"
+    ]
+  },
+  {
+    "id": "us_capital_jackson_ms",
+    "type": "capital",
+    "name": "Jackson",
+    "geometryType": "point",
+    "labelPoint": [
+      -90.1848,
+      32.2988
+    ],
+    "packIds": [
+      "us_states_capitals"
+    ]
+  },
+  {
+    "id": "us_capital_lansing",
+    "type": "capital",
+    "name": "Lansing",
+    "geometryType": "point",
+    "labelPoint": [
+      -84.5555,
+      42.7325
+    ],
+    "packIds": [
+      "us_states_capitals"
+    ]
+  },
+  {
+    "id": "us_capital_madison",
+    "type": "capital",
+    "name": "Madison",
+    "geometryType": "point",
+    "labelPoint": [
+      -89.4012,
+      43.0731
+    ],
+    "packIds": [
+      "us_states_capitals"
+    ]
+  },
+  {
+    "id": "us_capital_montgomery",
+    "type": "capital",
+    "name": "Montgomery",
+    "geometryType": "point",
+    "labelPoint": [
+      -86.3,
+      32.3668
+    ],
+    "packIds": [
+      "us_states_capitals"
+    ]
+  },
+  {
+    "id": "us_capital_nashville",
+    "type": "capital",
+    "name": "Nashville",
+    "geometryType": "point",
+    "labelPoint": [
+      -86.7816,
+      36.1627
+    ],
+    "packIds": [
+      "us_states_capitals"
+    ]
+  },
+  {
+    "id": "us_capital_olympia",
+    "type": "capital",
+    "name": "Olympia",
+    "geometryType": "point",
+    "labelPoint": [
+      -122.9007,
+      47.0379
+    ],
+    "packIds": [
+      "us_states_capitals"
+    ]
+  },
+  {
+    "id": "us_capital_phoenix",
+    "type": "capital",
+    "name": "Phoenix",
+    "geometryType": "point",
+    "labelPoint": [
+      -112.074,
+      33.4484
+    ],
+    "packIds": [
+      "us_states_capitals"
+    ]
+  },
+  {
+    "id": "us_capital_raleigh",
+    "type": "capital",
+    "name": "Raleigh",
+    "geometryType": "point",
+    "labelPoint": [
+      -78.6382,
+      35.7796
+    ],
+    "packIds": [
+      "us_states_capitals"
+    ]
+  },
+  {
+    "id": "us_capital_sacramento",
+    "type": "capital",
+    "name": "Sacramento",
+    "geometryType": "point",
+    "labelPoint": [
+      -121.4944,
+      38.5816
+    ],
+    "packIds": [
+      "us_states_capitals"
+    ]
+  },
+  {
+    "id": "us_capital_saint_paul",
+    "type": "capital",
+    "name": "Saint Paul",
+    "geometryType": "point",
+    "labelPoint": [
+      -93.09,
+      44.9537
+    ],
+    "packIds": [
+      "us_states_capitals"
+    ]
+  },
+  {
+    "id": "us_capital_salem",
+    "type": "capital",
+    "name": "Salem",
+    "geometryType": "point",
+    "labelPoint": [
+      -123.0351,
+      44.9429
+    ],
+    "packIds": [
+      "us_states_capitals"
+    ]
+  },
+  {
+    "id": "us_capital_tallahassee",
+    "type": "capital",
+    "name": "Tallahassee",
+    "geometryType": "point",
+    "labelPoint": [
+      -84.2813,
+      30.4383
+    ],
+    "packIds": [
+      "us_states_capitals"
+    ]
+  },
+  {
+    "id": "us_city_austin",
+    "type": "city",
+    "name": "Austin",
+    "geometryType": "point",
+    "labelPoint": [
+      -97.7431,
+      30.2672
+    ],
+    "packIds": [
+      "us_major_cities"
+    ]
+  },
+  {
+    "id": "us_city_boston",
+    "type": "city",
+    "name": "Boston",
+    "geometryType": "point",
+    "labelPoint": [
+      -71.0589,
+      42.3601
+    ],
+    "packIds": [
+      "us_major_cities"
+    ]
+  },
+  {
+    "id": "us_city_charlotte",
+    "type": "city",
+    "name": "Charlotte",
+    "geometryType": "point",
+    "labelPoint": [
+      -80.8431,
+      35.2271
+    ],
+    "packIds": [
+      "us_major_cities"
+    ]
+  },
+  {
+    "id": "us_city_chicago",
+    "type": "city",
+    "name": "Chicago",
+    "geometryType": "point",
+    "labelPoint": [
+      -87.6298,
+      41.8781
+    ],
+    "packIds": [
+      "us_major_cities"
+    ]
+  },
+  {
+    "id": "us_city_columbus",
+    "type": "city",
+    "name": "Columbus",
+    "geometryType": "point",
+    "labelPoint": [
+      -82.9988,
+      39.9612
+    ],
+    "packIds": [
+      "us_major_cities"
+    ]
+  },
+  {
+    "id": "us_city_dallas",
+    "type": "city",
+    "name": "Dallas",
+    "geometryType": "point",
+    "labelPoint": [
+      -96.797,
+      32.7767
+    ],
+    "packIds": [
+      "us_major_cities"
+    ]
+  },
+  {
+    "id": "us_city_denver",
+    "type": "city",
+    "name": "Denver",
+    "geometryType": "point",
+    "labelPoint": [
+      -104.9903,
+      39.7392
+    ],
+    "packIds": [
+      "us_major_cities"
+    ]
+  },
+  {
+    "id": "us_city_fort_worth",
+    "type": "city",
+    "name": "Fort Worth",
+    "geometryType": "point",
+    "labelPoint": [
+      -97.3308,
+      32.7555
+    ],
+    "packIds": [
+      "us_major_cities"
+    ]
+  },
+  {
+    "id": "us_city_houston",
+    "type": "city",
+    "name": "Houston",
+    "geometryType": "point",
+    "labelPoint": [
+      -95.3698,
+      29.7604
+    ],
+    "packIds": [
+      "us_major_cities"
+    ]
+  },
+  {
+    "id": "us_city_indianapolis",
+    "type": "city",
+    "name": "Indianapolis",
+    "geometryType": "point",
+    "labelPoint": [
+      -86.1581,
+      39.7684
+    ],
+    "packIds": [
+      "us_major_cities"
+    ]
+  },
+  {
+    "id": "us_city_jacksonville",
+    "type": "city",
+    "name": "Jacksonville",
+    "geometryType": "point",
+    "labelPoint": [
+      -81.6557,
+      30.3322
+    ],
+    "packIds": [
+      "us_major_cities"
+    ]
+  },
+  {
+    "id": "us_city_los_angeles",
+    "type": "city",
+    "name": "Los Angeles",
+    "geometryType": "point",
+    "labelPoint": [
+      -118.2437,
+      34.0522
+    ],
+    "packIds": [
+      "us_major_cities"
+    ]
+  },
+  {
+    "id": "us_city_new_york",
+    "type": "city",
+    "name": "New York",
+    "geometryType": "point",
+    "labelPoint": [
+      -74.006,
+      40.7128
+    ],
+    "packIds": [
+      "us_major_cities"
+    ]
+  },
+  {
+    "id": "us_city_philadelphia",
+    "type": "city",
+    "name": "Philadelphia",
+    "geometryType": "point",
+    "labelPoint": [
+      -75.1652,
+      39.9526
+    ],
+    "packIds": [
+      "us_major_cities"
+    ]
+  },
+  {
+    "id": "us_city_phoenix",
+    "type": "city",
+    "name": "Phoenix",
+    "geometryType": "point",
+    "labelPoint": [
+      -112.074,
+      33.4484
+    ],
+    "packIds": [
+      "us_major_cities"
+    ]
+  },
+  {
+    "id": "us_city_san_antonio",
+    "type": "city",
+    "name": "San Antonio",
+    "geometryType": "point",
+    "labelPoint": [
+      -98.4936,
+      29.4241
+    ],
+    "packIds": [
+      "us_major_cities"
+    ]
+  },
+  {
+    "id": "us_city_san_diego",
+    "type": "city",
+    "name": "San Diego",
+    "geometryType": "point",
+    "labelPoint": [
+      -117.1611,
+      32.7157
+    ],
+    "packIds": [
+      "us_major_cities"
+    ]
+  },
+  {
+    "id": "us_city_san_jose",
+    "type": "city",
+    "name": "San Jose",
+    "geometryType": "point",
+    "labelPoint": [
+      -121.8863,
+      37.3382
+    ],
+    "packIds": [
+      "us_major_cities"
+    ]
+  },
+  {
+    "id": "us_city_seattle",
+    "type": "city",
+    "name": "Seattle",
+    "geometryType": "point",
+    "labelPoint": [
+      -122.3321,
+      47.6062
+    ],
+    "packIds": [
+      "us_major_cities"
+    ]
+  },
+  {
+    "id": "us_city_washington",
+    "type": "city",
+    "name": "Washington, D.C.",
+    "geometryType": "point",
+    "labelPoint": [
+      -77.0369,
+      38.9072
+    ],
+    "packIds": [
+      "us_major_cities"
+    ]
+  },
+  {
+    "id": "us_lake_erie",
+    "type": "lake",
+    "name": "Lake Erie",
+    "geometryType": "point",
+    "labelPoint": [
+      -81.2,
+      42.2
+    ],
+    "packIds": [
+      "us_rivers_lakes"
+    ]
+  },
+  {
+    "id": "us_lake_great_salt",
+    "type": "lake",
+    "name": "Great Salt Lake",
+    "geometryType": "point",
+    "labelPoint": [
+      -112.6,
+      41.2
+    ],
+    "packIds": [
+      "us_rivers_lakes"
+    ]
+  },
+  {
+    "id": "us_lake_huron",
+    "type": "lake",
+    "name": "Lake Huron",
+    "geometryType": "point",
+    "labelPoint": [
+      -82.8,
+      45.2
+    ],
+    "packIds": [
+      "us_rivers_lakes"
+    ]
+  },
+  {
+    "id": "us_lake_michigan",
+    "type": "lake",
+    "name": "Lake Michigan",
+    "geometryType": "point",
+    "labelPoint": [
+      -87,
+      44.2
+    ],
+    "packIds": [
+      "us_rivers_lakes"
+    ]
+  },
+  {
+    "id": "us_lake_ontario",
+    "type": "lake",
+    "name": "Lake Ontario",
+    "geometryType": "point",
+    "labelPoint": [
+      -77.8,
+      43.7
+    ],
+    "packIds": [
+      "us_rivers_lakes"
+    ]
+  },
+  {
+    "id": "us_lake_superior",
+    "type": "lake",
+    "name": "Lake Superior",
+    "geometryType": "point",
+    "labelPoint": [
+      -88,
+      47.8
+    ],
+    "packIds": [
+      "us_rivers_lakes"
+    ]
+  },
+  {
+    "id": "us_park_acadia",
+    "type": "region",
+    "name": "Acadia National Park",
+    "geometryType": "point",
+    "labelPoint": [
+      -68.21,
+      44.35
+    ],
+    "packIds": [
+      "us_national_parks"
+    ]
+  },
+  {
+    "id": "us_park_arches",
+    "type": "region",
+    "name": "Arches National Park",
+    "geometryType": "point",
+    "labelPoint": [
+      -109.5925,
+      38.7331
+    ],
+    "packIds": [
+      "us_national_parks"
+    ]
+  },
+  {
+    "id": "us_park_badlands",
+    "type": "region",
+    "name": "Badlands National Park",
+    "geometryType": "point",
+    "labelPoint": [
+      -102.5,
+      43.75
+    ],
+    "packIds": [
+      "us_national_parks"
+    ]
+  },
+  {
+    "id": "us_park_denali",
+    "type": "region",
+    "name": "Denali National Park",
+    "geometryType": "point",
+    "labelPoint": [
+      -151,
+      63.1
+    ],
+    "packIds": [
+      "us_national_parks"
+    ]
+  },
+  {
+    "id": "us_park_everglades",
+    "type": "region",
+    "name": "Everglades National Park",
+    "geometryType": "point",
+    "labelPoint": [
+      -80.93,
+      25.32
+    ],
+    "packIds": [
+      "us_national_parks"
+    ]
+  },
+  {
+    "id": "us_park_glacier",
+    "type": "region",
+    "name": "Glacier National Park",
+    "geometryType": "point",
+    "labelPoint": [
+      -113.718,
+      48.7596
+    ],
+    "packIds": [
+      "us_national_parks"
+    ]
+  },
+  {
+    "id": "us_park_grand_canyon",
+    "type": "region",
+    "name": "Grand Canyon National Park",
+    "geometryType": "point",
+    "labelPoint": [
+      -112.14,
+      36.06
+    ],
+    "packIds": [
+      "us_national_parks"
+    ]
+  },
+  {
+    "id": "us_park_olympic",
+    "type": "region",
+    "name": "Olympic National Park",
+    "geometryType": "point",
+    "labelPoint": [
+      -123.5,
+      47.8
+    ],
+    "packIds": [
+      "us_national_parks"
+    ]
+  },
+  {
+    "id": "us_park_rocky_mountain",
+    "type": "region",
+    "name": "Rocky Mountain National Park",
+    "geometryType": "point",
+    "labelPoint": [
+      -105.6836,
+      40.3428
+    ],
+    "packIds": [
+      "us_national_parks"
+    ]
+  },
+  {
+    "id": "us_park_yellowstone",
+    "type": "region",
+    "name": "Yellowstone National Park",
+    "geometryType": "point",
+    "labelPoint": [
+      -110.5885,
+      44.428
+    ],
+    "packIds": [
+      "us_national_parks"
+    ]
+  },
+  {
+    "id": "us_park_yosemite",
+    "type": "region",
+    "name": "Yosemite National Park",
+    "geometryType": "point",
+    "labelPoint": [
+      -119.5383,
+      37.8651
+    ],
+    "packIds": [
+      "us_national_parks"
+    ]
+  },
+  {
+    "id": "us_park_zion",
+    "type": "region",
+    "name": "Zion National Park",
+    "geometryType": "point",
+    "labelPoint": [
+      -113.0263,
+      37.2982
+    ],
+    "packIds": [
+      "us_national_parks"
+    ]
+  },
+  {
+    "id": "us_range_alaska",
+    "type": "mountain",
+    "name": "Alaska Range",
+    "geometryType": "line",
+    "labelPoint": [
+      -150.5,
+      63.5
+    ],
+    "packIds": [
+      "us_mountain_ranges"
+    ]
+  },
+  {
+    "id": "us_range_appalachian",
+    "type": "mountain",
+    "name": "Appalachian Mountains",
+    "geometryType": "line",
+    "labelPoint": [
+      -81,
+      39
+    ],
+    "packIds": [
+      "us_mountain_ranges"
+    ]
+  },
+  {
+    "id": "us_range_cascade",
+    "type": "mountain",
+    "name": "Cascade Range",
+    "geometryType": "line",
+    "labelPoint": [
+      -122,
+      46
+    ],
+    "packIds": [
+      "us_mountain_ranges"
+    ]
+  },
+  {
+    "id": "us_range_rockies",
+    "type": "mountain",
+    "name": "Rocky Mountains",
+    "geometryType": "line",
+    "labelPoint": [
+      -112,
+      44
+    ],
+    "packIds": [
+      "us_mountain_ranges"
+    ]
+  },
+  {
+    "id": "us_range_sierra_nevada",
+    "type": "mountain",
+    "name": "Sierra Nevada",
+    "geometryType": "line",
+    "labelPoint": [
+      -119.5,
+      37.5
+    ],
+    "packIds": [
+      "us_mountain_ranges"
+    ]
+  },
+  {
+    "id": "us_region_midwest",
+    "type": "region",
+    "name": "Midwest",
+    "geometryType": "polygon",
+    "labelPoint": [
+      -93,
+      43
+    ],
+    "packIds": [
+      "us_regions"
+    ]
+  },
+  {
+    "id": "us_region_northeast",
+    "type": "region",
+    "name": "Northeast",
+    "geometryType": "polygon",
+    "labelPoint": [
+      -74,
+      42
+    ],
+    "packIds": [
+      "us_regions"
+    ]
+  },
+  {
+    "id": "us_region_south",
+    "type": "region",
+    "name": "South",
+    "geometryType": "polygon",
+    "labelPoint": [
+      -90,
+      31
+    ],
+    "packIds": [
+      "us_regions"
+    ]
+  },
+  {
+    "id": "us_region_west",
+    "type": "region",
+    "name": "West",
+    "geometryType": "polygon",
+    "labelPoint": [
+      -114,
+      40
+    ],
+    "packIds": [
+      "us_regions"
+    ]
+  },
+  {
+    "id": "us_river_colorado",
+    "type": "river",
+    "name": "Colorado River",
+    "geometryType": "line",
+    "labelPoint": [
+      -111,
+      36
+    ],
+    "packIds": [
+      "us_rivers_lakes"
+    ]
+  },
+  {
+    "id": "us_river_columbia",
+    "type": "river",
+    "name": "Columbia River",
+    "geometryType": "line",
+    "labelPoint": [
+      -121,
+      46
+    ],
+    "packIds": [
+      "us_rivers_lakes"
+    ]
+  },
+  {
+    "id": "us_river_mississippi",
+    "type": "river",
+    "name": "Mississippi River",
+    "geometryType": "line",
+    "labelPoint": [
+      -90.5,
+      36
+    ],
+    "packIds": [
+      "us_rivers_lakes"
+    ]
+  },
+  {
+    "id": "us_river_missouri",
+    "type": "river",
+    "name": "Missouri River",
+    "geometryType": "line",
+    "labelPoint": [
+      -100,
+      44
+    ],
+    "packIds": [
+      "us_rivers_lakes"
+    ]
+  },
+  {
+    "id": "us_river_rio_grande",
+    "type": "river",
+    "name": "Rio Grande",
+    "geometryType": "line",
+    "labelPoint": [
+      -103,
+      31
+    ],
+    "packIds": [
+      "us_rivers_lakes"
     ]
   }
 ]

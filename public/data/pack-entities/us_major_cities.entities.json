@@ -1,0 +1,382 @@
+[
+  {
+    "id": "us_city_austin",
+    "type": "city",
+    "name": "Austin",
+    "geometryType": "point",
+    "labelPoint": [
+      -97.7431,
+      30.2672
+    ],
+    "packIds": [
+      "us_major_cities"
+    ],
+    "bbox": [
+      -97.7431,
+      30.2672,
+      -97.7431,
+      30.2672
+    ]
+  },
+  {
+    "id": "us_city_boston",
+    "type": "city",
+    "name": "Boston",
+    "geometryType": "point",
+    "labelPoint": [
+      -71.0589,
+      42.3601
+    ],
+    "packIds": [
+      "us_major_cities"
+    ],
+    "bbox": [
+      -71.0589,
+      42.3601,
+      -71.0589,
+      42.3601
+    ]
+  },
+  {
+    "id": "us_city_charlotte",
+    "type": "city",
+    "name": "Charlotte",
+    "geometryType": "point",
+    "labelPoint": [
+      -80.8431,
+      35.2271
+    ],
+    "packIds": [
+      "us_major_cities"
+    ],
+    "bbox": [
+      -80.8431,
+      35.2271,
+      -80.8431,
+      35.2271
+    ]
+  },
+  {
+    "id": "us_city_chicago",
+    "type": "city",
+    "name": "Chicago",
+    "geometryType": "point",
+    "labelPoint": [
+      -87.6298,
+      41.8781
+    ],
+    "packIds": [
+      "us_major_cities"
+    ],
+    "bbox": [
+      -87.6298,
+      41.8781,
+      -87.6298,
+      41.8781
+    ]
+  },
+  {
+    "id": "us_city_columbus",
+    "type": "city",
+    "name": "Columbus",
+    "geometryType": "point",
+    "labelPoint": [
+      -82.9988,
+      39.9612
+    ],
+    "packIds": [
+      "us_major_cities"
+    ],
+    "bbox": [
+      -82.9988,
+      39.9612,
+      -82.9988,
+      39.9612
+    ]
+  },
+  {
+    "id": "us_city_dallas",
+    "type": "city",
+    "name": "Dallas",
+    "geometryType": "point",
+    "labelPoint": [
+      -96.797,
+      32.7767
+    ],
+    "packIds": [
+      "us_major_cities"
+    ],
+    "bbox": [
+      -96.797,
+      32.7767,
+      -96.797,
+      32.7767
+    ]
+  },
+  {
+    "id": "us_city_denver",
+    "type": "city",
+    "name": "Denver",
+    "geometryType": "point",
+    "labelPoint": [
+      -104.9903,
+      39.7392
+    ],
+    "packIds": [
+      "us_major_cities"
+    ],
+    "bbox": [
+      -104.9903,
+      39.7392,
+      -104.9903,
+      39.7392
+    ]
+  },
+  {
+    "id": "us_city_fort_worth",
+    "type": "city",
+    "name": "Fort Worth",
+    "geometryType": "point",
+    "labelPoint": [
+      -97.3308,
+      32.7555
+    ],
+    "packIds": [
+      "us_major_cities"
+    ],
+    "bbox": [
+      -97.3308,
+      32.7555,
+      -97.3308,
+      32.7555
+    ]
+  },
+  {
+    "id": "us_city_houston",
+    "type": "city",
+    "name": "Houston",
+    "geometryType": "point",
+    "labelPoint": [
+      -95.3698,
+      29.7604
+    ],
+    "packIds": [
+      "us_major_cities"
+    ],
+    "bbox": [
+      -95.3698,
+      29.7604,
+      -95.3698,
+      29.7604
+    ]
+  },
+  {
+    "id": "us_city_indianapolis",
+    "type": "city",
+    "name": "Indianapolis",
+    "geometryType": "point",
+    "labelPoint": [
+      -86.1581,
+      39.7684
+    ],
+    "packIds": [
+      "us_major_cities"
+    ],
+    "bbox": [
+      -86.1581,
+      39.7684,
+      -86.1581,
+      39.7684
+    ]
+  },
+  {
+    "id": "us_city_jacksonville",
+    "type": "city",
+    "name": "Jacksonville",
+    "geometryType": "point",
+    "labelPoint": [
+      -81.6557,
+      30.3322
+    ],
+    "packIds": [
+      "us_major_cities"
+    ],
+    "bbox": [
+      -81.6557,
+      30.3322,
+      -81.6557,
+      30.3322
+    ]
+  },
+  {
+    "id": "us_city_los_angeles",
+    "type": "city",
+    "name": "Los Angeles",
+    "geometryType": "point",
+    "labelPoint": [
+      -118.2437,
+      34.0522
+    ],
+    "packIds": [
+      "us_major_cities"
+    ],
+    "bbox": [
+      -118.2437,
+      34.0522,
+      -118.2437,
+      34.0522
+    ]
+  },
+  {
+    "id": "us_city_new_york",
+    "type": "city",
+    "name": "New York",
+    "geometryType": "point",
+    "labelPoint": [
+      -74.006,
+      40.7128
+    ],
+    "packIds": [
+      "us_major_cities"
+    ],
+    "bbox": [
+      -74.006,
+      40.7128,
+      -74.006,
+      40.7128
+    ]
+  },
+  {
+    "id": "us_city_philadelphia",
+    "type": "city",
+    "name": "Philadelphia",
+    "geometryType": "point",
+    "labelPoint": [
+      -75.1652,
+      39.9526
+    ],
+    "packIds": [
+      "us_major_cities"
+    ],
+    "bbox": [
+      -75.1652,
+      39.9526,
+      -75.1652,
+      39.9526
+    ]
+  },
+  {
+    "id": "us_city_phoenix",
+    "type": "city",
+    "name": "Phoenix",
+    "geometryType": "point",
+    "labelPoint": [
+      -112.074,
+      33.4484
+    ],
+    "packIds": [
+      "us_major_cities"
+    ],
+    "bbox": [
+      -112.074,
+      33.4484,
+      -112.074,
+      33.4484
+    ]
+  },
+  {
+    "id": "us_city_san_antonio",
+    "type": "city",
+    "name": "San Antonio",
+    "geometryType": "point",
+    "labelPoint": [
+      -98.4936,
+      29.4241
+    ],
+    "packIds": [
+      "us_major_cities"
+    ],
+    "bbox": [
+      -98.4936,
+      29.4241,
+      -98.4936,
+      29.4241
+    ]
+  },
+  {
+    "id": "us_city_san_diego",
+    "type": "city",
+    "name": "San Diego",
+    "geometryType": "point",
+    "labelPoint": [
+      -117.1611,
+      32.7157
+    ],
+    "packIds": [
+      "us_major_cities"
+    ],
+    "bbox": [
+      -117.1611,
+      32.7157,
+      -117.1611,
+      32.7157
+    ]
+  },
+  {
+    "id": "us_city_san_jose",
+    "type": "city",
+    "name": "San Jose",
+    "geometryType": "point",
+    "labelPoint": [
+      -121.8863,
+      37.3382
+    ],
+    "packIds": [
+      "us_major_cities"
+    ],
+    "bbox": [
+      -121.8863,
+      37.3382,
+      -121.8863,
+      37.3382
+    ]
+  },
+  {
+    "id": "us_city_seattle",
+    "type": "city",
+    "name": "Seattle",
+    "geometryType": "point",
+    "labelPoint": [
+      -122.3321,
+      47.6062
+    ],
+    "packIds": [
+      "us_major_cities"
+    ],
+    "bbox": [
+      -122.3321,
+      47.6062,
+      -122.3321,
+      47.6062
+    ]
+  },
+  {
+    "id": "us_city_washington",
+    "type": "city",
+    "name": "Washington, D.C.",
+    "geometryType": "point",
+    "labelPoint": [
+      -77.0369,
+      38.9072
+    ],
+    "packIds": [
+      "us_major_cities"
+    ],
+    "bbox": [
+      -77.0369,
+      38.9072,
+      -77.0369,
+      38.9072
+    ]
+  }
+]
