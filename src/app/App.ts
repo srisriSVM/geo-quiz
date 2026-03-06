@@ -2,7 +2,7 @@ import { loadPackEntities, loadPacks } from "../data/dataLoader";
 import type { Difficulty, Entity, Pack } from "../data/types";
 import { enrichEntity } from "../data/entityEnrichment";
 import { normalizeText } from "../utils/normalize";
-import { MapView } from "../map/MapView";
+import { MapView, type TargetMarkerColor, type TargetMarkerShape } from "../map/MapView";
 import { Hud } from "../ui/Hud";
 import { QuizPanel } from "../ui/QuizPanel";
 import type { QuizType } from "../quiz/quizTypes";
@@ -30,6 +30,8 @@ const MAP_DETAIL_KEY = "geo-bee-map-detail";
 const LOW_DATA_MODE_KEY = "geo-bee-low-data-mode";
 const SHOW_POLYGONS_KEY = "geo-bee-show-polygons";
 const DIFFICULTY_FILTER_KEY = "geo-bee-difficulty-filter";
+const TARGET_MARKER_SHAPE_KEY = "geo-bee-target-marker-shape";
+const TARGET_MARKER_COLOR_KEY = "geo-bee-target-marker-color";
 
 export class App {
   private readonly host: HTMLElement;
@@ -48,12 +50,16 @@ export class App {
   private mapDetail: MapDetail = "quiz_clean";
   private lowDataMode = true;
   private showPolygons = true;
+  private targetMarkerShape: TargetMarkerShape = "star";
+  private targetMarkerColor: TargetMarkerColor = "cyan";
   private selectedDifficulties: Difficulty[] = ["easy", "medium", "hard"];
   private currentPackId = "";
   private currentEntity: Entity | null = null;
   private hintLength = 2;
   private hintTokenIndex = 0;
   private learnEnrichmentToken = 0;
+  private lastAutoPronouncedEntityId: string | null = null;
+  private learnDetailsHidden = false;
 
   private score = 0;
   private streak = 0;
@@ -110,11 +116,6 @@ export class App {
         this.currentPackId = packId;
         void this.startRound();
       },
-      onQuizTypeChange: (quizType) => {
-        this.quizType = quizType;
-        this.matchRound = null;
-        void this.startRound();
-      },
       onMapDetailChange: (mapDetail) => {
         this.mapDetail = mapDetail;
         localStorage.setItem(MAP_DETAIL_KEY, mapDetail);
@@ -135,20 +136,43 @@ export class App {
         localStorage.setItem(DIFFICULTY_FILTER_KEY, JSON.stringify(difficulties));
         void this.startRound();
       },
+      onTargetMarkerShapeChange: (shape) => {
+        this.targetMarkerShape = shape;
+        localStorage.setItem(TARGET_MARKER_SHAPE_KEY, shape);
+        this.mapView?.setTargetMarkerStyle(this.targetMarkerShape, this.targetMarkerColor);
+      },
+      onTargetMarkerColorChange: (color) => {
+        this.targetMarkerColor = color;
+        localStorage.setItem(TARGET_MARKER_COLOR_KEY, color);
+        this.mapView?.setTargetMarkerStyle(this.targetMarkerShape, this.targetMarkerColor);
+      },
       onResetProgress: () => {
         this.handleResetProgress();
       },
       onHint: () => this.handleHint(),
       onReveal: () => this.handleReveal(),
+      onKnowFromHud: () => this.handleLearnAction(true),
+      onPracticeFromHud: () => this.handleLearnAction(false),
+      onRepeatFromHud: () => this.handleLearnRepeat(),
       onNext: () => void this.startRound(),
+      onShowLearnDetails: () => this.setLearnDetailsHidden(false),
       onEntitySearch: (query) => this.handleEntitySearch(query)
     });
 
     this.panel = new QuizPanel({
       onSubmit: (answer) => this.handleSubmit(answer),
+      onNextQuestion: () => {
+        void this.startRound(this.currentEntity?.id);
+      },
       onKnowIt: () => this.handleLearnAction(true),
       onNeedPractice: () => this.handleLearnAction(false),
-      onSelectChoice: (choiceId) => this.handleChoiceSelection(choiceId)
+      onSelectChoice: (choiceId) => this.handleChoiceSelection(choiceId),
+      onHideDetails: () => this.setLearnDetailsHidden(true),
+      onQuizTypeChange: (quizType) => {
+        this.quizType = quizType;
+        this.matchRound = null;
+        void this.startRound();
+      }
     });
 
     app.append(this.hud.root, this.panel.root);
@@ -164,16 +188,22 @@ export class App {
     this.mapDetail = this.loadMapDetail();
     this.lowDataMode = this.loadLowDataMode();
     this.showPolygons = this.loadPolygonVisibility();
+    this.targetMarkerShape = this.loadTargetMarkerShape();
+    this.targetMarkerColor = this.loadTargetMarkerColor();
     this.selectedDifficulties = this.loadDifficultyFilter();
     this.hud.setMode(this.mode);
     this.hud.setPack(this.currentPackId);
     this.hud.setQuizType(this.quizType);
     this.hud.setMapDetail(this.mapDetail);
     this.hud.setLowDataMode(this.lowDataMode);
+    this.hud.setTargetMarkerShape(this.targetMarkerShape);
+    this.hud.setTargetMarkerColor(this.targetMarkerColor);
+    this.hud.setLearnDetailsHidden(this.learnDetailsHidden);
     this.hud.setPolygonVisibility(this.showPolygons);
     this.hud.setDifficultyFilter(this.selectedDifficulties);
     this.mapView.setLowDataMode(this.lowDataMode);
     this.mapView.setPolygonVisibility(this.showPolygons);
+    this.mapView.setTargetMarkerStyle(this.targetMarkerShape, this.targetMarkerColor);
     this.mapView.setMapDetail(this.mapDetail);
 
     await this.startRound();
@@ -231,25 +261,39 @@ export class App {
       this.hintTokenIndex = 0;
       this.mapView.setHighlightedEntity(this.currentEntity.id);
       this.panel.setHeading("Learn Mode");
+      this.panel.setQuizType(this.quizType);
+      this.panel.setQuizTypeSelectorVisible(false);
       this.panel.setHeadingVisible(false);
       this.panel.setLearnTargetTitle(this.learnTargetTitle(this.currentEntity));
       this.panel.setPromptVisible(false);
+      this.panel.setQuizStatsVisible(false);
       this.panel.setFeedbackVisible(false);
       this.panel.setAnswerVisible(false);
+      this.panel.setNextQuestionVisible(false);
       this.panel.setLearnActionsVisible(true);
+      this.setLearnDetailsHidden(this.learnDetailsHidden);
       this.showLearnEntityInfo(this.currentEntity);
       this.panel.setChoicesVisible(false);
       this.panel.setChoices([]);
       this.panel.setAnswerEnabled(false);
+      this.panel.setAnswerSuggestions([]);
     } else {
+      this.learnDetailsHidden = false;
+      this.setLearnDetailsHidden(false);
       this.panel.setHeading("Quiz Mode");
+      this.panel.setQuizType(this.quizType);
+      this.panel.setQuizTypeSelectorVisible(true);
       this.panel.setHeadingVisible(true);
       this.panel.setLearnTargetTitle(null);
       this.panel.setLearnActionsVisible(false);
       this.panel.setLearnEntityInfo(null);
       this.panel.setPromptVisible(true);
+      this.panel.setQuizStatsVisible(true);
+      this.panel.setQuizStats(this.quizStatsText());
       this.panel.setFeedbackVisible(true);
+      this.panel.setNextQuestionVisible(true);
       if (this.quizType === "match_round_5") {
+        this.panel.setAnswerSuggestions([]);
         this.setupMatchRound(items);
       } else {
         this.matchRound = null;
@@ -261,10 +305,11 @@ export class App {
         this.panel.setPrompt(this.quizPromptFor(this.currentEntity));
         this.panel.setFeedback("Type the answer and submit.");
         this.panel.setAnswerVisible(true);
+        this.panel.setAnswer("");
+        this.panel.setAnswerSuggestions(items.map((item) => item.name));
         this.panel.setChoicesVisible(false);
         this.panel.setChoices([]);
         this.panel.setAnswerEnabled(true);
-        this.panel.focusAnswer();
       }
     }
 
@@ -274,6 +319,9 @@ export class App {
       streak: this.streak,
       progress: this.mode === "learn" ? `Mastered ${masteredCount} / ${items.length}` : `${this.attempted} / ${items.length}`
     });
+    if (this.mode === "quiz") {
+      this.panel.setQuizStats(this.quizStatsText());
+    }
   }
 
   private handleSubmit(answer: string): void {
@@ -281,9 +329,14 @@ export class App {
       return;
     }
 
-    this.attempted += 1;
+    const resolution = this.resolveTypedQuizAnswer(answer);
+    if (resolution.status === "ambiguous") {
+      this.panel.setFeedback(`Multiple matches (${resolution.matches.slice(0, 4).join(", ")}). Type a bit more.`);
+      return;
+    }
 
-    const gotIt = normalizeText(answer) === normalizeText(this.currentEntity.name);
+    this.attempted += 1;
+    const gotIt = resolution.status === "resolved" && resolution.entity.id === this.currentEntity.id;
     if (gotIt) {
       this.score += 1;
       this.streak += 1;
@@ -301,6 +354,43 @@ export class App {
       streak: this.streak,
       progress: `${this.attempted} / ${packSize}`
     });
+    this.panel.setQuizStats(this.quizStatsText());
+  }
+
+  private resolveTypedQuizAnswer(
+    answer: string
+  ):
+    | { status: "resolved"; entity: Entity }
+    | { status: "ambiguous"; matches: string[] }
+    | { status: "none" } {
+    const needle = normalizeText(answer);
+    if (!needle) {
+      return { status: "none" };
+    }
+
+    const exact = this.activePackEntities.find((entity) => {
+      if (normalizeText(entity.name) === needle) {
+        return true;
+      }
+      return (entity.aliases ?? []).some((alias) => normalizeText(alias) === needle);
+    });
+    if (exact) {
+      return { status: "resolved", entity: exact };
+    }
+
+    const startsWith = this.activePackEntities.filter((entity) => {
+      if (normalizeText(entity.name).startsWith(needle)) {
+        return true;
+      }
+      return (entity.aliases ?? []).some((alias) => normalizeText(alias).startsWith(needle));
+    });
+    if (startsWith.length === 1) {
+      return { status: "resolved", entity: startsWith[0] };
+    }
+    if (startsWith.length > 1) {
+      return { status: "ambiguous", matches: startsWith.map((item) => item.name) };
+    }
+    return { status: "none" };
   }
 
   private handleChoiceSelection(choiceId: string): void {
@@ -352,6 +442,7 @@ export class App {
       streak: this.streak,
       progress: `${this.attempted} / ${this.activePackEntities.length}`
     });
+    this.panel?.setQuizStats(this.quizStatsText());
   }
 
   private handleLearnAction(knewIt: boolean): void {
@@ -363,7 +454,7 @@ export class App {
     if (knewIt) {
       this.markMasteredFromLearn(priorId);
     } else {
-      this.recordProgress(priorId, false);
+      this.markLearningFromLearn(priorId);
     }
     const mastery = this.getMastery(priorId);
     this.panel?.setFeedback(
@@ -425,6 +516,11 @@ export class App {
       streak: this.streak,
       progress: `${this.attempted} / ${this.activePackEntities.length}`
     });
+    this.panel?.setQuizStats(this.quizStatsText());
+  }
+
+  private quizStatsText(): string {
+    return `Score: ${this.score} | Streak: ${this.streak} | Attempted: ${this.attempted}/${this.activePackEntities.length}`;
   }
 
   private pickRandom(items: Entity[], excludeEntityId?: string): Entity {
@@ -579,6 +675,37 @@ export class App {
     }
   }
 
+  private loadTargetMarkerShape(): TargetMarkerShape {
+    const raw = localStorage.getItem(TARGET_MARKER_SHAPE_KEY);
+    if (
+      raw === "star" ||
+      raw === "circle" ||
+      raw === "diamond" ||
+      raw === "pin" ||
+      raw === "triangle" ||
+      raw === "square"
+    ) {
+      return raw;
+    }
+    return "star";
+  }
+
+  private loadTargetMarkerColor(): TargetMarkerColor {
+    const raw = localStorage.getItem(TARGET_MARKER_COLOR_KEY);
+    if (
+      raw === "cyan" ||
+      raw === "gold" ||
+      raw === "pink" ||
+      raw === "lime" ||
+      raw === "violet" ||
+      raw === "orange" ||
+      raw === "teal"
+    ) {
+      return raw;
+    }
+    return "cyan";
+  }
+
   private loadPolygonVisibility(): boolean {
     const raw = localStorage.getItem(SHOW_POLYGONS_KEY);
     if (raw === "0") {
@@ -636,12 +763,44 @@ export class App {
     this.showLearnEntityInfo(match);
   }
 
-  private showLearnEntityInfo(entity: Entity): void {
+  private setLearnDetailsHidden(hidden: boolean): void {
+    if (!this.panel || !this.hud) {
+      return;
+    }
+    this.learnDetailsHidden = hidden;
+    this.panel.setLearnDetailsHidden(hidden);
+    this.hud.setLearnDetailsHidden(hidden);
+  }
+
+  private handleLearnRepeat(): void {
+    if (this.mode !== "learn" || !this.currentEntity || !this.mapView || !this.panel) {
+      return;
+    }
+    this.learnDetailsHidden = false;
+    this.setLearnDetailsHidden(false);
+    this.mapView.setHighlightedEntity(this.currentEntity.id);
+    this.mapView.focusEntity(this.currentEntity);
+    this.showLearnEntityInfo(this.currentEntity, { autoSpeak: false });
+    this.panel.autoPronounceEntity(this.currentEntity);
+    this.panel.setFeedback("Repeating this location.");
+  }
+
+  private showLearnEntityInfo(entity: Entity, options?: { autoSpeak?: boolean }): void {
     if (!this.panel) {
       return;
     }
     const token = ++this.learnEnrichmentToken;
     this.panel.setLearnEntityInfo(entity);
+    const shouldAutoSpeak = options?.autoSpeak ?? true;
+    if (shouldAutoSpeak && this.lastAutoPronouncedEntityId !== entity.id) {
+      this.lastAutoPronouncedEntityId = entity.id;
+      setTimeout(() => {
+        if (!this.panel || this.mode !== "learn" || this.currentEntity?.id !== entity.id) {
+          return;
+        }
+        this.panel.autoPronounceEntity(entity);
+      }, 120);
+    }
     void enrichEntity(entity).then((extra) => {
       if (!this.panel || token !== this.learnEnrichmentToken) {
         return;
@@ -733,6 +892,25 @@ export class App {
       streak,
       lastSeen: Date.now(),
       lastResult: true
+    };
+    saveProgress(this.progress);
+  }
+
+  private markLearningFromLearn(entityId: string): void {
+    const prev = this.progress[entityId] ?? {
+      seenCount: 0,
+      correctCount: 0,
+      streak: 0,
+      lastSeen: null,
+      lastResult: null
+    };
+
+    this.progress[entityId] = {
+      seenCount: Math.max(prev.seenCount + 1, 2),
+      correctCount: Math.min(prev.correctCount, 1),
+      streak: 0,
+      lastSeen: Date.now(),
+      lastResult: false
     };
     saveProgress(this.progress);
   }

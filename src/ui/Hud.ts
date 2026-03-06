@@ -1,12 +1,12 @@
 import type { Difficulty, Pack } from "../data/types";
 import type { QuizType } from "../quiz/quizTypes";
+import type { TargetMarkerColor, TargetMarkerShape } from "../map/MapView";
 
 const SETTINGS_OPEN_KEY = "geo-bee-settings-open";
 
 type HudActions = {
   onModeChange: (mode: "learn" | "quiz") => void;
   onPackChange: (packId: string) => void;
-  onQuizTypeChange: (quizType: QuizType) => void;
   onMapDetailChange: (
     mapDetail:
       | "quiz_clean"
@@ -25,7 +25,13 @@ type HudActions = {
   onHint: () => void;
   onReveal: () => void;
   onNext: () => void;
+  onKnowFromHud: () => void;
+  onPracticeFromHud: () => void;
+  onRepeatFromHud: () => void;
+  onShowLearnDetails: () => void;
   onEntitySearch: (query: string) => void;
+  onTargetMarkerShapeChange: (shape: TargetMarkerShape) => void;
+  onTargetMarkerColorChange: (color: TargetMarkerColor) => void;
 };
 
 type HudStats = {
@@ -40,7 +46,6 @@ export class Hud {
   private readonly hudPillEl: HTMLElement;
   private readonly modeSelect: HTMLSelectElement;
   private readonly packSelect: HTMLSelectElement;
-  private readonly quizTypeSelect: HTMLSelectElement;
   private readonly mapDetailSelect: HTMLSelectElement;
   private readonly lowDataCheckbox: HTMLInputElement;
   private readonly polygonCheckbox: HTMLInputElement;
@@ -51,20 +56,30 @@ export class Hud {
   private readonly entitySearchInput: HTMLInputElement;
   private readonly entitySearchButton: HTMLButtonElement;
   private readonly entitySearchDatalist: HTMLDataListElement;
+  private readonly targetMarkerPreview: HTMLElement;
+  private readonly targetMarkerShapeButtons: HTMLButtonElement[];
+  private readonly targetMarkerColorButtons: HTMLButtonElement[];
   private readonly summaryEl: HTMLElement;
   private readonly hintButton: HTMLButtonElement;
   private readonly revealButton: HTMLButtonElement;
-  private readonly nextButton: HTMLButtonElement;
+  private readonly learnKnownButton: HTMLButtonElement;
+  private readonly learnPracticeButton: HTMLButtonElement;
+  private readonly learnRepeatButton: HTMLButtonElement;
+  private readonly learnNextButton: HTMLButtonElement;
+  private readonly quickSearchButton: HTMLButtonElement;
+  private readonly detailToggleButton: HTMLButtonElement;
   private readonly settingsPanel: HTMLElement;
   private readonly settingsToggleButton: HTMLButtonElement;
   private readonly settingsCloseButton: HTMLButtonElement;
   private readonly settingsDragHandleEl: HTMLElement;
+  private mode: "learn" | "quiz" = "learn";
   private dragging = false;
   private dragOffsetX = 0;
   private dragOffsetY = 0;
   private settingsDragging = false;
   private settingsDragOffsetX = 0;
   private settingsDragOffsetY = 0;
+  private settingsOpen = false;
 
   constructor(packs: Pack[], actions: HudActions) {
     this.root = document.createElement("header");
@@ -73,7 +88,6 @@ export class Hud {
     this.root.innerHTML = `
       <div class="hud-pill" data-role="hud-pill">
         <label class="hud-mode-label">
-          <span>Mode</span>
           <select aria-label="Mode" data-role="mode">
             <option value="learn">Learn</option>
             <option value="quiz">Quiz</option>
@@ -83,7 +97,12 @@ export class Hud {
         <div class="hud-context-actions">
           <button type="button" data-role="hint">Hint</button>
           <button type="button" data-role="reveal">Reveal</button>
-          <button type="button" data-role="next">Next</button>
+          <button type="button" data-role="learn-known" class="hud-learn-btn hud-learn-btn--known" aria-label="Known">✅</button>
+          <button type="button" data-role="learn-practice" class="hud-learn-btn hud-learn-btn--practice" aria-label="Needs practice">🟡</button>
+          <button type="button" data-role="learn-repeat" class="hud-learn-btn hud-learn-btn--repeat" aria-label="Repeat now">🔁</button>
+          <button type="button" data-role="learn-next" class="hud-learn-btn hud-learn-btn--next" aria-label="Next">➡️</button>
+          <button type="button" data-role="quick-search" class="hud-learn-btn hud-learn-btn--search" aria-label="Search">🔎</button>
+          <button type="button" data-role="detail-toggle">Show Detail</button>
           <button type="button" data-role="settings-toggle" class="hud-settings-toggle" aria-label="Open settings">
             ⚙ Settings
           </button>
@@ -107,13 +126,6 @@ export class Hud {
           <datalist id="entity-search-list" data-role="entity-search-list"></datalist>
         </label>
         <label>
-          Quiz Type
-          <select aria-label="Quiz Type" data-role="quiz-type">
-            <option value="match_round_5">Match Round (5)</option>
-            <option value="identify_highlighted_typein">Identify Highlighted</option>
-          </select>
-        </label>
-        <label>
           Map Detail
           <select aria-label="Map Detail" data-role="map-detail">
             <option value="quiz_clean">Quiz Clean</option>
@@ -125,6 +137,35 @@ export class Hud {
             <option value="satellite">Satellite</option>
             <option value="night_lights">Night Lights</option>
           </select>
+        </label>
+        <label>
+          Target Marker Shape
+          <div class="hud-marker-picker-row" data-role="target-marker-shapes">
+            <button type="button" class="hud-marker-shape-btn" data-shape="star">⭐ Star</button>
+            <button type="button" class="hud-marker-shape-btn" data-shape="circle">● Circle</button>
+            <button type="button" class="hud-marker-shape-btn" data-shape="diamond">◆ Diamond</button>
+            <button type="button" class="hud-marker-shape-btn" data-shape="pin">📍 Pin</button>
+            <button type="button" class="hud-marker-shape-btn" data-shape="triangle">▲ Triangle</button>
+            <button type="button" class="hud-marker-shape-btn" data-shape="square">■ Square</button>
+          </div>
+        </label>
+        <label>
+          Target Marker Color
+          <div class="hud-marker-picker-row" data-role="target-marker-colors">
+            <button type="button" class="hud-marker-color-btn" data-color="cyan"><span class="hud-color-dot"></span>Cyan</button>
+            <button type="button" class="hud-marker-color-btn" data-color="gold"><span class="hud-color-dot"></span>Gold</button>
+            <button type="button" class="hud-marker-color-btn" data-color="pink"><span class="hud-color-dot"></span>Pink</button>
+            <button type="button" class="hud-marker-color-btn" data-color="lime"><span class="hud-color-dot"></span>Lime</button>
+            <button type="button" class="hud-marker-color-btn" data-color="violet"><span class="hud-color-dot"></span>Violet</button>
+            <button type="button" class="hud-marker-color-btn" data-color="orange"><span class="hud-color-dot"></span>Orange</button>
+            <button type="button" class="hud-marker-color-btn" data-color="teal"><span class="hud-color-dot"></span>Teal</button>
+          </div>
+        </label>
+        <label>
+          Preview
+          <div class="hud-target-preview-wrap">
+            <div data-role="target-marker-preview" class="hud-target-preview hud-target-preview--star"></div>
+          </div>
         </label>
         <label style="display: flex; align-items: center; gap: 6px;">
           <input type="checkbox" data-role="low-data" />
@@ -148,7 +189,6 @@ export class Hud {
     this.hudPillEl = this.query<HTMLElement>("[data-role='hud-pill']");
     this.modeSelect = this.query<HTMLSelectElement>("[data-role='mode']");
     this.packSelect = this.query<HTMLSelectElement>("[data-role='pack']");
-    this.quizTypeSelect = this.query<HTMLSelectElement>("[data-role='quiz-type']");
     this.mapDetailSelect = this.query<HTMLSelectElement>("[data-role='map-detail']");
     this.lowDataCheckbox = this.query<HTMLInputElement>("[data-role='low-data']");
     this.polygonCheckbox = this.query<HTMLInputElement>("[data-role='show-polygons']");
@@ -159,10 +199,22 @@ export class Hud {
     this.entitySearchInput = this.query<HTMLInputElement>("[data-role='entity-search']");
     this.entitySearchButton = this.query<HTMLButtonElement>("[data-role='entity-search-go']");
     this.entitySearchDatalist = this.query<HTMLDataListElement>("[data-role='entity-search-list']");
+    this.targetMarkerPreview = this.query<HTMLElement>("[data-role='target-marker-preview']");
+    this.targetMarkerShapeButtons = Array.from(
+      this.root.querySelectorAll<HTMLButtonElement>("[data-role='target-marker-shapes'] [data-shape]")
+    );
+    this.targetMarkerColorButtons = Array.from(
+      this.root.querySelectorAll<HTMLButtonElement>("[data-role='target-marker-colors'] [data-color]")
+    );
     this.summaryEl = this.query<HTMLElement>("[data-role='summary']");
     this.hintButton = this.query<HTMLButtonElement>("[data-role='hint']");
     this.revealButton = this.query<HTMLButtonElement>("[data-role='reveal']");
-    this.nextButton = this.query<HTMLButtonElement>("[data-role='next']");
+    this.learnKnownButton = this.query<HTMLButtonElement>("[data-role='learn-known']");
+    this.learnPracticeButton = this.query<HTMLButtonElement>("[data-role='learn-practice']");
+    this.learnRepeatButton = this.query<HTMLButtonElement>("[data-role='learn-repeat']");
+    this.learnNextButton = this.query<HTMLButtonElement>("[data-role='learn-next']");
+    this.quickSearchButton = this.query<HTMLButtonElement>("[data-role='quick-search']");
+    this.detailToggleButton = this.query<HTMLButtonElement>("[data-role='detail-toggle']");
     this.settingsPanel = this.query<HTMLElement>("[data-role='settings-panel']");
     this.settingsToggleButton = this.query<HTMLButtonElement>("[data-role='settings-toggle']");
     this.settingsCloseButton = this.query<HTMLButtonElement>("[data-role='settings-close']");
@@ -183,9 +235,6 @@ export class Hud {
       actions.onPackChange(this.packSelect.value);
     });
 
-    this.quizTypeSelect.addEventListener("change", () => {
-      actions.onQuizTypeChange(this.quizTypeSelect.value as QuizType);
-    });
     this.mapDetailSelect.addEventListener("change", () => {
       actions.onMapDetailChange(
         this.mapDetailSelect.value as
@@ -199,6 +248,26 @@ export class Hud {
           | "night_lights"
       );
     });
+    for (const button of this.targetMarkerShapeButtons) {
+      button.addEventListener("click", () => {
+        const shape = button.dataset.shape as TargetMarkerShape | undefined;
+        if (!shape) {
+          return;
+        }
+        this.setTargetMarkerShape(shape);
+        actions.onTargetMarkerShapeChange(shape);
+      });
+    }
+    for (const button of this.targetMarkerColorButtons) {
+      button.addEventListener("click", () => {
+        const color = button.dataset.color as TargetMarkerColor | undefined;
+        if (!color) {
+          return;
+        }
+        this.setTargetMarkerColor(color);
+        actions.onTargetMarkerColorChange(color);
+      });
+    }
     this.lowDataCheckbox.addEventListener("change", () => {
       actions.onLowDataModeChange(this.lowDataCheckbox.checked);
     });
@@ -227,7 +296,28 @@ export class Hud {
 
     this.hintButton.addEventListener("click", actions.onHint);
     this.revealButton.addEventListener("click", actions.onReveal);
-    this.nextButton.addEventListener("click", actions.onNext);
+    this.learnKnownButton.addEventListener("click", () => {
+      this.ackLearnButton(this.learnKnownButton);
+      actions.onKnowFromHud();
+    });
+    this.learnPracticeButton.addEventListener("click", () => {
+      this.ackLearnButton(this.learnPracticeButton);
+      actions.onPracticeFromHud();
+    });
+    this.learnRepeatButton.addEventListener("click", () => {
+      this.ackLearnButton(this.learnRepeatButton);
+      actions.onRepeatFromHud();
+    });
+    this.learnNextButton.addEventListener("click", () => {
+      this.ackLearnButton(this.learnNextButton);
+      actions.onNext();
+    });
+    this.quickSearchButton.addEventListener("click", () => {
+      this.setSettingsPanelOpen(true);
+      this.entitySearchInput.focus();
+      this.entitySearchInput.select();
+    });
+    this.detailToggleButton.addEventListener("click", actions.onShowLearnDetails);
     this.query<HTMLButtonElement>("[data-role='reset-progress']").addEventListener("click", actions.onResetProgress);
 
     this.setSettingsPanelOpen(localStorage.getItem(SETTINGS_OPEN_KEY) === "1");
@@ -321,23 +411,41 @@ export class Hud {
     };
     this.settingsDragHandleEl.addEventListener("pointerup", (event) => stopSettingsDrag(event.pointerId));
     this.settingsDragHandleEl.addEventListener("pointercancel", (event) => stopSettingsDrag(event.pointerId));
+
+    document.addEventListener("pointerdown", (event) => {
+      if (!this.settingsOpen) {
+        return;
+      }
+      const target = event.target as Node | null;
+      if (!target) {
+        return;
+      }
+      if (this.settingsPanel.contains(target) || this.settingsToggleButton.contains(target)) {
+        return;
+      }
+      this.setSettingsPanelOpen(false);
+    });
   }
 
   setMode(mode: "learn" | "quiz"): void {
+    this.mode = mode;
     this.modeSelect.value = mode;
     const inQuiz = mode === "quiz";
     this.hintButton.style.display = inQuiz ? "inline-block" : "none";
     this.revealButton.style.display = inQuiz ? "inline-block" : "none";
-    this.nextButton.style.display = inQuiz ? "none" : "inline-block";
+    this.learnKnownButton.style.display = inQuiz ? "none" : "inline-block";
+    this.learnPracticeButton.style.display = inQuiz ? "none" : "inline-block";
+    this.learnRepeatButton.style.display = inQuiz ? "none" : "inline-block";
+    this.learnNextButton.style.display = inQuiz ? "none" : "inline-block";
+    this.quickSearchButton.style.display = inQuiz ? "none" : "inline-block";
+    this.detailToggleButton.style.display = "none";
   }
 
   setPack(packId: string): void {
     this.packSelect.value = packId;
   }
 
-  setQuizType(quizType: QuizType): void {
-    this.quizTypeSelect.value = quizType;
-  }
+  setQuizType(_quizType: QuizType): void {}
 
   setMapDetail(
     mapDetail:
@@ -355,6 +463,33 @@ export class Hud {
 
   setLowDataMode(enabled: boolean): void {
     this.lowDataCheckbox.checked = enabled;
+  }
+
+  setTargetMarkerShape(shape: TargetMarkerShape): void {
+    for (const button of this.targetMarkerShapeButtons) {
+      button.classList.toggle("is-active", button.dataset.shape === shape);
+    }
+    this.targetMarkerPreview.classList.remove(
+      "hud-target-preview--star",
+      "hud-target-preview--circle",
+      "hud-target-preview--diamond",
+      "hud-target-preview--pin",
+      "hud-target-preview--triangle",
+      "hud-target-preview--square"
+    );
+    this.targetMarkerPreview.classList.add(`hud-target-preview--${shape}`);
+  }
+
+  setTargetMarkerColor(color: TargetMarkerColor): void {
+    for (const button of this.targetMarkerColorButtons) {
+      const isActive = button.dataset.color === color;
+      button.classList.toggle("is-active", isActive);
+      const dot = button.querySelector<HTMLElement>(".hud-color-dot");
+      if (dot) {
+        dot.style.background = this.markerColorHex(button.dataset.color as TargetMarkerColor);
+      }
+    }
+    this.targetMarkerPreview.style.setProperty("--preview-accent", this.markerColorHex(color));
   }
 
   setPolygonVisibility(enabled: boolean): void {
@@ -387,7 +522,11 @@ export class Hud {
   }
 
   setStats(stats: HudStats): void {
-    this.summaryEl.textContent = `${stats.progress} | Score ${stats.score} | Streak ${stats.streak}`;
+    this.summaryEl.textContent = stats.progress;
+  }
+
+  setLearnDetailsHidden(hidden: boolean): void {
+    this.detailToggleButton.style.display = this.mode === "learn" && hidden ? "inline-block" : "none";
   }
 
   private query<T extends HTMLElement>(selector: string): T {
@@ -419,6 +558,7 @@ export class Hud {
   }
 
   private setSettingsPanelOpen(open: boolean): void {
+    this.settingsOpen = open;
     this.settingsPanel.hidden = !open;
     this.settingsToggleButton.style.display = open ? "none" : "inline-block";
     localStorage.setItem(SETTINGS_OPEN_KEY, open ? "1" : "0");
@@ -426,5 +566,34 @@ export class Hud {
 
   private isInteractiveTarget(target: HTMLElement): boolean {
     return Boolean(target.closest("button, input, select, textarea, label, a"));
+  }
+
+  private ackLearnButton(button: HTMLButtonElement): void {
+    button.classList.remove("hud-learn-btn--ack");
+    void button.offsetWidth;
+    button.classList.add("hud-learn-btn--ack");
+    window.setTimeout(() => {
+      button.classList.remove("hud-learn-btn--ack");
+    }, 340);
+  }
+
+  private markerColorHex(color: TargetMarkerColor): string {
+    switch (color) {
+      case "gold":
+        return "#f59e0b";
+      case "pink":
+        return "#ec4899";
+      case "lime":
+        return "#84cc16";
+      case "violet":
+        return "#8b5cf6";
+      case "orange":
+        return "#f97316";
+      case "teal":
+        return "#14b8a6";
+      case "cyan":
+      default:
+        return "#22d3ee";
+    }
   }
 }

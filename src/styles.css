@@ -81,6 +81,39 @@ body,
   cursor: pointer;
 }
 
+.hud-learn-btn {
+  width: 38px;
+  min-width: 38px;
+  padding: 7px 0 !important;
+  font-size: 18px;
+  line-height: 1;
+  font-weight: 700;
+  transition: transform 120ms ease, background-color 160ms ease, color 160ms ease, border-color 160ms ease;
+}
+
+.hud-learn-btn--known {
+  border: 1px solid #16a34a !important;
+  background: #f0fdf4 !important;
+  color: #166534 !important;
+}
+
+.hud-learn-btn--practice {
+  border: 1px solid #d97706 !important;
+  background: #fffbeb !important;
+  color: #b45309 !important;
+}
+
+.hud-learn-btn--repeat {
+  border: 1px solid #2563eb !important;
+  background: #eff6ff !important;
+  color: #1d4ed8 !important;
+}
+
+.hud-learn-btn--ack {
+  transform: scale(1.06);
+  filter: brightness(0.96);
+}
+
 .hud-pill select,
 .hud-pill button,
 .hud-pill input,
@@ -92,7 +125,6 @@ body,
 .hud-mode-label {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
 }
 
 .hud-summary {
@@ -166,6 +198,95 @@ body,
   cursor: pointer;
 }
 
+.hud-marker-picker-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.hud-marker-shape-btn,
+.hud-marker-color-btn {
+  border: 1px solid rgba(148, 163, 184, 0.5) !important;
+  background: rgba(255, 255, 255, 0.95) !important;
+  color: #0b2739 !important;
+  padding: 7px 10px !important;
+  font-weight: 600;
+}
+
+.hud-marker-shape-btn.is-active,
+.hud-marker-color-btn.is-active {
+  border-color: #22c55e !important;
+  box-shadow: 0 0 0 2px rgba(34, 197, 94, 0.2);
+}
+
+.hud-marker-color-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.hud-color-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(15, 23, 42, 0.25);
+  background: #22d3ee;
+}
+
+.hud-target-preview-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 70px;
+  border-radius: 10px;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.hud-target-preview {
+  width: 42px;
+  height: 42px;
+  --preview-accent: #22d3ee;
+  background: var(--preview-accent);
+  filter: drop-shadow(0 0 12px color-mix(in srgb, var(--preview-accent) 70%, transparent));
+}
+
+.hud-target-preview--star {
+  clip-path: polygon(
+    50% 2%,
+    61% 35%,
+    97% 35%,
+    68% 56%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 56%,
+    3% 35%,
+    39% 35%
+  );
+}
+
+.hud-target-preview--circle {
+  border-radius: 999px;
+}
+
+.hud-target-preview--diamond {
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+.hud-target-preview--pin {
+  clip-path: polygon(50% 2%, 68% 10%, 80% 27%, 79% 44%, 67% 59%, 50% 97%, 33% 59%, 21% 44%, 20% 27%, 32% 10%);
+}
+
+.hud-target-preview--triangle {
+  clip-path: polygon(50% 2%, 98% 94%, 2% 94%);
+}
+
+.hud-target-preview--square {
+  clip-path: none;
+  border-radius: 6px;
+}
+
 .hud-settings-header {
   display: flex;
   align-items: center;
@@ -235,6 +356,51 @@ body,
   margin: 0 0 8px;
   font-size: 18px;
 }
+
+.quiz-panel-tools {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 6px;
+}
+
+.quiz-panel-mode {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: #334e68;
+}
+
+.quiz-panel-mode select {
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 6px 8px;
+  background: #fff;
+  color: #102a43;
+}
+
+.quiz-stats {
+  margin: 4px 0 8px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  background: #eef5ff;
+  border: 1px solid #d6e4ff;
+  color: #1e3a8a;
+  font-weight: 600;
+}
+
+.quiz-panel-hide-btn {
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #102a43;
+  padding: 6px 10px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
 
 .learn-info {
   margin-top: 10px;
@@ -345,6 +511,38 @@ body,
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
+}
+
+.learn-speech-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 6px 0 8px;
+  flex-wrap: wrap;
+}
+
+.learn-speech-btn {
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #102a43;
+  padding: 6px 10px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.learn-speech-btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.learn-speech-speed {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: #334e68;
 }
 
 .learn-chip {
@@ -545,12 +743,13 @@ body,
   place-items: center;
   position: relative;
   pointer-events: none;
+  --target-accent: #22d3ee;
 }
 
 .target-dot-core {
   width: 34px;
   height: 34px;
-  background: linear-gradient(180deg, #22d3ee 0%, #2563eb 100%);
+  background: var(--target-accent);
   clip-path: polygon(
     50% 2%,
     61% 35%,
@@ -563,7 +762,8 @@ body,
     3% 35%,
     39% 35%
   );
-  box-shadow: 0 0 0 3px #ffffff, 0 0 0 6px #0f172a, 0 0 26px rgba(34, 211, 238, 0.9), 0 6px 16px rgba(0, 0, 0, 0.45);
+  box-shadow: 0 0 0 3px #ffffff, 0 0 0 6px #0f172a, 0 0 26px color-mix(in srgb, var(--target-accent) 85%, transparent),
+    0 6px 16px rgba(0, 0, 0, 0.45);
   animation: target-core-flicker 1s ease-in-out infinite;
 }
 
@@ -572,8 +772,8 @@ body,
   width: 52px;
   height: 52px;
   border-radius: 999px;
-  border: 4px solid rgba(34, 211, 238, 0.98);
-  box-shadow: 0 0 30px rgba(34, 211, 238, 0.85);
+  border: 4px solid color-mix(in srgb, var(--target-accent) 90%, white 10%);
+  box-shadow: 0 0 30px color-mix(in srgb, var(--target-accent) 80%, transparent);
   animation: target-ping 1s ease-out infinite;
 }
 
@@ -582,13 +782,35 @@ body,
 }
 
 .target-dot--quiz .target-dot-core {
-  background: linear-gradient(180deg, #fb7185 0%, #f97316 100%);
-  box-shadow: 0 0 0 2px #7f1d1d, 0 0 18px rgba(251, 113, 133, 0.55), 0 4px 14px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 0 0 2px #7f1d1d, 0 0 18px color-mix(in srgb, var(--target-accent) 65%, transparent),
+    0 4px 14px rgba(0, 0, 0, 0.35);
 }
 
 .target-dot--quiz .target-dot-ping {
-  border-color: rgba(251, 113, 133, 0.88);
-  box-shadow: 0 0 22px rgba(251, 113, 133, 0.65);
+  border-color: color-mix(in srgb, var(--target-accent) 80%, white 20%);
+  box-shadow: 0 0 22px color-mix(in srgb, var(--target-accent) 65%, transparent);
+}
+
+.target-dot--circle .target-dot-core {
+  clip-path: none;
+  border-radius: 999px;
+}
+
+.target-dot--diamond .target-dot-core {
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+.target-dot--pin .target-dot-core {
+  clip-path: polygon(50% 2%, 68% 10%, 80% 27%, 79% 44%, 67% 59%, 50% 97%, 33% 59%, 21% 44%, 20% 27%, 32% 10%);
+}
+
+.target-dot--triangle .target-dot-core {
+  clip-path: polygon(50% 2%, 98% 94%, 2% 94%);
+}
+
+.target-dot--square .target-dot-core {
+  clip-path: none;
+  border-radius: 6px;
 }
 
 @keyframes target-core-flicker {
@@ -673,9 +895,76 @@ body,
 }
 
 @media (max-width: 900px) {
-  .quiz-panel {
-    right: 12px;
-    left: 12px;
-    width: auto;
+  .hud {
+    position: fixed;
+    left: 8px !important;
+    right: 8px !important;
+    top: auto !important;
+    bottom: 8px !important;
+    transform: none !important;
+    justify-content: stretch;
+    z-index: 8;
   }
+
+  .hud-pill {
+    width: 100%;
+    border-radius: 14px;
+    padding: 8px;
+    gap: 6px;
+    justify-content: space-between;
+    cursor: default;
+  }
+
+  .hud-summary {
+    order: 3;
+    width: 100%;
+    text-align: center;
+    font-size: 13px;
+    padding: 5px 8px;
+  }
+
+  .hud-context-actions {
+    margin-left: auto;
+    gap: 6px;
+  }
+
+  .hud-settings-panel {
+    position: fixed;
+    left: 8px !important;
+    right: 8px !important;
+    top: auto !important;
+    bottom: 72px !important;
+    width: auto;
+    max-height: 56vh;
+    z-index: 10;
+  }
+
+  .quiz-panel {
+    position: fixed;
+    left: 8px !important;
+    right: 8px !important;
+    top: auto !important;
+    bottom: 84px !important;
+    width: auto !important;
+    max-height: 42vh;
+    overflow: auto;
+    z-index: 9;
+  }
+
+  .quiz-panel-drag-strip {
+    display: none;
+  }
+
+  .learn-actions-row {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .learn-know-btn,
+  .learn-practice-btn {
+    min-width: 130px;
+    font-size: 15px;
+    padding: 9px 12px !important;
+  }
+
 }

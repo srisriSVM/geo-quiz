@@ -1,10 +1,15 @@
 import type { Entity } from "../data/types";
+import type { QuizType } from "../quiz/quizTypes";
+import { normalizeText } from "../utils/normalize";
 
 type QuizPanelActions = {
   onSubmit: (answer: string) => void;
+  onNextQuestion: () => void;
   onKnowIt: () => void;
   onNeedPractice: () => void;
   onSelectChoice: (choiceId: string) => void;
+  onHideDetails: () => void;
+  onQuizTypeChange: (quizType: QuizType) => void;
 };
 
 type ChoiceItem = {
@@ -17,19 +22,29 @@ export class QuizPanel {
   readonly root: HTMLElement;
 
   private readonly dragStripEl: HTMLElement;
+  private readonly panelHideButton: HTMLButtonElement;
+  private readonly quizTypeWrapEl: HTMLElement;
+  private readonly quizTypeSelectEl: HTMLSelectElement;
   private readonly headingEl: HTMLElement;
   private readonly promptEl: HTMLElement;
+  private readonly quizStatsEl: HTMLElement;
   private readonly answerGroupEl: HTMLElement;
   private readonly answerInput: HTMLInputElement;
+  private readonly answerSuggestionsEl: HTMLDataListElement;
   private readonly feedbackEl: HTMLElement;
   private readonly learnTitleEl: HTMLElement;
   private readonly submitButton: HTMLButtonElement;
   private readonly learnActionsEl: HTMLElement;
   private readonly knowItButton: HTMLButtonElement;
   private readonly needPracticeButton: HTMLButtonElement;
+  private readonly nextQuestionButton: HTMLButtonElement;
   private readonly choicesEl: HTMLElement;
   private readonly learnInfoEl: HTMLElement;
+  private answerSuggestionPool: string[] = [];
   private mediaRenderToken = 0;
+  private speechSlow = true;
+  private lastSpokenText = "";
+  private autoPronounceEnabled = true;
   private dragging = false;
   private dragOffsetX = 0;
   private dragOffsetY = 0;
@@ -40,14 +55,27 @@ export class QuizPanel {
 
     this.root.innerHTML = `
       <div data-role="drag-strip" class="quiz-panel-drag-strip" aria-label="Move panel"></div>
+      <div class="quiz-panel-tools">
+        <button data-role="panel-hide" type="button" class="quiz-panel-hide-btn" style="display:none;">Hide</button>
+      </div>
+      <label data-role="panel-quiz-type-wrap" class="quiz-panel-mode" style="display:none;">
+        Quiz Type
+        <select data-role="panel-quiz-type" aria-label="Quiz Type">
+          <option value="match_round_5">Match Round (5)</option>
+          <option value="identify_highlighted_typein">Identify Highlighted</option>
+        </select>
+      </label>
       <h2 data-role="heading">Geo Bee Trainer</h2>
       <p data-role="prompt"><strong>Prompt:</strong> Loading data...</p>
+      <p data-role="quiz-stats" class="quiz-stats" style="display:none;"></p>
       <p data-role="learn-title" class="learn-target-title" style="display:none;"></p>
       <label data-role="answer-group">
         Your answer
-        <input data-role="answer" type="text" placeholder="Type here" style="width: 100%; margin-top: 8px; padding: 10px;" />
+        <input data-role="answer" list="answer-suggestions" type="text" placeholder="Type here" style="width: 100%; margin-top: 8px; padding: 10px;" />
       </label>
+      <datalist id="answer-suggestions" data-role="answer-suggestions"></datalist>
       <button data-role="submit" type="button" style="margin-top: 10px; padding: 10px 12px;">Submit</button>
+      <button data-role="next-question" type="button" style="margin-top: 10px; margin-left: 8px; padding: 10px 12px; display:none;">Next</button>
       <div data-role="choices" style="display:none; margin-top:10px; gap:8px; flex-wrap:wrap;"></div>
       <div data-role="learn-actions" class="learn-actions-row" style="display: none;">
         <button data-role="know-it" type="button" class="learn-know-btn">✓ I know this</button>
@@ -58,18 +86,25 @@ export class QuizPanel {
     `;
 
     this.dragStripEl = this.query<HTMLElement>("[data-role='drag-strip']");
+    this.panelHideButton = this.query<HTMLButtonElement>("[data-role='panel-hide']");
+    this.quizTypeWrapEl = this.query<HTMLElement>("[data-role='panel-quiz-type-wrap']");
+    this.quizTypeSelectEl = this.query<HTMLSelectElement>("[data-role='panel-quiz-type']");
     this.headingEl = this.query<HTMLElement>("[data-role='heading']");
     this.promptEl = this.query<HTMLElement>("[data-role='prompt']");
+    this.quizStatsEl = this.query<HTMLElement>("[data-role='quiz-stats']");
     this.answerGroupEl = this.query<HTMLElement>("[data-role='answer-group']");
     this.answerInput = this.query<HTMLInputElement>("[data-role='answer']");
+    this.answerSuggestionsEl = this.query<HTMLDataListElement>("[data-role='answer-suggestions']");
     this.feedbackEl = this.query<HTMLElement>("[data-role='feedback']");
     this.learnTitleEl = this.query<HTMLElement>("[data-role='learn-title']");
     this.submitButton = this.query<HTMLButtonElement>("[data-role='submit']");
+    this.nextQuestionButton = this.query<HTMLButtonElement>("[data-role='next-question']");
     this.learnActionsEl = this.query<HTMLElement>("[data-role='learn-actions']");
     this.knowItButton = this.query<HTMLButtonElement>("[data-role='know-it']");
     this.needPracticeButton = this.query<HTMLButtonElement>("[data-role='need-practice']");
     this.choicesEl = this.query<HTMLElement>("[data-role='choices']");
     this.learnInfoEl = this.query<HTMLElement>("[data-role='learn-info']");
+
     const submit = (): void => {
       actions.onSubmit(this.answerInput.value);
     };
@@ -80,9 +115,22 @@ export class QuizPanel {
         submit();
       }
     });
+    this.answerInput.addEventListener("input", () => {
+      this.refreshAnswerSuggestions(this.answerInput.value);
+    });
+    this.answerInput.addEventListener("focus", () => {
+      this.refreshAnswerSuggestions("");
+      const inputWithPicker = this.answerInput as HTMLInputElement & { showPicker?: () => void };
+      inputWithPicker.showPicker?.();
+    });
 
     this.knowItButton.addEventListener("click", actions.onKnowIt);
     this.needPracticeButton.addEventListener("click", actions.onNeedPractice);
+    this.nextQuestionButton.addEventListener("click", actions.onNextQuestion);
+    this.panelHideButton.addEventListener("click", actions.onHideDetails);
+    this.quizTypeSelectEl.addEventListener("change", () => {
+      actions.onQuizTypeChange(this.quizTypeSelectEl.value as QuizType);
+    });
     this.choicesEl.addEventListener("click", (event) => {
       const target = event.target as HTMLElement | null;
       const button = target?.closest<HTMLButtonElement>("[data-choice-id]");
@@ -137,6 +185,14 @@ export class QuizPanel {
     this.headingEl.textContent = value;
   }
 
+  setQuizType(quizType: QuizType): void {
+    this.quizTypeSelectEl.value = quizType;
+  }
+
+  setQuizTypeSelectorVisible(visible: boolean): void {
+    this.quizTypeWrapEl.style.display = visible ? "flex" : "none";
+  }
+
   setHeadingVisible(visible: boolean): void {
     this.headingEl.style.display = visible ? "block" : "none";
   }
@@ -147,6 +203,14 @@ export class QuizPanel {
 
   setPromptVisible(visible: boolean): void {
     this.promptEl.style.display = visible ? "block" : "none";
+  }
+
+  setQuizStats(value: string): void {
+    this.quizStatsEl.textContent = value;
+  }
+
+  setQuizStatsVisible(visible: boolean): void {
+    this.quizStatsEl.style.display = visible ? "block" : "none";
   }
 
   setFeedback(value: string): void {
@@ -171,6 +235,20 @@ export class QuizPanel {
     this.answerInput.value = value;
   }
 
+  setAnswerSuggestions(items: string[]): void {
+    const seen = new Set<string>();
+    this.answerSuggestionPool = [];
+    for (const item of items) {
+      const value = item.trim();
+      if (!value || seen.has(value)) {
+        continue;
+      }
+      seen.add(value);
+      this.answerSuggestionPool.push(value);
+    }
+    this.refreshAnswerSuggestions(this.answerInput.value);
+  }
+
   focusAnswer(): void {
     this.answerInput.focus();
   }
@@ -185,11 +263,20 @@ export class QuizPanel {
     this.submitButton.style.display = visible ? "inline-block" : "none";
   }
 
+  setNextQuestionVisible(visible: boolean): void {
+    this.nextQuestionButton.style.display = visible ? "inline-block" : "none";
+  }
+
   setLearnActionsVisible(visible: boolean): void {
     this.learnActionsEl.style.display = visible ? "flex" : "none";
+    this.panelHideButton.style.display = visible ? "inline-flex" : "none";
     if (!visible) {
       this.learnInfoEl.style.display = "none";
     }
+  }
+
+  setLearnDetailsHidden(hidden: boolean): void {
+    this.root.style.display = hidden ? "none" : "block";
   }
 
   setChoicesVisible(visible: boolean): void {
@@ -229,6 +316,9 @@ export class QuizPanel {
 
   setLearnEntityInfo(entity: Entity | null): void {
     if (!entity) {
+      if (typeof window !== "undefined" && "speechSynthesis" in window) {
+        window.speechSynthesis.cancel();
+      }
       this.mediaRenderToken += 1;
       this.learnInfoEl.style.display = "none";
       this.learnInfoEl.innerHTML = "";
@@ -268,6 +358,17 @@ export class QuizPanel {
     }
 
     const mediaItems = this.resolveMediaItems(entity);
+    const speechText = (entity.pronunciation ?? entity.name).trim();
+    const speechControls = `
+      <div class="learn-speech-row">
+        <button type="button" class="learn-speech-btn" data-role="speech-listen">🔊 Listen</button>
+        <button type="button" class="learn-speech-btn" data-role="speech-repeat">↺ Repeat</button>
+        <label class="learn-speech-speed">
+          <input type="checkbox" data-role="speech-slow" ${this.speechSlow ? "checked" : ""} />
+          Slow
+        </label>
+      </div>
+    `;
     const mediaCard =
       mediaItems.length > 0
         ? `<figure class="learn-media-card" data-role="learn-media-card">
@@ -290,7 +391,7 @@ export class QuizPanel {
         : "";
 
     const chipRow = chips.length > 0 ? `<div class="learn-chip-row">${chips.join("")}</div>` : "";
-    const hasContent = chips.length > 0 || factCards.length > 0 || lines.length > 0 || mediaCard.length > 0;
+    const hasContent = true;
     if (!hasContent) {
       this.learnInfoEl.style.display = "none";
       this.learnInfoEl.innerHTML = "";
@@ -307,9 +408,29 @@ export class QuizPanel {
             )
             .join("")}</div>`
         : "";
-    this.learnInfoEl.innerHTML = `<h3 class="learn-info-title">Learn Info</h3>${chipRow}${mediaCard}${cardRow}${lines.join("")}`;
+    this.learnInfoEl.innerHTML = `<h3 class="learn-info-title">Learn Info</h3>${speechControls}${chipRow}${mediaCard}${cardRow}${lines.join("")}`;
     this.learnInfoEl.style.display = "block";
+    this.attachSpeechHandlers(speechText);
     this.attachMediaHandlers(entity, mediaItems, mediaToken);
+  }
+
+  autoPronounceEntity(entity: Entity): void {
+    if (!this.autoPronounceEnabled) {
+      return;
+    }
+    const text = (entity.pronunciation ?? entity.name).trim();
+    if (!text) {
+      return;
+    }
+    this.speakText(text);
+  }
+
+  repeatEntityPronunciation(entity: Entity): void {
+    const text = (entity.pronunciation ?? entity.name).trim();
+    if (!text) {
+      return;
+    }
+    this.speakText(text);
   }
 
   private query<T extends HTMLElement>(selector: string): T {
@@ -430,5 +551,61 @@ export class QuizPanel {
       probe.onerror = () => resolve(false);
       probe.src = url;
     });
+  }
+
+  private attachSpeechHandlers(text: string): void {
+    const listenButton = this.learnInfoEl.querySelector<HTMLButtonElement>("[data-role='speech-listen']");
+    const repeatButton = this.learnInfoEl.querySelector<HTMLButtonElement>("[data-role='speech-repeat']");
+    const slowToggle = this.learnInfoEl.querySelector<HTMLInputElement>("[data-role='speech-slow']");
+
+    if (!listenButton || !repeatButton || !slowToggle) {
+      return;
+    }
+
+    const canSpeak = typeof window !== "undefined" && "speechSynthesis" in window;
+    if (!canSpeak) {
+      listenButton.disabled = true;
+      repeatButton.disabled = true;
+      slowToggle.disabled = true;
+      return;
+    }
+
+    listenButton.addEventListener("click", () => {
+      this.speakText(text);
+    });
+    repeatButton.addEventListener("click", () => {
+      this.speakText(this.lastSpokenText || text);
+    });
+    slowToggle.addEventListener("change", () => {
+      this.speechSlow = slowToggle.checked;
+    });
+  }
+
+  private speakText(value: string): void {
+    if (typeof window === "undefined" || !("speechSynthesis" in window)) {
+      return;
+    }
+    const speech = window.speechSynthesis;
+    speech.cancel();
+    const utterance = new SpeechSynthesisUtterance(value);
+    utterance.rate = this.speechSlow ? 0.82 : 1;
+    utterance.pitch = 1;
+    utterance.volume = 1;
+    this.lastSpokenText = value;
+    speech.speak(utterance);
+  }
+
+  private refreshAnswerSuggestions(query: string): void {
+    this.answerSuggestionsEl.innerHTML = "";
+    const needle = normalizeText(query);
+    const matches = (needle
+      ? this.answerSuggestionPool.filter((name) => normalizeText(name).startsWith(needle))
+      : this.answerSuggestionPool
+    ).slice(0, 12);
+    for (const match of matches) {
+      const option = document.createElement("option");
+      option.value = match;
+      this.answerSuggestionsEl.append(option);
+    }
   }
 }

@@ -1,5 +1,5 @@
 import { defineConfig } from "vite";
 
-export default defineConfig({
-  base: "/geo-quiz/"
-});
+export default defineConfig(({ command }) => ({
+  base: command === "serve" ? "/" : "/geo-quiz/"
+}));

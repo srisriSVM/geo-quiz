@@ -44,6 +44,9 @@ type MapDetail =
   | "satellite"
   | "night_lights";
 
+export type TargetMarkerShape = "star" | "circle" | "diamond" | "pin" | "triangle" | "square";
+export type TargetMarkerColor = "cyan" | "gold" | "pink" | "lime" | "violet" | "orange" | "teal";
+
 type EntityFeatureProps = {
   id: string;
   name: string;
@@ -65,6 +68,8 @@ export class MapView {
   private pendingLowDataMode = true;
   private pendingMasteryById: Record<string, "not_learned" | "learning" | "mastered"> = {};
   private pendingShowPolygons = true;
+  private pendingTargetMarkerShape: TargetMarkerShape = "star";
+  private pendingTargetMarkerColor: TargetMarkerColor = "cyan";
   private pendingFocusEntity: Entity | null = null;
   private pendingCamera:
     | {
@@ -84,6 +89,10 @@ export class MapView {
   private currentStyleSignature = "political";
   private entityClickHandler: ((entityId: string) => void) | null = null;
   private styleReloadToken = 0;
+  private readonly coarsePointer =
+    typeof window !== "undefined" && typeof window.matchMedia === "function"
+      ? window.matchMedia("(pointer: coarse)").matches
+      : false;
 
   constructor(host: HTMLElement) {
     this.host = host;
@@ -193,6 +202,12 @@ export class MapView {
 
   setEntityClickHandler(handler: (entityId: string) => void): void {
     this.entityClickHandler = handler;
+  }
+
+  setTargetMarkerStyle(shape: TargetMarkerShape, color: TargetMarkerColor): void {
+    this.pendingTargetMarkerShape = shape;
+    this.pendingTargetMarkerColor = color;
+    this.renderHighlightedMarkers();
   }
 
   setMasteryById(masteryById: Record<string, "not_learned" | "learning" | "mastered">): void {
@@ -840,7 +855,15 @@ export class MapView {
       return;
     }
 
-    const features = this.map.queryRenderedFeatures(event.point, {
+    const tapRadius = this.coarsePointer ? 20 : 2;
+    const queryTarget: [maplibregl.PointLike, maplibregl.PointLike] | maplibregl.PointLike =
+      tapRadius > 0
+        ? [
+            [event.point.x - tapRadius, event.point.y - tapRadius],
+            [event.point.x + tapRadius, event.point.y + tapRadius]
+          ]
+        : event.point;
+    const features = this.map.queryRenderedFeatures(queryTarget as never, {
       layers: [LAYER_HIGHLIGHT_POINT, LAYER_POINTS, LAYER_HIGHLIGHT_LINE, LAYER_LINES, LAYER_POLYGONS]
     });
     const first = features[0];
@@ -918,7 +941,8 @@ export class MapView {
       const mastery = this.pendingMasteryById[entity.id] ?? "not_learned";
       const color = mastery === "mastered" ? "#16a34a" : mastery === "learning" ? "#d97706" : "#dc2626";
       const border = mastery === "mastered" ? "#14532d" : mastery === "learning" ? "#7c2d12" : "#7f1d1d";
-      const size = mastery === "mastered" ? 18 : mastery === "learning" ? 14 : 11;
+      const baseSize = mastery === "mastered" ? 18 : mastery === "learning" ? 14 : 11;
+      const size = this.coarsePointer ? Math.max(baseSize + 8, 20) : baseSize;
 
       const el = document.createElement("div");
       el.className = "status-marker";
@@ -939,7 +963,7 @@ export class MapView {
         el.classList.add("status-marker--mastered");
         el.textContent = "✓";
       } else if (entity.geometryType === "line") {
-        el.textContent = "≈";
+        el.textContent = this.coarsePointer ? "" : "≈";
       }
       if (this.recentlyMasteredIds.has(entity.id)) {
         el.classList.add("status-marker--pulse");
@@ -982,7 +1006,10 @@ export class MapView {
 
     if (target.geometryType === "point" || target.geometryType === "polygon") {
       const dot = document.createElement("div");
-      dot.className = this.pendingMode === "quiz" ? "target-dot target-dot--quiz" : "target-dot target-dot--learn";
+      dot.className = `target-dot target-dot--${this.pendingTargetMarkerShape} ${
+        this.pendingMode === "quiz" ? "target-dot--quiz" : "target-dot--learn"
+      }`;
+      dot.style.setProperty("--target-accent", this.getTargetMarkerAccentColor(this.pendingTargetMarkerColor));
       dot.innerHTML = '<span class="target-dot-ping"></span><span class="target-dot-core"></span>';
       this.highlightedDotMarker = new maplibregl.Marker({ element: dot }).setLngLat(target.labelPoint).addTo(this.map);
     }
@@ -1045,6 +1072,26 @@ export class MapView {
       this.highlightedLabelMarker = new maplibregl.Marker({ element: label, offset: [0, -48] })
         .setLngLat(target.labelPoint)
         .addTo(this.map);
+    }
+  }
+
+  private getTargetMarkerAccentColor(color: TargetMarkerColor): string {
+    switch (color) {
+      case "gold":
+        return "#f59e0b";
+      case "pink":
+        return "#ec4899";
+      case "lime":
+        return "#84cc16";
+      case "violet":
+        return "#8b5cf6";
+      case "orange":
+        return "#f97316";
+      case "teal":
+        return "#14b8a6";
+      case "cyan":
+      default:
+        return "#22d3ee";
     }
   }
 
