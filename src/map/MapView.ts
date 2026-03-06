@@ -17,6 +17,7 @@ const LAYER_POLYGON_OUTLINE = "entities-polygon-outline";
 const LAYER_LINES = "entities-lines";
 const LAYER_LINES_CASING = "entities-lines-casing";
 const LAYER_POINTS = "entities-points";
+const LAYER_MASTERED_BADGE = "entities-mastered-badge";
 const LAYER_HIGHLIGHT_POLYGON = "entities-highlight-polygon";
 const LAYER_HIGHLIGHT_POLYGON_OUTLINE = "entities-highlight-polygon-outline";
 const LAYER_HIGHLIGHT_LINE = "entities-highlight-line";
@@ -32,6 +33,7 @@ type EntityFeatureProps = {
   id: string;
   name: string;
   geometryType: "point" | "line" | "polygon";
+  mastery: "not_learned" | "learning" | "mastered";
 };
 
 export class MapView {
@@ -45,6 +47,7 @@ export class MapView {
   private pendingMode: Mode = "learn";
   private pendingMapDetail: MapDetail = "quiz_clean";
   private pendingLowDataMode = true;
+  private pendingMasteryById: Record<string, "not_learned" | "learning" | "mastered"> = {};
   private pendingFocusEntity: Entity | null = null;
   private pendingCamera:
     | {
@@ -57,7 +60,9 @@ export class MapView {
   private highlightedDotMarker: maplibregl.Marker | null = null;
   private highlightedLabelMarker: maplibregl.Marker | null = null;
   private highlightedRiverMarkers: maplibregl.Marker[] = [];
+  private pointStatusMarkers: maplibregl.Marker[] = [];
   private currentStyleSignature = "political";
+  private entityClickHandler: ((entityId: string) => void) | null = null;
 
   constructor(host: HTMLElement) {
     this.host = host;
@@ -77,6 +82,7 @@ export class MapView {
       this.mapLoaded = true;
       this.applyBaseDetailVisibility();
       this.addEntityLayers(map);
+      this.bindInteractionHandlers(map);
       this.applyPendingState();
     });
 
@@ -84,6 +90,7 @@ export class MapView {
       this.mapLoaded = true;
       this.applyBaseDetailVisibility();
       this.addEntityLayers(map);
+      this.bindInteractionHandlers(map);
       this.applyPendingState();
     });
 
@@ -104,7 +111,9 @@ export class MapView {
     this.map.setLayoutProperty(LAYER_TARGET_LINE_CASING, "visibility", "visible");
     this.map.setLayoutProperty(LAYER_TARGET_LINE, "visibility", "visible");
     this.map.setLayoutProperty(LAYER_POINTS, "visibility", showAll ? "visible" : "none");
+    this.map.setLayoutProperty(LAYER_MASTERED_BADGE, "visibility", showAll ? "visible" : "none");
     this.map.setLayoutProperty(LAYER_HIGHLIGHT_LABEL, "visibility", showAll ? "visible" : "none");
+    this.renderPointStatusMarkers();
     this.renderHighlightedMarkers();
   }
 
@@ -132,6 +141,16 @@ export class MapView {
     }
 
     this.applyStyleIfNeeded();
+  }
+
+  setEntityClickHandler(handler: (entityId: string) => void): void {
+    this.entityClickHandler = handler;
+  }
+
+  setMasteryById(masteryById: Record<string, "not_learned" | "learning" | "mastered">): void {
+    this.pendingMasteryById = masteryById;
+    this.setEntities(this.pendingEntities);
+    this.renderPointStatusMarkers();
   }
 
   setEntities(entities: Entity[]): void {
@@ -168,6 +187,7 @@ export class MapView {
     polygonSource.setData({ type: "FeatureCollection", features: polygonFeatures } as FeatureCollection);
     lineSource.setData({ type: "FeatureCollection", features: lineFeatures } as FeatureCollection);
     pointSource.setData({ type: "FeatureCollection", features: pointFeatures } as FeatureCollection);
+    this.renderPointStatusMarkers();
     this.renderHighlightedMarkers();
   }
 
@@ -344,7 +364,17 @@ export class MapView {
       id: LAYER_POLYGONS,
       type: "fill",
       source: SOURCE_POLYGONS,
-      paint: { "fill-color": "#14b8a6", "fill-opacity": 0.33 }
+      paint: {
+        "fill-color": [
+          "match",
+          ["get", "mastery"],
+          "mastered", "#34d399",
+          "learning", "#facc15",
+          "not_learned", "#f87171",
+          "#14b8a6"
+        ],
+        "fill-opacity": 0.33
+      }
     });
 
     map.addLayer({
@@ -359,10 +389,47 @@ export class MapView {
       type: "circle",
       source: SOURCE_POINTS,
       paint: {
-        "circle-color": "#0f766e",
-        "circle-radius": 5,
-        "circle-stroke-color": "#ffffff",
+        "circle-color": [
+          "match",
+          ["get", "mastery"],
+          "mastered", "#16a34a",
+          "learning", "#d97706",
+          "not_learned", "#dc2626",
+          "#0f766e"
+        ],
+        "circle-radius": [
+          "match",
+          ["get", "mastery"],
+          "mastered", 9,
+          "learning", 7,
+          5
+        ],
+        "circle-stroke-color": [
+          "match",
+          ["get", "mastery"],
+          "mastered", "#14532d",
+          "learning", "#7c2d12",
+          "not_learned", "#7f1d1d",
+          "#ffffff"
+        ],
         "circle-stroke-width": 1.5
+      }
+    });
+
+    map.addLayer({
+      id: LAYER_MASTERED_BADGE,
+      type: "symbol",
+      source: SOURCE_POINTS,
+      filter: ["==", "mastery", "mastered"],
+      layout: {
+        "text-field": "✓",
+        "text-size": 12,
+        "text-anchor": "center"
+      },
+      paint: {
+        "text-color": "#ffffff",
+        "text-halo-color": "#14532d",
+        "text-halo-width": 1.2
       }
     });
 
@@ -389,7 +456,14 @@ export class MapView {
       type: "line",
       source: SOURCE_LINES,
       paint: {
-        "line-color": "#0057ff",
+        "line-color": [
+          "match",
+          ["get", "mastery"],
+          "mastered", "#16a34a",
+          "learning", "#d97706",
+          "not_learned", "#dc2626",
+          "#0057ff"
+        ],
         "line-opacity": 0.95,
         "line-width": [
           "interpolate",
@@ -464,7 +538,7 @@ export class MapView {
       type: "line",
       source: SOURCE_TARGET_LINE,
       paint: {
-        "line-color": "#ff00cc",
+        "line-color": "#ff7a00",
         "line-opacity": 1,
         "line-blur": 0,
         "line-width": [
@@ -520,6 +594,28 @@ export class MapView {
     map.moveLayer(LAYER_TARGET_LINE);
   }
 
+  private bindInteractionHandlers(map: MapLibreMap): void {
+    map.off("click", this.handleMapClick);
+    map.on("click", this.handleMapClick);
+  }
+
+  private handleMapClick = (event: maplibregl.MapMouseEvent): void => {
+    if (!this.entityClickHandler || !this.mapLoaded || !this.map || this.pendingMode !== "learn") {
+      return;
+    }
+
+    const features = this.map.queryRenderedFeatures(event.point, {
+      layers: [LAYER_HIGHLIGHT_POINT, LAYER_POINTS, LAYER_HIGHLIGHT_LINE, LAYER_LINES, LAYER_POLYGONS]
+    });
+    const first = features[0];
+    const id = first?.properties?.id as string | undefined;
+    if (!id) {
+      return;
+    }
+
+    this.entityClickHandler(id);
+  };
+
   private toPointFeature(entity: Entity): Feature {
     return {
       type: "Feature",
@@ -528,7 +624,8 @@ export class MapView {
       properties: {
         id: entity.id,
         name: entity.name,
-        geometryType: "point"
+        geometryType: "point",
+        mastery: this.pendingMasteryById[entity.id] ?? "not_learned"
       } satisfies EntityFeatureProps
     };
   }
@@ -541,7 +638,8 @@ export class MapView {
       properties: {
         id: entity.id,
         name: entity.name,
-        geometryType: entity.geometryType
+        geometryType: entity.geometryType,
+        mastery: this.pendingMasteryById[entity.id] ?? "not_learned"
       } satisfies EntityFeatureProps
     };
   }
@@ -562,6 +660,57 @@ export class MapView {
 
     this.map.setMaxBounds(null);
     this.map.setMinZoom(0.5);
+  }
+
+  private renderPointStatusMarkers(): void {
+    if (!this.map || !this.mapLoaded) {
+      return;
+    }
+
+    for (const marker of this.pointStatusMarkers) {
+      marker.remove();
+    }
+    this.pointStatusMarkers = [];
+
+    if (this.pendingMode !== "learn") {
+      return;
+    }
+
+    for (const entity of this.pendingEntities) {
+      const mastery = this.pendingMasteryById[entity.id] ?? "not_learned";
+      const color = mastery === "mastered" ? "#16a34a" : mastery === "learning" ? "#d97706" : "#dc2626";
+      const border = mastery === "mastered" ? "#14532d" : mastery === "learning" ? "#7c2d12" : "#7f1d1d";
+      const size = mastery === "mastered" ? 18 : mastery === "learning" ? 14 : 11;
+
+      const el = document.createElement("div");
+      el.style.width = `${size}px`;
+      el.style.height = `${size}px`;
+      el.style.borderRadius = entity.geometryType === "line" ? "5px" : "999px";
+      el.style.background = color;
+      el.style.border = `2px solid ${border}`;
+      el.style.boxShadow = "0 1px 4px rgba(0,0,0,0.25)";
+      el.style.display = "flex";
+      el.style.alignItems = "center";
+      el.style.justifyContent = "center";
+      el.style.color = "#fff";
+      el.style.fontSize = "11px";
+      el.style.fontWeight = "700";
+      el.style.cursor = "pointer";
+      if (mastery === "mastered") {
+        el.textContent = "✓";
+      } else if (entity.geometryType === "line") {
+        el.textContent = "≈";
+      }
+      el.addEventListener("click", (event) => {
+        event.stopPropagation();
+        if (this.pendingMode === "learn" && this.entityClickHandler) {
+          this.entityClickHandler(entity.id);
+        }
+      });
+
+      const marker = new maplibregl.Marker({ element: el }).setLngLat(entity.labelPoint).addTo(this.map);
+      this.pointStatusMarkers.push(marker);
+    }
   }
 
   private renderHighlightedMarkers(): void {

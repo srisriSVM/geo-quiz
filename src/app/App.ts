@@ -4,9 +4,15 @@ import { normalizeText } from "../utils/normalize";
 import { MapView } from "../map/MapView";
 import { Hud } from "../ui/Hud";
 import { QuizPanel } from "../ui/QuizPanel";
+import {
+  loadProgress,
+  saveProgress,
+  type ProgressItem
+} from "../storage/progressStore";
 
 type Mode = "learn" | "quiz";
 type MapDetail = "quiz_clean" | "reference_full" | "physical_basic" | "physical_relief";
+type MasteryState = "not_learned" | "learning" | "mastered";
 
 const MAP_DETAIL_KEY = "geo-bee-map-detail";
 const LOW_DATA_MODE_KEY = "geo-bee-low-data-mode";
@@ -21,6 +27,7 @@ export class App {
   private packs: Pack[] = [];
   private entitiesByPack: Record<string, Entity[]> = {};
   private activePackEntities: Entity[] = [];
+  private progress: Record<string, ProgressItem> = {};
 
   private mode: Mode = "learn";
   private mapDetail: MapDetail = "quiz_clean";
@@ -53,6 +60,10 @@ export class App {
 
     this.mapView = new MapView(mapRoot);
     this.mapView.mount();
+    this.mapView.setEntityClickHandler((entityId) => {
+      this.handleLearnEntityClick(entityId);
+    });
+    this.progress = loadProgress();
 
     try {
       const packs = await loadPacks();
@@ -92,7 +103,9 @@ export class App {
     });
 
     this.panel = new QuizPanel({
-      onSubmit: (answer) => this.handleSubmit(answer)
+      onSubmit: (answer) => this.handleSubmit(answer),
+      onKnowIt: () => this.handleLearnAction(true),
+      onNeedPractice: () => this.handleLearnAction(false)
     });
 
     app.append(this.hud.root, this.panel.root);
@@ -117,7 +130,7 @@ export class App {
     await this.startRound();
   }
 
-  private async startRound(): Promise<void> {
+  private async startRound(excludeEntityId?: string): Promise<void> {
     if (!this.mapView || !this.hud || !this.panel) {
       return;
     }
@@ -143,6 +156,7 @@ export class App {
     const items = this.activePackEntities;
     this.mapView.setMode(this.mode);
     this.mapView.setEntities(items);
+    this.mapView.setMasteryById(this.buildMasteryMap(items));
     this.mapView.flyToPack(pack);
 
     if (items.length === 0) {
@@ -152,12 +166,13 @@ export class App {
       this.panel.setPrompt("This pack has no entities.");
       this.panel.setFeedback("Add data to continue.");
       this.panel.setAnswerVisible(false);
+      this.panel.setLearnActionsVisible(false);
       this.panel.setAnswerEnabled(false);
       this.hud.setStats({ score: this.score, streak: this.streak, progress: `${this.attempted} / 0` });
       return;
     }
 
-    this.currentEntity = this.pickRandom(items);
+    this.currentEntity = this.pickRandom(items, excludeEntityId);
     this.hintLength = 2;
 
     this.mapView.setHighlightedEntity(this.currentEntity.id);
@@ -173,20 +188,23 @@ export class App {
       );
       this.panel.setFeedback(`You are in Learn mode. No answer is required.`);
       this.panel.setAnswerVisible(false);
+      this.panel.setLearnActionsVisible(true);
       this.panel.setAnswerEnabled(false);
     } else {
       this.panel.setHeading("Quiz Mode");
       this.panel.setPrompt("Identify the highlighted location.");
       this.panel.setFeedback("Type the answer and submit.");
       this.panel.setAnswerVisible(true);
+      this.panel.setLearnActionsVisible(false);
       this.panel.setAnswerEnabled(true);
       this.panel.focusAnswer();
     }
 
+    const masteredCount = items.filter((entity) => this.getMastery(entity.id) === "mastered").length;
     this.hud.setStats({
       score: this.score,
       streak: this.streak,
-      progress: `${this.attempted} / ${items.length}`
+      progress: this.mode === "learn" ? `Mastered ${masteredCount} / ${items.length}` : `${this.attempted} / ${items.length}`
     });
   }
 
@@ -206,6 +224,8 @@ export class App {
       this.streak = 0;
       this.panel.setFeedback(`Not correct. The answer is ${this.currentEntity.name}.`);
     }
+    this.recordProgress(this.currentEntity.id, gotIt);
+    this.mapView?.setMasteryById(this.buildMasteryMap(this.activePackEntities));
 
     const packSize = this.activePackEntities.length;
     this.hud?.setStats({
@@ -213,6 +233,46 @@ export class App {
       streak: this.streak,
       progress: `${this.attempted} / ${packSize}`
     });
+  }
+
+  private handleLearnAction(knewIt: boolean): void {
+    if (!this.currentEntity || this.mode !== "learn") {
+      return;
+    }
+
+    const priorId = this.currentEntity.id;
+    if (knewIt) {
+      this.markMasteredFromLearn(priorId);
+    } else {
+      this.recordProgress(priorId, false);
+    }
+    const mastery = this.getMastery(priorId);
+    this.panel?.setFeedback(
+      knewIt
+        ? `Nice. Marked as known (${mastery.replace("_", " ")}).`
+        : "Marked for practice. We will show this again soon."
+    );
+    void this.startRound(priorId);
+  }
+
+  private handleLearnEntityClick(entityId: string): void {
+    if (this.mode !== "learn" || !this.mapView || !this.panel || !this.hud) {
+      return;
+    }
+
+    const selected = this.activePackEntities.find((entity) => entity.id === entityId);
+    if (!selected) {
+      return;
+    }
+
+    this.currentEntity = selected;
+    this.hintLength = 2;
+    this.mapView.setHighlightedEntity(selected.id);
+    this.panel.setHeading("Learn Mode");
+    this.panel.setPrompt(
+      `Study this highlighted ${selected.type}: ${selected.name}. Click Next for another one, or switch Mode to Quiz.`
+    );
+    this.panel.setFeedback(`Selected: ${selected.name}`);
   }
 
   private handleHint(): void {
@@ -239,9 +299,20 @@ export class App {
     });
   }
 
-  private pickRandom(items: Entity[]): Entity {
-    const index = Math.floor(Math.random() * items.length);
-    return items[index];
+  private pickRandom(items: Entity[], excludeEntityId?: string): Entity {
+    const eligible = excludeEntityId ? items.filter((item) => item.id !== excludeEntityId) : items;
+    const basePool = eligible.length > 0 ? eligible : items;
+    const weighted: Entity[] = [];
+    for (const item of basePool) {
+      const mastery = this.getMastery(item.id);
+      const repeats = mastery === "not_learned" ? 4 : mastery === "learning" ? 2 : 1;
+      for (let i = 0; i < repeats; i += 1) {
+        weighted.push(item);
+      }
+    }
+    const pool = weighted.length > 0 ? weighted : basePool;
+    const index = Math.floor(Math.random() * pool.length);
+    return pool[index];
   }
 
   private loadMapDetail(): MapDetail {
@@ -270,5 +341,69 @@ export class App {
       this.entitiesByPack[packId] = await loadPackEntities(packId);
     }
     this.activePackEntities = this.entitiesByPack[packId];
+  }
+
+  private recordProgress(entityId: string, wasCorrect: boolean): void {
+    const prev = this.progress[entityId] ?? {
+      seenCount: 0,
+      correctCount: 0,
+      streak: 0,
+      lastSeen: null,
+      lastResult: null
+    };
+
+    const next: ProgressItem = {
+      seenCount: prev.seenCount + 1,
+      correctCount: prev.correctCount + (wasCorrect ? 1 : 0),
+      streak: wasCorrect ? prev.streak + 1 : 0,
+      lastSeen: Date.now(),
+      lastResult: wasCorrect
+    };
+    this.progress[entityId] = next;
+    saveProgress(this.progress);
+  }
+
+  private markMasteredFromLearn(entityId: string): void {
+    const prev = this.progress[entityId] ?? {
+      seenCount: 0,
+      correctCount: 0,
+      streak: 0,
+      lastSeen: null,
+      lastResult: null
+    };
+
+    const seenCount = Math.max(prev.seenCount + 1, 5);
+    const correctCount = Math.max(prev.correctCount + 1, Math.ceil(seenCount * 0.8));
+    const streak = Math.max(prev.streak + 1, 2);
+
+    this.progress[entityId] = {
+      seenCount,
+      correctCount,
+      streak,
+      lastSeen: Date.now(),
+      lastResult: true
+    };
+    saveProgress(this.progress);
+  }
+
+  private getMastery(entityId: string): MasteryState {
+    const item = this.progress[entityId];
+    if (!item || item.seenCount < 2) {
+      return "not_learned";
+    }
+
+    const accuracy = item.correctCount / Math.max(item.seenCount, 1);
+    if (item.seenCount >= 5 && accuracy >= 0.8 && item.streak >= 2) {
+      return "mastered";
+    }
+    return "learning";
+  }
+
+  private buildMasteryMap(items: Entity[]): Record<string, MasteryState> {
+    const out: Record<string, MasteryState> = {};
+    for (const item of items) {
+      out[item.id] = this.getMastery(item.id);
+    }
+    return out;
   }
 }
