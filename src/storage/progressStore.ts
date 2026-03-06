@@ -24,3 +24,7 @@ export const loadProgress = (): Record<string, ProgressItem> => {
 export const saveProgress = (progress: Record<string, ProgressItem>): void => {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(progress));
 };
+
+export const clearProgress = (): void => {
+  localStorage.removeItem(STORAGE_KEY);
+};

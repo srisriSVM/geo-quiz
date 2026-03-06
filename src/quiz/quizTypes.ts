@@ -1,4 +1,5 @@
 export const quizTypes = [
+  "match_round_5",
   "identify_highlighted_typein",
   "identify_highlighted_mcq",
   "find_on_map",

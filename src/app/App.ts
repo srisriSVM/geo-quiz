@@ -4,7 +4,9 @@ import { normalizeText } from "../utils/normalize";
 import { MapView } from "../map/MapView";
 import { Hud } from "../ui/Hud";
 import { QuizPanel } from "../ui/QuizPanel";
+import type { QuizType } from "../quiz/quizTypes";
 import {
+  clearProgress,
   loadProgress,
   saveProgress,
   type ProgressItem
@@ -13,6 +15,7 @@ import {
 type Mode = "learn" | "quiz";
 type MapDetail = "quiz_clean" | "reference_full" | "physical_basic" | "physical_relief";
 type MasteryState = "not_learned" | "learning" | "mastered";
+type ChoiceStatus = "default" | "locked" | "wrong";
 
 const MAP_DETAIL_KEY = "geo-bee-map-detail";
 const LOW_DATA_MODE_KEY = "geo-bee-low-data-mode";
@@ -30,6 +33,7 @@ export class App {
   private progress: Record<string, ProgressItem> = {};
 
   private mode: Mode = "learn";
+  private quizType: QuizType = "match_round_5";
   private mapDetail: MapDetail = "quiz_clean";
   private lowDataMode = true;
   private currentPackId = "";
@@ -39,6 +43,13 @@ export class App {
   private score = 0;
   private streak = 0;
   private attempted = 0;
+  private matchRound:
+    | {
+        choiceIds: string[];
+        remainingIds: string[];
+        choiceStatus: Record<string, ChoiceStatus>;
+      }
+    | null = null;
 
   constructor(host: HTMLElement) {
     this.host = host;
@@ -84,7 +95,9 @@ export class App {
         this.currentPackId = packId;
         void this.startRound();
       },
-      onQuizTypeChange: () => {
+      onQuizTypeChange: (quizType) => {
+        this.quizType = quizType;
+        this.matchRound = null;
         void this.startRound();
       },
       onMapDetailChange: (mapDetail) => {
@@ -97,6 +110,9 @@ export class App {
         localStorage.setItem(LOW_DATA_MODE_KEY, enabled ? "1" : "0");
         this.mapView?.setLowDataMode(enabled);
       },
+      onResetProgress: () => {
+        this.handleResetProgress();
+      },
       onHint: () => this.handleHint(),
       onReveal: () => this.handleReveal(),
       onNext: () => void this.startRound()
@@ -105,7 +121,8 @@ export class App {
     this.panel = new QuizPanel({
       onSubmit: (answer) => this.handleSubmit(answer),
       onKnowIt: () => this.handleLearnAction(true),
-      onNeedPractice: () => this.handleLearnAction(false)
+      onNeedPractice: () => this.handleLearnAction(false),
+      onSelectChoice: (choiceId) => this.handleChoiceSelection(choiceId)
     });
 
     app.append(this.hud.root, this.panel.root);
@@ -122,6 +139,7 @@ export class App {
     this.lowDataMode = this.loadLowDataMode();
     this.hud.setMode(this.mode);
     this.hud.setPack(this.currentPackId);
+    this.hud.setQuizType(this.quizType);
     this.hud.setMapDetail(this.mapDetail);
     this.hud.setLowDataMode(this.lowDataMode);
     this.mapView.setLowDataMode(this.lowDataMode);
@@ -172,16 +190,11 @@ export class App {
       return;
     }
 
-    this.currentEntity = this.pickRandom(items, excludeEntityId);
-    this.hintLength = 2;
-
-    this.mapView.setHighlightedEntity(this.currentEntity.id);
-    if (this.mode === "quiz") {
-      this.mapView.focusEntity(this.currentEntity);
-    }
-    this.panel.setAnswer("");
-
     if (this.mode === "learn") {
+      this.matchRound = null;
+      this.currentEntity = this.pickRandom(items, excludeEntityId);
+      this.hintLength = 2;
+      this.mapView.setHighlightedEntity(this.currentEntity.id);
       this.panel.setHeading("Learn Mode");
       this.panel.setPrompt(
         `Study this highlighted ${this.currentEntity.type}: ${this.currentEntity.name}. Click Next for another one, or switch Mode to Quiz.`
@@ -189,15 +202,28 @@ export class App {
       this.panel.setFeedback(`You are in Learn mode. No answer is required.`);
       this.panel.setAnswerVisible(false);
       this.panel.setLearnActionsVisible(true);
+      this.panel.setChoicesVisible(false);
+      this.panel.setChoices([]);
       this.panel.setAnswerEnabled(false);
     } else {
       this.panel.setHeading("Quiz Mode");
-      this.panel.setPrompt("Identify the highlighted location.");
-      this.panel.setFeedback("Type the answer and submit.");
-      this.panel.setAnswerVisible(true);
       this.panel.setLearnActionsVisible(false);
-      this.panel.setAnswerEnabled(true);
-      this.panel.focusAnswer();
+      if (this.quizType === "match_round_5") {
+        this.setupMatchRound(items);
+      } else {
+        this.matchRound = null;
+        this.currentEntity = this.pickRandom(items, excludeEntityId);
+        this.hintLength = 2;
+        this.mapView.setHighlightedEntity(this.currentEntity.id);
+        this.mapView.focusEntity(this.currentEntity);
+        this.panel.setPrompt("Identify the highlighted location.");
+        this.panel.setFeedback("Type the answer and submit.");
+        this.panel.setAnswerVisible(true);
+        this.panel.setChoicesVisible(false);
+        this.panel.setChoices([]);
+        this.panel.setAnswerEnabled(true);
+        this.panel.focusAnswer();
+      }
     }
 
     const masteredCount = items.filter((entity) => this.getMastery(entity.id) === "mastered").length;
@@ -232,6 +258,53 @@ export class App {
       score: this.score,
       streak: this.streak,
       progress: `${this.attempted} / ${packSize}`
+    });
+  }
+
+  private handleChoiceSelection(choiceId: string): void {
+    if (this.mode !== "quiz" || this.quizType !== "match_round_5" || !this.matchRound || !this.currentEntity) {
+      return;
+    }
+
+    if (this.matchRound.choiceStatus[choiceId] === "locked") {
+      return;
+    }
+
+    if (choiceId === this.currentEntity.id) {
+      this.markMasteredFromLearn(choiceId);
+      this.score += 1;
+      this.streak += 1;
+      this.attempted += 1;
+      this.matchRound.choiceStatus[choiceId] = "locked";
+      this.matchRound.remainingIds = this.matchRound.remainingIds.filter((id) => id !== choiceId);
+      this.mapView?.setMasteryById(this.buildMasteryMap(this.activePackEntities));
+      const remainingCount = this.matchRound.remainingIds.length;
+      if (remainingCount === 0) {
+        this.panel?.setFeedback("Round complete. Great job.");
+        this.panel?.setPrompt("All matched. Click Next for a new round.");
+        this.panel?.setChoices(this.buildChoicesFromRound());
+        this.mapView?.setHighlightedEntity(null);
+      } else {
+        this.currentEntity = this.pickRandom(this.getRemainingRoundEntities());
+        this.mapView?.setHighlightedEntity(this.currentEntity.id);
+        this.mapView?.focusEntity(this.currentEntity);
+        this.panel?.setPrompt(`Match the highlighted ${this.currentEntity.type}. Remaining: ${remainingCount}`);
+        this.panel?.setFeedback("Correct. Keep going.");
+        this.panel?.setChoices(this.buildChoicesFromRound());
+      }
+    } else {
+      this.recordProgress(this.currentEntity.id, false);
+      this.streak = 0;
+      this.attempted += 1;
+      this.matchRound.choiceStatus[choiceId] = "wrong";
+      this.panel?.setFeedback("Not this one. Try again.");
+      this.panel?.setChoices(this.buildChoicesFromRound());
+    }
+
+    this.hud?.setStats({
+      score: this.score,
+      streak: this.streak,
+      progress: `${this.attempted} / ${this.activePackEntities.length}`
     });
   }
 
@@ -315,6 +388,56 @@ export class App {
     return pool[index];
   }
 
+  private setupMatchRound(items: Entity[]): void {
+    const nonMastered = items.filter((item) => this.getMastery(item.id) !== "mastered");
+    const sourcePool = nonMastered.length > 0 ? nonMastered : items;
+    const roundSize = Math.min(5, sourcePool.length);
+    const shuffled = sourcePool.slice().sort(() => Math.random() - 0.5);
+    const selected = shuffled.slice(0, roundSize);
+    const choiceIds = selected.map((item) => item.id);
+    this.matchRound = {
+      choiceIds,
+      remainingIds: choiceIds.slice(),
+      choiceStatus: Object.fromEntries(choiceIds.map((id) => [id, "default"])) as Record<string, ChoiceStatus>
+    };
+
+    this.currentEntity = this.pickRandom(selected);
+    this.mapView?.setHighlightedEntity(this.currentEntity.id);
+    this.mapView?.focusEntity(this.currentEntity);
+    this.panel?.setAnswerVisible(false);
+    this.panel?.setAnswerEnabled(false);
+    this.panel?.setChoicesVisible(true);
+    this.panel?.setChoices(this.buildChoicesFromRound());
+    this.panel?.setPrompt(`Match the highlighted ${this.currentEntity.type}. Remaining: ${roundSize}`);
+    this.panel?.setFeedback(
+      nonMastered.length > 0
+        ? "Select the correct name card."
+        : "All items are mastered. Great job. You can still play review rounds."
+    );
+  }
+
+  private buildChoicesFromRound(): Array<{ id: string; label: string; status: ChoiceStatus }> {
+    if (!this.matchRound) {
+      return [];
+    }
+
+    return this.matchRound.choiceIds.map((id) => {
+      const entity = this.activePackEntities.find((item) => item.id === id);
+      return {
+        id,
+        label: entity?.name ?? id,
+        status: this.matchRound?.choiceStatus[id] ?? "default"
+      };
+    });
+  }
+
+  private getRemainingRoundEntities(): Entity[] {
+    if (!this.matchRound) {
+      return [];
+    }
+    return this.activePackEntities.filter((entity) => this.matchRound?.remainingIds.includes(entity.id));
+  }
+
   private loadMapDetail(): MapDetail {
     const raw = localStorage.getItem(MAP_DETAIL_KEY);
     if (
@@ -334,6 +457,18 @@ export class App {
       return false;
     }
     return true;
+  }
+
+  private handleResetProgress(): void {
+    this.progress = {};
+    clearProgress();
+    this.score = 0;
+    this.streak = 0;
+    this.attempted = 0;
+    this.matchRound = null;
+    this.mapView?.setMasteryById(this.buildMasteryMap(this.activePackEntities));
+    this.panel?.setFeedback("Progress reset. Everything is back to not learned.");
+    void this.startRound();
   }
 
   private async ensurePackEntitiesLoaded(packId: string): Promise<void> {

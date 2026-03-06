@@ -9,6 +9,7 @@ type HudActions = {
     mapDetail: "quiz_clean" | "reference_full" | "physical_basic" | "physical_relief"
   ) => void;
   onLowDataModeChange: (enabled: boolean) => void;
+  onResetProgress: () => void;
   onHint: () => void;
   onReveal: () => void;
   onNext: () => void;
@@ -52,6 +53,7 @@ export class Hud {
         <label>
           Quiz Type
           <select aria-label="Quiz Type" data-role="quiz-type">
+            <option value="match_round_5">Match Round (5)</option>
             <option value="identify_highlighted_typein">Identify Highlighted</option>
           </select>
         </label>
@@ -73,6 +75,7 @@ export class Hud {
         <span data-role="score">Score: 0</span>
         <span data-role="streak">Streak: 0</span>
         <span data-role="progress">Progress: 0 / 0</span>
+        <button type="button" data-role="reset-progress">Reset Progress</button>
         <button type="button" data-role="hint">Hint</button>
         <button type="button" data-role="reveal">Reveal</button>
         <button type="button" data-role="next">Next</button>
@@ -122,6 +125,7 @@ export class Hud {
     this.query<HTMLButtonElement>("[data-role='hint']").addEventListener("click", actions.onHint);
     this.query<HTMLButtonElement>("[data-role='reveal']").addEventListener("click", actions.onReveal);
     this.query<HTMLButtonElement>("[data-role='next']").addEventListener("click", actions.onNext);
+    this.query<HTMLButtonElement>("[data-role='reset-progress']").addEventListener("click", actions.onResetProgress);
   }
 
   setMode(mode: "learn" | "quiz"): void {
@@ -130,6 +134,10 @@ export class Hud {
 
   setPack(packId: string): void {
     this.packSelect.value = packId;
+  }
+
+  setQuizType(quizType: QuizType): void {
+    this.quizTypeSelect.value = quizType;
   }
 
   setMapDetail(

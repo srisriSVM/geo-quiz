@@ -672,10 +672,6 @@ export class MapView {
     }
     this.pointStatusMarkers = [];
 
-    if (this.pendingMode !== "learn") {
-      return;
-    }
-
     for (const entity of this.pendingEntities) {
       const mastery = this.pendingMasteryById[entity.id] ?? "not_learned";
       const color = mastery === "mastered" ? "#16a34a" : mastery === "learning" ? "#d97706" : "#dc2626";
