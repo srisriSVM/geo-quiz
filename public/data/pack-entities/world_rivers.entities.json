@@ -1,0 +1,434 @@
+[
+  {
+    "id": "river_amazon",
+    "type": "river",
+    "name": "Amazon",
+    "geometryType": "line",
+    "geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          -73.99,
+          -4.2
+        ],
+        [
+          -65,
+          -3.5
+        ],
+        [
+          -50,
+          -1.8
+        ]
+      ]
+    },
+    "labelPoint": [
+      -60,
+      -3
+    ],
+    "packIds": [
+      "world_rivers"
+    ],
+    "bbox": [
+      -73.99,
+      -4.2,
+      -50,
+      -1.8
+    ]
+  },
+  {
+    "id": "river_congo",
+    "type": "river",
+    "name": "Congo",
+    "geometryType": "line",
+    "geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          27.5,
+          -1
+        ],
+        [
+          22,
+          -2
+        ],
+        [
+          13.2,
+          -6
+        ]
+      ]
+    },
+    "labelPoint": [
+      19,
+      -3
+    ],
+    "packIds": [
+      "world_rivers"
+    ],
+    "bbox": [
+      13.2,
+      -6,
+      27.5,
+      -1
+    ]
+  },
+  {
+    "id": "river_danube",
+    "type": "river",
+    "name": "Danube",
+    "geometryType": "line",
+    "geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          8.2,
+          48
+        ],
+        [
+          17.1,
+          48.1
+        ],
+        [
+          29.6,
+          45.2
+        ]
+      ]
+    },
+    "labelPoint": [
+      17,
+      46
+    ],
+    "packIds": [
+      "world_rivers"
+    ],
+    "bbox": [
+      8.2,
+      45.2,
+      29.6,
+      48.1
+    ]
+  },
+  {
+    "id": "river_ganges",
+    "type": "river",
+    "name": "Ganges",
+    "geometryType": "line",
+    "geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          79,
+          30.9
+        ],
+        [
+          85,
+          25.5
+        ],
+        [
+          90.3,
+          23.7
+        ]
+      ]
+    },
+    "labelPoint": [
+      84,
+      24
+    ],
+    "packIds": [
+      "world_rivers"
+    ],
+    "bbox": [
+      79,
+      23.7,
+      90.3,
+      30.9
+    ]
+  },
+  {
+    "id": "river_indus",
+    "type": "river",
+    "name": "Indus",
+    "geometryType": "line",
+    "geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          79,
+          34.5
+        ],
+        [
+          72,
+          31
+        ],
+        [
+          67.4,
+          24.7
+        ]
+      ]
+    },
+    "labelPoint": [
+      69.5,
+      29
+    ],
+    "packIds": [
+      "world_rivers"
+    ],
+    "bbox": [
+      67.4,
+      24.7,
+      79,
+      34.5
+    ]
+  },
+  {
+    "id": "river_mekong",
+    "type": "river",
+    "name": "Mekong",
+    "geometryType": "line",
+    "geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          100,
+          22
+        ],
+        [
+          104,
+          17
+        ],
+        [
+          106.7,
+          10
+        ]
+      ]
+    },
+    "labelPoint": [
+      104,
+      16
+    ],
+    "packIds": [
+      "world_rivers"
+    ],
+    "bbox": [
+      100,
+      10,
+      106.7,
+      22
+    ]
+  },
+  {
+    "id": "river_mississippi",
+    "type": "river",
+    "name": "Mississippi",
+    "geometryType": "line",
+    "geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          -95.23,
+          47.3
+        ],
+        [
+          -91,
+          40
+        ],
+        [
+          -89.25,
+          29.15
+        ]
+      ]
+    },
+    "labelPoint": [
+      -90,
+      36
+    ],
+    "packIds": [
+      "world_rivers"
+    ],
+    "bbox": [
+      -95.23,
+      29.15,
+      -89.25,
+      47.3
+    ]
+  },
+  {
+    "id": "river_murray",
+    "type": "river",
+    "name": "Murray",
+    "geometryType": "line",
+    "geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          147,
+          -36
+        ],
+        [
+          142,
+          -34.5
+        ],
+        [
+          138.9,
+          -35.6
+        ]
+      ]
+    },
+    "labelPoint": [
+      142,
+      -35
+    ],
+    "packIds": [
+      "world_rivers"
+    ],
+    "bbox": [
+      138.9,
+      -36,
+      147,
+      -34.5
+    ]
+  },
+  {
+    "id": "river_nile",
+    "type": "river",
+    "name": "Nile",
+    "geometryType": "line",
+    "geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          31.2,
+          3
+        ],
+        [
+          32.6,
+          15.6
+        ],
+        [
+          31.23,
+          30.04
+        ]
+      ]
+    },
+    "labelPoint": [
+      31.2,
+      25
+    ],
+    "packIds": [
+      "world_rivers"
+    ],
+    "bbox": [
+      31.2,
+      3,
+      32.6,
+      30.04
+    ]
+  },
+  {
+    "id": "river_volga",
+    "type": "river",
+    "name": "Volga",
+    "geometryType": "line",
+    "geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          33.2,
+          57.3
+        ],
+        [
+          45,
+          54.5
+        ],
+        [
+          49.2,
+          46.7
+        ]
+      ]
+    },
+    "labelPoint": [
+      44,
+      52
+    ],
+    "packIds": [
+      "world_rivers"
+    ],
+    "bbox": [
+      33.2,
+      46.7,
+      49.2,
+      57.3
+    ]
+  },
+  {
+    "id": "river_yangtze",
+    "type": "river",
+    "name": "Yangtze",
+    "geometryType": "line",
+    "geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          92,
+          33
+        ],
+        [
+          106,
+          30.7
+        ],
+        [
+          121.8,
+          31.2
+        ]
+      ]
+    },
+    "labelPoint": [
+      112.5,
+      30.5
+    ],
+    "packIds": [
+      "world_rivers"
+    ],
+    "bbox": [
+      92,
+      30.7,
+      121.8,
+      33
+    ]
+  },
+  {
+    "id": "river_yellow",
+    "type": "river",
+    "name": "Yellow River",
+    "geometryType": "line",
+    "geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          96,
+          35
+        ],
+        [
+          110,
+          37
+        ],
+        [
+          119,
+          37.7
+        ]
+      ]
+    },
+    "labelPoint": [
+      112,
+      36
+    ],
+    "packIds": [
+      "world_rivers"
+    ],
+    "bbox": [
+      96,
+      35,
+      119,
+      37.7
+    ]
+  }
+]

@@ -1,9 +1,9 @@
 import type { Entity, Pack } from "./types";
 
-export const loadEntities = async (): Promise<Entity[]> => {
-  const response = await fetch("./data/entities.json");
+export const loadPackEntities = async (packId: string): Promise<Entity[]> => {
+  const response = await fetch(`./data/pack-entities/${packId}.entities.json`);
   if (!response.ok) {
-    throw new Error("Failed to load entities.json");
+    throw new Error(`Failed to load pack entities for ${packId}`);
   }
 
   return (await response.json()) as Entity[];

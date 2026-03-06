@@ -1,8 +1,9 @@
-import { readFileSync, writeFileSync } from "node:fs";
+import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
 
 const inputPath = resolve(process.cwd(), "public/data/sample-entities.json");
-const outputPath = resolve(process.cwd(), "public/data/entities.json");
+const indexOutputPath = resolve(process.cwd(), "public/data/entities-index.json");
+const packOutputDir = resolve(process.cwd(), "public/data/pack-entities");
 
 const source = JSON.parse(readFileSync(inputPath, "utf-8"));
 
@@ -54,5 +55,33 @@ const entities = source
     bbox: toBbox(entity)
   }));
 
-writeFileSync(outputPath, JSON.stringify(entities, null, 2) + "\n");
-console.log(`Generated ${entities.length} entities at ${outputPath}`);
+const byPack = new Map();
+for (const entity of entities) {
+  for (const packId of entity.packIds ?? []) {
+    if (!byPack.has(packId)) {
+      byPack.set(packId, []);
+    }
+    byPack.get(packId).push(entity);
+  }
+}
+
+mkdirSync(packOutputDir, { recursive: true });
+for (const [packId, packEntities] of byPack.entries()) {
+  const outPath = resolve(packOutputDir, `${packId}.entities.json`);
+  const sorted = packEntities.slice().sort((a, b) => a.id.localeCompare(b.id));
+  writeFileSync(outPath, JSON.stringify(sorted, null, 2) + "\n");
+}
+
+const index = entities.map((entity) => ({
+  id: entity.id,
+  type: entity.type,
+  name: entity.name,
+  geometryType: entity.geometryType,
+  labelPoint: entity.labelPoint,
+  packIds: entity.packIds
+}));
+
+writeFileSync(indexOutputPath, JSON.stringify(index, null, 2) + "\n");
+console.log(
+  `Generated ${entities.length} entities, ${byPack.size} pack files at ${packOutputDir}, and index at ${indexOutputPath}`
+);

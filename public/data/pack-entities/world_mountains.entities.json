@@ -1,0 +1,230 @@
+[
+  {
+    "id": "mountain_aconcagua",
+    "type": "mountain",
+    "name": "Aconcagua",
+    "geometryType": "point",
+    "labelPoint": [
+      -70.0117,
+      -32.6532
+    ],
+    "packIds": [
+      "world_mountains"
+    ],
+    "bbox": [
+      -70.0117,
+      -32.6532,
+      -70.0117,
+      -32.6532
+    ]
+  },
+  {
+    "id": "mountain_denali",
+    "type": "mountain",
+    "name": "Denali",
+    "geometryType": "point",
+    "labelPoint": [
+      -151.0074,
+      63.0695
+    ],
+    "packIds": [
+      "world_mountains"
+    ],
+    "bbox": [
+      -151.0074,
+      63.0695,
+      -151.0074,
+      63.0695
+    ]
+  },
+  {
+    "id": "mountain_elbrus",
+    "type": "mountain",
+    "name": "Mount Elbrus",
+    "geometryType": "point",
+    "labelPoint": [
+      42.4392,
+      43.355
+    ],
+    "packIds": [
+      "world_mountains"
+    ],
+    "bbox": [
+      42.4392,
+      43.355,
+      42.4392,
+      43.355
+    ]
+  },
+  {
+    "id": "mountain_everest",
+    "type": "mountain",
+    "name": "Mount Everest",
+    "geometryType": "point",
+    "labelPoint": [
+      86.925,
+      27.9881
+    ],
+    "packIds": [
+      "world_mountains"
+    ],
+    "bbox": [
+      86.925,
+      27.9881,
+      86.925,
+      27.9881
+    ]
+  },
+  {
+    "id": "mountain_fuji",
+    "type": "mountain",
+    "name": "Mount Fuji",
+    "geometryType": "point",
+    "labelPoint": [
+      138.7274,
+      35.3606
+    ],
+    "packIds": [
+      "world_mountains"
+    ],
+    "bbox": [
+      138.7274,
+      35.3606,
+      138.7274,
+      35.3606
+    ]
+  },
+  {
+    "id": "mountain_k2",
+    "type": "mountain",
+    "name": "K2",
+    "geometryType": "point",
+    "labelPoint": [
+      76.5133,
+      35.8808
+    ],
+    "packIds": [
+      "world_mountains"
+    ],
+    "bbox": [
+      76.5133,
+      35.8808,
+      76.5133,
+      35.8808
+    ]
+  },
+  {
+    "id": "mountain_kilimanjaro",
+    "type": "mountain",
+    "name": "Mount Kilimanjaro",
+    "geometryType": "point",
+    "labelPoint": [
+      37.3556,
+      -3.0674
+    ],
+    "packIds": [
+      "world_mountains"
+    ],
+    "bbox": [
+      37.3556,
+      -3.0674,
+      37.3556,
+      -3.0674
+    ]
+  },
+  {
+    "id": "mountain_kosciuszko",
+    "type": "mountain",
+    "name": "Mount Kosciuszko",
+    "geometryType": "point",
+    "labelPoint": [
+      148.263,
+      -36.455
+    ],
+    "packIds": [
+      "world_mountains"
+    ],
+    "bbox": [
+      148.263,
+      -36.455,
+      148.263,
+      -36.455
+    ]
+  },
+  {
+    "id": "mountain_matterhorn",
+    "type": "mountain",
+    "name": "Matterhorn",
+    "geometryType": "point",
+    "labelPoint": [
+      7.6586,
+      45.9763
+    ],
+    "packIds": [
+      "world_mountains"
+    ],
+    "bbox": [
+      7.6586,
+      45.9763,
+      7.6586,
+      45.9763
+    ]
+  },
+  {
+    "id": "mountain_mont_blanc",
+    "type": "mountain",
+    "name": "Mont Blanc",
+    "geometryType": "point",
+    "labelPoint": [
+      6.8652,
+      45.8326
+    ],
+    "packIds": [
+      "world_mountains"
+    ],
+    "bbox": [
+      6.8652,
+      45.8326,
+      6.8652,
+      45.8326
+    ]
+  },
+  {
+    "id": "mountain_table_mountain",
+    "type": "mountain",
+    "name": "Table Mountain",
+    "geometryType": "point",
+    "labelPoint": [
+      18.4037,
+      -33.9628
+    ],
+    "packIds": [
+      "world_mountains"
+    ],
+    "bbox": [
+      18.4037,
+      -33.9628,
+      18.4037,
+      -33.9628
+    ]
+  },
+  {
+    "id": "mountain_vinson",
+    "type": "mountain",
+    "name": "Mount Vinson",
+    "geometryType": "point",
+    "labelPoint": [
+      -85.617,
+      -78.525
+    ],
+    "packIds": [
+      "world_mountains"
+    ],
+    "bbox": [
+      -85.617,
+      -78.525,
+      -85.617,
+      -78.525
+    ]
+  }
+]

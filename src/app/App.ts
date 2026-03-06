@@ -1,4 +1,4 @@
-import { loadEntities, loadPacks } from "../data/dataLoader";
+import { loadPackEntities, loadPacks } from "../data/dataLoader";
 import type { Entity, Pack } from "../data/types";
 import { normalizeText } from "../utils/normalize";
 import { MapView } from "../map/MapView";
@@ -19,7 +19,8 @@ export class App {
   private panel: QuizPanel | null = null;
 
   private packs: Pack[] = [];
-  private entities: Entity[] = [];
+  private entitiesByPack: Record<string, Entity[]> = {};
+  private activePackEntities: Entity[] = [];
 
   private mode: Mode = "learn";
   private mapDetail: MapDetail = "quiz_clean";
@@ -54,9 +55,8 @@ export class App {
     this.mapView.mount();
 
     try {
-      const [packs, entities] = await Promise.all([loadPacks(), loadEntities()]);
+      const packs = await loadPacks();
       this.packs = packs;
-      this.entities = entities;
     } catch (error) {
       loadingPanel.textContent = `Failed to load data: ${String(error)}`;
       return;
@@ -67,14 +67,14 @@ export class App {
     this.hud = new Hud(this.packs, {
       onModeChange: (mode) => {
         this.mode = mode;
-        this.startRound();
+        void this.startRound();
       },
       onPackChange: (packId) => {
         this.currentPackId = packId;
-        this.startRound();
+        void this.startRound();
       },
       onQuizTypeChange: () => {
-        this.startRound();
+        void this.startRound();
       },
       onMapDetailChange: (mapDetail) => {
         this.mapDetail = mapDetail;
@@ -88,7 +88,7 @@ export class App {
       },
       onHint: () => this.handleHint(),
       onReveal: () => this.handleReveal(),
-      onNext: () => this.startRound()
+      onNext: () => void this.startRound()
     });
 
     this.panel = new QuizPanel({
@@ -114,10 +114,10 @@ export class App {
     this.mapView.setLowDataMode(this.lowDataMode);
     this.mapView.setMapDetail(this.mapDetail);
 
-    this.startRound();
+    await this.startRound();
   }
 
-  private startRound(): void {
+  private async startRound(): Promise<void> {
     if (!this.mapView || !this.hud || !this.panel) {
       return;
     }
@@ -127,7 +127,20 @@ export class App {
       return;
     }
 
-    const items = this.entities.filter((entity) => entity.packIds.includes(pack.id));
+    try {
+      await this.ensurePackEntitiesLoaded(pack.id);
+    } catch (error) {
+      this.currentEntity = null;
+      this.mapView.setHighlightedEntity(null);
+      this.panel.setHeading("Geo Bee Trainer");
+      this.panel.setPrompt("Failed to load this pack.");
+      this.panel.setFeedback(String(error));
+      this.panel.setAnswerVisible(false);
+      this.panel.setAnswerEnabled(false);
+      return;
+    }
+
+    const items = this.activePackEntities;
     this.mapView.setMode(this.mode);
     this.mapView.setEntities(items);
     this.mapView.flyToPack(pack);
@@ -194,7 +207,7 @@ export class App {
       this.panel.setFeedback(`Not correct. The answer is ${this.currentEntity.name}.`);
     }
 
-    const packSize = this.entities.filter((entity) => entity.packIds.includes(this.currentPackId)).length;
+    const packSize = this.activePackEntities.length;
     this.hud?.setStats({
       score: this.score,
       streak: this.streak,
@@ -222,7 +235,7 @@ export class App {
     this.hud?.setStats({
       score: this.score,
       streak: this.streak,
-      progress: `${this.attempted} / ${this.entities.filter((entity) => entity.packIds.includes(this.currentPackId)).length}`
+      progress: `${this.attempted} / ${this.activePackEntities.length}`
     });
   }
 
@@ -250,5 +263,12 @@ export class App {
       return false;
     }
     return true;
+  }
+
+  private async ensurePackEntitiesLoaded(packId: string): Promise<void> {
+    if (!this.entitiesByPack[packId]) {
+      this.entitiesByPack[packId] = await loadPackEntities(packId);
+    }
+    this.activePackEntities = this.entitiesByPack[packId];
   }
 }
