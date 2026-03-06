@@ -1,0 +1,4903 @@
+[
+  {
+    "id": "ca_capital_victoria",
+    "type": "capital",
+    "name": "Victoria",
+    "geometryType": "point",
+    "labelPoint": [
+      -123.3656,
+      48.4284
+    ],
+    "packIds": [
+      "canada_provinces_territories",
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "ca_province_british_columbia",
+      "name": "British Columbia",
+      "type": "province"
+    },
+    "bbox": [
+      -123.3656,
+      48.4284,
+      -123.3656,
+      48.4284
+    ]
+  },
+  {
+    "id": "capital_abu_dhabi",
+    "type": "capital",
+    "name": "Abu Dhabi",
+    "geometryType": "point",
+    "labelPoint": [
+      54.37,
+      24.47
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_are",
+      "name": "United Arab Emirates",
+      "type": "country"
+    },
+    "bbox": [
+      54.37,
+      24.47,
+      54.37,
+      24.47
+    ]
+  },
+  {
+    "id": "capital_abuja",
+    "type": "capital",
+    "name": "Abuja",
+    "geometryType": "point",
+    "labelPoint": [
+      7.53,
+      9.08
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_nga",
+      "name": "Nigeria",
+      "type": "country"
+    },
+    "bbox": [
+      7.53,
+      9.08,
+      7.53,
+      9.08
+    ]
+  },
+  {
+    "id": "capital_accra",
+    "type": "capital",
+    "name": "Accra",
+    "geometryType": "point",
+    "labelPoint": [
+      -0.22,
+      5.55
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_gha",
+      "name": "Ghana",
+      "type": "country"
+    },
+    "bbox": [
+      -0.22,
+      5.55,
+      -0.22,
+      5.55
+    ]
+  },
+  {
+    "id": "capital_addis_ababa",
+    "type": "capital",
+    "name": "Addis Ababa",
+    "geometryType": "point",
+    "labelPoint": [
+      38.7,
+      9.03
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_eth",
+      "name": "Ethiopia",
+      "type": "country"
+    },
+    "bbox": [
+      38.7,
+      9.03,
+      38.7,
+      9.03
+    ]
+  },
+  {
+    "id": "capital_algiers",
+    "type": "capital",
+    "name": "Algiers",
+    "geometryType": "point",
+    "labelPoint": [
+      3.05,
+      36.75
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_dza",
+      "name": "Algeria",
+      "type": "country"
+    },
+    "bbox": [
+      3.05,
+      36.75,
+      3.05,
+      36.75
+    ]
+  },
+  {
+    "id": "capital_amman",
+    "type": "capital",
+    "name": "Amman",
+    "geometryType": "point",
+    "labelPoint": [
+      35.93,
+      31.95
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_jor",
+      "name": "Jordan",
+      "type": "country"
+    },
+    "bbox": [
+      35.93,
+      31.95,
+      35.93,
+      31.95
+    ]
+  },
+  {
+    "id": "capital_amsterdam",
+    "type": "capital",
+    "name": "Amsterdam",
+    "geometryType": "point",
+    "labelPoint": [
+      4.9041,
+      52.3676
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_netherlands",
+      "name": "Netherlands",
+      "type": "country"
+    },
+    "bbox": [
+      4.9041,
+      52.3676,
+      4.9041,
+      52.3676
+    ]
+  },
+  {
+    "id": "capital_andorra_la_vella",
+    "type": "capital",
+    "name": "Andorra la Vella",
+    "geometryType": "point",
+    "labelPoint": [
+      1.5218,
+      42.5063
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_andorra",
+      "name": "Andorra",
+      "type": "country"
+    },
+    "bbox": [
+      1.5218,
+      42.5063,
+      1.5218,
+      42.5063
+    ]
+  },
+  {
+    "id": "capital_ankara",
+    "type": "capital",
+    "name": "Ankara",
+    "geometryType": "point",
+    "labelPoint": [
+      32.8597,
+      39.9334
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_turkey",
+      "name": "Turkey",
+      "type": "country"
+    },
+    "bbox": [
+      32.8597,
+      39.9334,
+      32.8597,
+      39.9334
+    ]
+  },
+  {
+    "id": "capital_antananarivo",
+    "type": "capital",
+    "name": "Antananarivo",
+    "geometryType": "point",
+    "labelPoint": [
+      47.52,
+      -18.92
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_mdg",
+      "name": "Madagascar",
+      "type": "country"
+    },
+    "bbox": [
+      47.52,
+      -18.92,
+      47.52,
+      -18.92
+    ]
+  },
+  {
+    "id": "capital_apia",
+    "type": "capital",
+    "name": "Apia",
+    "geometryType": "point",
+    "labelPoint": [
+      -171.77,
+      -13.82
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_wsm",
+      "name": "Samoa",
+      "type": "country"
+    },
+    "bbox": [
+      -171.77,
+      -13.82,
+      -171.77,
+      -13.82
+    ]
+  },
+  {
+    "id": "capital_ashgabat",
+    "type": "capital",
+    "name": "Ashgabat",
+    "geometryType": "point",
+    "labelPoint": [
+      58.38,
+      37.95
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_tkm",
+      "name": "Turkmenistan",
+      "type": "country"
+    },
+    "bbox": [
+      58.38,
+      37.95,
+      58.38,
+      37.95
+    ]
+  },
+  {
+    "id": "capital_asmara",
+    "type": "capital",
+    "name": "Asmara",
+    "geometryType": "point",
+    "labelPoint": [
+      38.93,
+      15.33
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_eri",
+      "name": "Eritrea",
+      "type": "country"
+    },
+    "bbox": [
+      38.93,
+      15.33,
+      38.93,
+      15.33
+    ]
+  },
+  {
+    "id": "capital_astana",
+    "type": "capital",
+    "name": "Astana",
+    "geometryType": "point",
+    "labelPoint": [
+      71.45,
+      51.16
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_kaz",
+      "name": "Kazakhstan",
+      "type": "country"
+    },
+    "bbox": [
+      71.45,
+      51.16,
+      71.45,
+      51.16
+    ]
+  },
+  {
+    "id": "capital_asuncion",
+    "type": "capital",
+    "name": "Asunción",
+    "geometryType": "point",
+    "labelPoint": [
+      -57.57,
+      -25.28
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_pry",
+      "name": "Paraguay",
+      "type": "country"
+    },
+    "bbox": [
+      -57.57,
+      -25.28,
+      -57.57,
+      -25.28
+    ]
+  },
+  {
+    "id": "capital_athens",
+    "type": "capital",
+    "name": "Athens",
+    "geometryType": "point",
+    "labelPoint": [
+      23.7275,
+      37.9838
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_greece",
+      "name": "Greece",
+      "type": "country"
+    },
+    "bbox": [
+      23.7275,
+      37.9838,
+      23.7275,
+      37.9838
+    ]
+  },
+  {
+    "id": "capital_baghdad",
+    "type": "capital",
+    "name": "Baghdad",
+    "geometryType": "point",
+    "labelPoint": [
+      44.4,
+      33.33
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_irq",
+      "name": "Iraq",
+      "type": "country"
+    },
+    "bbox": [
+      44.4,
+      33.33,
+      44.4,
+      33.33
+    ]
+  },
+  {
+    "id": "capital_baku",
+    "type": "capital",
+    "name": "Baku",
+    "geometryType": "point",
+    "labelPoint": [
+      49.8671,
+      40.4093
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_azerbaijan",
+      "name": "Azerbaijan",
+      "type": "country"
+    },
+    "bbox": [
+      49.8671,
+      40.4093,
+      49.8671,
+      40.4093
+    ]
+  },
+  {
+    "id": "capital_bamako",
+    "type": "capital",
+    "name": "Bamako",
+    "geometryType": "point",
+    "labelPoint": [
+      -8,
+      12.65
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_mli",
+      "name": "Mali",
+      "type": "country"
+    },
+    "bbox": [
+      -8,
+      12.65,
+      -8,
+      12.65
+    ]
+  },
+  {
+    "id": "capital_bandar_seri_begawan",
+    "type": "capital",
+    "name": "Bandar Seri Begawan",
+    "geometryType": "point",
+    "labelPoint": [
+      114.93,
+      4.88
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_brn",
+      "name": "Brunei",
+      "type": "country"
+    },
+    "bbox": [
+      114.93,
+      4.88,
+      114.93,
+      4.88
+    ]
+  },
+  {
+    "id": "capital_bangkok",
+    "type": "capital",
+    "name": "Bangkok",
+    "geometryType": "point",
+    "labelPoint": [
+      100.52,
+      13.75
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_tha",
+      "name": "Thailand",
+      "type": "country"
+    },
+    "bbox": [
+      100.52,
+      13.75,
+      100.52,
+      13.75
+    ]
+  },
+  {
+    "id": "capital_bangui",
+    "type": "capital",
+    "name": "Bangui",
+    "geometryType": "point",
+    "labelPoint": [
+      18.58,
+      4.37
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_caf",
+      "name": "Central African Republic",
+      "type": "country"
+    },
+    "bbox": [
+      18.58,
+      4.37,
+      18.58,
+      4.37
+    ]
+  },
+  {
+    "id": "capital_banjul",
+    "type": "capital",
+    "name": "Banjul",
+    "geometryType": "point",
+    "labelPoint": [
+      -16.57,
+      13.45
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_gmb",
+      "name": "Gambia",
+      "type": "country"
+    },
+    "bbox": [
+      -16.57,
+      13.45,
+      -16.57,
+      13.45
+    ]
+  },
+  {
+    "id": "capital_basseterre",
+    "type": "capital",
+    "name": "Basseterre",
+    "geometryType": "point",
+    "labelPoint": [
+      -62.72,
+      17.3
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_kna",
+      "name": "Saint Kitts and Nevis",
+      "type": "country"
+    },
+    "bbox": [
+      -62.72,
+      17.3,
+      -62.72,
+      17.3
+    ]
+  },
+  {
+    "id": "capital_beijing",
+    "type": "capital",
+    "name": "Beijing",
+    "geometryType": "point",
+    "labelPoint": [
+      116.4074,
+      39.9042
+    ],
+    "packIds": [
+      "world_capitals",
+      "world_capitals_by_continent"
+    ],
+    "adminOf": {
+      "id": "country_chn",
+      "name": "China",
+      "type": "country"
+    },
+    "bbox": [
+      116.4074,
+      39.9042,
+      116.4074,
+      39.9042
+    ]
+  },
+  {
+    "id": "capital_beirut",
+    "type": "capital",
+    "name": "Beirut",
+    "geometryType": "point",
+    "labelPoint": [
+      35.5,
+      33.87
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_lbn",
+      "name": "Lebanon",
+      "type": "country"
+    },
+    "bbox": [
+      35.5,
+      33.87,
+      35.5,
+      33.87
+    ]
+  },
+  {
+    "id": "capital_belgrade",
+    "type": "capital",
+    "name": "Belgrade",
+    "geometryType": "point",
+    "labelPoint": [
+      20.4489,
+      44.7866
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_serbia",
+      "name": "Serbia",
+      "type": "country"
+    },
+    "bbox": [
+      20.4489,
+      44.7866,
+      20.4489,
+      44.7866
+    ]
+  },
+  {
+    "id": "capital_belmopan",
+    "type": "capital",
+    "name": "Belmopan",
+    "geometryType": "point",
+    "labelPoint": [
+      -88.77,
+      17.25
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_blz",
+      "name": "Belize",
+      "type": "country"
+    },
+    "bbox": [
+      -88.77,
+      17.25,
+      -88.77,
+      17.25
+    ]
+  },
+  {
+    "id": "capital_berlin",
+    "type": "capital",
+    "name": "Berlin",
+    "geometryType": "point",
+    "labelPoint": [
+      13.405,
+      52.52
+    ],
+    "packIds": [
+      "world_capitals",
+      "world_capitals_by_continent"
+    ],
+    "adminOf": {
+      "id": "country_germany",
+      "name": "Germany",
+      "type": "country"
+    },
+    "bbox": [
+      13.405,
+      52.52,
+      13.405,
+      52.52
+    ]
+  },
+  {
+    "id": "capital_bern",
+    "type": "capital",
+    "name": "Bern",
+    "geometryType": "point",
+    "labelPoint": [
+      7.4474,
+      46.948
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_switzerland",
+      "name": "Switzerland",
+      "type": "country"
+    },
+    "bbox": [
+      7.4474,
+      46.948,
+      7.4474,
+      46.948
+    ]
+  },
+  {
+    "id": "capital_bishkek",
+    "type": "capital",
+    "name": "Bishkek",
+    "geometryType": "point",
+    "labelPoint": [
+      74.6,
+      42.87
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_kgz",
+      "name": "Kyrgyzstan",
+      "type": "country"
+    },
+    "bbox": [
+      74.6,
+      42.87,
+      74.6,
+      42.87
+    ]
+  },
+  {
+    "id": "capital_bogota",
+    "type": "capital",
+    "name": "Bogotá",
+    "geometryType": "point",
+    "labelPoint": [
+      -74.07,
+      4.71
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_col",
+      "name": "Colombia",
+      "type": "country"
+    },
+    "bbox": [
+      -74.07,
+      4.71,
+      -74.07,
+      4.71
+    ]
+  },
+  {
+    "id": "capital_brasilia",
+    "type": "capital",
+    "name": "Brasilia",
+    "geometryType": "point",
+    "labelPoint": [
+      -47.8825,
+      -15.7942
+    ],
+    "packIds": [
+      "world_capitals",
+      "world_capitals_by_continent"
+    ],
+    "adminOf": {
+      "id": "country_bra",
+      "name": "Brazil",
+      "type": "country"
+    },
+    "bbox": [
+      -47.8825,
+      -15.7942,
+      -47.8825,
+      -15.7942
+    ]
+  },
+  {
+    "id": "capital_bratislava",
+    "type": "capital",
+    "name": "Bratislava",
+    "geometryType": "point",
+    "labelPoint": [
+      17.1077,
+      48.1486
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_slovakia",
+      "name": "Slovakia",
+      "type": "country"
+    },
+    "bbox": [
+      17.1077,
+      48.1486,
+      17.1077,
+      48.1486
+    ]
+  },
+  {
+    "id": "capital_brazzaville",
+    "type": "capital",
+    "name": "Brazzaville",
+    "geometryType": "point",
+    "labelPoint": [
+      15.28,
+      -4.25
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_cog",
+      "name": "Republic of the Congo",
+      "type": "country"
+    },
+    "bbox": [
+      15.28,
+      -4.25,
+      15.28,
+      -4.25
+    ]
+  },
+  {
+    "id": "capital_bridgetown",
+    "type": "capital",
+    "name": "Bridgetown",
+    "geometryType": "point",
+    "labelPoint": [
+      -59.62,
+      13.1
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_brb",
+      "name": "Barbados",
+      "type": "country"
+    },
+    "bbox": [
+      -59.62,
+      13.1,
+      -59.62,
+      13.1
+    ]
+  },
+  {
+    "id": "capital_brussels",
+    "type": "capital",
+    "name": "Brussels",
+    "geometryType": "point",
+    "labelPoint": [
+      4.3517,
+      50.8503
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_belgium",
+      "name": "Belgium",
+      "type": "country"
+    },
+    "bbox": [
+      4.3517,
+      50.8503,
+      4.3517,
+      50.8503
+    ]
+  },
+  {
+    "id": "capital_bucharest",
+    "type": "capital",
+    "name": "Bucharest",
+    "geometryType": "point",
+    "labelPoint": [
+      26.1025,
+      44.4268
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_romania",
+      "name": "Romania",
+      "type": "country"
+    },
+    "bbox": [
+      26.1025,
+      44.4268,
+      26.1025,
+      44.4268
+    ]
+  },
+  {
+    "id": "capital_budapest",
+    "type": "capital",
+    "name": "Budapest",
+    "geometryType": "point",
+    "labelPoint": [
+      19.0402,
+      47.4979
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_hungary",
+      "name": "Hungary",
+      "type": "country"
+    },
+    "bbox": [
+      19.0402,
+      47.4979,
+      19.0402,
+      47.4979
+    ]
+  },
+  {
+    "id": "capital_buenos_aires",
+    "type": "capital",
+    "name": "Buenos Aires",
+    "geometryType": "point",
+    "labelPoint": [
+      -58.67,
+      -34.58
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_arg",
+      "name": "Argentina",
+      "type": "country"
+    },
+    "bbox": [
+      -58.67,
+      -34.58,
+      -58.67,
+      -34.58
+    ]
+  },
+  {
+    "id": "capital_cairo",
+    "type": "capital",
+    "name": "Cairo",
+    "geometryType": "point",
+    "labelPoint": [
+      31.2357,
+      30.0444
+    ],
+    "packIds": [
+      "world_capitals",
+      "world_capitals_by_continent"
+    ],
+    "adminOf": {
+      "id": "country_egy",
+      "name": "Egypt",
+      "type": "country"
+    },
+    "bbox": [
+      31.2357,
+      30.0444,
+      31.2357,
+      30.0444
+    ]
+  },
+  {
+    "id": "capital_canberra",
+    "type": "capital",
+    "name": "Canberra",
+    "geometryType": "point",
+    "labelPoint": [
+      149.13,
+      -35.2809
+    ],
+    "packIds": [
+      "world_capitals",
+      "world_capitals_by_continent"
+    ],
+    "adminOf": {
+      "id": "country_aus",
+      "name": "Australia",
+      "type": "country"
+    },
+    "bbox": [
+      149.13,
+      -35.2809,
+      149.13,
+      -35.2809
+    ]
+  },
+  {
+    "id": "capital_caracas",
+    "type": "capital",
+    "name": "Caracas",
+    "geometryType": "point",
+    "labelPoint": [
+      -66.87,
+      10.48
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_ven",
+      "name": "Venezuela",
+      "type": "country"
+    },
+    "bbox": [
+      -66.87,
+      10.48,
+      -66.87,
+      10.48
+    ]
+  },
+  {
+    "id": "capital_castries",
+    "type": "capital",
+    "name": "Castries",
+    "geometryType": "point",
+    "labelPoint": [
+      -61,
+      14
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_lca",
+      "name": "Saint Lucia",
+      "type": "country"
+    },
+    "bbox": [
+      -61,
+      14,
+      -61,
+      14
+    ]
+  },
+  {
+    "id": "capital_chisinau",
+    "type": "capital",
+    "name": "Chisinau",
+    "geometryType": "point",
+    "labelPoint": [
+      28.8353,
+      47.0105
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_moldova",
+      "name": "Moldova",
+      "type": "country"
+    },
+    "bbox": [
+      28.8353,
+      47.0105,
+      28.8353,
+      47.0105
+    ]
+  },
+  {
+    "id": "capital_city_of_san_marino",
+    "type": "capital",
+    "name": "City of San Marino",
+    "geometryType": "point",
+    "labelPoint": [
+      12.45,
+      43.94
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_san_marino",
+      "name": "San Marino",
+      "type": "country"
+    },
+    "bbox": [
+      12.45,
+      43.94,
+      12.45,
+      43.94
+    ]
+  },
+  {
+    "id": "capital_ciudad_de_la_paz",
+    "type": "capital",
+    "name": "Ciudad de la Paz",
+    "geometryType": "point",
+    "labelPoint": [
+      10.49,
+      1.35
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_gnq",
+      "name": "Equatorial Guinea",
+      "type": "country"
+    },
+    "bbox": [
+      10.49,
+      1.35,
+      10.49,
+      1.35
+    ]
+  },
+  {
+    "id": "capital_conakry",
+    "type": "capital",
+    "name": "Conakry",
+    "geometryType": "point",
+    "labelPoint": [
+      -13.7,
+      9.5
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_gin",
+      "name": "Guinea",
+      "type": "country"
+    },
+    "bbox": [
+      -13.7,
+      9.5,
+      -13.7,
+      9.5
+    ]
+  },
+  {
+    "id": "capital_copenhagen",
+    "type": "capital",
+    "name": "Copenhagen",
+    "geometryType": "point",
+    "labelPoint": [
+      12.5683,
+      55.6761
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_denmark",
+      "name": "Denmark",
+      "type": "country"
+    },
+    "bbox": [
+      12.5683,
+      55.6761,
+      12.5683,
+      55.6761
+    ]
+  },
+  {
+    "id": "capital_dakar",
+    "type": "capital",
+    "name": "Dakar",
+    "geometryType": "point",
+    "labelPoint": [
+      -17.63,
+      14.73
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_sen",
+      "name": "Senegal",
+      "type": "country"
+    },
+    "bbox": [
+      -17.63,
+      14.73,
+      -17.63,
+      14.73
+    ]
+  },
+  {
+    "id": "capital_damascus",
+    "type": "capital",
+    "name": "Damascus",
+    "geometryType": "point",
+    "labelPoint": [
+      36.3,
+      33.5
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_syr",
+      "name": "Syria",
+      "type": "country"
+    },
+    "bbox": [
+      36.3,
+      33.5,
+      36.3,
+      33.5
+    ]
+  },
+  {
+    "id": "capital_dhaka",
+    "type": "capital",
+    "name": "Dhaka",
+    "geometryType": "point",
+    "labelPoint": [
+      90.4,
+      23.72
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_bgd",
+      "name": "Bangladesh",
+      "type": "country"
+    },
+    "bbox": [
+      90.4,
+      23.72,
+      90.4,
+      23.72
+    ]
+  },
+  {
+    "id": "capital_dili",
+    "type": "capital",
+    "name": "Dili",
+    "geometryType": "point",
+    "labelPoint": [
+      125.6,
+      -8.58
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_tls",
+      "name": "Timor-Leste",
+      "type": "country"
+    },
+    "bbox": [
+      125.6,
+      -8.58,
+      125.6,
+      -8.58
+    ]
+  },
+  {
+    "id": "capital_djibouti",
+    "type": "capital",
+    "name": "Djibouti",
+    "geometryType": "point",
+    "labelPoint": [
+      43.15,
+      11.58
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_dji",
+      "name": "Djibouti",
+      "type": "country"
+    },
+    "bbox": [
+      43.15,
+      11.58,
+      43.15,
+      11.58
+    ]
+  },
+  {
+    "id": "capital_dodoma",
+    "type": "capital",
+    "name": "Dodoma",
+    "geometryType": "point",
+    "labelPoint": [
+      35.75,
+      -6.16
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_tza",
+      "name": "Tanzania",
+      "type": "country"
+    },
+    "bbox": [
+      35.75,
+      -6.16,
+      35.75,
+      -6.16
+    ]
+  },
+  {
+    "id": "capital_doha",
+    "type": "capital",
+    "name": "Doha",
+    "geometryType": "point",
+    "labelPoint": [
+      51.53,
+      25.28
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_qat",
+      "name": "Qatar",
+      "type": "country"
+    },
+    "bbox": [
+      51.53,
+      25.28,
+      51.53,
+      25.28
+    ]
+  },
+  {
+    "id": "capital_dublin",
+    "type": "capital",
+    "name": "Dublin",
+    "geometryType": "point",
+    "labelPoint": [
+      -6.2603,
+      53.3498
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_ireland",
+      "name": "Ireland",
+      "type": "country"
+    },
+    "bbox": [
+      -6.2603,
+      53.3498,
+      -6.2603,
+      53.3498
+    ]
+  },
+  {
+    "id": "capital_dushanbe",
+    "type": "capital",
+    "name": "Dushanbe",
+    "geometryType": "point",
+    "labelPoint": [
+      68.77,
+      38.55
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_tjk",
+      "name": "Tajikistan",
+      "type": "country"
+    },
+    "bbox": [
+      68.77,
+      38.55,
+      68.77,
+      38.55
+    ]
+  },
+  {
+    "id": "capital_freetown",
+    "type": "capital",
+    "name": "Freetown",
+    "geometryType": "point",
+    "labelPoint": [
+      -13.23,
+      8.48
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_sle",
+      "name": "Sierra Leone",
+      "type": "country"
+    },
+    "bbox": [
+      -13.23,
+      8.48,
+      -13.23,
+      8.48
+    ]
+  },
+  {
+    "id": "capital_funafuti",
+    "type": "capital",
+    "name": "Funafuti",
+    "geometryType": "point",
+    "labelPoint": [
+      179.22,
+      -8.52
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_tuv",
+      "name": "Tuvalu",
+      "type": "country"
+    },
+    "bbox": [
+      179.22,
+      -8.52,
+      179.22,
+      -8.52
+    ]
+  },
+  {
+    "id": "capital_gaborone",
+    "type": "capital",
+    "name": "Gaborone",
+    "geometryType": "point",
+    "labelPoint": [
+      25.9,
+      -24.63
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_bwa",
+      "name": "Botswana",
+      "type": "country"
+    },
+    "bbox": [
+      25.9,
+      -24.63,
+      25.9,
+      -24.63
+    ]
+  },
+  {
+    "id": "capital_georgetown",
+    "type": "capital",
+    "name": "Georgetown",
+    "geometryType": "point",
+    "labelPoint": [
+      -58.15,
+      6.8
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_guy",
+      "name": "Guyana",
+      "type": "country"
+    },
+    "bbox": [
+      -58.15,
+      6.8,
+      -58.15,
+      6.8
+    ]
+  },
+  {
+    "id": "capital_gitega",
+    "type": "capital",
+    "name": "Gitega",
+    "geometryType": "point",
+    "labelPoint": [
+      29.93,
+      -3.43
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_bdi",
+      "name": "Burundi",
+      "type": "country"
+    },
+    "bbox": [
+      29.93,
+      -3.43,
+      29.93,
+      -3.43
+    ]
+  },
+  {
+    "id": "capital_guatemala_city",
+    "type": "capital",
+    "name": "Guatemala City",
+    "geometryType": "point",
+    "labelPoint": [
+      -90.52,
+      14.62
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_gtm",
+      "name": "Guatemala",
+      "type": "country"
+    },
+    "bbox": [
+      -90.52,
+      14.62,
+      -90.52,
+      14.62
+    ]
+  },
+  {
+    "id": "capital_hanoi",
+    "type": "capital",
+    "name": "Hanoi",
+    "geometryType": "point",
+    "labelPoint": [
+      105.85,
+      21.03
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_vnm",
+      "name": "Vietnam",
+      "type": "country"
+    },
+    "bbox": [
+      105.85,
+      21.03,
+      105.85,
+      21.03
+    ]
+  },
+  {
+    "id": "capital_harare",
+    "type": "capital",
+    "name": "Harare",
+    "geometryType": "point",
+    "labelPoint": [
+      31.03,
+      -17.82
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_zwe",
+      "name": "Zimbabwe",
+      "type": "country"
+    },
+    "bbox": [
+      31.03,
+      -17.82,
+      31.03,
+      -17.82
+    ]
+  },
+  {
+    "id": "capital_havana",
+    "type": "capital",
+    "name": "Havana",
+    "geometryType": "point",
+    "labelPoint": [
+      -82.35,
+      23.12
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_cub",
+      "name": "Cuba",
+      "type": "country"
+    },
+    "bbox": [
+      -82.35,
+      23.12,
+      -82.35,
+      23.12
+    ]
+  },
+  {
+    "id": "capital_helsinki",
+    "type": "capital",
+    "name": "Helsinki",
+    "geometryType": "point",
+    "labelPoint": [
+      24.9384,
+      60.1699
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_finland",
+      "name": "Finland",
+      "type": "country"
+    },
+    "bbox": [
+      24.9384,
+      60.1699,
+      24.9384,
+      60.1699
+    ]
+  },
+  {
+    "id": "capital_honiara",
+    "type": "capital",
+    "name": "Honiara",
+    "geometryType": "point",
+    "labelPoint": [
+      159.95,
+      -9.43
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_slb",
+      "name": "Solomon Islands",
+      "type": "country"
+    },
+    "bbox": [
+      159.95,
+      -9.43,
+      159.95,
+      -9.43
+    ]
+  },
+  {
+    "id": "capital_islamabad",
+    "type": "capital",
+    "name": "Islamabad",
+    "geometryType": "point",
+    "labelPoint": [
+      73.05,
+      33.68
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_pak",
+      "name": "Pakistan",
+      "type": "country"
+    },
+    "bbox": [
+      73.05,
+      33.68,
+      73.05,
+      33.68
+    ]
+  },
+  {
+    "id": "capital_jakarta",
+    "type": "capital",
+    "name": "Jakarta",
+    "geometryType": "point",
+    "labelPoint": [
+      106.82,
+      -6.17
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_idn",
+      "name": "Indonesia",
+      "type": "country"
+    },
+    "bbox": [
+      106.82,
+      -6.17,
+      106.82,
+      -6.17
+    ]
+  },
+  {
+    "id": "capital_jerusalem",
+    "type": "capital",
+    "name": "Jerusalem",
+    "geometryType": "point",
+    "labelPoint": [
+      35.23,
+      31.77
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_isr",
+      "name": "Israel",
+      "type": "country"
+    },
+    "bbox": [
+      35.23,
+      31.77,
+      35.23,
+      31.77
+    ]
+  },
+  {
+    "id": "capital_juba",
+    "type": "capital",
+    "name": "Juba",
+    "geometryType": "point",
+    "labelPoint": [
+      31.62,
+      4.85
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_ssd",
+      "name": "South Sudan",
+      "type": "country"
+    },
+    "bbox": [
+      31.62,
+      4.85,
+      31.62,
+      4.85
+    ]
+  },
+  {
+    "id": "capital_kabul",
+    "type": "capital",
+    "name": "Kabul",
+    "geometryType": "point",
+    "labelPoint": [
+      69.18,
+      34.52
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_afg",
+      "name": "Afghanistan",
+      "type": "country"
+    },
+    "bbox": [
+      69.18,
+      34.52,
+      69.18,
+      34.52
+    ]
+  },
+  {
+    "id": "capital_kampala",
+    "type": "capital",
+    "name": "Kampala",
+    "geometryType": "point",
+    "labelPoint": [
+      32.55,
+      0.32
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_uga",
+      "name": "Uganda",
+      "type": "country"
+    },
+    "bbox": [
+      32.55,
+      0.32,
+      32.55,
+      0.32
+    ]
+  },
+  {
+    "id": "capital_kathmandu",
+    "type": "capital",
+    "name": "Kathmandu",
+    "geometryType": "point",
+    "labelPoint": [
+      85.32,
+      27.72
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_npl",
+      "name": "Nepal",
+      "type": "country"
+    },
+    "bbox": [
+      85.32,
+      27.72,
+      85.32,
+      27.72
+    ]
+  },
+  {
+    "id": "capital_khartoum",
+    "type": "capital",
+    "name": "Khartoum",
+    "geometryType": "point",
+    "labelPoint": [
+      32.53,
+      15.6
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_sdn",
+      "name": "Sudan",
+      "type": "country"
+    },
+    "bbox": [
+      32.53,
+      15.6,
+      32.53,
+      15.6
+    ]
+  },
+  {
+    "id": "capital_kigali",
+    "type": "capital",
+    "name": "Kigali",
+    "geometryType": "point",
+    "labelPoint": [
+      30.05,
+      -1.95
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_rwa",
+      "name": "Rwanda",
+      "type": "country"
+    },
+    "bbox": [
+      30.05,
+      -1.95,
+      30.05,
+      -1.95
+    ]
+  },
+  {
+    "id": "capital_kingston",
+    "type": "capital",
+    "name": "Kingston",
+    "geometryType": "point",
+    "labelPoint": [
+      -76.79358,
+      17.99702
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_jam",
+      "name": "Jamaica",
+      "type": "country"
+    },
+    "bbox": [
+      -76.79358,
+      17.99702,
+      -76.79358,
+      17.99702
+    ]
+  },
+  {
+    "id": "capital_kingstown",
+    "type": "capital",
+    "name": "Kingstown",
+    "geometryType": "point",
+    "labelPoint": [
+      -61.22,
+      13.13
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_vct",
+      "name": "Saint Vincent and the Grenadines",
+      "type": "country"
+    },
+    "bbox": [
+      -61.22,
+      13.13,
+      -61.22,
+      13.13
+    ]
+  },
+  {
+    "id": "capital_kinshasa",
+    "type": "capital",
+    "name": "Kinshasa",
+    "geometryType": "point",
+    "labelPoint": [
+      15.3,
+      -4.32
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_cod",
+      "name": "DR Congo",
+      "type": "country"
+    },
+    "bbox": [
+      15.3,
+      -4.32,
+      15.3,
+      -4.32
+    ]
+  },
+  {
+    "id": "capital_kuala_lumpur",
+    "type": "capital",
+    "name": "Kuala Lumpur",
+    "geometryType": "point",
+    "labelPoint": [
+      101.7,
+      3.17
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_mys",
+      "name": "Malaysia",
+      "type": "country"
+    },
+    "bbox": [
+      101.7,
+      3.17,
+      101.7,
+      3.17
+    ]
+  },
+  {
+    "id": "capital_kuwait_city",
+    "type": "capital",
+    "name": "Kuwait City",
+    "geometryType": "point",
+    "labelPoint": [
+      47.97,
+      29.37
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_kwt",
+      "name": "Kuwait",
+      "type": "country"
+    },
+    "bbox": [
+      47.97,
+      29.37,
+      47.97,
+      29.37
+    ]
+  },
+  {
+    "id": "capital_kyiv",
+    "type": "capital",
+    "name": "Kyiv",
+    "geometryType": "point",
+    "labelPoint": [
+      30.5234,
+      50.4501
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_ukraine",
+      "name": "Ukraine",
+      "type": "country"
+    },
+    "bbox": [
+      30.5234,
+      50.4501,
+      30.5234,
+      50.4501
+    ]
+  },
+  {
+    "id": "capital_libreville",
+    "type": "capital",
+    "name": "Libreville",
+    "geometryType": "point",
+    "labelPoint": [
+      9.45,
+      0.38
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_gab",
+      "name": "Gabon",
+      "type": "country"
+    },
+    "bbox": [
+      9.45,
+      0.38,
+      9.45,
+      0.38
+    ]
+  },
+  {
+    "id": "capital_lilongwe",
+    "type": "capital",
+    "name": "Lilongwe",
+    "geometryType": "point",
+    "labelPoint": [
+      33.78,
+      -13.97
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_mwi",
+      "name": "Malawi",
+      "type": "country"
+    },
+    "bbox": [
+      33.78,
+      -13.97,
+      33.78,
+      -13.97
+    ]
+  },
+  {
+    "id": "capital_lima",
+    "type": "capital",
+    "name": "Lima",
+    "geometryType": "point",
+    "labelPoint": [
+      -77.05,
+      -12.05
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_per",
+      "name": "Peru",
+      "type": "country"
+    },
+    "bbox": [
+      -77.05,
+      -12.05,
+      -77.05,
+      -12.05
+    ]
+  },
+  {
+    "id": "capital_lisbon",
+    "type": "capital",
+    "name": "Lisbon",
+    "geometryType": "point",
+    "labelPoint": [
+      -9.1393,
+      38.7223
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_portugal",
+      "name": "Portugal",
+      "type": "country"
+    },
+    "bbox": [
+      -9.1393,
+      38.7223,
+      -9.1393,
+      38.7223
+    ]
+  },
+  {
+    "id": "capital_ljubljana",
+    "type": "capital",
+    "name": "Ljubljana",
+    "geometryType": "point",
+    "labelPoint": [
+      14.5058,
+      46.0569
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_slovenia",
+      "name": "Slovenia",
+      "type": "country"
+    },
+    "bbox": [
+      14.5058,
+      46.0569,
+      14.5058,
+      46.0569
+    ]
+  },
+  {
+    "id": "capital_lome",
+    "type": "capital",
+    "name": "Lomé",
+    "geometryType": "point",
+    "labelPoint": [
+      1.21,
+      6.14
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_tgo",
+      "name": "Togo",
+      "type": "country"
+    },
+    "bbox": [
+      1.21,
+      6.14,
+      1.21,
+      6.14
+    ]
+  },
+  {
+    "id": "capital_london",
+    "type": "capital",
+    "name": "London",
+    "geometryType": "point",
+    "labelPoint": [
+      -0.1276,
+      51.5072
+    ],
+    "packIds": [
+      "world_capitals",
+      "world_capitals_by_continent"
+    ],
+    "adminOf": {
+      "id": "country_united_kingdom",
+      "name": "United Kingdom",
+      "type": "country"
+    },
+    "bbox": [
+      -0.1276,
+      51.5072,
+      -0.1276,
+      51.5072
+    ]
+  },
+  {
+    "id": "capital_luanda",
+    "type": "capital",
+    "name": "Luanda",
+    "geometryType": "point",
+    "labelPoint": [
+      13.22,
+      -8.83
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_ago",
+      "name": "Angola",
+      "type": "country"
+    },
+    "bbox": [
+      13.22,
+      -8.83,
+      13.22,
+      -8.83
+    ]
+  },
+  {
+    "id": "capital_lusaka",
+    "type": "capital",
+    "name": "Lusaka",
+    "geometryType": "point",
+    "labelPoint": [
+      28.28,
+      -15.42
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_zmb",
+      "name": "Zambia",
+      "type": "country"
+    },
+    "bbox": [
+      28.28,
+      -15.42,
+      28.28,
+      -15.42
+    ]
+  },
+  {
+    "id": "capital_luxembourg",
+    "type": "capital",
+    "name": "Luxembourg",
+    "geometryType": "point",
+    "labelPoint": [
+      6.1319,
+      49.6116
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_luxembourg",
+      "name": "Luxembourg",
+      "type": "country"
+    },
+    "bbox": [
+      6.1319,
+      49.6116,
+      6.1319,
+      49.6116
+    ]
+  },
+  {
+    "id": "capital_madrid",
+    "type": "capital",
+    "name": "Madrid",
+    "geometryType": "point",
+    "labelPoint": [
+      -3.7038,
+      40.4168
+    ],
+    "packIds": [
+      "world_capitals",
+      "world_capitals_by_continent"
+    ],
+    "adminOf": {
+      "id": "country_spain",
+      "name": "Spain",
+      "type": "country"
+    },
+    "bbox": [
+      -3.7038,
+      40.4168,
+      -3.7038,
+      40.4168
+    ]
+  },
+  {
+    "id": "capital_majuro",
+    "type": "capital",
+    "name": "Majuro",
+    "geometryType": "point",
+    "labelPoint": [
+      171.38,
+      7.1
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_mhl",
+      "name": "Marshall Islands",
+      "type": "country"
+    },
+    "bbox": [
+      171.38,
+      7.1,
+      171.38,
+      7.1
+    ]
+  },
+  {
+    "id": "capital_male",
+    "type": "capital",
+    "name": "Malé",
+    "geometryType": "point",
+    "labelPoint": [
+      73.51,
+      4.17
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_mdv",
+      "name": "Maldives",
+      "type": "country"
+    },
+    "bbox": [
+      73.51,
+      4.17,
+      73.51,
+      4.17
+    ]
+  },
+  {
+    "id": "capital_managua",
+    "type": "capital",
+    "name": "Managua",
+    "geometryType": "point",
+    "labelPoint": [
+      -86.25,
+      12.13
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_nic",
+      "name": "Nicaragua",
+      "type": "country"
+    },
+    "bbox": [
+      -86.25,
+      12.13,
+      -86.25,
+      12.13
+    ]
+  },
+  {
+    "id": "capital_manama",
+    "type": "capital",
+    "name": "Manama",
+    "geometryType": "point",
+    "labelPoint": [
+      50.57,
+      26.23
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_bhr",
+      "name": "Bahrain",
+      "type": "country"
+    },
+    "bbox": [
+      50.57,
+      26.23,
+      50.57,
+      26.23
+    ]
+  },
+  {
+    "id": "capital_manila",
+    "type": "capital",
+    "name": "Manila",
+    "geometryType": "point",
+    "labelPoint": [
+      120.97,
+      14.6
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_phl",
+      "name": "Philippines",
+      "type": "country"
+    },
+    "bbox": [
+      120.97,
+      14.6,
+      120.97,
+      14.6
+    ]
+  },
+  {
+    "id": "capital_maputo",
+    "type": "capital",
+    "name": "Maputo",
+    "geometryType": "point",
+    "labelPoint": [
+      32.58,
+      -25.95
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_moz",
+      "name": "Mozambique",
+      "type": "country"
+    },
+    "bbox": [
+      32.58,
+      -25.95,
+      32.58,
+      -25.95
+    ]
+  },
+  {
+    "id": "capital_maseru",
+    "type": "capital",
+    "name": "Maseru",
+    "geometryType": "point",
+    "labelPoint": [
+      27.48,
+      -29.32
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_lso",
+      "name": "Lesotho",
+      "type": "country"
+    },
+    "bbox": [
+      27.48,
+      -29.32,
+      27.48,
+      -29.32
+    ]
+  },
+  {
+    "id": "capital_mbabane",
+    "type": "capital",
+    "name": "Mbabane",
+    "geometryType": "point",
+    "labelPoint": [
+      31.13,
+      -26.32
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_swz",
+      "name": "Eswatini",
+      "type": "country"
+    },
+    "bbox": [
+      31.13,
+      -26.32,
+      31.13,
+      -26.32
+    ]
+  },
+  {
+    "id": "capital_mexico_city",
+    "type": "capital",
+    "name": "Mexico City",
+    "geometryType": "point",
+    "labelPoint": [
+      -99.1332,
+      19.4326
+    ],
+    "packIds": [
+      "world_capitals",
+      "world_capitals_by_continent"
+    ],
+    "adminOf": {
+      "id": "country_mex",
+      "name": "Mexico",
+      "type": "country"
+    },
+    "bbox": [
+      -99.1332,
+      19.4326,
+      -99.1332,
+      19.4326
+    ]
+  },
+  {
+    "id": "capital_minsk",
+    "type": "capital",
+    "name": "Minsk",
+    "geometryType": "point",
+    "labelPoint": [
+      27.5615,
+      53.9045
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_belarus",
+      "name": "Belarus",
+      "type": "country"
+    },
+    "bbox": [
+      27.5615,
+      53.9045,
+      27.5615,
+      53.9045
+    ]
+  },
+  {
+    "id": "capital_mogadishu",
+    "type": "capital",
+    "name": "Mogadishu",
+    "geometryType": "point",
+    "labelPoint": [
+      45.33,
+      2.07
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_som",
+      "name": "Somalia",
+      "type": "country"
+    },
+    "bbox": [
+      45.33,
+      2.07,
+      45.33,
+      2.07
+    ]
+  },
+  {
+    "id": "capital_monaco",
+    "type": "capital",
+    "name": "Monaco",
+    "geometryType": "point",
+    "labelPoint": [
+      7.4246,
+      43.7384
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_monaco",
+      "name": "Monaco",
+      "type": "country"
+    },
+    "bbox": [
+      7.4246,
+      43.7384,
+      7.4246,
+      43.7384
+    ]
+  },
+  {
+    "id": "capital_monrovia",
+    "type": "capital",
+    "name": "Monrovia",
+    "geometryType": "point",
+    "labelPoint": [
+      -10.8,
+      6.3
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_lbr",
+      "name": "Liberia",
+      "type": "country"
+    },
+    "bbox": [
+      -10.8,
+      6.3,
+      -10.8,
+      6.3
+    ]
+  },
+  {
+    "id": "capital_montevideo",
+    "type": "capital",
+    "name": "Montevideo",
+    "geometryType": "point",
+    "labelPoint": [
+      -56.17,
+      -34.85
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_ury",
+      "name": "Uruguay",
+      "type": "country"
+    },
+    "bbox": [
+      -56.17,
+      -34.85,
+      -56.17,
+      -34.85
+    ]
+  },
+  {
+    "id": "capital_moroni",
+    "type": "capital",
+    "name": "Moroni",
+    "geometryType": "point",
+    "labelPoint": [
+      43.23,
+      -11.7
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_com",
+      "name": "Comoros",
+      "type": "country"
+    },
+    "bbox": [
+      43.23,
+      -11.7,
+      43.23,
+      -11.7
+    ]
+  },
+  {
+    "id": "capital_moscow",
+    "type": "capital",
+    "name": "Moscow",
+    "geometryType": "point",
+    "labelPoint": [
+      37.6173,
+      55.7558
+    ],
+    "packIds": [
+      "world_capitals",
+      "world_capitals_by_continent"
+    ],
+    "adminOf": {
+      "id": "country_russia",
+      "name": "Russia",
+      "type": "country"
+    },
+    "bbox": [
+      37.6173,
+      55.7558,
+      37.6173,
+      55.7558
+    ]
+  },
+  {
+    "id": "capital_muscat",
+    "type": "capital",
+    "name": "Muscat",
+    "geometryType": "point",
+    "labelPoint": [
+      58.58,
+      23.62
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_omn",
+      "name": "Oman",
+      "type": "country"
+    },
+    "bbox": [
+      58.58,
+      23.62,
+      58.58,
+      23.62
+    ]
+  },
+  {
+    "id": "capital_n_djamena",
+    "type": "capital",
+    "name": "N'Djamena",
+    "geometryType": "point",
+    "labelPoint": [
+      15.03,
+      12.1
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_tcd",
+      "name": "Chad",
+      "type": "country"
+    },
+    "bbox": [
+      15.03,
+      12.1,
+      15.03,
+      12.1
+    ]
+  },
+  {
+    "id": "capital_nairobi",
+    "type": "capital",
+    "name": "Nairobi",
+    "geometryType": "point",
+    "labelPoint": [
+      36.8219,
+      -1.2921
+    ],
+    "packIds": [
+      "world_capitals",
+      "world_capitals_by_continent"
+    ],
+    "adminOf": {
+      "id": "country_ken",
+      "name": "Kenya",
+      "type": "country"
+    },
+    "bbox": [
+      36.8219,
+      -1.2921,
+      36.8219,
+      -1.2921
+    ]
+  },
+  {
+    "id": "capital_nassau",
+    "type": "capital",
+    "name": "Nassau",
+    "geometryType": "point",
+    "labelPoint": [
+      -77.35,
+      25.08
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_bhs",
+      "name": "Bahamas",
+      "type": "country"
+    },
+    "bbox": [
+      -77.35,
+      25.08,
+      -77.35,
+      25.08
+    ]
+  },
+  {
+    "id": "capital_naypyidaw",
+    "type": "capital",
+    "name": "Naypyidaw",
+    "geometryType": "point",
+    "labelPoint": [
+      96.07,
+      19.76
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_mmr",
+      "name": "Myanmar",
+      "type": "country"
+    },
+    "bbox": [
+      96.07,
+      19.76,
+      96.07,
+      19.76
+    ]
+  },
+  {
+    "id": "capital_new_delhi",
+    "type": "capital",
+    "name": "New Delhi",
+    "geometryType": "point",
+    "labelPoint": [
+      77.209,
+      28.6139
+    ],
+    "packIds": [
+      "world_capitals",
+      "world_capitals_by_continent"
+    ],
+    "adminOf": {
+      "id": "country_ind",
+      "name": "India",
+      "type": "country"
+    },
+    "bbox": [
+      77.209,
+      28.6139,
+      77.209,
+      28.6139
+    ]
+  },
+  {
+    "id": "capital_ngerulmud",
+    "type": "capital",
+    "name": "Ngerulmud",
+    "geometryType": "point",
+    "labelPoint": [
+      134.62,
+      7.5
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_plw",
+      "name": "Palau",
+      "type": "country"
+    },
+    "bbox": [
+      134.62,
+      7.5,
+      134.62,
+      7.5
+    ]
+  },
+  {
+    "id": "capital_niamey",
+    "type": "capital",
+    "name": "Niamey",
+    "geometryType": "point",
+    "labelPoint": [
+      2.12,
+      13.52
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_ner",
+      "name": "Niger",
+      "type": "country"
+    },
+    "bbox": [
+      2.12,
+      13.52,
+      2.12,
+      13.52
+    ]
+  },
+  {
+    "id": "capital_nicosia",
+    "type": "capital",
+    "name": "Nicosia",
+    "geometryType": "point",
+    "labelPoint": [
+      33.3823,
+      35.1856
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_cyprus",
+      "name": "Cyprus",
+      "type": "country"
+    },
+    "bbox": [
+      33.3823,
+      35.1856,
+      33.3823,
+      35.1856
+    ]
+  },
+  {
+    "id": "capital_nouakchott",
+    "type": "capital",
+    "name": "Nouakchott",
+    "geometryType": "point",
+    "labelPoint": [
+      -15.97,
+      18.07
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_mrt",
+      "name": "Mauritania",
+      "type": "country"
+    },
+    "bbox": [
+      -15.97,
+      18.07,
+      -15.97,
+      18.07
+    ]
+  },
+  {
+    "id": "capital_nuku_alofa",
+    "type": "capital",
+    "name": "Nuku'alofa",
+    "geometryType": "point",
+    "labelPoint": [
+      -175.2,
+      -21.13
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_ton",
+      "name": "Tonga",
+      "type": "country"
+    },
+    "bbox": [
+      -175.2,
+      -21.13,
+      -175.2,
+      -21.13
+    ]
+  },
+  {
+    "id": "capital_oslo",
+    "type": "capital",
+    "name": "Oslo",
+    "geometryType": "point",
+    "labelPoint": [
+      10.7522,
+      59.9139
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_norway",
+      "name": "Norway",
+      "type": "country"
+    },
+    "bbox": [
+      10.7522,
+      59.9139,
+      10.7522,
+      59.9139
+    ]
+  },
+  {
+    "id": "capital_ottawa",
+    "type": "capital",
+    "name": "Ottawa",
+    "geometryType": "point",
+    "labelPoint": [
+      -75.6972,
+      45.4215
+    ],
+    "packIds": [
+      "world_capitals",
+      "world_capitals_by_continent"
+    ],
+    "adminOf": {
+      "id": "country_can",
+      "name": "Canada",
+      "type": "country"
+    },
+    "bbox": [
+      -75.6972,
+      45.4215,
+      -75.6972,
+      45.4215
+    ]
+  },
+  {
+    "id": "capital_ouagadougou",
+    "type": "capital",
+    "name": "Ouagadougou",
+    "geometryType": "point",
+    "labelPoint": [
+      -1.52,
+      12.37
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_bfa",
+      "name": "Burkina Faso",
+      "type": "country"
+    },
+    "bbox": [
+      -1.52,
+      12.37,
+      -1.52,
+      12.37
+    ]
+  },
+  {
+    "id": "capital_palikir",
+    "type": "capital",
+    "name": "Palikir",
+    "geometryType": "point",
+    "labelPoint": [
+      158.15,
+      6.92
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_fsm",
+      "name": "Micronesia",
+      "type": "country"
+    },
+    "bbox": [
+      158.15,
+      6.92,
+      158.15,
+      6.92
+    ]
+  },
+  {
+    "id": "capital_panama_city",
+    "type": "capital",
+    "name": "Panama City",
+    "geometryType": "point",
+    "labelPoint": [
+      -79.53,
+      8.97
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_pan",
+      "name": "Panama",
+      "type": "country"
+    },
+    "bbox": [
+      -79.53,
+      8.97,
+      -79.53,
+      8.97
+    ]
+  },
+  {
+    "id": "capital_paramaribo",
+    "type": "capital",
+    "name": "Paramaribo",
+    "geometryType": "point",
+    "labelPoint": [
+      -55.17,
+      5.83
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_sur",
+      "name": "Suriname",
+      "type": "country"
+    },
+    "bbox": [
+      -55.17,
+      5.83,
+      -55.17,
+      5.83
+    ]
+  },
+  {
+    "id": "capital_paris",
+    "type": "capital",
+    "name": "Paris",
+    "geometryType": "point",
+    "labelPoint": [
+      2.3522,
+      48.8566
+    ],
+    "packIds": [
+      "world_capitals",
+      "world_capitals_by_continent"
+    ],
+    "adminOf": {
+      "id": "country_france",
+      "name": "France",
+      "type": "country"
+    },
+    "bbox": [
+      2.3522,
+      48.8566,
+      2.3522,
+      48.8566
+    ]
+  },
+  {
+    "id": "capital_phnom_penh",
+    "type": "capital",
+    "name": "Phnom Penh",
+    "geometryType": "point",
+    "labelPoint": [
+      104.92,
+      11.55
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_khm",
+      "name": "Cambodia",
+      "type": "country"
+    },
+    "bbox": [
+      104.92,
+      11.55,
+      104.92,
+      11.55
+    ]
+  },
+  {
+    "id": "capital_podgorica",
+    "type": "capital",
+    "name": "Podgorica",
+    "geometryType": "point",
+    "labelPoint": [
+      19.262,
+      42.4304
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_montenegro",
+      "name": "Montenegro",
+      "type": "country"
+    },
+    "bbox": [
+      19.262,
+      42.4304,
+      19.262,
+      42.4304
+    ]
+  },
+  {
+    "id": "capital_port_au_prince",
+    "type": "capital",
+    "name": "Port-au-Prince",
+    "geometryType": "point",
+    "labelPoint": [
+      -72.33,
+      18.53
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_hti",
+      "name": "Haiti",
+      "type": "country"
+    },
+    "bbox": [
+      -72.33,
+      18.53,
+      -72.33,
+      18.53
+    ]
+  },
+  {
+    "id": "capital_port_louis",
+    "type": "capital",
+    "name": "Port Louis",
+    "geometryType": "point",
+    "labelPoint": [
+      57.48,
+      -20.15
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_mus",
+      "name": "Mauritius",
+      "type": "country"
+    },
+    "bbox": [
+      57.48,
+      -20.15,
+      57.48,
+      -20.15
+    ]
+  },
+  {
+    "id": "capital_port_moresby",
+    "type": "capital",
+    "name": "Port Moresby",
+    "geometryType": "point",
+    "labelPoint": [
+      147.18,
+      -9.45
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_png",
+      "name": "Papua New Guinea",
+      "type": "country"
+    },
+    "bbox": [
+      147.18,
+      -9.45,
+      147.18,
+      -9.45
+    ]
+  },
+  {
+    "id": "capital_port_of_spain",
+    "type": "capital",
+    "name": "Port of Spain",
+    "geometryType": "point",
+    "labelPoint": [
+      -61.52,
+      10.65
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_tto",
+      "name": "Trinidad and Tobago",
+      "type": "country"
+    },
+    "bbox": [
+      -61.52,
+      10.65,
+      -61.52,
+      10.65
+    ]
+  },
+  {
+    "id": "capital_port_vila",
+    "type": "capital",
+    "name": "Port Vila",
+    "geometryType": "point",
+    "labelPoint": [
+      168.32,
+      -17.73
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_vut",
+      "name": "Vanuatu",
+      "type": "country"
+    },
+    "bbox": [
+      168.32,
+      -17.73,
+      168.32,
+      -17.73
+    ]
+  },
+  {
+    "id": "capital_porto_novo",
+    "type": "capital",
+    "name": "Porto-Novo",
+    "geometryType": "point",
+    "labelPoint": [
+      2.62,
+      6.48
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_ben",
+      "name": "Benin",
+      "type": "country"
+    },
+    "bbox": [
+      2.62,
+      6.48,
+      2.62,
+      6.48
+    ]
+  },
+  {
+    "id": "capital_prague",
+    "type": "capital",
+    "name": "Prague",
+    "geometryType": "point",
+    "labelPoint": [
+      14.4378,
+      50.0755
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_czechia",
+      "name": "Czechia",
+      "type": "country"
+    },
+    "bbox": [
+      14.4378,
+      50.0755,
+      14.4378,
+      50.0755
+    ]
+  },
+  {
+    "id": "capital_praia",
+    "type": "capital",
+    "name": "Praia",
+    "geometryType": "point",
+    "labelPoint": [
+      -23.52,
+      14.92
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_cpv",
+      "name": "Cape Verde",
+      "type": "country"
+    },
+    "bbox": [
+      -23.52,
+      14.92,
+      -23.52,
+      14.92
+    ]
+  },
+  {
+    "id": "capital_pretoria",
+    "type": "capital",
+    "name": "Pretoria",
+    "geometryType": "point",
+    "labelPoint": [
+      28.2293,
+      -25.7479
+    ],
+    "packIds": [
+      "world_capitals",
+      "world_capitals_by_continent"
+    ],
+    "adminOf": {
+      "id": "country_zaf",
+      "name": "South Africa",
+      "type": "country"
+    },
+    "bbox": [
+      28.2293,
+      -25.7479,
+      28.2293,
+      -25.7479
+    ]
+  },
+  {
+    "id": "capital_pristina",
+    "type": "capital",
+    "name": "Pristina",
+    "geometryType": "point",
+    "labelPoint": [
+      21.1655,
+      42.6629
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_kosovo",
+      "name": "Kosovo",
+      "type": "country"
+    },
+    "bbox": [
+      21.1655,
+      42.6629,
+      21.1655,
+      42.6629
+    ]
+  },
+  {
+    "id": "capital_pyongyang",
+    "type": "capital",
+    "name": "Pyongyang",
+    "geometryType": "point",
+    "labelPoint": [
+      125.75,
+      39.02
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_prk",
+      "name": "North Korea",
+      "type": "country"
+    },
+    "bbox": [
+      125.75,
+      39.02,
+      125.75,
+      39.02
+    ]
+  },
+  {
+    "id": "capital_quito",
+    "type": "capital",
+    "name": "Quito",
+    "geometryType": "point",
+    "labelPoint": [
+      -78.5,
+      -0.22
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_ecu",
+      "name": "Ecuador",
+      "type": "country"
+    },
+    "bbox": [
+      -78.5,
+      -0.22,
+      -78.5,
+      -0.22
+    ]
+  },
+  {
+    "id": "capital_rabat",
+    "type": "capital",
+    "name": "Rabat",
+    "geometryType": "point",
+    "labelPoint": [
+      -6.82,
+      34.02
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_mar",
+      "name": "Morocco",
+      "type": "country"
+    },
+    "bbox": [
+      -6.82,
+      34.02,
+      -6.82,
+      34.02
+    ]
+  },
+  {
+    "id": "capital_ramallah",
+    "type": "capital",
+    "name": "Ramallah",
+    "geometryType": "point",
+    "labelPoint": [
+      35.2,
+      31.9
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_pse",
+      "name": "Palestine",
+      "type": "country"
+    },
+    "bbox": [
+      35.2,
+      31.9,
+      35.2,
+      31.9
+    ]
+  },
+  {
+    "id": "capital_reykjavik",
+    "type": "capital",
+    "name": "Reykjavik",
+    "geometryType": "point",
+    "labelPoint": [
+      -21.9426,
+      64.1466
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_iceland",
+      "name": "Iceland",
+      "type": "country"
+    },
+    "bbox": [
+      -21.9426,
+      64.1466,
+      -21.9426,
+      64.1466
+    ]
+  },
+  {
+    "id": "capital_riga",
+    "type": "capital",
+    "name": "Riga",
+    "geometryType": "point",
+    "labelPoint": [
+      24.1052,
+      56.9496
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_latvia",
+      "name": "Latvia",
+      "type": "country"
+    },
+    "bbox": [
+      24.1052,
+      56.9496,
+      24.1052,
+      56.9496
+    ]
+  },
+  {
+    "id": "capital_riyadh",
+    "type": "capital",
+    "name": "Riyadh",
+    "geometryType": "point",
+    "labelPoint": [
+      46.6753,
+      24.7136
+    ],
+    "packIds": [
+      "world_capitals",
+      "world_capitals_by_continent"
+    ],
+    "adminOf": {
+      "id": "country_sau",
+      "name": "Saudi Arabia",
+      "type": "country"
+    },
+    "bbox": [
+      46.6753,
+      24.7136,
+      46.6753,
+      24.7136
+    ]
+  },
+  {
+    "id": "capital_rome",
+    "type": "capital",
+    "name": "Rome",
+    "geometryType": "point",
+    "labelPoint": [
+      12.4964,
+      41.9028
+    ],
+    "packIds": [
+      "world_capitals",
+      "world_capitals_by_continent"
+    ],
+    "adminOf": {
+      "id": "country_italy",
+      "name": "Italy",
+      "type": "country"
+    },
+    "bbox": [
+      12.4964,
+      41.9028,
+      12.4964,
+      41.9028
+    ]
+  },
+  {
+    "id": "capital_roseau",
+    "type": "capital",
+    "name": "Roseau",
+    "geometryType": "point",
+    "labelPoint": [
+      -61.4,
+      15.3
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_dma",
+      "name": "Dominica",
+      "type": "country"
+    },
+    "bbox": [
+      -61.4,
+      15.3,
+      -61.4,
+      15.3
+    ]
+  },
+  {
+    "id": "capital_saint_john_s",
+    "type": "capital",
+    "name": "Saint John's",
+    "geometryType": "point",
+    "labelPoint": [
+      -61.85,
+      17.12
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_atg",
+      "name": "Antigua and Barbuda",
+      "type": "country"
+    },
+    "bbox": [
+      -61.85,
+      17.12,
+      -61.85,
+      17.12
+    ]
+  },
+  {
+    "id": "capital_san_jose",
+    "type": "capital",
+    "name": "San José",
+    "geometryType": "point",
+    "labelPoint": [
+      -84.09,
+      9.93
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_cri",
+      "name": "Costa Rica",
+      "type": "country"
+    },
+    "bbox": [
+      -84.09,
+      9.93,
+      -84.09,
+      9.93
+    ]
+  },
+  {
+    "id": "capital_san_marino",
+    "type": "capital",
+    "name": "San Marino",
+    "geometryType": "point",
+    "labelPoint": [
+      12.4578,
+      43.9424
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_san_marino",
+      "name": "San Marino",
+      "type": "country"
+    },
+    "bbox": [
+      12.4578,
+      43.9424,
+      12.4578,
+      43.9424
+    ]
+  },
+  {
+    "id": "capital_san_salvador",
+    "type": "capital",
+    "name": "San Salvador",
+    "geometryType": "point",
+    "labelPoint": [
+      -89.2,
+      13.7
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_slv",
+      "name": "El Salvador",
+      "type": "country"
+    },
+    "bbox": [
+      -89.2,
+      13.7,
+      -89.2,
+      13.7
+    ]
+  },
+  {
+    "id": "capital_sana_a",
+    "type": "capital",
+    "name": "Sana'a",
+    "geometryType": "point",
+    "labelPoint": [
+      44.19,
+      15.37
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_yem",
+      "name": "Yemen",
+      "type": "country"
+    },
+    "bbox": [
+      44.19,
+      15.37,
+      44.19,
+      15.37
+    ]
+  },
+  {
+    "id": "capital_santiago",
+    "type": "capital",
+    "name": "Santiago",
+    "geometryType": "point",
+    "labelPoint": [
+      -70.67,
+      -33.45
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_chl",
+      "name": "Chile",
+      "type": "country"
+    },
+    "bbox": [
+      -70.67,
+      -33.45,
+      -70.67,
+      -33.45
+    ]
+  },
+  {
+    "id": "capital_santo_domingo",
+    "type": "capital",
+    "name": "Santo Domingo",
+    "geometryType": "point",
+    "labelPoint": [
+      -69.9,
+      18.47
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_dom",
+      "name": "Dominican Republic",
+      "type": "country"
+    },
+    "bbox": [
+      -69.9,
+      18.47,
+      -69.9,
+      18.47
+    ]
+  },
+  {
+    "id": "capital_sao_tome",
+    "type": "capital",
+    "name": "São Tomé",
+    "geometryType": "point",
+    "labelPoint": [
+      6.73,
+      0.34
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_stp",
+      "name": "São Tomé and Príncipe",
+      "type": "country"
+    },
+    "bbox": [
+      6.73,
+      0.34,
+      6.73,
+      0.34
+    ]
+  },
+  {
+    "id": "capital_sarajevo",
+    "type": "capital",
+    "name": "Sarajevo",
+    "geometryType": "point",
+    "labelPoint": [
+      18.4131,
+      43.8563
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_bosnia_and_herzegovina",
+      "name": "Bosnia and Herzegovina",
+      "type": "country"
+    },
+    "bbox": [
+      18.4131,
+      43.8563,
+      18.4131,
+      43.8563
+    ]
+  },
+  {
+    "id": "capital_seoul",
+    "type": "capital",
+    "name": "Seoul",
+    "geometryType": "point",
+    "labelPoint": [
+      126.978,
+      37.5665
+    ],
+    "packIds": [
+      "world_capitals",
+      "world_capitals_by_continent"
+    ],
+    "adminOf": {
+      "id": "country_kor",
+      "name": "South Korea",
+      "type": "country"
+    },
+    "bbox": [
+      126.978,
+      37.5665,
+      126.978,
+      37.5665
+    ]
+  },
+  {
+    "id": "capital_singapore",
+    "type": "capital",
+    "name": "Singapore",
+    "geometryType": "point",
+    "labelPoint": [
+      103.85,
+      1.28
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_sgp",
+      "name": "Singapore",
+      "type": "country"
+    },
+    "bbox": [
+      103.85,
+      1.28,
+      103.85,
+      1.28
+    ]
+  },
+  {
+    "id": "capital_skopje",
+    "type": "capital",
+    "name": "Skopje",
+    "geometryType": "point",
+    "labelPoint": [
+      21.4316,
+      41.9973
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_north_macedonia",
+      "name": "North Macedonia",
+      "type": "country"
+    },
+    "bbox": [
+      21.4316,
+      41.9973,
+      21.4316,
+      41.9973
+    ]
+  },
+  {
+    "id": "capital_sofia",
+    "type": "capital",
+    "name": "Sofia",
+    "geometryType": "point",
+    "labelPoint": [
+      23.3219,
+      42.6977
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_bulgaria",
+      "name": "Bulgaria",
+      "type": "country"
+    },
+    "bbox": [
+      23.3219,
+      42.6977,
+      23.3219,
+      42.6977
+    ]
+  },
+  {
+    "id": "capital_south_tarawa",
+    "type": "capital",
+    "name": "South Tarawa",
+    "geometryType": "point",
+    "labelPoint": [
+      172.98,
+      1.33
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_kir",
+      "name": "Kiribati",
+      "type": "country"
+    },
+    "bbox": [
+      172.98,
+      1.33,
+      172.98,
+      1.33
+    ]
+  },
+  {
+    "id": "capital_sri_jayawardenepura_kotte",
+    "type": "capital",
+    "name": "Sri Jayawardenepura Kotte",
+    "geometryType": "point",
+    "labelPoint": [
+      79.9,
+      6.89
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_lka",
+      "name": "Sri Lanka",
+      "type": "country"
+    },
+    "bbox": [
+      79.9,
+      6.89,
+      79.9,
+      6.89
+    ]
+  },
+  {
+    "id": "capital_st_george_s",
+    "type": "capital",
+    "name": "St. George's",
+    "geometryType": "point",
+    "labelPoint": [
+      -64.68,
+      32.38
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_grd",
+      "name": "Grenada",
+      "type": "country"
+    },
+    "bbox": [
+      -64.68,
+      32.38,
+      -64.68,
+      32.38
+    ]
+  },
+  {
+    "id": "capital_stockholm",
+    "type": "capital",
+    "name": "Stockholm",
+    "geometryType": "point",
+    "labelPoint": [
+      18.0686,
+      59.3293
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_sweden",
+      "name": "Sweden",
+      "type": "country"
+    },
+    "bbox": [
+      18.0686,
+      59.3293,
+      18.0686,
+      59.3293
+    ]
+  },
+  {
+    "id": "capital_sucre",
+    "type": "capital",
+    "name": "Sucre",
+    "geometryType": "point",
+    "labelPoint": [
+      -65.26,
+      -19.02
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_bol",
+      "name": "Bolivia",
+      "type": "country"
+    },
+    "bbox": [
+      -65.26,
+      -19.02,
+      -65.26,
+      -19.02
+    ]
+  },
+  {
+    "id": "capital_suva",
+    "type": "capital",
+    "name": "Suva",
+    "geometryType": "point",
+    "labelPoint": [
+      178.42,
+      -18.13
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_fji",
+      "name": "Fiji",
+      "type": "country"
+    },
+    "bbox": [
+      178.42,
+      -18.13,
+      178.42,
+      -18.13
+    ]
+  },
+  {
+    "id": "capital_tallinn",
+    "type": "capital",
+    "name": "Tallinn",
+    "geometryType": "point",
+    "labelPoint": [
+      24.7536,
+      59.437
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_estonia",
+      "name": "Estonia",
+      "type": "country"
+    },
+    "bbox": [
+      24.7536,
+      59.437,
+      24.7536,
+      59.437
+    ]
+  },
+  {
+    "id": "capital_tashkent",
+    "type": "capital",
+    "name": "Tashkent",
+    "geometryType": "point",
+    "labelPoint": [
+      69.25,
+      41.32
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_uzb",
+      "name": "Uzbekistan",
+      "type": "country"
+    },
+    "bbox": [
+      69.25,
+      41.32,
+      69.25,
+      41.32
+    ]
+  },
+  {
+    "id": "capital_tbilisi",
+    "type": "capital",
+    "name": "Tbilisi",
+    "geometryType": "point",
+    "labelPoint": [
+      44.793,
+      41.7151
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_georgia",
+      "name": "Georgia",
+      "type": "country"
+    },
+    "bbox": [
+      44.793,
+      41.7151,
+      44.793,
+      41.7151
+    ]
+  },
+  {
+    "id": "capital_tegucigalpa",
+    "type": "capital",
+    "name": "Tegucigalpa",
+    "geometryType": "point",
+    "labelPoint": [
+      -87.22,
+      14.1
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_hnd",
+      "name": "Honduras",
+      "type": "country"
+    },
+    "bbox": [
+      -87.22,
+      14.1,
+      -87.22,
+      14.1
+    ]
+  },
+  {
+    "id": "capital_tehran",
+    "type": "capital",
+    "name": "Tehran",
+    "geometryType": "point",
+    "labelPoint": [
+      51.42,
+      35.7
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_irn",
+      "name": "Iran",
+      "type": "country"
+    },
+    "bbox": [
+      51.42,
+      35.7,
+      51.42,
+      35.7
+    ]
+  },
+  {
+    "id": "capital_thimphu",
+    "type": "capital",
+    "name": "Thimphu",
+    "geometryType": "point",
+    "labelPoint": [
+      89.63,
+      27.47
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_btn",
+      "name": "Bhutan",
+      "type": "country"
+    },
+    "bbox": [
+      89.63,
+      27.47,
+      89.63,
+      27.47
+    ]
+  },
+  {
+    "id": "capital_tirana",
+    "type": "capital",
+    "name": "Tirana",
+    "geometryType": "point",
+    "labelPoint": [
+      19.8187,
+      41.3275
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_albania",
+      "name": "Albania",
+      "type": "country"
+    },
+    "bbox": [
+      19.8187,
+      41.3275,
+      19.8187,
+      41.3275
+    ]
+  },
+  {
+    "id": "capital_tokyo",
+    "type": "capital",
+    "name": "Tokyo",
+    "geometryType": "point",
+    "labelPoint": [
+      139.6917,
+      35.6895
+    ],
+    "packIds": [
+      "world_capitals",
+      "world_capitals_by_continent"
+    ],
+    "adminOf": {
+      "id": "country_jpn",
+      "name": "Japan",
+      "type": "country"
+    },
+    "bbox": [
+      139.6917,
+      35.6895,
+      139.6917,
+      35.6895
+    ]
+  },
+  {
+    "id": "capital_tripoli",
+    "type": "capital",
+    "name": "Tripoli",
+    "geometryType": "point",
+    "labelPoint": [
+      13.17,
+      32.88
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_lby",
+      "name": "Libya",
+      "type": "country"
+    },
+    "bbox": [
+      13.17,
+      32.88,
+      13.17,
+      32.88
+    ]
+  },
+  {
+    "id": "capital_tunis",
+    "type": "capital",
+    "name": "Tunis",
+    "geometryType": "point",
+    "labelPoint": [
+      10.18,
+      36.8
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_tun",
+      "name": "Tunisia",
+      "type": "country"
+    },
+    "bbox": [
+      10.18,
+      36.8,
+      10.18,
+      36.8
+    ]
+  },
+  {
+    "id": "capital_ulan_bator",
+    "type": "capital",
+    "name": "Ulan Bator",
+    "geometryType": "point",
+    "labelPoint": [
+      106.91,
+      47.92
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_mng",
+      "name": "Mongolia",
+      "type": "country"
+    },
+    "bbox": [
+      106.91,
+      47.92,
+      106.91,
+      47.92
+    ]
+  },
+  {
+    "id": "capital_vaduz",
+    "type": "capital",
+    "name": "Vaduz",
+    "geometryType": "point",
+    "labelPoint": [
+      9.5215,
+      47.141
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_liechtenstein",
+      "name": "Liechtenstein",
+      "type": "country"
+    },
+    "bbox": [
+      9.5215,
+      47.141,
+      9.5215,
+      47.141
+    ]
+  },
+  {
+    "id": "capital_valletta",
+    "type": "capital",
+    "name": "Valletta",
+    "geometryType": "point",
+    "labelPoint": [
+      14.5146,
+      35.8989
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_malta",
+      "name": "Malta",
+      "type": "country"
+    },
+    "bbox": [
+      14.5146,
+      35.8989,
+      14.5146,
+      35.8989
+    ]
+  },
+  {
+    "id": "capital_vatican_city",
+    "type": "capital",
+    "name": "Vatican City",
+    "geometryType": "point",
+    "labelPoint": [
+      12.4534,
+      41.9029
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_vatican_city",
+      "name": "Vatican City",
+      "type": "country"
+    },
+    "bbox": [
+      12.4534,
+      41.9029,
+      12.4534,
+      41.9029
+    ]
+  },
+  {
+    "id": "capital_vienna",
+    "type": "capital",
+    "name": "Vienna",
+    "geometryType": "point",
+    "labelPoint": [
+      16.3738,
+      48.2082
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_austria",
+      "name": "Austria",
+      "type": "country"
+    },
+    "bbox": [
+      16.3738,
+      48.2082,
+      16.3738,
+      48.2082
+    ]
+  },
+  {
+    "id": "capital_vientiane",
+    "type": "capital",
+    "name": "Vientiane",
+    "geometryType": "point",
+    "labelPoint": [
+      102.6,
+      17.97
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_lao",
+      "name": "Laos",
+      "type": "country"
+    },
+    "bbox": [
+      102.6,
+      17.97,
+      102.6,
+      17.97
+    ]
+  },
+  {
+    "id": "capital_vilnius",
+    "type": "capital",
+    "name": "Vilnius",
+    "geometryType": "point",
+    "labelPoint": [
+      25.2797,
+      54.6872
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_lithuania",
+      "name": "Lithuania",
+      "type": "country"
+    },
+    "bbox": [
+      25.2797,
+      54.6872,
+      25.2797,
+      54.6872
+    ]
+  },
+  {
+    "id": "capital_warsaw",
+    "type": "capital",
+    "name": "Warsaw",
+    "geometryType": "point",
+    "labelPoint": [
+      21.0122,
+      52.2297
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_poland",
+      "name": "Poland",
+      "type": "country"
+    },
+    "bbox": [
+      21.0122,
+      52.2297,
+      21.0122,
+      52.2297
+    ]
+  },
+  {
+    "id": "capital_washington_dc",
+    "type": "capital",
+    "name": "Washington, D.C.",
+    "geometryType": "point",
+    "labelPoint": [
+      -77.0369,
+      38.9072
+    ],
+    "packIds": [
+      "world_capitals",
+      "world_capitals_by_continent"
+    ],
+    "adminOf": {
+      "id": "country_usa",
+      "name": "United States",
+      "type": "country"
+    },
+    "bbox": [
+      -77.0369,
+      38.9072,
+      -77.0369,
+      38.9072
+    ]
+  },
+  {
+    "id": "capital_wellington",
+    "type": "capital",
+    "name": "Wellington",
+    "geometryType": "point",
+    "labelPoint": [
+      174.7772,
+      -41.2865
+    ],
+    "packIds": [
+      "world_capitals",
+      "world_capitals_by_continent"
+    ],
+    "adminOf": {
+      "id": "country_nzl",
+      "name": "New Zealand",
+      "type": "country"
+    },
+    "bbox": [
+      174.7772,
+      -41.2865,
+      174.7772,
+      -41.2865
+    ]
+  },
+  {
+    "id": "capital_windhoek",
+    "type": "capital",
+    "name": "Windhoek",
+    "geometryType": "point",
+    "labelPoint": [
+      17.08,
+      -22.57
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_nam",
+      "name": "Namibia",
+      "type": "country"
+    },
+    "bbox": [
+      17.08,
+      -22.57,
+      17.08,
+      -22.57
+    ]
+  },
+  {
+    "id": "capital_yamoussoukro",
+    "type": "capital",
+    "name": "Yamoussoukro",
+    "geometryType": "point",
+    "labelPoint": [
+      -5.27,
+      6.82
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_civ",
+      "name": "Ivory Coast",
+      "type": "country"
+    },
+    "bbox": [
+      -5.27,
+      6.82,
+      -5.27,
+      6.82
+    ]
+  },
+  {
+    "id": "capital_yaounde",
+    "type": "capital",
+    "name": "Yaoundé",
+    "geometryType": "point",
+    "labelPoint": [
+      11.5,
+      3.85
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_cmr",
+      "name": "Cameroon",
+      "type": "country"
+    },
+    "bbox": [
+      11.5,
+      3.85,
+      11.5,
+      3.85
+    ]
+  },
+  {
+    "id": "capital_yaren",
+    "type": "capital",
+    "name": "Yaren",
+    "geometryType": "point",
+    "labelPoint": [
+      166.92,
+      -0.55
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_nru",
+      "name": "Nauru",
+      "type": "country"
+    },
+    "bbox": [
+      166.92,
+      -0.55,
+      166.92,
+      -0.55
+    ]
+  },
+  {
+    "id": "capital_yerevan",
+    "type": "capital",
+    "name": "Yerevan",
+    "geometryType": "point",
+    "labelPoint": [
+      44.5152,
+      40.1872
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_armenia",
+      "name": "Armenia",
+      "type": "country"
+    },
+    "bbox": [
+      44.5152,
+      40.1872,
+      44.5152,
+      40.1872
+    ]
+  },
+  {
+    "id": "capital_zagreb",
+    "type": "capital",
+    "name": "Zagreb",
+    "geometryType": "point",
+    "labelPoint": [
+      15.9819,
+      45.815
+    ],
+    "packIds": [
+      "world_capitals_by_continent",
+      "world_capitals"
+    ],
+    "adminOf": {
+      "id": "country_croatia",
+      "name": "Croatia",
+      "type": "country"
+    },
+    "bbox": [
+      15.9819,
+      45.815,
+      15.9819,
+      45.815
+    ]
+  }
+]

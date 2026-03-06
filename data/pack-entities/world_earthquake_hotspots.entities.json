@@ -1,0 +1,202 @@
+[
+  {
+    "id": "quake_aleutian",
+    "type": "region",
+    "name": "Aleutian Seismic Arc",
+    "geometryType": "point",
+    "labelPoint": [
+      -171,
+      52
+    ],
+    "difficulty": "hard",
+    "packIds": [
+      "world_earthquake_hotspots"
+    ],
+    "bbox": [
+      -171,
+      52,
+      -171,
+      52
+    ]
+  },
+  {
+    "id": "quake_anatolian",
+    "type": "region",
+    "name": "North Anatolian Fault",
+    "geometryType": "point",
+    "labelPoint": [
+      35,
+      40.8
+    ],
+    "difficulty": "medium",
+    "packIds": [
+      "world_earthquake_hotspots"
+    ],
+    "bbox": [
+      35,
+      40.8,
+      35,
+      40.8
+    ]
+  },
+  {
+    "id": "quake_chile_peru",
+    "type": "region",
+    "name": "Peru-Chile Trench Zone",
+    "geometryType": "point",
+    "labelPoint": [
+      -72,
+      -28
+    ],
+    "difficulty": "medium",
+    "packIds": [
+      "world_earthquake_hotspots"
+    ],
+    "bbox": [
+      -72,
+      -28,
+      -72,
+      -28
+    ]
+  },
+  {
+    "id": "quake_himalayan_arc",
+    "type": "region",
+    "name": "Himalayan Seismic Arc",
+    "geometryType": "point",
+    "labelPoint": [
+      84,
+      28
+    ],
+    "difficulty": "easy",
+    "packIds": [
+      "world_earthquake_hotspots"
+    ],
+    "bbox": [
+      84,
+      28,
+      84,
+      28
+    ]
+  },
+  {
+    "id": "quake_iran_belt",
+    "type": "region",
+    "name": "Iran Seismic Belt",
+    "geometryType": "point",
+    "labelPoint": [
+      55,
+      30
+    ],
+    "difficulty": "hard",
+    "packIds": [
+      "world_earthquake_hotspots"
+    ],
+    "bbox": [
+      55,
+      30,
+      55,
+      30
+    ]
+  },
+  {
+    "id": "quake_japan_trench",
+    "type": "region",
+    "name": "Japan Trench Seismic Zone",
+    "geometryType": "point",
+    "labelPoint": [
+      142.5,
+      38.5
+    ],
+    "difficulty": "easy",
+    "packIds": [
+      "world_earthquake_hotspots"
+    ],
+    "bbox": [
+      142.5,
+      38.5,
+      142.5,
+      38.5
+    ]
+  },
+  {
+    "id": "quake_mediterranean",
+    "type": "region",
+    "name": "Mediterranean Seismic Belt",
+    "geometryType": "point",
+    "labelPoint": [
+      24,
+      37.5
+    ],
+    "difficulty": "hard",
+    "packIds": [
+      "world_earthquake_hotspots"
+    ],
+    "bbox": [
+      24,
+      37.5,
+      24,
+      37.5
+    ]
+  },
+  {
+    "id": "quake_nz_alpine",
+    "type": "region",
+    "name": "New Zealand Alpine Fault",
+    "geometryType": "point",
+    "labelPoint": [
+      169.8,
+      -43.6
+    ],
+    "difficulty": "hard",
+    "packIds": [
+      "world_earthquake_hotspots"
+    ],
+    "bbox": [
+      169.8,
+      -43.6,
+      169.8,
+      -43.6
+    ]
+  },
+  {
+    "id": "quake_san_andreas",
+    "type": "region",
+    "name": "San Andreas Fault Zone",
+    "geometryType": "point",
+    "labelPoint": [
+      -120.4,
+      35.4
+    ],
+    "difficulty": "easy",
+    "packIds": [
+      "world_earthquake_hotspots"
+    ],
+    "bbox": [
+      -120.4,
+      35.4,
+      -120.4,
+      35.4
+    ]
+  },
+  {
+    "id": "quake_sumatra_andaman",
+    "type": "region",
+    "name": "Sumatra-Andaman Subduction Zone",
+    "geometryType": "point",
+    "labelPoint": [
+      94.5,
+      5.5
+    ],
+    "difficulty": "medium",
+    "packIds": [
+      "world_earthquake_hotspots"
+    ],
+    "bbox": [
+      94.5,
+      5.5,
+      94.5,
+      5.5
+    ]
+  }
+]

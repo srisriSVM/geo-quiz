@@ -1,0 +1,249 @@
+[
+  {
+    "id": "island_borneo",
+    "type": "region",
+    "name": "Borneo",
+    "geometryType": "point",
+    "labelPoint": [
+      114,
+      1
+    ],
+    "packIds": [
+      "world_peninsulas_islands"
+    ],
+    "bbox": [
+      114,
+      1,
+      114,
+      1
+    ]
+  },
+  {
+    "id": "island_great_britain",
+    "type": "region",
+    "name": "Great Britain",
+    "geometryType": "point",
+    "labelPoint": [
+      -2.5,
+      54
+    ],
+    "packIds": [
+      "world_peninsulas_islands"
+    ],
+    "bbox": [
+      -2.5,
+      54,
+      -2.5,
+      54
+    ]
+  },
+  {
+    "id": "island_greenland",
+    "type": "region",
+    "name": "Greenland",
+    "geometryType": "point",
+    "labelPoint": [
+      -42,
+      73
+    ],
+    "packIds": [
+      "world_peninsulas_islands"
+    ],
+    "bbox": [
+      -42,
+      73,
+      -42,
+      73
+    ]
+  },
+  {
+    "id": "island_honshu",
+    "type": "region",
+    "name": "Honshu",
+    "geometryType": "point",
+    "labelPoint": [
+      138,
+      37
+    ],
+    "packIds": [
+      "world_peninsulas_islands"
+    ],
+    "bbox": [
+      138,
+      37,
+      138,
+      37
+    ]
+  },
+  {
+    "id": "island_iceland2",
+    "type": "region",
+    "name": "Iceland",
+    "geometryType": "point",
+    "labelPoint": [
+      -19,
+      65
+    ],
+    "packIds": [
+      "world_peninsulas_islands"
+    ],
+    "bbox": [
+      -19,
+      65,
+      -19,
+      65
+    ]
+  },
+  {
+    "id": "island_madagascar",
+    "type": "region",
+    "name": "Madagascar",
+    "geometryType": "point",
+    "labelPoint": [
+      47,
+      -19
+    ],
+    "packIds": [
+      "world_peninsulas_islands"
+    ],
+    "bbox": [
+      47,
+      -19,
+      47,
+      -19
+    ]
+  },
+  {
+    "id": "island_new_guinea",
+    "type": "region",
+    "name": "New Guinea",
+    "geometryType": "point",
+    "labelPoint": [
+      145,
+      -5
+    ],
+    "packIds": [
+      "world_peninsulas_islands"
+    ],
+    "bbox": [
+      145,
+      -5,
+      145,
+      -5
+    ]
+  },
+  {
+    "id": "pen_arabian",
+    "type": "region",
+    "name": "Arabian Peninsula",
+    "geometryType": "point",
+    "labelPoint": [
+      45,
+      22
+    ],
+    "packIds": [
+      "world_peninsulas_islands"
+    ],
+    "bbox": [
+      45,
+      22,
+      45,
+      22
+    ]
+  },
+  {
+    "id": "pen_balkan",
+    "type": "region",
+    "name": "Balkan Peninsula",
+    "geometryType": "point",
+    "labelPoint": [
+      22,
+      42
+    ],
+    "packIds": [
+      "world_peninsulas_islands"
+    ],
+    "bbox": [
+      22,
+      42,
+      22,
+      42
+    ]
+  },
+  {
+    "id": "pen_iberian",
+    "type": "region",
+    "name": "Iberian Peninsula",
+    "geometryType": "point",
+    "labelPoint": [
+      -4,
+      40
+    ],
+    "packIds": [
+      "world_peninsulas_islands"
+    ],
+    "bbox": [
+      -4,
+      40,
+      -4,
+      40
+    ]
+  },
+  {
+    "id": "pen_indian",
+    "type": "region",
+    "name": "Indian Peninsula",
+    "geometryType": "point",
+    "labelPoint": [
+      78,
+      17
+    ],
+    "packIds": [
+      "world_peninsulas_islands"
+    ],
+    "bbox": [
+      78,
+      17,
+      78,
+      17
+    ]
+  },
+  {
+    "id": "pen_korean",
+    "type": "region",
+    "name": "Korean Peninsula",
+    "geometryType": "point",
+    "labelPoint": [
+      127.5,
+      39
+    ],
+    "packIds": [
+      "world_peninsulas_islands"
+    ],
+    "bbox": [
+      127.5,
+      39,
+      127.5,
+      39
+    ]
+  },
+  {
+    "id": "pen_scandinavian",
+    "type": "region",
+    "name": "Scandinavian Peninsula",
+    "geometryType": "point",
+    "labelPoint": [
+      18,
+      64
+    ],
+    "packIds": [
+      "world_peninsulas_islands"
+    ],
+    "bbox": [
+      18,
+      64,
+      18,
+      64
+    ]
+  }
+]

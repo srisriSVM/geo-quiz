@@ -1,0 +1,1353 @@
+[
+  {
+    "id": "country_albania",
+    "type": "country",
+    "name": "Albania",
+    "geometryType": "point",
+    "labelPoint": [
+      20,
+      41.2
+    ],
+    "packIds": [
+      "europe_countries",
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_tirana"
+    ],
+    "bbox": [
+      20,
+      41.2,
+      20,
+      41.2
+    ]
+  },
+  {
+    "id": "country_andorra",
+    "type": "country",
+    "name": "Andorra",
+    "geometryType": "point",
+    "labelPoint": [
+      1.52,
+      42.51
+    ],
+    "packIds": [
+      "europe_countries",
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_andorra_la_vella"
+    ],
+    "bbox": [
+      1.52,
+      42.51,
+      1.52,
+      42.51
+    ]
+  },
+  {
+    "id": "country_armenia",
+    "type": "country",
+    "name": "Armenia",
+    "geometryType": "point",
+    "labelPoint": [
+      44.5,
+      40.2
+    ],
+    "packIds": [
+      "europe_countries",
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_yerevan"
+    ],
+    "bbox": [
+      44.5,
+      40.2,
+      44.5,
+      40.2
+    ]
+  },
+  {
+    "id": "country_austria",
+    "type": "country",
+    "name": "Austria",
+    "geometryType": "point",
+    "labelPoint": [
+      14.1,
+      47.6
+    ],
+    "packIds": [
+      "europe_countries",
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_vienna"
+    ],
+    "bbox": [
+      14.1,
+      47.6,
+      14.1,
+      47.6
+    ]
+  },
+  {
+    "id": "country_azerbaijan",
+    "type": "country",
+    "name": "Azerbaijan",
+    "geometryType": "point",
+    "labelPoint": [
+      47.5,
+      40.3
+    ],
+    "packIds": [
+      "europe_countries",
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_baku"
+    ],
+    "bbox": [
+      47.5,
+      40.3,
+      47.5,
+      40.3
+    ]
+  },
+  {
+    "id": "country_belarus",
+    "type": "country",
+    "name": "Belarus",
+    "geometryType": "point",
+    "labelPoint": [
+      28,
+      53.7
+    ],
+    "packIds": [
+      "europe_countries",
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_minsk"
+    ],
+    "bbox": [
+      28,
+      53.7,
+      28,
+      53.7
+    ]
+  },
+  {
+    "id": "country_belgium",
+    "type": "country",
+    "name": "Belgium",
+    "geometryType": "point",
+    "labelPoint": [
+      4.7,
+      50.8
+    ],
+    "packIds": [
+      "europe_countries",
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_brussels"
+    ],
+    "bbox": [
+      4.7,
+      50.8,
+      4.7,
+      50.8
+    ]
+  },
+  {
+    "id": "country_bosnia_and_herzegovina",
+    "type": "country",
+    "name": "Bosnia and Herzegovina",
+    "geometryType": "point",
+    "labelPoint": [
+      17.8,
+      44.2
+    ],
+    "packIds": [
+      "europe_countries",
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_sarajevo"
+    ],
+    "bbox": [
+      17.8,
+      44.2,
+      17.8,
+      44.2
+    ]
+  },
+  {
+    "id": "country_bulgaria",
+    "type": "country",
+    "name": "Bulgaria",
+    "geometryType": "point",
+    "labelPoint": [
+      25.5,
+      42.7
+    ],
+    "packIds": [
+      "europe_countries",
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_sofia"
+    ],
+    "bbox": [
+      25.5,
+      42.7,
+      25.5,
+      42.7
+    ]
+  },
+  {
+    "id": "country_croatia",
+    "type": "country",
+    "name": "Croatia",
+    "geometryType": "point",
+    "labelPoint": [
+      16.4,
+      45.2
+    ],
+    "packIds": [
+      "europe_countries",
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_zagreb"
+    ],
+    "bbox": [
+      16.4,
+      45.2,
+      16.4,
+      45.2
+    ]
+  },
+  {
+    "id": "country_cyprus",
+    "type": "country",
+    "name": "Cyprus",
+    "geometryType": "point",
+    "labelPoint": [
+      33.2,
+      35.1
+    ],
+    "packIds": [
+      "europe_countries",
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_nicosia"
+    ],
+    "bbox": [
+      33.2,
+      35.1,
+      33.2,
+      35.1
+    ]
+  },
+  {
+    "id": "country_czechia",
+    "type": "country",
+    "name": "Czechia",
+    "geometryType": "point",
+    "labelPoint": [
+      15.3,
+      49.8
+    ],
+    "packIds": [
+      "europe_countries",
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_prague"
+    ],
+    "bbox": [
+      15.3,
+      49.8,
+      15.3,
+      49.8
+    ]
+  },
+  {
+    "id": "country_denmark",
+    "type": "country",
+    "name": "Denmark",
+    "geometryType": "point",
+    "labelPoint": [
+      9.3,
+      56.2
+    ],
+    "packIds": [
+      "europe_countries",
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_copenhagen"
+    ],
+    "bbox": [
+      9.3,
+      56.2,
+      9.3,
+      56.2
+    ]
+  },
+  {
+    "id": "country_estonia",
+    "type": "country",
+    "name": "Estonia",
+    "geometryType": "point",
+    "labelPoint": [
+      25,
+      58.7
+    ],
+    "packIds": [
+      "europe_countries",
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_tallinn"
+    ],
+    "bbox": [
+      25,
+      58.7,
+      25,
+      58.7
+    ]
+  },
+  {
+    "id": "country_finland",
+    "type": "country",
+    "name": "Finland",
+    "geometryType": "point",
+    "labelPoint": [
+      26,
+      64.5
+    ],
+    "packIds": [
+      "europe_countries",
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_helsinki"
+    ],
+    "bbox": [
+      26,
+      64.5,
+      26,
+      64.5
+    ]
+  },
+  {
+    "id": "country_france",
+    "type": "country",
+    "name": "France",
+    "geometryType": "point",
+    "labelPoint": [
+      2.3,
+      46.2
+    ],
+    "packIds": [
+      "europe_countries",
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "difficulty": "easy",
+    "ageBand": "6-8",
+    "facts": [
+      "France is the most visited country in the world by international tourists.",
+      "Paris is called the City of Light."
+    ],
+    "didYouKnow": "The Louvre museum in Paris is the world's most visited museum.",
+    "hintTokens": [
+      "Western Europe country with Paris as capital."
+    ],
+    "pronunciation": "frans",
+    "mnemonic": "Think: F in France, F in Eiffel.",
+    "tags": [
+      "europe",
+      "country"
+    ],
+    "learningObjective": "Notice France on the Atlantic side of Western Europe.",
+    "factCards": [
+      {
+        "title": "Capital",
+        "value": "Paris",
+        "icon": "city"
+      },
+      {
+        "title": "Population",
+        "value": "~67M",
+        "icon": "people"
+      },
+      {
+        "title": "Highest Mountain",
+        "value": "Mont Blanc",
+        "icon": "mountain"
+      }
+    ],
+    "media": {
+      "images": [
+        {
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/en/c/c3/Flag_of_France.svg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/France",
+          "credit": "Wikimedia",
+          "alt": "Flag of France"
+        },
+        {
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Tour_Eiffel_Wikimedia_Commons_%28cropped%29.jpg/330px-Tour_Eiffel_Wikimedia_Commons_%28cropped%29.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Eiffel_Tower",
+          "credit": "Wikimedia",
+          "alt": "Eiffel Tower in Paris"
+        }
+      ]
+    },
+    "capitalIds": [
+      "capital_paris"
+    ],
+    "bbox": [
+      2.3,
+      46.2,
+      2.3,
+      46.2
+    ]
+  },
+  {
+    "id": "country_georgia",
+    "type": "country",
+    "name": "Georgia",
+    "geometryType": "point",
+    "labelPoint": [
+      43.5,
+      42.2
+    ],
+    "packIds": [
+      "europe_countries",
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_tbilisi"
+    ],
+    "bbox": [
+      43.5,
+      42.2,
+      43.5,
+      42.2
+    ]
+  },
+  {
+    "id": "country_germany",
+    "type": "country",
+    "name": "Germany",
+    "geometryType": "point",
+    "labelPoint": [
+      10.4,
+      51.2
+    ],
+    "packIds": [
+      "europe_countries",
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "difficulty": "medium",
+    "ageBand": "9-12",
+    "facts": [
+      "Germany has more than 16 federal states.",
+      "The Rhine River is one of its key waterways."
+    ],
+    "didYouKnow": "Germany is famous for the Black Forest region.",
+    "hintTokens": [
+      "Central Europe country east of France."
+    ],
+    "pronunciation": "jur-muh-nee",
+    "mnemonic": "Germany sits in the center of Europe.",
+    "tags": [
+      "europe",
+      "country"
+    ],
+    "learningObjective": "Find Germany between France and Poland.",
+    "factCards": [
+      {
+        "title": "Capital",
+        "value": "Berlin",
+        "icon": "city"
+      },
+      {
+        "title": "Population",
+        "value": "~84M",
+        "icon": "people"
+      },
+      {
+        "title": "Major River",
+        "value": "Rhine",
+        "icon": "river"
+      }
+    ],
+    "media": {
+      "images": [
+        {
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/en/b/ba/Flag_of_Germany.svg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Germany",
+          "credit": "Wikimedia",
+          "alt": "Flag of Germany"
+        },
+        {
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Brandenburger_Tor_abends.jpg/330px-Brandenburger_Tor_abends.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Brandenburg_Gate",
+          "credit": "Wikimedia",
+          "alt": "Brandenburg Gate in Berlin"
+        }
+      ]
+    },
+    "capitalIds": [
+      "capital_berlin"
+    ],
+    "bbox": [
+      10.4,
+      51.2,
+      10.4,
+      51.2
+    ]
+  },
+  {
+    "id": "country_greece",
+    "type": "country",
+    "name": "Greece",
+    "geometryType": "point",
+    "labelPoint": [
+      22.9,
+      39
+    ],
+    "packIds": [
+      "europe_countries",
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_athens"
+    ],
+    "bbox": [
+      22.9,
+      39,
+      22.9,
+      39
+    ]
+  },
+  {
+    "id": "country_hungary",
+    "type": "country",
+    "name": "Hungary",
+    "geometryType": "point",
+    "labelPoint": [
+      19.3,
+      47.1
+    ],
+    "packIds": [
+      "europe_countries",
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_budapest"
+    ],
+    "bbox": [
+      19.3,
+      47.1,
+      19.3,
+      47.1
+    ]
+  },
+  {
+    "id": "country_iceland",
+    "type": "country",
+    "name": "Iceland",
+    "geometryType": "point",
+    "labelPoint": [
+      -19,
+      64.9
+    ],
+    "packIds": [
+      "europe_countries",
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_reykjavik"
+    ],
+    "bbox": [
+      -19,
+      64.9,
+      -19,
+      64.9
+    ]
+  },
+  {
+    "id": "country_ireland",
+    "type": "country",
+    "name": "Ireland",
+    "geometryType": "point",
+    "labelPoint": [
+      -8.2,
+      53.4
+    ],
+    "packIds": [
+      "europe_countries",
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_dublin"
+    ],
+    "bbox": [
+      -8.2,
+      53.4,
+      -8.2,
+      53.4
+    ]
+  },
+  {
+    "id": "country_italy",
+    "type": "country",
+    "name": "Italy",
+    "geometryType": "point",
+    "labelPoint": [
+      12.5,
+      42.8
+    ],
+    "packIds": [
+      "europe_countries",
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_rome"
+    ],
+    "bbox": [
+      12.5,
+      42.8,
+      12.5,
+      42.8
+    ]
+  },
+  {
+    "id": "country_kosovo",
+    "type": "country",
+    "name": "Kosovo",
+    "geometryType": "point",
+    "labelPoint": [
+      20.9,
+      42.6
+    ],
+    "packIds": [
+      "europe_countries",
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_pristina"
+    ],
+    "bbox": [
+      20.9,
+      42.6,
+      20.9,
+      42.6
+    ]
+  },
+  {
+    "id": "country_latvia",
+    "type": "country",
+    "name": "Latvia",
+    "geometryType": "point",
+    "labelPoint": [
+      24.9,
+      56.9
+    ],
+    "packIds": [
+      "europe_countries",
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_riga"
+    ],
+    "bbox": [
+      24.9,
+      56.9,
+      24.9,
+      56.9
+    ]
+  },
+  {
+    "id": "country_liechtenstein",
+    "type": "country",
+    "name": "Liechtenstein",
+    "geometryType": "point",
+    "labelPoint": [
+      9.55,
+      47.17
+    ],
+    "packIds": [
+      "europe_countries",
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_vaduz"
+    ],
+    "bbox": [
+      9.55,
+      47.17,
+      9.55,
+      47.17
+    ]
+  },
+  {
+    "id": "country_lithuania",
+    "type": "country",
+    "name": "Lithuania",
+    "geometryType": "point",
+    "labelPoint": [
+      23.9,
+      55.2
+    ],
+    "packIds": [
+      "europe_countries",
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_vilnius"
+    ],
+    "bbox": [
+      23.9,
+      55.2,
+      23.9,
+      55.2
+    ]
+  },
+  {
+    "id": "country_luxembourg",
+    "type": "country",
+    "name": "Luxembourg",
+    "geometryType": "point",
+    "labelPoint": [
+      6.1,
+      49.8
+    ],
+    "packIds": [
+      "europe_countries",
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_luxembourg"
+    ],
+    "bbox": [
+      6.1,
+      49.8,
+      6.1,
+      49.8
+    ]
+  },
+  {
+    "id": "country_malta",
+    "type": "country",
+    "name": "Malta",
+    "geometryType": "point",
+    "labelPoint": [
+      14.4,
+      35.9
+    ],
+    "packIds": [
+      "europe_countries",
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_valletta"
+    ],
+    "bbox": [
+      14.4,
+      35.9,
+      14.4,
+      35.9
+    ]
+  },
+  {
+    "id": "country_moldova",
+    "type": "country",
+    "name": "Moldova",
+    "geometryType": "point",
+    "labelPoint": [
+      28.4,
+      47.2
+    ],
+    "packIds": [
+      "europe_countries",
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_chisinau"
+    ],
+    "bbox": [
+      28.4,
+      47.2,
+      28.4,
+      47.2
+    ]
+  },
+  {
+    "id": "country_monaco",
+    "type": "country",
+    "name": "Monaco",
+    "geometryType": "point",
+    "labelPoint": [
+      7.42,
+      43.74
+    ],
+    "packIds": [
+      "europe_countries",
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_monaco"
+    ],
+    "bbox": [
+      7.42,
+      43.74,
+      7.42,
+      43.74
+    ]
+  },
+  {
+    "id": "country_montenegro",
+    "type": "country",
+    "name": "Montenegro",
+    "geometryType": "point",
+    "labelPoint": [
+      19.3,
+      42.8
+    ],
+    "packIds": [
+      "europe_countries",
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_podgorica"
+    ],
+    "bbox": [
+      19.3,
+      42.8,
+      19.3,
+      42.8
+    ]
+  },
+  {
+    "id": "country_netherlands",
+    "type": "country",
+    "name": "Netherlands",
+    "geometryType": "point",
+    "labelPoint": [
+      5.3,
+      52.2
+    ],
+    "packIds": [
+      "europe_countries",
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_amsterdam"
+    ],
+    "bbox": [
+      5.3,
+      52.2,
+      5.3,
+      52.2
+    ]
+  },
+  {
+    "id": "country_north_macedonia",
+    "type": "country",
+    "name": "North Macedonia",
+    "geometryType": "point",
+    "labelPoint": [
+      21.7,
+      41.6
+    ],
+    "packIds": [
+      "europe_countries",
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_skopje"
+    ],
+    "bbox": [
+      21.7,
+      41.6,
+      21.7,
+      41.6
+    ]
+  },
+  {
+    "id": "country_norway",
+    "type": "country",
+    "name": "Norway",
+    "geometryType": "point",
+    "labelPoint": [
+      8.5,
+      61.2
+    ],
+    "packIds": [
+      "europe_countries",
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_oslo"
+    ],
+    "bbox": [
+      8.5,
+      61.2,
+      8.5,
+      61.2
+    ]
+  },
+  {
+    "id": "country_poland",
+    "type": "country",
+    "name": "Poland",
+    "geometryType": "point",
+    "labelPoint": [
+      19.1,
+      52.1
+    ],
+    "packIds": [
+      "europe_countries",
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_warsaw"
+    ],
+    "bbox": [
+      19.1,
+      52.1,
+      19.1,
+      52.1
+    ]
+  },
+  {
+    "id": "country_portugal",
+    "type": "country",
+    "name": "Portugal",
+    "geometryType": "point",
+    "labelPoint": [
+      -8,
+      39.6
+    ],
+    "packIds": [
+      "europe_countries",
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_lisbon"
+    ],
+    "bbox": [
+      -8,
+      39.6,
+      -8,
+      39.6
+    ]
+  },
+  {
+    "id": "country_romania",
+    "type": "country",
+    "name": "Romania",
+    "geometryType": "point",
+    "labelPoint": [
+      24.9,
+      45.9
+    ],
+    "packIds": [
+      "europe_countries",
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_bucharest"
+    ],
+    "bbox": [
+      24.9,
+      45.9,
+      24.9,
+      45.9
+    ]
+  },
+  {
+    "id": "country_russia",
+    "type": "country",
+    "name": "Russia",
+    "geometryType": "point",
+    "labelPoint": [
+      37.6,
+      55.7
+    ],
+    "packIds": [
+      "europe_countries",
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_moscow"
+    ],
+    "bbox": [
+      37.6,
+      55.7,
+      37.6,
+      55.7
+    ]
+  },
+  {
+    "id": "country_san_marino",
+    "type": "country",
+    "name": "San Marino",
+    "geometryType": "point",
+    "labelPoint": [
+      12.46,
+      43.94
+    ],
+    "packIds": [
+      "europe_countries",
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_city_of_san_marino",
+      "capital_san_marino"
+    ],
+    "bbox": [
+      12.46,
+      43.94,
+      12.46,
+      43.94
+    ]
+  },
+  {
+    "id": "country_serbia",
+    "type": "country",
+    "name": "Serbia",
+    "geometryType": "point",
+    "labelPoint": [
+      20.8,
+      44.2
+    ],
+    "packIds": [
+      "europe_countries",
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_belgrade"
+    ],
+    "bbox": [
+      20.8,
+      44.2,
+      20.8,
+      44.2
+    ]
+  },
+  {
+    "id": "country_slovakia",
+    "type": "country",
+    "name": "Slovakia",
+    "geometryType": "point",
+    "labelPoint": [
+      19.7,
+      48.7
+    ],
+    "packIds": [
+      "europe_countries",
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_bratislava"
+    ],
+    "bbox": [
+      19.7,
+      48.7,
+      19.7,
+      48.7
+    ]
+  },
+  {
+    "id": "country_slovenia",
+    "type": "country",
+    "name": "Slovenia",
+    "geometryType": "point",
+    "labelPoint": [
+      14.9,
+      46.1
+    ],
+    "packIds": [
+      "europe_countries",
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_ljubljana"
+    ],
+    "bbox": [
+      14.9,
+      46.1,
+      14.9,
+      46.1
+    ]
+  },
+  {
+    "id": "country_spain",
+    "type": "country",
+    "name": "Spain",
+    "geometryType": "point",
+    "labelPoint": [
+      -3.7,
+      40.3
+    ],
+    "packIds": [
+      "europe_countries",
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_madrid"
+    ],
+    "bbox": [
+      -3.7,
+      40.3,
+      -3.7,
+      40.3
+    ]
+  },
+  {
+    "id": "country_sweden",
+    "type": "country",
+    "name": "Sweden",
+    "geometryType": "point",
+    "labelPoint": [
+      15.2,
+      62
+    ],
+    "packIds": [
+      "europe_countries",
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_stockholm"
+    ],
+    "bbox": [
+      15.2,
+      62,
+      15.2,
+      62
+    ]
+  },
+  {
+    "id": "country_switzerland",
+    "type": "country",
+    "name": "Switzerland",
+    "geometryType": "point",
+    "labelPoint": [
+      8.2,
+      46.8
+    ],
+    "packIds": [
+      "europe_countries",
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_bern"
+    ],
+    "bbox": [
+      8.2,
+      46.8,
+      8.2,
+      46.8
+    ]
+  },
+  {
+    "id": "country_turkey",
+    "type": "country",
+    "name": "Turkey",
+    "geometryType": "point",
+    "labelPoint": [
+      32.9,
+      39.9
+    ],
+    "packIds": [
+      "europe_countries",
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_ankara"
+    ],
+    "bbox": [
+      32.9,
+      39.9,
+      32.9,
+      39.9
+    ]
+  },
+  {
+    "id": "country_ukraine",
+    "type": "country",
+    "name": "Ukraine",
+    "geometryType": "point",
+    "labelPoint": [
+      31.2,
+      49
+    ],
+    "packIds": [
+      "europe_countries",
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_kyiv"
+    ],
+    "bbox": [
+      31.2,
+      49,
+      31.2,
+      49
+    ]
+  },
+  {
+    "id": "country_united_kingdom",
+    "type": "country",
+    "name": "United Kingdom",
+    "geometryType": "point",
+    "labelPoint": [
+      -2.8,
+      54.5
+    ],
+    "packIds": [
+      "europe_countries",
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_london"
+    ],
+    "bbox": [
+      -2.8,
+      54.5,
+      -2.8,
+      54.5
+    ]
+  },
+  {
+    "id": "country_vatican_city",
+    "type": "country",
+    "name": "Vatican City",
+    "geometryType": "point",
+    "labelPoint": [
+      12.45,
+      41.9
+    ],
+    "packIds": [
+      "europe_countries",
+      "world_countries",
+      "world_countries_by_continent",
+      "world_flags"
+    ],
+    "capitalIds": [
+      "capital_vatican_city"
+    ],
+    "bbox": [
+      12.45,
+      41.9,
+      12.45,
+      41.9
+    ]
+  }
+]

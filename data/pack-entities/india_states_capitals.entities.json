@@ -1,0 +1,1336 @@
+[
+  {
+    "id": "in_capital_andhra_pradesh",
+    "type": "capital",
+    "name": "Amaravati",
+    "geometryType": "point",
+    "labelPoint": [
+      80.5185,
+      16.5062
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ],
+    "adminOf": {
+      "id": "in_state_andhra_pradesh",
+      "name": "Andhra Pradesh",
+      "type": "state"
+    },
+    "bbox": [
+      80.5185,
+      16.5062,
+      80.5185,
+      16.5062
+    ]
+  },
+  {
+    "id": "in_capital_arunachal_pradesh",
+    "type": "capital",
+    "name": "Itanagar",
+    "geometryType": "point",
+    "labelPoint": [
+      93.62,
+      27.1
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ],
+    "adminOf": {
+      "id": "in_state_arunachal_pradesh",
+      "name": "Arunachal Pradesh",
+      "type": "state"
+    },
+    "bbox": [
+      93.62,
+      27.1,
+      93.62,
+      27.1
+    ]
+  },
+  {
+    "id": "in_capital_assam",
+    "type": "capital",
+    "name": "Dispur",
+    "geometryType": "point",
+    "labelPoint": [
+      91.7868,
+      26.1433
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ],
+    "adminOf": {
+      "id": "in_state_assam",
+      "name": "Assam",
+      "type": "state"
+    },
+    "bbox": [
+      91.7868,
+      26.1433,
+      91.7868,
+      26.1433
+    ]
+  },
+  {
+    "id": "in_capital_bihar",
+    "type": "capital",
+    "name": "Patna",
+    "geometryType": "point",
+    "labelPoint": [
+      85.1376,
+      25.5941
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ],
+    "adminOf": {
+      "id": "in_state_bihar",
+      "name": "Bihar",
+      "type": "state"
+    },
+    "bbox": [
+      85.1376,
+      25.5941,
+      85.1376,
+      25.5941
+    ]
+  },
+  {
+    "id": "in_capital_chhattisgarh",
+    "type": "capital",
+    "name": "Raipur",
+    "geometryType": "point",
+    "labelPoint": [
+      81.63,
+      21.25
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ],
+    "adminOf": {
+      "id": "in_state_chhattisgarh",
+      "name": "Chhattisgarh",
+      "type": "state"
+    },
+    "bbox": [
+      81.63,
+      21.25,
+      81.63,
+      21.25
+    ]
+  },
+  {
+    "id": "in_capital_goa",
+    "type": "capital",
+    "name": "Panaji",
+    "geometryType": "point",
+    "labelPoint": [
+      73.83,
+      15.49
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ],
+    "adminOf": {
+      "id": "in_state_goa",
+      "name": "Goa",
+      "type": "state"
+    },
+    "bbox": [
+      73.83,
+      15.49,
+      73.83,
+      15.49
+    ]
+  },
+  {
+    "id": "in_capital_gujarat",
+    "type": "capital",
+    "name": "Gandhinagar",
+    "geometryType": "point",
+    "labelPoint": [
+      72.6369,
+      23.2156
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ],
+    "adminOf": {
+      "id": "in_state_gujarat",
+      "name": "Gujarat",
+      "type": "state"
+    },
+    "bbox": [
+      72.6369,
+      23.2156,
+      72.6369,
+      23.2156
+    ]
+  },
+  {
+    "id": "in_capital_haryana",
+    "type": "capital",
+    "name": "Chandigarh",
+    "geometryType": "point",
+    "labelPoint": [
+      76.78,
+      30.73
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ],
+    "adminOf": {
+      "id": "in_state_haryana",
+      "name": "Haryana",
+      "type": "state"
+    },
+    "bbox": [
+      76.78,
+      30.73,
+      76.78,
+      30.73
+    ]
+  },
+  {
+    "id": "in_capital_himachal_pradesh",
+    "type": "capital",
+    "name": "Shimla",
+    "geometryType": "point",
+    "labelPoint": [
+      77.17,
+      31.1
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ],
+    "adminOf": {
+      "id": "in_state_himachal_pradesh",
+      "name": "Himachal Pradesh",
+      "type": "state"
+    },
+    "bbox": [
+      77.17,
+      31.1,
+      77.17,
+      31.1
+    ]
+  },
+  {
+    "id": "in_capital_jammu_kashmir",
+    "type": "capital",
+    "name": "Srinagar",
+    "geometryType": "point",
+    "labelPoint": [
+      74.79,
+      34.08
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ],
+    "adminOf": {
+      "id": "in_state_jammu_kashmir",
+      "name": "Jammu and Kashmir",
+      "type": "state"
+    },
+    "bbox": [
+      74.79,
+      34.08,
+      74.79,
+      34.08
+    ]
+  },
+  {
+    "id": "in_capital_jharkhand",
+    "type": "capital",
+    "name": "Ranchi",
+    "geometryType": "point",
+    "labelPoint": [
+      85.32,
+      23.34
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ],
+    "adminOf": {
+      "id": "in_state_jharkhand",
+      "name": "Jharkhand",
+      "type": "state"
+    },
+    "bbox": [
+      85.32,
+      23.34,
+      85.32,
+      23.34
+    ]
+  },
+  {
+    "id": "in_capital_karnataka",
+    "type": "capital",
+    "name": "Bengaluru",
+    "geometryType": "point",
+    "labelPoint": [
+      77.5946,
+      12.9716
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ],
+    "adminOf": {
+      "id": "in_state_karnataka",
+      "name": "Karnataka",
+      "type": "state"
+    },
+    "bbox": [
+      77.5946,
+      12.9716,
+      77.5946,
+      12.9716
+    ]
+  },
+  {
+    "id": "in_capital_kerala",
+    "type": "capital",
+    "name": "Thiruvananthapuram",
+    "geometryType": "point",
+    "labelPoint": [
+      76.9366,
+      8.5241
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ],
+    "adminOf": {
+      "id": "in_state_kerala",
+      "name": "Kerala",
+      "type": "state"
+    },
+    "bbox": [
+      76.9366,
+      8.5241,
+      76.9366,
+      8.5241
+    ]
+  },
+  {
+    "id": "in_capital_madhya_pradesh",
+    "type": "capital",
+    "name": "Bhopal",
+    "geometryType": "point",
+    "labelPoint": [
+      77.4126,
+      23.2599
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ],
+    "adminOf": {
+      "id": "in_state_madhya_pradesh",
+      "name": "Madhya Pradesh",
+      "type": "state"
+    },
+    "bbox": [
+      77.4126,
+      23.2599,
+      77.4126,
+      23.2599
+    ]
+  },
+  {
+    "id": "in_capital_maharashtra",
+    "type": "capital",
+    "name": "Mumbai",
+    "geometryType": "point",
+    "labelPoint": [
+      72.8777,
+      19.076
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ],
+    "adminOf": {
+      "id": "in_state_maharashtra",
+      "name": "Maharashtra",
+      "type": "state"
+    },
+    "bbox": [
+      72.8777,
+      19.076,
+      72.8777,
+      19.076
+    ]
+  },
+  {
+    "id": "in_capital_manipur",
+    "type": "capital",
+    "name": "Imphal",
+    "geometryType": "point",
+    "labelPoint": [
+      93.94,
+      24.82
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ],
+    "adminOf": {
+      "id": "in_state_manipur",
+      "name": "Manipur",
+      "type": "state"
+    },
+    "bbox": [
+      93.94,
+      24.82,
+      93.94,
+      24.82
+    ]
+  },
+  {
+    "id": "in_capital_meghalaya",
+    "type": "capital",
+    "name": "Shillong",
+    "geometryType": "point",
+    "labelPoint": [
+      91.89,
+      25.58
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ],
+    "adminOf": {
+      "id": "in_state_meghalaya",
+      "name": "Meghalaya",
+      "type": "state"
+    },
+    "bbox": [
+      91.89,
+      25.58,
+      91.89,
+      25.58
+    ]
+  },
+  {
+    "id": "in_capital_mizoram",
+    "type": "capital",
+    "name": "Aizawl",
+    "geometryType": "point",
+    "labelPoint": [
+      92.72,
+      23.73
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ],
+    "adminOf": {
+      "id": "in_state_mizoram",
+      "name": "Mizoram",
+      "type": "state"
+    },
+    "bbox": [
+      92.72,
+      23.73,
+      92.72,
+      23.73
+    ]
+  },
+  {
+    "id": "in_capital_nagaland",
+    "type": "capital",
+    "name": "Kohima",
+    "geometryType": "point",
+    "labelPoint": [
+      94.11,
+      25.67
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ],
+    "adminOf": {
+      "id": "in_state_nagaland",
+      "name": "Nagaland",
+      "type": "state"
+    },
+    "bbox": [
+      94.11,
+      25.67,
+      94.11,
+      25.67
+    ]
+  },
+  {
+    "id": "in_capital_odisha",
+    "type": "capital",
+    "name": "Bhubaneswar",
+    "geometryType": "point",
+    "labelPoint": [
+      85.8245,
+      20.2961
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ],
+    "adminOf": {
+      "id": "in_state_odisha",
+      "name": "Odisha",
+      "type": "state"
+    },
+    "bbox": [
+      85.8245,
+      20.2961,
+      85.8245,
+      20.2961
+    ]
+  },
+  {
+    "id": "in_capital_punjab",
+    "type": "capital",
+    "name": "Chandigarh",
+    "geometryType": "point",
+    "labelPoint": [
+      76.7794,
+      30.7333
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ],
+    "adminOf": {
+      "id": "in_state_punjab",
+      "name": "Punjab",
+      "type": "state"
+    },
+    "bbox": [
+      76.7794,
+      30.7333,
+      76.7794,
+      30.7333
+    ]
+  },
+  {
+    "id": "in_capital_rajasthan",
+    "type": "capital",
+    "name": "Jaipur",
+    "geometryType": "point",
+    "labelPoint": [
+      75.7873,
+      26.9124
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ],
+    "adminOf": {
+      "id": "in_state_rajasthan",
+      "name": "Rajasthan",
+      "type": "state"
+    },
+    "bbox": [
+      75.7873,
+      26.9124,
+      75.7873,
+      26.9124
+    ]
+  },
+  {
+    "id": "in_capital_sikkim",
+    "type": "capital",
+    "name": "Gangtok",
+    "geometryType": "point",
+    "labelPoint": [
+      88.61,
+      27.33
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ],
+    "adminOf": {
+      "id": "in_state_sikkim",
+      "name": "Sikkim",
+      "type": "state"
+    },
+    "bbox": [
+      88.61,
+      27.33,
+      88.61,
+      27.33
+    ]
+  },
+  {
+    "id": "in_capital_tamil_nadu",
+    "type": "capital",
+    "name": "Chennai",
+    "geometryType": "point",
+    "labelPoint": [
+      80.2707,
+      13.0827
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ],
+    "adminOf": {
+      "id": "in_state_tamil_nadu",
+      "name": "Tamil Nadu",
+      "type": "state"
+    },
+    "bbox": [
+      80.2707,
+      13.0827,
+      80.2707,
+      13.0827
+    ]
+  },
+  {
+    "id": "in_capital_telangana",
+    "type": "capital",
+    "name": "Hyderabad",
+    "geometryType": "point",
+    "labelPoint": [
+      78.4867,
+      17.385
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ],
+    "adminOf": {
+      "id": "in_state_telangana",
+      "name": "Telangana",
+      "type": "state"
+    },
+    "bbox": [
+      78.4867,
+      17.385,
+      78.4867,
+      17.385
+    ]
+  },
+  {
+    "id": "in_capital_tripura",
+    "type": "capital",
+    "name": "Agartala",
+    "geometryType": "point",
+    "labelPoint": [
+      91.29,
+      23.83
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ],
+    "adminOf": {
+      "id": "in_state_tripura",
+      "name": "Tripura",
+      "type": "state"
+    },
+    "bbox": [
+      91.29,
+      23.83,
+      91.29,
+      23.83
+    ]
+  },
+  {
+    "id": "in_capital_uttar_pradesh",
+    "type": "capital",
+    "name": "Lucknow",
+    "geometryType": "point",
+    "labelPoint": [
+      80.95,
+      26.85
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ],
+    "adminOf": {
+      "id": "in_state_uttar_pradesh",
+      "name": "Uttar Pradesh",
+      "type": "state"
+    },
+    "bbox": [
+      80.95,
+      26.85,
+      80.95,
+      26.85
+    ]
+  },
+  {
+    "id": "in_capital_uttarakhand",
+    "type": "capital",
+    "name": "Dehradun",
+    "geometryType": "point",
+    "labelPoint": [
+      78.03,
+      30.32
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ],
+    "adminOf": {
+      "id": "in_state_uttarakhand",
+      "name": "Uttarakhand",
+      "type": "state"
+    },
+    "bbox": [
+      78.03,
+      30.32,
+      78.03,
+      30.32
+    ]
+  },
+  {
+    "id": "in_capital_west_bengal",
+    "type": "capital",
+    "name": "Kolkata",
+    "geometryType": "point",
+    "labelPoint": [
+      88.3639,
+      22.5726
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ],
+    "adminOf": {
+      "id": "in_state_west_bengal",
+      "name": "West Bengal",
+      "type": "state"
+    },
+    "bbox": [
+      88.3639,
+      22.5726,
+      88.3639,
+      22.5726
+    ]
+  },
+  {
+    "id": "in_state_andhra_pradesh",
+    "type": "state",
+    "name": "Andhra Pradesh",
+    "geometryType": "point",
+    "labelPoint": [
+      79.8,
+      15.9
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ],
+    "capitalIds": [
+      "in_capital_andhra_pradesh"
+    ],
+    "bbox": [
+      76.76059489140539,
+      12.624076566412478,
+      84.76474238480944,
+      19.16768745387382
+    ]
+  },
+  {
+    "id": "in_state_arunachal_pradesh",
+    "type": "state",
+    "name": "Arunachal Pradesh",
+    "geometryType": "point",
+    "labelPoint": [
+      94.7,
+      28.2
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ],
+    "capitalIds": [
+      "in_capital_arunachal_pradesh"
+    ],
+    "bbox": [
+      91.54645869720218,
+      26.650843801774958,
+      97.4114982616793,
+      29.461725849496894
+    ]
+  },
+  {
+    "id": "in_state_assam",
+    "type": "state",
+    "name": "Assam",
+    "geometryType": "point",
+    "labelPoint": [
+      92.9,
+      26.1
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ],
+    "capitalIds": [
+      "in_capital_assam"
+    ],
+    "bbox": [
+      89.69860227840127,
+      24.136328877964573,
+      96.0177809755653,
+      27.97156927407285
+    ]
+  },
+  {
+    "id": "in_state_bihar",
+    "type": "state",
+    "name": "Bihar",
+    "geometryType": "point",
+    "labelPoint": [
+      85.3,
+      25.9
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ],
+    "capitalIds": [
+      "in_capital_bihar"
+    ],
+    "bbox": [
+      83.32023795297891,
+      24.286304669056324,
+      88.30038590056097,
+      27.521631570162608
+    ]
+  },
+  {
+    "id": "in_state_chhattisgarh",
+    "type": "state",
+    "name": "Chhattisgarh",
+    "geometryType": "point",
+    "labelPoint": [
+      82,
+      21.3
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ],
+    "capitalIds": [
+      "in_capital_chhattisgarh"
+    ],
+    "bbox": [
+      80.24431122119142,
+      17.78235666295051,
+      84.3963699416031,
+      24.106034099879945
+    ]
+  },
+  {
+    "id": "in_state_goa",
+    "type": "state",
+    "name": "Goa",
+    "geometryType": "point",
+    "labelPoint": [
+      74.1,
+      15.4
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ],
+    "capitalIds": [
+      "in_capital_goa"
+    ],
+    "bbox": [
+      73.67538205174378,
+      14.900641739228085,
+      74.33649918743629,
+      15.800762637691411
+    ]
+  },
+  {
+    "id": "in_state_gujarat",
+    "type": "state",
+    "name": "Gujarat",
+    "geometryType": "point",
+    "labelPoint": [
+      71.3,
+      22.3
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ],
+    "capitalIds": [
+      "in_capital_gujarat"
+    ],
+    "bbox": [
+      68.09347709896304,
+      20.119519914427944,
+      74.4765689999092,
+      24.71200090183998
+    ]
+  },
+  {
+    "id": "in_state_haryana",
+    "type": "state",
+    "name": "Haryana",
+    "geometryType": "point",
+    "labelPoint": [
+      76.1,
+      29.1
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ],
+    "capitalIds": [
+      "in_capital_haryana"
+    ],
+    "bbox": [
+      74.47371807777745,
+      27.652599414861406,
+      77.60433801069814,
+      30.928598909224085
+    ]
+  },
+  {
+    "id": "in_state_himachal_pradesh",
+    "type": "state",
+    "name": "Himachal Pradesh",
+    "geometryType": "point",
+    "labelPoint": [
+      77.2,
+      31.7
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ],
+    "capitalIds": [
+      "in_capital_himachal_pradesh"
+    ],
+    "bbox": [
+      75.59424083898602,
+      30.377701333491753,
+      79.00891512191004,
+      33.25694812285687
+    ]
+  },
+  {
+    "id": "in_state_jammu_kashmir",
+    "type": "state",
+    "name": "Jammu and Kashmir",
+    "geometryType": "point",
+    "labelPoint": [
+      75.3,
+      34.2
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ],
+    "capitalIds": [
+      "in_capital_jammu_kashmir"
+    ],
+    "bbox": [
+      73.3900754439461,
+      32.276216160336496,
+      76.77972232888146,
+      35.11807334325272
+    ]
+  },
+  {
+    "id": "in_state_jharkhand",
+    "type": "state",
+    "name": "Jharkhand",
+    "geometryType": "point",
+    "labelPoint": [
+      85.5,
+      23.6
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ],
+    "capitalIds": [
+      "in_capital_jharkhand"
+    ],
+    "bbox": [
+      83.32987746257743,
+      21.970345717921315,
+      87.96228739209857,
+      25.349452022007856
+    ]
+  },
+  {
+    "id": "in_state_karnataka",
+    "type": "state",
+    "name": "Karnataka",
+    "geometryType": "point",
+    "labelPoint": [
+      76,
+      14.5
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ],
+    "capitalIds": [
+      "in_capital_karnataka"
+    ],
+    "bbox": [
+      74.08568785959926,
+      11.594584842800884,
+      78.58761549355393,
+      18.458838418279793
+    ]
+  },
+  {
+    "id": "in_state_kerala",
+    "type": "state",
+    "name": "Kerala",
+    "geometryType": "point",
+    "labelPoint": [
+      76.3,
+      10.4
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ],
+    "capitalIds": [
+      "in_capital_kerala"
+    ],
+    "bbox": [
+      74.86765619847404,
+      8.29248867977566,
+      77.41232049024711,
+      12.79560931457889
+    ]
+  },
+  {
+    "id": "in_state_madhya_pradesh",
+    "type": "state",
+    "name": "Madhya Pradesh",
+    "geometryType": "point",
+    "labelPoint": [
+      78.4,
+      23.5
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ],
+    "capitalIds": [
+      "in_capital_madhya_pradesh"
+    ],
+    "bbox": [
+      74.0296957601422,
+      21.069906850278162,
+      82.81031282131073,
+      26.86906487719031
+    ]
+  },
+  {
+    "id": "in_state_maharashtra",
+    "type": "state",
+    "name": "Maharashtra",
+    "geometryType": "point",
+    "labelPoint": [
+      75.7,
+      19.6
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ],
+    "capitalIds": [
+      "in_capital_maharashtra"
+    ],
+    "bbox": [
+      72.65460838407557,
+      15.606134148758692,
+      80.89835690879886,
+      22.03380925230759
+    ]
+  },
+  {
+    "id": "in_state_manipur",
+    "type": "state",
+    "name": "Manipur",
+    "geometryType": "point",
+    "labelPoint": [
+      93.9,
+      24.8
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ],
+    "capitalIds": [
+      "in_capital_manipur"
+    ],
+    "bbox": [
+      92.9709806894424,
+      23.83288602680811,
+      94.74467192889188,
+      25.691797741941613
+    ]
+  },
+  {
+    "id": "in_state_meghalaya",
+    "type": "state",
+    "name": "Meghalaya",
+    "geometryType": "point",
+    "labelPoint": [
+      91.3,
+      25.5
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ],
+    "capitalIds": [
+      "in_capital_meghalaya"
+    ],
+    "bbox": [
+      89.81402039079512,
+      25.02924883566078,
+      92.80274207492357,
+      26.119502083417228
+    ]
+  },
+  {
+    "id": "in_state_mizoram",
+    "type": "state",
+    "name": "Mizoram",
+    "geometryType": "point",
+    "labelPoint": [
+      92.8,
+      23.2
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ],
+    "capitalIds": [
+      "in_capital_mizoram"
+    ],
+    "bbox": [
+      92.25699652338471,
+      21.941362724067993,
+      93.43617078087186,
+      24.521233948924486
+    ]
+  },
+  {
+    "id": "in_state_nagaland",
+    "type": "state",
+    "name": "Nagaland",
+    "geometryType": "point",
+    "labelPoint": [
+      94.3,
+      26.2
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ],
+    "capitalIds": [
+      "in_capital_nagaland"
+    ],
+    "bbox": [
+      93.32692556771701,
+      25.198599972434153,
+      95.2424870923021,
+      27.036024743908317
+    ]
+  },
+  {
+    "id": "in_state_odisha",
+    "type": "state",
+    "name": "Odisha",
+    "geometryType": "point",
+    "labelPoint": [
+      85.1,
+      20.3
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ],
+    "capitalIds": [
+      "in_capital_odisha"
+    ],
+    "bbox": [
+      81.38836441162971,
+      17.812725617756946,
+      87.48621588276683,
+      22.56751235951127
+    ]
+  },
+  {
+    "id": "in_state_punjab",
+    "type": "state",
+    "name": "Punjab",
+    "geometryType": "point",
+    "labelPoint": [
+      75.4,
+      31.1
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ],
+    "capitalIds": [
+      "in_capital_punjab"
+    ],
+    "bbox": [
+      73.87984832119753,
+      29.54207982547574,
+      76.9394179273188,
+      32.5126967060539
+    ]
+  },
+  {
+    "id": "in_state_rajasthan",
+    "type": "state",
+    "name": "Rajasthan",
+    "geometryType": "point",
+    "labelPoint": [
+      73.8,
+      26.9
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ],
+    "capitalIds": [
+      "in_capital_rajasthan"
+    ],
+    "bbox": [
+      69.48422685443495,
+      23.061220269181163,
+      78.27225358568103,
+      30.198127560826826
+    ]
+  },
+  {
+    "id": "in_state_sikkim",
+    "type": "state",
+    "name": "Sikkim",
+    "geometryType": "point",
+    "labelPoint": [
+      88.5,
+      27.5
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ],
+    "capitalIds": [
+      "in_capital_sikkim"
+    ],
+    "bbox": [
+      88.01352368647395,
+      27.079449114794897,
+      88.91975777343487,
+      28.12891513585834
+    ]
+  },
+  {
+    "id": "in_state_tamil_nadu",
+    "type": "state",
+    "name": "Tamil Nadu",
+    "geometryType": "point",
+    "labelPoint": [
+      78.7,
+      11.1
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ],
+    "capitalIds": [
+      "in_capital_tamil_nadu"
+    ],
+    "bbox": [
+      76.23340535360035,
+      8.076579218513244,
+      80.34677683452401,
+      13.56531121693289
+    ]
+  },
+  {
+    "id": "in_state_telangana",
+    "type": "state",
+    "name": "Telangana",
+    "geometryType": "point",
+    "labelPoint": [
+      79.2,
+      17.9
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ],
+    "capitalIds": [
+      "in_capital_telangana"
+    ],
+    "bbox": [
+      77.23591259653449,
+      15.836037339275594,
+      81.32263379475512,
+      19.916338181781175
+    ]
+  },
+  {
+    "id": "in_state_tripura",
+    "type": "state",
+    "name": "Tripura",
+    "geometryType": "point",
+    "labelPoint": [
+      91.7,
+      23.9
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ],
+    "capitalIds": [
+      "in_capital_tripura"
+    ],
+    "bbox": [
+      91.14968521948276,
+      22.939183734373383,
+      92.33195844371448,
+      24.527597220023154
+    ]
+  },
+  {
+    "id": "in_state_uttar_pradesh",
+    "type": "state",
+    "name": "Uttar Pradesh",
+    "geometryType": "point",
+    "labelPoint": [
+      80.9,
+      26.8
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ],
+    "capitalIds": [
+      "in_capital_uttar_pradesh"
+    ],
+    "bbox": [
+      77.08394810873938,
+      23.87013398182365,
+      84.63468220669665,
+      30.40633417027495
+    ]
+  },
+  {
+    "id": "in_state_uttarakhand",
+    "type": "state",
+    "name": "Uttarakhand",
+    "geometryType": "point",
+    "labelPoint": [
+      79,
+      30.1
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ],
+    "capitalIds": [
+      "in_capital_uttarakhand"
+    ],
+    "bbox": [
+      77.5726050241849,
+      28.72289700588437,
+      81.0451513558769,
+      31.456126767118253
+    ]
+  },
+  {
+    "id": "in_state_west_bengal",
+    "type": "state",
+    "name": "West Bengal",
+    "geometryType": "point",
+    "labelPoint": [
+      87.9,
+      23.2
+    ],
+    "packIds": [
+      "india_states_capitals"
+    ],
+    "capitalIds": [
+      "in_capital_west_bengal"
+    ],
+    "bbox": [
+      85.819663238859,
+      21.483675375101022,
+      89.87419826308201,
+      27.221097543919555
+    ]
+  }
+]
