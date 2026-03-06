@@ -1,0 +1,298 @@
+[
+  {
+    "id": "volcano_cotopaxi",
+    "type": "mountain",
+    "name": "Cotopaxi",
+    "geometryType": "point",
+    "labelPoint": [
+      -78.436,
+      -0.68
+    ],
+    "difficulty": "medium",
+    "packIds": [
+      "world_volcanoes"
+    ],
+    "bbox": [
+      -78.436,
+      -0.68,
+      -78.436,
+      -0.68
+    ]
+  },
+  {
+    "id": "volcano_etna",
+    "type": "mountain",
+    "name": "Mount Etna",
+    "geometryType": "point",
+    "labelPoint": [
+      15.004,
+      37.751
+    ],
+    "difficulty": "easy",
+    "packIds": [
+      "world_volcanoes"
+    ],
+    "bbox": [
+      15.004,
+      37.751,
+      15.004,
+      37.751
+    ]
+  },
+  {
+    "id": "volcano_eyjafjallajokull",
+    "type": "mountain",
+    "name": "Eyjafjallajökull",
+    "geometryType": "point",
+    "labelPoint": [
+      -19.613,
+      63.633
+    ],
+    "difficulty": "hard",
+    "packIds": [
+      "world_volcanoes"
+    ],
+    "bbox": [
+      -19.613,
+      63.633,
+      -19.613,
+      63.633
+    ]
+  },
+  {
+    "id": "volcano_fuji",
+    "type": "mountain",
+    "name": "Mount Fuji",
+    "geometryType": "point",
+    "labelPoint": [
+      138.7274,
+      35.3606
+    ],
+    "difficulty": "easy",
+    "hintTokens": [
+      "Iconic stratovolcano in Japan"
+    ],
+    "learningObjective": "Identify key volcanoes along major plate boundaries.",
+    "facts": [
+      "Japan's highest peak and famous active volcano."
+    ],
+    "packIds": [
+      "world_volcanoes"
+    ],
+    "bbox": [
+      138.7274,
+      35.3606,
+      138.7274,
+      35.3606
+    ]
+  },
+  {
+    "id": "volcano_kilauea",
+    "type": "mountain",
+    "name": "Kilauea",
+    "geometryType": "point",
+    "labelPoint": [
+      -155.292,
+      19.421
+    ],
+    "difficulty": "medium",
+    "packIds": [
+      "world_volcanoes"
+    ],
+    "bbox": [
+      -155.292,
+      19.421,
+      -155.292,
+      19.421
+    ]
+  },
+  {
+    "id": "volcano_krakatoa",
+    "type": "mountain",
+    "name": "Krakatoa",
+    "geometryType": "point",
+    "labelPoint": [
+      105.423,
+      -6.102
+    ],
+    "difficulty": "medium",
+    "facts": [
+      "One of the most famous explosive eruptions in history (1883)."
+    ],
+    "packIds": [
+      "world_volcanoes"
+    ],
+    "bbox": [
+      105.423,
+      -6.102,
+      105.423,
+      -6.102
+    ]
+  },
+  {
+    "id": "volcano_mauna_loa",
+    "type": "mountain",
+    "name": "Mauna Loa",
+    "geometryType": "point",
+    "labelPoint": [
+      -155.608,
+      19.475
+    ],
+    "difficulty": "medium",
+    "packIds": [
+      "world_volcanoes"
+    ],
+    "bbox": [
+      -155.608,
+      19.475,
+      -155.608,
+      19.475
+    ]
+  },
+  {
+    "id": "volcano_merapi",
+    "type": "mountain",
+    "name": "Mount Merapi",
+    "geometryType": "point",
+    "labelPoint": [
+      110.446,
+      -7.54
+    ],
+    "difficulty": "hard",
+    "packIds": [
+      "world_volcanoes"
+    ],
+    "bbox": [
+      110.446,
+      -7.54,
+      110.446,
+      -7.54
+    ]
+  },
+  {
+    "id": "volcano_nyiragongo",
+    "type": "mountain",
+    "name": "Mount Nyiragongo",
+    "geometryType": "point",
+    "labelPoint": [
+      29.249,
+      -1.52
+    ],
+    "difficulty": "hard",
+    "packIds": [
+      "world_volcanoes"
+    ],
+    "bbox": [
+      29.249,
+      -1.52,
+      29.249,
+      -1.52
+    ]
+  },
+  {
+    "id": "volcano_pinatubo",
+    "type": "mountain",
+    "name": "Mount Pinatubo",
+    "geometryType": "point",
+    "labelPoint": [
+      120.349,
+      15.142
+    ],
+    "difficulty": "hard",
+    "packIds": [
+      "world_volcanoes"
+    ],
+    "bbox": [
+      120.349,
+      15.142,
+      120.349,
+      15.142
+    ]
+  },
+  {
+    "id": "volcano_popocatepetl",
+    "type": "mountain",
+    "name": "Popocatépetl",
+    "geometryType": "point",
+    "labelPoint": [
+      -98.6223,
+      19.023
+    ],
+    "difficulty": "medium",
+    "packIds": [
+      "world_volcanoes"
+    ],
+    "bbox": [
+      -98.6223,
+      19.023,
+      -98.6223,
+      19.023
+    ]
+  },
+  {
+    "id": "volcano_st_helens",
+    "type": "mountain",
+    "name": "Mount St. Helens",
+    "geometryType": "point",
+    "labelPoint": [
+      -122.1944,
+      46.1912
+    ],
+    "difficulty": "medium",
+    "packIds": [
+      "world_volcanoes"
+    ],
+    "bbox": [
+      -122.1944,
+      46.1912,
+      -122.1944,
+      46.1912
+    ]
+  },
+  {
+    "id": "volcano_tambora",
+    "type": "mountain",
+    "name": "Mount Tambora",
+    "geometryType": "point",
+    "labelPoint": [
+      118,
+      -8.25
+    ],
+    "difficulty": "hard",
+    "packIds": [
+      "world_volcanoes"
+    ],
+    "bbox": [
+      118,
+      -8.25,
+      118,
+      -8.25
+    ]
+  },
+  {
+    "id": "volcano_vesuvius",
+    "type": "mountain",
+    "name": "Mount Vesuvius",
+    "geometryType": "point",
+    "labelPoint": [
+      14.4265,
+      40.8224
+    ],
+    "difficulty": "easy",
+    "hintTokens": [
+      "Near Naples, Italy"
+    ],
+    "facts": [
+      "Its eruption buried Pompeii in AD 79."
+    ],
+    "packIds": [
+      "world_volcanoes"
+    ],
+    "bbox": [
+      14.4265,
+      40.8224,
+      14.4265,
+      40.8224
+    ]
+  }
+]

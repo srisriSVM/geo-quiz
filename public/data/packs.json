@@ -29,6 +29,21 @@
     }
   },
   {
+    "id": "india_passes_plateaus_ghats",
+    "name": "India: Passes, Plateaus & Ghats",
+    "types": [
+      "mountain",
+      "plateau"
+    ],
+    "defaultViewport": {
+      "center": [
+        78.5,
+        22.8
+      ],
+      "zoom": 4.2
+    }
+  },
+  {
     "id": "india_rivers_mountains_landmarks",
     "name": "India: Rivers, Mountains & Landmarks",
     "types": [
@@ -241,6 +256,20 @@
         18
       ],
       "zoom": 1.5
+    }
+  },
+  {
+    "id": "world_earthquake_hotspots",
+    "name": "World: Earthquake Hotspots",
+    "types": [
+      "region"
+    ],
+    "defaultViewport": {
+      "center": [
+        20,
+        10
+      ],
+      "zoom": 1.7
     }
   },
   {
@@ -482,6 +511,48 @@
         20
       ],
       "zoom": 1.2
+    }
+  },
+  {
+    "id": "world_unesco_natural_sites",
+    "name": "World: UNESCO Natural Sites",
+    "types": [
+      "region"
+    ],
+    "defaultViewport": {
+      "center": [
+        15,
+        15
+      ],
+      "zoom": 1.7
+    }
+  },
+  {
+    "id": "world_volcanoes",
+    "name": "World: Volcanoes",
+    "types": [
+      "mountain"
+    ],
+    "defaultViewport": {
+      "center": [
+        20,
+        10
+      ],
+      "zoom": 1.8
+    }
+  },
+  {
+    "id": "world_waterfalls",
+    "name": "World: Waterfalls",
+    "types": [
+      "region"
+    ],
+    "defaultViewport": {
+      "center": [
+        15,
+        10
+      ],
+      "zoom": 1.8
     }
   }
 ]

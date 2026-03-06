@@ -245,7 +245,8 @@
       "Discontinuous range on east coast side"
     ],
     "packIds": [
-      "india_rivers_mountains_landmarks"
+      "india_rivers_mountains_landmarks",
+      "india_passes_plateaus_ghats"
     ],
     "bbox": [
       78.8,
@@ -417,7 +418,8 @@
       "Central India range north of Narmada"
     ],
     "packIds": [
-      "india_rivers_mountains_landmarks"
+      "india_rivers_mountains_landmarks",
+      "india_passes_plateaus_ghats"
     ],
     "bbox": [
       75,
@@ -469,7 +471,8 @@
       "Runs parallel to India west coast"
     ],
     "packIds": [
-      "india_rivers_mountains_landmarks"
+      "india_rivers_mountains_landmarks",
+      "india_passes_plateaus_ghats"
     ],
     "bbox": [
       72.8,

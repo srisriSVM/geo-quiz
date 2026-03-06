@@ -10422,6 +10422,174 @@
     ]
   },
   {
+    "id": "india_pass_bhor_ghat",
+    "type": "mountain",
+    "name": "Bhor Ghat",
+    "geometryType": "point",
+    "labelPoint": [
+      73.5,
+      18.8
+    ],
+    "difficulty": "medium",
+    "packIds": [
+      "india_passes_plateaus_ghats"
+    ]
+  },
+  {
+    "id": "india_pass_jelep_la",
+    "type": "mountain",
+    "name": "Jelep La Pass",
+    "geometryType": "point",
+    "labelPoint": [
+      88.82,
+      27.37
+    ],
+    "difficulty": "hard",
+    "packIds": [
+      "india_passes_plateaus_ghats"
+    ]
+  },
+  {
+    "id": "india_pass_nathu_la",
+    "type": "mountain",
+    "name": "Nathu La Pass",
+    "geometryType": "point",
+    "labelPoint": [
+      88.84,
+      27.39
+    ],
+    "difficulty": "easy",
+    "packIds": [
+      "india_passes_plateaus_ghats"
+    ]
+  },
+  {
+    "id": "india_pass_palghat_gap",
+    "type": "mountain",
+    "name": "Palghat Gap",
+    "geometryType": "point",
+    "labelPoint": [
+      76.7,
+      10.8
+    ],
+    "difficulty": "medium",
+    "packIds": [
+      "india_passes_plateaus_ghats"
+    ]
+  },
+  {
+    "id": "india_pass_rohtang",
+    "type": "mountain",
+    "name": "Rohtang Pass",
+    "geometryType": "point",
+    "labelPoint": [
+      77.25,
+      32.37
+    ],
+    "difficulty": "easy",
+    "packIds": [
+      "india_passes_plateaus_ghats"
+    ]
+  },
+  {
+    "id": "india_pass_shipki_la",
+    "type": "mountain",
+    "name": "Shipki La Pass",
+    "geometryType": "point",
+    "labelPoint": [
+      78.74,
+      31.83
+    ],
+    "difficulty": "hard",
+    "packIds": [
+      "india_passes_plateaus_ghats"
+    ]
+  },
+  {
+    "id": "india_pass_thal_ghat",
+    "type": "mountain",
+    "name": "Thal Ghat",
+    "geometryType": "point",
+    "labelPoint": [
+      73.7,
+      19.9
+    ],
+    "difficulty": "hard",
+    "packIds": [
+      "india_passes_plateaus_ghats"
+    ]
+  },
+  {
+    "id": "india_pass_zoji_la",
+    "type": "mountain",
+    "name": "Zoji La Pass",
+    "geometryType": "point",
+    "labelPoint": [
+      75.56,
+      34.28
+    ],
+    "difficulty": "medium",
+    "packIds": [
+      "india_passes_plateaus_ghats"
+    ]
+  },
+  {
+    "id": "india_plateau_chota_nagpur",
+    "type": "plateau",
+    "name": "Chota Nagpur Plateau",
+    "geometryType": "point",
+    "labelPoint": [
+      85,
+      23.5
+    ],
+    "difficulty": "medium",
+    "packIds": [
+      "india_passes_plateaus_ghats"
+    ]
+  },
+  {
+    "id": "india_plateau_deccan",
+    "type": "plateau",
+    "name": "Deccan Plateau",
+    "geometryType": "point",
+    "labelPoint": [
+      77,
+      16
+    ],
+    "difficulty": "easy",
+    "packIds": [
+      "india_passes_plateaus_ghats"
+    ]
+  },
+  {
+    "id": "india_plateau_malwa",
+    "type": "plateau",
+    "name": "Malwa Plateau",
+    "geometryType": "point",
+    "labelPoint": [
+      75.5,
+      23.5
+    ],
+    "difficulty": "medium",
+    "packIds": [
+      "india_passes_plateaus_ghats"
+    ]
+  },
+  {
+    "id": "india_plateau_meghalaya",
+    "type": "plateau",
+    "name": "Meghalaya Plateau",
+    "geometryType": "point",
+    "labelPoint": [
+      91.3,
+      25.6
+    ],
+    "difficulty": "hard",
+    "packIds": [
+      "india_passes_plateaus_ghats"
+    ]
+  },
+  {
     "id": "india_range_aravalli",
     "type": "mountain",
     "name": "Aravalli Range",
@@ -10490,7 +10658,8 @@
       "Discontinuous range on east coast side"
     ],
     "packIds": [
-      "india_rivers_mountains_landmarks"
+      "india_rivers_mountains_landmarks",
+      "india_passes_plateaus_ghats"
     ]
   },
   {
@@ -10638,7 +10807,8 @@
       "Central India range north of Narmada"
     ],
     "packIds": [
-      "india_rivers_mountains_landmarks"
+      "india_rivers_mountains_landmarks",
+      "india_passes_plateaus_ghats"
     ]
   },
   {
@@ -10684,7 +10854,8 @@
       "Runs parallel to India west coast"
     ],
     "packIds": [
-      "india_rivers_mountains_landmarks"
+      "india_rivers_mountains_landmarks",
+      "india_passes_plateaus_ghats"
     ]
   },
   {
@@ -13725,6 +13896,146 @@
     ],
     "packIds": [
       "world_timezones_prime_meridian"
+    ]
+  },
+  {
+    "id": "quake_aleutian",
+    "type": "region",
+    "name": "Aleutian Seismic Arc",
+    "geometryType": "point",
+    "labelPoint": [
+      -171,
+      52
+    ],
+    "difficulty": "hard",
+    "packIds": [
+      "world_earthquake_hotspots"
+    ]
+  },
+  {
+    "id": "quake_anatolian",
+    "type": "region",
+    "name": "North Anatolian Fault",
+    "geometryType": "point",
+    "labelPoint": [
+      35,
+      40.8
+    ],
+    "difficulty": "medium",
+    "packIds": [
+      "world_earthquake_hotspots"
+    ]
+  },
+  {
+    "id": "quake_chile_peru",
+    "type": "region",
+    "name": "Peru-Chile Trench Zone",
+    "geometryType": "point",
+    "labelPoint": [
+      -72,
+      -28
+    ],
+    "difficulty": "medium",
+    "packIds": [
+      "world_earthquake_hotspots"
+    ]
+  },
+  {
+    "id": "quake_himalayan_arc",
+    "type": "region",
+    "name": "Himalayan Seismic Arc",
+    "geometryType": "point",
+    "labelPoint": [
+      84,
+      28
+    ],
+    "difficulty": "easy",
+    "packIds": [
+      "world_earthquake_hotspots"
+    ]
+  },
+  {
+    "id": "quake_iran_belt",
+    "type": "region",
+    "name": "Iran Seismic Belt",
+    "geometryType": "point",
+    "labelPoint": [
+      55,
+      30
+    ],
+    "difficulty": "hard",
+    "packIds": [
+      "world_earthquake_hotspots"
+    ]
+  },
+  {
+    "id": "quake_japan_trench",
+    "type": "region",
+    "name": "Japan Trench Seismic Zone",
+    "geometryType": "point",
+    "labelPoint": [
+      142.5,
+      38.5
+    ],
+    "difficulty": "easy",
+    "packIds": [
+      "world_earthquake_hotspots"
+    ]
+  },
+  {
+    "id": "quake_mediterranean",
+    "type": "region",
+    "name": "Mediterranean Seismic Belt",
+    "geometryType": "point",
+    "labelPoint": [
+      24,
+      37.5
+    ],
+    "difficulty": "hard",
+    "packIds": [
+      "world_earthquake_hotspots"
+    ]
+  },
+  {
+    "id": "quake_nz_alpine",
+    "type": "region",
+    "name": "New Zealand Alpine Fault",
+    "geometryType": "point",
+    "labelPoint": [
+      169.8,
+      -43.6
+    ],
+    "difficulty": "hard",
+    "packIds": [
+      "world_earthquake_hotspots"
+    ]
+  },
+  {
+    "id": "quake_san_andreas",
+    "type": "region",
+    "name": "San Andreas Fault Zone",
+    "geometryType": "point",
+    "labelPoint": [
+      -120.4,
+      35.4
+    ],
+    "difficulty": "easy",
+    "packIds": [
+      "world_earthquake_hotspots"
+    ]
+  },
+  {
+    "id": "quake_sumatra_andaman",
+    "type": "region",
+    "name": "Sumatra-Andaman Subduction Zone",
+    "geometryType": "point",
+    "labelPoint": [
+      94.5,
+      5.5
+    ],
+    "difficulty": "medium",
+    "packIds": [
+      "world_earthquake_hotspots"
     ]
   },
   {
@@ -17191,6 +17502,174 @@
     ]
   },
   {
+    "id": "unesco_everglades",
+    "type": "region",
+    "name": "Everglades National Park",
+    "geometryType": "point",
+    "labelPoint": [
+      -80.93,
+      25.32
+    ],
+    "difficulty": "hard",
+    "packIds": [
+      "world_unesco_natural_sites"
+    ]
+  },
+  {
+    "id": "unesco_galapagos",
+    "type": "region",
+    "name": "Galápagos Islands",
+    "geometryType": "point",
+    "labelPoint": [
+      -90.5,
+      -0.9
+    ],
+    "difficulty": "easy",
+    "packIds": [
+      "world_unesco_natural_sites"
+    ]
+  },
+  {
+    "id": "unesco_grand_canyon",
+    "type": "region",
+    "name": "Grand Canyon National Park",
+    "geometryType": "point",
+    "labelPoint": [
+      -112.14,
+      36.054
+    ],
+    "difficulty": "medium",
+    "packIds": [
+      "world_unesco_natural_sites"
+    ]
+  },
+  {
+    "id": "unesco_great_barrier_reef",
+    "type": "region",
+    "name": "Great Barrier Reef",
+    "geometryType": "point",
+    "labelPoint": [
+      147,
+      -18
+    ],
+    "difficulty": "easy",
+    "packIds": [
+      "world_unesco_natural_sites"
+    ]
+  },
+  {
+    "id": "unesco_ha_long_bay",
+    "type": "region",
+    "name": "Ha Long Bay",
+    "geometryType": "point",
+    "labelPoint": [
+      107.05,
+      20.9
+    ],
+    "difficulty": "medium",
+    "packIds": [
+      "world_unesco_natural_sites"
+    ]
+  },
+  {
+    "id": "unesco_kaziranga",
+    "type": "region",
+    "name": "Kaziranga National Park",
+    "geometryType": "point",
+    "labelPoint": [
+      93.36,
+      26.58
+    ],
+    "difficulty": "hard",
+    "packIds": [
+      "world_unesco_natural_sites"
+    ]
+  },
+  {
+    "id": "unesco_komodo",
+    "type": "region",
+    "name": "Komodo National Park",
+    "geometryType": "point",
+    "labelPoint": [
+      119.5,
+      -8.6
+    ],
+    "difficulty": "hard",
+    "packIds": [
+      "world_unesco_natural_sites"
+    ]
+  },
+  {
+    "id": "unesco_lake_baikal",
+    "type": "region",
+    "name": "Lake Baikal",
+    "geometryType": "point",
+    "labelPoint": [
+      108,
+      53.5
+    ],
+    "difficulty": "hard",
+    "packIds": [
+      "world_unesco_natural_sites"
+    ]
+  },
+  {
+    "id": "unesco_sagarmatha",
+    "type": "region",
+    "name": "Sagarmatha National Park",
+    "geometryType": "point",
+    "labelPoint": [
+      86.73,
+      27.94
+    ],
+    "difficulty": "hard",
+    "packIds": [
+      "world_unesco_natural_sites"
+    ]
+  },
+  {
+    "id": "unesco_serengeti",
+    "type": "region",
+    "name": "Serengeti National Park",
+    "geometryType": "point",
+    "labelPoint": [
+      34.8,
+      -2.3
+    ],
+    "difficulty": "medium",
+    "packIds": [
+      "world_unesco_natural_sites"
+    ]
+  },
+  {
+    "id": "unesco_sundarbans",
+    "type": "region",
+    "name": "Sundarbans National Park",
+    "geometryType": "point",
+    "labelPoint": [
+      88.9,
+      21.95
+    ],
+    "difficulty": "medium",
+    "packIds": [
+      "world_unesco_natural_sites"
+    ]
+  },
+  {
+    "id": "unesco_yellowstone",
+    "type": "region",
+    "name": "Yellowstone National Park",
+    "geometryType": "point",
+    "labelPoint": [
+      -110.588,
+      44.428
+    ],
+    "difficulty": "medium",
+    "packIds": [
+      "world_unesco_natural_sites"
+    ]
+  },
+  {
     "id": "us_capital_alaska",
     "type": "capital",
     "name": "Juneau",
@@ -19066,6 +19545,361 @@
     ],
     "packIds": [
       "us_rivers_lakes"
+    ]
+  },
+  {
+    "id": "volcano_cotopaxi",
+    "type": "mountain",
+    "name": "Cotopaxi",
+    "geometryType": "point",
+    "labelPoint": [
+      -78.436,
+      -0.68
+    ],
+    "difficulty": "medium",
+    "packIds": [
+      "world_volcanoes"
+    ]
+  },
+  {
+    "id": "volcano_etna",
+    "type": "mountain",
+    "name": "Mount Etna",
+    "geometryType": "point",
+    "labelPoint": [
+      15.004,
+      37.751
+    ],
+    "difficulty": "easy",
+    "packIds": [
+      "world_volcanoes"
+    ]
+  },
+  {
+    "id": "volcano_eyjafjallajokull",
+    "type": "mountain",
+    "name": "Eyjafjallajökull",
+    "geometryType": "point",
+    "labelPoint": [
+      -19.613,
+      63.633
+    ],
+    "difficulty": "hard",
+    "packIds": [
+      "world_volcanoes"
+    ]
+  },
+  {
+    "id": "volcano_fuji",
+    "type": "mountain",
+    "name": "Mount Fuji",
+    "geometryType": "point",
+    "labelPoint": [
+      138.7274,
+      35.3606
+    ],
+    "difficulty": "easy",
+    "hintTokens": [
+      "Iconic stratovolcano in Japan"
+    ],
+    "learningObjective": "Identify key volcanoes along major plate boundaries.",
+    "facts": [
+      "Japan's highest peak and famous active volcano."
+    ],
+    "packIds": [
+      "world_volcanoes"
+    ]
+  },
+  {
+    "id": "volcano_kilauea",
+    "type": "mountain",
+    "name": "Kilauea",
+    "geometryType": "point",
+    "labelPoint": [
+      -155.292,
+      19.421
+    ],
+    "difficulty": "medium",
+    "packIds": [
+      "world_volcanoes"
+    ]
+  },
+  {
+    "id": "volcano_krakatoa",
+    "type": "mountain",
+    "name": "Krakatoa",
+    "geometryType": "point",
+    "labelPoint": [
+      105.423,
+      -6.102
+    ],
+    "difficulty": "medium",
+    "facts": [
+      "One of the most famous explosive eruptions in history (1883)."
+    ],
+    "packIds": [
+      "world_volcanoes"
+    ]
+  },
+  {
+    "id": "volcano_mauna_loa",
+    "type": "mountain",
+    "name": "Mauna Loa",
+    "geometryType": "point",
+    "labelPoint": [
+      -155.608,
+      19.475
+    ],
+    "difficulty": "medium",
+    "packIds": [
+      "world_volcanoes"
+    ]
+  },
+  {
+    "id": "volcano_merapi",
+    "type": "mountain",
+    "name": "Mount Merapi",
+    "geometryType": "point",
+    "labelPoint": [
+      110.446,
+      -7.54
+    ],
+    "difficulty": "hard",
+    "packIds": [
+      "world_volcanoes"
+    ]
+  },
+  {
+    "id": "volcano_nyiragongo",
+    "type": "mountain",
+    "name": "Mount Nyiragongo",
+    "geometryType": "point",
+    "labelPoint": [
+      29.249,
+      -1.52
+    ],
+    "difficulty": "hard",
+    "packIds": [
+      "world_volcanoes"
+    ]
+  },
+  {
+    "id": "volcano_pinatubo",
+    "type": "mountain",
+    "name": "Mount Pinatubo",
+    "geometryType": "point",
+    "labelPoint": [
+      120.349,
+      15.142
+    ],
+    "difficulty": "hard",
+    "packIds": [
+      "world_volcanoes"
+    ]
+  },
+  {
+    "id": "volcano_popocatepetl",
+    "type": "mountain",
+    "name": "Popocatépetl",
+    "geometryType": "point",
+    "labelPoint": [
+      -98.6223,
+      19.023
+    ],
+    "difficulty": "medium",
+    "packIds": [
+      "world_volcanoes"
+    ]
+  },
+  {
+    "id": "volcano_st_helens",
+    "type": "mountain",
+    "name": "Mount St. Helens",
+    "geometryType": "point",
+    "labelPoint": [
+      -122.1944,
+      46.1912
+    ],
+    "difficulty": "medium",
+    "packIds": [
+      "world_volcanoes"
+    ]
+  },
+  {
+    "id": "volcano_tambora",
+    "type": "mountain",
+    "name": "Mount Tambora",
+    "geometryType": "point",
+    "labelPoint": [
+      118,
+      -8.25
+    ],
+    "difficulty": "hard",
+    "packIds": [
+      "world_volcanoes"
+    ]
+  },
+  {
+    "id": "volcano_vesuvius",
+    "type": "mountain",
+    "name": "Mount Vesuvius",
+    "geometryType": "point",
+    "labelPoint": [
+      14.4265,
+      40.8224
+    ],
+    "difficulty": "easy",
+    "hintTokens": [
+      "Near Naples, Italy"
+    ],
+    "facts": [
+      "Its eruption buried Pompeii in AD 79."
+    ],
+    "packIds": [
+      "world_volcanoes"
+    ]
+  },
+  {
+    "id": "waterfall_angel",
+    "type": "region",
+    "name": "Angel Falls",
+    "geometryType": "point",
+    "labelPoint": [
+      -62.536,
+      5.967
+    ],
+    "difficulty": "medium",
+    "packIds": [
+      "world_waterfalls"
+    ]
+  },
+  {
+    "id": "waterfall_dettifoss",
+    "type": "region",
+    "name": "Dettifoss",
+    "geometryType": "point",
+    "labelPoint": [
+      -16.384,
+      65.814
+    ],
+    "difficulty": "hard",
+    "packIds": [
+      "world_waterfalls"
+    ]
+  },
+  {
+    "id": "waterfall_gullfoss",
+    "type": "region",
+    "name": "Gullfoss",
+    "geometryType": "point",
+    "labelPoint": [
+      -20.121,
+      64.327
+    ],
+    "difficulty": "hard",
+    "packIds": [
+      "world_waterfalls"
+    ]
+  },
+  {
+    "id": "waterfall_iguazu",
+    "type": "region",
+    "name": "Iguazu Falls",
+    "geometryType": "point",
+    "labelPoint": [
+      -54.438,
+      -25.695
+    ],
+    "difficulty": "easy",
+    "packIds": [
+      "world_waterfalls"
+    ]
+  },
+  {
+    "id": "waterfall_jog",
+    "type": "region",
+    "name": "Jog Falls",
+    "geometryType": "point",
+    "labelPoint": [
+      74.815,
+      14.23
+    ],
+    "difficulty": "medium",
+    "packIds": [
+      "world_waterfalls"
+    ]
+  },
+  {
+    "id": "waterfall_kaieteur",
+    "type": "region",
+    "name": "Kaieteur Falls",
+    "geometryType": "point",
+    "labelPoint": [
+      -59.484,
+      5.173
+    ],
+    "difficulty": "hard",
+    "packIds": [
+      "world_waterfalls"
+    ]
+  },
+  {
+    "id": "waterfall_niagara",
+    "type": "region",
+    "name": "Niagara Falls",
+    "geometryType": "point",
+    "labelPoint": [
+      -79.074,
+      43.089
+    ],
+    "difficulty": "easy",
+    "hintTokens": [
+      "On US-Canada border"
+    ],
+    "packIds": [
+      "world_waterfalls"
+    ]
+  },
+  {
+    "id": "waterfall_sutherland",
+    "type": "region",
+    "name": "Sutherland Falls",
+    "geometryType": "point",
+    "labelPoint": [
+      167.676,
+      -44.813
+    ],
+    "difficulty": "hard",
+    "packIds": [
+      "world_waterfalls"
+    ]
+  },
+  {
+    "id": "waterfall_victoria",
+    "type": "region",
+    "name": "Victoria Falls",
+    "geometryType": "point",
+    "labelPoint": [
+      25.857,
+      -17.924
+    ],
+    "difficulty": "easy",
+    "packIds": [
+      "world_waterfalls"
+    ]
+  },
+  {
+    "id": "waterfall_yosemite",
+    "type": "region",
+    "name": "Yosemite Falls",
+    "geometryType": "point",
+    "labelPoint": [
+      -119.596,
+      37.756
+    ],
+    "difficulty": "medium",
+    "packIds": [
+      "world_waterfalls"
     ]
   },
   {

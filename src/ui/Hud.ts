@@ -25,6 +25,7 @@ type HudActions = {
   onHint: () => void;
   onReveal: () => void;
   onNext: () => void;
+  onEntitySearch: (query: string) => void;
 };
 
 type HudStats = {
@@ -47,6 +48,9 @@ export class Hud {
   private readonly difficultyMediumCheckbox: HTMLInputElement;
   private readonly difficultyHardCheckbox: HTMLInputElement;
   private readonly difficultyAllButton: HTMLButtonElement;
+  private readonly entitySearchInput: HTMLInputElement;
+  private readonly entitySearchButton: HTMLButtonElement;
+  private readonly entitySearchDatalist: HTMLDataListElement;
   private readonly summaryEl: HTMLElement;
   private readonly hintButton: HTMLButtonElement;
   private readonly revealButton: HTMLButtonElement;
@@ -93,6 +97,14 @@ export class Hud {
         <label>
           Pack
           <select aria-label="Pack" data-role="pack"></select>
+        </label>
+        <label>
+          Search Entity
+          <div class="hud-search-row">
+            <input type="text" data-role="entity-search" list="entity-search-list" placeholder="Type a name..." />
+            <button type="button" data-role="entity-search-go">Go</button>
+          </div>
+          <datalist id="entity-search-list" data-role="entity-search-list"></datalist>
         </label>
         <label>
           Quiz Type
@@ -144,6 +156,9 @@ export class Hud {
     this.difficultyMediumCheckbox = this.query<HTMLInputElement>("[data-role='difficulty-medium']");
     this.difficultyHardCheckbox = this.query<HTMLInputElement>("[data-role='difficulty-hard']");
     this.difficultyAllButton = this.query<HTMLButtonElement>("[data-role='difficulty-all']");
+    this.entitySearchInput = this.query<HTMLInputElement>("[data-role='entity-search']");
+    this.entitySearchButton = this.query<HTMLButtonElement>("[data-role='entity-search-go']");
+    this.entitySearchDatalist = this.query<HTMLDataListElement>("[data-role='entity-search-list']");
     this.summaryEl = this.query<HTMLElement>("[data-role='summary']");
     this.hintButton = this.query<HTMLButtonElement>("[data-role='hint']");
     this.revealButton = this.query<HTMLButtonElement>("[data-role='reveal']");
@@ -199,6 +214,16 @@ export class Hud {
     });
     this.settingsToggleButton.addEventListener("click", () => this.setSettingsPanelOpen(true));
     this.settingsCloseButton.addEventListener("click", () => this.setSettingsPanelOpen(false));
+    this.entitySearchButton.addEventListener("click", () => {
+      actions.onEntitySearch(this.entitySearchInput.value.trim());
+    });
+    this.entitySearchInput.addEventListener("keydown", (event) => {
+      if (event.key !== "Enter") {
+        return;
+      }
+      event.preventDefault();
+      actions.onEntitySearch(this.entitySearchInput.value.trim());
+    });
 
     this.hintButton.addEventListener("click", actions.onHint);
     this.revealButton.addEventListener("click", actions.onReveal);
@@ -340,6 +365,25 @@ export class Hud {
     this.difficultyEasyCheckbox.checked = difficulties.includes("easy");
     this.difficultyMediumCheckbox.checked = difficulties.includes("medium");
     this.difficultyHardCheckbox.checked = difficulties.includes("hard");
+  }
+
+  setEntitySearchOptions(items: string[]): void {
+    this.entitySearchDatalist.innerHTML = "";
+    const seen = new Set<string>();
+    for (const item of items) {
+      const value = item.trim();
+      if (!value || seen.has(value)) {
+        continue;
+      }
+      seen.add(value);
+      const option = document.createElement("option");
+      option.value = value;
+      this.entitySearchDatalist.append(option);
+    }
+  }
+
+  clearEntitySearch(): void {
+    this.entitySearchInput.value = "";
   }
 
   setStats(stats: HudStats): void {

@@ -1,0 +1,242 @@
+[
+  {
+    "id": "unesco_everglades",
+    "type": "region",
+    "name": "Everglades National Park",
+    "geometryType": "point",
+    "labelPoint": [
+      -80.93,
+      25.32
+    ],
+    "difficulty": "hard",
+    "packIds": [
+      "world_unesco_natural_sites"
+    ],
+    "bbox": [
+      -80.93,
+      25.32,
+      -80.93,
+      25.32
+    ]
+  },
+  {
+    "id": "unesco_galapagos",
+    "type": "region",
+    "name": "Galápagos Islands",
+    "geometryType": "point",
+    "labelPoint": [
+      -90.5,
+      -0.9
+    ],
+    "difficulty": "easy",
+    "packIds": [
+      "world_unesco_natural_sites"
+    ],
+    "bbox": [
+      -90.5,
+      -0.9,
+      -90.5,
+      -0.9
+    ]
+  },
+  {
+    "id": "unesco_grand_canyon",
+    "type": "region",
+    "name": "Grand Canyon National Park",
+    "geometryType": "point",
+    "labelPoint": [
+      -112.14,
+      36.054
+    ],
+    "difficulty": "medium",
+    "packIds": [
+      "world_unesco_natural_sites"
+    ],
+    "bbox": [
+      -112.14,
+      36.054,
+      -112.14,
+      36.054
+    ]
+  },
+  {
+    "id": "unesco_great_barrier_reef",
+    "type": "region",
+    "name": "Great Barrier Reef",
+    "geometryType": "point",
+    "labelPoint": [
+      147,
+      -18
+    ],
+    "difficulty": "easy",
+    "packIds": [
+      "world_unesco_natural_sites"
+    ],
+    "bbox": [
+      147,
+      -18,
+      147,
+      -18
+    ]
+  },
+  {
+    "id": "unesco_ha_long_bay",
+    "type": "region",
+    "name": "Ha Long Bay",
+    "geometryType": "point",
+    "labelPoint": [
+      107.05,
+      20.9
+    ],
+    "difficulty": "medium",
+    "packIds": [
+      "world_unesco_natural_sites"
+    ],
+    "bbox": [
+      107.05,
+      20.9,
+      107.05,
+      20.9
+    ]
+  },
+  {
+    "id": "unesco_kaziranga",
+    "type": "region",
+    "name": "Kaziranga National Park",
+    "geometryType": "point",
+    "labelPoint": [
+      93.36,
+      26.58
+    ],
+    "difficulty": "hard",
+    "packIds": [
+      "world_unesco_natural_sites"
+    ],
+    "bbox": [
+      93.36,
+      26.58,
+      93.36,
+      26.58
+    ]
+  },
+  {
+    "id": "unesco_komodo",
+    "type": "region",
+    "name": "Komodo National Park",
+    "geometryType": "point",
+    "labelPoint": [
+      119.5,
+      -8.6
+    ],
+    "difficulty": "hard",
+    "packIds": [
+      "world_unesco_natural_sites"
+    ],
+    "bbox": [
+      119.5,
+      -8.6,
+      119.5,
+      -8.6
+    ]
+  },
+  {
+    "id": "unesco_lake_baikal",
+    "type": "region",
+    "name": "Lake Baikal",
+    "geometryType": "point",
+    "labelPoint": [
+      108,
+      53.5
+    ],
+    "difficulty": "hard",
+    "packIds": [
+      "world_unesco_natural_sites"
+    ],
+    "bbox": [
+      108,
+      53.5,
+      108,
+      53.5
+    ]
+  },
+  {
+    "id": "unesco_sagarmatha",
+    "type": "region",
+    "name": "Sagarmatha National Park",
+    "geometryType": "point",
+    "labelPoint": [
+      86.73,
+      27.94
+    ],
+    "difficulty": "hard",
+    "packIds": [
+      "world_unesco_natural_sites"
+    ],
+    "bbox": [
+      86.73,
+      27.94,
+      86.73,
+      27.94
+    ]
+  },
+  {
+    "id": "unesco_serengeti",
+    "type": "region",
+    "name": "Serengeti National Park",
+    "geometryType": "point",
+    "labelPoint": [
+      34.8,
+      -2.3
+    ],
+    "difficulty": "medium",
+    "packIds": [
+      "world_unesco_natural_sites"
+    ],
+    "bbox": [
+      34.8,
+      -2.3,
+      34.8,
+      -2.3
+    ]
+  },
+  {
+    "id": "unesco_sundarbans",
+    "type": "region",
+    "name": "Sundarbans National Park",
+    "geometryType": "point",
+    "labelPoint": [
+      88.9,
+      21.95
+    ],
+    "difficulty": "medium",
+    "packIds": [
+      "world_unesco_natural_sites"
+    ],
+    "bbox": [
+      88.9,
+      21.95,
+      88.9,
+      21.95
+    ]
+  },
+  {
+    "id": "unesco_yellowstone",
+    "type": "region",
+    "name": "Yellowstone National Park",
+    "geometryType": "point",
+    "labelPoint": [
+      -110.588,
+      44.428
+    ],
+    "difficulty": "medium",
+    "packIds": [
+      "world_unesco_natural_sites"
+    ],
+    "bbox": [
+      -110.588,
+      44.428,
+      -110.588,
+      44.428
+    ]
+  }
+]

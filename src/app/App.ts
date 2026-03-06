@@ -1,5 +1,6 @@
 import { loadPackEntities, loadPacks } from "../data/dataLoader";
 import type { Difficulty, Entity, Pack } from "../data/types";
+import { enrichEntity } from "../data/entityEnrichment";
 import { normalizeText } from "../utils/normalize";
 import { MapView } from "../map/MapView";
 import { Hud } from "../ui/Hud";
@@ -52,6 +53,7 @@ export class App {
   private currentEntity: Entity | null = null;
   private hintLength = 2;
   private hintTokenIndex = 0;
+  private learnEnrichmentToken = 0;
 
   private score = 0;
   private streak = 0;
@@ -138,7 +140,8 @@ export class App {
       },
       onHint: () => this.handleHint(),
       onReveal: () => this.handleReveal(),
-      onNext: () => void this.startRound()
+      onNext: () => void this.startRound(),
+      onEntitySearch: (query) => this.handleEntitySearch(query)
     });
 
     this.panel = new QuizPanel({
@@ -200,6 +203,9 @@ export class App {
     }
 
     const items = this.activePackEntities;
+    this.hud.setEntitySearchOptions(
+      items.flatMap((entity) => [entity.name, ...(entity.aliases ?? [])])
+    );
     this.mapView.setEntities(items);
     this.mapView.setMode(this.mode);
     this.mapView.setMasteryById(this.buildMasteryMap(items));
@@ -231,7 +237,7 @@ export class App {
       this.panel.setFeedbackVisible(false);
       this.panel.setAnswerVisible(false);
       this.panel.setLearnActionsVisible(true);
-      this.panel.setLearnEntityInfo(this.currentEntity);
+      this.showLearnEntityInfo(this.currentEntity);
       this.panel.setChoicesVisible(false);
       this.panel.setChoices([]);
       this.panel.setAnswerEnabled(false);
@@ -387,7 +393,7 @@ export class App {
     this.panel.setLearnTargetTitle(this.learnTargetTitle(selected));
     this.panel.setPromptVisible(false);
     this.panel.setFeedbackVisible(false);
-    this.panel.setLearnEntityInfo(selected);
+    this.showLearnEntityInfo(selected);
   }
 
   private handleHint(): void {
@@ -591,6 +597,88 @@ export class App {
     this.mapView?.setMasteryById(this.buildMasteryMap(this.activePackEntities));
     this.panel?.setFeedback("Progress reset. Everything is back to not learned.");
     void this.startRound();
+  }
+
+  private handleEntitySearch(query: string): void {
+    if (!query || !this.mapView || !this.panel || !this.hud) {
+      return;
+    }
+    const needle = normalizeText(query);
+    const match = this.activePackEntities.find((entity) => {
+      if (normalizeText(entity.name).includes(needle)) {
+        return true;
+      }
+      return (entity.aliases ?? []).some((alias) => normalizeText(alias).includes(needle));
+    });
+
+    if (!match) {
+      this.panel.setFeedback(`No match found for "${query}" in this pack.`);
+      return;
+    }
+
+    this.hud.clearEntitySearch();
+
+    if (this.mode !== "learn") {
+      this.panel.setFeedback(`Found ${match.name}. Switch to Learn mode to jump directly.`);
+      return;
+    }
+
+    this.currentEntity = match;
+    this.hintLength = 2;
+    this.hintTokenIndex = 0;
+    this.mapView.setHighlightedEntity(match.id);
+    this.mapView.focusEntity(match);
+    this.panel.setHeading("Learn Mode");
+    this.panel.setHeadingVisible(false);
+    this.panel.setLearnTargetTitle(this.learnTargetTitle(match));
+    this.panel.setPromptVisible(false);
+    this.panel.setFeedbackVisible(false);
+    this.showLearnEntityInfo(match);
+  }
+
+  private showLearnEntityInfo(entity: Entity): void {
+    if (!this.panel) {
+      return;
+    }
+    const token = ++this.learnEnrichmentToken;
+    this.panel.setLearnEntityInfo(entity);
+    void enrichEntity(entity).then((extra) => {
+      if (!this.panel || token !== this.learnEnrichmentToken) {
+        return;
+      }
+      if (this.mode !== "learn" || this.currentEntity?.id !== entity.id) {
+        return;
+      }
+      this.panel.setLearnEntityInfo(this.mergeEntityWithEnrichment(entity, extra));
+    });
+  }
+
+  private mergeEntityWithEnrichment(
+    entity: Entity,
+    extra: Partial<Pick<Entity, "facts" | "didYouKnow" | "learningObjective" | "factCards" | "media">>
+  ): Entity {
+    const dedupe = (values: string[]): string[] => {
+      const seen = new Set<string>();
+      const out: string[] = [];
+      for (const value of values) {
+        const key = normalizeText(value);
+        if (!key || seen.has(key)) {
+          continue;
+        }
+        seen.add(key);
+        out.push(value);
+      }
+      return out;
+    };
+
+    return {
+      ...entity,
+      facts: dedupe([...(entity.facts ?? []), ...(extra.facts ?? [])]).slice(0, 4),
+      didYouKnow: entity.didYouKnow ?? extra.didYouKnow,
+      learningObjective: entity.learningObjective ?? extra.learningObjective,
+      factCards: [...(entity.factCards ?? []), ...(extra.factCards ?? [])].slice(0, 6),
+      media: entity.media ?? extra.media
+    };
   }
 
   private async ensurePackEntitiesLoaded(packId: string): Promise<void> {
