@@ -45,6 +45,23 @@
       "river"
     ],
     "learningObjective": "Locate the west-to-east path across northern South America.",
+    "factCards": [
+      {
+        "title": "Length",
+        "value": "~6,400 km",
+        "icon": "river"
+      },
+      {
+        "title": "Discharge",
+        "value": "Largest river discharge on Earth",
+        "icon": "globe"
+      },
+      {
+        "title": "Region",
+        "value": "Northern South America",
+        "icon": "globe"
+      }
+    ],
     "bbox": [
       -73.99,
       -4.2,
@@ -350,6 +367,23 @@
       "river"
     ],
     "learningObjective": "Trace the river from East Africa to Egypt.",
+    "factCards": [
+      {
+        "title": "Length",
+        "value": "~6,650 km",
+        "icon": "river"
+      },
+      {
+        "title": "Flows Into",
+        "value": "Mediterranean Sea",
+        "icon": "globe"
+      },
+      {
+        "title": "Notable Country",
+        "value": "Egypt",
+        "icon": "city"
+      }
+    ],
     "bbox": [
       31.2,
       3,

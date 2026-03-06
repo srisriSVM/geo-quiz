@@ -238,7 +238,24 @@
       "europe",
       "country"
     ],
-    "learningObjective": "Notice France on the Atlantic side of Western Europe."
+    "learningObjective": "Notice France on the Atlantic side of Western Europe.",
+    "factCards": [
+      {
+        "title": "Capital",
+        "value": "Paris",
+        "icon": "city"
+      },
+      {
+        "title": "Population",
+        "value": "~67M",
+        "icon": "people"
+      },
+      {
+        "title": "Highest Mountain",
+        "value": "Mont Blanc",
+        "icon": "mountain"
+      }
+    ]
   },
   {
     "id": "country_georgia",
@@ -283,7 +300,24 @@
       "europe",
       "country"
     ],
-    "learningObjective": "Find Germany between France and Poland."
+    "learningObjective": "Find Germany between France and Poland.",
+    "factCards": [
+      {
+        "title": "Capital",
+        "value": "Berlin",
+        "icon": "city"
+      },
+      {
+        "title": "Population",
+        "value": "~84M",
+        "icon": "people"
+      },
+      {
+        "title": "Major River",
+        "value": "Rhine",
+        "icon": "river"
+      }
+    ]
   },
   {
     "id": "country_greece",
@@ -1021,7 +1055,24 @@
       "asia",
       "mountain"
     ],
-    "learningObjective": "Spot Everest in the Himalaya region north of India."
+    "learningObjective": "Spot Everest in the Himalaya region north of India.",
+    "factCards": [
+      {
+        "title": "Elevation",
+        "value": "8,848.86 m",
+        "icon": "mountain"
+      },
+      {
+        "title": "Range",
+        "value": "Himalayas",
+        "icon": "mountain"
+      },
+      {
+        "title": "Border",
+        "value": "Nepal - Tibet",
+        "icon": "globe"
+      }
+    ]
   },
   {
     "id": "mountain_k2",
@@ -1051,7 +1102,24 @@
       "asia",
       "mountain"
     ],
-    "learningObjective": "Differentiate K2 from Everest in South-Central Asia."
+    "learningObjective": "Differentiate K2 from Everest in South-Central Asia.",
+    "factCards": [
+      {
+        "title": "Elevation",
+        "value": "8,611 m",
+        "icon": "mountain"
+      },
+      {
+        "title": "Range",
+        "value": "Karakoram",
+        "icon": "mountain"
+      },
+      {
+        "title": "Climbing",
+        "value": "One of the hardest 8000m peaks",
+        "icon": "calendar"
+      }
+    ]
   },
   {
     "id": "mountain_kilimanjaro",
@@ -1228,7 +1296,24 @@
       "africa",
       "river"
     ],
-    "learningObjective": "Trace the river from East Africa to Egypt."
+    "learningObjective": "Trace the river from East Africa to Egypt.",
+    "factCards": [
+      {
+        "title": "Length",
+        "value": "~6,650 km",
+        "icon": "river"
+      },
+      {
+        "title": "Flows Into",
+        "value": "Mediterranean Sea",
+        "icon": "globe"
+      },
+      {
+        "title": "Notable Country",
+        "value": "Egypt",
+        "icon": "city"
+      }
+    ]
   },
   {
     "id": "river_amazon",
@@ -1275,7 +1360,24 @@
       "south-america",
       "river"
     ],
-    "learningObjective": "Locate the west-to-east path across northern South America."
+    "learningObjective": "Locate the west-to-east path across northern South America.",
+    "factCards": [
+      {
+        "title": "Length",
+        "value": "~6,400 km",
+        "icon": "river"
+      },
+      {
+        "title": "Discharge",
+        "value": "Largest river discharge on Earth",
+        "icon": "globe"
+      },
+      {
+        "title": "Region",
+        "value": "Northern South America",
+        "icon": "globe"
+      }
+    ]
   },
   {
     "id": "river_mississippi",
@@ -1672,7 +1774,24 @@
       "usa",
       "state"
     ],
-    "learningObjective": "Find the long west-coast state on the Pacific."
+    "learningObjective": "Find the long west-coast state on the Pacific.",
+    "factCards": [
+      {
+        "title": "Capital",
+        "value": "Sacramento",
+        "icon": "city"
+      },
+      {
+        "title": "Population",
+        "value": "~39M",
+        "icon": "people"
+      },
+      {
+        "title": "Highest Peak",
+        "value": "Mount Whitney",
+        "icon": "mountain"
+      }
+    ]
   },
   {
     "id": "state_colorado",
@@ -2297,7 +2416,24 @@
       "usa",
       "state"
     ],
-    "learningObjective": "Identify the large state above northeastern Mexico."
+    "learningObjective": "Identify the large state above northeastern Mexico.",
+    "factCards": [
+      {
+        "title": "Capital",
+        "value": "Austin",
+        "icon": "city"
+      },
+      {
+        "title": "Population",
+        "value": "~30M",
+        "icon": "people"
+      },
+      {
+        "title": "Largest City",
+        "value": "Houston",
+        "icon": "city"
+      }
+    ]
   },
   {
     "id": "state_utah",
@@ -2476,7 +2612,24 @@
       "south-america",
       "mountain-range"
     ],
-    "learningObjective": "Follow the north-south chain along western South America."
+    "learningObjective": "Follow the north-south chain along western South America.",
+    "factCards": [
+      {
+        "title": "Length",
+        "value": "~7,000 km",
+        "icon": "mountain"
+      },
+      {
+        "title": "Countries",
+        "value": "Venezuela to Chile/Argentina",
+        "icon": "globe"
+      },
+      {
+        "title": "Highest Peak",
+        "value": "Aconcagua",
+        "icon": "mountain"
+      }
+    ]
   },
   {
     "id": "range_rocky_mountains",
@@ -2589,7 +2742,24 @@
       "asia",
       "mountain-range"
     ],
-    "learningObjective": "Trace the long arc along northern India."
+    "learningObjective": "Trace the long arc along northern India.",
+    "factCards": [
+      {
+        "title": "Countries",
+        "value": "India, Nepal, Bhutan, China, Pakistan",
+        "icon": "globe"
+      },
+      {
+        "title": "Highest Peak",
+        "value": "Mount Everest",
+        "icon": "mountain"
+      },
+      {
+        "title": "Type",
+        "value": "Young fold mountains",
+        "icon": "mountain"
+      }
+    ]
   },
   {
     "id": "range_alps",

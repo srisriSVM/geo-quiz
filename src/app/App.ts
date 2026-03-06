@@ -198,6 +198,8 @@ export class App {
       this.hintTokenIndex = 0;
       this.mapView.setHighlightedEntity(this.currentEntity.id);
       this.panel.setHeading("Learn Mode");
+      this.panel.setHeadingVisible(false);
+      this.panel.setLearnTargetTitle(`${this.currentEntity.name} (${this.currentEntity.type})`);
       this.panel.setPromptVisible(false);
       this.panel.setFeedbackVisible(false);
       this.panel.setAnswerVisible(false);
@@ -208,6 +210,8 @@ export class App {
       this.panel.setAnswerEnabled(false);
     } else {
       this.panel.setHeading("Quiz Mode");
+      this.panel.setHeadingVisible(true);
+      this.panel.setLearnTargetTitle(null);
       this.panel.setLearnActionsVisible(false);
       this.panel.setLearnEntityInfo(null);
       this.panel.setPromptVisible(true);
@@ -352,6 +356,8 @@ export class App {
     this.hintTokenIndex = 0;
     this.mapView.setHighlightedEntity(selected.id);
     this.panel.setHeading("Learn Mode");
+    this.panel.setHeadingVisible(false);
+    this.panel.setLearnTargetTitle(`${selected.name} (${selected.type})`);
     this.panel.setPromptVisible(false);
     this.panel.setFeedbackVisible(false);
     this.panel.setLearnEntityInfo(selected);

@@ -85,6 +85,23 @@
       "mountain"
     ],
     "learningObjective": "Spot Everest in the Himalaya region north of India.",
+    "factCards": [
+      {
+        "title": "Elevation",
+        "value": "8,848.86 m",
+        "icon": "mountain"
+      },
+      {
+        "title": "Range",
+        "value": "Himalayas",
+        "icon": "mountain"
+      },
+      {
+        "title": "Border",
+        "value": "Nepal - Tibet",
+        "icon": "globe"
+      }
+    ],
     "bbox": [
       86.925,
       27.9881,
@@ -140,6 +157,23 @@
       "mountain"
     ],
     "learningObjective": "Differentiate K2 from Everest in South-Central Asia.",
+    "factCards": [
+      {
+        "title": "Elevation",
+        "value": "8,611 m",
+        "icon": "mountain"
+      },
+      {
+        "title": "Range",
+        "value": "Karakoram",
+        "icon": "mountain"
+      },
+      {
+        "title": "Climbing",
+        "value": "One of the hardest 8000m peaks",
+        "icon": "calendar"
+      }
+    ],
     "bbox": [
       76.5133,
       35.8808,

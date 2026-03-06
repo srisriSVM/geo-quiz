@@ -329,6 +329,23 @@
       "country"
     ],
     "learningObjective": "Notice France on the Atlantic side of Western Europe.",
+    "factCards": [
+      {
+        "title": "Capital",
+        "value": "Paris",
+        "icon": "city"
+      },
+      {
+        "title": "Population",
+        "value": "~67M",
+        "icon": "people"
+      },
+      {
+        "title": "Highest Mountain",
+        "value": "Mont Blanc",
+        "icon": "mountain"
+      }
+    ],
     "bbox": [
       2.3,
       46.2,
@@ -386,6 +403,23 @@
       "country"
     ],
     "learningObjective": "Find Germany between France and Poland.",
+    "factCards": [
+      {
+        "title": "Capital",
+        "value": "Berlin",
+        "icon": "city"
+      },
+      {
+        "title": "Population",
+        "value": "~84M",
+        "icon": "people"
+      },
+      {
+        "title": "Major River",
+        "value": "Rhine",
+        "icon": "river"
+      }
+    ],
     "bbox": [
       10.4,
       51.2,

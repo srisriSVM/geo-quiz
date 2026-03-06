@@ -14,6 +14,11 @@ export type EntityType =
 export type GeometryType = "point" | "line" | "polygon";
 export type Difficulty = "easy" | "medium" | "hard";
 export type AgeBand = "6-8" | "9-12" | "13+";
+export type FactCard = {
+  title: string;
+  value: string;
+  icon?: string;
+};
 
 export type Entity = {
   id: string;
@@ -21,6 +26,7 @@ export type Entity = {
   name: string;
   aliases?: string[];
   facts?: string[];
+  factCards?: FactCard[];
   didYouKnow?: string;
   hintTokens?: string[];
   difficulty?: Difficulty;

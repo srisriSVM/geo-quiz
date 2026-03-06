@@ -21,6 +21,7 @@ export class QuizPanel {
   private readonly answerGroupEl: HTMLElement;
   private readonly answerInput: HTMLInputElement;
   private readonly feedbackEl: HTMLElement;
+  private readonly learnTitleEl: HTMLElement;
   private readonly submitButton: HTMLButtonElement;
   private readonly learnActionsEl: HTMLElement;
   private readonly knowItButton: HTMLButtonElement;
@@ -38,15 +39,16 @@ export class QuizPanel {
     this.root.innerHTML = `
       <h2 data-role="heading">Geo Bee Trainer</h2>
       <p data-role="prompt"><strong>Prompt:</strong> Loading data...</p>
+      <p data-role="learn-title" class="learn-target-title" style="display:none;"></p>
       <label data-role="answer-group">
         Your answer
         <input data-role="answer" type="text" placeholder="Type here" style="width: 100%; margin-top: 8px; padding: 10px;" />
       </label>
       <button data-role="submit" type="button" style="margin-top: 10px; padding: 10px 12px;">Submit</button>
       <div data-role="choices" style="display:none; margin-top:10px; gap:8px; flex-wrap:wrap;"></div>
-      <div data-role="learn-actions" style="display: none; margin-top: 10px; gap: 8px;">
-        <button data-role="know-it" type="button" style="padding: 10px 12px;">I know this</button>
-        <button data-role="need-practice" type="button" style="padding: 10px 12px;">Need practice</button>
+      <div data-role="learn-actions" class="learn-actions-row" style="display: none;">
+        <button data-role="know-it" type="button" class="learn-know-btn">✓ I know this</button>
+        <button data-role="need-practice" type="button" class="learn-practice-btn">Need practice</button>
       </div>
       <section data-role="learn-info" class="learn-info" style="display:none;"></section>
       <p data-role="feedback" style="margin-bottom: 0;"><strong>Feedback:</strong> Waiting for your answer.</p>
@@ -57,6 +59,7 @@ export class QuizPanel {
     this.answerGroupEl = this.query<HTMLElement>("[data-role='answer-group']");
     this.answerInput = this.query<HTMLInputElement>("[data-role='answer']");
     this.feedbackEl = this.query<HTMLElement>("[data-role='feedback']");
+    this.learnTitleEl = this.query<HTMLElement>("[data-role='learn-title']");
     this.submitButton = this.query<HTMLButtonElement>("[data-role='submit']");
     this.learnActionsEl = this.query<HTMLElement>("[data-role='learn-actions']");
     this.knowItButton = this.query<HTMLButtonElement>("[data-role='know-it']");
@@ -132,6 +135,10 @@ export class QuizPanel {
     this.headingEl.textContent = value;
   }
 
+  setHeadingVisible(visible: boolean): void {
+    this.headingEl.style.display = visible ? "block" : "none";
+  }
+
   setPrompt(value: string): void {
     this.promptEl.innerHTML = `<strong>Prompt:</strong> ${value}`;
   }
@@ -146,6 +153,16 @@ export class QuizPanel {
 
   setFeedbackVisible(visible: boolean): void {
     this.feedbackEl.style.display = visible ? "block" : "none";
+  }
+
+  setLearnTargetTitle(value: string | null): void {
+    if (!value) {
+      this.learnTitleEl.style.display = "none";
+      this.learnTitleEl.textContent = "";
+      return;
+    }
+    this.learnTitleEl.textContent = value;
+    this.learnTitleEl.style.display = "block";
   }
 
   setAnswer(value: string): void {
@@ -215,7 +232,8 @@ export class QuizPanel {
       return;
     }
 
-    const facts = (entity.facts ?? []).slice(0, 2);
+    const factCards = (entity.factCards ?? []).slice(0, 4);
+    const narrativeFacts = (entity.facts ?? []).slice(0, 2);
     const chips: string[] = [];
     if (entity.difficulty) {
       chips.push(`<span class="learn-chip learn-chip--${entity.difficulty}">Difficulty: ${entity.difficulty}</span>`);
@@ -230,13 +248,9 @@ export class QuizPanel {
     const lines: string[] = [];
     if (entity.learningObjective) {
       lines.push(`<p><strong>Focus:</strong> ${entity.learningObjective}</p>`);
-    } else {
-      lines.push(`<p><strong>Focus:</strong> Identify this ${entity.type} on the map and notice nearby regions.</p>`);
     }
-    if (facts[0]) {
-      lines.push(`<p><strong>Fact:</strong> ${facts[0]}</p>`);
-    } else {
-      lines.push(`<p><strong>Fact:</strong> No custom fact added yet for ${entity.name}.</p>`);
+    for (const fact of narrativeFacts) {
+      lines.push(`<p><strong>Fact:</strong> ${fact}</p>`);
     }
     if (entity.didYouKnow) {
       lines.push(`<p><strong>Did you know?</strong> ${entity.didYouKnow}</p>`);
@@ -246,7 +260,24 @@ export class QuizPanel {
     }
 
     const chipRow = chips.length > 0 ? `<div class="learn-chip-row">${chips.join("")}</div>` : "";
-    this.learnInfoEl.innerHTML = `<h3 class="learn-info-title">Learn Info</h3>${chipRow}${lines.join("")}`;
+    const hasContent = chips.length > 0 || factCards.length > 0 || lines.length > 0;
+    if (!hasContent) {
+      this.learnInfoEl.style.display = "none";
+      this.learnInfoEl.innerHTML = "";
+      return;
+    }
+    const cardRow =
+      factCards.length > 0
+        ? `<div class="fact-card-grid">${factCards
+            .map(
+              (card) => `<article class="fact-card">
+                <header class="fact-card-title">${this.iconFor(card.icon)} ${card.title}</header>
+                <p class="fact-card-value">${card.value}</p>
+              </article>`
+            )
+            .join("")}</div>`
+        : "";
+    this.learnInfoEl.innerHTML = `<h3 class="learn-info-title">Learn Info</h3>${chipRow}${cardRow}${lines.join("")}`;
     this.learnInfoEl.style.display = "block";
   }
 
@@ -267,5 +298,24 @@ export class QuizPanel {
     const top = Math.min(Math.max(8, clientY - this.dragOffsetY), maxTop);
     this.root.style.left = `${left}px`;
     this.root.style.top = `${top}px`;
+  }
+
+  private iconFor(icon?: string): string {
+    switch (icon) {
+      case "city":
+        return "🏙️";
+      case "globe":
+        return "🌍";
+      case "mountain":
+        return "⛰️";
+      case "river":
+        return "🌊";
+      case "people":
+        return "👥";
+      case "calendar":
+        return "📅";
+      default:
+        return "✨";
+    }
   }
 }

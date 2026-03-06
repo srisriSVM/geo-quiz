@@ -113,6 +113,23 @@
       "mountain-range"
     ],
     "learningObjective": "Follow the north-south chain along western South America.",
+    "factCards": [
+      {
+        "title": "Length",
+        "value": "~7,000 km",
+        "icon": "mountain"
+      },
+      {
+        "title": "Countries",
+        "value": "Venezuela to Chile/Argentina",
+        "icon": "globe"
+      },
+      {
+        "title": "Highest Peak",
+        "value": "Aconcagua",
+        "icon": "mountain"
+      }
+    ],
     "bbox": [
       -79,
       -52,
@@ -470,6 +487,23 @@
       "mountain-range"
     ],
     "learningObjective": "Trace the long arc along northern India.",
+    "factCards": [
+      {
+        "title": "Countries",
+        "value": "India, Nepal, Bhutan, China, Pakistan",
+        "icon": "globe"
+      },
+      {
+        "title": "Highest Peak",
+        "value": "Mount Everest",
+        "icon": "mountain"
+      },
+      {
+        "title": "Type",
+        "value": "Young fold mountains",
+        "icon": "mountain"
+      }
+    ],
     "bbox": [
       72,
       27,

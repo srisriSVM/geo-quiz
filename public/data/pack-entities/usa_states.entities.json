@@ -5005,6 +5005,23 @@
       "state"
     ],
     "learningObjective": "Find the long west-coast state on the Pacific.",
+    "factCards": [
+      {
+        "title": "Capital",
+        "value": "Sacramento",
+        "icon": "city"
+      },
+      {
+        "title": "Population",
+        "value": "~39M",
+        "icon": "people"
+      },
+      {
+        "title": "Highest Peak",
+        "value": "Mount Whitney",
+        "icon": "mountain"
+      }
+    ],
     "geometry": {
       "type": "Polygon",
       "coordinates": [
@@ -13544,6 +13561,23 @@
       "state"
     ],
     "learningObjective": "Identify the large state above northeastern Mexico.",
+    "factCards": [
+      {
+        "title": "Capital",
+        "value": "Austin",
+        "icon": "city"
+      },
+      {
+        "title": "Population",
+        "value": "~30M",
+        "icon": "people"
+      },
+      {
+        "title": "Largest City",
+        "value": "Houston",
+        "icon": "city"
+      }
+    ],
     "geometry": {
       "type": "Polygon",
       "coordinates": [
