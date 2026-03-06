@@ -78,6 +78,81 @@ const INDIA_NAME_ALIASES = new Map<string, string>([
   ["uttaranchal", "uttarakhand"]
 ]);
 
+const COUNTRY_NAME_ALIASES = new Map<string, string>([
+  ["united states", "united states of america"],
+  ["russia", "russian federation"],
+  ["czech republic", "czechia"],
+  ["swaziland", "eswatini"],
+  ["north macedonia", "macedonia"],
+  ["myanmar", "burma"],
+  ["cape verde", "cabo verde"],
+  ["ivory coast", "cote d ivoire"],
+  ["east timor", "timor leste"],
+  ["vatican city", "vatican"],
+  ["laos", "lao pdr"],
+  ["syria", "syrian arab republic"],
+  ["moldova", "moldova republic of"],
+  ["bolivia", "bolivia plurinational state of"],
+  ["venezuela", "venezuela bolivarian republic of"],
+  ["tanzania", "tanzania united republic of"],
+  ["dr congo", "democratic republic of the congo"]
+]);
+const COUNTRY_FORCE_POINT = new Set<string>(["antarctica"]);
+
+let worldCountryGeometryByNamePromise: Promise<Map<string, Entity["geometry"][]>> | null = null;
+
+const loadWorldCountryGeometryByName = async (): Promise<Map<string, Entity["geometry"][]>> => {
+  if (worldCountryGeometryByNamePromise) {
+    return worldCountryGeometryByNamePromise;
+  }
+
+  worldCountryGeometryByNamePromise = fetch("./data/source/world-countries.geojson", { cache: "no-store" })
+    .then(async (response) => {
+      if (!response.ok) {
+        throw new Error("Failed to load world-countries.geojson");
+      }
+      const geo = (await response.json()) as {
+        features?: Array<{ properties?: Record<string, unknown>; geometry?: Entity["geometry"] }>;
+      };
+      const byName = new Map<string, Entity["geometry"][]>();
+      for (const feature of geo.features ?? []) {
+        const props = feature?.properties ?? {};
+        const geometry = feature?.geometry;
+        if (!geometry) {
+          continue;
+        }
+        const names = [
+          props.NAME,
+          props.NAME_LONG,
+          props.ADMIN,
+          props.SOVEREIGNT,
+          props.GEOUNIT,
+          props.SUBUNIT,
+          props.BRK_NAME,
+          props.BRNAME
+        ]
+          .map((name) => String(name ?? "").trim())
+          .filter(Boolean);
+        for (const name of names) {
+          const key = normalizeName(name);
+          const existing = byName.get(key);
+          if (existing) {
+            existing.push(geometry);
+          } else {
+            byName.set(key, [geometry]);
+          }
+        }
+      }
+      return byName;
+    })
+    .catch((error) => {
+      console.error(error);
+      return new Map<string, Entity["geometry"][]>();
+    });
+
+  return worldCountryGeometryByNamePromise;
+};
+
 const withIndiaStatePolygons = async (entities: Entity[]): Promise<Entity[]> => {
   const hasPolygon = entities.some((entity) => entity.geometryType === "polygon" && entity.geometry);
   if (hasPolygon) {
@@ -165,6 +240,103 @@ const withCanadaProvincePolygons = async (entities: Entity[]): Promise<Entity[]>
   });
 };
 
+const collectCoords = (node: unknown, out: [number, number][]): void => {
+  if (!Array.isArray(node)) {
+    return;
+  }
+  if (typeof node[0] === "number" && typeof node[1] === "number") {
+    out.push([node[0], node[1]]);
+    return;
+  }
+  for (const child of node) {
+    collectCoords(child, out);
+  }
+};
+
+const bboxFromGeometry = (geometry: Entity["geometry"]): [number, number, number, number] | undefined => {
+  if (!geometry || !("coordinates" in geometry)) {
+    return undefined;
+  }
+  const coords: [number, number][] = [];
+  collectCoords(geometry.coordinates, coords);
+  if (coords.length === 0) {
+    return undefined;
+  }
+  let minLon = Number.POSITIVE_INFINITY;
+  let minLat = Number.POSITIVE_INFINITY;
+  let maxLon = Number.NEGATIVE_INFINITY;
+  let maxLat = Number.NEGATIVE_INFINITY;
+  for (const [lon, lat] of coords) {
+    minLon = Math.min(minLon, lon);
+    minLat = Math.min(minLat, lat);
+    maxLon = Math.max(maxLon, lon);
+    maxLat = Math.max(maxLat, lat);
+  }
+  return [minLon, minLat, maxLon, maxLat];
+};
+
+const withWorldCountryPolygons = async (entities: Entity[]): Promise<Entity[]> => {
+  const hasCountryPoints = entities.some((entity) => entity.type === "country" && entity.geometryType === "point");
+  if (!hasCountryPoints) {
+    return entities;
+  }
+
+  const byName = await loadWorldCountryGeometryByName();
+  if (byName.size === 0) {
+    return entities;
+  }
+
+  return entities.map((entity) => {
+    if (entity.type !== "country" || entity.geometryType !== "point") {
+      return entity;
+    }
+    const normalized = normalizeName(entity.name);
+    if (COUNTRY_FORCE_POINT.has(normalized)) {
+      return entity;
+    }
+    const alias = COUNTRY_NAME_ALIASES.get(normalized);
+    const candidates = [
+      ...(byName.get(normalized) ?? []),
+      ...((alias ? byName.get(normalizeName(alias)) : undefined) ?? [])
+    ];
+    if (candidates.length === 0) {
+      return entity;
+    }
+    const geometry = pickBestCountryGeometryForEntity(entity, candidates);
+    return {
+      ...entity,
+      geometryType: "polygon",
+      // Keep original country topology to avoid antimeridian artifacts introduced by per-point wrapping.
+      geometry,
+      bbox: bboxFromGeometry(geometry) ?? entity.bbox
+    };
+  });
+};
+
+const pickBestCountryGeometryForEntity = (entity: Entity, candidates: Entity["geometry"][]): Entity["geometry"] => {
+  const [lon, lat] = entity.labelPoint;
+  let best = candidates[0];
+  let bestScore = Number.POSITIVE_INFINITY;
+
+  for (const candidate of candidates) {
+    const bbox = bboxFromGeometry(candidate);
+    if (!bbox) {
+      continue;
+    }
+    const contains = lon >= bbox[0] && lon <= bbox[2] && lat >= bbox[1] && lat <= bbox[3];
+    const centerLon = (bbox[0] + bbox[2]) / 2;
+    const centerLat = (bbox[1] + bbox[3]) / 2;
+    const dist = Math.hypot(lon - centerLon, lat - centerLat);
+    const score = contains ? dist * 0.01 : dist + 1000;
+    if (score < bestScore) {
+      bestScore = score;
+      best = candidate;
+    }
+  }
+
+  return best;
+};
+
 export const loadPackEntities = async (packId: string): Promise<Entity[]> => {
   const response = await fetch(`./data/pack-entities/${packId}.entities.json`, { cache: "no-store" });
   if (!response.ok) {
@@ -172,7 +344,7 @@ export const loadPackEntities = async (packId: string): Promise<Entity[]> => {
   }
 
   const entities = (await response.json()) as Entity[];
-  if (packId === "usa_states") {
+  if (packId === "usa_states" || packId === "us_states_capitals") {
     return withUsStatePolygons(entities);
   }
   if (packId === "india_states_capitals") {
@@ -181,7 +353,7 @@ export const loadPackEntities = async (packId: string): Promise<Entity[]> => {
   if (packId === "canada_provinces_territories") {
     return withCanadaProvincePolygons(entities);
   }
-  return entities;
+  return withWorldCountryPolygons(entities);
 };
 
 export const loadPacks = async (): Promise<Pack[]> => {

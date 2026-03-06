@@ -10293,6 +10293,634 @@
     ]
   },
   {
+    "id": "india_landmark_ajanta_ellora",
+    "type": "region",
+    "name": "Ajanta & Ellora Caves",
+    "geometryType": "point",
+    "labelPoint": [
+      75.701,
+      20.0268
+    ],
+    "tags": [
+      "landmark",
+      "india"
+    ],
+    "difficulty": "medium",
+    "packIds": [
+      "india_rivers_mountains_landmarks"
+    ]
+  },
+  {
+    "id": "india_landmark_gateway_of_india",
+    "type": "region",
+    "name": "Gateway of India",
+    "geometryType": "point",
+    "labelPoint": [
+      72.8347,
+      18.922
+    ],
+    "tags": [
+      "landmark",
+      "india"
+    ],
+    "difficulty": "easy",
+    "packIds": [
+      "india_rivers_mountains_landmarks"
+    ]
+  },
+  {
+    "id": "india_landmark_hampi",
+    "type": "region",
+    "name": "Hampi Monuments",
+    "geometryType": "point",
+    "labelPoint": [
+      76.46,
+      15.34
+    ],
+    "tags": [
+      "landmark",
+      "india"
+    ],
+    "difficulty": "medium",
+    "packIds": [
+      "india_rivers_mountains_landmarks"
+    ]
+  },
+  {
+    "id": "india_landmark_konark_sun_temple",
+    "type": "region",
+    "name": "Konark Sun Temple",
+    "geometryType": "point",
+    "labelPoint": [
+      86.0945,
+      19.8876
+    ],
+    "tags": [
+      "landmark",
+      "india"
+    ],
+    "difficulty": "medium",
+    "packIds": [
+      "india_rivers_mountains_landmarks"
+    ]
+  },
+  {
+    "id": "india_landmark_qutub_minar",
+    "type": "region",
+    "name": "Qutub Minar",
+    "geometryType": "point",
+    "labelPoint": [
+      77.1855,
+      28.5245
+    ],
+    "tags": [
+      "landmark",
+      "india"
+    ],
+    "difficulty": "medium",
+    "packIds": [
+      "india_rivers_mountains_landmarks"
+    ]
+  },
+  {
+    "id": "india_landmark_red_fort",
+    "type": "region",
+    "name": "Red Fort",
+    "geometryType": "point",
+    "labelPoint": [
+      77.241,
+      28.6562
+    ],
+    "tags": [
+      "landmark",
+      "india"
+    ],
+    "difficulty": "easy",
+    "packIds": [
+      "india_rivers_mountains_landmarks"
+    ]
+  },
+  {
+    "id": "india_landmark_taj_mahal",
+    "type": "region",
+    "name": "Taj Mahal",
+    "geometryType": "point",
+    "labelPoint": [
+      78.0421,
+      27.1751
+    ],
+    "tags": [
+      "landmark",
+      "india"
+    ],
+    "difficulty": "easy",
+    "facts": [
+      "UNESCO World Heritage Site in Agra."
+    ],
+    "packIds": [
+      "india_rivers_mountains_landmarks"
+    ]
+  },
+  {
+    "id": "india_range_aravalli",
+    "type": "mountain",
+    "name": "Aravalli Range",
+    "geometryType": "line",
+    "geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          72.6,
+          24.8
+        ],
+        [
+          74.1,
+          26.4
+        ],
+        [
+          75.5,
+          28.8
+        ]
+      ]
+    },
+    "labelPoint": [
+      74.2,
+      26.9
+    ],
+    "difficulty": "easy",
+    "hintTokens": [
+      "Ancient range across Rajasthan"
+    ],
+    "packIds": [
+      "india_rivers_mountains_landmarks"
+    ]
+  },
+  {
+    "id": "india_range_eastern_ghats",
+    "type": "mountain",
+    "name": "Eastern Ghats",
+    "geometryType": "line",
+    "geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          78.8,
+          11.3
+        ],
+        [
+          80.2,
+          14
+        ],
+        [
+          82.3,
+          17
+        ],
+        [
+          84,
+          20.5
+        ]
+      ]
+    },
+    "labelPoint": [
+      81.7,
+      16
+    ],
+    "difficulty": "medium",
+    "hintTokens": [
+      "Discontinuous range on east coast side"
+    ],
+    "packIds": [
+      "india_rivers_mountains_landmarks"
+    ]
+  },
+  {
+    "id": "india_range_himalayas",
+    "type": "mountain",
+    "name": "Himalayas (India arc)",
+    "geometryType": "line",
+    "geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          74.5,
+          34.5
+        ],
+        [
+          77.5,
+          33
+        ],
+        [
+          81.5,
+          30.5
+        ],
+        [
+          86.5,
+          28.3
+        ],
+        [
+          92.5,
+          27.5
+        ]
+      ]
+    },
+    "labelPoint": [
+      82.2,
+      31
+    ],
+    "difficulty": "easy",
+    "hintTokens": [
+      "Northern mountain wall of India"
+    ],
+    "packIds": [
+      "india_rivers_mountains_landmarks"
+    ]
+  },
+  {
+    "id": "india_range_purvanchal",
+    "type": "mountain",
+    "name": "Purvanchal Hills",
+    "geometryType": "line",
+    "geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          92.1,
+          26.6
+        ],
+        [
+          93.7,
+          25.4
+        ],
+        [
+          94.5,
+          24
+        ]
+      ]
+    },
+    "labelPoint": [
+      93.3,
+      25.5
+    ],
+    "difficulty": "hard",
+    "hintTokens": [
+      "Northeast extension of Himalayan system"
+    ],
+    "packIds": [
+      "india_rivers_mountains_landmarks"
+    ]
+  },
+  {
+    "id": "india_range_satpura",
+    "type": "mountain",
+    "name": "Satpura Range",
+    "geometryType": "line",
+    "geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          74.2,
+          21.8
+        ],
+        [
+          77.2,
+          22.2
+        ],
+        [
+          80.3,
+          22.5
+        ]
+      ]
+    },
+    "labelPoint": [
+      77.2,
+      22.2
+    ],
+    "difficulty": "medium",
+    "hintTokens": [
+      "Central India range south of Narmada"
+    ],
+    "packIds": [
+      "india_rivers_mountains_landmarks"
+    ]
+  },
+  {
+    "id": "india_range_vindhya",
+    "type": "mountain",
+    "name": "Vindhya Range",
+    "geometryType": "line",
+    "geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          75,
+          23.5
+        ],
+        [
+          78,
+          24
+        ],
+        [
+          81,
+          24.6
+        ],
+        [
+          84,
+          25
+        ]
+      ]
+    },
+    "labelPoint": [
+      79.8,
+      24.2
+    ],
+    "difficulty": "easy",
+    "hintTokens": [
+      "Central India range north of Narmada"
+    ],
+    "packIds": [
+      "india_rivers_mountains_landmarks"
+    ]
+  },
+  {
+    "id": "india_range_western_ghats",
+    "type": "mountain",
+    "name": "Western Ghats",
+    "geometryType": "line",
+    "geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          72.8,
+          20.6
+        ],
+        [
+          73.2,
+          18.4
+        ],
+        [
+          73.8,
+          16
+        ],
+        [
+          74.7,
+          13.2
+        ],
+        [
+          75.8,
+          11
+        ],
+        [
+          76.6,
+          9.3
+        ]
+      ]
+    },
+    "labelPoint": [
+      74.4,
+      14.8
+    ],
+    "difficulty": "easy",
+    "hintTokens": [
+      "Runs parallel to India west coast"
+    ],
+    "packIds": [
+      "india_rivers_mountains_landmarks"
+    ]
+  },
+  {
+    "id": "india_river_brahmaputra",
+    "type": "river",
+    "name": "Brahmaputra",
+    "geometryType": "line",
+    "geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          92.5,
+          28
+        ],
+        [
+          91.7,
+          26.2
+        ],
+        [
+          90.4,
+          24.4
+        ]
+      ]
+    },
+    "labelPoint": [
+      91.6,
+      26.6
+    ],
+    "hintTokens": [
+      "Major river in Assam",
+      "Joins Ganges delta system"
+    ],
+    "facts": [
+      "Known for massive seasonal flow and flooding plains."
+    ],
+    "difficulty": "medium",
+    "packIds": [
+      "india_rivers_mountains_landmarks"
+    ]
+  },
+  {
+    "id": "india_river_ganges",
+    "type": "river",
+    "name": "Ganges",
+    "geometryType": "line",
+    "geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          79.07,
+          30.99
+        ],
+        [
+          80.2,
+          27.5
+        ],
+        [
+          83,
+          25.3
+        ],
+        [
+          87,
+          23.5
+        ],
+        [
+          88.36,
+          22.57
+        ]
+      ]
+    },
+    "labelPoint": [
+      83.8,
+      25.4
+    ],
+    "hintTokens": [
+      "Flows across north India",
+      "Empties into Bay of Bengal"
+    ],
+    "facts": [
+      "One of the most sacred rivers in India."
+    ],
+    "difficulty": "easy",
+    "packIds": [
+      "india_rivers_mountains_landmarks"
+    ]
+  },
+  {
+    "id": "india_river_godavari",
+    "type": "river",
+    "name": "Godavari",
+    "geometryType": "line",
+    "geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          73.6,
+          19.9
+        ],
+        [
+          77.8,
+          19
+        ],
+        [
+          80.6,
+          17.9
+        ],
+        [
+          82.3,
+          16.9
+        ]
+      ]
+    },
+    "labelPoint": [
+      78.8,
+      18.6
+    ],
+    "hintTokens": [
+      "Longest river within peninsular India"
+    ],
+    "difficulty": "easy",
+    "packIds": [
+      "india_rivers_mountains_landmarks"
+    ]
+  },
+  {
+    "id": "india_river_indus",
+    "type": "river",
+    "name": "Indus (India segment)",
+    "geometryType": "line",
+    "geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          76.5,
+          34.9
+        ],
+        [
+          75.5,
+          34.2
+        ],
+        [
+          74.7,
+          33.9
+        ]
+      ]
+    },
+    "labelPoint": [
+      75.5,
+      34.5
+    ],
+    "hintTokens": [
+      "Origin near Tibetan Plateau",
+      "Flows through Ladakh"
+    ],
+    "difficulty": "medium",
+    "packIds": [
+      "india_rivers_mountains_landmarks"
+    ]
+  },
+  {
+    "id": "india_river_krishna",
+    "type": "river",
+    "name": "Krishna",
+    "geometryType": "line",
+    "geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          73.8,
+          17.9
+        ],
+        [
+          76.2,
+          16.6
+        ],
+        [
+          78.8,
+          16.1
+        ],
+        [
+          80.9,
+          15.9
+        ]
+      ]
+    },
+    "labelPoint": [
+      77.8,
+      16.5
+    ],
+    "hintTokens": [
+      "Major peninsular river"
+    ],
+    "difficulty": "medium",
+    "packIds": [
+      "india_rivers_mountains_landmarks"
+    ]
+  },
+  {
+    "id": "india_river_narmada",
+    "type": "river",
+    "name": "Narmada",
+    "geometryType": "line",
+    "geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          81.75,
+          22.67
+        ],
+        [
+          79.3,
+          22.2
+        ],
+        [
+          76.9,
+          22.4
+        ],
+        [
+          72.8,
+          21.6
+        ]
+      ]
+    },
+    "labelPoint": [
+      78.2,
+      22.3
+    ],
+    "hintTokens": [
+      "Flows west into Arabian Sea"
+    ],
+    "difficulty": "medium",
+    "packIds": [
+      "india_rivers_mountains_landmarks"
+    ]
+  },
+  {
     "id": "island_borneo",
     "type": "region",
     "name": "Borneo",

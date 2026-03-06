@@ -13,12 +13,21 @@ import {
 } from "../storage/progressStore";
 
 type Mode = "learn" | "quiz";
-type MapDetail = "quiz_clean" | "reference_full" | "physical_basic" | "physical_relief";
+type MapDetail =
+  | "quiz_clean"
+  | "reference_full"
+  | "physical_basic"
+  | "physical_relief"
+  | "dark_quiz"
+  | "monochrome"
+  | "satellite"
+  | "night_lights";
 type MasteryState = "not_learned" | "learning" | "mastered";
 type ChoiceStatus = "default" | "locked" | "wrong";
 
 const MAP_DETAIL_KEY = "geo-bee-map-detail";
 const LOW_DATA_MODE_KEY = "geo-bee-low-data-mode";
+const SHOW_POLYGONS_KEY = "geo-bee-show-polygons";
 const DIFFICULTY_FILTER_KEY = "geo-bee-difficulty-filter";
 
 export class App {
@@ -37,6 +46,7 @@ export class App {
   private quizType: QuizType = "match_round_5";
   private mapDetail: MapDetail = "quiz_clean";
   private lowDataMode = true;
+  private showPolygons = true;
   private selectedDifficulties: Difficulty[] = ["easy", "medium", "hard"];
   private currentPackId = "";
   private currentEntity: Entity | null = null;
@@ -113,6 +123,11 @@ export class App {
         localStorage.setItem(LOW_DATA_MODE_KEY, enabled ? "1" : "0");
         this.mapView?.setLowDataMode(enabled);
       },
+      onPolygonVisibilityChange: (enabled) => {
+        this.showPolygons = enabled;
+        localStorage.setItem(SHOW_POLYGONS_KEY, enabled ? "1" : "0");
+        this.mapView?.setPolygonVisibility(enabled);
+      },
       onDifficultyFilterChange: (difficulties) => {
         this.selectedDifficulties = difficulties;
         localStorage.setItem(DIFFICULTY_FILTER_KEY, JSON.stringify(difficulties));
@@ -145,14 +160,17 @@ export class App {
     this.currentPackId = firstPack.id;
     this.mapDetail = this.loadMapDetail();
     this.lowDataMode = this.loadLowDataMode();
+    this.showPolygons = this.loadPolygonVisibility();
     this.selectedDifficulties = this.loadDifficultyFilter();
     this.hud.setMode(this.mode);
     this.hud.setPack(this.currentPackId);
     this.hud.setQuizType(this.quizType);
     this.hud.setMapDetail(this.mapDetail);
     this.hud.setLowDataMode(this.lowDataMode);
+    this.hud.setPolygonVisibility(this.showPolygons);
     this.hud.setDifficultyFilter(this.selectedDifficulties);
     this.mapView.setLowDataMode(this.lowDataMode);
+    this.mapView.setPolygonVisibility(this.showPolygons);
     this.mapView.setMapDetail(this.mapDetail);
 
     await this.startRound();
@@ -517,7 +535,11 @@ export class App {
       raw === "quiz_clean" ||
       raw === "reference_full" ||
       raw === "physical_basic" ||
-      raw === "physical_relief"
+      raw === "physical_relief" ||
+      raw === "dark_quiz" ||
+      raw === "monochrome" ||
+      raw === "satellite" ||
+      raw === "night_lights"
     ) {
       return raw;
     }
@@ -549,6 +571,14 @@ export class App {
     } catch {
       return ["easy", "medium", "hard"];
     }
+  }
+
+  private loadPolygonVisibility(): boolean {
+    const raw = localStorage.getItem(SHOW_POLYGONS_KEY);
+    if (raw === "0") {
+      return false;
+    }
+    return true;
   }
 
   private handleResetProgress(): void {

@@ -8,9 +8,18 @@ type HudActions = {
   onPackChange: (packId: string) => void;
   onQuizTypeChange: (quizType: QuizType) => void;
   onMapDetailChange: (
-    mapDetail: "quiz_clean" | "reference_full" | "physical_basic" | "physical_relief"
+    mapDetail:
+      | "quiz_clean"
+      | "reference_full"
+      | "physical_basic"
+      | "physical_relief"
+      | "dark_quiz"
+      | "monochrome"
+      | "satellite"
+      | "night_lights"
   ) => void;
   onLowDataModeChange: (enabled: boolean) => void;
+  onPolygonVisibilityChange: (enabled: boolean) => void;
   onDifficultyFilterChange: (difficulties: Difficulty[]) => void;
   onResetProgress: () => void;
   onHint: () => void;
@@ -33,6 +42,7 @@ export class Hud {
   private readonly quizTypeSelect: HTMLSelectElement;
   private readonly mapDetailSelect: HTMLSelectElement;
   private readonly lowDataCheckbox: HTMLInputElement;
+  private readonly polygonCheckbox: HTMLInputElement;
   private readonly difficultyEasyCheckbox: HTMLInputElement;
   private readonly difficultyMediumCheckbox: HTMLInputElement;
   private readonly difficultyHardCheckbox: HTMLInputElement;
@@ -98,11 +108,19 @@ export class Hud {
             <option value="reference_full">Reference Full</option>
             <option value="physical_basic">Physical Basic</option>
             <option value="physical_relief">Physical Relief</option>
+            <option value="dark_quiz">Dark Quiz</option>
+            <option value="monochrome">Monochrome</option>
+            <option value="satellite">Satellite</option>
+            <option value="night_lights">Night Lights</option>
           </select>
         </label>
         <label style="display: flex; align-items: center; gap: 6px;">
           <input type="checkbox" data-role="low-data" />
           Low Data
+        </label>
+        <label style="display: flex; align-items: center; gap: 6px;">
+          <input type="checkbox" data-role="show-polygons" checked />
+          Show Polygons
         </label>
         <div class="difficulty-filter-group" data-role="difficulty-group" aria-label="Difficulty filter">
           <span>Difficulty</span>
@@ -121,6 +139,7 @@ export class Hud {
     this.quizTypeSelect = this.query<HTMLSelectElement>("[data-role='quiz-type']");
     this.mapDetailSelect = this.query<HTMLSelectElement>("[data-role='map-detail']");
     this.lowDataCheckbox = this.query<HTMLInputElement>("[data-role='low-data']");
+    this.polygonCheckbox = this.query<HTMLInputElement>("[data-role='show-polygons']");
     this.difficultyEasyCheckbox = this.query<HTMLInputElement>("[data-role='difficulty-easy']");
     this.difficultyMediumCheckbox = this.query<HTMLInputElement>("[data-role='difficulty-medium']");
     this.difficultyHardCheckbox = this.query<HTMLInputElement>("[data-role='difficulty-hard']");
@@ -159,10 +178,17 @@ export class Hud {
           | "reference_full"
           | "physical_basic"
           | "physical_relief"
+          | "dark_quiz"
+          | "monochrome"
+          | "satellite"
+          | "night_lights"
       );
     });
     this.lowDataCheckbox.addEventListener("change", () => {
       actions.onLowDataModeChange(this.lowDataCheckbox.checked);
+    });
+    this.polygonCheckbox.addEventListener("change", () => {
+      actions.onPolygonVisibilityChange(this.polygonCheckbox.checked);
     });
     this.difficultyEasyCheckbox.addEventListener("change", () => this.emitDifficultyFilter(actions));
     this.difficultyMediumCheckbox.addEventListener("change", () => this.emitDifficultyFilter(actions));
@@ -289,13 +315,25 @@ export class Hud {
   }
 
   setMapDetail(
-    mapDetail: "quiz_clean" | "reference_full" | "physical_basic" | "physical_relief"
+    mapDetail:
+      | "quiz_clean"
+      | "reference_full"
+      | "physical_basic"
+      | "physical_relief"
+      | "dark_quiz"
+      | "monochrome"
+      | "satellite"
+      | "night_lights"
   ): void {
     this.mapDetailSelect.value = mapDetail;
   }
 
   setLowDataMode(enabled: boolean): void {
     this.lowDataCheckbox.checked = enabled;
+  }
+
+  setPolygonVisibility(enabled: boolean): void {
+    this.polygonCheckbox.checked = enabled;
   }
 
   setDifficultyFilter(difficulties: Difficulty[]): void {

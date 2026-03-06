@@ -2,9 +2,13 @@ import type { Feature, FeatureCollection, Geometry } from "geojson";
 import maplibregl, { type Map as MapLibreMap } from "maplibre-gl";
 import type { Entity, Pack } from "../data/types";
 import {
+  getDarkQuizStyle,
+  getMonochromeStyle,
+  getNightLightsStyle,
   getPhysicalBasicStyle,
   getPhysicalReliefStyle,
-  getPoliticalStyleUrl
+  getPoliticalStyleUrl,
+  getSatelliteStyle
 } from "./layers";
 
 const SOURCE_POLYGONS = "entities-polygons-source";
@@ -30,11 +34,20 @@ const LAYER_USA_STATE_FILL = "usa-state-fill";
 const LAYER_USA_STATE_BORDERS = "usa-state-borders";
 
 type Mode = "learn" | "quiz";
-type MapDetail = "quiz_clean" | "reference_full" | "physical_basic" | "physical_relief";
+type MapDetail =
+  | "quiz_clean"
+  | "reference_full"
+  | "physical_basic"
+  | "physical_relief"
+  | "dark_quiz"
+  | "monochrome"
+  | "satellite"
+  | "night_lights";
 
 type EntityFeatureProps = {
   id: string;
   name: string;
+  entityType: string;
   geometryType: "point" | "line" | "polygon";
   mastery: "not_learned" | "learning" | "mastered";
 };
@@ -51,6 +64,7 @@ export class MapView {
   private pendingMapDetail: MapDetail = "quiz_clean";
   private pendingLowDataMode = true;
   private pendingMasteryById: Record<string, "not_learned" | "learning" | "mastered"> = {};
+  private pendingShowPolygons = true;
   private pendingFocusEntity: Entity | null = null;
   private pendingCamera:
     | {
@@ -115,13 +129,13 @@ export class MapView {
 
     const showAll = mode === "learn";
     const hasPolygonEntities = this.pendingEntities.some((entity) => entity.geometryType === "polygon");
-    const showPolygonContext = showAll || hasPolygonEntities;
+    const showPolygonContext = this.pendingShowPolygons && (showAll || hasPolygonEntities);
 
     this.setLayerVisibility(LAYER_POLYGONS, showPolygonContext ? "visible" : "none");
     this.setLayerVisibility(LAYER_POLYGON_OUTLINE, showPolygonContext ? "visible" : "none");
     this.setLayerPaint(LAYER_POLYGONS, "fill-opacity", showAll ? 0.33 : 0.14);
     this.setLayerPaint(LAYER_POLYGON_OUTLINE, "line-opacity", showAll ? 1 : 0.88);
-    this.setLayerVisibility(LAYER_LINES_CASING, showAll ? "visible" : "none");
+    this.setLayerVisibility(LAYER_LINES_CASING, "none");
     this.setLayerVisibility(LAYER_LINES, showAll ? "visible" : "none");
     this.setLayerVisibility(LAYER_TARGET_LINE_CASING, "visible");
     this.setLayerVisibility(LAYER_TARGET_LINE, "visible");
@@ -130,6 +144,23 @@ export class MapView {
     this.setLayerVisibility(LAYER_HIGHLIGHT_LABEL, showAll ? "visible" : "none");
     this.renderPointStatusMarkers();
     this.renderHighlightedMarkers();
+  }
+
+  setPolygonVisibility(enabled: boolean): void {
+    this.pendingShowPolygons = enabled;
+    if (!this.map || !this.mapLoaded) {
+      return;
+    }
+    this.setMode(this.pendingMode);
+    if (!enabled) {
+      this.setLayerVisibility(LAYER_HIGHLIGHT_POLYGON, "none");
+      this.setLayerVisibility(LAYER_HIGHLIGHT_POLYGON_OUTLINE, "none");
+    } else {
+      this.setLayerVisibility(LAYER_HIGHLIGHT_POLYGON, "visible");
+      this.setLayerVisibility(LAYER_HIGHLIGHT_POLYGON_OUTLINE, "visible");
+      this.applyHighlightFilter(this.pendingHighlightedEntityId);
+    }
+    this.renderPointStatusMarkers();
   }
 
   setMapDetail(mapDetail: MapDetail): void {
@@ -368,6 +399,18 @@ export class MapView {
     if (mapDetail === "physical_relief") {
       return lowDataMode ? "physical_relief_low" : "physical_relief_full";
     }
+    if (mapDetail === "dark_quiz") {
+      return lowDataMode ? "dark_quiz_low" : "dark_quiz_full";
+    }
+    if (mapDetail === "monochrome") {
+      return lowDataMode ? "monochrome_low" : "monochrome_full";
+    }
+    if (mapDetail === "satellite") {
+      return lowDataMode ? "satellite_low" : "satellite_full";
+    }
+    if (mapDetail === "night_lights") {
+      return lowDataMode ? "night_lights_low" : "night_lights_full";
+    }
     return "political";
   }
 
@@ -380,6 +423,18 @@ export class MapView {
     }
     if (mapDetail === "physical_relief") {
       return getPhysicalReliefStyle(lowDataMode);
+    }
+    if (mapDetail === "dark_quiz") {
+      return getDarkQuizStyle(lowDataMode);
+    }
+    if (mapDetail === "monochrome") {
+      return getMonochromeStyle(lowDataMode);
+    }
+    if (mapDetail === "satellite") {
+      return getSatelliteStyle(lowDataMode);
+    }
+    if (mapDetail === "night_lights") {
+      return getNightLightsStyle(lowDataMode);
     }
     return getPoliticalStyleUrl();
   }
@@ -492,14 +547,14 @@ export class MapView {
       source: SOURCE_LINES,
       paint: {
         "line-color": "#ffffff",
-        "line-opacity": 0.9,
+        "line-opacity": 0.45,
         "line-width": [
           "interpolate",
           ["linear"],
           ["zoom"],
-          1, 4,
-          3, 6,
-          5, 10
+          1, 3,
+          3, 4.5,
+          5, 6.5
         ]
       }
     });
@@ -510,22 +565,12 @@ export class MapView {
       source: SOURCE_LINES,
       paint: {
         "line-color": [
-          "match",
-          ["get", "mastery"],
-          "mastered", "#16a34a",
-          "learning", "#d97706",
-          "not_learned", "#dc2626",
-          "#0057ff"
+          "case",
+          ["==", ["get", "entityType"], "mountain"], "#9a3412",
+          "#1d4ed8"
         ],
         "line-opacity": 0.95,
-        "line-width": [
-          "interpolate",
-          ["linear"],
-          ["zoom"],
-          1, 2.5,
-          3, 4,
-          5, 7
-        ]
+        "line-width": ["interpolate", ["linear"], ["zoom"], 1, 3.5, 3, 5, 5, 7]
       }
     });
 
@@ -551,16 +596,13 @@ export class MapView {
       source: SOURCE_LINES,
       filter: ["==", "id", ""],
       paint: {
-        "line-color": "#ff7a00",
+        "line-color": [
+          "case",
+          ["==", ["get", "entityType"], "mountain"], "#b45309",
+          "#2563eb"
+        ],
         "line-opacity": 1,
-        "line-width": [
-          "interpolate",
-          ["linear"],
-          ["zoom"],
-          1, 6,
-          3, 8,
-          5, 12
-        ]
+        "line-width": ["interpolate", ["linear"], ["zoom"], 1, 6, 3, 8, 5, 11]
       }
     });
 
@@ -591,17 +633,14 @@ export class MapView {
       type: "line",
       source: SOURCE_TARGET_LINE,
       paint: {
-        "line-color": "#ff7a00",
+        "line-color": [
+          "case",
+          ["==", ["get", "entityType"], "mountain"], "#b45309",
+          "#2563eb"
+        ],
         "line-opacity": 1,
         "line-blur": 0,
-        "line-width": [
-          "interpolate",
-          ["linear"],
-          ["zoom"],
-          1, 9,
-          3, 12,
-          5, 16
-        ]
+        "line-width": ["interpolate", ["linear"], ["zoom"], 1, 8, 3, 10, 5, 14]
       },
       layout: {
         "line-cap": "round",
@@ -821,6 +860,7 @@ export class MapView {
       properties: {
         id: entity.id,
         name: entity.name,
+        entityType: entity.type,
         geometryType: "point",
         mastery: this.pendingMasteryById[entity.id] ?? "not_learned"
       } satisfies EntityFeatureProps
@@ -835,6 +875,7 @@ export class MapView {
       properties: {
         id: entity.id,
         name: entity.name,
+        entityType: entity.type,
         geometryType: entity.geometryType,
         mastery: this.pendingMasteryById[entity.id] ?? "not_learned"
       } satisfies EntityFeatureProps
@@ -871,7 +912,7 @@ export class MapView {
 
     for (const entity of this.pendingEntities) {
       // Polygon entities are visible/clickable directly on the map; skip point dots to avoid visual clutter.
-      if (entity.geometryType === "polygon") {
+      if (entity.geometryType === "polygon" && this.pendingShowPolygons) {
         continue;
       }
       const mastery = this.pendingMasteryById[entity.id] ?? "not_learned";
@@ -946,6 +987,8 @@ export class MapView {
       this.highlightedDotMarker = new maplibregl.Marker({ element: dot }).setLngLat(target.labelPoint).addTo(this.map);
     }
     if (target.geometryType === "line" && target.geometry?.type === "LineString") {
+      const isRiverLine = target.type === "river";
+      const arrowColor = isRiverLine ? "#2563eb" : "#b45309";
       const anchors = this.sampleLineAnchors(target.geometry.coordinates as [number, number][], 12);
       for (const anchor of anchors) {
         const markerRoot = document.createElement("div");
@@ -979,7 +1022,7 @@ export class MapView {
         front.style.height = "0";
         front.style.borderTop = "5px solid transparent";
         front.style.borderBottom = "5px solid transparent";
-        front.style.borderLeft = "10px solid #ff7a00";
+        front.style.borderLeft = `10px solid ${arrowColor}`;
 
         arrowWrap.append(back, front);
         markerRoot.append(arrowWrap);

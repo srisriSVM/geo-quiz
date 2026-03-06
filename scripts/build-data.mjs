@@ -12,6 +12,12 @@ const source = JSON.parse(readFileSync(inputPath, "utf-8"));
 const usStatesGeo = JSON.parse(readFileSync(usStatesPath, "utf-8"));
 const indiaStatesGeo = JSON.parse(readFileSync(indiaStatesPath, "utf-8"));
 const canadaProvincesGeo = JSON.parse(readFileSync(canadaProvincesPath, "utf-8"));
+const DEFER_POLYGON_PACK_IDS = new Set([
+  "usa_states",
+  "us_states_capitals",
+  "india_states_capitals",
+  "canada_provinces_territories"
+]);
 
 function normalizeName(value) {
   return String(value ?? "")
@@ -135,6 +141,8 @@ const entities = source
   .slice()
   .sort((a, b) => a.id.localeCompare(b.id))
   .map((entity) => {
+    const shouldDeferPolygonGeometry = (entity.packIds ?? []).some((packId) => DEFER_POLYGON_PACK_IDS.has(packId));
+
     if (entity.type === "state" && (entity.packIds ?? []).includes("usa_states")) {
       const geometry = usStateGeometryByName.get(normalizeName(entity.name));
       if (geometry) {
@@ -143,6 +151,12 @@ const entities = source
           geometryType: "polygon",
           geometry
         };
+        if (shouldDeferPolygonGeometry) {
+          return {
+            ...entity,
+            bbox: toBbox(withGeometry)
+          };
+        }
         return {
           ...withGeometry,
           bbox: toBbox(withGeometry)
@@ -164,6 +178,12 @@ const entities = source
           geometryType: "polygon",
           geometry
         };
+        if (shouldDeferPolygonGeometry) {
+          return {
+            ...entity,
+            bbox: toBbox(withGeometry)
+          };
+        }
         return {
           ...withGeometry,
           bbox: toBbox(withGeometry)
@@ -179,6 +199,12 @@ const entities = source
           geometryType: "polygon",
           geometry
         };
+        if (shouldDeferPolygonGeometry) {
+          return {
+            ...entity,
+            bbox: toBbox(withGeometry)
+          };
+        }
         return {
           ...withGeometry,
           bbox: toBbox(withGeometry)
@@ -189,6 +215,18 @@ const entities = source
     return {
       ...entity,
       bbox: toBbox(entity)
+    };
+  })
+  .map((entity) => {
+    const shouldDeferPolygonGeometry =
+      entity.type === "state" && (entity.packIds ?? []).some((packId) => DEFER_POLYGON_PACK_IDS.has(packId));
+    if (!shouldDeferPolygonGeometry) {
+      return entity;
+    }
+    const { geometry: _geometry, ...rest } = entity;
+    return {
+      ...rest,
+      geometryType: "point"
     };
   });
 

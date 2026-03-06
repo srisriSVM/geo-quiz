@@ -395,7 +395,7 @@
     "id": "ca_province_alberta",
     "type": "state",
     "name": "Alberta",
-    "geometryType": "polygon",
+    "geometryType": "point",
     "labelPoint": [
       -114.4,
       54.7
@@ -408,7 +408,7 @@
     "id": "ca_province_british_columbia",
     "type": "state",
     "name": "British Columbia",
-    "geometryType": "polygon",
+    "geometryType": "point",
     "labelPoint": [
       -124.8,
       53.7
@@ -421,7 +421,7 @@
     "id": "ca_province_manitoba",
     "type": "state",
     "name": "Manitoba",
-    "geometryType": "polygon",
+    "geometryType": "point",
     "labelPoint": [
       -98.8,
       54.8
@@ -434,7 +434,7 @@
     "id": "ca_province_new_brunswick",
     "type": "state",
     "name": "New Brunswick",
-    "geometryType": "polygon",
+    "geometryType": "point",
     "labelPoint": [
       -66.5,
       46.5
@@ -447,7 +447,7 @@
     "id": "ca_province_newfoundland",
     "type": "state",
     "name": "Newfoundland and Labrador",
-    "geometryType": "polygon",
+    "geometryType": "point",
     "labelPoint": [
       -57.7,
       53.1
@@ -460,7 +460,7 @@
     "id": "ca_province_nova_scotia",
     "type": "state",
     "name": "Nova Scotia",
-    "geometryType": "polygon",
+    "geometryType": "point",
     "labelPoint": [
       -63.6,
       45.2
@@ -473,7 +473,7 @@
     "id": "ca_province_ontario",
     "type": "state",
     "name": "Ontario",
-    "geometryType": "polygon",
+    "geometryType": "point",
     "labelPoint": [
       -85.3,
       50.1
@@ -486,7 +486,7 @@
     "id": "ca_province_pei",
     "type": "state",
     "name": "Prince Edward Island",
-    "geometryType": "polygon",
+    "geometryType": "point",
     "labelPoint": [
       -63.2,
       46.4
@@ -499,7 +499,7 @@
     "id": "ca_province_quebec",
     "type": "state",
     "name": "Quebec",
-    "geometryType": "polygon",
+    "geometryType": "point",
     "labelPoint": [
       -71.2,
       52.9
@@ -512,7 +512,7 @@
     "id": "ca_province_saskatchewan",
     "type": "state",
     "name": "Saskatchewan",
-    "geometryType": "polygon",
+    "geometryType": "point",
     "labelPoint": [
       -106.4,
       54.4
@@ -525,7 +525,7 @@
     "id": "ca_territory_nunavut",
     "type": "state",
     "name": "Nunavut",
-    "geometryType": "polygon",
+    "geometryType": "point",
     "labelPoint": [
       -96.8,
       68.6
@@ -538,7 +538,7 @@
     "id": "ca_territory_nwt",
     "type": "state",
     "name": "Northwest Territories",
-    "geometryType": "polygon",
+    "geometryType": "point",
     "labelPoint": [
       -121.7,
       64.8
@@ -551,7 +551,7 @@
     "id": "ca_territory_yukon",
     "type": "state",
     "name": "Yukon",
-    "geometryType": "polygon",
+    "geometryType": "point",
     "labelPoint": [
       -135.5,
       64.2
@@ -7036,7 +7036,7 @@
     "id": "in_state_andhra_pradesh",
     "type": "state",
     "name": "Andhra Pradesh",
-    "geometryType": "polygon",
+    "geometryType": "point",
     "labelPoint": [
       79.8,
       15.9
@@ -7049,7 +7049,7 @@
     "id": "in_state_arunachal_pradesh",
     "type": "state",
     "name": "Arunachal Pradesh",
-    "geometryType": "polygon",
+    "geometryType": "point",
     "labelPoint": [
       94.7,
       28.2
@@ -7062,7 +7062,7 @@
     "id": "in_state_assam",
     "type": "state",
     "name": "Assam",
-    "geometryType": "polygon",
+    "geometryType": "point",
     "labelPoint": [
       92.9,
       26.1
@@ -7075,7 +7075,7 @@
     "id": "in_state_bihar",
     "type": "state",
     "name": "Bihar",
-    "geometryType": "polygon",
+    "geometryType": "point",
     "labelPoint": [
       85.3,
       25.9
@@ -7088,7 +7088,7 @@
     "id": "in_state_chhattisgarh",
     "type": "state",
     "name": "Chhattisgarh",
-    "geometryType": "polygon",
+    "geometryType": "point",
     "labelPoint": [
       82,
       21.3
@@ -7101,7 +7101,7 @@
     "id": "in_state_goa",
     "type": "state",
     "name": "Goa",
-    "geometryType": "polygon",
+    "geometryType": "point",
     "labelPoint": [
       74.1,
       15.4
@@ -7114,7 +7114,7 @@
     "id": "in_state_gujarat",
     "type": "state",
     "name": "Gujarat",
-    "geometryType": "polygon",
+    "geometryType": "point",
     "labelPoint": [
       71.3,
       22.3
@@ -7127,7 +7127,7 @@
     "id": "in_state_haryana",
     "type": "state",
     "name": "Haryana",
-    "geometryType": "polygon",
+    "geometryType": "point",
     "labelPoint": [
       76.1,
       29.1
@@ -7140,7 +7140,7 @@
     "id": "in_state_himachal_pradesh",
     "type": "state",
     "name": "Himachal Pradesh",
-    "geometryType": "polygon",
+    "geometryType": "point",
     "labelPoint": [
       77.2,
       31.7
@@ -7153,7 +7153,7 @@
     "id": "in_state_jammu_kashmir",
     "type": "state",
     "name": "Jammu and Kashmir",
-    "geometryType": "polygon",
+    "geometryType": "point",
     "labelPoint": [
       75.3,
       34.2
@@ -7166,7 +7166,7 @@
     "id": "in_state_jharkhand",
     "type": "state",
     "name": "Jharkhand",
-    "geometryType": "polygon",
+    "geometryType": "point",
     "labelPoint": [
       85.5,
       23.6
@@ -7179,7 +7179,7 @@
     "id": "in_state_karnataka",
     "type": "state",
     "name": "Karnataka",
-    "geometryType": "polygon",
+    "geometryType": "point",
     "labelPoint": [
       76,
       14.5
@@ -7192,7 +7192,7 @@
     "id": "in_state_kerala",
     "type": "state",
     "name": "Kerala",
-    "geometryType": "polygon",
+    "geometryType": "point",
     "labelPoint": [
       76.3,
       10.4
@@ -7205,7 +7205,7 @@
     "id": "in_state_madhya_pradesh",
     "type": "state",
     "name": "Madhya Pradesh",
-    "geometryType": "polygon",
+    "geometryType": "point",
     "labelPoint": [
       78.4,
       23.5
@@ -7218,7 +7218,7 @@
     "id": "in_state_maharashtra",
     "type": "state",
     "name": "Maharashtra",
-    "geometryType": "polygon",
+    "geometryType": "point",
     "labelPoint": [
       75.7,
       19.6
@@ -7231,7 +7231,7 @@
     "id": "in_state_manipur",
     "type": "state",
     "name": "Manipur",
-    "geometryType": "polygon",
+    "geometryType": "point",
     "labelPoint": [
       93.9,
       24.8
@@ -7244,7 +7244,7 @@
     "id": "in_state_meghalaya",
     "type": "state",
     "name": "Meghalaya",
-    "geometryType": "polygon",
+    "geometryType": "point",
     "labelPoint": [
       91.3,
       25.5
@@ -7257,7 +7257,7 @@
     "id": "in_state_mizoram",
     "type": "state",
     "name": "Mizoram",
-    "geometryType": "polygon",
+    "geometryType": "point",
     "labelPoint": [
       92.8,
       23.2
@@ -7270,7 +7270,7 @@
     "id": "in_state_nagaland",
     "type": "state",
     "name": "Nagaland",
-    "geometryType": "polygon",
+    "geometryType": "point",
     "labelPoint": [
       94.3,
       26.2
@@ -7283,7 +7283,7 @@
     "id": "in_state_odisha",
     "type": "state",
     "name": "Odisha",
-    "geometryType": "polygon",
+    "geometryType": "point",
     "labelPoint": [
       85.1,
       20.3
@@ -7296,7 +7296,7 @@
     "id": "in_state_punjab",
     "type": "state",
     "name": "Punjab",
-    "geometryType": "polygon",
+    "geometryType": "point",
     "labelPoint": [
       75.4,
       31.1
@@ -7309,7 +7309,7 @@
     "id": "in_state_rajasthan",
     "type": "state",
     "name": "Rajasthan",
-    "geometryType": "polygon",
+    "geometryType": "point",
     "labelPoint": [
       73.8,
       26.9
@@ -7322,7 +7322,7 @@
     "id": "in_state_sikkim",
     "type": "state",
     "name": "Sikkim",
-    "geometryType": "polygon",
+    "geometryType": "point",
     "labelPoint": [
       88.5,
       27.5
@@ -7335,7 +7335,7 @@
     "id": "in_state_tamil_nadu",
     "type": "state",
     "name": "Tamil Nadu",
-    "geometryType": "polygon",
+    "geometryType": "point",
     "labelPoint": [
       78.7,
       11.1
@@ -7348,7 +7348,7 @@
     "id": "in_state_telangana",
     "type": "state",
     "name": "Telangana",
-    "geometryType": "polygon",
+    "geometryType": "point",
     "labelPoint": [
       79.2,
       17.9
@@ -7361,7 +7361,7 @@
     "id": "in_state_tripura",
     "type": "state",
     "name": "Tripura",
-    "geometryType": "polygon",
+    "geometryType": "point",
     "labelPoint": [
       91.7,
       23.9
@@ -7374,7 +7374,7 @@
     "id": "in_state_uttar_pradesh",
     "type": "state",
     "name": "Uttar Pradesh",
-    "geometryType": "polygon",
+    "geometryType": "point",
     "labelPoint": [
       80.9,
       26.8
@@ -7387,7 +7387,7 @@
     "id": "in_state_uttarakhand",
     "type": "state",
     "name": "Uttarakhand",
-    "geometryType": "polygon",
+    "geometryType": "point",
     "labelPoint": [
       79,
       30.1
@@ -7400,13 +7400,273 @@
     "id": "in_state_west_bengal",
     "type": "state",
     "name": "West Bengal",
-    "geometryType": "polygon",
+    "geometryType": "point",
     "labelPoint": [
       87.9,
       23.2
     ],
     "packIds": [
       "india_states_capitals"
+    ]
+  },
+  {
+    "id": "india_landmark_ajanta_ellora",
+    "type": "region",
+    "name": "Ajanta & Ellora Caves",
+    "geometryType": "point",
+    "labelPoint": [
+      75.701,
+      20.0268
+    ],
+    "packIds": [
+      "india_rivers_mountains_landmarks"
+    ]
+  },
+  {
+    "id": "india_landmark_gateway_of_india",
+    "type": "region",
+    "name": "Gateway of India",
+    "geometryType": "point",
+    "labelPoint": [
+      72.8347,
+      18.922
+    ],
+    "packIds": [
+      "india_rivers_mountains_landmarks"
+    ]
+  },
+  {
+    "id": "india_landmark_hampi",
+    "type": "region",
+    "name": "Hampi Monuments",
+    "geometryType": "point",
+    "labelPoint": [
+      76.46,
+      15.34
+    ],
+    "packIds": [
+      "india_rivers_mountains_landmarks"
+    ]
+  },
+  {
+    "id": "india_landmark_konark_sun_temple",
+    "type": "region",
+    "name": "Konark Sun Temple",
+    "geometryType": "point",
+    "labelPoint": [
+      86.0945,
+      19.8876
+    ],
+    "packIds": [
+      "india_rivers_mountains_landmarks"
+    ]
+  },
+  {
+    "id": "india_landmark_qutub_minar",
+    "type": "region",
+    "name": "Qutub Minar",
+    "geometryType": "point",
+    "labelPoint": [
+      77.1855,
+      28.5245
+    ],
+    "packIds": [
+      "india_rivers_mountains_landmarks"
+    ]
+  },
+  {
+    "id": "india_landmark_red_fort",
+    "type": "region",
+    "name": "Red Fort",
+    "geometryType": "point",
+    "labelPoint": [
+      77.241,
+      28.6562
+    ],
+    "packIds": [
+      "india_rivers_mountains_landmarks"
+    ]
+  },
+  {
+    "id": "india_landmark_taj_mahal",
+    "type": "region",
+    "name": "Taj Mahal",
+    "geometryType": "point",
+    "labelPoint": [
+      78.0421,
+      27.1751
+    ],
+    "packIds": [
+      "india_rivers_mountains_landmarks"
+    ]
+  },
+  {
+    "id": "india_range_aravalli",
+    "type": "mountain",
+    "name": "Aravalli Range",
+    "geometryType": "line",
+    "labelPoint": [
+      74.2,
+      26.9
+    ],
+    "packIds": [
+      "india_rivers_mountains_landmarks"
+    ]
+  },
+  {
+    "id": "india_range_eastern_ghats",
+    "type": "mountain",
+    "name": "Eastern Ghats",
+    "geometryType": "line",
+    "labelPoint": [
+      81.7,
+      16
+    ],
+    "packIds": [
+      "india_rivers_mountains_landmarks"
+    ]
+  },
+  {
+    "id": "india_range_himalayas",
+    "type": "mountain",
+    "name": "Himalayas (India arc)",
+    "geometryType": "line",
+    "labelPoint": [
+      82.2,
+      31
+    ],
+    "packIds": [
+      "india_rivers_mountains_landmarks"
+    ]
+  },
+  {
+    "id": "india_range_purvanchal",
+    "type": "mountain",
+    "name": "Purvanchal Hills",
+    "geometryType": "line",
+    "labelPoint": [
+      93.3,
+      25.5
+    ],
+    "packIds": [
+      "india_rivers_mountains_landmarks"
+    ]
+  },
+  {
+    "id": "india_range_satpura",
+    "type": "mountain",
+    "name": "Satpura Range",
+    "geometryType": "line",
+    "labelPoint": [
+      77.2,
+      22.2
+    ],
+    "packIds": [
+      "india_rivers_mountains_landmarks"
+    ]
+  },
+  {
+    "id": "india_range_vindhya",
+    "type": "mountain",
+    "name": "Vindhya Range",
+    "geometryType": "line",
+    "labelPoint": [
+      79.8,
+      24.2
+    ],
+    "packIds": [
+      "india_rivers_mountains_landmarks"
+    ]
+  },
+  {
+    "id": "india_range_western_ghats",
+    "type": "mountain",
+    "name": "Western Ghats",
+    "geometryType": "line",
+    "labelPoint": [
+      74.4,
+      14.8
+    ],
+    "packIds": [
+      "india_rivers_mountains_landmarks"
+    ]
+  },
+  {
+    "id": "india_river_brahmaputra",
+    "type": "river",
+    "name": "Brahmaputra",
+    "geometryType": "line",
+    "labelPoint": [
+      91.6,
+      26.6
+    ],
+    "packIds": [
+      "india_rivers_mountains_landmarks"
+    ]
+  },
+  {
+    "id": "india_river_ganges",
+    "type": "river",
+    "name": "Ganges",
+    "geometryType": "line",
+    "labelPoint": [
+      83.8,
+      25.4
+    ],
+    "packIds": [
+      "india_rivers_mountains_landmarks"
+    ]
+  },
+  {
+    "id": "india_river_godavari",
+    "type": "river",
+    "name": "Godavari",
+    "geometryType": "line",
+    "labelPoint": [
+      78.8,
+      18.6
+    ],
+    "packIds": [
+      "india_rivers_mountains_landmarks"
+    ]
+  },
+  {
+    "id": "india_river_indus",
+    "type": "river",
+    "name": "Indus (India segment)",
+    "geometryType": "line",
+    "labelPoint": [
+      75.5,
+      34.5
+    ],
+    "packIds": [
+      "india_rivers_mountains_landmarks"
+    ]
+  },
+  {
+    "id": "india_river_krishna",
+    "type": "river",
+    "name": "Krishna",
+    "geometryType": "line",
+    "labelPoint": [
+      77.8,
+      16.5
+    ],
+    "packIds": [
+      "india_rivers_mountains_landmarks"
+    ]
+  },
+  {
+    "id": "india_river_narmada",
+    "type": "river",
+    "name": "Narmada",
+    "geometryType": "line",
+    "labelPoint": [
+      78.2,
+      22.3
+    ],
+    "packIds": [
+      "india_rivers_mountains_landmarks"
     ]
   },
   {
@@ -9571,7 +9831,7 @@
     "id": "state_alabama",
     "type": "state",
     "name": "Alabama",
-    "geometryType": "polygon",
+    "geometryType": "point",
     "labelPoint": [
       -86.8,
       32.8
@@ -9585,7 +9845,7 @@
     "id": "state_alaska",
     "type": "state",
     "name": "Alaska",
-    "geometryType": "polygon",
+    "geometryType": "point",
     "labelPoint": [
       -152.4,
       64.2
@@ -9599,7 +9859,7 @@
     "id": "state_arizona",
     "type": "state",
     "name": "Arizona",
-    "geometryType": "polygon",
+    "geometryType": "point",
     "labelPoint": [
       -111.7,
       34.2
@@ -9613,7 +9873,7 @@
     "id": "state_arkansas",
     "type": "state",
     "name": "Arkansas",
-    "geometryType": "polygon",
+    "geometryType": "point",
     "labelPoint": [
       -92.3,
       34.9
@@ -9627,7 +9887,7 @@
     "id": "state_california",
     "type": "state",
     "name": "California",
-    "geometryType": "polygon",
+    "geometryType": "point",
     "labelPoint": [
       -119.4,
       36.8
@@ -9641,7 +9901,7 @@
     "id": "state_colorado",
     "type": "state",
     "name": "Colorado",
-    "geometryType": "polygon",
+    "geometryType": "point",
     "labelPoint": [
       -105.5,
       39
@@ -9655,7 +9915,7 @@
     "id": "state_connecticut",
     "type": "state",
     "name": "Connecticut",
-    "geometryType": "polygon",
+    "geometryType": "point",
     "labelPoint": [
       -72.7,
       41.6
@@ -9669,7 +9929,7 @@
     "id": "state_delaware",
     "type": "state",
     "name": "Delaware",
-    "geometryType": "polygon",
+    "geometryType": "point",
     "labelPoint": [
       -75.5,
       39
@@ -9683,7 +9943,7 @@
     "id": "state_florida",
     "type": "state",
     "name": "Florida",
-    "geometryType": "polygon",
+    "geometryType": "point",
     "labelPoint": [
       -82,
       27.8
@@ -9697,7 +9957,7 @@
     "id": "state_georgia",
     "type": "state",
     "name": "Georgia",
-    "geometryType": "polygon",
+    "geometryType": "point",
     "labelPoint": [
       -83.4,
       32.6
@@ -9711,7 +9971,7 @@
     "id": "state_hawaii",
     "type": "state",
     "name": "Hawaii",
-    "geometryType": "polygon",
+    "geometryType": "point",
     "labelPoint": [
       -157.5,
       20.9
@@ -9725,7 +9985,7 @@
     "id": "state_idaho",
     "type": "state",
     "name": "Idaho",
-    "geometryType": "polygon",
+    "geometryType": "point",
     "labelPoint": [
       -114.4,
       44.2
@@ -9739,7 +9999,7 @@
     "id": "state_illinois",
     "type": "state",
     "name": "Illinois",
-    "geometryType": "polygon",
+    "geometryType": "point",
     "labelPoint": [
       -89.2,
       40
@@ -9753,7 +10013,7 @@
     "id": "state_indiana",
     "type": "state",
     "name": "Indiana",
-    "geometryType": "polygon",
+    "geometryType": "point",
     "labelPoint": [
       -86.1,
       40
@@ -9767,7 +10027,7 @@
     "id": "state_iowa",
     "type": "state",
     "name": "Iowa",
-    "geometryType": "polygon",
+    "geometryType": "point",
     "labelPoint": [
       -93.5,
       42.1
@@ -9781,7 +10041,7 @@
     "id": "state_kansas",
     "type": "state",
     "name": "Kansas",
-    "geometryType": "polygon",
+    "geometryType": "point",
     "labelPoint": [
       -98.3,
       38.5
@@ -9795,7 +10055,7 @@
     "id": "state_kentucky",
     "type": "state",
     "name": "Kentucky",
-    "geometryType": "polygon",
+    "geometryType": "point",
     "labelPoint": [
       -84.7,
       37.5
@@ -9809,7 +10069,7 @@
     "id": "state_louisiana",
     "type": "state",
     "name": "Louisiana",
-    "geometryType": "polygon",
+    "geometryType": "point",
     "labelPoint": [
       -91.9,
       31.2
@@ -9823,7 +10083,7 @@
     "id": "state_maine",
     "type": "state",
     "name": "Maine",
-    "geometryType": "polygon",
+    "geometryType": "point",
     "labelPoint": [
       -69,
       45.3
@@ -9837,7 +10097,7 @@
     "id": "state_maryland",
     "type": "state",
     "name": "Maryland",
-    "geometryType": "polygon",
+    "geometryType": "point",
     "labelPoint": [
       -76.7,
       39
@@ -9851,7 +10111,7 @@
     "id": "state_massachusetts",
     "type": "state",
     "name": "Massachusetts",
-    "geometryType": "polygon",
+    "geometryType": "point",
     "labelPoint": [
       -71.8,
       42.3
@@ -9865,7 +10125,7 @@
     "id": "state_michigan",
     "type": "state",
     "name": "Michigan",
-    "geometryType": "polygon",
+    "geometryType": "point",
     "labelPoint": [
       -85.6,
       44.3
@@ -9879,7 +10139,7 @@
     "id": "state_minnesota",
     "type": "state",
     "name": "Minnesota",
-    "geometryType": "polygon",
+    "geometryType": "point",
     "labelPoint": [
       -94.2,
       46.3
@@ -9893,7 +10153,7 @@
     "id": "state_mississippi",
     "type": "state",
     "name": "Mississippi",
-    "geometryType": "polygon",
+    "geometryType": "point",
     "labelPoint": [
       -89.7,
       32.7
@@ -9907,7 +10167,7 @@
     "id": "state_missouri",
     "type": "state",
     "name": "Missouri",
-    "geometryType": "polygon",
+    "geometryType": "point",
     "labelPoint": [
       -92.6,
       38.3
@@ -9921,7 +10181,7 @@
     "id": "state_montana",
     "type": "state",
     "name": "Montana",
-    "geometryType": "polygon",
+    "geometryType": "point",
     "labelPoint": [
       -110,
       46.9
@@ -9935,7 +10195,7 @@
     "id": "state_nebraska",
     "type": "state",
     "name": "Nebraska",
-    "geometryType": "polygon",
+    "geometryType": "point",
     "labelPoint": [
       -99.7,
       41.5
@@ -9949,7 +10209,7 @@
     "id": "state_nevada",
     "type": "state",
     "name": "Nevada",
-    "geometryType": "polygon",
+    "geometryType": "point",
     "labelPoint": [
       -116.6,
       38.8
@@ -9963,7 +10223,7 @@
     "id": "state_new_hampshire",
     "type": "state",
     "name": "New Hampshire",
-    "geometryType": "polygon",
+    "geometryType": "point",
     "labelPoint": [
       -71.6,
       43.7
@@ -9977,7 +10237,7 @@
     "id": "state_new_jersey",
     "type": "state",
     "name": "New Jersey",
-    "geometryType": "polygon",
+    "geometryType": "point",
     "labelPoint": [
       -74.5,
       40.1
@@ -9991,7 +10251,7 @@
     "id": "state_new_mexico",
     "type": "state",
     "name": "New Mexico",
-    "geometryType": "polygon",
+    "geometryType": "point",
     "labelPoint": [
       -106.1,
       34.4
@@ -10005,7 +10265,7 @@
     "id": "state_new_york",
     "type": "state",
     "name": "New York",
-    "geometryType": "polygon",
+    "geometryType": "point",
     "labelPoint": [
       -75.5,
       43
@@ -10019,7 +10279,7 @@
     "id": "state_north_carolina",
     "type": "state",
     "name": "North Carolina",
-    "geometryType": "polygon",
+    "geometryType": "point",
     "labelPoint": [
       -79.4,
       35.5
@@ -10033,7 +10293,7 @@
     "id": "state_north_dakota",
     "type": "state",
     "name": "North Dakota",
-    "geometryType": "polygon",
+    "geometryType": "point",
     "labelPoint": [
       -100.5,
       47.5
@@ -10047,7 +10307,7 @@
     "id": "state_ohio",
     "type": "state",
     "name": "Ohio",
-    "geometryType": "polygon",
+    "geometryType": "point",
     "labelPoint": [
       -82.8,
       40.4
@@ -10061,7 +10321,7 @@
     "id": "state_oklahoma",
     "type": "state",
     "name": "Oklahoma",
-    "geometryType": "polygon",
+    "geometryType": "point",
     "labelPoint": [
       -97.5,
       35.6
@@ -10075,7 +10335,7 @@
     "id": "state_oregon",
     "type": "state",
     "name": "Oregon",
-    "geometryType": "polygon",
+    "geometryType": "point",
     "labelPoint": [
       -120.5,
       43.9
@@ -10089,7 +10349,7 @@
     "id": "state_pennsylvania",
     "type": "state",
     "name": "Pennsylvania",
-    "geometryType": "polygon",
+    "geometryType": "point",
     "labelPoint": [
       -77.8,
       41.2
@@ -10103,7 +10363,7 @@
     "id": "state_rhode_island",
     "type": "state",
     "name": "Rhode Island",
-    "geometryType": "polygon",
+    "geometryType": "point",
     "labelPoint": [
       -71.5,
       41.7
@@ -10117,7 +10377,7 @@
     "id": "state_south_carolina",
     "type": "state",
     "name": "South Carolina",
-    "geometryType": "polygon",
+    "geometryType": "point",
     "labelPoint": [
       -80.9,
       33.8
@@ -10131,7 +10391,7 @@
     "id": "state_south_dakota",
     "type": "state",
     "name": "South Dakota",
-    "geometryType": "polygon",
+    "geometryType": "point",
     "labelPoint": [
       -100.3,
       44.4
@@ -10145,7 +10405,7 @@
     "id": "state_tennessee",
     "type": "state",
     "name": "Tennessee",
-    "geometryType": "polygon",
+    "geometryType": "point",
     "labelPoint": [
       -86.4,
       35.8
@@ -10159,7 +10419,7 @@
     "id": "state_texas",
     "type": "state",
     "name": "Texas",
-    "geometryType": "polygon",
+    "geometryType": "point",
     "labelPoint": [
       -99.3,
       31.5
@@ -10173,7 +10433,7 @@
     "id": "state_utah",
     "type": "state",
     "name": "Utah",
-    "geometryType": "polygon",
+    "geometryType": "point",
     "labelPoint": [
       -111.7,
       39.3
@@ -10187,7 +10447,7 @@
     "id": "state_vermont",
     "type": "state",
     "name": "Vermont",
-    "geometryType": "polygon",
+    "geometryType": "point",
     "labelPoint": [
       -72.7,
       44
@@ -10201,7 +10461,7 @@
     "id": "state_virginia",
     "type": "state",
     "name": "Virginia",
-    "geometryType": "polygon",
+    "geometryType": "point",
     "labelPoint": [
       -78.6,
       37.5
@@ -10215,7 +10475,7 @@
     "id": "state_washington",
     "type": "state",
     "name": "Washington",
-    "geometryType": "polygon",
+    "geometryType": "point",
     "labelPoint": [
       -120.7,
       47.4
@@ -10229,7 +10489,7 @@
     "id": "state_west_virginia",
     "type": "state",
     "name": "West Virginia",
-    "geometryType": "polygon",
+    "geometryType": "point",
     "labelPoint": [
       -80.6,
       38.6
@@ -10243,7 +10503,7 @@
     "id": "state_wisconsin",
     "type": "state",
     "name": "Wisconsin",
-    "geometryType": "polygon",
+    "geometryType": "point",
     "labelPoint": [
       -89.9,
       44.5
@@ -10257,7 +10517,7 @@
     "id": "state_wyoming",
     "type": "state",
     "name": "Wyoming",
-    "geometryType": "polygon",
+    "geometryType": "point",
     "labelPoint": [
       -107.6,
       43.1

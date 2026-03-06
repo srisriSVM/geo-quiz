@@ -29,6 +29,22 @@
     }
   },
   {
+    "id": "india_rivers_mountains_landmarks",
+    "name": "India: Rivers, Mountains & Landmarks",
+    "types": [
+      "river",
+      "mountain",
+      "region"
+    ],
+    "defaultViewport": {
+      "center": [
+        78.5,
+        22.8
+      ],
+      "zoom": 4.2
+    }
+  },
+  {
     "id": "india_states_capitals",
     "name": "India: States & Capitals",
     "types": [
