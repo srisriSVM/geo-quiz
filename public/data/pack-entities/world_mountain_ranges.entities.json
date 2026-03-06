@@ -40,6 +40,12 @@
     "packIds": [
       "world_mountain_ranges"
     ],
+    "media": {
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Alps_scenery.jpg",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Alps",
+      "credit": "Wikimedia",
+      "alt": "Alps mountain range"
+    },
     "bbox": [
       5,
       44.5,
@@ -130,6 +136,12 @@
         "icon": "mountain"
       }
     ],
+    "media": {
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Andes_mountains.jpg",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Andes",
+      "credit": "Wikimedia",
+      "alt": "Andes mountain range"
+    },
     "bbox": [
       -79,
       -52,

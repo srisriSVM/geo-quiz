@@ -102,6 +102,12 @@
         "icon": "globe"
       }
     ],
+    "media": {
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Mount_Everest_as_seen_from_Drukair2_PLW_edit.jpg",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Mount_Everest",
+      "credit": "Wikimedia",
+      "alt": "Mount Everest peak"
+    },
     "bbox": [
       86.925,
       27.9881,

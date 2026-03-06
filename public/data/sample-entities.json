@@ -255,7 +255,23 @@
         "value": "Mont Blanc",
         "icon": "mountain"
       }
-    ]
+    ],
+    "media": {
+      "images": [
+        {
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/en/c/c3/Flag_of_France.svg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/France",
+          "credit": "Wikimedia",
+          "alt": "Flag of France"
+        },
+        {
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Tour_Eiffel_Wikimedia_Commons_%28cropped%29.jpg/330px-Tour_Eiffel_Wikimedia_Commons_%28cropped%29.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Eiffel_Tower",
+          "credit": "Wikimedia",
+          "alt": "Eiffel Tower in Paris"
+        }
+      ]
+    }
   },
   {
     "id": "country_georgia",
@@ -317,7 +333,23 @@
         "value": "Rhine",
         "icon": "river"
       }
-    ]
+    ],
+    "media": {
+      "images": [
+        {
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/en/b/ba/Flag_of_Germany.svg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Germany",
+          "credit": "Wikimedia",
+          "alt": "Flag of Germany"
+        },
+        {
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Brandenburger_Tor_abends.jpg/330px-Brandenburger_Tor_abends.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Brandenburg_Gate",
+          "credit": "Wikimedia",
+          "alt": "Brandenburg Gate in Berlin"
+        }
+      ]
+    }
   },
   {
     "id": "country_greece",
@@ -1072,7 +1104,13 @@
         "value": "Nepal - Tibet",
         "icon": "globe"
       }
-    ]
+    ],
+    "media": {
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Mount_Everest_as_seen_from_Drukair2_PLW_edit.jpg",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Mount_Everest",
+      "credit": "Wikimedia",
+      "alt": "Mount Everest peak"
+    }
   },
   {
     "id": "mountain_k2",
@@ -1313,7 +1351,13 @@
         "value": "Egypt",
         "icon": "city"
       }
-    ]
+    ],
+    "media": {
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Nile_River_and_delta_from_orbit.jpg",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Nile",
+      "credit": "Wikimedia",
+      "alt": "Nile river and delta"
+    }
   },
   {
     "id": "river_amazon",
@@ -1377,7 +1421,13 @@
         "value": "Northern South America",
         "icon": "globe"
       }
-    ]
+    ],
+    "media": {
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Amazon_river.jpg",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Amazon_River",
+      "credit": "Wikimedia",
+      "alt": "Amazon river in South America"
+    }
   },
   {
     "id": "river_mississippi",
@@ -1557,7 +1607,13 @@
     ],
     "packIds": [
       "world_rivers"
-    ]
+    ],
+    "media": {
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Mekong_River_at_Luang_Prabang.jpg",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Mekong",
+      "credit": "Wikimedia",
+      "alt": "Mekong river"
+    }
   },
   {
     "id": "river_congo",
@@ -1791,7 +1847,13 @@
         "value": "Mount Whitney",
         "icon": "mountain"
       }
-    ]
+    ],
+    "media": {
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_California.svg",
+      "sourceUrl": "https://en.wikipedia.org/wiki/California",
+      "credit": "Wikimedia",
+      "alt": "Flag of California"
+    }
   },
   {
     "id": "state_colorado",
@@ -2629,7 +2691,13 @@
         "value": "Aconcagua",
         "icon": "mountain"
       }
-    ]
+    ],
+    "media": {
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Andes_mountains.jpg",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Andes",
+      "credit": "Wikimedia",
+      "alt": "Andes mountain range"
+    }
   },
   {
     "id": "range_rocky_mountains",
@@ -2801,7 +2869,13 @@
     ],
     "packIds": [
       "world_mountain_ranges"
-    ]
+    ],
+    "media": {
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Alps_scenery.jpg",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Alps",
+      "credit": "Wikimedia",
+      "alt": "Alps mountain range"
+    }
   },
   {
     "id": "range_atlas",

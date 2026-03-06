@@ -16,6 +16,7 @@ type ChoiceItem = {
 export class QuizPanel {
   readonly root: HTMLElement;
 
+  private readonly dragStripEl: HTMLElement;
   private readonly headingEl: HTMLElement;
   private readonly promptEl: HTMLElement;
   private readonly answerGroupEl: HTMLElement;
@@ -28,6 +29,7 @@ export class QuizPanel {
   private readonly needPracticeButton: HTMLButtonElement;
   private readonly choicesEl: HTMLElement;
   private readonly learnInfoEl: HTMLElement;
+  private mediaRenderToken = 0;
   private dragging = false;
   private dragOffsetX = 0;
   private dragOffsetY = 0;
@@ -37,6 +39,7 @@ export class QuizPanel {
     this.root.className = "quiz-panel";
 
     this.root.innerHTML = `
+      <div data-role="drag-strip" class="quiz-panel-drag-strip" aria-label="Move panel"></div>
       <h2 data-role="heading">Geo Bee Trainer</h2>
       <p data-role="prompt"><strong>Prompt:</strong> Loading data...</p>
       <p data-role="learn-title" class="learn-target-title" style="display:none;"></p>
@@ -54,6 +57,7 @@ export class QuizPanel {
       <p data-role="feedback" style="margin-bottom: 0;"><strong>Feedback:</strong> Waiting for your answer.</p>
     `;
 
+    this.dragStripEl = this.query<HTMLElement>("[data-role='drag-strip']");
     this.headingEl = this.query<HTMLElement>("[data-role='heading']");
     this.promptEl = this.query<HTMLElement>("[data-role='prompt']");
     this.answerGroupEl = this.query<HTMLElement>("[data-role='answer-group']");
@@ -66,8 +70,6 @@ export class QuizPanel {
     this.needPracticeButton = this.query<HTMLButtonElement>("[data-role='need-practice']");
     this.choicesEl = this.query<HTMLElement>("[data-role='choices']");
     this.learnInfoEl = this.query<HTMLElement>("[data-role='learn-info']");
-    this.headingEl.classList.add("quiz-panel-drag-handle");
-
     const submit = (): void => {
       actions.onSubmit(this.answerInput.value);
     };
@@ -93,19 +95,19 @@ export class QuizPanel {
       }
     });
 
-    this.headingEl.addEventListener("pointerdown", (event) => {
+    this.dragStripEl.addEventListener("pointerdown", (event) => {
       const rect = this.root.getBoundingClientRect();
       this.dragging = true;
       this.dragOffsetX = event.clientX - rect.left;
       this.dragOffsetY = event.clientY - rect.top;
-      this.headingEl.setPointerCapture(event.pointerId);
-      this.headingEl.classList.add("quiz-panel-dragging");
+      this.dragStripEl.setPointerCapture(event.pointerId);
+      this.root.classList.add("quiz-panel-dragging");
       this.root.style.right = "auto";
       this.root.style.bottom = "auto";
       this.movePanel(event.clientX, event.clientY);
     });
 
-    this.headingEl.addEventListener("pointermove", (event) => {
+    this.dragStripEl.addEventListener("pointermove", (event) => {
       if (!this.dragging) {
         return;
       }
@@ -117,16 +119,16 @@ export class QuizPanel {
         return;
       }
       this.dragging = false;
-      this.headingEl.classList.remove("quiz-panel-dragging");
-      if (typeof pointerId === "number" && this.headingEl.hasPointerCapture(pointerId)) {
-        this.headingEl.releasePointerCapture(pointerId);
+      this.root.classList.remove("quiz-panel-dragging");
+      if (typeof pointerId === "number" && this.dragStripEl.hasPointerCapture(pointerId)) {
+        this.dragStripEl.releasePointerCapture(pointerId);
       }
     };
 
-    this.headingEl.addEventListener("pointerup", (event) => {
+    this.dragStripEl.addEventListener("pointerup", (event) => {
       stopDrag(event.pointerId);
     });
-    this.headingEl.addEventListener("pointercancel", (event) => {
+    this.dragStripEl.addEventListener("pointercancel", (event) => {
       stopDrag(event.pointerId);
     });
   }
@@ -227,10 +229,13 @@ export class QuizPanel {
 
   setLearnEntityInfo(entity: Entity | null): void {
     if (!entity) {
+      this.mediaRenderToken += 1;
       this.learnInfoEl.style.display = "none";
       this.learnInfoEl.innerHTML = "";
       return;
     }
+    this.mediaRenderToken += 1;
+    const mediaToken = this.mediaRenderToken;
 
     const factCards = (entity.factCards ?? []).slice(0, 4);
     const narrativeFacts = (entity.facts ?? []).slice(0, 2);
@@ -259,8 +264,30 @@ export class QuizPanel {
       lines.push(`<p><strong>Memory tip:</strong> ${entity.mnemonic}</p>`);
     }
 
+    const mediaItems = this.resolveMediaItems(entity);
+    const mediaCard =
+      mediaItems.length > 0
+        ? `<figure class="learn-media-card" data-role="learn-media-card">
+            <img
+              data-role="learn-media-image"
+              alt=""
+              loading="lazy"
+              decoding="async"
+              referrerpolicy="no-referrer"
+            />
+            ${
+              mediaItems.length > 1
+                ? `<button type="button" data-role="media-prev" class="learn-media-nav learn-media-nav--prev" aria-label="Previous image">‹</button>
+                   <button type="button" data-role="media-next" class="learn-media-nav learn-media-nav--next" aria-label="Next image">›</button>
+                   <span data-role="media-count" class="learn-media-count"></span>`
+                : ""
+            }
+            <figcaption data-role="learn-media-caption"></figcaption>
+          </figure>`
+        : "";
+
     const chipRow = chips.length > 0 ? `<div class="learn-chip-row">${chips.join("")}</div>` : "";
-    const hasContent = chips.length > 0 || factCards.length > 0 || lines.length > 0;
+    const hasContent = chips.length > 0 || factCards.length > 0 || lines.length > 0 || mediaCard.length > 0;
     if (!hasContent) {
       this.learnInfoEl.style.display = "none";
       this.learnInfoEl.innerHTML = "";
@@ -277,8 +304,9 @@ export class QuizPanel {
             )
             .join("")}</div>`
         : "";
-    this.learnInfoEl.innerHTML = `<h3 class="learn-info-title">Learn Info</h3>${chipRow}${cardRow}${lines.join("")}`;
+    this.learnInfoEl.innerHTML = `<h3 class="learn-info-title">Learn Info</h3>${chipRow}${mediaCard}${cardRow}${lines.join("")}`;
     this.learnInfoEl.style.display = "block";
+    this.attachMediaHandlers(entity, mediaItems, mediaToken);
   }
 
   private query<T extends HTMLElement>(selector: string): T {
@@ -317,5 +345,87 @@ export class QuizPanel {
       default:
         return "✨";
     }
+  }
+
+  private resolveMediaItems(entity: Entity): Array<{
+    imageUrl: string;
+    sourceUrl?: string;
+    alt?: string;
+    credit?: string;
+  }> {
+    const images = entity.media?.images ?? [];
+    if (images.length > 0) {
+      return images.filter((item) => Boolean(item.imageUrl));
+    }
+    if (entity.media?.imageUrl) {
+      return [entity.media];
+    }
+    return [];
+  }
+
+  private attachMediaHandlers(
+    entity: Entity,
+    mediaItems: Array<{ imageUrl: string; sourceUrl?: string; alt?: string; credit?: string }>,
+    mediaToken: number
+  ): void {
+    const card = this.learnInfoEl.querySelector<HTMLElement>("[data-role='learn-media-card']");
+    const image = this.learnInfoEl.querySelector<HTMLImageElement>("[data-role='learn-media-image']");
+    const caption = this.learnInfoEl.querySelector<HTMLElement>("[data-role='learn-media-caption']");
+    if (!card || !image || !caption || mediaItems.length === 0) {
+      return;
+    }
+
+    const prevButton = this.learnInfoEl.querySelector<HTMLButtonElement>("[data-role='media-prev']");
+    const nextButton = this.learnInfoEl.querySelector<HTMLButtonElement>("[data-role='media-next']");
+    const countEl = this.learnInfoEl.querySelector<HTMLElement>("[data-role='media-count']");
+    Promise.all(mediaItems.map((item) => this.validateImageUrl(item.imageUrl))).then((results) => {
+      if (mediaToken !== this.mediaRenderToken) {
+        return;
+      }
+      const validItems = mediaItems.filter((_, idx) => results[idx]);
+      if (validItems.length === 0) {
+        card.classList.add("learn-media-card--hidden");
+        return;
+      }
+      if (validItems.length <= 1) {
+        prevButton?.classList.add("learn-media-nav--hidden");
+        nextButton?.classList.add("learn-media-nav--hidden");
+        if (countEl) {
+          countEl.style.display = "none";
+        }
+      }
+
+      let index = 0;
+      const renderAt = (nextIndex: number): void => {
+        index = (nextIndex + validItems.length) % validItems.length;
+        const item = validItems[index];
+        image.src = item.imageUrl;
+        image.alt = item.alt ?? `${entity.name} image ${index + 1}`;
+        const credit = item.credit ? `<span>${item.credit}</span>` : "";
+        const source = item.sourceUrl
+          ? `<a href="${item.sourceUrl}" target="_blank" rel="noopener noreferrer">Source</a>`
+          : "";
+        caption.innerHTML = `${credit}${source}`;
+        if (countEl) {
+          countEl.textContent = `${index + 1}/${validItems.length}`;
+        }
+      };
+
+      prevButton?.addEventListener("click", () => renderAt(index - 1));
+      nextButton?.addEventListener("click", () => renderAt(index + 1));
+      renderAt(0);
+    });
+  }
+
+  private validateImageUrl(url: string): Promise<boolean> {
+    return new Promise((resolve) => {
+      const probe = new Image();
+      probe.decoding = "async";
+      probe.loading = "eager";
+      probe.referrerPolicy = "no-referrer";
+      probe.onload = () => resolve(true);
+      probe.onerror = () => resolve(false);
+      probe.src = url;
+    });
   }
 }

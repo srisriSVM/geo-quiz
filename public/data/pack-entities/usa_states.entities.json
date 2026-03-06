@@ -5022,6 +5022,12 @@
         "icon": "mountain"
       }
     ],
+    "media": {
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_California.svg",
+      "sourceUrl": "https://en.wikipedia.org/wiki/California",
+      "credit": "Wikimedia",
+      "alt": "Flag of California"
+    },
     "geometry": {
       "type": "Polygon",
       "coordinates": [

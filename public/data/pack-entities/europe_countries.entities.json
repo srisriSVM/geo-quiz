@@ -346,6 +346,22 @@
         "icon": "mountain"
       }
     ],
+    "media": {
+      "images": [
+        {
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/en/c/c3/Flag_of_France.svg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/France",
+          "credit": "Wikimedia",
+          "alt": "Flag of France"
+        },
+        {
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Tour_Eiffel_Wikimedia_Commons_%28cropped%29.jpg/330px-Tour_Eiffel_Wikimedia_Commons_%28cropped%29.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Eiffel_Tower",
+          "credit": "Wikimedia",
+          "alt": "Eiffel Tower in Paris"
+        }
+      ]
+    },
     "bbox": [
       2.3,
       46.2,
@@ -420,6 +436,22 @@
         "icon": "river"
       }
     ],
+    "media": {
+      "images": [
+        {
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/en/b/ba/Flag_of_Germany.svg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Germany",
+          "credit": "Wikimedia",
+          "alt": "Flag of Germany"
+        },
+        {
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Brandenburger_Tor_abends.jpg/330px-Brandenburger_Tor_abends.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Brandenburg_Gate",
+          "credit": "Wikimedia",
+          "alt": "Brandenburg Gate in Berlin"
+        }
+      ]
+    },
     "bbox": [
       10.4,
       51.2,

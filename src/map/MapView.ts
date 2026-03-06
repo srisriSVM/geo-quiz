@@ -982,7 +982,7 @@ export class MapView {
       label.style.color = "#102a43";
       label.style.border = "1px solid rgba(16,42,67,0.25)";
       label.style.boxShadow = "0 2px 6px rgba(0,0,0,0.2)";
-      this.highlightedLabelMarker = new maplibregl.Marker({ element: label, offset: [0, -24] })
+      this.highlightedLabelMarker = new maplibregl.Marker({ element: label, offset: [0, -48] })
         .setLngLat(target.labelPoint)
         .addTo(this.map);
     }

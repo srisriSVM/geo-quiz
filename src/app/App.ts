@@ -1,5 +1,5 @@
 import { loadPackEntities, loadPacks } from "../data/dataLoader";
-import type { Entity, Pack } from "../data/types";
+import type { Difficulty, Entity, Pack } from "../data/types";
 import { normalizeText } from "../utils/normalize";
 import { MapView } from "../map/MapView";
 import { Hud } from "../ui/Hud";
@@ -19,6 +19,7 @@ type ChoiceStatus = "default" | "locked" | "wrong";
 
 const MAP_DETAIL_KEY = "geo-bee-map-detail";
 const LOW_DATA_MODE_KEY = "geo-bee-low-data-mode";
+const DIFFICULTY_FILTER_KEY = "geo-bee-difficulty-filter";
 
 export class App {
   private readonly host: HTMLElement;
@@ -36,6 +37,7 @@ export class App {
   private quizType: QuizType = "match_round_5";
   private mapDetail: MapDetail = "quiz_clean";
   private lowDataMode = true;
+  private selectedDifficulties: Difficulty[] = ["easy", "medium", "hard"];
   private currentPackId = "";
   private currentEntity: Entity | null = null;
   private hintLength = 2;
@@ -111,6 +113,11 @@ export class App {
         localStorage.setItem(LOW_DATA_MODE_KEY, enabled ? "1" : "0");
         this.mapView?.setLowDataMode(enabled);
       },
+      onDifficultyFilterChange: (difficulties) => {
+        this.selectedDifficulties = difficulties;
+        localStorage.setItem(DIFFICULTY_FILTER_KEY, JSON.stringify(difficulties));
+        void this.startRound();
+      },
       onResetProgress: () => {
         this.handleResetProgress();
       },
@@ -138,11 +145,13 @@ export class App {
     this.currentPackId = firstPack.id;
     this.mapDetail = this.loadMapDetail();
     this.lowDataMode = this.loadLowDataMode();
+    this.selectedDifficulties = this.loadDifficultyFilter();
     this.hud.setMode(this.mode);
     this.hud.setPack(this.currentPackId);
     this.hud.setQuizType(this.quizType);
     this.hud.setMapDetail(this.mapDetail);
     this.hud.setLowDataMode(this.lowDataMode);
+    this.hud.setDifficultyFilter(this.selectedDifficulties);
     this.mapView.setLowDataMode(this.lowDataMode);
     this.mapView.setMapDetail(this.mapDetail);
 
@@ -481,6 +490,25 @@ export class App {
     return true;
   }
 
+  private loadDifficultyFilter(): Difficulty[] {
+    const raw = localStorage.getItem(DIFFICULTY_FILTER_KEY);
+    if (!raw) {
+      return ["easy", "medium", "hard"];
+    }
+    try {
+      const parsed = JSON.parse(raw);
+      if (!Array.isArray(parsed)) {
+        return ["easy", "medium", "hard"];
+      }
+      const valid = parsed.filter((item): item is Difficulty =>
+        item === "easy" || item === "medium" || item === "hard"
+      );
+      return valid.length > 0 ? valid : ["easy", "medium", "hard"];
+    } catch {
+      return ["easy", "medium", "hard"];
+    }
+  }
+
   private handleResetProgress(): void {
     this.progress = {};
     clearProgress();
@@ -497,7 +525,13 @@ export class App {
     if (!this.entitiesByPack[packId]) {
       this.entitiesByPack[packId] = await loadPackEntities(packId);
     }
-    this.activePackEntities = this.entitiesByPack[packId];
+    this.activePackEntities = this.entitiesByPack[packId].filter((entity) =>
+      this.selectedDifficulties.includes(this.effectiveDifficulty(entity))
+    );
+  }
+
+  private effectiveDifficulty(entity: Entity): Difficulty {
+    return entity.difficulty ?? "medium";
   }
 
   private recordProgress(entityId: string, wasCorrect: boolean): void {

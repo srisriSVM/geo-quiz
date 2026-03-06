@@ -20,6 +20,13 @@ export type FactCard = {
   icon?: string;
 };
 
+export type MediaItem = {
+  imageUrl: string;
+  sourceUrl?: string;
+  alt?: string;
+  credit?: string;
+};
+
 export type Entity = {
   id: string;
   type: EntityType;
@@ -34,9 +41,8 @@ export type Entity = {
   pronunciation?: string;
   mnemonic?: string;
   tags?: string[];
-  media?: {
-    imageUrl?: string;
-    credit?: string;
+  media?: MediaItem & {
+    images?: MediaItem[];
   };
   learningObjective?: string;
   geometryType: GeometryType;
