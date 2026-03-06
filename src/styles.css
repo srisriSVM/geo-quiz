@@ -897,22 +897,36 @@ body,
 @media (max-width: 900px) {
   .hud {
     position: fixed;
-    left: 8px !important;
-    right: 8px !important;
-    top: auto !important;
-    bottom: 8px !important;
-    transform: none !important;
+    left: 8px;
+    right: 8px;
+    top: auto;
+    bottom: 8px;
+    transform: none;
     justify-content: stretch;
     z-index: 8;
   }
 
-  .hud-pill {
+  .hud:not(.hud--dragging) .hud-pill {
     width: 100%;
     border-radius: 14px;
     padding: 8px;
     gap: 6px;
     justify-content: space-between;
     cursor: default;
+  }
+
+  .hud.hud--dragging {
+    right: auto;
+    bottom: auto;
+    width: max-content;
+    justify-content: center;
+  }
+
+  .hud.hud--dragging .hud-pill {
+    width: max-content;
+    flex-wrap: nowrap;
+    justify-content: center;
+    cursor: grabbing;
   }
 
   .hud-summary {

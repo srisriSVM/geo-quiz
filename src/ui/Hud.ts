@@ -329,9 +329,12 @@ export class Hud {
       }
       const rect = this.root.getBoundingClientRect();
       this.root.style.right = "auto";
+      this.root.style.bottom = "auto";
       this.root.style.transform = "none";
+      this.root.style.width = `${rect.width}px`;
       this.root.style.left = `${rect.left}px`;
       this.root.style.top = `${rect.top}px`;
+      this.root.classList.add("hud--dragging");
       this.dragging = true;
       this.dragOffsetX = event.clientX - rect.left;
       this.dragOffsetY = event.clientY - rect.top;
@@ -357,6 +360,7 @@ export class Hud {
         return;
       }
       this.dragging = false;
+      this.root.classList.remove("hud--dragging");
       this.hudPillEl.classList.remove("hud-pill--dragging");
       if (typeof pointerId === "number" && this.hudPillEl.hasPointerCapture(pointerId)) {
         this.hudPillEl.releasePointerCapture(pointerId);
