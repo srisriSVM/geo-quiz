@@ -96,6 +96,23 @@
     "packIds": [
       "world_mountain_ranges"
     ],
+    "difficulty": "medium",
+    "ageBand": "9-12",
+    "facts": [
+      "The Andes are the longest continental mountain range.",
+      "They run along western South America."
+    ],
+    "didYouKnow": "Aconcagua, the highest outside Asia, is in the Andes.",
+    "hintTokens": [
+      "South American range along Pacific side."
+    ],
+    "pronunciation": "an-deez",
+    "mnemonic": "Andes run down the west edge of South America.",
+    "tags": [
+      "south-america",
+      "mountain-range"
+    ],
+    "learningObjective": "Follow the north-south chain along western South America.",
     "bbox": [
       -79,
       -52,
@@ -436,6 +453,23 @@
     "packIds": [
       "world_mountain_ranges"
     ],
+    "difficulty": "medium",
+    "ageBand": "9-12",
+    "facts": [
+      "The Himalayas contain the world's highest peaks.",
+      "They stretch across several countries in Asia."
+    ],
+    "didYouKnow": "Many major Asian rivers begin near the Himalayas.",
+    "hintTokens": [
+      "Mountain range north of India with Everest."
+    ],
+    "pronunciation": "him-uh-lay-uhz",
+    "mnemonic": "Himalayas = high mountains north of India.",
+    "tags": [
+      "asia",
+      "mountain-range"
+    ],
+    "learningObjective": "Trace the long arc along northern India.",
     "bbox": [
       72,
       27,

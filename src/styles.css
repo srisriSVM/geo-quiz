@@ -90,6 +90,59 @@ body,
   font-size: 18px;
 }
 
+.learn-info {
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #dbe7f0;
+  background: rgba(248, 250, 252, 0.95);
+  font-size: 13px;
+  line-height: 1.35;
+}
+
+.learn-info-title {
+  margin: 0 0 6px;
+  font-size: 13px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #334e68;
+}
+
+.learn-info p {
+  margin: 6px 0 0;
+}
+
+.learn-chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.learn-chip {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: #e2e8f0;
+  color: #102a43;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.learn-chip--easy {
+  background: #dcfce7;
+  color: #14532d;
+}
+
+.learn-chip--medium {
+  background: #fef3c7;
+  color: #7c2d12;
+}
+
+.learn-chip--hard {
+  background: #fee2e2;
+  color: #7f1d1d;
+}
+
 .quiz-panel-drag-handle {
   cursor: grab;
   user-select: none;

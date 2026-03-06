@@ -312,6 +312,23 @@
       "europe_countries",
       "world_countries"
     ],
+    "difficulty": "easy",
+    "ageBand": "6-8",
+    "facts": [
+      "France is the most visited country in the world by international tourists.",
+      "Paris is called the City of Light."
+    ],
+    "didYouKnow": "The Louvre museum in Paris is the world's most visited museum.",
+    "hintTokens": [
+      "Western Europe country with Paris as capital."
+    ],
+    "pronunciation": "frans",
+    "mnemonic": "Think: F in France, F in Eiffel.",
+    "tags": [
+      "europe",
+      "country"
+    ],
+    "learningObjective": "Notice France on the Atlantic side of Western Europe.",
     "bbox": [
       2.3,
       46.2,
@@ -352,6 +369,23 @@
       "europe_countries",
       "world_countries"
     ],
+    "difficulty": "medium",
+    "ageBand": "9-12",
+    "facts": [
+      "Germany has more than 16 federal states.",
+      "The Rhine River is one of its key waterways."
+    ],
+    "didYouKnow": "Germany is famous for the Black Forest region.",
+    "hintTokens": [
+      "Central Europe country east of France."
+    ],
+    "pronunciation": "jur-muh-nee",
+    "mnemonic": "Germany sits in the center of Europe.",
+    "tags": [
+      "europe",
+      "country"
+    ],
+    "learningObjective": "Find Germany between France and Poland.",
     "bbox": [
       10.4,
       51.2,

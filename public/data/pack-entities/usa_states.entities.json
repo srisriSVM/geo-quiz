@@ -4988,6 +4988,23 @@
     "packIds": [
       "usa_states"
     ],
+    "difficulty": "easy",
+    "ageBand": "6-8",
+    "facts": [
+      "California is the most populous U.S. state.",
+      "It has both Pacific coast and high mountains."
+    ],
+    "didYouKnow": "California's economy is one of the largest in the world if treated as a country.",
+    "hintTokens": [
+      "U.S. west coast state with Los Angeles and San Francisco."
+    ],
+    "pronunciation": "kal-uh-for-nee-uh",
+    "mnemonic": "California hugs the Pacific coast.",
+    "tags": [
+      "usa",
+      "state"
+    ],
+    "learningObjective": "Find the long west-coast state on the Pacific.",
     "geometry": {
       "type": "Polygon",
       "coordinates": [
@@ -13510,6 +13527,23 @@
     "packIds": [
       "usa_states"
     ],
+    "difficulty": "easy",
+    "ageBand": "6-8",
+    "facts": [
+      "Texas is the second-largest U.S. state by area.",
+      "Its capital is Austin."
+    ],
+    "didYouKnow": "Texas has its own power grid for much of the state.",
+    "hintTokens": [
+      "Large southern U.S. state bordering Mexico."
+    ],
+    "pronunciation": "tek-suhs",
+    "mnemonic": "Texas is the big one above Mexico.",
+    "tags": [
+      "usa",
+      "state"
+    ],
+    "learningObjective": "Identify the large state above northeastern Mexico.",
     "geometry": {
       "type": "Polygon",
       "coordinates": [

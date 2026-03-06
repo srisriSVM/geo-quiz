@@ -32,6 +32,7 @@ export class Hud {
   private readonly scoreEl: HTMLElement;
   private readonly streakEl: HTMLElement;
   private readonly progressEl: HTMLElement;
+  private readonly hintButton: HTMLButtonElement;
 
   constructor(packs: Pack[], actions: HudActions) {
     this.root = document.createElement("header");
@@ -90,6 +91,7 @@ export class Hud {
     this.scoreEl = this.query<HTMLElement>("[data-role='score']");
     this.streakEl = this.query<HTMLElement>("[data-role='streak']");
     this.progressEl = this.query<HTMLElement>("[data-role='progress']");
+    this.hintButton = this.query<HTMLButtonElement>("[data-role='hint']");
 
     for (const pack of packs) {
       const option = document.createElement("option");
@@ -122,7 +124,7 @@ export class Hud {
       actions.onLowDataModeChange(this.lowDataCheckbox.checked);
     });
 
-    this.query<HTMLButtonElement>("[data-role='hint']").addEventListener("click", actions.onHint);
+    this.hintButton.addEventListener("click", actions.onHint);
     this.query<HTMLButtonElement>("[data-role='reveal']").addEventListener("click", actions.onReveal);
     this.query<HTMLButtonElement>("[data-role='next']").addEventListener("click", actions.onNext);
     this.query<HTMLButtonElement>("[data-role='reset-progress']").addEventListener("click", actions.onResetProgress);
@@ -130,6 +132,7 @@ export class Hud {
 
   setMode(mode: "learn" | "quiz"): void {
     this.modeSelect.value = mode;
+    this.hintButton.style.display = mode === "quiz" ? "inline-block" : "none";
   }
 
   setPack(packId: string): void {

@@ -28,6 +28,23 @@
     "packIds": [
       "world_rivers"
     ],
+    "difficulty": "medium",
+    "ageBand": "9-12",
+    "facts": [
+      "The Amazon has the largest drainage basin on Earth.",
+      "It carries more water than any other river."
+    ],
+    "didYouKnow": "The Amazon rainforest is named after this river.",
+    "hintTokens": [
+      "Huge South American river crossing Peru and Brazil."
+    ],
+    "pronunciation": "am-uh-zon",
+    "mnemonic": "Amazon = huge water in South America.",
+    "tags": [
+      "south-america",
+      "river"
+    ],
+    "learningObjective": "Locate the west-to-east path across northern South America.",
     "bbox": [
       -73.99,
       -4.2,
@@ -316,6 +333,23 @@
     "packIds": [
       "world_rivers"
     ],
+    "difficulty": "easy",
+    "ageBand": "6-8",
+    "facts": [
+      "The Nile is one of the longest rivers in the world.",
+      "It flows north into the Mediterranean Sea."
+    ],
+    "didYouKnow": "Ancient Egyptian civilization grew along the Nile.",
+    "hintTokens": [
+      "Major African river flowing north through Egypt."
+    ],
+    "pronunciation": "nile",
+    "mnemonic": "Nile goes north.",
+    "tags": [
+      "africa",
+      "river"
+    ],
+    "learningObjective": "Trace the river from East Africa to Egypt.",
     "bbox": [
       31.2,
       3,

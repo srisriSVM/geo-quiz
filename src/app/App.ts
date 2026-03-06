@@ -39,6 +39,7 @@ export class App {
   private currentPackId = "";
   private currentEntity: Entity | null = null;
   private hintLength = 2;
+  private hintTokenIndex = 0;
 
   private score = 0;
   private streak = 0;
@@ -194,26 +195,30 @@ export class App {
       this.matchRound = null;
       this.currentEntity = this.pickRandom(items, excludeEntityId);
       this.hintLength = 2;
+      this.hintTokenIndex = 0;
       this.mapView.setHighlightedEntity(this.currentEntity.id);
       this.panel.setHeading("Learn Mode");
-      this.panel.setPrompt(
-        `Study this highlighted ${this.currentEntity.type}: ${this.currentEntity.name}. Click Next for another one, or switch Mode to Quiz.`
-      );
-      this.panel.setFeedback(`You are in Learn mode. No answer is required.`);
+      this.panel.setPromptVisible(false);
+      this.panel.setFeedbackVisible(false);
       this.panel.setAnswerVisible(false);
       this.panel.setLearnActionsVisible(true);
+      this.panel.setLearnEntityInfo(this.currentEntity);
       this.panel.setChoicesVisible(false);
       this.panel.setChoices([]);
       this.panel.setAnswerEnabled(false);
     } else {
       this.panel.setHeading("Quiz Mode");
       this.panel.setLearnActionsVisible(false);
+      this.panel.setLearnEntityInfo(null);
+      this.panel.setPromptVisible(true);
+      this.panel.setFeedbackVisible(true);
       if (this.quizType === "match_round_5") {
         this.setupMatchRound(items);
       } else {
         this.matchRound = null;
         this.currentEntity = this.pickRandom(items, excludeEntityId);
         this.hintLength = 2;
+        this.hintTokenIndex = 0;
         this.mapView.setHighlightedEntity(this.currentEntity.id);
         this.mapView.focusEntity(this.currentEntity);
         this.panel.setPrompt("Identify the highlighted location.");
@@ -287,6 +292,7 @@ export class App {
         this.mapView?.setHighlightedEntity(null);
       } else {
         this.currentEntity = this.pickRandom(this.getRemainingRoundEntities());
+        this.hintTokenIndex = 0;
         this.mapView?.setHighlightedEntity(this.currentEntity.id);
         this.mapView?.focusEntity(this.currentEntity);
         this.panel?.setPrompt(`Match the highlighted ${this.currentEntity.type}. Remaining: ${remainingCount}`);
@@ -343,16 +349,23 @@ export class App {
 
     this.currentEntity = selected;
     this.hintLength = 2;
+    this.hintTokenIndex = 0;
     this.mapView.setHighlightedEntity(selected.id);
     this.panel.setHeading("Learn Mode");
-    this.panel.setPrompt(
-      `Study this highlighted ${selected.type}: ${selected.name}. Click Next for another one, or switch Mode to Quiz.`
-    );
-    this.panel.setFeedback(`Selected: ${selected.name}`);
+    this.panel.setPromptVisible(false);
+    this.panel.setFeedbackVisible(false);
+    this.panel.setLearnEntityInfo(selected);
   }
 
   private handleHint(): void {
     if (!this.panel || !this.currentEntity || this.mode !== "quiz") {
+      return;
+    }
+
+    const hintTokens = this.currentEntity.hintTokens ?? [];
+    if (this.hintTokenIndex < hintTokens.length) {
+      this.panel.setFeedback(`Hint: ${hintTokens[this.hintTokenIndex]}`);
+      this.hintTokenIndex += 1;
       return;
     }
 

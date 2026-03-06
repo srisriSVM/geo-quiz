@@ -1,3 +1,5 @@
+import type { Entity } from "../data/types";
+
 type QuizPanelActions = {
   onSubmit: (answer: string) => void;
   onKnowIt: () => void;
@@ -24,6 +26,7 @@ export class QuizPanel {
   private readonly knowItButton: HTMLButtonElement;
   private readonly needPracticeButton: HTMLButtonElement;
   private readonly choicesEl: HTMLElement;
+  private readonly learnInfoEl: HTMLElement;
   private dragging = false;
   private dragOffsetX = 0;
   private dragOffsetY = 0;
@@ -45,6 +48,7 @@ export class QuizPanel {
         <button data-role="know-it" type="button" style="padding: 10px 12px;">I know this</button>
         <button data-role="need-practice" type="button" style="padding: 10px 12px;">Need practice</button>
       </div>
+      <section data-role="learn-info" class="learn-info" style="display:none;"></section>
       <p data-role="feedback" style="margin-bottom: 0;"><strong>Feedback:</strong> Waiting for your answer.</p>
     `;
 
@@ -58,6 +62,7 @@ export class QuizPanel {
     this.knowItButton = this.query<HTMLButtonElement>("[data-role='know-it']");
     this.needPracticeButton = this.query<HTMLButtonElement>("[data-role='need-practice']");
     this.choicesEl = this.query<HTMLElement>("[data-role='choices']");
+    this.learnInfoEl = this.query<HTMLElement>("[data-role='learn-info']");
     this.headingEl.classList.add("quiz-panel-drag-handle");
 
     const submit = (): void => {
@@ -131,8 +136,16 @@ export class QuizPanel {
     this.promptEl.innerHTML = `<strong>Prompt:</strong> ${value}`;
   }
 
+  setPromptVisible(visible: boolean): void {
+    this.promptEl.style.display = visible ? "block" : "none";
+  }
+
   setFeedback(value: string): void {
     this.feedbackEl.innerHTML = `<strong>Feedback:</strong> ${value}`;
+  }
+
+  setFeedbackVisible(visible: boolean): void {
+    this.feedbackEl.style.display = visible ? "block" : "none";
   }
 
   setAnswer(value: string): void {
@@ -155,6 +168,9 @@ export class QuizPanel {
 
   setLearnActionsVisible(visible: boolean): void {
     this.learnActionsEl.style.display = visible ? "flex" : "none";
+    if (!visible) {
+      this.learnInfoEl.style.display = "none";
+    }
   }
 
   setChoicesVisible(visible: boolean): void {
@@ -190,6 +206,48 @@ export class QuizPanel {
     // Force reflow so repeated clicks replay the animation.
     void button.offsetWidth;
     button.classList.add(className);
+  }
+
+  setLearnEntityInfo(entity: Entity | null): void {
+    if (!entity) {
+      this.learnInfoEl.style.display = "none";
+      this.learnInfoEl.innerHTML = "";
+      return;
+    }
+
+    const facts = (entity.facts ?? []).slice(0, 2);
+    const chips: string[] = [];
+    if (entity.difficulty) {
+      chips.push(`<span class="learn-chip learn-chip--${entity.difficulty}">Difficulty: ${entity.difficulty}</span>`);
+    }
+    if (entity.ageBand) {
+      chips.push(`<span class="learn-chip">Age: ${entity.ageBand}</span>`);
+    }
+    if (entity.pronunciation) {
+      chips.push(`<span class="learn-chip">Say: ${entity.pronunciation}</span>`);
+    }
+
+    const lines: string[] = [];
+    if (entity.learningObjective) {
+      lines.push(`<p><strong>Focus:</strong> ${entity.learningObjective}</p>`);
+    } else {
+      lines.push(`<p><strong>Focus:</strong> Identify this ${entity.type} on the map and notice nearby regions.</p>`);
+    }
+    if (facts[0]) {
+      lines.push(`<p><strong>Fact:</strong> ${facts[0]}</p>`);
+    } else {
+      lines.push(`<p><strong>Fact:</strong> No custom fact added yet for ${entity.name}.</p>`);
+    }
+    if (entity.didYouKnow) {
+      lines.push(`<p><strong>Did you know?</strong> ${entity.didYouKnow}</p>`);
+    }
+    if (entity.mnemonic) {
+      lines.push(`<p><strong>Memory tip:</strong> ${entity.mnemonic}</p>`);
+    }
+
+    const chipRow = chips.length > 0 ? `<div class="learn-chip-row">${chips.join("")}</div>` : "";
+    this.learnInfoEl.innerHTML = `<h3 class="learn-info-title">Learn Info</h3>${chipRow}${lines.join("")}`;
+    this.learnInfoEl.style.display = "block";
   }
 
   private query<T extends HTMLElement>(selector: string): T {

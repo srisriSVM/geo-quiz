@@ -221,7 +221,24 @@
     "packIds": [
       "europe_countries",
       "world_countries"
-    ]
+    ],
+    "difficulty": "easy",
+    "ageBand": "6-8",
+    "facts": [
+      "France is the most visited country in the world by international tourists.",
+      "Paris is called the City of Light."
+    ],
+    "didYouKnow": "The Louvre museum in Paris is the world's most visited museum.",
+    "hintTokens": [
+      "Western Europe country with Paris as capital."
+    ],
+    "pronunciation": "frans",
+    "mnemonic": "Think: F in France, F in Eiffel.",
+    "tags": [
+      "europe",
+      "country"
+    ],
+    "learningObjective": "Notice France on the Atlantic side of Western Europe."
   },
   {
     "id": "country_georgia",
@@ -249,7 +266,24 @@
     "packIds": [
       "europe_countries",
       "world_countries"
-    ]
+    ],
+    "difficulty": "medium",
+    "ageBand": "9-12",
+    "facts": [
+      "Germany has more than 16 federal states.",
+      "The Rhine River is one of its key waterways."
+    ],
+    "didYouKnow": "Germany is famous for the Black Forest region.",
+    "hintTokens": [
+      "Central Europe country east of France."
+    ],
+    "pronunciation": "jur-muh-nee",
+    "mnemonic": "Germany sits in the center of Europe.",
+    "tags": [
+      "europe",
+      "country"
+    ],
+    "learningObjective": "Find Germany between France and Poland."
   },
   {
     "id": "country_greece",
@@ -970,7 +1004,24 @@
     ],
     "packIds": [
       "world_mountains"
-    ]
+    ],
+    "difficulty": "easy",
+    "ageBand": "6-8",
+    "facts": [
+      "Mount Everest is the highest mountain above sea level.",
+      "It is in the Himalayas on the Nepal-Tibet border."
+    ],
+    "didYouKnow": "Its summit is 8,848.86 meters above sea level.",
+    "hintTokens": [
+      "Highest peak in the Himalayas."
+    ],
+    "pronunciation": "ev-er-ist",
+    "mnemonic": "Everest = ever highest.",
+    "tags": [
+      "asia",
+      "mountain"
+    ],
+    "learningObjective": "Spot Everest in the Himalaya region north of India."
   },
   {
     "id": "mountain_k2",
@@ -983,7 +1034,24 @@
     ],
     "packIds": [
       "world_mountains"
-    ]
+    ],
+    "difficulty": "hard",
+    "ageBand": "13+",
+    "facts": [
+      "K2 is the second-highest mountain on Earth.",
+      "It lies in the Karakoram range."
+    ],
+    "didYouKnow": "K2 is considered one of the toughest mountains to climb.",
+    "hintTokens": [
+      "Second-highest peak near Pakistan-China border."
+    ],
+    "pronunciation": "kay-too",
+    "mnemonic": "K2 is #2.",
+    "tags": [
+      "asia",
+      "mountain"
+    ],
+    "learningObjective": "Differentiate K2 from Everest in South-Central Asia."
   },
   {
     "id": "mountain_kilimanjaro",
@@ -1143,7 +1211,24 @@
     ],
     "packIds": [
       "world_rivers"
-    ]
+    ],
+    "difficulty": "easy",
+    "ageBand": "6-8",
+    "facts": [
+      "The Nile is one of the longest rivers in the world.",
+      "It flows north into the Mediterranean Sea."
+    ],
+    "didYouKnow": "Ancient Egyptian civilization grew along the Nile.",
+    "hintTokens": [
+      "Major African river flowing north through Egypt."
+    ],
+    "pronunciation": "nile",
+    "mnemonic": "Nile goes north.",
+    "tags": [
+      "africa",
+      "river"
+    ],
+    "learningObjective": "Trace the river from East Africa to Egypt."
   },
   {
     "id": "river_amazon",
@@ -1173,7 +1258,24 @@
     ],
     "packIds": [
       "world_rivers"
-    ]
+    ],
+    "difficulty": "medium",
+    "ageBand": "9-12",
+    "facts": [
+      "The Amazon has the largest drainage basin on Earth.",
+      "It carries more water than any other river."
+    ],
+    "didYouKnow": "The Amazon rainforest is named after this river.",
+    "hintTokens": [
+      "Huge South American river crossing Peru and Brazil."
+    ],
+    "pronunciation": "am-uh-zon",
+    "mnemonic": "Amazon = huge water in South America.",
+    "tags": [
+      "south-america",
+      "river"
+    ],
+    "learningObjective": "Locate the west-to-east path across northern South America."
   },
   {
     "id": "river_mississippi",
@@ -1553,7 +1655,24 @@
     ],
     "packIds": [
       "usa_states"
-    ]
+    ],
+    "difficulty": "easy",
+    "ageBand": "6-8",
+    "facts": [
+      "California is the most populous U.S. state.",
+      "It has both Pacific coast and high mountains."
+    ],
+    "didYouKnow": "California's economy is one of the largest in the world if treated as a country.",
+    "hintTokens": [
+      "U.S. west coast state with Los Angeles and San Francisco."
+    ],
+    "pronunciation": "kal-uh-for-nee-uh",
+    "mnemonic": "California hugs the Pacific coast.",
+    "tags": [
+      "usa",
+      "state"
+    ],
+    "learningObjective": "Find the long west-coast state on the Pacific."
   },
   {
     "id": "state_colorado",
@@ -2161,7 +2280,24 @@
     ],
     "packIds": [
       "usa_states"
-    ]
+    ],
+    "difficulty": "easy",
+    "ageBand": "6-8",
+    "facts": [
+      "Texas is the second-largest U.S. state by area.",
+      "Its capital is Austin."
+    ],
+    "didYouKnow": "Texas has its own power grid for much of the state.",
+    "hintTokens": [
+      "Large southern U.S. state bordering Mexico."
+    ],
+    "pronunciation": "tek-suhs",
+    "mnemonic": "Texas is the big one above Mexico.",
+    "tags": [
+      "usa",
+      "state"
+    ],
+    "learningObjective": "Identify the large state above northeastern Mexico."
   },
   {
     "id": "state_utah",
@@ -2323,7 +2459,24 @@
     ],
     "packIds": [
       "world_mountain_ranges"
-    ]
+    ],
+    "difficulty": "medium",
+    "ageBand": "9-12",
+    "facts": [
+      "The Andes are the longest continental mountain range.",
+      "They run along western South America."
+    ],
+    "didYouKnow": "Aconcagua, the highest outside Asia, is in the Andes.",
+    "hintTokens": [
+      "South American range along Pacific side."
+    ],
+    "pronunciation": "an-deez",
+    "mnemonic": "Andes run down the west edge of South America.",
+    "tags": [
+      "south-america",
+      "mountain-range"
+    ],
+    "learningObjective": "Follow the north-south chain along western South America."
   },
   {
     "id": "range_rocky_mountains",
@@ -2419,7 +2572,24 @@
     ],
     "packIds": [
       "world_mountain_ranges"
-    ]
+    ],
+    "difficulty": "medium",
+    "ageBand": "9-12",
+    "facts": [
+      "The Himalayas contain the world's highest peaks.",
+      "They stretch across several countries in Asia."
+    ],
+    "didYouKnow": "Many major Asian rivers begin near the Himalayas.",
+    "hintTokens": [
+      "Mountain range north of India with Everest."
+    ],
+    "pronunciation": "him-uh-lay-uhz",
+    "mnemonic": "Himalayas = high mountains north of India.",
+    "tags": [
+      "asia",
+      "mountain-range"
+    ],
+    "learningObjective": "Trace the long arc along northern India."
   },
   {
     "id": "range_alps",
