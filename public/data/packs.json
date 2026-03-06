@@ -2,37 +2,99 @@
   {
     "id": "europe_countries",
     "name": "Europe: Countries",
-    "types": ["country"],
-    "defaultViewport": { "center": [10, 52], "zoom": 3.5 }
+    "types": [
+      "country"
+    ],
+    "defaultViewport": {
+      "center": [
+        10,
+        52
+      ],
+      "zoom": 3.5
+    }
   },
   {
     "id": "world_countries",
     "name": "World: Countries",
-    "types": ["country"],
-    "defaultViewport": { "center": [0, 20], "zoom": 1.4 }
+    "types": [
+      "country"
+    ],
+    "defaultViewport": {
+      "center": [
+        0,
+        20
+      ],
+      "zoom": 1.4
+    }
   },
   {
     "id": "world_capitals",
     "name": "World: Capitals",
-    "types": ["capital"],
-    "defaultViewport": { "center": [10, 20], "zoom": 1.6 }
+    "types": [
+      "capital"
+    ],
+    "defaultViewport": {
+      "center": [
+        10,
+        20
+      ],
+      "zoom": 1.6
+    }
   },
   {
     "id": "world_rivers",
     "name": "World: Rivers",
-    "types": ["river"],
-    "defaultViewport": { "center": [10, 15], "zoom": 1.5 }
+    "types": [
+      "river"
+    ],
+    "defaultViewport": {
+      "center": [
+        10,
+        15
+      ],
+      "zoom": 1.5
+    }
   },
   {
     "id": "world_mountains",
     "name": "World: Mountains",
-    "types": ["mountain"],
-    "defaultViewport": { "center": [10, 20], "zoom": 1.6 }
+    "types": [
+      "mountain"
+    ],
+    "defaultViewport": {
+      "center": [
+        10,
+        20
+      ],
+      "zoom": 1.6
+    }
   },
   {
     "id": "usa_states",
     "name": "USA: States",
-    "types": ["state"],
-    "defaultViewport": { "center": [-98, 39.5], "zoom": 3.2 }
+    "types": [
+      "state"
+    ],
+    "defaultViewport": {
+      "center": [
+        -98,
+        39.5
+      ],
+      "zoom": 3.2
+    }
+  },
+  {
+    "id": "world_mountain_ranges",
+    "name": "World: Mountain Ranges",
+    "types": [
+      "mountain"
+    ],
+    "defaultViewport": {
+      "center": [
+        10,
+        20
+      ],
+      "zoom": 1.6
+    }
   }
 ]

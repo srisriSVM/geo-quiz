@@ -1116,6 +1116,162 @@
     ]
   },
   {
+    "id": "range_alps",
+    "type": "mountain",
+    "name": "Alps",
+    "geometryType": "line",
+    "labelPoint": [
+      10,
+      46.5
+    ],
+    "packIds": [
+      "world_mountain_ranges"
+    ]
+  },
+  {
+    "id": "range_andes",
+    "type": "mountain",
+    "name": "Andes",
+    "geometryType": "line",
+    "labelPoint": [
+      -70,
+      -17
+    ],
+    "packIds": [
+      "world_mountain_ranges"
+    ]
+  },
+  {
+    "id": "range_appalachian",
+    "type": "mountain",
+    "name": "Appalachian Mountains",
+    "geometryType": "line",
+    "labelPoint": [
+      -81,
+      38
+    ],
+    "packIds": [
+      "world_mountain_ranges"
+    ]
+  },
+  {
+    "id": "range_atlas",
+    "type": "mountain",
+    "name": "Atlas Mountains",
+    "geometryType": "line",
+    "labelPoint": [
+      -6,
+      32
+    ],
+    "packIds": [
+      "world_mountain_ranges"
+    ]
+  },
+  {
+    "id": "range_carpathians",
+    "type": "mountain",
+    "name": "Carpathian Mountains",
+    "geometryType": "line",
+    "labelPoint": [
+      22,
+      48
+    ],
+    "packIds": [
+      "world_mountain_ranges"
+    ]
+  },
+  {
+    "id": "range_caucasus",
+    "type": "mountain",
+    "name": "Caucasus Mountains",
+    "geometryType": "line",
+    "labelPoint": [
+      45,
+      43
+    ],
+    "packIds": [
+      "world_mountain_ranges"
+    ]
+  },
+  {
+    "id": "range_drakensberg",
+    "type": "mountain",
+    "name": "Drakensberg",
+    "geometryType": "line",
+    "labelPoint": [
+      29,
+      -29
+    ],
+    "packIds": [
+      "world_mountain_ranges"
+    ]
+  },
+  {
+    "id": "range_great_dividing",
+    "type": "mountain",
+    "name": "Great Dividing Range",
+    "geometryType": "line",
+    "labelPoint": [
+      147,
+      -28
+    ],
+    "packIds": [
+      "world_mountain_ranges"
+    ]
+  },
+  {
+    "id": "range_himalayas",
+    "type": "mountain",
+    "name": "Himalayas",
+    "geometryType": "line",
+    "labelPoint": [
+      84,
+      29
+    ],
+    "packIds": [
+      "world_mountain_ranges"
+    ]
+  },
+  {
+    "id": "range_rocky_mountains",
+    "type": "mountain",
+    "name": "Rocky Mountains",
+    "geometryType": "line",
+    "labelPoint": [
+      -112,
+      44
+    ],
+    "packIds": [
+      "world_mountain_ranges"
+    ]
+  },
+  {
+    "id": "range_scandinavian",
+    "type": "mountain",
+    "name": "Scandinavian Mountains",
+    "geometryType": "line",
+    "labelPoint": [
+      15,
+      65
+    ],
+    "packIds": [
+      "world_mountain_ranges"
+    ]
+  },
+  {
+    "id": "range_ural",
+    "type": "mountain",
+    "name": "Ural Mountains",
+    "geometryType": "line",
+    "labelPoint": [
+      60,
+      60
+    ],
+    "packIds": [
+      "world_mountain_ranges"
+    ]
+  },
+  {
     "id": "river_amazon",
     "type": "river",
     "name": "Amazon",
