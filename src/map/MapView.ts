@@ -11,6 +11,7 @@ const SOURCE_POLYGONS = "entities-polygons-source";
 const SOURCE_LINES = "entities-lines-source";
 const SOURCE_POINTS = "entities-points-source";
 const SOURCE_TARGET_LINE = "entities-target-line-source";
+const SOURCE_USA_STATE_BORDERS = "usa-state-borders-source";
 
 const LAYER_POLYGONS = "entities-polygons";
 const LAYER_POLYGON_OUTLINE = "entities-polygon-outline";
@@ -25,6 +26,8 @@ const LAYER_TARGET_LINE_CASING = "entities-target-line-casing";
 const LAYER_TARGET_LINE = "entities-target-line";
 const LAYER_HIGHLIGHT_POINT = "entities-highlight-point";
 const LAYER_HIGHLIGHT_LABEL = "entities-highlight-label";
+const LAYER_USA_STATE_FILL = "usa-state-fill";
+const LAYER_USA_STATE_BORDERS = "usa-state-borders";
 
 type Mode = "learn" | "quiz";
 type MapDetail = "quiz_clean" | "reference_full" | "physical_basic" | "physical_relief";
@@ -62,6 +65,8 @@ export class MapView {
   private highlightedRiverMarkers: maplibregl.Marker[] = [];
   private pointStatusMarkers: maplibregl.Marker[] = [];
   private recentlyMasteredIds = new Set<string>();
+  private usaStatesGeoJson: FeatureCollection | null = null;
+  private usaStatesGeoJsonRequest: Promise<void> | null = null;
   private currentStyleSignature = "political";
   private entityClickHandler: ((entityId: string) => void) | null = null;
 
@@ -93,6 +98,9 @@ export class MapView {
       this.addEntityLayers(map);
       this.bindInteractionHandlers(map);
       this.applyPendingState();
+      requestAnimationFrame(() => {
+        this.applyPendingState();
+      });
     });
 
     this.map = map;
@@ -105,15 +113,20 @@ export class MapView {
     }
 
     const showAll = mode === "learn";
-    this.map.setLayoutProperty(LAYER_POLYGONS, "visibility", showAll ? "visible" : "none");
-    this.map.setLayoutProperty(LAYER_POLYGON_OUTLINE, "visibility", showAll ? "visible" : "none");
-    this.map.setLayoutProperty(LAYER_LINES_CASING, "visibility", showAll ? "visible" : "none");
-    this.map.setLayoutProperty(LAYER_LINES, "visibility", showAll ? "visible" : "none");
-    this.map.setLayoutProperty(LAYER_TARGET_LINE_CASING, "visibility", "visible");
-    this.map.setLayoutProperty(LAYER_TARGET_LINE, "visibility", "visible");
-    this.map.setLayoutProperty(LAYER_POINTS, "visibility", showAll ? "visible" : "none");
-    this.map.setLayoutProperty(LAYER_MASTERED_BADGE, "visibility", showAll ? "visible" : "none");
-    this.map.setLayoutProperty(LAYER_HIGHLIGHT_LABEL, "visibility", showAll ? "visible" : "none");
+    const hasPolygonEntities = this.pendingEntities.some((entity) => entity.geometryType === "polygon");
+    const showPolygonContext = showAll || hasPolygonEntities;
+
+    this.setLayerVisibility(LAYER_POLYGONS, showPolygonContext ? "visible" : "none");
+    this.setLayerVisibility(LAYER_POLYGON_OUTLINE, showPolygonContext ? "visible" : "none");
+    this.setLayerPaint(LAYER_POLYGONS, "fill-opacity", showAll ? 0.33 : 0.14);
+    this.setLayerPaint(LAYER_POLYGON_OUTLINE, "line-opacity", showAll ? 1 : 0.88);
+    this.setLayerVisibility(LAYER_LINES_CASING, showAll ? "visible" : "none");
+    this.setLayerVisibility(LAYER_LINES, showAll ? "visible" : "none");
+    this.setLayerVisibility(LAYER_TARGET_LINE_CASING, "visible");
+    this.setLayerVisibility(LAYER_TARGET_LINE, "visible");
+    this.setLayerVisibility(LAYER_POINTS, showAll ? "visible" : "none");
+    this.setLayerVisibility(LAYER_MASTERED_BADGE, showAll ? "visible" : "none");
+    this.setLayerVisibility(LAYER_HIGHLIGHT_LABEL, showAll ? "visible" : "none");
     this.renderPointStatusMarkers();
     this.renderHighlightedMarkers();
   }
@@ -235,6 +248,7 @@ export class MapView {
     }
 
     this.applyPackBounds(pack);
+    this.applyUsStateOverlayVisibility();
     this.map.flyTo({ center: pack.defaultViewport.center, zoom: pack.defaultViewport.zoom, duration: 600 });
   }
 
@@ -243,6 +257,7 @@ export class MapView {
       return;
     }
 
+    this.syncUsaStateOverlaySource();
     this.setEntities(this.pendingEntities);
     this.setMode(this.pendingMode);
     this.setMapDetail(this.pendingMapDetail);
@@ -252,6 +267,7 @@ export class MapView {
 
     if (this.pendingPack && this.map) {
       this.applyPackBounds(this.pendingPack);
+      this.applyUsStateOverlayVisibility();
       if (!this.pendingCamera) {
         this.map.jumpTo({ center: this.pendingPack.defaultViewport.center, zoom: this.pendingPack.defaultViewport.zoom });
       }
@@ -278,11 +294,11 @@ export class MapView {
     }
 
     const idFilter = entityId ? ["==", "id", entityId] : ["==", "id", ""];
-    this.map.setFilter(LAYER_HIGHLIGHT_POLYGON, idFilter as never);
-    this.map.setFilter(LAYER_HIGHLIGHT_POLYGON_OUTLINE, idFilter as never);
-    this.map.setFilter(LAYER_HIGHLIGHT_LINE, idFilter as never);
-    this.map.setFilter(LAYER_HIGHLIGHT_POINT, idFilter as never);
-    this.map.setFilter(LAYER_HIGHLIGHT_LABEL, idFilter as never);
+    this.setLayerFilter(LAYER_HIGHLIGHT_POLYGON, idFilter as never);
+    this.setLayerFilter(LAYER_HIGHLIGHT_POLYGON_OUTLINE, idFilter as never);
+    this.setLayerFilter(LAYER_HIGHLIGHT_LINE, idFilter as never);
+    this.setLayerFilter(LAYER_HIGHLIGHT_POINT, idFilter as never);
+    this.setLayerFilter(LAYER_HIGHLIGHT_LABEL, idFilter as never);
   }
 
   private applyBaseDetailVisibility(): void {
@@ -366,8 +382,15 @@ export class MapView {
     if (!map.getSource(SOURCE_TARGET_LINE)) {
       map.addSource(SOURCE_TARGET_LINE, { type: "geojson", data: emptyData });
     }
+    if (!map.getSource(SOURCE_USA_STATE_BORDERS)) {
+      map.addSource(SOURCE_USA_STATE_BORDERS, {
+        type: "geojson",
+        data: this.usaStatesGeoJson ?? emptyData
+      });
+    }
+    void this.ensureUsaStateOverlayData();
 
-    map.addLayer({
+    this.addLayerSafe({
       id: LAYER_POLYGONS,
       type: "fill",
       source: SOURCE_POLYGONS,
@@ -384,14 +407,14 @@ export class MapView {
       }
     });
 
-    map.addLayer({
+    this.addLayerSafe({
       id: LAYER_POLYGON_OUTLINE,
       type: "line",
       source: SOURCE_POLYGONS,
       paint: { "line-color": "#0b5560", "line-width": 2.5 }
     });
 
-    map.addLayer({
+    this.addLayerSafe({
       id: LAYER_POINTS,
       type: "circle",
       source: SOURCE_POINTS,
@@ -423,24 +446,26 @@ export class MapView {
       }
     });
 
-    map.addLayer({
-      id: LAYER_MASTERED_BADGE,
-      type: "symbol",
-      source: SOURCE_POINTS,
-      filter: ["==", "mastery", "mastered"],
-      layout: {
-        "text-field": "✓",
-        "text-size": 12,
-        "text-anchor": "center"
-      },
-      paint: {
-        "text-color": "#ffffff",
-        "text-halo-color": "#14532d",
-        "text-halo-width": 1.2
-      }
-    });
+    if (this.canUseTextLayers()) {
+      this.addLayerSafe({
+        id: LAYER_MASTERED_BADGE,
+        type: "symbol",
+        source: SOURCE_POINTS,
+        filter: ["==", "mastery", "mastered"],
+        layout: {
+          "text-field": "✓",
+          "text-size": 12,
+          "text-anchor": "center"
+        },
+        paint: {
+          "text-color": "#ffffff",
+          "text-halo-color": "#14532d",
+          "text-halo-width": 1.2
+        }
+      });
+    }
 
-    map.addLayer({
+    this.addLayerSafe({
       id: LAYER_LINES_CASING,
       type: "line",
       source: SOURCE_LINES,
@@ -458,7 +483,7 @@ export class MapView {
       }
     });
 
-    map.addLayer({
+    this.addLayerSafe({
       id: LAYER_LINES,
       type: "line",
       source: SOURCE_LINES,
@@ -483,7 +508,7 @@ export class MapView {
       }
     });
 
-    map.addLayer({
+    this.addLayerSafe({
       id: LAYER_HIGHLIGHT_POLYGON,
       type: "fill",
       source: SOURCE_POLYGONS,
@@ -491,7 +516,7 @@ export class MapView {
       paint: { "fill-color": "#f59e0b", "fill-opacity": 0.56 }
     });
 
-    map.addLayer({
+    this.addLayerSafe({
       id: LAYER_HIGHLIGHT_POLYGON_OUTLINE,
       type: "line",
       source: SOURCE_POLYGONS,
@@ -499,7 +524,7 @@ export class MapView {
       paint: { "line-color": "#7c2d12", "line-width": 4 }
     });
 
-    map.addLayer({
+    this.addLayerSafe({
       id: LAYER_HIGHLIGHT_LINE,
       type: "line",
       source: SOURCE_LINES,
@@ -518,7 +543,7 @@ export class MapView {
       }
     });
 
-    map.addLayer({
+    this.addLayerSafe({
       id: LAYER_TARGET_LINE_CASING,
       type: "line",
       source: SOURCE_TARGET_LINE,
@@ -540,7 +565,7 @@ export class MapView {
       }
     });
 
-    map.addLayer({
+    this.addLayerSafe({
       id: LAYER_TARGET_LINE,
       type: "line",
       source: SOURCE_TARGET_LINE,
@@ -563,7 +588,7 @@ export class MapView {
       }
     });
 
-    map.addLayer({
+    this.addLayerSafe({
       id: LAYER_HIGHLIGHT_POINT,
       type: "circle",
       source: SOURCE_POINTS,
@@ -577,23 +602,48 @@ export class MapView {
       }
     });
 
-    map.addLayer({
-      id: LAYER_HIGHLIGHT_LABEL,
-      type: "symbol",
-      source: SOURCE_POINTS,
-      filter: ["==", "id", ""],
-      layout: {
-        "text-field": ["get", "name"],
-        "text-size": 16,
-        "text-font": ["Open Sans Bold"],
-        "text-anchor": "top",
-        "text-offset": [0, 1.1]
-      },
+    if (this.canUseTextLayers()) {
+      this.addLayerSafe({
+        id: LAYER_HIGHLIGHT_LABEL,
+        type: "symbol",
+        source: SOURCE_POINTS,
+        filter: ["==", "id", ""],
+        layout: {
+          "text-field": ["get", "name"],
+          "text-size": 16,
+          "text-font": ["Open Sans Bold"],
+          "text-anchor": "top",
+          "text-offset": [0, 1.1]
+        },
+        paint: {
+          "text-color": "#102a43",
+          "text-halo-color": "#ffffff",
+          "text-halo-width": 1.6
+        }
+      });
+    }
+
+    this.addLayerSafe({
+      id: LAYER_USA_STATE_FILL,
+      type: "fill",
+      source: SOURCE_USA_STATE_BORDERS,
       paint: {
-        "text-color": "#102a43",
-        "text-halo-color": "#ffffff",
-        "text-halo-width": 1.6
-      }
+        "fill-color": "#22c55e",
+        "fill-opacity": 0.06
+      },
+      layout: { visibility: "none" }
+    });
+
+    this.addLayerSafe({
+      id: LAYER_USA_STATE_BORDERS,
+      type: "line",
+      source: SOURCE_USA_STATE_BORDERS,
+      paint: {
+        "line-color": "#f8fafc",
+        "line-opacity": 1,
+        "line-width": 1.8
+      },
+      layout: { visibility: "none" }
     });
 
     // Ensure target river highlight is drawn above all quiz overlays while debugging visibility.
@@ -601,9 +651,128 @@ export class MapView {
     map.moveLayer(LAYER_TARGET_LINE);
   }
 
+  private applyUsStateOverlayVisibility(): void {
+    if (!this.map || !this.mapLoaded) {
+      return;
+    }
+    const isUsaStatesPack = this.pendingPack?.id === "usa_states";
+    const isPhysical = this.pendingMapDetail === "physical_basic" || this.pendingMapDetail === "physical_relief";
+    this.syncUsaStateOverlaySource();
+    this.setLayerVisibility(LAYER_USA_STATE_FILL, isUsaStatesPack ? "visible" : "none");
+    this.setLayerVisibility(LAYER_USA_STATE_BORDERS, isUsaStatesPack ? "visible" : "none");
+    this.setLayerPaint(LAYER_USA_STATE_FILL, "fill-opacity", isPhysical ? 0.04 : 0.06);
+    this.setLayerPaint(LAYER_USA_STATE_BORDERS, "line-color", isPhysical ? "#0f3d8f" : "#f8fafc");
+    this.setLayerPaint(LAYER_USA_STATE_BORDERS, "line-width", isPhysical ? 2.2 : 1.8);
+    this.setLayerPaint(LAYER_POLYGON_OUTLINE, "line-color", "#0b5560");
+    this.setLayerPaint(LAYER_POLYGON_OUTLINE, "line-width", 2.5);
+  }
+
+  private ensureUsaStateOverlayData(): Promise<void> {
+    if (this.usaStatesGeoJson) {
+      this.syncUsaStateOverlaySource();
+      return Promise.resolve();
+    }
+    if (this.usaStatesGeoJsonRequest) {
+      return this.usaStatesGeoJsonRequest;
+    }
+
+    this.usaStatesGeoJsonRequest = fetch("./data/source/us-states.geojson", { cache: "no-store" })
+      .then(async (response) => {
+        if (!response.ok) {
+          throw new Error(`Failed to load us-states overlay (${response.status})`);
+        }
+        const raw = (await response.json()) as FeatureCollection;
+        const normalized = this.normalizeFeatureCollectionLongitudes(raw);
+        this.usaStatesGeoJson = normalized;
+        if (!this.map || !this.mapLoaded) {
+          return;
+        }
+        const source = this.map.getSource(SOURCE_USA_STATE_BORDERS) as maplibregl.GeoJSONSource | undefined;
+        source?.setData(this.usaStatesGeoJson);
+      })
+      .catch((error) => {
+        console.error(error);
+      })
+      .finally(() => {
+        this.usaStatesGeoJsonRequest = null;
+      });
+
+    return this.usaStatesGeoJsonRequest;
+  }
+
+  private syncUsaStateOverlaySource(): void {
+    if (!this.map || !this.mapLoaded || !this.usaStatesGeoJson) {
+      return;
+    }
+    const source = this.map.getSource(SOURCE_USA_STATE_BORDERS) as maplibregl.GeoJSONSource | undefined;
+    source?.setData(this.usaStatesGeoJson);
+  }
+
+  private canUseTextLayers(): boolean {
+    return Boolean(this.map?.getStyle()?.glyphs);
+  }
+
+  private addLayerSafe(layer: { id: string } & Record<string, unknown>): void {
+    if (!this.map || this.map.getLayer(layer.id)) {
+      return;
+    }
+    try {
+      this.map.addLayer(layer as never);
+    } catch (error) {
+      console.error(`Failed adding layer ${layer.id}`, error);
+    }
+  }
+
+  private normalizeFeatureCollectionLongitudes(data: FeatureCollection): FeatureCollection {
+    const wrapLongitude = (lon: number): number => ((((lon + 180) % 360) + 360) % 360) - 180;
+    const normalizeCoords = (node: unknown): unknown => {
+      if (!Array.isArray(node)) {
+        return node;
+      }
+      if (typeof node[0] === "number" && typeof node[1] === "number") {
+        return [wrapLongitude(node[0]), node[1]];
+      }
+      return node.map((child) => normalizeCoords(child));
+    };
+
+    return {
+      ...data,
+      features: (data.features ?? []).map((feature) => ({
+        ...feature,
+        geometry: feature.geometry
+          ? {
+              ...feature.geometry,
+              coordinates: normalizeCoords((feature.geometry as { coordinates: unknown }).coordinates) as never
+            }
+          : feature.geometry
+      }))
+    };
+  }
+
   private bindInteractionHandlers(map: MapLibreMap): void {
     map.off("click", this.handleMapClick);
     map.on("click", this.handleMapClick);
+  }
+
+  private setLayerVisibility(layerId: string, visibility: "visible" | "none"): void {
+    if (!this.map?.getLayer(layerId)) {
+      return;
+    }
+    this.map.setLayoutProperty(layerId, "visibility", visibility);
+  }
+
+  private setLayerPaint(layerId: string, property: string, value: unknown): void {
+    if (!this.map?.getLayer(layerId)) {
+      return;
+    }
+    this.map.setPaintProperty(layerId, property, value as never);
+  }
+
+  private setLayerFilter(layerId: string, filter: unknown): void {
+    if (!this.map?.getLayer(layerId)) {
+      return;
+    }
+    this.map.setFilter(layerId, filter as never);
   }
 
   private handleMapClick = (event: maplibregl.MapMouseEvent): void => {
@@ -680,6 +849,10 @@ export class MapView {
     this.pointStatusMarkers = [];
 
     for (const entity of this.pendingEntities) {
+      // Polygon entities are visible/clickable directly on the map; skip point dots to avoid visual clutter.
+      if (entity.geometryType === "polygon") {
+        continue;
+      }
       const mastery = this.pendingMasteryById[entity.id] ?? "not_learned";
       const color = mastery === "mastered" ? "#16a34a" : mastery === "learning" ? "#d97706" : "#dc2626";
       const border = mastery === "mastered" ? "#14532d" : mastery === "learning" ? "#7c2d12" : "#7f1d1d";
@@ -745,7 +918,7 @@ export class MapView {
       return;
     }
 
-    if (target.geometryType === "point") {
+    if (target.geometryType === "point" || target.geometryType === "polygon") {
       const dot = document.createElement("div");
       dot.style.width = "20px";
       dot.style.height = "20px";

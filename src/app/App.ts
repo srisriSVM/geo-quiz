@@ -172,8 +172,8 @@ export class App {
     }
 
     const items = this.activePackEntities;
-    this.mapView.setMode(this.mode);
     this.mapView.setEntities(items);
+    this.mapView.setMode(this.mode);
     this.mapView.setMasteryById(this.buildMasteryMap(items));
     this.mapView.flyToPack(pack);
 

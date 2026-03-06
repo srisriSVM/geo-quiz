@@ -1474,5 +1474,805 @@
     "packIds": [
       "world_rivers"
     ]
+  },
+  {
+    "id": "state_alabama",
+    "type": "state",
+    "name": "Alabama",
+    "aliases": [
+      "AL"
+    ],
+    "geometryType": "point",
+    "labelPoint": [
+      -86.8,
+      32.8
+    ],
+    "packIds": [
+      "usa_states"
+    ]
+  },
+  {
+    "id": "state_alaska",
+    "type": "state",
+    "name": "Alaska",
+    "aliases": [
+      "AK"
+    ],
+    "geometryType": "point",
+    "labelPoint": [
+      -152.4,
+      64.2
+    ],
+    "packIds": [
+      "usa_states"
+    ]
+  },
+  {
+    "id": "state_arizona",
+    "type": "state",
+    "name": "Arizona",
+    "aliases": [
+      "AZ"
+    ],
+    "geometryType": "point",
+    "labelPoint": [
+      -111.7,
+      34.2
+    ],
+    "packIds": [
+      "usa_states"
+    ]
+  },
+  {
+    "id": "state_arkansas",
+    "type": "state",
+    "name": "Arkansas",
+    "aliases": [
+      "AR"
+    ],
+    "geometryType": "point",
+    "labelPoint": [
+      -92.3,
+      34.9
+    ],
+    "packIds": [
+      "usa_states"
+    ]
+  },
+  {
+    "id": "state_california",
+    "type": "state",
+    "name": "California",
+    "aliases": [
+      "CA"
+    ],
+    "geometryType": "point",
+    "labelPoint": [
+      -119.4,
+      36.8
+    ],
+    "packIds": [
+      "usa_states"
+    ]
+  },
+  {
+    "id": "state_colorado",
+    "type": "state",
+    "name": "Colorado",
+    "aliases": [
+      "CO"
+    ],
+    "geometryType": "point",
+    "labelPoint": [
+      -105.5,
+      39
+    ],
+    "packIds": [
+      "usa_states"
+    ]
+  },
+  {
+    "id": "state_connecticut",
+    "type": "state",
+    "name": "Connecticut",
+    "aliases": [
+      "CT"
+    ],
+    "geometryType": "point",
+    "labelPoint": [
+      -72.7,
+      41.6
+    ],
+    "packIds": [
+      "usa_states"
+    ]
+  },
+  {
+    "id": "state_delaware",
+    "type": "state",
+    "name": "Delaware",
+    "aliases": [
+      "DE"
+    ],
+    "geometryType": "point",
+    "labelPoint": [
+      -75.5,
+      39
+    ],
+    "packIds": [
+      "usa_states"
+    ]
+  },
+  {
+    "id": "state_florida",
+    "type": "state",
+    "name": "Florida",
+    "aliases": [
+      "FL"
+    ],
+    "geometryType": "point",
+    "labelPoint": [
+      -82,
+      27.8
+    ],
+    "packIds": [
+      "usa_states"
+    ]
+  },
+  {
+    "id": "state_georgia",
+    "type": "state",
+    "name": "Georgia",
+    "aliases": [
+      "GA"
+    ],
+    "geometryType": "point",
+    "labelPoint": [
+      -83.4,
+      32.6
+    ],
+    "packIds": [
+      "usa_states"
+    ]
+  },
+  {
+    "id": "state_hawaii",
+    "type": "state",
+    "name": "Hawaii",
+    "aliases": [
+      "HI"
+    ],
+    "geometryType": "point",
+    "labelPoint": [
+      -157.5,
+      20.9
+    ],
+    "packIds": [
+      "usa_states"
+    ]
+  },
+  {
+    "id": "state_idaho",
+    "type": "state",
+    "name": "Idaho",
+    "aliases": [
+      "ID"
+    ],
+    "geometryType": "point",
+    "labelPoint": [
+      -114.4,
+      44.2
+    ],
+    "packIds": [
+      "usa_states"
+    ]
+  },
+  {
+    "id": "state_illinois",
+    "type": "state",
+    "name": "Illinois",
+    "aliases": [
+      "IL"
+    ],
+    "geometryType": "point",
+    "labelPoint": [
+      -89.2,
+      40
+    ],
+    "packIds": [
+      "usa_states"
+    ]
+  },
+  {
+    "id": "state_indiana",
+    "type": "state",
+    "name": "Indiana",
+    "aliases": [
+      "IN"
+    ],
+    "geometryType": "point",
+    "labelPoint": [
+      -86.1,
+      40
+    ],
+    "packIds": [
+      "usa_states"
+    ]
+  },
+  {
+    "id": "state_iowa",
+    "type": "state",
+    "name": "Iowa",
+    "aliases": [
+      "IA"
+    ],
+    "geometryType": "point",
+    "labelPoint": [
+      -93.5,
+      42.1
+    ],
+    "packIds": [
+      "usa_states"
+    ]
+  },
+  {
+    "id": "state_kansas",
+    "type": "state",
+    "name": "Kansas",
+    "aliases": [
+      "KS"
+    ],
+    "geometryType": "point",
+    "labelPoint": [
+      -98.3,
+      38.5
+    ],
+    "packIds": [
+      "usa_states"
+    ]
+  },
+  {
+    "id": "state_kentucky",
+    "type": "state",
+    "name": "Kentucky",
+    "aliases": [
+      "KY"
+    ],
+    "geometryType": "point",
+    "labelPoint": [
+      -84.7,
+      37.5
+    ],
+    "packIds": [
+      "usa_states"
+    ]
+  },
+  {
+    "id": "state_louisiana",
+    "type": "state",
+    "name": "Louisiana",
+    "aliases": [
+      "LA"
+    ],
+    "geometryType": "point",
+    "labelPoint": [
+      -91.9,
+      31.2
+    ],
+    "packIds": [
+      "usa_states"
+    ]
+  },
+  {
+    "id": "state_maine",
+    "type": "state",
+    "name": "Maine",
+    "aliases": [
+      "ME"
+    ],
+    "geometryType": "point",
+    "labelPoint": [
+      -69,
+      45.3
+    ],
+    "packIds": [
+      "usa_states"
+    ]
+  },
+  {
+    "id": "state_maryland",
+    "type": "state",
+    "name": "Maryland",
+    "aliases": [
+      "MD"
+    ],
+    "geometryType": "point",
+    "labelPoint": [
+      -76.7,
+      39
+    ],
+    "packIds": [
+      "usa_states"
+    ]
+  },
+  {
+    "id": "state_massachusetts",
+    "type": "state",
+    "name": "Massachusetts",
+    "aliases": [
+      "MA"
+    ],
+    "geometryType": "point",
+    "labelPoint": [
+      -71.8,
+      42.3
+    ],
+    "packIds": [
+      "usa_states"
+    ]
+  },
+  {
+    "id": "state_michigan",
+    "type": "state",
+    "name": "Michigan",
+    "aliases": [
+      "MI"
+    ],
+    "geometryType": "point",
+    "labelPoint": [
+      -85.6,
+      44.3
+    ],
+    "packIds": [
+      "usa_states"
+    ]
+  },
+  {
+    "id": "state_minnesota",
+    "type": "state",
+    "name": "Minnesota",
+    "aliases": [
+      "MN"
+    ],
+    "geometryType": "point",
+    "labelPoint": [
+      -94.2,
+      46.3
+    ],
+    "packIds": [
+      "usa_states"
+    ]
+  },
+  {
+    "id": "state_mississippi",
+    "type": "state",
+    "name": "Mississippi",
+    "aliases": [
+      "MS"
+    ],
+    "geometryType": "point",
+    "labelPoint": [
+      -89.7,
+      32.7
+    ],
+    "packIds": [
+      "usa_states"
+    ]
+  },
+  {
+    "id": "state_missouri",
+    "type": "state",
+    "name": "Missouri",
+    "aliases": [
+      "MO"
+    ],
+    "geometryType": "point",
+    "labelPoint": [
+      -92.6,
+      38.3
+    ],
+    "packIds": [
+      "usa_states"
+    ]
+  },
+  {
+    "id": "state_montana",
+    "type": "state",
+    "name": "Montana",
+    "aliases": [
+      "MT"
+    ],
+    "geometryType": "point",
+    "labelPoint": [
+      -110,
+      46.9
+    ],
+    "packIds": [
+      "usa_states"
+    ]
+  },
+  {
+    "id": "state_nebraska",
+    "type": "state",
+    "name": "Nebraska",
+    "aliases": [
+      "NE"
+    ],
+    "geometryType": "point",
+    "labelPoint": [
+      -99.7,
+      41.5
+    ],
+    "packIds": [
+      "usa_states"
+    ]
+  },
+  {
+    "id": "state_nevada",
+    "type": "state",
+    "name": "Nevada",
+    "aliases": [
+      "NV"
+    ],
+    "geometryType": "point",
+    "labelPoint": [
+      -116.6,
+      38.8
+    ],
+    "packIds": [
+      "usa_states"
+    ]
+  },
+  {
+    "id": "state_new_hampshire",
+    "type": "state",
+    "name": "New Hampshire",
+    "aliases": [
+      "NH"
+    ],
+    "geometryType": "point",
+    "labelPoint": [
+      -71.6,
+      43.7
+    ],
+    "packIds": [
+      "usa_states"
+    ]
+  },
+  {
+    "id": "state_new_jersey",
+    "type": "state",
+    "name": "New Jersey",
+    "aliases": [
+      "NJ"
+    ],
+    "geometryType": "point",
+    "labelPoint": [
+      -74.5,
+      40.1
+    ],
+    "packIds": [
+      "usa_states"
+    ]
+  },
+  {
+    "id": "state_new_mexico",
+    "type": "state",
+    "name": "New Mexico",
+    "aliases": [
+      "NM"
+    ],
+    "geometryType": "point",
+    "labelPoint": [
+      -106.1,
+      34.4
+    ],
+    "packIds": [
+      "usa_states"
+    ]
+  },
+  {
+    "id": "state_new_york",
+    "type": "state",
+    "name": "New York",
+    "aliases": [
+      "NY"
+    ],
+    "geometryType": "point",
+    "labelPoint": [
+      -75.5,
+      43
+    ],
+    "packIds": [
+      "usa_states"
+    ]
+  },
+  {
+    "id": "state_north_carolina",
+    "type": "state",
+    "name": "North Carolina",
+    "aliases": [
+      "NC"
+    ],
+    "geometryType": "point",
+    "labelPoint": [
+      -79.4,
+      35.5
+    ],
+    "packIds": [
+      "usa_states"
+    ]
+  },
+  {
+    "id": "state_north_dakota",
+    "type": "state",
+    "name": "North Dakota",
+    "aliases": [
+      "ND"
+    ],
+    "geometryType": "point",
+    "labelPoint": [
+      -100.5,
+      47.5
+    ],
+    "packIds": [
+      "usa_states"
+    ]
+  },
+  {
+    "id": "state_ohio",
+    "type": "state",
+    "name": "Ohio",
+    "aliases": [
+      "OH"
+    ],
+    "geometryType": "point",
+    "labelPoint": [
+      -82.8,
+      40.4
+    ],
+    "packIds": [
+      "usa_states"
+    ]
+  },
+  {
+    "id": "state_oklahoma",
+    "type": "state",
+    "name": "Oklahoma",
+    "aliases": [
+      "OK"
+    ],
+    "geometryType": "point",
+    "labelPoint": [
+      -97.5,
+      35.6
+    ],
+    "packIds": [
+      "usa_states"
+    ]
+  },
+  {
+    "id": "state_oregon",
+    "type": "state",
+    "name": "Oregon",
+    "aliases": [
+      "OR"
+    ],
+    "geometryType": "point",
+    "labelPoint": [
+      -120.5,
+      43.9
+    ],
+    "packIds": [
+      "usa_states"
+    ]
+  },
+  {
+    "id": "state_pennsylvania",
+    "type": "state",
+    "name": "Pennsylvania",
+    "aliases": [
+      "PA"
+    ],
+    "geometryType": "point",
+    "labelPoint": [
+      -77.8,
+      41.2
+    ],
+    "packIds": [
+      "usa_states"
+    ]
+  },
+  {
+    "id": "state_rhode_island",
+    "type": "state",
+    "name": "Rhode Island",
+    "aliases": [
+      "RI"
+    ],
+    "geometryType": "point",
+    "labelPoint": [
+      -71.5,
+      41.7
+    ],
+    "packIds": [
+      "usa_states"
+    ]
+  },
+  {
+    "id": "state_south_carolina",
+    "type": "state",
+    "name": "South Carolina",
+    "aliases": [
+      "SC"
+    ],
+    "geometryType": "point",
+    "labelPoint": [
+      -80.9,
+      33.8
+    ],
+    "packIds": [
+      "usa_states"
+    ]
+  },
+  {
+    "id": "state_south_dakota",
+    "type": "state",
+    "name": "South Dakota",
+    "aliases": [
+      "SD"
+    ],
+    "geometryType": "point",
+    "labelPoint": [
+      -100.3,
+      44.4
+    ],
+    "packIds": [
+      "usa_states"
+    ]
+  },
+  {
+    "id": "state_tennessee",
+    "type": "state",
+    "name": "Tennessee",
+    "aliases": [
+      "TN"
+    ],
+    "geometryType": "point",
+    "labelPoint": [
+      -86.4,
+      35.8
+    ],
+    "packIds": [
+      "usa_states"
+    ]
+  },
+  {
+    "id": "state_texas",
+    "type": "state",
+    "name": "Texas",
+    "aliases": [
+      "TX"
+    ],
+    "geometryType": "point",
+    "labelPoint": [
+      -99.3,
+      31.5
+    ],
+    "packIds": [
+      "usa_states"
+    ]
+  },
+  {
+    "id": "state_utah",
+    "type": "state",
+    "name": "Utah",
+    "aliases": [
+      "UT"
+    ],
+    "geometryType": "point",
+    "labelPoint": [
+      -111.7,
+      39.3
+    ],
+    "packIds": [
+      "usa_states"
+    ]
+  },
+  {
+    "id": "state_vermont",
+    "type": "state",
+    "name": "Vermont",
+    "aliases": [
+      "VT"
+    ],
+    "geometryType": "point",
+    "labelPoint": [
+      -72.7,
+      44
+    ],
+    "packIds": [
+      "usa_states"
+    ]
+  },
+  {
+    "id": "state_virginia",
+    "type": "state",
+    "name": "Virginia",
+    "aliases": [
+      "VA"
+    ],
+    "geometryType": "point",
+    "labelPoint": [
+      -78.6,
+      37.5
+    ],
+    "packIds": [
+      "usa_states"
+    ]
+  },
+  {
+    "id": "state_washington",
+    "type": "state",
+    "name": "Washington",
+    "aliases": [
+      "WA"
+    ],
+    "geometryType": "point",
+    "labelPoint": [
+      -120.7,
+      47.4
+    ],
+    "packIds": [
+      "usa_states"
+    ]
+  },
+  {
+    "id": "state_west_virginia",
+    "type": "state",
+    "name": "West Virginia",
+    "aliases": [
+      "WV"
+    ],
+    "geometryType": "point",
+    "labelPoint": [
+      -80.6,
+      38.6
+    ],
+    "packIds": [
+      "usa_states"
+    ]
+  },
+  {
+    "id": "state_wisconsin",
+    "type": "state",
+    "name": "Wisconsin",
+    "aliases": [
+      "WI"
+    ],
+    "geometryType": "point",
+    "labelPoint": [
+      -89.9,
+      44.5
+    ],
+    "packIds": [
+      "usa_states"
+    ]
+  },
+  {
+    "id": "state_wyoming",
+    "type": "state",
+    "name": "Wyoming",
+    "aliases": [
+      "WY"
+    ],
+    "geometryType": "point",
+    "labelPoint": [
+      -107.6,
+      43.1
+    ],
+    "packIds": [
+      "usa_states"
+    ]
   }
 ]

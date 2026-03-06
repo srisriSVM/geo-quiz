@@ -4,8 +4,48 @@ import { resolve } from "node:path";
 const inputPath = resolve(process.cwd(), "public/data/sample-entities.json");
 const indexOutputPath = resolve(process.cwd(), "public/data/entities-index.json");
 const packOutputDir = resolve(process.cwd(), "public/data/pack-entities");
+const usStatesPath = resolve(process.cwd(), "public/data/source/us-states.geojson");
 
 const source = JSON.parse(readFileSync(inputPath, "utf-8"));
+const usStatesGeo = JSON.parse(readFileSync(usStatesPath, "utf-8"));
+
+function normalizeName(value) {
+  return String(value ?? "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, " ")
+    .trim();
+}
+
+function wrapLongitude(lon) {
+  return ((((lon + 180) % 360) + 360) % 360) - 180;
+}
+
+function normalizeGeometry(geometry) {
+  if (!geometry?.coordinates) {
+    return geometry;
+  }
+
+  const normalizeCoords = (node) => {
+    if (!Array.isArray(node)) {
+      return node;
+    }
+    if (typeof node[0] === "number" && typeof node[1] === "number") {
+      return [wrapLongitude(node[0]), node[1]];
+    }
+    return node.map((child) => normalizeCoords(child));
+  };
+
+  return {
+    ...geometry,
+    coordinates: normalizeCoords(geometry.coordinates)
+  };
+}
+
+const usStateGeometryByName = new Map(
+  (usStatesGeo.features ?? [])
+    .filter((feature) => feature?.properties?.name && feature?.geometry)
+    .map((feature) => [normalizeName(feature.properties.name), normalizeGeometry(feature.geometry)])
+);
 
 function collectCoords(node, out) {
   if (!Array.isArray(node)) {
@@ -50,10 +90,27 @@ function toBbox(entity) {
 const entities = source
   .slice()
   .sort((a, b) => a.id.localeCompare(b.id))
-  .map((entity) => ({
-    ...entity,
-    bbox: toBbox(entity)
-  }));
+  .map((entity) => {
+    if (entity.type === "state" && (entity.packIds ?? []).includes("usa_states")) {
+      const geometry = usStateGeometryByName.get(normalizeName(entity.name));
+      if (geometry) {
+        const withGeometry = {
+          ...entity,
+          geometryType: "polygon",
+          geometry
+        };
+        return {
+          ...withGeometry,
+          bbox: toBbox(withGeometry)
+        };
+      }
+    }
+
+    return {
+      ...entity,
+      bbox: toBbox(entity)
+    };
+  });
 
 const byPack = new Map();
 for (const entity of entities) {

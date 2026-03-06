@@ -1270,5 +1270,655 @@
     "packIds": [
       "world_rivers"
     ]
+  },
+  {
+    "id": "state_alabama",
+    "type": "state",
+    "name": "Alabama",
+    "geometryType": "polygon",
+    "labelPoint": [
+      -86.8,
+      32.8
+    ],
+    "packIds": [
+      "usa_states"
+    ]
+  },
+  {
+    "id": "state_alaska",
+    "type": "state",
+    "name": "Alaska",
+    "geometryType": "polygon",
+    "labelPoint": [
+      -152.4,
+      64.2
+    ],
+    "packIds": [
+      "usa_states"
+    ]
+  },
+  {
+    "id": "state_arizona",
+    "type": "state",
+    "name": "Arizona",
+    "geometryType": "polygon",
+    "labelPoint": [
+      -111.7,
+      34.2
+    ],
+    "packIds": [
+      "usa_states"
+    ]
+  },
+  {
+    "id": "state_arkansas",
+    "type": "state",
+    "name": "Arkansas",
+    "geometryType": "polygon",
+    "labelPoint": [
+      -92.3,
+      34.9
+    ],
+    "packIds": [
+      "usa_states"
+    ]
+  },
+  {
+    "id": "state_california",
+    "type": "state",
+    "name": "California",
+    "geometryType": "polygon",
+    "labelPoint": [
+      -119.4,
+      36.8
+    ],
+    "packIds": [
+      "usa_states"
+    ]
+  },
+  {
+    "id": "state_colorado",
+    "type": "state",
+    "name": "Colorado",
+    "geometryType": "polygon",
+    "labelPoint": [
+      -105.5,
+      39
+    ],
+    "packIds": [
+      "usa_states"
+    ]
+  },
+  {
+    "id": "state_connecticut",
+    "type": "state",
+    "name": "Connecticut",
+    "geometryType": "polygon",
+    "labelPoint": [
+      -72.7,
+      41.6
+    ],
+    "packIds": [
+      "usa_states"
+    ]
+  },
+  {
+    "id": "state_delaware",
+    "type": "state",
+    "name": "Delaware",
+    "geometryType": "polygon",
+    "labelPoint": [
+      -75.5,
+      39
+    ],
+    "packIds": [
+      "usa_states"
+    ]
+  },
+  {
+    "id": "state_florida",
+    "type": "state",
+    "name": "Florida",
+    "geometryType": "polygon",
+    "labelPoint": [
+      -82,
+      27.8
+    ],
+    "packIds": [
+      "usa_states"
+    ]
+  },
+  {
+    "id": "state_georgia",
+    "type": "state",
+    "name": "Georgia",
+    "geometryType": "polygon",
+    "labelPoint": [
+      -83.4,
+      32.6
+    ],
+    "packIds": [
+      "usa_states"
+    ]
+  },
+  {
+    "id": "state_hawaii",
+    "type": "state",
+    "name": "Hawaii",
+    "geometryType": "polygon",
+    "labelPoint": [
+      -157.5,
+      20.9
+    ],
+    "packIds": [
+      "usa_states"
+    ]
+  },
+  {
+    "id": "state_idaho",
+    "type": "state",
+    "name": "Idaho",
+    "geometryType": "polygon",
+    "labelPoint": [
+      -114.4,
+      44.2
+    ],
+    "packIds": [
+      "usa_states"
+    ]
+  },
+  {
+    "id": "state_illinois",
+    "type": "state",
+    "name": "Illinois",
+    "geometryType": "polygon",
+    "labelPoint": [
+      -89.2,
+      40
+    ],
+    "packIds": [
+      "usa_states"
+    ]
+  },
+  {
+    "id": "state_indiana",
+    "type": "state",
+    "name": "Indiana",
+    "geometryType": "polygon",
+    "labelPoint": [
+      -86.1,
+      40
+    ],
+    "packIds": [
+      "usa_states"
+    ]
+  },
+  {
+    "id": "state_iowa",
+    "type": "state",
+    "name": "Iowa",
+    "geometryType": "polygon",
+    "labelPoint": [
+      -93.5,
+      42.1
+    ],
+    "packIds": [
+      "usa_states"
+    ]
+  },
+  {
+    "id": "state_kansas",
+    "type": "state",
+    "name": "Kansas",
+    "geometryType": "polygon",
+    "labelPoint": [
+      -98.3,
+      38.5
+    ],
+    "packIds": [
+      "usa_states"
+    ]
+  },
+  {
+    "id": "state_kentucky",
+    "type": "state",
+    "name": "Kentucky",
+    "geometryType": "polygon",
+    "labelPoint": [
+      -84.7,
+      37.5
+    ],
+    "packIds": [
+      "usa_states"
+    ]
+  },
+  {
+    "id": "state_louisiana",
+    "type": "state",
+    "name": "Louisiana",
+    "geometryType": "polygon",
+    "labelPoint": [
+      -91.9,
+      31.2
+    ],
+    "packIds": [
+      "usa_states"
+    ]
+  },
+  {
+    "id": "state_maine",
+    "type": "state",
+    "name": "Maine",
+    "geometryType": "polygon",
+    "labelPoint": [
+      -69,
+      45.3
+    ],
+    "packIds": [
+      "usa_states"
+    ]
+  },
+  {
+    "id": "state_maryland",
+    "type": "state",
+    "name": "Maryland",
+    "geometryType": "polygon",
+    "labelPoint": [
+      -76.7,
+      39
+    ],
+    "packIds": [
+      "usa_states"
+    ]
+  },
+  {
+    "id": "state_massachusetts",
+    "type": "state",
+    "name": "Massachusetts",
+    "geometryType": "polygon",
+    "labelPoint": [
+      -71.8,
+      42.3
+    ],
+    "packIds": [
+      "usa_states"
+    ]
+  },
+  {
+    "id": "state_michigan",
+    "type": "state",
+    "name": "Michigan",
+    "geometryType": "polygon",
+    "labelPoint": [
+      -85.6,
+      44.3
+    ],
+    "packIds": [
+      "usa_states"
+    ]
+  },
+  {
+    "id": "state_minnesota",
+    "type": "state",
+    "name": "Minnesota",
+    "geometryType": "polygon",
+    "labelPoint": [
+      -94.2,
+      46.3
+    ],
+    "packIds": [
+      "usa_states"
+    ]
+  },
+  {
+    "id": "state_mississippi",
+    "type": "state",
+    "name": "Mississippi",
+    "geometryType": "polygon",
+    "labelPoint": [
+      -89.7,
+      32.7
+    ],
+    "packIds": [
+      "usa_states"
+    ]
+  },
+  {
+    "id": "state_missouri",
+    "type": "state",
+    "name": "Missouri",
+    "geometryType": "polygon",
+    "labelPoint": [
+      -92.6,
+      38.3
+    ],
+    "packIds": [
+      "usa_states"
+    ]
+  },
+  {
+    "id": "state_montana",
+    "type": "state",
+    "name": "Montana",
+    "geometryType": "polygon",
+    "labelPoint": [
+      -110,
+      46.9
+    ],
+    "packIds": [
+      "usa_states"
+    ]
+  },
+  {
+    "id": "state_nebraska",
+    "type": "state",
+    "name": "Nebraska",
+    "geometryType": "polygon",
+    "labelPoint": [
+      -99.7,
+      41.5
+    ],
+    "packIds": [
+      "usa_states"
+    ]
+  },
+  {
+    "id": "state_nevada",
+    "type": "state",
+    "name": "Nevada",
+    "geometryType": "polygon",
+    "labelPoint": [
+      -116.6,
+      38.8
+    ],
+    "packIds": [
+      "usa_states"
+    ]
+  },
+  {
+    "id": "state_new_hampshire",
+    "type": "state",
+    "name": "New Hampshire",
+    "geometryType": "polygon",
+    "labelPoint": [
+      -71.6,
+      43.7
+    ],
+    "packIds": [
+      "usa_states"
+    ]
+  },
+  {
+    "id": "state_new_jersey",
+    "type": "state",
+    "name": "New Jersey",
+    "geometryType": "polygon",
+    "labelPoint": [
+      -74.5,
+      40.1
+    ],
+    "packIds": [
+      "usa_states"
+    ]
+  },
+  {
+    "id": "state_new_mexico",
+    "type": "state",
+    "name": "New Mexico",
+    "geometryType": "polygon",
+    "labelPoint": [
+      -106.1,
+      34.4
+    ],
+    "packIds": [
+      "usa_states"
+    ]
+  },
+  {
+    "id": "state_new_york",
+    "type": "state",
+    "name": "New York",
+    "geometryType": "polygon",
+    "labelPoint": [
+      -75.5,
+      43
+    ],
+    "packIds": [
+      "usa_states"
+    ]
+  },
+  {
+    "id": "state_north_carolina",
+    "type": "state",
+    "name": "North Carolina",
+    "geometryType": "polygon",
+    "labelPoint": [
+      -79.4,
+      35.5
+    ],
+    "packIds": [
+      "usa_states"
+    ]
+  },
+  {
+    "id": "state_north_dakota",
+    "type": "state",
+    "name": "North Dakota",
+    "geometryType": "polygon",
+    "labelPoint": [
+      -100.5,
+      47.5
+    ],
+    "packIds": [
+      "usa_states"
+    ]
+  },
+  {
+    "id": "state_ohio",
+    "type": "state",
+    "name": "Ohio",
+    "geometryType": "polygon",
+    "labelPoint": [
+      -82.8,
+      40.4
+    ],
+    "packIds": [
+      "usa_states"
+    ]
+  },
+  {
+    "id": "state_oklahoma",
+    "type": "state",
+    "name": "Oklahoma",
+    "geometryType": "polygon",
+    "labelPoint": [
+      -97.5,
+      35.6
+    ],
+    "packIds": [
+      "usa_states"
+    ]
+  },
+  {
+    "id": "state_oregon",
+    "type": "state",
+    "name": "Oregon",
+    "geometryType": "polygon",
+    "labelPoint": [
+      -120.5,
+      43.9
+    ],
+    "packIds": [
+      "usa_states"
+    ]
+  },
+  {
+    "id": "state_pennsylvania",
+    "type": "state",
+    "name": "Pennsylvania",
+    "geometryType": "polygon",
+    "labelPoint": [
+      -77.8,
+      41.2
+    ],
+    "packIds": [
+      "usa_states"
+    ]
+  },
+  {
+    "id": "state_rhode_island",
+    "type": "state",
+    "name": "Rhode Island",
+    "geometryType": "polygon",
+    "labelPoint": [
+      -71.5,
+      41.7
+    ],
+    "packIds": [
+      "usa_states"
+    ]
+  },
+  {
+    "id": "state_south_carolina",
+    "type": "state",
+    "name": "South Carolina",
+    "geometryType": "polygon",
+    "labelPoint": [
+      -80.9,
+      33.8
+    ],
+    "packIds": [
+      "usa_states"
+    ]
+  },
+  {
+    "id": "state_south_dakota",
+    "type": "state",
+    "name": "South Dakota",
+    "geometryType": "polygon",
+    "labelPoint": [
+      -100.3,
+      44.4
+    ],
+    "packIds": [
+      "usa_states"
+    ]
+  },
+  {
+    "id": "state_tennessee",
+    "type": "state",
+    "name": "Tennessee",
+    "geometryType": "polygon",
+    "labelPoint": [
+      -86.4,
+      35.8
+    ],
+    "packIds": [
+      "usa_states"
+    ]
+  },
+  {
+    "id": "state_texas",
+    "type": "state",
+    "name": "Texas",
+    "geometryType": "polygon",
+    "labelPoint": [
+      -99.3,
+      31.5
+    ],
+    "packIds": [
+      "usa_states"
+    ]
+  },
+  {
+    "id": "state_utah",
+    "type": "state",
+    "name": "Utah",
+    "geometryType": "polygon",
+    "labelPoint": [
+      -111.7,
+      39.3
+    ],
+    "packIds": [
+      "usa_states"
+    ]
+  },
+  {
+    "id": "state_vermont",
+    "type": "state",
+    "name": "Vermont",
+    "geometryType": "polygon",
+    "labelPoint": [
+      -72.7,
+      44
+    ],
+    "packIds": [
+      "usa_states"
+    ]
+  },
+  {
+    "id": "state_virginia",
+    "type": "state",
+    "name": "Virginia",
+    "geometryType": "polygon",
+    "labelPoint": [
+      -78.6,
+      37.5
+    ],
+    "packIds": [
+      "usa_states"
+    ]
+  },
+  {
+    "id": "state_washington",
+    "type": "state",
+    "name": "Washington",
+    "geometryType": "polygon",
+    "labelPoint": [
+      -120.7,
+      47.4
+    ],
+    "packIds": [
+      "usa_states"
+    ]
+  },
+  {
+    "id": "state_west_virginia",
+    "type": "state",
+    "name": "West Virginia",
+    "geometryType": "polygon",
+    "labelPoint": [
+      -80.6,
+      38.6
+    ],
+    "packIds": [
+      "usa_states"
+    ]
+  },
+  {
+    "id": "state_wisconsin",
+    "type": "state",
+    "name": "Wisconsin",
+    "geometryType": "polygon",
+    "labelPoint": [
+      -89.9,
+      44.5
+    ],
+    "packIds": [
+      "usa_states"
+    ]
+  },
+  {
+    "id": "state_wyoming",
+    "type": "state",
+    "name": "Wyoming",
+    "geometryType": "polygon",
+    "labelPoint": [
+      -107.6,
+      43.1
+    ],
+    "packIds": [
+      "usa_states"
+    ]
   }
 ]

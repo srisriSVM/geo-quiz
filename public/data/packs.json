@@ -28,5 +28,11 @@
     "name": "World: Mountains",
     "types": ["mountain"],
     "defaultViewport": { "center": [10, 20], "zoom": 1.6 }
+  },
+  {
+    "id": "usa_states",
+    "name": "USA: States",
+    "types": ["state"],
+    "defaultViewport": { "center": [-98, 39.5], "zoom": 3.2 }
   }
 ]

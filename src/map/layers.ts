@@ -4,6 +4,7 @@ export const getPoliticalStyleUrl = (): string => "https://demotiles.maplibre.or
 
 export const getPhysicalBasicStyle = (lowDataMode: boolean): StyleSpecification => ({
   version: 8,
+  glyphs: "https://demotiles.maplibre.org/font/{fontstack}/{range}.pbf",
   sources: {
     basic: {
       type: "raster",
@@ -27,6 +28,7 @@ export const getPhysicalBasicStyle = (lowDataMode: boolean): StyleSpecification 
 
 export const getPhysicalReliefStyle = (lowDataMode: boolean): StyleSpecification => ({
   version: 8,
+  glyphs: "https://demotiles.maplibre.org/font/{fontstack}/{range}.pbf",
   sources: {
     relief: {
       type: "raster",
