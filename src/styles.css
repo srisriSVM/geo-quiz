@@ -90,6 +90,102 @@ body,
   font-size: 18px;
 }
 
+.choice-chip {
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: 1px solid #cbd5e1;
+  background: #ffffff;
+  color: #102a43;
+  cursor: pointer;
+  animation: choice-enter 220ms ease-out both;
+  transition: transform 120ms ease, box-shadow 120ms ease;
+}
+
+.choice-chip:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(16, 42, 67, 0.14);
+}
+
+.choice-chip--locked {
+  background: #dcfce7;
+  border-color: #16a34a;
+  color: #14532d;
+  cursor: default;
+}
+
+.choice-chip--wrong {
+  background: #fee2e2;
+  border-color: #dc2626;
+  color: #7f1d1d;
+}
+
+.choice-chip--pop {
+  animation: choice-pop 260ms ease-out;
+}
+
+.choice-chip--shake {
+  animation: choice-shake 280ms ease;
+}
+
+.status-marker--mastered {
+  box-shadow: 0 0 0 2px rgba(22, 163, 74, 0.22), 0 2px 8px rgba(0, 0, 0, 0.22) !important;
+}
+
+.status-marker--pulse {
+  animation: marker-pulse 900ms ease-out;
+}
+
+@keyframes choice-enter {
+  from {
+    opacity: 0;
+    transform: translateY(6px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes choice-pop {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes choice-shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+}
+
+@keyframes marker-pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(22, 163, 74, 0.45);
+  }
+  70% {
+    transform: scale(1.14);
+    box-shadow: 0 0 0 16px rgba(22, 163, 74, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(22, 163, 74, 0);
+  }
+}
+
 @media (max-width: 900px) {
   .quiz-panel {
     right: 12px;

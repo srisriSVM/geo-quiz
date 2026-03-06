@@ -122,29 +122,33 @@ export class QuizPanel {
 
   setChoices(choices: ChoiceItem[]): void {
     this.choicesEl.innerHTML = "";
-    for (const choice of choices) {
+    for (const [index, choice] of choices.entries()) {
       const button = document.createElement("button");
       button.type = "button";
       button.dataset.choiceId = choice.id;
       button.textContent = choice.label;
-      button.style.padding = "8px 10px";
-      button.style.borderRadius = "10px";
-      button.style.border = "1px solid #cbd5e1";
-      button.style.background = "#ffffff";
-      button.style.color = "#102a43";
-      button.style.cursor = "pointer";
+      button.className = "choice-chip";
+      button.style.animationDelay = `${index * 40}ms`;
       if (choice.status === "locked") {
-        button.style.background = "#dcfce7";
-        button.style.borderColor = "#16a34a";
-        button.style.color = "#14532d";
+        button.classList.add("choice-chip--locked");
         button.disabled = true;
       } else if (choice.status === "wrong") {
-        button.style.background = "#fee2e2";
-        button.style.borderColor = "#dc2626";
-        button.style.color = "#7f1d1d";
+        button.classList.add("choice-chip--wrong");
       }
       this.choicesEl.append(button);
     }
+  }
+
+  animateChoice(choiceId: string, kind: "success" | "wrong"): void {
+    const button = this.choicesEl.querySelector<HTMLButtonElement>(`[data-choice-id="${choiceId}"]`);
+    if (!button) {
+      return;
+    }
+    const className = kind === "success" ? "choice-chip--pop" : "choice-chip--shake";
+    button.classList.remove(className);
+    // Force reflow so repeated clicks replay the animation.
+    void button.offsetWidth;
+    button.classList.add(className);
   }
 
   private query<T extends HTMLElement>(selector: string): T {

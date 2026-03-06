@@ -283,6 +283,7 @@ export class App {
         this.panel?.setFeedback("Round complete. Great job.");
         this.panel?.setPrompt("All matched. Click Next for a new round.");
         this.panel?.setChoices(this.buildChoicesFromRound());
+        this.panel?.animateChoice(choiceId, "success");
         this.mapView?.setHighlightedEntity(null);
       } else {
         this.currentEntity = this.pickRandom(this.getRemainingRoundEntities());
@@ -291,6 +292,7 @@ export class App {
         this.panel?.setPrompt(`Match the highlighted ${this.currentEntity.type}. Remaining: ${remainingCount}`);
         this.panel?.setFeedback("Correct. Keep going.");
         this.panel?.setChoices(this.buildChoicesFromRound());
+        this.panel?.animateChoice(choiceId, "success");
       }
     } else {
       this.recordProgress(this.currentEntity.id, false);
@@ -299,6 +301,7 @@ export class App {
       this.matchRound.choiceStatus[choiceId] = "wrong";
       this.panel?.setFeedback("Not this one. Try again.");
       this.panel?.setChoices(this.buildChoicesFromRound());
+      this.panel?.animateChoice(choiceId, "wrong");
     }
 
     this.hud?.setStats({

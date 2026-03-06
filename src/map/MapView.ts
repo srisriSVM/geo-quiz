@@ -61,6 +61,7 @@ export class MapView {
   private highlightedLabelMarker: maplibregl.Marker | null = null;
   private highlightedRiverMarkers: maplibregl.Marker[] = [];
   private pointStatusMarkers: maplibregl.Marker[] = [];
+  private recentlyMasteredIds = new Set<string>();
   private currentStyleSignature = "political";
   private entityClickHandler: ((entityId: string) => void) | null = null;
 
@@ -148,6 +149,12 @@ export class MapView {
   }
 
   setMasteryById(masteryById: Record<string, "not_learned" | "learning" | "mastered">): void {
+    this.recentlyMasteredIds.clear();
+    for (const [entityId, mastery] of Object.entries(masteryById)) {
+      if (mastery === "mastered" && this.pendingMasteryById[entityId] !== "mastered") {
+        this.recentlyMasteredIds.add(entityId);
+      }
+    }
     this.pendingMasteryById = masteryById;
     this.setEntities(this.pendingEntities);
     this.renderPointStatusMarkers();
@@ -679,6 +686,7 @@ export class MapView {
       const size = mastery === "mastered" ? 18 : mastery === "learning" ? 14 : 11;
 
       const el = document.createElement("div");
+      el.className = "status-marker";
       el.style.width = `${size}px`;
       el.style.height = `${size}px`;
       el.style.borderRadius = entity.geometryType === "line" ? "5px" : "999px";
@@ -693,9 +701,13 @@ export class MapView {
       el.style.fontWeight = "700";
       el.style.cursor = "pointer";
       if (mastery === "mastered") {
+        el.classList.add("status-marker--mastered");
         el.textContent = "✓";
       } else if (entity.geometryType === "line") {
         el.textContent = "≈";
+      }
+      if (this.recentlyMasteredIds.has(entity.id)) {
+        el.classList.add("status-marker--pulse");
       }
       el.addEventListener("click", (event) => {
         event.stopPropagation();
@@ -707,6 +719,7 @@ export class MapView {
       const marker = new maplibregl.Marker({ element: el }).setLngLat(entity.labelPoint).addTo(this.map);
       this.pointStatusMarkers.push(marker);
     }
+    this.recentlyMasteredIds.clear();
   }
 
   private renderHighlightedMarkers(): void {
