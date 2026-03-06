@@ -698,5 +698,781 @@
       "europe_countries",
       "world_countries"
     ]
+  },
+  {
+    "id": "capital_tokyo",
+    "type": "capital",
+    "name": "Tokyo",
+    "geometryType": "point",
+    "labelPoint": [
+      139.6917,
+      35.6895
+    ],
+    "packIds": [
+      "world_capitals"
+    ]
+  },
+  {
+    "id": "capital_washington_dc",
+    "type": "capital",
+    "name": "Washington, D.C.",
+    "geometryType": "point",
+    "labelPoint": [
+      -77.0369,
+      38.9072
+    ],
+    "packIds": [
+      "world_capitals"
+    ]
+  },
+  {
+    "id": "capital_ottawa",
+    "type": "capital",
+    "name": "Ottawa",
+    "geometryType": "point",
+    "labelPoint": [
+      -75.6972,
+      45.4215
+    ],
+    "packIds": [
+      "world_capitals"
+    ]
+  },
+  {
+    "id": "capital_mexico_city",
+    "type": "capital",
+    "name": "Mexico City",
+    "geometryType": "point",
+    "labelPoint": [
+      -99.1332,
+      19.4326
+    ],
+    "packIds": [
+      "world_capitals"
+    ]
+  },
+  {
+    "id": "capital_brasilia",
+    "type": "capital",
+    "name": "Brasilia",
+    "geometryType": "point",
+    "labelPoint": [
+      -47.8825,
+      -15.7942
+    ],
+    "packIds": [
+      "world_capitals"
+    ]
+  },
+  {
+    "id": "capital_london",
+    "type": "capital",
+    "name": "London",
+    "geometryType": "point",
+    "labelPoint": [
+      -0.1276,
+      51.5072
+    ],
+    "packIds": [
+      "world_capitals"
+    ]
+  },
+  {
+    "id": "capital_paris",
+    "type": "capital",
+    "name": "Paris",
+    "geometryType": "point",
+    "labelPoint": [
+      2.3522,
+      48.8566
+    ],
+    "packIds": [
+      "world_capitals"
+    ]
+  },
+  {
+    "id": "capital_berlin",
+    "type": "capital",
+    "name": "Berlin",
+    "geometryType": "point",
+    "labelPoint": [
+      13.405,
+      52.52
+    ],
+    "packIds": [
+      "world_capitals"
+    ]
+  },
+  {
+    "id": "capital_rome",
+    "type": "capital",
+    "name": "Rome",
+    "geometryType": "point",
+    "labelPoint": [
+      12.4964,
+      41.9028
+    ],
+    "packIds": [
+      "world_capitals"
+    ]
+  },
+  {
+    "id": "capital_madrid",
+    "type": "capital",
+    "name": "Madrid",
+    "geometryType": "point",
+    "labelPoint": [
+      -3.7038,
+      40.4168
+    ],
+    "packIds": [
+      "world_capitals"
+    ]
+  },
+  {
+    "id": "capital_cairo",
+    "type": "capital",
+    "name": "Cairo",
+    "geometryType": "point",
+    "labelPoint": [
+      31.2357,
+      30.0444
+    ],
+    "packIds": [
+      "world_capitals"
+    ]
+  },
+  {
+    "id": "capital_nairobi",
+    "type": "capital",
+    "name": "Nairobi",
+    "geometryType": "point",
+    "labelPoint": [
+      36.8219,
+      -1.2921
+    ],
+    "packIds": [
+      "world_capitals"
+    ]
+  },
+  {
+    "id": "capital_pretoria",
+    "type": "capital",
+    "name": "Pretoria",
+    "geometryType": "point",
+    "labelPoint": [
+      28.2293,
+      -25.7479
+    ],
+    "packIds": [
+      "world_capitals"
+    ]
+  },
+  {
+    "id": "capital_riyadh",
+    "type": "capital",
+    "name": "Riyadh",
+    "geometryType": "point",
+    "labelPoint": [
+      46.6753,
+      24.7136
+    ],
+    "packIds": [
+      "world_capitals"
+    ]
+  },
+  {
+    "id": "capital_new_delhi",
+    "type": "capital",
+    "name": "New Delhi",
+    "geometryType": "point",
+    "labelPoint": [
+      77.209,
+      28.6139
+    ],
+    "packIds": [
+      "world_capitals"
+    ]
+  },
+  {
+    "id": "capital_beijing",
+    "type": "capital",
+    "name": "Beijing",
+    "geometryType": "point",
+    "labelPoint": [
+      116.4074,
+      39.9042
+    ],
+    "packIds": [
+      "world_capitals"
+    ]
+  },
+  {
+    "id": "capital_seoul",
+    "type": "capital",
+    "name": "Seoul",
+    "geometryType": "point",
+    "labelPoint": [
+      126.978,
+      37.5665
+    ],
+    "packIds": [
+      "world_capitals"
+    ]
+  },
+  {
+    "id": "capital_canberra",
+    "type": "capital",
+    "name": "Canberra",
+    "geometryType": "point",
+    "labelPoint": [
+      149.13,
+      -35.2809
+    ],
+    "packIds": [
+      "world_capitals"
+    ]
+  },
+  {
+    "id": "capital_wellington",
+    "type": "capital",
+    "name": "Wellington",
+    "geometryType": "point",
+    "labelPoint": [
+      174.7772,
+      -41.2865
+    ],
+    "packIds": [
+      "world_capitals"
+    ]
+  },
+  {
+    "id": "capital_moscow",
+    "type": "capital",
+    "name": "Moscow",
+    "geometryType": "point",
+    "labelPoint": [
+      37.6173,
+      55.7558
+    ],
+    "packIds": [
+      "world_capitals"
+    ]
+  },
+  {
+    "id": "mountain_everest",
+    "type": "mountain",
+    "name": "Mount Everest",
+    "geometryType": "point",
+    "labelPoint": [
+      86.925,
+      27.9881
+    ],
+    "packIds": [
+      "world_mountains"
+    ]
+  },
+  {
+    "id": "mountain_k2",
+    "type": "mountain",
+    "name": "K2",
+    "geometryType": "point",
+    "labelPoint": [
+      76.5133,
+      35.8808
+    ],
+    "packIds": [
+      "world_mountains"
+    ]
+  },
+  {
+    "id": "mountain_kilimanjaro",
+    "type": "mountain",
+    "name": "Mount Kilimanjaro",
+    "geometryType": "point",
+    "labelPoint": [
+      37.3556,
+      -3.0674
+    ],
+    "packIds": [
+      "world_mountains"
+    ]
+  },
+  {
+    "id": "mountain_elbrus",
+    "type": "mountain",
+    "name": "Mount Elbrus",
+    "geometryType": "point",
+    "labelPoint": [
+      42.4392,
+      43.355
+    ],
+    "packIds": [
+      "world_mountains"
+    ]
+  },
+  {
+    "id": "mountain_aconcagua",
+    "type": "mountain",
+    "name": "Aconcagua",
+    "geometryType": "point",
+    "labelPoint": [
+      -70.0117,
+      -32.6532
+    ],
+    "packIds": [
+      "world_mountains"
+    ]
+  },
+  {
+    "id": "mountain_denali",
+    "type": "mountain",
+    "name": "Denali",
+    "geometryType": "point",
+    "labelPoint": [
+      -151.0074,
+      63.0695
+    ],
+    "packIds": [
+      "world_mountains"
+    ]
+  },
+  {
+    "id": "mountain_matterhorn",
+    "type": "mountain",
+    "name": "Matterhorn",
+    "geometryType": "point",
+    "labelPoint": [
+      7.6586,
+      45.9763
+    ],
+    "packIds": [
+      "world_mountains"
+    ]
+  },
+  {
+    "id": "mountain_mont_blanc",
+    "type": "mountain",
+    "name": "Mont Blanc",
+    "geometryType": "point",
+    "labelPoint": [
+      6.8652,
+      45.8326
+    ],
+    "packIds": [
+      "world_mountains"
+    ]
+  },
+  {
+    "id": "mountain_vinson",
+    "type": "mountain",
+    "name": "Mount Vinson",
+    "geometryType": "point",
+    "labelPoint": [
+      -85.617,
+      -78.525
+    ],
+    "packIds": [
+      "world_mountains"
+    ]
+  },
+  {
+    "id": "mountain_kosciuszko",
+    "type": "mountain",
+    "name": "Mount Kosciuszko",
+    "geometryType": "point",
+    "labelPoint": [
+      148.263,
+      -36.455
+    ],
+    "packIds": [
+      "world_mountains"
+    ]
+  },
+  {
+    "id": "mountain_fuji",
+    "type": "mountain",
+    "name": "Mount Fuji",
+    "geometryType": "point",
+    "labelPoint": [
+      138.7274,
+      35.3606
+    ],
+    "packIds": [
+      "world_mountains"
+    ]
+  },
+  {
+    "id": "mountain_table_mountain",
+    "type": "mountain",
+    "name": "Table Mountain",
+    "geometryType": "point",
+    "labelPoint": [
+      18.4037,
+      -33.9628
+    ],
+    "packIds": [
+      "world_mountains"
+    ]
+  },
+  {
+    "id": "river_nile",
+    "type": "river",
+    "name": "Nile",
+    "geometryType": "line",
+    "geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          31.2,
+          3
+        ],
+        [
+          32.6,
+          15.6
+        ],
+        [
+          31.23,
+          30.04
+        ]
+      ]
+    },
+    "labelPoint": [
+      31.2,
+      25
+    ],
+    "packIds": [
+      "world_rivers"
+    ]
+  },
+  {
+    "id": "river_amazon",
+    "type": "river",
+    "name": "Amazon",
+    "geometryType": "line",
+    "geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          -73.99,
+          -4.2
+        ],
+        [
+          -65,
+          -3.5
+        ],
+        [
+          -50,
+          -1.8
+        ]
+      ]
+    },
+    "labelPoint": [
+      -60,
+      -3
+    ],
+    "packIds": [
+      "world_rivers"
+    ]
+  },
+  {
+    "id": "river_mississippi",
+    "type": "river",
+    "name": "Mississippi",
+    "geometryType": "line",
+    "geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          -95.23,
+          47.3
+        ],
+        [
+          -91,
+          40
+        ],
+        [
+          -89.25,
+          29.15
+        ]
+      ]
+    },
+    "labelPoint": [
+      -90,
+      36
+    ],
+    "packIds": [
+      "world_rivers"
+    ]
+  },
+  {
+    "id": "river_yangtze",
+    "type": "river",
+    "name": "Yangtze",
+    "geometryType": "line",
+    "geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          92,
+          33
+        ],
+        [
+          106,
+          30.7
+        ],
+        [
+          121.8,
+          31.2
+        ]
+      ]
+    },
+    "labelPoint": [
+      112.5,
+      30.5
+    ],
+    "packIds": [
+      "world_rivers"
+    ]
+  },
+  {
+    "id": "river_ganges",
+    "type": "river",
+    "name": "Ganges",
+    "geometryType": "line",
+    "geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          79,
+          30.9
+        ],
+        [
+          85,
+          25.5
+        ],
+        [
+          90.3,
+          23.7
+        ]
+      ]
+    },
+    "labelPoint": [
+      84,
+      24
+    ],
+    "packIds": [
+      "world_rivers"
+    ]
+  },
+  {
+    "id": "river_danube",
+    "type": "river",
+    "name": "Danube",
+    "geometryType": "line",
+    "geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          8.2,
+          48
+        ],
+        [
+          17.1,
+          48.1
+        ],
+        [
+          29.6,
+          45.2
+        ]
+      ]
+    },
+    "labelPoint": [
+      17,
+      46
+    ],
+    "packIds": [
+      "world_rivers"
+    ]
+  },
+  {
+    "id": "river_volga",
+    "type": "river",
+    "name": "Volga",
+    "geometryType": "line",
+    "geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          33.2,
+          57.3
+        ],
+        [
+          45,
+          54.5
+        ],
+        [
+          49.2,
+          46.7
+        ]
+      ]
+    },
+    "labelPoint": [
+      44,
+      52
+    ],
+    "packIds": [
+      "world_rivers"
+    ]
+  },
+  {
+    "id": "river_mekong",
+    "type": "river",
+    "name": "Mekong",
+    "geometryType": "line",
+    "geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          100,
+          22
+        ],
+        [
+          104,
+          17
+        ],
+        [
+          106.7,
+          10
+        ]
+      ]
+    },
+    "labelPoint": [
+      104,
+      16
+    ],
+    "packIds": [
+      "world_rivers"
+    ]
+  },
+  {
+    "id": "river_congo",
+    "type": "river",
+    "name": "Congo",
+    "geometryType": "line",
+    "geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          27.5,
+          -1
+        ],
+        [
+          22,
+          -2
+        ],
+        [
+          13.2,
+          -6
+        ]
+      ]
+    },
+    "labelPoint": [
+      19,
+      -3
+    ],
+    "packIds": [
+      "world_rivers"
+    ]
+  },
+  {
+    "id": "river_indus",
+    "type": "river",
+    "name": "Indus",
+    "geometryType": "line",
+    "geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          79,
+          34.5
+        ],
+        [
+          72,
+          31
+        ],
+        [
+          67.4,
+          24.7
+        ]
+      ]
+    },
+    "labelPoint": [
+      69.5,
+      29
+    ],
+    "packIds": [
+      "world_rivers"
+    ]
+  },
+  {
+    "id": "river_yellow",
+    "type": "river",
+    "name": "Yellow River",
+    "geometryType": "line",
+    "geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          96,
+          35
+        ],
+        [
+          110,
+          37
+        ],
+        [
+          119,
+          37.7
+        ]
+      ]
+    },
+    "labelPoint": [
+      112,
+      36
+    ],
+    "packIds": [
+      "world_rivers"
+    ]
+  },
+  {
+    "id": "river_murray",
+    "type": "river",
+    "name": "Murray",
+    "geometryType": "line",
+    "geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          147,
+          -36
+        ],
+        [
+          142,
+          -34.5
+        ],
+        [
+          138.9,
+          -35.6
+        ]
+      ]
+    },
+    "labelPoint": [
+      142,
+      -35
+    ],
+    "packIds": [
+      "world_rivers"
+    ]
   }
 ]

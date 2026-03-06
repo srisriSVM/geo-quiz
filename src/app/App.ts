@@ -6,6 +6,10 @@ import { Hud } from "../ui/Hud";
 import { QuizPanel } from "../ui/QuizPanel";
 
 type Mode = "learn" | "quiz";
+type MapDetail = "quiz_clean" | "reference_full" | "physical_basic" | "physical_relief";
+
+const MAP_DETAIL_KEY = "geo-bee-map-detail";
+const LOW_DATA_MODE_KEY = "geo-bee-low-data-mode";
 
 export class App {
   private readonly host: HTMLElement;
@@ -18,6 +22,8 @@ export class App {
   private entities: Entity[] = [];
 
   private mode: Mode = "learn";
+  private mapDetail: MapDetail = "quiz_clean";
+  private lowDataMode = true;
   private currentPackId = "";
   private currentEntity: Entity | null = null;
   private hintLength = 2;
@@ -70,6 +76,16 @@ export class App {
       onQuizTypeChange: () => {
         this.startRound();
       },
+      onMapDetailChange: (mapDetail) => {
+        this.mapDetail = mapDetail;
+        localStorage.setItem(MAP_DETAIL_KEY, mapDetail);
+        this.mapView?.setMapDetail(mapDetail);
+      },
+      onLowDataModeChange: (enabled) => {
+        this.lowDataMode = enabled;
+        localStorage.setItem(LOW_DATA_MODE_KEY, enabled ? "1" : "0");
+        this.mapView?.setLowDataMode(enabled);
+      },
       onHint: () => this.handleHint(),
       onReveal: () => this.handleReveal(),
       onNext: () => this.startRound()
@@ -89,8 +105,14 @@ export class App {
     }
 
     this.currentPackId = firstPack.id;
+    this.mapDetail = this.loadMapDetail();
+    this.lowDataMode = this.loadLowDataMode();
     this.hud.setMode(this.mode);
     this.hud.setPack(this.currentPackId);
+    this.hud.setMapDetail(this.mapDetail);
+    this.hud.setLowDataMode(this.lowDataMode);
+    this.mapView.setLowDataMode(this.lowDataMode);
+    this.mapView.setMapDetail(this.mapDetail);
 
     this.startRound();
   }
@@ -134,7 +156,7 @@ export class App {
     if (this.mode === "learn") {
       this.panel.setHeading("Learn Mode");
       this.panel.setPrompt(
-        `Study this highlighted country: ${this.currentEntity.name}. Click Next for another one, or switch Mode to Quiz.`
+        `Study this highlighted ${this.currentEntity.type}: ${this.currentEntity.name}. Click Next for another one, or switch Mode to Quiz.`
       );
       this.panel.setFeedback(`You are in Learn mode. No answer is required.`);
       this.panel.setAnswerVisible(false);
@@ -207,5 +229,26 @@ export class App {
   private pickRandom(items: Entity[]): Entity {
     const index = Math.floor(Math.random() * items.length);
     return items[index];
+  }
+
+  private loadMapDetail(): MapDetail {
+    const raw = localStorage.getItem(MAP_DETAIL_KEY);
+    if (
+      raw === "quiz_clean" ||
+      raw === "reference_full" ||
+      raw === "physical_basic" ||
+      raw === "physical_relief"
+    ) {
+      return raw;
+    }
+    return "quiz_clean";
+  }
+
+  private loadLowDataMode(): boolean {
+    const raw = localStorage.getItem(LOW_DATA_MODE_KEY);
+    if (raw === "0") {
+      return false;
+    }
+    return true;
   }
 }

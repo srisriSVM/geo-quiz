@@ -10,5 +10,23 @@
     "name": "World: Countries",
     "types": ["country"],
     "defaultViewport": { "center": [0, 20], "zoom": 1.4 }
+  },
+  {
+    "id": "world_capitals",
+    "name": "World: Capitals",
+    "types": ["capital"],
+    "defaultViewport": { "center": [10, 20], "zoom": 1.6 }
+  },
+  {
+    "id": "world_rivers",
+    "name": "World: Rivers",
+    "types": ["river"],
+    "defaultViewport": { "center": [10, 15], "zoom": 1.5 }
+  },
+  {
+    "id": "world_mountains",
+    "name": "World: Mountains",
+    "types": ["mountain"],
+    "defaultViewport": { "center": [10, 20], "zoom": 1.6 }
   }
 ]

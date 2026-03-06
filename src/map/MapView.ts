@@ -1,20 +1,32 @@
 import type { Feature, FeatureCollection, Geometry } from "geojson";
 import maplibregl, { type Map as MapLibreMap } from "maplibre-gl";
 import type { Entity, Pack } from "../data/types";
-import { getBaseStyleUrl } from "./layers";
+import {
+  getPhysicalBasicStyle,
+  getPhysicalReliefStyle,
+  getPoliticalStyleUrl
+} from "./layers";
 
 const SOURCE_POLYGONS = "entities-polygons-source";
+const SOURCE_LINES = "entities-lines-source";
 const SOURCE_POINTS = "entities-points-source";
+const SOURCE_TARGET_LINE = "entities-target-line-source";
 
 const LAYER_POLYGONS = "entities-polygons";
 const LAYER_POLYGON_OUTLINE = "entities-polygon-outline";
+const LAYER_LINES = "entities-lines";
+const LAYER_LINES_CASING = "entities-lines-casing";
 const LAYER_POINTS = "entities-points";
 const LAYER_HIGHLIGHT_POLYGON = "entities-highlight-polygon";
 const LAYER_HIGHLIGHT_POLYGON_OUTLINE = "entities-highlight-polygon-outline";
+const LAYER_HIGHLIGHT_LINE = "entities-highlight-line";
+const LAYER_TARGET_LINE_CASING = "entities-target-line-casing";
+const LAYER_TARGET_LINE = "entities-target-line";
 const LAYER_HIGHLIGHT_POINT = "entities-highlight-point";
 const LAYER_HIGHLIGHT_LABEL = "entities-highlight-label";
 
 type Mode = "learn" | "quiz";
+type MapDetail = "quiz_clean" | "reference_full" | "physical_basic" | "physical_relief";
 
 type EntityFeatureProps = {
   id: string;
@@ -31,9 +43,21 @@ export class MapView {
   private pendingHighlightedEntityId: string | null = null;
   private pendingPack: Pack | null = null;
   private pendingMode: Mode = "learn";
+  private pendingMapDetail: MapDetail = "quiz_clean";
+  private pendingLowDataMode = true;
   private pendingFocusEntity: Entity | null = null;
+  private pendingCamera:
+    | {
+        center: [number, number];
+        zoom: number;
+        bearing: number;
+        pitch: number;
+      }
+    | null = null;
   private highlightedDotMarker: maplibregl.Marker | null = null;
   private highlightedLabelMarker: maplibregl.Marker | null = null;
+  private highlightedRiverMarkers: maplibregl.Marker[] = [];
+  private currentStyleSignature = "political";
 
   constructor(host: HTMLElement) {
     this.host = host;
@@ -42,7 +66,7 @@ export class MapView {
   mount(): void {
     const map = new maplibregl.Map({
       container: this.host,
-      style: getBaseStyleUrl(),
+      style: getPoliticalStyleUrl(),
       center: [10, 30],
       zoom: 1.4
     });
@@ -51,12 +75,14 @@ export class MapView {
 
     map.on("load", () => {
       this.mapLoaded = true;
-      const styleLayers = map.getStyle().layers ?? [];
-      for (const layer of styleLayers) {
-        if (layer.type === "symbol") {
-          map.setLayoutProperty(layer.id, "visibility", "none");
-        }
-      }
+      this.applyBaseDetailVisibility();
+      this.addEntityLayers(map);
+      this.applyPendingState();
+    });
+
+    map.on("style.load", () => {
+      this.mapLoaded = true;
+      this.applyBaseDetailVisibility();
       this.addEntityLayers(map);
       this.applyPendingState();
     });
@@ -73,9 +99,39 @@ export class MapView {
     const showAll = mode === "learn";
     this.map.setLayoutProperty(LAYER_POLYGONS, "visibility", showAll ? "visible" : "none");
     this.map.setLayoutProperty(LAYER_POLYGON_OUTLINE, "visibility", showAll ? "visible" : "none");
+    this.map.setLayoutProperty(LAYER_LINES_CASING, "visibility", showAll ? "visible" : "none");
+    this.map.setLayoutProperty(LAYER_LINES, "visibility", showAll ? "visible" : "none");
+    this.map.setLayoutProperty(LAYER_TARGET_LINE_CASING, "visibility", "visible");
+    this.map.setLayoutProperty(LAYER_TARGET_LINE, "visibility", "visible");
     this.map.setLayoutProperty(LAYER_POINTS, "visibility", showAll ? "visible" : "none");
     this.map.setLayoutProperty(LAYER_HIGHLIGHT_LABEL, "visibility", showAll ? "visible" : "none");
     this.renderHighlightedMarkers();
+  }
+
+  setMapDetail(mapDetail: MapDetail): void {
+    this.pendingMapDetail = mapDetail;
+    if (!this.map) {
+      return;
+    }
+
+    if (this.applyStyleIfNeeded()) {
+      return;
+    }
+
+    if (!this.mapLoaded) {
+      return;
+    }
+
+    this.applyBaseDetailVisibility();
+  }
+
+  setLowDataMode(enabled: boolean): void {
+    this.pendingLowDataMode = enabled;
+    if (!this.map) {
+      return;
+    }
+
+    this.applyStyleIfNeeded();
   }
 
   setEntities(entities: Entity[]): void {
@@ -85,24 +141,32 @@ export class MapView {
     }
 
     const polygonSource = this.map.getSource(SOURCE_POLYGONS) as maplibregl.GeoJSONSource | undefined;
+    const lineSource = this.map.getSource(SOURCE_LINES) as maplibregl.GeoJSONSource | undefined;
     const pointSource = this.map.getSource(SOURCE_POINTS) as maplibregl.GeoJSONSource | undefined;
-    if (!polygonSource || !pointSource) {
+    if (!polygonSource || !lineSource || !pointSource) {
       return;
     }
 
     const polygonFeatures: Feature[] = [];
+    const lineFeatures: Feature[] = [];
     const pointFeatures: Feature[] = [];
 
     for (const entity of entities) {
-      const pointFeature = this.toPointFeature(entity);
-      pointFeatures.push(pointFeature);
+      if (entity.geometryType === "point") {
+        const pointFeature = this.toPointFeature(entity);
+        pointFeatures.push(pointFeature);
+      }
 
       if (entity.geometryType === "polygon" && entity.geometry) {
         polygonFeatures.push(this.toGeometryFeature(entity));
       }
+      if (entity.geometryType === "line" && entity.geometry) {
+        lineFeatures.push(this.toGeometryFeature(entity));
+      }
     }
 
     polygonSource.setData({ type: "FeatureCollection", features: polygonFeatures } as FeatureCollection);
+    lineSource.setData({ type: "FeatureCollection", features: lineFeatures } as FeatureCollection);
     pointSource.setData({ type: "FeatureCollection", features: pointFeatures } as FeatureCollection);
     this.renderHighlightedMarkers();
   }
@@ -113,6 +177,7 @@ export class MapView {
       return;
     }
     this.applyHighlightFilter(entityId);
+    this.updateTargetLineData(entityId);
     this.renderHighlightedMarkers();
   }
 
@@ -147,14 +212,32 @@ export class MapView {
   }
 
   private applyPendingState(): void {
+    if (this.applyStyleIfNeeded()) {
+      return;
+    }
+
     this.setEntities(this.pendingEntities);
     this.setMode(this.pendingMode);
+    this.setMapDetail(this.pendingMapDetail);
     this.applyHighlightFilter(this.pendingHighlightedEntityId);
+    this.updateTargetLineData(this.pendingHighlightedEntityId);
     this.renderHighlightedMarkers();
 
     if (this.pendingPack && this.map) {
       this.applyPackBounds(this.pendingPack);
-      this.map.jumpTo({ center: this.pendingPack.defaultViewport.center, zoom: this.pendingPack.defaultViewport.zoom });
+      if (!this.pendingCamera) {
+        this.map.jumpTo({ center: this.pendingPack.defaultViewport.center, zoom: this.pendingPack.defaultViewport.zoom });
+      }
+    }
+
+    if (this.pendingCamera && this.map) {
+      this.map.jumpTo({
+        center: this.pendingCamera.center,
+        zoom: this.pendingCamera.zoom,
+        bearing: this.pendingCamera.bearing,
+        pitch: this.pendingCamera.pitch
+      });
+      this.pendingCamera = null;
     }
 
     if (this.pendingFocusEntity) {
@@ -170,15 +253,92 @@ export class MapView {
     const idFilter = entityId ? ["==", "id", entityId] : ["==", "id", ""];
     this.map.setFilter(LAYER_HIGHLIGHT_POLYGON, idFilter as never);
     this.map.setFilter(LAYER_HIGHLIGHT_POLYGON_OUTLINE, idFilter as never);
+    this.map.setFilter(LAYER_HIGHLIGHT_LINE, idFilter as never);
     this.map.setFilter(LAYER_HIGHLIGHT_POINT, idFilter as never);
     this.map.setFilter(LAYER_HIGHLIGHT_LABEL, idFilter as never);
   }
 
+  private applyBaseDetailVisibility(): void {
+    if (!this.map || !this.mapLoaded) {
+      return;
+    }
+
+    const showLabels = this.pendingMapDetail === "reference_full";
+    const styleLayers = this.map.getStyle().layers ?? [];
+    for (const layer of styleLayers) {
+      if (layer.id.startsWith("entities-")) {
+        continue;
+      }
+      if (layer.type === "symbol") {
+        this.map.setLayoutProperty(layer.id, "visibility", showLabels ? "visible" : "none");
+      }
+    }
+  }
+
+  private applyStyleIfNeeded(): boolean {
+    if (!this.map) {
+      return false;
+    }
+
+    const desiredStyleSignature = this.getStyleSignature(this.pendingMapDetail, this.pendingLowDataMode);
+    if (desiredStyleSignature === this.currentStyleSignature) {
+      return false;
+    }
+
+    this.pendingCamera = {
+      center: [this.map.getCenter().lng, this.map.getCenter().lat],
+      zoom: this.map.getZoom(),
+      bearing: this.map.getBearing(),
+      pitch: this.map.getPitch()
+    };
+    this.currentStyleSignature = desiredStyleSignature;
+    this.mapLoaded = false;
+    this.map.setStyle(this.getStyleForDetail(this.pendingMapDetail, this.pendingLowDataMode));
+    return true;
+  }
+
+  private getStyleSignature(mapDetail: MapDetail, lowDataMode: boolean): string {
+    if (mapDetail === "physical_basic") {
+      return lowDataMode ? "physical_basic_low" : "physical_basic_full";
+    }
+    if (mapDetail === "physical_relief") {
+      return lowDataMode ? "physical_relief_low" : "physical_relief_full";
+    }
+    return "political";
+  }
+
+  private getStyleForDetail(
+    mapDetail: MapDetail,
+    lowDataMode: boolean
+  ): string | maplibregl.StyleSpecification {
+    if (mapDetail === "physical_basic") {
+      return getPhysicalBasicStyle(lowDataMode);
+    }
+    if (mapDetail === "physical_relief") {
+      return getPhysicalReliefStyle(lowDataMode);
+    }
+    return getPoliticalStyleUrl();
+  }
+
   private addEntityLayers(map: MapLibreMap): void {
+    if (map.getLayer(LAYER_HIGHLIGHT_LABEL)) {
+      return;
+    }
+
     const emptyData: FeatureCollection = { type: "FeatureCollection", features: [] };
 
-    map.addSource(SOURCE_POLYGONS, { type: "geojson", data: emptyData });
-    map.addSource(SOURCE_POINTS, { type: "geojson", data: emptyData });
+    if (!map.getSource(SOURCE_POLYGONS)) {
+      map.addSource(SOURCE_POLYGONS, { type: "geojson", data: emptyData });
+    }
+    if (!map.getSource(SOURCE_LINES)) {
+      map.addSource(SOURCE_LINES, { type: "geojson", data: emptyData });
+    }
+    if (!map.getSource(SOURCE_POINTS)) {
+      map.addSource(SOURCE_POINTS, { type: "geojson", data: emptyData });
+    }
+    if (!map.getSource(SOURCE_TARGET_LINE)) {
+      map.addSource(SOURCE_TARGET_LINE, { type: "geojson", data: emptyData });
+    }
 
     map.addLayer({
       id: LAYER_POLYGONS,
@@ -207,6 +367,42 @@ export class MapView {
     });
 
     map.addLayer({
+      id: LAYER_LINES_CASING,
+      type: "line",
+      source: SOURCE_LINES,
+      paint: {
+        "line-color": "#ffffff",
+        "line-opacity": 0.9,
+        "line-width": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          1, 4,
+          3, 6,
+          5, 10
+        ]
+      }
+    });
+
+    map.addLayer({
+      id: LAYER_LINES,
+      type: "line",
+      source: SOURCE_LINES,
+      paint: {
+        "line-color": "#0057ff",
+        "line-opacity": 0.95,
+        "line-width": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          1, 2.5,
+          3, 4,
+          5, 7
+        ]
+      }
+    });
+
+    map.addLayer({
       id: LAYER_HIGHLIGHT_POLYGON,
       type: "fill",
       source: SOURCE_POLYGONS,
@@ -220,6 +416,70 @@ export class MapView {
       source: SOURCE_POLYGONS,
       filter: ["==", "id", ""],
       paint: { "line-color": "#7c2d12", "line-width": 4 }
+    });
+
+    map.addLayer({
+      id: LAYER_HIGHLIGHT_LINE,
+      type: "line",
+      source: SOURCE_LINES,
+      filter: ["==", "id", ""],
+      paint: {
+        "line-color": "#ff7a00",
+        "line-opacity": 1,
+        "line-width": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          1, 6,
+          3, 8,
+          5, 12
+        ]
+      }
+    });
+
+    map.addLayer({
+      id: LAYER_TARGET_LINE_CASING,
+      type: "line",
+      source: SOURCE_TARGET_LINE,
+      paint: {
+        "line-color": "#ffffff",
+        "line-opacity": 1,
+        "line-width": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          1, 14,
+          3, 18,
+          5, 24
+        ]
+      },
+      layout: {
+        "line-cap": "round",
+        "line-join": "round"
+      }
+    });
+
+    map.addLayer({
+      id: LAYER_TARGET_LINE,
+      type: "line",
+      source: SOURCE_TARGET_LINE,
+      paint: {
+        "line-color": "#ff00cc",
+        "line-opacity": 1,
+        "line-blur": 0,
+        "line-width": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          1, 9,
+          3, 12,
+          5, 16
+        ]
+      },
+      layout: {
+        "line-cap": "round",
+        "line-join": "round"
+      }
     });
 
     map.addLayer({
@@ -254,6 +514,10 @@ export class MapView {
         "text-halo-width": 1.6
       }
     });
+
+    // Ensure target river highlight is drawn above all quiz overlays while debugging visibility.
+    map.moveLayer(LAYER_TARGET_LINE_CASING);
+    map.moveLayer(LAYER_TARGET_LINE);
   }
 
   private toPointFeature(entity: Entity): Feature {
@@ -309,6 +573,10 @@ export class MapView {
     this.highlightedDotMarker = null;
     this.highlightedLabelMarker?.remove();
     this.highlightedLabelMarker = null;
+    for (const marker of this.highlightedRiverMarkers) {
+      marker.remove();
+    }
+    this.highlightedRiverMarkers = [];
 
     if (!this.pendingHighlightedEntityId) {
       return;
@@ -319,15 +587,59 @@ export class MapView {
       return;
     }
 
-    const dot = document.createElement("div");
-    dot.style.width = "20px";
-    dot.style.height = "20px";
-    dot.style.borderRadius = "999px";
-    dot.style.background = "rgba(245,158,11,0.55)";
-    dot.style.border = "3px solid #7c2d12";
-    dot.style.boxShadow = "0 2px 8px rgba(0,0,0,0.35)";
-    this.highlightedDotMarker = new maplibregl.Marker({ element: dot }).setLngLat(target.labelPoint).addTo(this.map);
+    if (target.geometryType === "point") {
+      const dot = document.createElement("div");
+      dot.style.width = "20px";
+      dot.style.height = "20px";
+      dot.style.borderRadius = "999px";
+      dot.style.background = "rgba(245,158,11,0.55)";
+      dot.style.border = "3px solid #7c2d12";
+      dot.style.boxShadow = "0 2px 8px rgba(0,0,0,0.35)";
+      this.highlightedDotMarker = new maplibregl.Marker({ element: dot }).setLngLat(target.labelPoint).addTo(this.map);
+    }
+    if (target.geometryType === "line" && target.geometry?.type === "LineString") {
+      const anchors = this.sampleLineAnchors(target.geometry.coordinates as [number, number][], 12);
+      for (const anchor of anchors) {
+        const markerRoot = document.createElement("div");
+        markerRoot.style.width = "0";
+        markerRoot.style.height = "0";
 
+        const arrowWrap = document.createElement("div");
+        arrowWrap.style.width = "0";
+        arrowWrap.style.height = "0";
+        arrowWrap.style.marginLeft = "-7px";
+        arrowWrap.style.marginTop = "-7px";
+        arrowWrap.style.transformOrigin = "center";
+        arrowWrap.style.transform = `rotate(${anchor.angleDeg}deg)`;
+        arrowWrap.style.filter = "drop-shadow(0 1px 2px rgba(0,0,0,0.25))";
+
+        const back = document.createElement("div");
+        back.style.position = "absolute";
+        back.style.left = "0";
+        back.style.top = "0";
+        back.style.width = "0";
+        back.style.height = "0";
+        back.style.borderTop = "6px solid transparent";
+        back.style.borderBottom = "6px solid transparent";
+        back.style.borderLeft = "12px solid #ffffff";
+
+        const front = document.createElement("div");
+        front.style.position = "absolute";
+        front.style.left = "1px";
+        front.style.top = "1px";
+        front.style.width = "0";
+        front.style.height = "0";
+        front.style.borderTop = "5px solid transparent";
+        front.style.borderBottom = "5px solid transparent";
+        front.style.borderLeft = "10px solid #ff7a00";
+
+        arrowWrap.append(back, front);
+        markerRoot.append(arrowWrap);
+
+        const marker = new maplibregl.Marker({ element: markerRoot }).setLngLat(anchor.point).addTo(this.map);
+        this.highlightedRiverMarkers.push(marker);
+      }
+    }
     if (this.pendingMode === "learn") {
       const label = document.createElement("div");
       label.textContent = target.name;
@@ -344,4 +656,65 @@ export class MapView {
         .addTo(this.map);
     }
   }
+
+  private updateTargetLineData(entityId: string | null): void {
+    if (!this.map || !this.mapLoaded) {
+      return;
+    }
+
+    const targetLineSource = this.map.getSource(SOURCE_TARGET_LINE) as maplibregl.GeoJSONSource | undefined;
+    if (!targetLineSource) {
+      return;
+    }
+
+    const target = entityId
+      ? this.pendingEntities.find((entity) => entity.id === entityId && entity.geometryType === "line" && entity.geometry)
+      : null;
+
+    if (!target) {
+      targetLineSource.setData({ type: "FeatureCollection", features: [] });
+      return;
+    }
+
+    targetLineSource.setData({
+      type: "FeatureCollection",
+      features: [this.toGeometryFeature(target)]
+    } as FeatureCollection);
+  }
+
+  private sampleLineAnchors(
+    coords: [number, number][],
+    maxPoints: number
+  ): Array<{ point: [number, number]; angleDeg: number }> {
+    if (coords.length <= 1) {
+      return coords.map((point) => ({ point, angleDeg: 0 }));
+    }
+
+    const dense: Array<{ point: [number, number]; angleDeg: number }> = [];
+    for (let i = 0; i < coords.length - 1; i += 1) {
+      const [x1, y1] = coords[i];
+      const [x2, y2] = coords[i + 1];
+      const angleDeg = (Math.atan2(y2 - y1, x2 - x1) * 180) / Math.PI;
+      for (let step = 0; step < 8; step += 1) {
+        const t = step / 8;
+        dense.push({
+          point: [x1 + (x2 - x1) * t, y1 + (y2 - y1) * t],
+          angleDeg
+        });
+      }
+    }
+    dense.push({ point: coords[coords.length - 1], angleDeg: 0 });
+
+    if (dense.length <= maxPoints) {
+      return dense;
+    }
+
+    const sampled: Array<{ point: [number, number]; angleDeg: number }> = [];
+    const stride = (dense.length - 1) / (maxPoints - 1);
+    for (let i = 0; i < maxPoints; i += 1) {
+      sampled.push(dense[Math.round(i * stride)]);
+    }
+    return sampled;
+  }
+
 }
