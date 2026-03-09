@@ -20,7 +20,12 @@ npm run build
 ## Data layout
 
 - `public/data/packs.json`: pack definitions
-- `public/data/pack-entities/<packId>.entities.json`: entities for each pack (lazy-loaded)
+- `public/data/entities-core.json`: canonical entity metadata (no geometry)
+- `public/data/pack-index.json`: map of `packId -> entityIds[]`
+- `public/data/pack-entity-meta.source.json`: editable per-pack metadata input (rank/metric/etc.)
+- `public/data/pack-entity-meta.json`: generated per-pack metadata map used at runtime
+- `public/data/entity-geometry-index.json`: map of `entityId -> shardId`
+- `public/data/entity-geometry-shards/<shardId>.json`: geometry payloads sharded by entity id hash
 - `public/data/entities-index.json`: lightweight global index
 - `public/data/sample-entities.json`: editable source used by `npm run build:data`
 

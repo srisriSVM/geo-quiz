@@ -1,0 +1,1560 @@
+{
+  "top10_busiest_straits_chokepoints": {
+    "canal_panama": {
+      "rank": 6,
+      "metricLabel": "Approx annual traffic",
+      "metricValue": 14,
+      "metricUnit": "k vessels",
+      "asOf": "2025",
+      "source": "Maritime references snapshot"
+    },
+    "canal_suez": {
+      "rank": 3,
+      "metricLabel": "Approx annual traffic",
+      "metricValue": 26,
+      "metricUnit": "k vessels",
+      "asOf": "2025",
+      "source": "Maritime references snapshot"
+    },
+    "strait_babelmandeb": {
+      "rank": 9,
+      "metricLabel": "Approx annual traffic",
+      "metricValue": 18,
+      "metricUnit": "k vessels",
+      "asOf": "2025",
+      "source": "Maritime references snapshot"
+    },
+    "strait_bering": {
+      "rank": 10,
+      "metricLabel": "Approx annual traffic",
+      "metricValue": 2,
+      "metricUnit": "k vessels",
+      "asOf": "2025",
+      "source": "Maritime references snapshot"
+    },
+    "strait_bosporus": {
+      "rank": 4,
+      "metricLabel": "Approx annual traffic",
+      "metricValue": 40,
+      "metricUnit": "k vessels",
+      "asOf": "2025",
+      "source": "Maritime references snapshot"
+    },
+    "strait_dover": {
+      "rank": 7,
+      "metricLabel": "Approx annual traffic",
+      "metricValue": 20,
+      "metricUnit": "k vessels",
+      "asOf": "2025",
+      "source": "Maritime references snapshot"
+    },
+    "strait_gibraltar": {
+      "rank": 5,
+      "metricLabel": "Approx annual traffic",
+      "metricValue": 30,
+      "metricUnit": "k vessels",
+      "asOf": "2025",
+      "source": "Maritime references snapshot"
+    },
+    "strait_hormuz": {
+      "rank": 2,
+      "metricLabel": "Approx annual traffic",
+      "metricValue": 55,
+      "metricUnit": "k vessels",
+      "asOf": "2025",
+      "source": "Maritime references snapshot"
+    },
+    "strait_malacca": {
+      "rank": 1,
+      "metricLabel": "Approx annual traffic",
+      "metricValue": 90,
+      "metricUnit": "k vessels",
+      "asOf": "2025",
+      "source": "Maritime references snapshot"
+    },
+    "strait_sunda": {
+      "rank": 8,
+      "metricLabel": "Approx annual traffic",
+      "metricValue": 15,
+      "metricUnit": "k vessels",
+      "asOf": "2025",
+      "source": "Maritime references snapshot"
+    }
+  },
+  "top10_countries_by_coastline": {
+    "country_aus": {
+      "rank": 7,
+      "metricLabel": "Coastline",
+      "metricValue": 25760,
+      "metricUnit": "km",
+      "asOf": "2025",
+      "source": "CIA/UN style snapshot"
+    },
+    "country_can": {
+      "rank": 1,
+      "metricLabel": "Coastline",
+      "metricValue": 202080,
+      "metricUnit": "km",
+      "asOf": "2025",
+      "source": "CIA/UN style snapshot"
+    },
+    "country_chn": {
+      "rank": 10,
+      "metricLabel": "Coastline",
+      "metricValue": 14500,
+      "metricUnit": "km",
+      "asOf": "2025",
+      "source": "CIA/UN style snapshot"
+    },
+    "country_idn": {
+      "rank": 3,
+      "metricLabel": "Coastline",
+      "metricValue": 54716,
+      "metricUnit": "km",
+      "asOf": "2025",
+      "source": "CIA/UN style snapshot"
+    },
+    "country_jpn": {
+      "rank": 6,
+      "metricLabel": "Coastline",
+      "metricValue": 29751,
+      "metricUnit": "km",
+      "asOf": "2025",
+      "source": "CIA/UN style snapshot"
+    },
+    "country_norway": {
+      "rank": 2,
+      "metricLabel": "Coastline",
+      "metricValue": 58133,
+      "metricUnit": "km",
+      "asOf": "2025",
+      "source": "CIA/UN style snapshot"
+    },
+    "country_nzl": {
+      "rank": 9,
+      "metricLabel": "Coastline",
+      "metricValue": 15134,
+      "metricUnit": "km",
+      "asOf": "2025",
+      "source": "CIA/UN style snapshot"
+    },
+    "country_phl": {
+      "rank": 5,
+      "metricLabel": "Coastline",
+      "metricValue": 36289,
+      "metricUnit": "km",
+      "asOf": "2025",
+      "source": "CIA/UN style snapshot"
+    },
+    "country_russia": {
+      "rank": 4,
+      "metricLabel": "Coastline",
+      "metricValue": 37653,
+      "metricUnit": "km",
+      "asOf": "2025",
+      "source": "CIA/UN style snapshot"
+    },
+    "country_usa": {
+      "rank": 8,
+      "metricLabel": "Coastline",
+      "metricValue": 19924,
+      "metricUnit": "km",
+      "asOf": "2025",
+      "source": "CIA/UN style snapshot"
+    }
+  },
+  "top10_deepest_lakes": {
+    "lake_baikal2": {
+      "rank": 1,
+      "metricLabel": "Max depth",
+      "metricValue": 1642,
+      "metricUnit": "m",
+      "asOf": "2025",
+      "source": "Hydrology references snapshot"
+    },
+    "lake_caspian2": {
+      "rank": 3,
+      "metricLabel": "Max depth",
+      "metricValue": 1025,
+      "metricUnit": "m",
+      "asOf": "2025",
+      "source": "Hydrology references snapshot"
+    },
+    "lake_crater": {
+      "rank": 9,
+      "metricLabel": "Max depth",
+      "metricValue": 594,
+      "metricUnit": "m",
+      "asOf": "2025",
+      "source": "Hydrology references snapshot"
+    },
+    "lake_great_slave": {
+      "rank": 8,
+      "metricLabel": "Max depth",
+      "metricValue": 614,
+      "metricUnit": "m",
+      "asOf": "2025",
+      "source": "Hydrology references snapshot"
+    },
+    "lake_issyk_kul": {
+      "rank": 7,
+      "metricLabel": "Max depth",
+      "metricValue": 668,
+      "metricUnit": "m",
+      "asOf": "2025",
+      "source": "Hydrology references snapshot"
+    },
+    "lake_malawi": {
+      "rank": 6,
+      "metricLabel": "Max depth",
+      "metricValue": 706,
+      "metricUnit": "m",
+      "asOf": "2025",
+      "source": "Hydrology references snapshot"
+    },
+    "lake_matano": {
+      "rank": 10,
+      "metricLabel": "Max depth",
+      "metricValue": 590,
+      "metricUnit": "m",
+      "asOf": "2025",
+      "source": "Hydrology references snapshot"
+    },
+    "lake_o_higgins": {
+      "rank": 5,
+      "metricLabel": "Max depth",
+      "metricValue": 836,
+      "metricUnit": "m",
+      "asOf": "2025",
+      "source": "Hydrology references snapshot"
+    },
+    "lake_tanganyika2": {
+      "rank": 2,
+      "metricLabel": "Max depth",
+      "metricValue": 1470,
+      "metricUnit": "m",
+      "asOf": "2025",
+      "source": "Hydrology references snapshot"
+    },
+    "lake_vostok": {
+      "rank": 4,
+      "metricLabel": "Max depth",
+      "metricValue": 1000,
+      "metricUnit": "m",
+      "asOf": "2025",
+      "source": "Hydrology references snapshot"
+    }
+  },
+  "top10_gdp_nominal_countries": {
+    "country_bra": {
+      "rank": 10,
+      "metricLabel": "GDP",
+      "metricValue": 2.2,
+      "metricUnit": "USD trillions",
+      "asOf": "2025",
+      "source": "IMF-style snapshot"
+    },
+    "country_can": {
+      "rank": 9,
+      "metricLabel": "GDP",
+      "metricValue": 2.2,
+      "metricUnit": "USD trillions",
+      "asOf": "2025",
+      "source": "IMF-style snapshot"
+    },
+    "country_chn": {
+      "rank": 2,
+      "metricLabel": "GDP",
+      "metricValue": 18.5,
+      "metricUnit": "USD trillions",
+      "asOf": "2025",
+      "source": "IMF-style snapshot"
+    },
+    "country_france": {
+      "rank": 7,
+      "metricLabel": "GDP",
+      "metricValue": 3.2,
+      "metricUnit": "USD trillions",
+      "asOf": "2025",
+      "source": "IMF-style snapshot"
+    },
+    "country_germany": {
+      "rank": 3,
+      "metricLabel": "GDP",
+      "metricValue": 4.7,
+      "metricUnit": "USD trillions",
+      "asOf": "2025",
+      "source": "IMF-style snapshot"
+    },
+    "country_ind": {
+      "rank": 5,
+      "metricLabel": "GDP",
+      "metricValue": 4.1,
+      "metricUnit": "USD trillions",
+      "asOf": "2025",
+      "source": "IMF-style snapshot"
+    },
+    "country_italy": {
+      "rank": 8,
+      "metricLabel": "GDP",
+      "metricValue": 2.4,
+      "metricUnit": "USD trillions",
+      "asOf": "2025",
+      "source": "IMF-style snapshot"
+    },
+    "country_jpn": {
+      "rank": 4,
+      "metricLabel": "GDP",
+      "metricValue": 4.2,
+      "metricUnit": "USD trillions",
+      "asOf": "2025",
+      "source": "IMF-style snapshot"
+    },
+    "country_united_kingdom": {
+      "rank": 6,
+      "metricLabel": "GDP",
+      "metricValue": 3.6,
+      "metricUnit": "USD trillions",
+      "asOf": "2025",
+      "source": "IMF-style snapshot"
+    },
+    "country_usa": {
+      "rank": 1,
+      "metricLabel": "GDP",
+      "metricValue": 28.8,
+      "metricUnit": "USD trillions",
+      "asOf": "2025",
+      "source": "IMF-style snapshot"
+    }
+  },
+  "top10_highest_peaks": {
+    "mountain_aconcagua": {
+      "rank": 3,
+      "metricLabel": "Elevation",
+      "metricValue": 6961,
+      "metricUnit": "m",
+      "asOf": "2025",
+      "source": "Peak references educational snapshot"
+    },
+    "mountain_denali": {
+      "rank": 4,
+      "metricLabel": "Elevation",
+      "metricValue": 6190,
+      "metricUnit": "m",
+      "asOf": "2025",
+      "source": "Peak references educational snapshot"
+    },
+    "mountain_elbrus": {
+      "rank": 6,
+      "metricLabel": "Elevation",
+      "metricValue": 5642,
+      "metricUnit": "m",
+      "asOf": "2025",
+      "source": "Peak references educational snapshot"
+    },
+    "mountain_everest": {
+      "rank": 1,
+      "metricLabel": "Elevation",
+      "metricValue": 8849,
+      "metricUnit": "m",
+      "asOf": "2025",
+      "source": "Peak references educational snapshot"
+    },
+    "mountain_fuji": {
+      "rank": 9,
+      "metricLabel": "Elevation",
+      "metricValue": 3776,
+      "metricUnit": "m",
+      "asOf": "2025",
+      "source": "Peak references educational snapshot"
+    },
+    "mountain_k2": {
+      "rank": 2,
+      "metricLabel": "Elevation",
+      "metricValue": 8611,
+      "metricUnit": "m",
+      "asOf": "2025",
+      "source": "Peak references educational snapshot"
+    },
+    "mountain_kilimanjaro": {
+      "rank": 5,
+      "metricLabel": "Elevation",
+      "metricValue": 5895,
+      "metricUnit": "m",
+      "asOf": "2025",
+      "source": "Peak references educational snapshot"
+    },
+    "mountain_kosciuszko": {
+      "rank": 10,
+      "metricLabel": "Elevation",
+      "metricValue": 2228,
+      "metricUnit": "m",
+      "asOf": "2025",
+      "source": "Peak references educational snapshot"
+    },
+    "mountain_mont_blanc": {
+      "rank": 8,
+      "metricLabel": "Elevation",
+      "metricValue": 4808,
+      "metricUnit": "m",
+      "asOf": "2025",
+      "source": "Peak references educational snapshot"
+    },
+    "mountain_vinson": {
+      "rank": 7,
+      "metricLabel": "Elevation",
+      "metricValue": 4892,
+      "metricUnit": "m",
+      "asOf": "2025",
+      "source": "Peak references educational snapshot"
+    }
+  },
+  "top10_highest_waterfalls": {
+    "waterfall_angel": {
+      "rank": 1,
+      "metricLabel": "Height",
+      "metricValue": 979,
+      "metricUnit": "m",
+      "asOf": "2025",
+      "source": "Waterfall references snapshot"
+    },
+    "waterfall_balaifossen": {
+      "rank": 7,
+      "metricLabel": "Height",
+      "metricValue": 850,
+      "metricUnit": "m",
+      "asOf": "2025",
+      "source": "Waterfall references snapshot"
+    },
+    "waterfall_browne": {
+      "rank": 10,
+      "metricLabel": "Height",
+      "metricValue": 836,
+      "metricUnit": "m",
+      "asOf": "2025",
+      "source": "Waterfall references snapshot"
+    },
+    "waterfall_james_bruce": {
+      "rank": 9,
+      "metricLabel": "Height",
+      "metricValue": 840,
+      "metricUnit": "m",
+      "asOf": "2025",
+      "source": "Waterfall references snapshot"
+    },
+    "waterfall_oloupena": {
+      "rank": 4,
+      "metricLabel": "Height",
+      "metricValue": 900,
+      "metricUnit": "m",
+      "asOf": "2025",
+      "source": "Waterfall references snapshot"
+    },
+    "waterfall_puukaoku": {
+      "rank": 8,
+      "metricLabel": "Height",
+      "metricValue": 840,
+      "metricUnit": "m",
+      "asOf": "2025",
+      "source": "Waterfall references snapshot"
+    },
+    "waterfall_tres_hermanas": {
+      "rank": 3,
+      "metricLabel": "Height",
+      "metricValue": 914,
+      "metricUnit": "m",
+      "asOf": "2025",
+      "source": "Waterfall references snapshot"
+    },
+    "waterfall_tugela": {
+      "rank": 2,
+      "metricLabel": "Height",
+      "metricValue": 948,
+      "metricUnit": "m",
+      "asOf": "2025",
+      "source": "Waterfall references snapshot"
+    },
+    "waterfall_vinnufossen": {
+      "rank": 6,
+      "metricLabel": "Height",
+      "metricValue": 860,
+      "metricUnit": "m",
+      "asOf": "2025",
+      "source": "Waterfall references snapshot"
+    },
+    "waterfall_yumbilla": {
+      "rank": 5,
+      "metricLabel": "Height",
+      "metricValue": 896,
+      "metricUnit": "m",
+      "asOf": "2025",
+      "source": "Waterfall references snapshot"
+    }
+  },
+  "top10_largest_countries_area": {
+    "country_arg": {
+      "rank": 8,
+      "metricLabel": "Area",
+      "metricValue": 2.78,
+      "metricUnit": "million km2",
+      "asOf": "2025",
+      "source": "UN/World Bank educational snapshot"
+    },
+    "country_aus": {
+      "rank": 6,
+      "metricLabel": "Area",
+      "metricValue": 7.69,
+      "metricUnit": "million km2",
+      "asOf": "2025",
+      "source": "UN/World Bank educational snapshot"
+    },
+    "country_bra": {
+      "rank": 5,
+      "metricLabel": "Area",
+      "metricValue": 8.52,
+      "metricUnit": "million km2",
+      "asOf": "2025",
+      "source": "UN/World Bank educational snapshot"
+    },
+    "country_can": {
+      "rank": 2,
+      "metricLabel": "Area",
+      "metricValue": 9.98,
+      "metricUnit": "million km2",
+      "asOf": "2025",
+      "source": "UN/World Bank educational snapshot"
+    },
+    "country_chn": {
+      "rank": 3,
+      "metricLabel": "Area",
+      "metricValue": 9.6,
+      "metricUnit": "million km2",
+      "asOf": "2025",
+      "source": "UN/World Bank educational snapshot"
+    },
+    "country_dza": {
+      "rank": 10,
+      "metricLabel": "Area",
+      "metricValue": 2.38,
+      "metricUnit": "million km2",
+      "asOf": "2025",
+      "source": "UN/World Bank educational snapshot"
+    },
+    "country_ind": {
+      "rank": 7,
+      "metricLabel": "Area",
+      "metricValue": 3.29,
+      "metricUnit": "million km2",
+      "asOf": "2025",
+      "source": "UN/World Bank educational snapshot"
+    },
+    "country_kaz": {
+      "rank": 9,
+      "metricLabel": "Area",
+      "metricValue": 2.72,
+      "metricUnit": "million km2",
+      "asOf": "2025",
+      "source": "UN/World Bank educational snapshot"
+    },
+    "country_russia": {
+      "rank": 1,
+      "metricLabel": "Area",
+      "metricValue": 17.1,
+      "metricUnit": "million km2",
+      "asOf": "2025",
+      "source": "UN/World Bank educational snapshot"
+    },
+    "country_usa": {
+      "rank": 4,
+      "metricLabel": "Area",
+      "metricValue": 9.52,
+      "metricUnit": "million km2",
+      "asOf": "2025",
+      "source": "UN/World Bank educational snapshot"
+    }
+  },
+  "top10_largest_deserts": {
+    "desert_arabian": {
+      "rank": 2,
+      "metricLabel": "Area",
+      "metricValue": 2.3,
+      "metricUnit": "million km2",
+      "asOf": "2025",
+      "source": "Geomorphology references snapshot"
+    },
+    "desert_atacama": {
+      "rank": 10,
+      "metricLabel": "Area",
+      "metricValue": 0.11,
+      "metricUnit": "million km2",
+      "asOf": "2025",
+      "source": "Geomorphology references snapshot"
+    },
+    "desert_gobi": {
+      "rank": 3,
+      "metricLabel": "Area",
+      "metricValue": 1.3,
+      "metricUnit": "million km2",
+      "asOf": "2025",
+      "source": "Geomorphology references snapshot"
+    },
+    "desert_great_victoria": {
+      "rank": 6,
+      "metricLabel": "Area",
+      "metricValue": 0.65,
+      "metricUnit": "million km2",
+      "asOf": "2025",
+      "source": "Geomorphology references snapshot"
+    },
+    "desert_kalahari": {
+      "rank": 4,
+      "metricLabel": "Area",
+      "metricValue": 0.9,
+      "metricUnit": "million km2",
+      "asOf": "2025",
+      "source": "Geomorphology references snapshot"
+    },
+    "desert_karakum": {
+      "rank": 8,
+      "metricLabel": "Area",
+      "metricValue": 0.27,
+      "metricUnit": "million km2",
+      "asOf": "2025",
+      "source": "Geomorphology references snapshot"
+    },
+    "desert_patagonian": {
+      "rank": 5,
+      "metricLabel": "Area",
+      "metricValue": 0.67,
+      "metricUnit": "million km2",
+      "asOf": "2025",
+      "source": "Geomorphology references snapshot"
+    },
+    "desert_sahara": {
+      "rank": 1,
+      "metricLabel": "Area",
+      "metricValue": 9.2,
+      "metricUnit": "million km2",
+      "asOf": "2025",
+      "source": "Geomorphology references snapshot"
+    },
+    "desert_sonoran": {
+      "rank": 7,
+      "metricLabel": "Area",
+      "metricValue": 0.31,
+      "metricUnit": "million km2",
+      "asOf": "2025",
+      "source": "Geomorphology references snapshot"
+    },
+    "desert_thar": {
+      "rank": 9,
+      "metricLabel": "Area",
+      "metricValue": 0.2,
+      "metricUnit": "million km2",
+      "asOf": "2025",
+      "source": "Geomorphology references snapshot"
+    }
+  },
+  "top10_largest_gulfs_bays": {
+    "sea_baffin_bay": {
+      "rank": 5,
+      "metricLabel": "Area",
+      "metricValue": 689,
+      "metricUnit": "thousand km2",
+      "asOf": "2025",
+      "source": "Oceanography references snapshot"
+    },
+    "sea_bay_bengal": {
+      "rank": 1,
+      "metricLabel": "Area",
+      "metricValue": 2172,
+      "metricUnit": "thousand km2",
+      "asOf": "2025",
+      "source": "Oceanography references snapshot"
+    },
+    "sea_bay_biscay": {
+      "rank": 8,
+      "metricLabel": "Area",
+      "metricValue": 223,
+      "metricUnit": "thousand km2",
+      "asOf": "2025",
+      "source": "Oceanography references snapshot"
+    },
+    "sea_bay_fundy": {
+      "rank": 10,
+      "metricLabel": "Area",
+      "metricValue": 93,
+      "metricUnit": "thousand km2",
+      "asOf": "2025",
+      "source": "Oceanography references snapshot"
+    },
+    "sea_bay_guinea": {
+      "rank": 6,
+      "metricLabel": "Area",
+      "metricValue": 615,
+      "metricUnit": "thousand km2",
+      "asOf": "2025",
+      "source": "Oceanography references snapshot"
+    },
+    "sea_gulf_alaska": {
+      "rank": 3,
+      "metricLabel": "Area",
+      "metricValue": 1530,
+      "metricUnit": "thousand km2",
+      "asOf": "2025",
+      "source": "Oceanography references snapshot"
+    },
+    "sea_gulf_california": {
+      "rank": 9,
+      "metricLabel": "Area",
+      "metricValue": 160,
+      "metricUnit": "thousand km2",
+      "asOf": "2025",
+      "source": "Oceanography references snapshot"
+    },
+    "sea_gulf_mexico": {
+      "rank": 2,
+      "metricLabel": "Area",
+      "metricValue": 1600,
+      "metricUnit": "thousand km2",
+      "asOf": "2025",
+      "source": "Oceanography references snapshot"
+    },
+    "sea_gulf_thailand": {
+      "rank": 7,
+      "metricLabel": "Area",
+      "metricValue": 320,
+      "metricUnit": "thousand km2",
+      "asOf": "2025",
+      "source": "Oceanography references snapshot"
+    },
+    "sea_hudson_bay": {
+      "rank": 4,
+      "metricLabel": "Area",
+      "metricValue": 1230,
+      "metricUnit": "thousand km2",
+      "asOf": "2025",
+      "source": "Oceanography references snapshot"
+    }
+  },
+  "top10_largest_islands": {
+    "island_baffin": {
+      "rank": 5,
+      "metricLabel": "Area",
+      "metricValue": 507,
+      "metricUnit": "thousand km2",
+      "asOf": "2025",
+      "source": "Island geography references snapshot"
+    },
+    "island_borneo": {
+      "rank": 3,
+      "metricLabel": "Area",
+      "metricValue": 748,
+      "metricUnit": "thousand km2",
+      "asOf": "2025",
+      "source": "Island geography references snapshot"
+    },
+    "island_ellesmere": {
+      "rank": 10,
+      "metricLabel": "Area",
+      "metricValue": 196,
+      "metricUnit": "thousand km2",
+      "asOf": "2025",
+      "source": "Island geography references snapshot"
+    },
+    "island_great_britain": {
+      "rank": 9,
+      "metricLabel": "Area",
+      "metricValue": 209,
+      "metricUnit": "thousand km2",
+      "asOf": "2025",
+      "source": "Island geography references snapshot"
+    },
+    "island_greenland": {
+      "rank": 1,
+      "metricLabel": "Area",
+      "metricValue": 2166,
+      "metricUnit": "thousand km2",
+      "asOf": "2025",
+      "source": "Island geography references snapshot"
+    },
+    "island_honshu": {
+      "rank": 7,
+      "metricLabel": "Area",
+      "metricValue": 228,
+      "metricUnit": "thousand km2",
+      "asOf": "2025",
+      "source": "Island geography references snapshot"
+    },
+    "island_madagascar": {
+      "rank": 4,
+      "metricLabel": "Area",
+      "metricValue": 587,
+      "metricUnit": "thousand km2",
+      "asOf": "2025",
+      "source": "Island geography references snapshot"
+    },
+    "island_new_guinea": {
+      "rank": 2,
+      "metricLabel": "Area",
+      "metricValue": 786,
+      "metricUnit": "thousand km2",
+      "asOf": "2025",
+      "source": "Island geography references snapshot"
+    },
+    "island_sumatra": {
+      "rank": 6,
+      "metricLabel": "Area",
+      "metricValue": 473,
+      "metricUnit": "thousand km2",
+      "asOf": "2025",
+      "source": "Island geography references snapshot"
+    },
+    "island_victoria": {
+      "rank": 8,
+      "metricLabel": "Area",
+      "metricValue": 217,
+      "metricUnit": "thousand km2",
+      "asOf": "2025",
+      "source": "Island geography references snapshot"
+    }
+  },
+  "top10_largest_lakes": {
+    "lake_baikal2": {
+      "rank": 7,
+      "metricLabel": "Area",
+      "metricValue": 31.5,
+      "metricUnit": "thousand km2",
+      "asOf": "2025",
+      "source": "Hydrology references snapshot"
+    },
+    "lake_caspian2": {
+      "rank": 1,
+      "metricLabel": "Area",
+      "metricValue": 371,
+      "metricUnit": "thousand km2",
+      "asOf": "2025",
+      "source": "Hydrology references snapshot"
+    },
+    "lake_erie2": {
+      "rank": 10,
+      "metricLabel": "Area",
+      "metricValue": 25.7,
+      "metricUnit": "thousand km2",
+      "asOf": "2025",
+      "source": "Hydrology references snapshot"
+    },
+    "lake_great_bear": {
+      "rank": 8,
+      "metricLabel": "Area",
+      "metricValue": 31.1,
+      "metricUnit": "thousand km2",
+      "asOf": "2025",
+      "source": "Hydrology references snapshot"
+    },
+    "lake_huron2": {
+      "rank": 4,
+      "metricLabel": "Area",
+      "metricValue": 59.6,
+      "metricUnit": "thousand km2",
+      "asOf": "2025",
+      "source": "Hydrology references snapshot"
+    },
+    "lake_malawi": {
+      "rank": 9,
+      "metricLabel": "Area",
+      "metricValue": 29.6,
+      "metricUnit": "thousand km2",
+      "asOf": "2025",
+      "source": "Hydrology references snapshot"
+    },
+    "lake_michigan2": {
+      "rank": 5,
+      "metricLabel": "Area",
+      "metricValue": 58,
+      "metricUnit": "thousand km2",
+      "asOf": "2025",
+      "source": "Hydrology references snapshot"
+    },
+    "lake_superior2": {
+      "rank": 2,
+      "metricLabel": "Area",
+      "metricValue": 82.1,
+      "metricUnit": "thousand km2",
+      "asOf": "2025",
+      "source": "Hydrology references snapshot"
+    },
+    "lake_tanganyika2": {
+      "rank": 6,
+      "metricLabel": "Area",
+      "metricValue": 32.9,
+      "metricUnit": "thousand km2",
+      "asOf": "2025",
+      "source": "Hydrology references snapshot"
+    },
+    "lake_victoria2": {
+      "rank": 3,
+      "metricLabel": "Area",
+      "metricValue": 68.8,
+      "metricUnit": "thousand km2",
+      "asOf": "2025",
+      "source": "Hydrology references snapshot"
+    }
+  },
+  "top10_largest_metro_areas": {
+    "world_city_delhi": {
+      "rank": 3,
+      "metricLabel": "Metro population",
+      "metricValue": 33,
+      "metricUnit": "M",
+      "asOf": "2025",
+      "source": "Urban metro snapshot"
+    },
+    "world_city_guangzhou": {
+      "rank": 4,
+      "metricLabel": "Metro population",
+      "metricValue": 27,
+      "metricUnit": "M",
+      "asOf": "2025",
+      "source": "Urban metro snapshot"
+    },
+    "world_city_jakarta": {
+      "rank": 2,
+      "metricLabel": "Metro population",
+      "metricValue": 34,
+      "metricUnit": "M",
+      "asOf": "2025",
+      "source": "Urban metro snapshot"
+    },
+    "world_city_manila": {
+      "rank": 5,
+      "metricLabel": "Metro population",
+      "metricValue": 25,
+      "metricUnit": "M",
+      "asOf": "2025",
+      "source": "Urban metro snapshot"
+    },
+    "world_city_mumbai": {
+      "rank": 8,
+      "metricLabel": "Metro population",
+      "metricValue": 23,
+      "metricUnit": "M",
+      "asOf": "2025",
+      "source": "Urban metro snapshot"
+    },
+    "world_city_new_york": {
+      "rank": 9,
+      "metricLabel": "Metro population",
+      "metricValue": 20,
+      "metricUnit": "M",
+      "asOf": "2025",
+      "source": "Urban metro snapshot"
+    },
+    "world_city_sao_paulo": {
+      "rank": 10,
+      "metricLabel": "Metro population",
+      "metricValue": 22,
+      "metricUnit": "M",
+      "asOf": "2025",
+      "source": "Urban metro snapshot"
+    },
+    "world_city_seoul": {
+      "rank": 7,
+      "metricLabel": "Metro population",
+      "metricValue": 26,
+      "metricUnit": "M",
+      "asOf": "2025",
+      "source": "Urban metro snapshot"
+    },
+    "world_city_shanghai": {
+      "rank": 6,
+      "metricLabel": "Metro population",
+      "metricValue": 30,
+      "metricUnit": "M",
+      "asOf": "2025",
+      "source": "Urban metro snapshot"
+    },
+    "world_city_tokyo": {
+      "rank": 1,
+      "metricLabel": "Metro population",
+      "metricValue": 37,
+      "metricUnit": "M",
+      "asOf": "2025",
+      "source": "Urban metro snapshot"
+    }
+  },
+  "top10_largest_river_basins": {
+    "basin_amazon": {
+      "rank": 1,
+      "metricLabel": "Area",
+      "metricValue": 7,
+      "metricUnit": "million km2",
+      "asOf": "2025",
+      "source": "Basin references snapshot"
+    },
+    "basin_congo": {
+      "rank": 2,
+      "metricLabel": "Area",
+      "metricValue": 4,
+      "metricUnit": "million km2",
+      "asOf": "2025",
+      "source": "Basin references snapshot"
+    },
+    "basin_ganges": {
+      "rank": 9,
+      "metricLabel": "Area",
+      "metricValue": 1.1,
+      "metricUnit": "million km2",
+      "asOf": "2025",
+      "source": "Basin references snapshot"
+    },
+    "basin_mekong": {
+      "rank": 10,
+      "metricLabel": "Area",
+      "metricValue": 0.8,
+      "metricUnit": "million km2",
+      "asOf": "2025",
+      "source": "Basin references snapshot"
+    },
+    "basin_mississippi": {
+      "rank": 4,
+      "metricLabel": "Area",
+      "metricValue": 3.2,
+      "metricUnit": "million km2",
+      "asOf": "2025",
+      "source": "Basin references snapshot"
+    },
+    "basin_nile": {
+      "rank": 3,
+      "metricLabel": "Area",
+      "metricValue": 3.4,
+      "metricUnit": "million km2",
+      "asOf": "2025",
+      "source": "Basin references snapshot"
+    },
+    "basin_ob": {
+      "rank": 5,
+      "metricLabel": "Area",
+      "metricValue": 3,
+      "metricUnit": "million km2",
+      "asOf": "2025",
+      "source": "Basin references snapshot"
+    },
+    "basin_parana": {
+      "rank": 6,
+      "metricLabel": "Area",
+      "metricValue": 2.6,
+      "metricUnit": "million km2",
+      "asOf": "2025",
+      "source": "Basin references snapshot"
+    },
+    "basin_yangtze": {
+      "rank": 8,
+      "metricLabel": "Area",
+      "metricValue": 1.8,
+      "metricUnit": "million km2",
+      "asOf": "2025",
+      "source": "Basin references snapshot"
+    },
+    "basin_yenisei": {
+      "rank": 7,
+      "metricLabel": "Area",
+      "metricValue": 2.6,
+      "metricUnit": "million km2",
+      "asOf": "2025",
+      "source": "Basin references snapshot"
+    }
+  },
+  "top10_longest_mountain_ranges": {
+    "range_alps": {
+      "rank": 9,
+      "metricLabel": "Length",
+      "metricValue": 1200,
+      "metricUnit": "km",
+      "asOf": "2025",
+      "source": "Mountain geography snapshot"
+    },
+    "range_andes": {
+      "rank": 1,
+      "metricLabel": "Length",
+      "metricValue": 7000,
+      "metricUnit": "km",
+      "asOf": "2025",
+      "source": "Mountain geography snapshot"
+    },
+    "range_appalachian": {
+      "rank": 4,
+      "metricLabel": "Length",
+      "metricValue": 2400,
+      "metricUnit": "km",
+      "asOf": "2025",
+      "source": "Mountain geography snapshot"
+    },
+    "range_atlas": {
+      "rank": 7,
+      "metricLabel": "Length",
+      "metricValue": 2500,
+      "metricUnit": "km",
+      "asOf": "2025",
+      "source": "Mountain geography snapshot"
+    },
+    "range_carpathians": {
+      "rank": 10,
+      "metricLabel": "Length",
+      "metricValue": 1500,
+      "metricUnit": "km",
+      "asOf": "2025",
+      "source": "Mountain geography snapshot"
+    },
+    "range_caucasus": {
+      "rank": 8,
+      "metricLabel": "Length",
+      "metricValue": 1200,
+      "metricUnit": "km",
+      "asOf": "2025",
+      "source": "Mountain geography snapshot"
+    },
+    "range_great_dividing": {
+      "rank": 5,
+      "metricLabel": "Length",
+      "metricValue": 3500,
+      "metricUnit": "km",
+      "asOf": "2025",
+      "source": "Mountain geography snapshot"
+    },
+    "range_himalayas": {
+      "rank": 3,
+      "metricLabel": "Length",
+      "metricValue": 2400,
+      "metricUnit": "km",
+      "asOf": "2025",
+      "source": "Mountain geography snapshot"
+    },
+    "range_rocky_mountains": {
+      "rank": 2,
+      "metricLabel": "Length",
+      "metricValue": 4800,
+      "metricUnit": "km",
+      "asOf": "2025",
+      "source": "Mountain geography snapshot"
+    },
+    "range_ural": {
+      "rank": 6,
+      "metricLabel": "Length",
+      "metricValue": 2500,
+      "metricUnit": "km",
+      "asOf": "2025",
+      "source": "Mountain geography snapshot"
+    }
+  },
+  "top10_longest_rivers": {
+    "river_amazon": {
+      "rank": 2,
+      "metricLabel": "Length",
+      "metricValue": 6400,
+      "metricUnit": "km",
+      "asOf": "2025",
+      "source": "Britannica/Encyclopaedia references (educational snapshot)"
+    },
+    "river_congo": {
+      "rank": 6,
+      "metricLabel": "Length",
+      "metricValue": 4700,
+      "metricUnit": "km",
+      "asOf": "2025",
+      "source": "Britannica/Encyclopaedia references (educational snapshot)"
+    },
+    "river_danube": {
+      "rank": 10,
+      "metricLabel": "Length",
+      "metricValue": 2850,
+      "metricUnit": "km",
+      "asOf": "2025",
+      "source": "Britannica/Encyclopaedia references (educational snapshot)"
+    },
+    "river_indus": {
+      "rank": 9,
+      "metricLabel": "Length",
+      "metricValue": 3180,
+      "metricUnit": "km",
+      "asOf": "2025",
+      "source": "Britannica/Encyclopaedia references (educational snapshot)"
+    },
+    "river_mekong": {
+      "rank": 7,
+      "metricLabel": "Length",
+      "metricValue": 4350,
+      "metricUnit": "km",
+      "asOf": "2025",
+      "source": "Britannica/Encyclopaedia references (educational snapshot)"
+    },
+    "river_mississippi": {
+      "rank": 4,
+      "metricLabel": "Length",
+      "metricValue": 6275,
+      "metricUnit": "km",
+      "asOf": "2025",
+      "source": "Britannica/Encyclopaedia references (educational snapshot)"
+    },
+    "river_nile": {
+      "rank": 1,
+      "metricLabel": "Length",
+      "metricValue": 6650,
+      "metricUnit": "km",
+      "asOf": "2025",
+      "source": "Britannica/Encyclopaedia references (educational snapshot)"
+    },
+    "river_volga": {
+      "rank": 8,
+      "metricLabel": "Length",
+      "metricValue": 3530,
+      "metricUnit": "km",
+      "asOf": "2025",
+      "source": "Britannica/Encyclopaedia references (educational snapshot)"
+    },
+    "river_yangtze": {
+      "rank": 3,
+      "metricLabel": "Length",
+      "metricValue": 6300,
+      "metricUnit": "km",
+      "asOf": "2025",
+      "source": "Britannica/Encyclopaedia references (educational snapshot)"
+    },
+    "river_yellow": {
+      "rank": 5,
+      "metricLabel": "Length",
+      "metricValue": 5464,
+      "metricUnit": "km",
+      "asOf": "2025",
+      "source": "Britannica/Encyclopaedia references (educational snapshot)"
+    }
+  },
+  "top10_most_active_volcanoes": {
+    "volcano_etna": {
+      "rank": 2,
+      "metricLabel": "Recent activity score",
+      "metricValue": 96,
+      "metricUnit": "index",
+      "asOf": "2025",
+      "source": "Volcanology snapshot"
+    },
+    "volcano_kilauea": {
+      "rank": 1,
+      "metricLabel": "Recent activity score",
+      "metricValue": 100,
+      "metricUnit": "index",
+      "asOf": "2025",
+      "source": "Volcanology snapshot"
+    },
+    "volcano_krakatoa": {
+      "rank": 6,
+      "metricLabel": "Recent activity score",
+      "metricValue": 87,
+      "metricUnit": "index",
+      "asOf": "2025",
+      "source": "Volcanology snapshot"
+    },
+    "volcano_mauna_loa": {
+      "rank": 4,
+      "metricLabel": "Recent activity score",
+      "metricValue": 92,
+      "metricUnit": "index",
+      "asOf": "2025",
+      "source": "Volcanology snapshot"
+    },
+    "volcano_merapi": {
+      "rank": 3,
+      "metricLabel": "Recent activity score",
+      "metricValue": 94,
+      "metricUnit": "index",
+      "asOf": "2025",
+      "source": "Volcanology snapshot"
+    },
+    "volcano_nyiragongo": {
+      "rank": 5,
+      "metricLabel": "Recent activity score",
+      "metricValue": 89,
+      "metricUnit": "index",
+      "asOf": "2025",
+      "source": "Volcanology snapshot"
+    },
+    "volcano_pinatubo": {
+      "rank": 8,
+      "metricLabel": "Recent activity score",
+      "metricValue": 82,
+      "metricUnit": "index",
+      "asOf": "2025",
+      "source": "Volcanology snapshot"
+    },
+    "volcano_st_helens": {
+      "rank": 9,
+      "metricLabel": "Recent activity score",
+      "metricValue": 80,
+      "metricUnit": "index",
+      "asOf": "2025",
+      "source": "Volcanology snapshot"
+    },
+    "volcano_tambora": {
+      "rank": 10,
+      "metricLabel": "Recent activity score",
+      "metricValue": 78,
+      "metricUnit": "index",
+      "asOf": "2025",
+      "source": "Volcanology snapshot"
+    },
+    "volcano_vesuvius": {
+      "rank": 7,
+      "metricLabel": "Recent activity score",
+      "metricValue": 84,
+      "metricUnit": "index",
+      "asOf": "2025",
+      "source": "Volcanology snapshot"
+    }
+  },
+  "top10_most_populous_cities": {
+    "world_city_beijing": {
+      "rank": 8,
+      "metricLabel": "Population",
+      "metricValue": 22,
+      "metricUnit": "M",
+      "asOf": "2025",
+      "source": "UN urban snapshot"
+    },
+    "world_city_cairo": {
+      "rank": 7,
+      "metricLabel": "Population",
+      "metricValue": 22,
+      "metricUnit": "M",
+      "asOf": "2025",
+      "source": "UN urban snapshot"
+    },
+    "world_city_delhi": {
+      "rank": 2,
+      "metricLabel": "Population",
+      "metricValue": 33,
+      "metricUnit": "M",
+      "asOf": "2025",
+      "source": "UN urban snapshot"
+    },
+    "world_city_dhaka": {
+      "rank": 4,
+      "metricLabel": "Population",
+      "metricValue": 24,
+      "metricUnit": "M",
+      "asOf": "2025",
+      "source": "UN urban snapshot"
+    },
+    "world_city_mexico_city": {
+      "rank": 6,
+      "metricLabel": "Population",
+      "metricValue": 22,
+      "metricUnit": "M",
+      "asOf": "2025",
+      "source": "UN urban snapshot"
+    },
+    "world_city_mumbai": {
+      "rank": 9,
+      "metricLabel": "Population",
+      "metricValue": 21,
+      "metricUnit": "M",
+      "asOf": "2025",
+      "source": "UN urban snapshot"
+    },
+    "world_city_new_york": {
+      "rank": 10,
+      "metricLabel": "Population",
+      "metricValue": 20,
+      "metricUnit": "M",
+      "asOf": "2025",
+      "source": "UN urban snapshot"
+    },
+    "world_city_sao_paulo": {
+      "rank": 5,
+      "metricLabel": "Population",
+      "metricValue": 22,
+      "metricUnit": "M",
+      "asOf": "2025",
+      "source": "UN urban snapshot"
+    },
+    "world_city_shanghai": {
+      "rank": 3,
+      "metricLabel": "Population",
+      "metricValue": 30,
+      "metricUnit": "M",
+      "asOf": "2025",
+      "source": "UN urban snapshot"
+    },
+    "world_city_tokyo": {
+      "rank": 1,
+      "metricLabel": "Population",
+      "metricValue": 37,
+      "metricUnit": "M",
+      "asOf": "2025",
+      "source": "UN urban snapshot"
+    }
+  },
+  "top10_most_populous_countries": {
+    "country_bgd": {
+      "rank": 8,
+      "metricLabel": "Population",
+      "metricValue": 173,
+      "metricUnit": "M",
+      "asOf": "2025",
+      "source": "UN estimates educational snapshot"
+    },
+    "country_bra": {
+      "rank": 7,
+      "metricLabel": "Population",
+      "metricValue": 217,
+      "metricUnit": "M",
+      "asOf": "2025",
+      "source": "UN estimates educational snapshot"
+    },
+    "country_chn": {
+      "rank": 2,
+      "metricLabel": "Population",
+      "metricValue": 1410,
+      "metricUnit": "M",
+      "asOf": "2025",
+      "source": "UN estimates educational snapshot"
+    },
+    "country_idn": {
+      "rank": 4,
+      "metricLabel": "Population",
+      "metricValue": 281,
+      "metricUnit": "M",
+      "asOf": "2025",
+      "source": "UN estimates educational snapshot"
+    },
+    "country_ind": {
+      "rank": 1,
+      "metricLabel": "Population",
+      "metricValue": 1430,
+      "metricUnit": "M",
+      "asOf": "2025",
+      "source": "UN estimates educational snapshot"
+    },
+    "country_mex": {
+      "rank": 10,
+      "metricLabel": "Population",
+      "metricValue": 131,
+      "metricUnit": "M",
+      "asOf": "2025",
+      "source": "UN estimates educational snapshot"
+    },
+    "country_nga": {
+      "rank": 6,
+      "metricLabel": "Population",
+      "metricValue": 229,
+      "metricUnit": "M",
+      "asOf": "2025",
+      "source": "UN estimates educational snapshot"
+    },
+    "country_pak": {
+      "rank": 5,
+      "metricLabel": "Population",
+      "metricValue": 246,
+      "metricUnit": "M",
+      "asOf": "2025",
+      "source": "UN estimates educational snapshot"
+    },
+    "country_russia": {
+      "rank": 9,
+      "metricLabel": "Population",
+      "metricValue": 144,
+      "metricUnit": "M",
+      "asOf": "2025",
+      "source": "UN estimates educational snapshot"
+    },
+    "country_usa": {
+      "rank": 3,
+      "metricLabel": "Population",
+      "metricValue": 341,
+      "metricUnit": "M",
+      "asOf": "2025",
+      "source": "UN estimates educational snapshot"
+    }
+  },
+  "top10_most_visited_countries": {
+    "country_france": {
+      "rank": 1,
+      "metricLabel": "Tourist arrivals",
+      "metricValue": 100,
+      "metricUnit": "M",
+      "asOf": "2025",
+      "source": "UN tourism snapshot"
+    },
+    "country_germany": {
+      "rank": 7,
+      "metricLabel": "Tourist arrivals",
+      "metricValue": 39,
+      "metricUnit": "M",
+      "asOf": "2025",
+      "source": "UN tourism snapshot"
+    },
+    "country_italy": {
+      "rank": 4,
+      "metricLabel": "Tourist arrivals",
+      "metricValue": 65,
+      "metricUnit": "M",
+      "asOf": "2025",
+      "source": "UN tourism snapshot"
+    },
+    "country_jpn": {
+      "rank": 9,
+      "metricLabel": "Tourist arrivals",
+      "metricValue": 35,
+      "metricUnit": "M",
+      "asOf": "2025",
+      "source": "UN tourism snapshot"
+    },
+    "country_mex": {
+      "rank": 6,
+      "metricLabel": "Tourist arrivals",
+      "metricValue": 45,
+      "metricUnit": "M",
+      "asOf": "2025",
+      "source": "UN tourism snapshot"
+    },
+    "country_spain": {
+      "rank": 2,
+      "metricLabel": "Tourist arrivals",
+      "metricValue": 85,
+      "metricUnit": "M",
+      "asOf": "2025",
+      "source": "UN tourism snapshot"
+    },
+    "country_tha": {
+      "rank": 10,
+      "metricLabel": "Tourist arrivals",
+      "metricValue": 34,
+      "metricUnit": "M",
+      "asOf": "2025",
+      "source": "UN tourism snapshot"
+    },
+    "country_turkey": {
+      "rank": 5,
+      "metricLabel": "Tourist arrivals",
+      "metricValue": 60,
+      "metricUnit": "M",
+      "asOf": "2025",
+      "source": "UN tourism snapshot"
+    },
+    "country_united_kingdom": {
+      "rank": 8,
+      "metricLabel": "Tourist arrivals",
+      "metricValue": 37,
+      "metricUnit": "M",
+      "asOf": "2025",
+      "source": "UN tourism snapshot"
+    },
+    "country_usa": {
+      "rank": 3,
+      "metricLabel": "Tourist arrivals",
+      "metricValue": 80,
+      "metricUnit": "M",
+      "asOf": "2025",
+      "source": "UN tourism snapshot"
+    }
+  }
+}

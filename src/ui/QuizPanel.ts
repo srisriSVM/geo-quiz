@@ -339,6 +339,18 @@ export class QuizPanel {
     if (entity.pronunciation) {
       chips.push(`<span class="learn-chip">Say: ${entity.pronunciation}</span>`);
     }
+    if (entity.packMeta?.rank) {
+      chips.push(`<span class="learn-chip">Rank: #${entity.packMeta.rank}</span>`);
+    }
+    if (entity.packMeta?.metricValue !== undefined) {
+      const metricValue = String(entity.packMeta.metricValue);
+      const metricUnit = entity.packMeta.metricUnit ? ` ${entity.packMeta.metricUnit}` : "";
+      const metricLabel = entity.packMeta.metricLabel ? `${entity.packMeta.metricLabel}: ` : "";
+      chips.push(`<span class="learn-chip">${metricLabel}${metricValue}${metricUnit}</span>`);
+    }
+    if (entity.packMeta?.asOf) {
+      chips.push(`<span class="learn-chip">As of ${entity.packMeta.asOf}</span>`);
+    }
 
     const lines: string[] = [];
     if (entity.type === "capital" && entity.adminOf) {
@@ -355,6 +367,9 @@ export class QuizPanel {
     }
     if (entity.mnemonic) {
       lines.push(`<p><strong>Memory tip:</strong> ${entity.mnemonic}</p>`);
+    }
+    if (entity.packMeta?.source) {
+      lines.push(`<p><strong>Source:</strong> ${entity.packMeta.source}</p>`);
     }
 
     const mediaItems = this.resolveMediaItems(entity);

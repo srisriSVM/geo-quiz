@@ -80,6 +80,293 @@
     "group": "India"
   },
   {
+    "id": "top10_busiest_straits_chokepoints",
+    "name": "Top 10: Busiest Straits & Chokepoints",
+    "group": "Top 10",
+    "types": [
+      "sea",
+      "river"
+    ],
+    "defaultViewport": {
+      "center": [
+        20,
+        18
+      ],
+      "zoom": 1.5
+    }
+  },
+  {
+    "id": "top10_countries_by_coastline",
+    "name": "Top 10: Countries by Coastline Length",
+    "group": "Top 10",
+    "types": [
+      "country"
+    ],
+    "defaultViewport": {
+      "center": [
+        10,
+        28
+      ],
+      "zoom": 1.2
+    }
+  },
+  {
+    "id": "top10_deepest_lakes",
+    "name": "Top 10: Deepest Lakes",
+    "group": "Top 10",
+    "types": [
+      "lake"
+    ],
+    "defaultViewport": {
+      "center": [
+        20,
+        25
+      ],
+      "zoom": 1.5
+    }
+  },
+  {
+    "id": "top10_gdp_nominal_countries",
+    "name": "Top 10: GDP Nominal Countries",
+    "group": "Top 10",
+    "types": [
+      "country"
+    ],
+    "defaultViewport": {
+      "center": [
+        10,
+        25
+      ],
+      "zoom": 1.2
+    }
+  },
+  {
+    "id": "top10_highest_peaks",
+    "name": "Top 10: Highest Peaks",
+    "group": "Top 10",
+    "types": [
+      "mountain"
+    ],
+    "defaultViewport": {
+      "center": [
+        85,
+        30
+      ],
+      "zoom": 2.2
+    }
+  },
+  {
+    "id": "top10_highest_waterfalls",
+    "name": "Top 10: Highest Waterfalls",
+    "group": "Top 10",
+    "types": [
+      "region"
+    ],
+    "defaultViewport": {
+      "center": [
+        15,
+        12
+      ],
+      "zoom": 1.8
+    }
+  },
+  {
+    "id": "top10_largest_countries_area",
+    "name": "Top 10: Largest Countries (Area)",
+    "group": "Top 10",
+    "types": [
+      "country"
+    ],
+    "defaultViewport": {
+      "center": [
+        20,
+        28
+      ],
+      "zoom": 1.25
+    }
+  },
+  {
+    "id": "top10_largest_deserts",
+    "name": "Top 10: Largest Hot Deserts",
+    "group": "Top 10",
+    "types": [
+      "desert",
+      "region"
+    ],
+    "defaultViewport": {
+      "center": [
+        18,
+        18
+      ],
+      "zoom": 1.5
+    }
+  },
+  {
+    "id": "top10_largest_gulfs_bays",
+    "name": "Top 10: Largest Gulfs & Bays",
+    "group": "Top 10",
+    "types": [
+      "sea"
+    ],
+    "defaultViewport": {
+      "center": [
+        20,
+        18
+      ],
+      "zoom": 1.4
+    }
+  },
+  {
+    "id": "top10_largest_islands",
+    "name": "Top 10: Largest Islands",
+    "group": "Top 10",
+    "types": [
+      "island"
+    ],
+    "defaultViewport": {
+      "center": [
+        10,
+        28
+      ],
+      "zoom": 1.2
+    }
+  },
+  {
+    "id": "top10_largest_lakes",
+    "name": "Top 10: Largest Lakes",
+    "group": "Top 10",
+    "types": [
+      "lake"
+    ],
+    "defaultViewport": {
+      "center": [
+        20,
+        25
+      ],
+      "zoom": 1.5
+    }
+  },
+  {
+    "id": "top10_largest_metro_areas",
+    "name": "Top 10: Largest Metro Areas",
+    "group": "Top 10",
+    "types": [
+      "city"
+    ],
+    "defaultViewport": {
+      "center": [
+        20,
+        20
+      ],
+      "zoom": 1.35
+    }
+  },
+  {
+    "id": "top10_largest_river_basins",
+    "name": "Top 10: Largest River Basins",
+    "group": "Top 10",
+    "types": [
+      "region"
+    ],
+    "defaultViewport": {
+      "center": [
+        15,
+        15
+      ],
+      "zoom": 1.4
+    }
+  },
+  {
+    "id": "top10_longest_mountain_ranges",
+    "name": "Top 10: Longest Mountain Ranges",
+    "group": "Top 10",
+    "types": [
+      "mountain"
+    ],
+    "defaultViewport": {
+      "center": [
+        10,
+        18
+      ],
+      "zoom": 1.5
+    }
+  },
+  {
+    "id": "top10_longest_rivers",
+    "name": "Top 10: Longest Rivers",
+    "group": "Top 10",
+    "types": [
+      "river"
+    ],
+    "defaultViewport": {
+      "center": [
+        10,
+        18
+      ],
+      "zoom": 1.45
+    }
+  },
+  {
+    "id": "top10_most_active_volcanoes",
+    "name": "Top 10: Most Active Volcanoes",
+    "group": "Top 10",
+    "types": [
+      "mountain"
+    ],
+    "defaultViewport": {
+      "center": [
+        20,
+        10
+      ],
+      "zoom": 1.6
+    }
+  },
+  {
+    "id": "top10_most_populous_cities",
+    "name": "Top 10: Most Populous Cities",
+    "group": "Top 10",
+    "types": [
+      "city"
+    ],
+    "defaultViewport": {
+      "center": [
+        20,
+        20
+      ],
+      "zoom": 1.4
+    }
+  },
+  {
+    "id": "top10_most_populous_countries",
+    "name": "Top 10: Most Populous Countries",
+    "group": "Top 10",
+    "types": [
+      "country"
+    ],
+    "defaultViewport": {
+      "center": [
+        20,
+        20
+      ],
+      "zoom": 1.25
+    }
+  },
+  {
+    "id": "top10_most_visited_countries",
+    "name": "Top 10: Most Visited Countries",
+    "group": "Top 10",
+    "types": [
+      "country"
+    ],
+    "defaultViewport": {
+      "center": [
+        15,
+        28
+      ],
+      "zoom": 1.6
+    }
+  },
+  {
     "id": "us_major_cities",
     "name": "US: Major Cities",
     "types": [
@@ -471,6 +758,22 @@
       "zoom": 1.5
     },
     "group": "World"
+  },
+  {
+    "id": "world_river_city_pairs",
+    "name": "World: River + City Pairs",
+    "group": "World",
+    "types": [
+      "city",
+      "river"
+    ],
+    "defaultViewport": {
+      "center": [
+        10,
+        22
+      ],
+      "zoom": 1.8
+    }
   },
   {
     "id": "world_rivers",

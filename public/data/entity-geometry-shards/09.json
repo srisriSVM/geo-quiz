@@ -1,0 +1,103 @@
+{
+  "biome_desert_hot": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          10,
+          15
+        ],
+        [
+          50,
+          15
+        ],
+        [
+          50,
+          32
+        ],
+        [
+          10,
+          32
+        ],
+        [
+          10,
+          15
+        ]
+      ]
+    ]
+  },
+  "current_peru_humboldt": {
+    "type": "LineString",
+    "coordinates": [
+      [
+        -80,
+        -5
+      ],
+      [
+        -78,
+        -15
+      ],
+      [
+        -75,
+        -30
+      ],
+      [
+        -73,
+        -40
+      ]
+    ]
+  },
+  "gyre_north_atlantic": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -80,
+          10
+        ],
+        [
+          -20,
+          10
+        ],
+        [
+          -20,
+          45
+        ],
+        [
+          -80,
+          45
+        ],
+        [
+          -80,
+          10
+        ]
+      ]
+    ]
+  },
+  "timezone_utc_10": {
+    "type": "LineString",
+    "coordinates": [
+      [
+        150,
+        -60
+      ],
+      [
+        150,
+        75
+      ]
+    ]
+  },
+  "timezone_utc_3": {
+    "type": "LineString",
+    "coordinates": [
+      [
+        45,
+        -60
+      ],
+      [
+        45,
+        75
+      ]
+    ]
+  }
+}

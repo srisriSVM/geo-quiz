@@ -177,14 +177,17 @@ export class App {
 
     app.append(this.hud.root, this.panel.root);
 
-    const firstPack = this.packs[0];
-    if (!firstPack) {
+    const defaultPack =
+      this.packs.find((pack) => pack.id === "top10_longest_rivers") ??
+      this.packs.find((pack) => pack.id.startsWith("top10_")) ??
+      this.packs[0];
+    if (!defaultPack) {
       this.panel.setPrompt("No packs available.");
       this.panel.setAnswerEnabled(false);
       return;
     }
 
-    this.currentPackId = firstPack.id;
+    this.currentPackId = defaultPack.id;
     this.mapDetail = this.loadMapDetail();
     this.lowDataMode = this.loadLowDataMode();
     this.showPolygons = this.loadPolygonVisibility();
@@ -602,17 +605,19 @@ export class App {
   }
 
   private learnTargetTitle(entity: Entity): string {
+    const rankPrefix = entity.packMeta?.rank ? `#${entity.packMeta.rank} ` : "";
     if (entity.type === "capital" && entity.adminOf) {
-      return `${entity.name} (Capital of ${entity.adminOf.name})`;
+      return `${rankPrefix}${entity.name} (Capital of ${entity.adminOf.name})`;
     }
-    return `${entity.name} (${entity.type})`;
+    return `${rankPrefix}${entity.name} (${entity.type})`;
   }
 
   private quizPromptFor(entity: Entity): string {
+    const rankContext = entity.packMeta?.rank ? ` (Rank #${entity.packMeta.rank})` : "";
     if (entity.type === "capital" && entity.adminOf) {
-      return `Identify the highlighted capital of ${entity.adminOf.name}.`;
+      return `Identify the highlighted capital of ${entity.adminOf.name}${rankContext}.`;
     }
-    return "Identify the highlighted location.";
+    return `Identify the highlighted location${rankContext}.`;
   }
 
   private buildChoicesFromRound(): Array<{ id: string; label: string; status: ChoiceStatus }> {
@@ -631,10 +636,11 @@ export class App {
   }
 
   private displayName(entity: Entity): string {
+    const rankPrefix = entity.packMeta?.rank ? `#${entity.packMeta.rank} ` : "";
     if (entity.type === "capital" && entity.adminOf) {
-      return `${entity.name} (Capital of ${entity.adminOf.name})`;
+      return `${rankPrefix}${entity.name} (Capital of ${entity.adminOf.name})`;
     }
-    return entity.name;
+    return `${rankPrefix}${entity.name}`;
   }
 
   private getRemainingRoundEntities(): Entity[] {
@@ -857,9 +863,17 @@ export class App {
     if (!this.entitiesByPack[packId]) {
       this.entitiesByPack[packId] = await loadPackEntities(packId);
     }
-    this.activePackEntities = this.entitiesByPack[packId].filter((entity) =>
-      this.selectedDifficulties.includes(this.effectiveDifficulty(entity))
-    );
+    const filtered = packId.startsWith("top10_")
+      ? this.entitiesByPack[packId]
+      : this.entitiesByPack[packId].filter((entity) =>
+          this.selectedDifficulties.includes(this.effectiveDifficulty(entity))
+        );
+    const hasRankedItems = filtered.some((entity) => entity.packMeta?.rank !== undefined);
+    this.activePackEntities = hasRankedItems
+      ? filtered
+          .slice()
+          .sort((a, b) => (a.packMeta?.rank ?? Number.MAX_SAFE_INTEGER) - (b.packMeta?.rank ?? Number.MAX_SAFE_INTEGER))
+      : filtered;
   }
 
   private effectiveDifficulty(entity: Entity): Difficulty {

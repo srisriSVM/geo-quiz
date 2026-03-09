@@ -44,6 +44,15 @@ export type AdminRef = {
   type: "country" | "state" | "province";
 };
 
+export type PackEntityMeta = {
+  rank?: number;
+  metricValue?: number;
+  metricUnit?: string;
+  metricLabel?: string;
+  asOf?: string;
+  source?: string;
+};
+
 export type Entity = {
   id: string;
   type: EntityType;
@@ -69,6 +78,7 @@ export type Entity = {
   labelPoint: [number, number];
   bbox?: [number, number, number, number];
   packIds: string[];
+  packMeta?: PackEntityMeta;
 };
 
 export type Pack = {

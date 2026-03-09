@@ -1,4 +1,4 @@
-import type { Entity, Pack } from "./types";
+import type { Entity, Pack, PackEntityMeta } from "./types";
 
 const normalizeName = (value: string): string =>
   value
@@ -100,6 +100,11 @@ const COUNTRY_NAME_ALIASES = new Map<string, string>([
 const COUNTRY_FORCE_POINT = new Set<string>(["antarctica"]);
 
 let worldCountryGeometryByNamePromise: Promise<Map<string, Entity["geometry"][]>> | null = null;
+let allEntitiesByIdPromise: Promise<Map<string, Entity>> | null = null;
+let packIndexPromise: Promise<Record<string, string[]>> | null = null;
+let geometryIndexPromise: Promise<Record<string, string>> | null = null;
+let packEntityMetaPromise: Promise<Record<string, Record<string, PackEntityMeta>>> | null = null;
+const geometryShardPromises = new Map<string, Promise<Record<string, Entity["geometry"]>>>();
 
 const loadWorldCountryGeometryByName = async (): Promise<Map<string, Entity["geometry"][]>> => {
   if (worldCountryGeometryByNamePromise) {
@@ -151,6 +156,108 @@ const loadWorldCountryGeometryByName = async (): Promise<Map<string, Entity["geo
     });
 
   return worldCountryGeometryByNamePromise;
+};
+
+const loadAllEntitiesById = async (): Promise<Map<string, Entity>> => {
+  if (allEntitiesByIdPromise) {
+    return allEntitiesByIdPromise;
+  }
+
+  allEntitiesByIdPromise = fetch("./data/entities-core.json", { cache: "no-store" })
+    .then(async (response) => {
+      if (!response.ok) {
+        throw new Error("Failed to load entities-core.json");
+      }
+      const entities = (await response.json()) as Entity[];
+      return new Map(entities.map((entity) => [entity.id, entity]));
+    })
+    .catch((error) => {
+      allEntitiesByIdPromise = null;
+      throw error;
+    });
+
+  return allEntitiesByIdPromise;
+};
+
+const loadGeometryIndex = async (): Promise<Record<string, string>> => {
+  if (geometryIndexPromise) {
+    return geometryIndexPromise;
+  }
+
+  geometryIndexPromise = fetch("./data/entity-geometry-index.json", { cache: "no-store" })
+    .then(async (response) => {
+      if (!response.ok) {
+        throw new Error("Failed to load entity-geometry-index.json");
+      }
+      return (await response.json()) as Record<string, string>;
+    })
+    .catch((error) => {
+      geometryIndexPromise = null;
+      throw error;
+    });
+
+  return geometryIndexPromise;
+};
+
+const loadGeometryShard = async (shardId: string): Promise<Record<string, Entity["geometry"]>> => {
+  const existing = geometryShardPromises.get(shardId);
+  if (existing) {
+    return existing;
+  }
+
+  const promise = fetch(`./data/entity-geometry-shards/${shardId}.json`, { cache: "no-store" })
+    .then(async (response) => {
+      if (!response.ok) {
+        throw new Error(`Failed to load entity geometry shard ${shardId}`);
+      }
+      return (await response.json()) as Record<string, Entity["geometry"]>;
+    })
+    .catch((error) => {
+      geometryShardPromises.delete(shardId);
+      throw error;
+    });
+  geometryShardPromises.set(shardId, promise);
+  return promise;
+};
+
+const loadPackEntityMeta = async (): Promise<Record<string, Record<string, PackEntityMeta>>> => {
+  if (packEntityMetaPromise) {
+    return packEntityMetaPromise;
+  }
+
+  packEntityMetaPromise = fetch("./data/pack-entity-meta.json", { cache: "no-store" })
+    .then(async (response) => {
+      if (!response.ok) {
+        throw new Error("Failed to load pack-entity-meta.json");
+      }
+      return (await response.json()) as Record<string, Record<string, PackEntityMeta>>;
+    })
+    .catch((error) => {
+      packEntityMetaPromise = null;
+      throw error;
+    });
+
+  return packEntityMetaPromise;
+};
+
+const loadPackIndex = async (): Promise<Record<string, string[]>> => {
+  if (packIndexPromise) {
+    return packIndexPromise;
+  }
+
+  packIndexPromise = fetch("./data/pack-index.json", { cache: "no-store" })
+    .then(async (response) => {
+      if (!response.ok) {
+        throw new Error("Failed to load pack-index.json");
+      }
+      return (await response.json()) as Record<string, string[]>;
+    })
+    .catch((error) => {
+      packIndexPromise = null;
+      throw error;
+    });
+
+  return packIndexPromise;
 };
 
 const withIndiaStatePolygons = async (entities: Entity[]): Promise<Entity[]> => {
@@ -338,12 +445,47 @@ const pickBestCountryGeometryForEntity = (entity: Entity, candidates: Entity["ge
 };
 
 export const loadPackEntities = async (packId: string): Promise<Entity[]> => {
-  const response = await fetch(`./data/pack-entities/${packId}.entities.json`, { cache: "no-store" });
-  if (!response.ok) {
-    throw new Error(`Failed to load pack entities for ${packId}`);
+  const [packEntityMeta, packIndex, entitiesById, geometryIndex] = await Promise.all([
+    loadPackEntityMeta().catch(
+      (): Record<string, Record<string, PackEntityMeta>> => ({})
+    ),
+    loadPackIndex(),
+    loadAllEntitiesById(),
+    loadGeometryIndex()
+  ]);
+  const packMetaByEntityId = packEntityMeta[packId] ?? {};
+  const entityIds = packIndex[packId];
+  if (!entityIds) {
+    throw new Error(`Failed to load pack entities for ${packId}: pack is missing from pack-index.json`);
   }
 
-  const entities = (await response.json()) as Entity[];
+  const requiredShards = new Set<string>();
+  for (const id of entityIds) {
+    const shardId = geometryIndex[id];
+    if (shardId) {
+      requiredShards.add(shardId);
+    }
+  }
+  const shardRecords = await Promise.all([...requiredShards].map((shardId) => loadGeometryShard(shardId)));
+  const geometryById: Record<string, Entity["geometry"]> = {};
+  for (const record of shardRecords) {
+    Object.assign(geometryById, record);
+  }
+
+  const entities = entityIds
+    .map((id) => {
+      const core = entitiesById.get(id);
+      if (!core) {
+        return null;
+      }
+      const geometry = geometryById[id];
+      const packMeta = packMetaByEntityId[id];
+      if (geometry) {
+        return packMeta ? { ...core, geometry, packMeta } : { ...core, geometry };
+      }
+      return packMeta ? { ...core, packMeta } : { ...core };
+    })
+    .filter((entity): entity is Entity => Boolean(entity));
   if (packId === "usa_states" || packId === "us_states_capitals") {
     return withUsStatePolygons(entities);
   }

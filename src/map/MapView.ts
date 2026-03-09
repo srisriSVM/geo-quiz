@@ -14,6 +14,7 @@ import {
 const SOURCE_POLYGONS = "entities-polygons-source";
 const SOURCE_LINES = "entities-lines-source";
 const SOURCE_POINTS = "entities-points-source";
+const SOURCE_RANK_POINTS = "entities-rank-points-source";
 const SOURCE_TARGET_LINE = "entities-target-line-source";
 const SOURCE_USA_STATE_BORDERS = "usa-state-borders-source";
 
@@ -23,6 +24,8 @@ const LAYER_LINES = "entities-lines";
 const LAYER_LINES_CASING = "entities-lines-casing";
 const LAYER_POINTS = "entities-points";
 const LAYER_MASTERED_BADGE = "entities-mastered-badge";
+const LAYER_RANK_BADGE = "entities-rank-badge";
+const LAYER_RANK_TEXT = "entities-rank-text";
 const LAYER_HIGHLIGHT_POLYGON = "entities-highlight-polygon";
 const LAYER_HIGHLIGHT_POLYGON_OUTLINE = "entities-highlight-polygon-outline";
 const LAYER_HIGHLIGHT_LINE = "entities-highlight-line";
@@ -53,6 +56,13 @@ type EntityFeatureProps = {
   entityType: string;
   geometryType: "point" | "line" | "polygon";
   mastery: "not_learned" | "learning" | "mastered";
+  rank?: number;
+};
+
+type RankFeatureProps = {
+  id: string;
+  name: string;
+  rank: number;
 };
 
 export class MapView {
@@ -83,6 +93,7 @@ export class MapView {
   private highlightedLabelMarker: maplibregl.Marker | null = null;
   private highlightedRiverMarkers: maplibregl.Marker[] = [];
   private pointStatusMarkers: maplibregl.Marker[] = [];
+  private pointStatusMarkerByEntityId = new Map<string, maplibregl.Marker>();
   private recentlyMasteredIds = new Set<string>();
   private usaStatesGeoJson: FeatureCollection | null = null;
   private usaStatesGeoJsonRequest: Promise<void> | null = null;
@@ -103,7 +114,8 @@ export class MapView {
       container: this.host,
       style: getPoliticalStyleUrl(),
       center: [10, 30],
-      zoom: 1.4
+      zoom: 1.4,
+      renderWorldCopies: false
     });
 
     map.addControl(new maplibregl.NavigationControl(), "top-right");
@@ -150,6 +162,8 @@ export class MapView {
     this.setLayerVisibility(LAYER_TARGET_LINE, "visible");
     this.setLayerVisibility(LAYER_POINTS, showAll ? "visible" : "none");
     this.setLayerVisibility(LAYER_MASTERED_BADGE, showAll ? "visible" : "none");
+    this.setLayerVisibility(LAYER_RANK_BADGE, "none");
+    this.setLayerVisibility(LAYER_RANK_TEXT, "none");
     this.setLayerVisibility(LAYER_HIGHLIGHT_LABEL, showAll ? "visible" : "none");
     this.renderPointStatusMarkers();
     this.renderHighlightedMarkers();
@@ -231,18 +245,23 @@ export class MapView {
     const polygonSource = this.map.getSource(SOURCE_POLYGONS) as maplibregl.GeoJSONSource | undefined;
     const lineSource = this.map.getSource(SOURCE_LINES) as maplibregl.GeoJSONSource | undefined;
     const pointSource = this.map.getSource(SOURCE_POINTS) as maplibregl.GeoJSONSource | undefined;
-    if (!polygonSource || !lineSource || !pointSource) {
+    const rankPointSource = this.map.getSource(SOURCE_RANK_POINTS) as maplibregl.GeoJSONSource | undefined;
+    if (!polygonSource || !lineSource || !pointSource || !rankPointSource) {
       return;
     }
 
     const polygonFeatures: Feature[] = [];
     const lineFeatures: Feature[] = [];
     const pointFeatures: Feature[] = [];
+    const rankPointFeatures: Feature[] = [];
 
     for (const entity of entities) {
       if (entity.geometryType === "point") {
         const pointFeature = this.toPointFeature(entity);
         pointFeatures.push(pointFeature);
+      }
+      if (typeof entity.packMeta?.rank === "number") {
+        rankPointFeatures.push(this.toRankPointFeature(entity));
       }
 
       if (entity.geometryType === "polygon" && entity.geometry) {
@@ -256,6 +275,7 @@ export class MapView {
     polygonSource.setData({ type: "FeatureCollection", features: polygonFeatures } as FeatureCollection);
     lineSource.setData({ type: "FeatureCollection", features: lineFeatures } as FeatureCollection);
     pointSource.setData({ type: "FeatureCollection", features: pointFeatures } as FeatureCollection);
+    rankPointSource.setData({ type: "FeatureCollection", features: rankPointFeatures } as FeatureCollection);
     this.renderPointStatusMarkers();
     this.renderHighlightedMarkers();
   }
@@ -470,6 +490,9 @@ export class MapView {
     if (!map.getSource(SOURCE_POINTS)) {
       map.addSource(SOURCE_POINTS, { type: "geojson", data: emptyData });
     }
+    if (!map.getSource(SOURCE_RANK_POINTS)) {
+      map.addSource(SOURCE_RANK_POINTS, { type: "geojson", data: emptyData });
+    }
     if (!map.getSource(SOURCE_TARGET_LINE)) {
       map.addSource(SOURCE_TARGET_LINE, { type: "geojson", data: emptyData });
     }
@@ -536,6 +559,60 @@ export class MapView {
         "circle-stroke-width": 1.5
       }
     });
+
+    this.addLayerSafe({
+      id: LAYER_RANK_BADGE,
+      type: "circle",
+      source: SOURCE_RANK_POINTS,
+      paint: {
+        "circle-color": [
+          "case",
+          ["==", ["get", "rank"], 1], "#facc15",
+          ["==", ["get", "rank"], 2], "#cbd5e1",
+          ["==", ["get", "rank"], 3], "#fdba74",
+          "#0f172a"
+        ],
+        "circle-radius": [
+          "case",
+          ["==", ["get", "rank"], 1], 16,
+          ["<=", ["get", "rank"], 3], 15,
+          14
+        ],
+        "circle-stroke-color": [
+          "case",
+          ["==", ["get", "rank"], 1], "#92400e",
+          ["==", ["get", "rank"], 2], "#334155",
+          ["==", ["get", "rank"], 3], "#9a3412",
+          "#cbd5e1"
+        ],
+        "circle-stroke-width": 2.25
+      }
+    });
+
+    if (this.canUseTextLayers()) {
+      this.addLayerSafe({
+        id: LAYER_RANK_TEXT,
+        type: "symbol",
+        source: SOURCE_RANK_POINTS,
+        layout: {
+          "text-field": ["to-string", ["get", "rank"]],
+          "text-size": 15,
+          "text-font": ["Open Sans Bold"],
+          "text-anchor": "center",
+          "text-allow-overlap": true,
+          "text-ignore-placement": true
+        },
+        paint: {
+          "text-color": [
+            "case",
+            ["<=", ["get", "rank"], 3], "#111827",
+            "#f8fafc"
+          ],
+          "text-halo-color": "rgba(255,255,255,0.35)",
+          "text-halo-width": 0.9
+        }
+      });
+    }
 
     if (this.canUseTextLayers()) {
       this.addLayerSafe({
@@ -721,7 +798,11 @@ export class MapView {
       layout: { visibility: "none" }
     });
 
-    // Ensure target river highlight is drawn above all quiz overlays while debugging visibility.
+    // Ensure overlays are stacked intentionally: ranks above polygon highlights; target line at top.
+    map.moveLayer(LAYER_RANK_BADGE);
+    if (this.canUseTextLayers()) {
+      map.moveLayer(LAYER_RANK_TEXT);
+    }
     map.moveLayer(LAYER_TARGET_LINE_CASING);
     map.moveLayer(LAYER_TARGET_LINE);
   }
@@ -864,7 +945,15 @@ export class MapView {
           ]
         : event.point;
     const features = this.map.queryRenderedFeatures(queryTarget as never, {
-      layers: [LAYER_HIGHLIGHT_POINT, LAYER_POINTS, LAYER_HIGHLIGHT_LINE, LAYER_LINES, LAYER_POLYGONS]
+      layers: [
+        LAYER_RANK_BADGE,
+        LAYER_RANK_TEXT,
+        LAYER_HIGHLIGHT_POINT,
+        LAYER_POINTS,
+        LAYER_HIGHLIGHT_LINE,
+        LAYER_LINES,
+        LAYER_POLYGONS
+      ]
     });
     const first = features[0];
     const id = first?.properties?.id as string | undefined;
@@ -876,6 +965,7 @@ export class MapView {
   };
 
   private toPointFeature(entity: Entity): Feature {
+    const rank = typeof entity.packMeta?.rank === "number" ? entity.packMeta.rank : undefined;
     return {
       type: "Feature",
       id: entity.id,
@@ -885,8 +975,22 @@ export class MapView {
         name: entity.name,
         entityType: entity.type,
         geometryType: "point",
-        mastery: this.pendingMasteryById[entity.id] ?? "not_learned"
+        mastery: this.pendingMasteryById[entity.id] ?? "not_learned",
+        rank
       } satisfies EntityFeatureProps
+    };
+  }
+
+  private toRankPointFeature(entity: Entity): Feature {
+    return {
+      type: "Feature",
+      id: entity.id,
+      geometry: { type: "Point", coordinates: entity.labelPoint },
+      properties: {
+        id: entity.id,
+        name: entity.name,
+        rank: entity.packMeta?.rank ?? 0
+      } satisfies RankFeatureProps
     };
   }
 
@@ -924,25 +1028,27 @@ export class MapView {
   }
 
   private renderPointStatusMarkers(): void {
-    if (!this.map || !this.mapLoaded) {
-      return;
-    }
-
+    this.removeDanglingMarkerElements([".status-marker"]);
     for (const marker of this.pointStatusMarkers) {
       marker.remove();
     }
     this.pointStatusMarkers = [];
-
+    this.pointStatusMarkerByEntityId.clear();
+    if (!this.map || !this.mapLoaded) {
+      return;
+    }
     for (const entity of this.pendingEntities) {
+      const hasRankBadge = this.pendingMode === "learn" && typeof entity.packMeta?.rank === "number";
       // Polygon entities are visible/clickable directly on the map; skip point dots to avoid visual clutter.
-      if (entity.geometryType === "polygon" && this.pendingShowPolygons) {
+      if (entity.geometryType === "polygon" && this.pendingShowPolygons && !hasRankBadge) {
         continue;
       }
       const mastery = this.pendingMasteryById[entity.id] ?? "not_learned";
       const color = mastery === "mastered" ? "#16a34a" : mastery === "learning" ? "#d97706" : "#dc2626";
       const border = mastery === "mastered" ? "#14532d" : mastery === "learning" ? "#7c2d12" : "#7f1d1d";
       const baseSize = mastery === "mastered" ? 18 : mastery === "learning" ? 14 : 11;
-      const size = this.coarsePointer ? Math.max(baseSize + 8, 20) : baseSize;
+      const rankedSize = hasRankBadge ? 28 : baseSize;
+      const size = this.coarsePointer ? Math.max(rankedSize + 8, 20) : rankedSize;
 
       const el = document.createElement("div");
       el.className = "status-marker";
@@ -959,7 +1065,17 @@ export class MapView {
       el.style.fontSize = "11px";
       el.style.fontWeight = "700";
       el.style.cursor = "pointer";
-      if (mastery === "mastered") {
+      if (hasRankBadge) {
+        const rank = entity.packMeta?.rank ?? 0;
+        const palette = this.getRankMarkerPalette(rank);
+        el.classList.add("status-marker--ranked");
+        el.classList.add(`status-marker--rank-${this.getRankTier(rank)}`);
+        el.style.background = palette.background;
+        el.style.border = `2px solid ${palette.border}`;
+        el.style.color = palette.text;
+        el.style.boxShadow = palette.shadow;
+        el.textContent = `${entity.packMeta?.rank}`;
+      } else if (mastery === "mastered") {
         el.classList.add("status-marker--mastered");
         el.textContent = "✓";
       } else if (entity.geometryType === "line") {
@@ -977,15 +1093,13 @@ export class MapView {
 
       const marker = new maplibregl.Marker({ element: el }).setLngLat(entity.labelPoint).addTo(this.map);
       this.pointStatusMarkers.push(marker);
+      this.pointStatusMarkerByEntityId.set(entity.id, marker);
     }
     this.recentlyMasteredIds.clear();
   }
 
   private renderHighlightedMarkers(): void {
-    if (!this.map || !this.mapLoaded) {
-      return;
-    }
-
+    this.removeDanglingMarkerElements([".target-dot", ".highlighted-entity-label"]);
     this.highlightedDotMarker?.remove();
     this.highlightedDotMarker = null;
     this.highlightedLabelMarker?.remove();
@@ -994,6 +1108,9 @@ export class MapView {
       marker.remove();
     }
     this.highlightedRiverMarkers = [];
+    if (!this.map || !this.mapLoaded) {
+      return;
+    }
 
     if (!this.pendingHighlightedEntityId) {
       return;
@@ -1010,7 +1127,11 @@ export class MapView {
         this.pendingMode === "quiz" ? "target-dot--quiz" : "target-dot--learn"
       }`;
       dot.style.setProperty("--target-accent", this.getTargetMarkerAccentColor(this.pendingTargetMarkerColor));
-      dot.innerHTML = '<span class="target-dot-ping"></span><span class="target-dot-core"></span>';
+      const rankBadge =
+        this.pendingMode === "learn" && target.packMeta?.rank && !this.hasRankedLearnMarkers()
+          ? `<span class="target-dot-rank target-dot-rank--${this.getRankTier(target.packMeta.rank)}">${target.packMeta.rank}</span>`
+          : "";
+      dot.innerHTML = `<span class="target-dot-ping"></span><span class="target-dot-core"></span>${rankBadge}`;
       this.highlightedDotMarker = new maplibregl.Marker({ element: dot }).setLngLat(target.labelPoint).addTo(this.map);
     }
     if (target.geometryType === "line" && target.geometry?.type === "LineString") {
@@ -1060,7 +1181,9 @@ export class MapView {
     }
     if (this.pendingMode === "learn") {
       const label = document.createElement("div");
-      label.textContent = target.name;
+      label.className = "highlighted-entity-label";
+      const rankPrefix = target.packMeta?.rank ? `#${target.packMeta.rank} ` : "";
+      label.textContent = `${rankPrefix}${target.name}`;
       label.style.padding = "4px 8px";
       label.style.borderRadius = "8px";
       label.style.fontSize = "14px";
@@ -1095,6 +1218,58 @@ export class MapView {
     }
   }
 
+  private getRankTier(rank: number): "gold" | "silver" | "bronze" | "base" {
+    if (rank === 1) {
+      return "gold";
+    }
+    if (rank === 2) {
+      return "silver";
+    }
+    if (rank === 3) {
+      return "bronze";
+    }
+    return "base";
+  }
+
+  private getRankMarkerPalette(rank: number): {
+    background: string;
+    border: string;
+    text: string;
+    shadow: string;
+  } {
+    const tier = this.getRankTier(rank);
+    if (tier === "gold") {
+      return {
+        background: "linear-gradient(145deg, #fde68a, #f59e0b)",
+        border: "#92400e",
+        text: "#422006",
+        shadow: "0 2px 10px rgba(146, 64, 14, 0.42), 0 0 0 2px rgba(255,255,255,0.75) inset"
+      };
+    }
+    if (tier === "silver") {
+      return {
+        background: "linear-gradient(145deg, #e5e7eb, #94a3b8)",
+        border: "#334155",
+        text: "#0f172a",
+        shadow: "0 2px 10px rgba(15, 23, 42, 0.35), 0 0 0 2px rgba(255,255,255,0.75) inset"
+      };
+    }
+    if (tier === "bronze") {
+      return {
+        background: "linear-gradient(145deg, #fdba74, #b45309)",
+        border: "#7c2d12",
+        text: "#2f1308",
+        shadow: "0 2px 10px rgba(124, 45, 18, 0.4), 0 0 0 2px rgba(255,255,255,0.7) inset"
+      };
+    }
+    return {
+      background: "linear-gradient(145deg, #1e293b, #0f172a)",
+      border: "#cbd5e1",
+      text: "#f8fafc",
+      shadow: "0 2px 10px rgba(2, 6, 23, 0.45), 0 0 0 1px rgba(255,255,255,0.35) inset"
+    };
+  }
+
   private updateTargetLineData(entityId: string | null): void {
     if (!this.map || !this.mapLoaded) {
       return;
@@ -1119,6 +1294,26 @@ export class MapView {
       features: [this.toGeometryFeature(target)]
     } as FeatureCollection);
   }
+
+  private hasRankedLearnMarkers(): boolean {
+    return (
+      this.pendingMode === "learn" &&
+      this.pendingEntities.some((entity) => typeof entity.packMeta?.rank === "number")
+    );
+  }
+
+  private removeDanglingMarkerElements(selectors: string[]): void {
+    if (!this.map) {
+      return;
+    }
+    const container = this.map.getContainer();
+    for (const selector of selectors) {
+      for (const el of container.querySelectorAll(selector)) {
+        el.remove();
+      }
+    }
+  }
+
 
   private sampleLineAnchors(
     coords: [number, number][],

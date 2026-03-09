@@ -36,6 +36,7 @@
       -4
     ],
     "packIds": [
+      "top10_largest_river_basins",
       "world_river_basins"
     ]
   },
@@ -76,6 +77,7 @@
       -1
     ],
     "packIds": [
+      "top10_largest_river_basins",
       "world_river_basins"
     ]
   },
@@ -116,6 +118,7 @@
       26
     ],
     "packIds": [
+      "top10_largest_river_basins",
       "world_river_basins"
     ]
   },
@@ -156,6 +159,7 @@
       18
     ],
     "packIds": [
+      "top10_largest_river_basins",
       "world_river_basins"
     ]
   },
@@ -196,6 +200,7 @@
       39
     ],
     "packIds": [
+      "top10_largest_river_basins",
       "world_river_basins"
     ]
   },
@@ -236,7 +241,88 @@
       16
     ],
     "packIds": [
+      "top10_largest_river_basins",
       "world_river_basins"
+    ]
+  },
+  {
+    "id": "basin_ob",
+    "type": "region",
+    "name": "Ob Basin",
+    "geometryType": "polygon",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            60,
+            48
+          ],
+          [
+            95,
+            48
+          ],
+          [
+            95,
+            69
+          ],
+          [
+            60,
+            69
+          ],
+          [
+            60,
+            48
+          ]
+        ]
+      ]
+    },
+    "labelPoint": [
+      78,
+      58
+    ],
+    "packIds": [
+      "top10_largest_river_basins"
+    ]
+  },
+  {
+    "id": "basin_parana",
+    "type": "region",
+    "name": "Parana Basin",
+    "geometryType": "polygon",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -65,
+            -34
+          ],
+          [
+            -47,
+            -34
+          ],
+          [
+            -47,
+            -15
+          ],
+          [
+            -65,
+            -15
+          ],
+          [
+            -65,
+            -34
+          ]
+        ]
+      ]
+    },
+    "labelPoint": [
+      -56,
+      -24
+    ],
+    "packIds": [
+      "top10_largest_river_basins"
     ]
   },
   {
@@ -276,7 +362,48 @@
       30
     ],
     "packIds": [
+      "top10_largest_river_basins",
       "world_river_basins"
+    ]
+  },
+  {
+    "id": "basin_yenisei",
+    "type": "region",
+    "name": "Yenisei Basin",
+    "geometryType": "polygon",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            75,
+            50
+          ],
+          [
+            102,
+            50
+          ],
+          [
+            102,
+            72
+          ],
+          [
+            75,
+            72
+          ],
+          [
+            75,
+            50
+          ]
+        ]
+      ]
+    },
+    "labelPoint": [
+      89,
+      61
+    ],
+    "packIds": [
+      "top10_largest_river_basins"
     ]
   },
   {
@@ -1182,6 +1309,7 @@
       9.15
     ],
     "packIds": [
+      "top10_busiest_straits_chokepoints",
       "world_straits_canals"
     ]
   },
@@ -1208,6 +1336,7 @@
       30.6
     ],
     "packIds": [
+      "top10_busiest_straits_chokepoints",
       "world_straits_canals"
     ]
   },
@@ -5018,6 +5147,7 @@
       -34
     ],
     "packIds": [
+      "top10_largest_countries_area",
       "world_countries",
       "world_countries_by_continent",
       "world_flags"
@@ -5073,6 +5203,8 @@
       -27
     ],
     "packIds": [
+      "top10_countries_by_coastline",
+      "top10_largest_countries_area",
       "world_countries",
       "world_countries_by_continent",
       "world_flags"
@@ -5221,6 +5353,7 @@
       24
     ],
     "packIds": [
+      "top10_most_populous_countries",
       "world_countries",
       "world_countries_by_continent",
       "world_flags"
@@ -5330,6 +5463,9 @@
       -10
     ],
     "packIds": [
+      "top10_gdp_nominal_countries",
+      "top10_largest_countries_area",
+      "top10_most_populous_countries",
       "world_countries",
       "world_countries_by_continent",
       "world_flags"
@@ -5457,6 +5593,9 @@
       60
     ],
     "packIds": [
+      "top10_countries_by_coastline",
+      "top10_gdp_nominal_countries",
+      "top10_largest_countries_area",
       "world_countries",
       "world_countries_by_continent",
       "world_flags"
@@ -5493,6 +5632,10 @@
       35
     ],
     "packIds": [
+      "top10_countries_by_coastline",
+      "top10_gdp_nominal_countries",
+      "top10_largest_countries_area",
+      "top10_most_populous_countries",
       "world_countries",
       "world_countries_by_continent",
       "world_flags"
@@ -5803,6 +5946,7 @@
       28
     ],
     "packIds": [
+      "top10_largest_countries_area",
       "world_countries",
       "world_countries_by_continent",
       "world_flags"
@@ -5950,6 +6094,8 @@
     ],
     "packIds": [
       "europe_countries",
+      "top10_gdp_nominal_countries",
+      "top10_most_visited_countries",
       "world_countries",
       "world_countries_by_continent",
       "world_flags"
@@ -6074,6 +6220,8 @@
     ],
     "packIds": [
       "europe_countries",
+      "top10_gdp_nominal_countries",
+      "top10_most_visited_countries",
       "world_countries",
       "world_countries_by_continent",
       "world_flags"
@@ -6361,6 +6509,8 @@
       -5
     ],
     "packIds": [
+      "top10_countries_by_coastline",
+      "top10_most_populous_countries",
       "world_countries",
       "world_countries_by_continent",
       "world_flags"
@@ -6379,6 +6529,9 @@
       20
     ],
     "packIds": [
+      "top10_gdp_nominal_countries",
+      "top10_largest_countries_area",
+      "top10_most_populous_countries",
       "world_countries",
       "world_countries_by_continent",
       "world_flags"
@@ -6471,6 +6624,8 @@
     ],
     "packIds": [
       "europe_countries",
+      "top10_gdp_nominal_countries",
+      "top10_most_visited_countries",
       "world_countries",
       "world_countries_by_continent",
       "world_flags"
@@ -6525,6 +6680,9 @@
       36
     ],
     "packIds": [
+      "top10_countries_by_coastline",
+      "top10_gdp_nominal_countries",
+      "top10_most_visited_countries",
       "world_countries",
       "world_countries_by_continent",
       "world_flags"
@@ -6543,6 +6701,7 @@
       48.0196
     ],
     "packIds": [
+      "top10_largest_countries_area",
       "world_countries",
       "world_countries_by_continent",
       "world_flags"
@@ -6981,6 +7140,8 @@
       23
     ],
     "packIds": [
+      "top10_most_populous_countries",
+      "top10_most_visited_countries",
       "world_countries",
       "world_countries_by_continent",
       "world_flags"
@@ -7273,6 +7434,7 @@
       10
     ],
     "packIds": [
+      "top10_most_populous_countries",
       "world_countries",
       "world_countries_by_continent",
       "world_flags"
@@ -7329,6 +7491,7 @@
     ],
     "packIds": [
       "europe_countries",
+      "top10_countries_by_coastline",
       "world_countries",
       "world_countries_by_continent",
       "world_flags"
@@ -7383,6 +7546,7 @@
       -41
     ],
     "packIds": [
+      "top10_countries_by_coastline",
       "world_countries",
       "world_countries_by_continent",
       "world_flags"
@@ -7419,6 +7583,7 @@
       30
     ],
     "packIds": [
+      "top10_most_populous_countries",
       "world_countries",
       "world_countries_by_continent",
       "world_flags"
@@ -7473,6 +7638,7 @@
       13
     ],
     "packIds": [
+      "top10_countries_by_coastline",
       "world_countries",
       "world_countries_by_continent",
       "world_flags"
@@ -7657,6 +7823,9 @@
     ],
     "packIds": [
       "europe_countries",
+      "top10_countries_by_coastline",
+      "top10_largest_countries_area",
+      "top10_most_populous_countries",
       "world_countries",
       "world_countries_by_continent",
       "world_flags"
@@ -7915,6 +8084,7 @@
     ],
     "packIds": [
       "europe_countries",
+      "top10_most_visited_countries",
       "world_countries",
       "world_countries_by_continent",
       "world_flags"
@@ -8112,6 +8282,7 @@
       15
     ],
     "packIds": [
+      "top10_most_visited_countries",
       "world_countries",
       "world_countries_by_continent",
       "world_flags"
@@ -8239,6 +8410,7 @@
     ],
     "packIds": [
       "europe_countries",
+      "top10_most_visited_countries",
       "world_countries",
       "world_countries_by_continent",
       "world_flags"
@@ -8331,6 +8503,8 @@
     ],
     "packIds": [
       "europe_countries",
+      "top10_gdp_nominal_countries",
+      "top10_most_visited_countries",
       "world_countries",
       "world_countries_by_continent",
       "world_flags"
@@ -8367,6 +8541,11 @@
       38
     ],
     "packIds": [
+      "top10_countries_by_coastline",
+      "top10_gdp_nominal_countries",
+      "top10_largest_countries_area",
+      "top10_most_populous_countries",
+      "top10_most_visited_countries",
       "world_countries",
       "world_countries_by_continent",
       "world_flags"
@@ -8840,6 +9019,7 @@
       23
     ],
     "packIds": [
+      "top10_largest_deserts",
       "world_deserts"
     ]
   },
@@ -8853,6 +9033,7 @@
       -24
     ],
     "packIds": [
+      "top10_largest_deserts",
       "world_deserts"
     ]
   },
@@ -8866,6 +9047,7 @@
       42
     ],
     "packIds": [
+      "top10_largest_deserts",
       "world_deserts"
     ]
   },
@@ -8879,6 +9061,7 @@
       -29
     ],
     "packIds": [
+      "top10_largest_deserts",
       "world_deserts"
     ]
   },
@@ -8892,6 +9075,7 @@
       -23
     ],
     "packIds": [
+      "top10_largest_deserts",
       "world_deserts"
     ]
   },
@@ -8905,6 +9089,7 @@
       39
     ],
     "packIds": [
+      "top10_largest_deserts",
       "world_deserts"
     ]
   },
@@ -8944,6 +9129,7 @@
       -46
     ],
     "packIds": [
+      "top10_largest_deserts",
       "world_deserts"
     ]
   },
@@ -8957,6 +9143,7 @@
       23
     ],
     "packIds": [
+      "top10_largest_deserts",
       "world_deserts"
     ]
   },
@@ -8970,6 +9157,7 @@
       31
     ],
     "packIds": [
+      "top10_largest_deserts",
       "world_deserts"
     ]
   },
@@ -8983,6 +9171,7 @@
       27
     ],
     "packIds": [
+      "top10_largest_deserts",
       "world_deserts"
     ]
   },
@@ -11092,6 +11281,46 @@
     ]
   },
   {
+    "id": "island_baffin",
+    "type": "island",
+    "name": "Baffin Island",
+    "geometryType": "polygon",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -81,
+            61
+          ],
+          [
+            -61,
+            61
+          ],
+          [
+            -61,
+            74
+          ],
+          [
+            -81,
+            74
+          ],
+          [
+            -81,
+            61
+          ]
+        ]
+      ]
+    },
+    "labelPoint": [
+      -70,
+      67
+    ],
+    "packIds": [
+      "top10_largest_islands"
+    ]
+  },
+  {
     "id": "island_borneo",
     "type": "region",
     "name": "Borneo",
@@ -11101,7 +11330,48 @@
       1
     ],
     "packIds": [
+      "top10_largest_islands",
       "world_peninsulas_islands"
+    ]
+  },
+  {
+    "id": "island_ellesmere",
+    "type": "island",
+    "name": "Ellesmere Island",
+    "geometryType": "polygon",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -90,
+            76
+          ],
+          [
+            -62,
+            76
+          ],
+          [
+            -62,
+            83
+          ],
+          [
+            -90,
+            83
+          ],
+          [
+            -90,
+            76
+          ]
+        ]
+      ]
+    },
+    "labelPoint": [
+      -75,
+      79
+    ],
+    "packIds": [
+      "top10_largest_islands"
     ]
   },
   {
@@ -11114,6 +11384,7 @@
       54
     ],
     "packIds": [
+      "top10_largest_islands",
       "world_peninsulas_islands"
     ]
   },
@@ -11127,6 +11398,7 @@
       73
     ],
     "packIds": [
+      "top10_largest_islands",
       "world_peninsulas_islands"
     ]
   },
@@ -11140,6 +11412,7 @@
       37
     ],
     "packIds": [
+      "top10_largest_islands",
       "world_peninsulas_islands"
     ]
   },
@@ -11166,6 +11439,7 @@
       -19
     ],
     "packIds": [
+      "top10_largest_islands",
       "world_peninsulas_islands"
     ]
   },
@@ -11179,7 +11453,88 @@
       -5
     ],
     "packIds": [
+      "top10_largest_islands",
       "world_peninsulas_islands"
+    ]
+  },
+  {
+    "id": "island_sumatra",
+    "type": "island",
+    "name": "Sumatra",
+    "geometryType": "polygon",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            95,
+            -6
+          ],
+          [
+            106,
+            -6
+          ],
+          [
+            106,
+            6
+          ],
+          [
+            95,
+            6
+          ],
+          [
+            95,
+            -6
+          ]
+        ]
+      ]
+    },
+    "labelPoint": [
+      101,
+      0
+    ],
+    "packIds": [
+      "top10_largest_islands"
+    ]
+  },
+  {
+    "id": "island_victoria",
+    "type": "island",
+    "name": "Victoria Island",
+    "geometryType": "polygon",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -124,
+            68
+          ],
+          [
+            -102,
+            68
+          ],
+          [
+            -102,
+            75
+          ],
+          [
+            -124,
+            75
+          ],
+          [
+            -124,
+            68
+          ]
+        ]
+      ]
+    },
+    "labelPoint": [
+      -112,
+      71
+    ],
+    "packIds": [
+      "top10_largest_islands"
     ]
   },
   {
@@ -11205,6 +11560,8 @@
       53.5
     ],
     "packIds": [
+      "top10_deepest_lakes",
+      "top10_largest_lakes",
       "world_major_lakes"
     ]
   },
@@ -11218,6 +11575,8 @@
       41.9
     ],
     "packIds": [
+      "top10_deepest_lakes",
+      "top10_largest_lakes",
       "world_major_lakes"
     ]
   },
@@ -11235,6 +11594,19 @@
     ]
   },
   {
+    "id": "lake_crater",
+    "type": "lake",
+    "name": "Crater Lake",
+    "geometryType": "point",
+    "labelPoint": [
+      -122.1,
+      42.9
+    ],
+    "packIds": [
+      "top10_deepest_lakes"
+    ]
+  },
+  {
     "id": "lake_erie2",
     "type": "lake",
     "name": "Lake Erie",
@@ -11244,6 +11616,7 @@
       42.2
     ],
     "packIds": [
+      "top10_largest_lakes",
       "world_major_lakes"
     ]
   },
@@ -11257,7 +11630,21 @@
       66
     ],
     "packIds": [
+      "top10_largest_lakes",
       "world_major_lakes"
+    ]
+  },
+  {
+    "id": "lake_great_slave",
+    "type": "lake",
+    "name": "Great Slave Lake",
+    "geometryType": "point",
+    "labelPoint": [
+      -114.5,
+      61.5
+    ],
+    "packIds": [
+      "top10_deepest_lakes"
     ]
   },
   {
@@ -11270,7 +11657,75 @@
       45.2
     ],
     "packIds": [
+      "top10_largest_lakes",
       "world_major_lakes"
+    ]
+  },
+  {
+    "id": "lake_issyk_kul",
+    "type": "lake",
+    "name": "Issyk-Kul",
+    "geometryType": "point",
+    "labelPoint": [
+      77.3,
+      42.4
+    ],
+    "packIds": [
+      "top10_deepest_lakes"
+    ]
+  },
+  {
+    "id": "lake_malawi",
+    "type": "lake",
+    "name": "Lake Malawi",
+    "geometryType": "polygon",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            33,
+            -15
+          ],
+          [
+            36,
+            -15
+          ],
+          [
+            36,
+            -9
+          ],
+          [
+            33,
+            -9
+          ],
+          [
+            33,
+            -15
+          ]
+        ]
+      ]
+    },
+    "labelPoint": [
+      34.7,
+      -12
+    ],
+    "packIds": [
+      "top10_deepest_lakes",
+      "top10_largest_lakes"
+    ]
+  },
+  {
+    "id": "lake_matano",
+    "type": "lake",
+    "name": "Lake Matano",
+    "geometryType": "point",
+    "labelPoint": [
+      121.3,
+      -2.5
+    ],
+    "packIds": [
+      "top10_deepest_lakes"
     ]
   },
   {
@@ -11283,7 +11738,21 @@
       44.2
     ],
     "packIds": [
+      "top10_largest_lakes",
       "world_major_lakes"
+    ]
+  },
+  {
+    "id": "lake_o_higgins",
+    "type": "lake",
+    "name": "Lake O'Higgins",
+    "geometryType": "point",
+    "labelPoint": [
+      -72.4,
+      -48.5
+    ],
+    "packIds": [
+      "top10_deepest_lakes"
     ]
   },
   {
@@ -11296,6 +11765,7 @@
       47.7
     ],
     "packIds": [
+      "top10_largest_lakes",
       "world_major_lakes"
     ]
   },
@@ -11309,6 +11779,8 @@
       -6
     ],
     "packIds": [
+      "top10_deepest_lakes",
+      "top10_largest_lakes",
       "world_major_lakes"
     ]
   },
@@ -11335,7 +11807,21 @@
       -1
     ],
     "packIds": [
+      "top10_largest_lakes",
       "world_major_lakes"
+    ]
+  },
+  {
+    "id": "lake_vostok",
+    "type": "lake",
+    "name": "Lake Vostok",
+    "geometryType": "point",
+    "labelPoint": [
+      106,
+      -77
+    ],
+    "packIds": [
+      "top10_deepest_lakes"
     ]
   },
   {
@@ -13088,6 +13574,7 @@
       -32.6532
     ],
     "packIds": [
+      "top10_highest_peaks",
       "world_mountains"
     ]
   },
@@ -13101,6 +13588,7 @@
       63.0695
     ],
     "packIds": [
+      "top10_highest_peaks",
       "world_mountains"
     ]
   },
@@ -13114,6 +13602,7 @@
       43.355
     ],
     "packIds": [
+      "top10_highest_peaks",
       "world_mountains"
     ]
   },
@@ -13127,6 +13616,7 @@
       27.9881
     ],
     "packIds": [
+      "top10_highest_peaks",
       "world_mountains"
     ],
     "difficulty": "easy",
@@ -13180,6 +13670,7 @@
       35.3606
     ],
     "packIds": [
+      "top10_highest_peaks",
       "world_mountains"
     ]
   },
@@ -13193,6 +13684,7 @@
       35.8808
     ],
     "packIds": [
+      "top10_highest_peaks",
       "world_mountains"
     ],
     "difficulty": "hard",
@@ -13240,6 +13732,7 @@
       -3.0674
     ],
     "packIds": [
+      "top10_highest_peaks",
       "world_mountains"
     ]
   },
@@ -13253,6 +13746,7 @@
       -36.455
     ],
     "packIds": [
+      "top10_highest_peaks",
       "world_mountains"
     ]
   },
@@ -13279,6 +13773,7 @@
       45.8326
     ],
     "packIds": [
+      "top10_highest_peaks",
       "world_mountains"
     ]
   },
@@ -13305,6 +13800,7 @@
       -78.525
     ],
     "packIds": [
+      "top10_highest_peaks",
       "world_mountains"
     ]
   },
@@ -14077,6 +14573,7 @@
       46.5
     ],
     "packIds": [
+      "top10_longest_mountain_ranges",
       "world_mountain_ranges"
     ],
     "media": {
@@ -14133,6 +14630,7 @@
       -17
     ],
     "packIds": [
+      "top10_longest_mountain_ranges",
       "world_mountain_ranges"
     ],
     "difficulty": "medium",
@@ -14215,6 +14713,7 @@
       38
     ],
     "packIds": [
+      "top10_longest_mountain_ranges",
       "world_mountain_ranges"
     ]
   },
@@ -14257,6 +14756,7 @@
       32
     ],
     "packIds": [
+      "top10_longest_mountain_ranges",
       "world_mountain_ranges"
     ]
   },
@@ -14303,6 +14803,7 @@
       48
     ],
     "packIds": [
+      "top10_longest_mountain_ranges",
       "world_mountain_ranges"
     ]
   },
@@ -14341,6 +14842,7 @@
       43
     ],
     "packIds": [
+      "top10_longest_mountain_ranges",
       "world_mountain_ranges"
     ]
   },
@@ -14425,6 +14927,7 @@
       -28
     ],
     "packIds": [
+      "top10_longest_mountain_ranges",
       "world_mountain_ranges"
     ]
   },
@@ -14471,6 +14974,7 @@
       29
     ],
     "packIds": [
+      "top10_longest_mountain_ranges",
       "world_mountain_ranges"
     ],
     "difficulty": "medium",
@@ -14555,6 +15059,7 @@
       44
     ],
     "packIds": [
+      "top10_longest_mountain_ranges",
       "world_mountain_ranges"
     ]
   },
@@ -14635,6 +15140,7 @@
       60
     ],
     "packIds": [
+      "top10_longest_mountain_ranges",
       "world_mountain_ranges"
     ]
   },
@@ -14775,6 +15281,7 @@
       -3
     ],
     "packIds": [
+      "top10_longest_rivers",
       "world_rivers"
     ],
     "difficulty": "medium",
@@ -14819,6 +15326,43 @@
     }
   },
   {
+    "id": "river_chao_phraya",
+    "type": "river",
+    "name": "Chao Phraya",
+    "geometryType": "line",
+    "geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          100.6,
+          15.7
+        ],
+        [
+          100.5,
+          13.75
+        ],
+        [
+          100.45,
+          13.45
+        ]
+      ]
+    },
+    "labelPoint": [
+      100.5,
+      13.75
+    ],
+    "hintTokens": [
+      "River flowing through Bangkok."
+    ],
+    "facts": [
+      "Bangkok developed along the Chao Phraya River."
+    ],
+    "difficulty": "easy",
+    "packIds": [
+      "world_river_city_pairs"
+    ]
+  },
+  {
     "id": "river_congo",
     "type": "river",
     "name": "Congo",
@@ -14845,6 +15389,7 @@
       -3
     ],
     "packIds": [
+      "top10_longest_rivers",
       "world_rivers"
     ]
   },
@@ -14875,6 +15420,7 @@
       46
     ],
     "packIds": [
+      "top10_longest_rivers",
       "world_rivers"
     ]
   },
@@ -14909,6 +15455,80 @@
     ]
   },
   {
+    "id": "river_huangpu",
+    "type": "river",
+    "name": "Huangpu",
+    "geometryType": "line",
+    "geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          121.4,
+          31.55
+        ],
+        [
+          121.5,
+          31.23
+        ],
+        [
+          121.7,
+          31
+        ]
+      ]
+    },
+    "labelPoint": [
+      121.5,
+      31.23
+    ],
+    "hintTokens": [
+      "River flowing through central Shanghai."
+    ],
+    "facts": [
+      "The Bund in Shanghai faces the Huangpu River."
+    ],
+    "difficulty": "medium",
+    "packIds": [
+      "world_river_city_pairs"
+    ]
+  },
+  {
+    "id": "river_hudson",
+    "type": "river",
+    "name": "Hudson",
+    "geometryType": "line",
+    "geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          -74.1,
+          41
+        ],
+        [
+          -74.01,
+          40.75
+        ],
+        [
+          -73.9,
+          40.6
+        ]
+      ]
+    },
+    "labelPoint": [
+      -74.01,
+      40.75
+    ],
+    "hintTokens": [
+      "River beside Manhattan in New York City."
+    ],
+    "facts": [
+      "The Hudson forms a key waterway for New York."
+    ],
+    "difficulty": "easy",
+    "packIds": [
+      "world_river_city_pairs"
+    ]
+  },
+  {
     "id": "river_indus",
     "type": "river",
     "name": "Indus",
@@ -14935,6 +15555,7 @@
       29
     ],
     "packIds": [
+      "top10_longest_rivers",
       "world_rivers"
     ]
   },
@@ -14965,6 +15586,7 @@
       16
     ],
     "packIds": [
+      "top10_longest_rivers",
       "world_rivers"
     ],
     "media": {
@@ -15001,7 +15623,45 @@
       36
     ],
     "packIds": [
+      "top10_longest_rivers",
       "world_rivers"
+    ]
+  },
+  {
+    "id": "river_moskva",
+    "type": "river",
+    "name": "Moskva",
+    "geometryType": "line",
+    "geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          37.15,
+          55.75
+        ],
+        [
+          37.62,
+          55.75
+        ],
+        [
+          38,
+          55.6
+        ]
+      ]
+    },
+    "labelPoint": [
+      37.62,
+      55.75
+    ],
+    "hintTokens": [
+      "River flowing through Moscow."
+    ],
+    "facts": [
+      "The Moskva River runs through Moscow."
+    ],
+    "difficulty": "medium",
+    "packIds": [
+      "world_river_city_pairs"
     ]
   },
   {
@@ -15061,6 +15721,8 @@
       25
     ],
     "packIds": [
+      "top10_longest_rivers",
+      "world_river_city_pairs",
       "world_rivers"
     ],
     "difficulty": "easy",
@@ -15105,6 +15767,117 @@
     }
   },
   {
+    "id": "river_seine",
+    "type": "river",
+    "name": "Seine",
+    "geometryType": "line",
+    "geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          1.5,
+          49.4
+        ],
+        [
+          2.35,
+          48.86
+        ],
+        [
+          3,
+          48.55
+        ]
+      ]
+    },
+    "labelPoint": [
+      2.35,
+      48.86
+    ],
+    "hintTokens": [
+      "River flowing through Paris."
+    ],
+    "facts": [
+      "The Seine curves through central Paris."
+    ],
+    "difficulty": "easy",
+    "packIds": [
+      "world_river_city_pairs"
+    ]
+  },
+  {
+    "id": "river_thames",
+    "type": "river",
+    "name": "Thames",
+    "geometryType": "line",
+    "geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          -0.9,
+          51.48
+        ],
+        [
+          -0.35,
+          51.5
+        ],
+        [
+          0.2,
+          51.5
+        ]
+      ]
+    },
+    "labelPoint": [
+      -0.35,
+      51.5
+    ],
+    "hintTokens": [
+      "River flowing through London."
+    ],
+    "facts": [
+      "The Thames is the main river of London."
+    ],
+    "difficulty": "easy",
+    "packIds": [
+      "world_river_city_pairs"
+    ]
+  },
+  {
+    "id": "river_tiber",
+    "type": "river",
+    "name": "Tiber",
+    "geometryType": "line",
+    "geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          12.2,
+          42.2
+        ],
+        [
+          12.5,
+          41.9
+        ],
+        [
+          12.48,
+          41.75
+        ]
+      ]
+    },
+    "labelPoint": [
+      12.5,
+      41.9
+    ],
+    "hintTokens": [
+      "River flowing through Rome."
+    ],
+    "facts": [
+      "The historic center of Rome sits along the Tiber."
+    ],
+    "difficulty": "medium",
+    "packIds": [
+      "world_river_city_pairs"
+    ]
+  },
+  {
     "id": "river_volga",
     "type": "river",
     "name": "Volga",
@@ -15131,7 +15904,45 @@
       52
     ],
     "packIds": [
+      "top10_longest_rivers",
       "world_rivers"
+    ]
+  },
+  {
+    "id": "river_yamuna",
+    "type": "river",
+    "name": "Yamuna",
+    "geometryType": "line",
+    "geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          77.2,
+          30.5
+        ],
+        [
+          77.2,
+          28.65
+        ],
+        [
+          77.5,
+          27.2
+        ]
+      ]
+    },
+    "labelPoint": [
+      77.22,
+      28.65
+    ],
+    "hintTokens": [
+      "Major river flowing by Delhi."
+    ],
+    "facts": [
+      "Delhi lies on the banks of the Yamuna."
+    ],
+    "difficulty": "easy",
+    "packIds": [
+      "world_river_city_pairs"
     ]
   },
   {
@@ -15161,6 +15972,7 @@
       30.5
     ],
     "packIds": [
+      "top10_longest_rivers",
       "world_rivers"
     ]
   },
@@ -15191,6 +16003,7 @@
       36
     ],
     "packIds": [
+      "top10_longest_rivers",
       "world_rivers"
     ]
   },
@@ -15295,6 +16108,7 @@
       74
     ],
     "packIds": [
+      "top10_largest_gulfs_bays",
       "world_seas_gulfs_bays"
     ]
   },
@@ -15334,6 +16148,7 @@
       15
     ],
     "packIds": [
+      "top10_largest_gulfs_bays",
       "world_seas_gulfs_bays"
     ]
   },
@@ -15347,6 +16162,7 @@
       45
     ],
     "packIds": [
+      "top10_largest_gulfs_bays",
       "world_seas_gulfs_bays"
     ]
   },
@@ -15360,6 +16176,7 @@
       45
     ],
     "packIds": [
+      "top10_largest_gulfs_bays",
       "world_seas_gulfs_bays"
     ]
   },
@@ -15373,6 +16190,7 @@
       1
     ],
     "packIds": [
+      "top10_largest_gulfs_bays",
       "world_seas_gulfs_bays"
     ]
   },
@@ -15503,6 +16321,7 @@
       56
     ],
     "packIds": [
+      "top10_largest_gulfs_bays",
       "world_seas_gulfs_bays"
     ]
   },
@@ -15516,6 +16335,7 @@
       27
     ],
     "packIds": [
+      "top10_largest_gulfs_bays",
       "world_seas_gulfs_bays"
     ]
   },
@@ -15529,6 +16349,7 @@
       24
     ],
     "packIds": [
+      "top10_largest_gulfs_bays",
       "world_seas_gulfs_bays"
     ]
   },
@@ -15542,6 +16363,7 @@
       10
     ],
     "packIds": [
+      "top10_largest_gulfs_bays",
       "world_seas_gulfs_bays"
     ]
   },
@@ -15555,6 +16377,7 @@
       58
     ],
     "packIds": [
+      "top10_largest_gulfs_bays",
       "world_seas_gulfs_bays"
     ]
   },
@@ -16944,6 +17767,7 @@
       12.6
     ],
     "packIds": [
+      "top10_busiest_straits_chokepoints",
       "world_straits_canals"
     ]
   },
@@ -16970,6 +17794,7 @@
       65.9
     ],
     "packIds": [
+      "top10_busiest_straits_chokepoints",
       "world_straits_canals"
     ]
   },
@@ -16996,7 +17821,34 @@
       41.13
     ],
     "packIds": [
+      "top10_busiest_straits_chokepoints",
       "world_straits_canals"
+    ]
+  },
+  {
+    "id": "strait_dover",
+    "type": "sea",
+    "name": "Strait of Dover",
+    "geometryType": "line",
+    "geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          1.1,
+          51.1
+        ],
+        [
+          1.7,
+          51
+        ]
+      ]
+    },
+    "labelPoint": [
+      1.4,
+      51.05
+    ],
+    "packIds": [
+      "top10_busiest_straits_chokepoints"
     ]
   },
   {
@@ -17022,6 +17874,7 @@
       36
     ],
     "packIds": [
+      "top10_busiest_straits_chokepoints",
       "world_straits_canals"
     ]
   },
@@ -17048,6 +17901,7 @@
       26.2
     ],
     "packIds": [
+      "top10_busiest_straits_chokepoints",
       "world_straits_canals"
     ]
   },
@@ -17074,7 +17928,34 @@
       4
     ],
     "packIds": [
+      "top10_busiest_straits_chokepoints",
       "world_straits_canals"
+    ]
+  },
+  {
+    "id": "strait_sunda",
+    "type": "sea",
+    "name": "Sunda Strait",
+    "geometryType": "line",
+    "geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          105.7,
+          -5.8
+        ],
+        [
+          105.9,
+          -6.2
+        ]
+      ]
+    },
+    "labelPoint": [
+      105.8,
+      -6
+    ],
+    "packIds": [
+      "top10_busiest_straits_chokepoints"
     ]
   },
   {
@@ -19572,6 +20453,7 @@
     ],
     "difficulty": "easy",
     "packIds": [
+      "top10_most_active_volcanoes",
       "world_volcanoes"
     ]
   },
@@ -19621,6 +20503,7 @@
     ],
     "difficulty": "medium",
     "packIds": [
+      "top10_most_active_volcanoes",
       "world_volcanoes"
     ]
   },
@@ -19638,6 +20521,7 @@
       "One of the most famous explosive eruptions in history (1883)."
     ],
     "packIds": [
+      "top10_most_active_volcanoes",
       "world_volcanoes"
     ]
   },
@@ -19652,6 +20536,7 @@
     ],
     "difficulty": "medium",
     "packIds": [
+      "top10_most_active_volcanoes",
       "world_volcanoes"
     ]
   },
@@ -19666,6 +20551,7 @@
     ],
     "difficulty": "hard",
     "packIds": [
+      "top10_most_active_volcanoes",
       "world_volcanoes"
     ]
   },
@@ -19680,6 +20566,7 @@
     ],
     "difficulty": "hard",
     "packIds": [
+      "top10_most_active_volcanoes",
       "world_volcanoes"
     ]
   },
@@ -19694,6 +20581,7 @@
     ],
     "difficulty": "hard",
     "packIds": [
+      "top10_most_active_volcanoes",
       "world_volcanoes"
     ]
   },
@@ -19722,6 +20610,7 @@
     ],
     "difficulty": "medium",
     "packIds": [
+      "top10_most_active_volcanoes",
       "world_volcanoes"
     ]
   },
@@ -19736,6 +20625,7 @@
     ],
     "difficulty": "hard",
     "packIds": [
+      "top10_most_active_volcanoes",
       "world_volcanoes"
     ]
   },
@@ -19756,6 +20646,7 @@
       "Its eruption buried Pompeii in AD 79."
     ],
     "packIds": [
+      "top10_most_active_volcanoes",
       "world_volcanoes"
     ]
   },
@@ -19770,7 +20661,34 @@
     ],
     "difficulty": "medium",
     "packIds": [
+      "top10_highest_waterfalls",
       "world_waterfalls"
+    ]
+  },
+  {
+    "id": "waterfall_balaifossen",
+    "type": "region",
+    "name": "Balaifossen",
+    "geometryType": "point",
+    "labelPoint": [
+      6.79,
+      60.19
+    ],
+    "packIds": [
+      "top10_highest_waterfalls"
+    ]
+  },
+  {
+    "id": "waterfall_browne",
+    "type": "region",
+    "name": "Browne Falls",
+    "geometryType": "point",
+    "labelPoint": [
+      167.82,
+      -45.4
+    ],
+    "packIds": [
+      "top10_highest_waterfalls"
     ]
   },
   {
@@ -19813,6 +20731,19 @@
     "difficulty": "easy",
     "packIds": [
       "world_waterfalls"
+    ]
+  },
+  {
+    "id": "waterfall_james_bruce",
+    "type": "region",
+    "name": "James Bruce Falls",
+    "geometryType": "point",
+    "labelPoint": [
+      -123.7,
+      50.66
+    ],
+    "packIds": [
+      "top10_highest_waterfalls"
     ]
   },
   {
@@ -19861,6 +20792,32 @@
     ]
   },
   {
+    "id": "waterfall_oloupena",
+    "type": "region",
+    "name": "Olo'upena Falls",
+    "geometryType": "point",
+    "labelPoint": [
+      -156.93,
+      21.13
+    ],
+    "packIds": [
+      "top10_highest_waterfalls"
+    ]
+  },
+  {
+    "id": "waterfall_puukaoku",
+    "type": "region",
+    "name": "Pu'uka'oku Falls",
+    "geometryType": "point",
+    "labelPoint": [
+      -156.89,
+      21.13
+    ],
+    "packIds": [
+      "top10_highest_waterfalls"
+    ]
+  },
+  {
     "id": "waterfall_sutherland",
     "type": "region",
     "name": "Sutherland Falls",
@@ -19872,6 +20829,32 @@
     "difficulty": "hard",
     "packIds": [
       "world_waterfalls"
+    ]
+  },
+  {
+    "id": "waterfall_tres_hermanas",
+    "type": "region",
+    "name": "Tres Hermanas Falls",
+    "geometryType": "point",
+    "labelPoint": [
+      -73.6,
+      -10.35
+    ],
+    "packIds": [
+      "top10_highest_waterfalls"
+    ]
+  },
+  {
+    "id": "waterfall_tugela",
+    "type": "region",
+    "name": "Tugela Falls",
+    "geometryType": "point",
+    "labelPoint": [
+      29.4,
+      -28.75
+    ],
+    "packIds": [
+      "top10_highest_waterfalls"
     ]
   },
   {
@@ -19889,6 +20872,19 @@
     ]
   },
   {
+    "id": "waterfall_vinnufossen",
+    "type": "region",
+    "name": "Vinnufossen",
+    "geometryType": "point",
+    "labelPoint": [
+      8.38,
+      62.67
+    ],
+    "packIds": [
+      "top10_highest_waterfalls"
+    ]
+  },
+  {
     "id": "waterfall_yosemite",
     "type": "region",
     "name": "Yosemite Falls",
@@ -19900,6 +20896,19 @@
     "difficulty": "medium",
     "packIds": [
       "world_waterfalls"
+    ]
+  },
+  {
+    "id": "waterfall_yumbilla",
+    "type": "region",
+    "name": "Yumbilla Falls",
+    "geometryType": "point",
+    "labelPoint": [
+      -77.93,
+      -5.72
+    ],
+    "packIds": [
+      "top10_highest_waterfalls"
     ]
   },
   {
@@ -19925,7 +20934,8 @@
       13.7563
     ],
     "packIds": [
-      "world_major_cities"
+      "world_major_cities",
+      "world_river_city_pairs"
     ]
   },
   {
@@ -19938,6 +20948,7 @@
       39.9042
     ],
     "packIds": [
+      "top10_most_populous_cities",
       "world_major_cities"
     ]
   },
@@ -20003,7 +21014,9 @@
       30.0444
     ],
     "packIds": [
-      "world_major_cities"
+      "top10_most_populous_cities",
+      "world_major_cities",
+      "world_river_city_pairs"
     ]
   },
   {
@@ -20029,7 +21042,23 @@
       28.7041
     ],
     "packIds": [
-      "world_major_cities"
+      "top10_largest_metro_areas",
+      "top10_most_populous_cities",
+      "world_major_cities",
+      "world_river_city_pairs"
+    ]
+  },
+  {
+    "id": "world_city_dhaka",
+    "type": "city",
+    "name": "Dhaka",
+    "geometryType": "point",
+    "labelPoint": [
+      90.41,
+      23.81
+    ],
+    "packIds": [
+      "top10_most_populous_cities"
     ]
   },
   {
@@ -20043,6 +21072,19 @@
     ],
     "packIds": [
       "world_major_cities"
+    ]
+  },
+  {
+    "id": "world_city_guangzhou",
+    "type": "city",
+    "name": "Guangzhou",
+    "geometryType": "point",
+    "labelPoint": [
+      113.26,
+      23.13
+    ],
+    "packIds": [
+      "top10_largest_metro_areas"
     ]
   },
   {
@@ -20081,6 +21123,7 @@
       -6.2088
     ],
     "packIds": [
+      "top10_largest_metro_areas",
       "world_major_cities"
     ]
   },
@@ -20146,7 +21189,8 @@
       51.5072
     ],
     "packIds": [
-      "world_major_cities"
+      "world_major_cities",
+      "world_river_city_pairs"
     ]
   },
   {
@@ -20185,6 +21229,7 @@
       14.5995
     ],
     "packIds": [
+      "top10_largest_metro_areas",
       "world_major_cities"
     ]
   },
@@ -20211,6 +21256,7 @@
       19.4326
     ],
     "packIds": [
+      "top10_most_populous_cities",
       "world_major_cities"
     ]
   },
@@ -20224,7 +21270,8 @@
       55.7558
     ],
     "packIds": [
-      "world_major_cities"
+      "world_major_cities",
+      "world_river_city_pairs"
     ]
   },
   {
@@ -20237,6 +21284,8 @@
       19.076
     ],
     "packIds": [
+      "top10_largest_metro_areas",
+      "top10_most_populous_cities",
       "world_major_cities"
     ]
   },
@@ -20263,7 +21312,10 @@
       40.7128
     ],
     "packIds": [
-      "world_major_cities"
+      "top10_largest_metro_areas",
+      "top10_most_populous_cities",
+      "world_major_cities",
+      "world_river_city_pairs"
     ]
   },
   {
@@ -20289,7 +21341,8 @@
       48.8566
     ],
     "packIds": [
-      "world_major_cities"
+      "world_major_cities",
+      "world_river_city_pairs"
     ]
   },
   {
@@ -20328,7 +21381,8 @@
       41.9028
     ],
     "packIds": [
-      "world_major_cities"
+      "world_major_cities",
+      "world_river_city_pairs"
     ]
   },
   {
@@ -20341,6 +21395,8 @@
       -23.5505
     ],
     "packIds": [
+      "top10_largest_metro_areas",
+      "top10_most_populous_cities",
       "world_major_cities"
     ]
   },
@@ -20354,6 +21410,7 @@
       37.5665
     ],
     "packIds": [
+      "top10_largest_metro_areas",
       "world_major_cities"
     ]
   },
@@ -20367,7 +21424,10 @@
       31.2304
     ],
     "packIds": [
-      "world_major_cities"
+      "top10_largest_metro_areas",
+      "top10_most_populous_cities",
+      "world_major_cities",
+      "world_river_city_pairs"
     ]
   },
   {
@@ -20419,6 +21479,8 @@
       35.6895
     ],
     "packIds": [
+      "top10_largest_metro_areas",
+      "top10_most_populous_cities",
       "world_major_cities"
     ]
   }
