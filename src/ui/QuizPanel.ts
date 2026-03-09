@@ -358,7 +358,7 @@ export class QuizPanel {
     }
 
     const mediaItems = this.resolveMediaItems(entity);
-    const speechText = (entity.pronunciation ?? entity.name).trim();
+    const speechText = this.speechTextFor(entity);
     const speechControls = `
       <div class="learn-speech-row">
         <button type="button" class="learn-speech-btn" data-role="speech-listen">🔊 Listen</button>
@@ -418,7 +418,7 @@ export class QuizPanel {
     if (!this.autoPronounceEnabled) {
       return;
     }
-    const text = (entity.pronunciation ?? entity.name).trim();
+    const text = this.speechTextFor(entity);
     if (!text) {
       return;
     }
@@ -426,7 +426,7 @@ export class QuizPanel {
   }
 
   repeatEntityPronunciation(entity: Entity): void {
-    const text = (entity.pronunciation ?? entity.name).trim();
+    const text = this.speechTextFor(entity);
     if (!text) {
       return;
     }
@@ -607,5 +607,16 @@ export class QuizPanel {
       option.value = match;
       this.answerSuggestionsEl.append(option);
     }
+  }
+
+  private speechTextFor(entity: Entity): string {
+    if (entity.type === "capital" && entity.adminOf) {
+      return `${entity.name}, capital of ${entity.adminOf.name}`;
+    }
+    const candidate = (entity.pronunciation ?? entity.name).trim();
+    if (candidate.toLowerCase() === "capital") {
+      return entity.name;
+    }
+    return candidate;
   }
 }

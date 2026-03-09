@@ -74,6 +74,7 @@ export type Entity = {
 export type Pack = {
   id: string;
   name: string;
+  group?: string;
   types: EntityType[];
   defaultViewport: {
     center: [number, number];

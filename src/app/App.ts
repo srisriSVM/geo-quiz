@@ -306,7 +306,7 @@ export class App {
         this.panel.setFeedback("Type the answer and submit.");
         this.panel.setAnswerVisible(true);
         this.panel.setAnswer("");
-        this.panel.setAnswerSuggestions(items.map((item) => item.name));
+        this.panel.setAnswerSuggestions(items.map((item) => this.displayName(item)));
         this.panel.setChoicesVisible(false);
         this.panel.setChoices([]);
         this.panel.setAnswerEnabled(true);
@@ -340,10 +340,10 @@ export class App {
     if (gotIt) {
       this.score += 1;
       this.streak += 1;
-      this.panel.setFeedback(`Correct. It is ${this.currentEntity.name}.`);
+      this.panel.setFeedback(`Correct. It is ${this.displayName(this.currentEntity)}.`);
     } else {
       this.streak = 0;
-      this.panel.setFeedback(`Not correct. The answer is ${this.currentEntity.name}.`);
+      this.panel.setFeedback(`Not correct. The answer is ${this.displayName(this.currentEntity)}.`);
     }
     this.recordProgress(this.currentEntity.id, gotIt);
     this.mapView?.setMasteryById(this.buildMasteryMap(this.activePackEntities));
@@ -372,6 +372,9 @@ export class App {
       if (normalizeText(entity.name) === needle) {
         return true;
       }
+      if (normalizeText(this.displayName(entity)) === needle) {
+        return true;
+      }
       return (entity.aliases ?? []).some((alias) => normalizeText(alias) === needle);
     });
     if (exact) {
@@ -382,13 +385,16 @@ export class App {
       if (normalizeText(entity.name).startsWith(needle)) {
         return true;
       }
+      if (normalizeText(this.displayName(entity)).startsWith(needle)) {
+        return true;
+      }
       return (entity.aliases ?? []).some((alias) => normalizeText(alias).startsWith(needle));
     });
     if (startsWith.length === 1) {
       return { status: "resolved", entity: startsWith[0] };
     }
     if (startsWith.length > 1) {
-      return { status: "ambiguous", matches: startsWith.map((item) => item.name) };
+      return { status: "ambiguous", matches: startsWith.map((item) => this.displayName(item)) };
     }
     return { status: "none" };
   }
@@ -510,7 +516,7 @@ export class App {
     }
 
     this.streak = 0;
-    this.panel.setFeedback(`Revealed: ${this.currentEntity.name}`);
+    this.panel.setFeedback(`Revealed: ${this.displayName(this.currentEntity)}`);
     this.hud?.setStats({
       score: this.score,
       streak: this.streak,
@@ -597,7 +603,7 @@ export class App {
 
   private learnTargetTitle(entity: Entity): string {
     if (entity.type === "capital" && entity.adminOf) {
-      return `${entity.name} (capital of ${entity.adminOf.name})`;
+      return `${entity.name} (Capital of ${entity.adminOf.name})`;
     }
     return `${entity.name} (${entity.type})`;
   }
@@ -618,10 +624,17 @@ export class App {
       const entity = this.activePackEntities.find((item) => item.id === id);
       return {
         id,
-        label: entity?.name ?? id,
+        label: entity ? this.displayName(entity) : id,
         status: this.matchRound?.choiceStatus[id] ?? "default"
       };
     });
+  }
+
+  private displayName(entity: Entity): string {
+    if (entity.type === "capital" && entity.adminOf) {
+      return `${entity.name} (Capital of ${entity.adminOf.name})`;
+    }
+    return entity.name;
   }
 
   private getRemainingRoundEntities(): Entity[] {

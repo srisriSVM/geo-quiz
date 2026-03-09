@@ -3,6 +3,7 @@ import type { QuizType } from "../quiz/quizTypes";
 import type { TargetMarkerColor, TargetMarkerShape } from "../map/MapView";
 
 const SETTINGS_OPEN_KEY = "geo-bee-settings-open";
+const ALL_REGIONS_VALUE = "__all_regions__";
 
 type HudActions = {
   onModeChange: (mode: "learn" | "quiz") => void;
@@ -45,6 +46,7 @@ export class Hud {
 
   private readonly hudPillEl: HTMLElement;
   private readonly modeSelect: HTMLSelectElement;
+  private readonly regionSelect: HTMLSelectElement;
   private readonly packSelect: HTMLSelectElement;
   private readonly mapDetailSelect: HTMLSelectElement;
   private readonly lowDataCheckbox: HTMLInputElement;
@@ -72,6 +74,8 @@ export class Hud {
   private readonly settingsToggleButton: HTMLButtonElement;
   private readonly settingsCloseButton: HTMLButtonElement;
   private readonly settingsDragHandleEl: HTMLElement;
+  private readonly packs: Pack[];
+  private selectedRegion = ALL_REGIONS_VALUE;
   private mode: "learn" | "quiz" = "learn";
   private dragging = false;
   private dragOffsetX = 0;
@@ -82,6 +86,7 @@ export class Hud {
   private settingsOpen = false;
 
   constructor(packs: Pack[], actions: HudActions) {
+    this.packs = packs;
     this.root = document.createElement("header");
     this.root.className = "hud";
 
@@ -113,6 +118,10 @@ export class Hud {
           <strong>Settings</strong>
           <button type="button" data-role="settings-close" aria-label="Close settings">Hide</button>
         </div>
+        <label>
+          Region
+          <select aria-label="Region" data-role="region"></select>
+        </label>
         <label>
           Pack
           <select aria-label="Pack" data-role="pack"></select>
@@ -188,6 +197,7 @@ export class Hud {
 
     this.hudPillEl = this.query<HTMLElement>("[data-role='hud-pill']");
     this.modeSelect = this.query<HTMLSelectElement>("[data-role='mode']");
+    this.regionSelect = this.query<HTMLSelectElement>("[data-role='region']");
     this.packSelect = this.query<HTMLSelectElement>("[data-role='pack']");
     this.mapDetailSelect = this.query<HTMLSelectElement>("[data-role='map-detail']");
     this.lowDataCheckbox = this.query<HTMLInputElement>("[data-role='low-data']");
@@ -220,15 +230,19 @@ export class Hud {
     this.settingsCloseButton = this.query<HTMLButtonElement>("[data-role='settings-close']");
     this.settingsDragHandleEl = this.query<HTMLElement>("[data-role='settings-drag-handle']");
 
-    for (const pack of packs) {
-      const option = document.createElement("option");
-      option.value = pack.id;
-      option.textContent = pack.name;
-      this.packSelect.append(option);
-    }
+    this.populateRegionOptions();
+    this.rebuildPackOptions(this.packs[0]?.id);
 
     this.modeSelect.addEventListener("change", () => {
       actions.onModeChange(this.modeSelect.value === "quiz" ? "quiz" : "learn");
+    });
+
+    this.regionSelect.addEventListener("change", () => {
+      this.selectedRegion = this.regionSelect.value;
+      const selectedPackId = this.rebuildPackOptions();
+      if (selectedPackId) {
+        actions.onPackChange(selectedPackId);
+      }
     });
 
     this.packSelect.addEventListener("change", () => {
@@ -365,10 +379,15 @@ export class Hud {
       if (typeof pointerId === "number" && this.hudPillEl.hasPointerCapture(pointerId)) {
         this.hudPillEl.releasePointerCapture(pointerId);
       }
+      this.clampHudIntoViewport();
     };
 
     this.hudPillEl.addEventListener("pointerup", (event) => stopDrag(event.pointerId));
     this.hudPillEl.addEventListener("pointercancel", (event) => stopDrag(event.pointerId));
+    this.hudPillEl.addEventListener("lostpointercapture", () => stopDrag());
+    window.addEventListener("pointerup", () => stopDrag());
+    window.addEventListener("resize", () => this.clampHudIntoViewport());
+    window.addEventListener("orientationchange", () => this.clampHudIntoViewport());
 
     this.settingsDragHandleEl.addEventListener("pointerdown", (event) => {
       const target = event.target as HTMLElement | null;
@@ -446,7 +465,20 @@ export class Hud {
   }
 
   setPack(packId: string): void {
-    this.packSelect.value = packId;
+    const selectedPack = this.packs.find((pack) => pack.id === packId);
+    if (!selectedPack) {
+      return;
+    }
+    const isInCurrentRegion =
+      this.selectedRegion === ALL_REGIONS_VALUE ||
+      this.resolvePackGroup(selectedPack) === this.selectedRegion;
+    if (!isInCurrentRegion) {
+      this.selectedRegion = this.resolvePackGroup(selectedPack);
+      this.regionSelect.value = this.selectedRegion;
+      this.rebuildPackOptions(packId);
+      return;
+    }
+    this.rebuildPackOptions(packId);
   }
 
   setQuizType(_quizType: QuizType): void {}
@@ -599,5 +631,125 @@ export class Hud {
       default:
         return "#22d3ee";
     }
+  }
+
+  private clampHudIntoViewport(): void {
+    if (!this.root.style.left && !this.root.style.top) {
+      return;
+    }
+    const rect = this.root.getBoundingClientRect();
+    if (!Number.isFinite(rect.width) || !Number.isFinite(rect.height) || rect.width <= 0 || rect.height <= 0) {
+      this.resetHudPosition();
+      return;
+    }
+    const maxLeft = Math.max(8, window.innerWidth - rect.width - 8);
+    const maxTop = Math.max(8, window.innerHeight - rect.height - 8);
+    const currentLeft = Number.parseFloat(this.root.style.left || `${rect.left}`);
+    const currentTop = Number.parseFloat(this.root.style.top || `${rect.top}`);
+    if (!Number.isFinite(currentLeft) || !Number.isFinite(currentTop)) {
+      this.resetHudPosition();
+      return;
+    }
+    this.root.style.right = "auto";
+    this.root.style.bottom = "auto";
+    this.root.style.transform = "none";
+    this.root.style.left = `${Math.min(Math.max(8, currentLeft), maxLeft)}px`;
+    this.root.style.top = `${Math.min(Math.max(8, currentTop), maxTop)}px`;
+  }
+
+  private resetHudPosition(): void {
+    this.root.style.removeProperty("left");
+    this.root.style.removeProperty("top");
+    this.root.style.removeProperty("right");
+    this.root.style.removeProperty("bottom");
+    this.root.style.removeProperty("width");
+    this.root.style.removeProperty("transform");
+    this.root.classList.remove("hud--dragging");
+  }
+
+  private populateRegionOptions(): void {
+    this.regionSelect.innerHTML = "";
+    const optionAll = document.createElement("option");
+    optionAll.value = ALL_REGIONS_VALUE;
+    optionAll.textContent = "All Regions";
+    this.regionSelect.append(optionAll);
+
+    const preferredOrder = ["World", "US", "Canada", "India", "Europe", "Africa"];
+    const regions = Array.from(new Set(this.packs.map((pack) => this.resolvePackGroup(pack))));
+    regions.sort((a, b) => {
+      const aIndex = preferredOrder.indexOf(a);
+      const bIndex = preferredOrder.indexOf(b);
+      if (aIndex >= 0 && bIndex >= 0) {
+        return aIndex - bIndex;
+      }
+      if (aIndex >= 0) {
+        return -1;
+      }
+      if (bIndex >= 0) {
+        return 1;
+      }
+      return a.localeCompare(b);
+    });
+
+    for (const region of regions) {
+      const option = document.createElement("option");
+      option.value = region;
+      option.textContent = region;
+      this.regionSelect.append(option);
+    }
+    this.regionSelect.value = this.selectedRegion;
+  }
+
+  private rebuildPackOptions(preferredPackId?: string): string | null {
+    const filteredPacks = this.getPacksForRegion(this.selectedRegion);
+    this.packSelect.innerHTML = "";
+    for (const pack of filteredPacks) {
+      const option = document.createElement("option");
+      option.value = pack.id;
+      option.textContent = pack.name;
+      this.packSelect.append(option);
+    }
+
+    if (filteredPacks.length === 0) {
+      return null;
+    }
+
+    const nextPackId = filteredPacks.some((pack) => pack.id === preferredPackId)
+      ? (preferredPackId as string)
+      : filteredPacks[0].id;
+    this.packSelect.value = nextPackId;
+    return nextPackId;
+  }
+
+  private getPacksForRegion(region: string): Pack[] {
+    if (region === ALL_REGIONS_VALUE) {
+      return this.packs;
+    }
+    return this.packs.filter((pack) => this.resolvePackGroup(pack) === region);
+  }
+
+  private resolvePackGroup(pack: Pack): string {
+    if (pack.group && pack.group.trim().length > 0) {
+      return pack.group.trim();
+    }
+    if (pack.id.startsWith("world_")) {
+      return "World";
+    }
+    if (pack.id.startsWith("us_") || pack.id.startsWith("usa_")) {
+      return "US";
+    }
+    if (pack.id.startsWith("canada_")) {
+      return "Canada";
+    }
+    if (pack.id.startsWith("india_")) {
+      return "India";
+    }
+    if (pack.id.startsWith("europe_")) {
+      return "Europe";
+    }
+    if (pack.id.startsWith("africa_")) {
+      return "Africa";
+    }
+    return "Other";
   }
 }
